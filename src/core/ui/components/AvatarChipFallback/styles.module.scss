@@ -1,0 +1,13 @@
+@import "@styles/styles.scss";
+@import "@core/ui/components/Avatar/styles.module.scss";
+
+// SIZE
+
+$sizes: "sm", "md";
+
+@each $size in $sizes {
+  .avatar-chip-size-#{$size} {
+    height: #{'theme\("width\.decorator\.'+ $size + '"\)'};
+    width: #{'theme\("width\.decorator\.'+ $size + '"\)'};
+  }
+}

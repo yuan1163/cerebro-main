@@ -1,0 +1,153 @@
+export async function apiGetAlerts(filter: AlertsInput, priorities?: boolean): Promise<Alert[]> {
+  const query = new URLSearchParams(filter);
+  const prioritiesQuery = priorities
+    ? `&priority=${AlertPriority.Critical}&priority=${AlertPriority.Warning}&priority=${AlertPriority.Normal}`
+    : '';
+  return api
+    .get<void, AlertsOutput>(`alerts?${query}${prioritiesQuery}`)
+    .then(api.checkResulCode)
+    .then((response) => (response.activeAlerts ? response.activeAlerts : []));
+}
+
+
+export async function apiGetAlertsTotals(filter: AlertsTotalInput): Promise<AlertsTotal[]> {
+  const query = new URLSearchParams(filter);
+  return api
+    .get<void, AlertsTotalOutput>(`alertTotals?${query}`)
+    .then(api.checkResulCode)
+    .then((response) => response.totals || []);
+}
+
+
+export async function apiGetAssetGroups(filter: AssetGroupsInput): Promise<AssetGroup[]> {
+  const query = new URLSearchParams(filter);
+  return api
+    .get<void, AssetGroupsOutput>(`assetGroup?${query}`)
+    .then(api.checkResulCode)
+    .then((response) => (response.groups ? response.groups : []));
+}
+
+export async function apiCreateAssetGroup(data: Partial<AssetGroup>): Promise<unknown> {
+  return api
+    .post<{ group: Partial<AssetGroup> }, ResultOutput>(`assetGroup?locationId=${data.locationId}`, { group: data })
+    .then(api.checkResulCode);
+}
+
+export async function apiUpdateAssetGroup(data: Partial<AssetGroup>): Promise<unknown> {
+  return api
+    .put<{ group: Partial<AssetGroup> }, ResultOutput>(
+      `assetGroup?locationId=${data.locationId}&groupId=${data.groupId}`,
+      { group: data },
+    )
+    .then(api.checkResulCode);
+}
+
+export async function apiDeleteAssetGroup(data: Partial<AssetGroup>): Promise<unknown> {
+  return api
+    .delete<void, ResultOutput>(`assetGroup?locationId=${data.locationId}&groupId=${data.groupId}`)
+    .then(api.checkResulCode);
+}
+
+
+export async function apiGetAssets(filter: AssetsInput): Promise<Asset[]> {
+  const query = new URLSearchParams(filter);
+  return api
+    .get<void, AssetsOutput>(`asset?${query}`)
+    .then(api.checkResulCode)
+    .then((response) => (response.assets ? response.assets : []))
+    .then((assets) => {
+      assets.forEach((asset) => (asset.locationId = asset.location.locationId));
+      return assets;
+    });
+}
+
+export async function apiCreateAsset(data: Partial<Asset>): Promise<{ assetId: number }> {
+  return api
+    .post<{ asset: Partial<Asset> }, ResultOutput & { assetId: number }>(`asset?locationId=${data.locationId}`, {
+      asset: { ...data, ...clean },
+    })
+    .then(api.checkResulCode);
+}
+
+export async function apiUpdateAsset({
+  asset,
+  data,
+}: {
+  asset: Partial<Asset>;
+  data: Partial<Asset>;
+}): Promise<unknown> {
+  return api
+    .put<{ asset: Partial<Asset> }, ResultOutput>(`asset?locationId=${asset.locationId}&assetId=${asset.assetId}`, {
+      asset: { ...data, ...clean },
+    })
+    .then(api.checkResulCode);
+}
+
+export async function apiDeleteAsset(data: Partial<Asset>): Promise<unknown> {
+  return api
+    .delete<void, ResultOutput>(`asset?locationId=${data.locationId}&assetId=${data.assetId}`)
+    .then(api.checkResulCode);
+}
+
+export async function apiAddAssetToGroup({
+  asset,
+  group,
+}: {
+  asset: Partial<Asset>;
+  group: AssetGroup;
+}): Promise<unknown> {
+  return api
+    .put<void, ResultOutput>(
+      `assetGroupMember?locationId=${asset.locationId}&assetId=${asset.assetId}&groupId=${group.groupId}`,
+    )
+    .then(api.checkResulCode);
+}
+
+export async function apiDeleteAssetFromGroup({
+  asset,
+  group,
+}: {
+  asset: Partial<Asset>;
+  group: AssetGroup;
+}): Promise<unknown> {
+  return api
+    .delete<void, ResultOutput>(
+      `assetGroupMember?locationId=${asset.locationId}&assetId=${asset.assetId}&groupId=${group.groupId}`,
+    )
+    .then(api.checkResulCode);
+}
+
+export async function apiConnectAssetToDevice({
+  asset,
+  device,
+}: {
+  asset: Partial<Asset>;
+  device: Device;
+}): Promise<unknown> {
+  return api
+    .put<DevicesInput, ResultOutput>(`device?locationId=${device.ownerLocationId}`, {
+      device: {
+        assetId: asset.assetId,
+        deviceId: device.deviceId,
+      },
+    })
+    .then(api.checkResulCode);
+}
+
+export async function apiDisconnectAssetFromDevice({
+  asset,
+  device,
+}: {
+  asset: Partial<Asset>;
+  device: Device;
+}): Promise<unknown> {
+  return api
+    .put<DevicesInput, ResultOutput>(`device?locationId=${asset.locationId}`, {
+      device: {
+        assetId: 0,
+        deviceId: device.deviceId,
+      },
+    })
+    .then(api.checkResulCode);
+}
+

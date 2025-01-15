@@ -1,0 +1,19 @@
+@import '@styles/styles.scss';
+
+textarea.textarea {
+  @apply resize-none;
+  @apply flex-1;
+  @apply py-2;
+  @apply px-3;
+  @apply w-full;
+  @apply outline-none;
+  @apply text-paragraph-md;
+  &:focus-visible {
+    @apply border-transparent;
+    @apply outline;
+    @apply outline-primary;
+    @apply -outline-offset-2;
+    @apply outline-2;
+  }
+  @include scrollbar;
+}

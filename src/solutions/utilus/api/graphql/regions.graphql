@@ -1,0 +1,15 @@
+query Regions($where: RegionWhereInput) {
+  regions(where: $where) {
+    id
+    name
+    formations {
+      id
+      name
+      address
+      solutions {
+        id
+        name
+      }
+    }
+  }
+}

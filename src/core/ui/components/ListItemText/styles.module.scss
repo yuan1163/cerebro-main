@@ -1,0 +1,29 @@
+.list-item-text {
+  @apply flex-auto;
+  @apply min-w-0;
+  @apply pr-4;
+}
+
+// CONTEXT
+
+.list-item-text-content {
+  @apply flex;
+  @apply flex-col;
+}
+
+.title,
+.subtitle {
+  @apply overflow-hidden;
+  @apply text-ellipsis;
+  @apply whitespace-nowrap;
+}
+
+.subtitle {
+  @apply text-typography-secondary;
+}
+
+// SHRINK
+
+.list-item-text-shrink {
+  @apply flex-initial;
+}

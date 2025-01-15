@@ -1,0 +1,21 @@
+.unit {
+  @apply gap-5;
+}
+
+.map-container {
+  @apply grow;
+  @apply min-h-[10rem];
+}
+
+.card-content-header {
+  @apply pb-0;
+}
+
+.icon-container {
+  @apply relative;
+  @apply text-typography-secondary;
+}
+
+.command-center-header {
+  @apply items-center justify-between;
+}

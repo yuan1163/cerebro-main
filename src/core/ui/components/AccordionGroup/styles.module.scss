@@ -1,0 +1,30 @@
+.accordion-group {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply w-full;
+}
+
+// VARIANT
+
+.accordion-group-variant-solid {
+  @apply rounded-lg;
+  @apply bg-surface-01;
+}
+
+// DIVIDER
+
+.accordion-group-divider {
+  & > div {
+    @apply border-b border-divider;
+  }
+  & > div:last-child {
+    @apply border-0;
+  }
+}
+
+// GAP
+
+.accordion-group-gap {
+  @apply gap-y-3;
+}

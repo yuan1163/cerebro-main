@@ -1,0 +1,45 @@
+@import '@styles/styles.scss';
+
+.card {
+  @apply relative;
+}
+
+// HEIGHT & WIDTH
+
+.card-full-height {
+  @apply h-full;
+}
+
+.card-full-width {
+  @apply w-full;
+}
+
+.card-width-modal {
+  @apply max-w-[28.5rem];
+}
+
+// SEVERITY
+
+.card-severity {
+  @apply pl-1.5;
+  &::before {
+    @apply content-[''];
+    @apply block;
+    @apply absolute;
+    @apply left-0 top-0;
+    @apply w-1.5 h-full;
+    @apply rounded-l-lg;
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .card-severity.card-severity-#{$swatch}::before {
+    @apply #{bg- + $swatch};
+  }
+}
+
+// SCROLLABLE
+
+.card-scrollable {
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar'));
+}

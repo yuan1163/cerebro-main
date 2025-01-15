@@ -1,0 +1,30 @@
+$image-width: 8rem;
+$glow-width: 10rem;
+
+.image-container {
+  @apply relative;
+  @apply overflow-hidden;
+  @apply h-48;
+  .glow-container {
+    @apply absolute;
+    @apply bottom-0;
+    filter: blur(0.5rem);
+    left: calc((100% - $glow-width) / 2);
+    @apply z-10;
+    width: $glow-width;
+    & > svg {
+      width: $glow-width;
+      height: $glow-width;
+    }
+  }
+  .image {
+    @apply absolute;
+    @apply bottom-0;
+    left: calc((100% - $image-width) / 2);
+    width: $image-width;
+  }
+}
+
+.slider-container {
+  @apply pb-0;
+}

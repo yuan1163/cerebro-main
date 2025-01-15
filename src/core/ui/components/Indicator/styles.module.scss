@@ -1,0 +1,22 @@
+@import '@styles/styles.scss';
+
+.indicator {
+  @apply h-9;
+  @apply w-1;
+  @apply mr-3;
+  @apply rounded-xs;
+}
+
+// COLORS
+
+@each $swatch in $paletteSeverity {
+  .indicator-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+@each $swatch in $paletteDefault {
+  .indicator-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}

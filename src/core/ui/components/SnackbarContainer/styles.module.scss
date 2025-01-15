@@ -1,0 +1,7 @@
+.snackbar-container {
+  @apply fixed;
+  @apply z-snackbar;
+  @apply flex flex-col-reverse gap-y-1;
+  @apply right-2 bottom-2;
+  @apply w-80 h-auto max-h-screen;
+}

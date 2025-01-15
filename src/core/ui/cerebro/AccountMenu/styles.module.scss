@@ -1,0 +1,43 @@
+.account {
+  @apply w-[theme(width.accountMenu)];
+}
+
+.avatar-container {
+  @apply items-center justify-center;
+  @apply h-[230px];
+  @apply p-7;
+  .avatar {
+    @apply mt-4;
+    @apply w-16 h-16;
+  }
+  .title {
+    @apply mt-5;
+    @apply text-xl font-bold text-center;
+  }
+  .subtitle {
+    @apply mt-1;
+    @apply text-sm text-typography-secondary font-bold;
+  }
+}
+
+.content-container {
+  @apply pt-6 px-7 pb-7;
+  .list {
+    @apply w-full;
+  }
+  .title {
+    @apply block;
+    @apply text-xs text-typography-secondary;
+  }
+  .subtitle {
+    @apply block;
+    @apply mt-1;
+    @apply text-sm font-semibold text-typography-primary;
+  }
+  .chips-container {
+    @apply mt-2;
+  }
+  .button {
+    @apply mt-5;
+  }
+}

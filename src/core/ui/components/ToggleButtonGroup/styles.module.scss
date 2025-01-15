@@ -1,0 +1,8 @@
+.toggle-button-group {
+  @apply relative;
+  @apply flex;
+  @apply p-1;
+  @apply rounded-lg;
+  @apply border border-border;
+  @apply bg-transparent;
+}

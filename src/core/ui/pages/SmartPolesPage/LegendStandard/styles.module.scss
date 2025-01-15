@@ -1,0 +1,14 @@
+.title-standard {
+  @apply text-3xl leading-none;
+  @apply font-bold;
+}
+
+.title-large {
+  @apply text-[2.5rem] leading-none;
+  @apply font-bold;
+}
+
+.description {
+  @apply text-xs text-typography-secondary;
+  @apply whitespace-nowrap;
+}

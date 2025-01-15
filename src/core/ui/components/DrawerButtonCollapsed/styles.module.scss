@@ -1,0 +1,8 @@
+.drawer-button-collapsed {
+  @apply rounded;
+}
+
+.disabled {
+  @apply cursor-not-allowed;
+  @apply pointer-events-none;
+}

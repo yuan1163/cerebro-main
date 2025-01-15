@@ -1,0 +1,38 @@
+.container {
+  @apply relative;
+  @apply w-full;
+  @apply text-typography-secondary;
+}
+
+.button {
+  @apply relative;
+  @apply justify-between;
+  @apply w-full;
+  @apply text-left;
+  @apply cursor-default;
+  padding-right: calc((theme('fontSize[icon-md]') + (theme('spacing.2') * 2)));
+  &:focus {
+    @apply border-gray-100 outline-none;
+  }
+  .button-text {
+    @apply block;
+    @apply text-sm truncate;
+  }
+  .icon-container {
+    @apply absolute;
+    @apply inset-y-0 right-0;
+    @apply flex items-center;
+    @apply pr-2;
+    @apply pointer-events-none;
+    & svg {
+      @apply fill-current;
+    }
+  }
+  .expanded {
+    @apply rotate-180 duration-[15ms] ease-in-out-standard;
+  }
+}
+
+.scrollbar {
+  @apply max-h-full;
+}

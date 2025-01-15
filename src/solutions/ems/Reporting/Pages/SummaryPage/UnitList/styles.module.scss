@@ -1,0 +1,38 @@
+.card {
+  @apply grid;
+  @apply grid-rows-[auto_1fr];
+  @apply overflow-hidden;
+}
+
+.card-content-text {
+  @apply py-3;
+  @apply bg-common-white;
+
+  &.active {
+    background-color: theme('colors.background.DEFAULT');
+  }
+
+  &:hover {
+    background-color: theme('colors.background.DEFAULT');
+    cursor: pointer;
+  }
+}
+
+.summary-unit {
+  max-height: calc(100vh - theme('height.toolbar') - theme('spacing.container-x') - 48px);
+  &.summary-sidebar {
+    @apply max-w-sm;
+  }
+}
+
+.divider {
+  @apply border border-solid h-full;
+}
+
+.progress-item {
+  @apply border border-divider px-4 py-2;
+}
+
+.grid-right-divider {
+  @apply border-r-2 border-divider border-solid;
+}

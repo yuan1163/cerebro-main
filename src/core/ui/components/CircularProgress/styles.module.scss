@@ -1,0 +1,170 @@
+@use 'sass:math';
+@import '@styles/styles.scss';
+
+.circular-progress-root {
+  @apply relative;
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply shrink-0;
+  @apply rounded-full;
+  @apply text-sm;
+  @apply text-common-white;
+}
+
+// SIZES
+
+$rootSizes: (
+  'sm': 4,
+  'md': 5,
+  'lg': 5,
+);
+
+@each $name, $size in $rootSizes {
+  .circular-progress-root-size-#{$name} {
+    @apply #{h- + $size};
+    @apply #{w- + $size};
+  }
+}
+
+$textSizes: (
+  'sm': 'base',
+  'md': 'xl',
+  'lg': 'xl',
+);
+
+@each $name, $size in $textSizes {
+  .circular-progress-size-#{$name} {
+    @apply #{text- + $size};
+  }
+}
+
+// SVG
+
+.circular-progress-svg {
+  @apply absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+}
+
+// TRACK & INDICATOR
+
+.circular-progress-track {
+  cx: 50%;
+  cy: 50%;
+  @apply fill-transparent;
+  stroke-width: 2px;
+}
+
+$iconSizes: (
+  'sm': 7px,
+  'md': 7px,
+  'lg': 9px,
+);
+
+.circular-progress-indicator {
+  cx: 50%;
+  cy: 50%;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  @apply fill-transparent;
+  @apply origin-center;
+  @apply animate-spin;
+}
+
+@each $name, $size in $iconSizes {
+  .circular-progress-track-size-#{$name} {
+    r: $size;
+  }
+  .circular-progress-indicator-size-#{$name} {
+    --_progress-radius: #{$size};
+    r: $size;
+    --_progress-length: calc(2 * #{math.$pi} * var(--_progress-radius));
+    stroke-dasharray: var(--_progress-length);
+    stroke-dashoffset: calc(var(--_progress-length) - 25 * var(--_progress-length) / 100);
+  }
+}
+
+// COLORS
+
+.circular-progress-track-color-default {
+  @apply stroke-primary-tint-alpha;
+}
+
+.circular-progress-indicator-color-default {
+  @apply stroke-primary;
+}
+
+@each $swatch in $paletteSeverity {
+  .circular-progress-track-color-#{$swatch} {
+    @apply #{stroke- + $swatch};
+    @apply opacity-10;
+  }
+  .circular-progress-indicator-color-#{$swatch} {
+    @apply #{stroke- + $swatch};
+  }
+}
+
+// VARIANTS
+
+.circular-progress-track-variant-solid-color-default {
+  @apply stroke-common-white;
+  @apply opacity-50;
+}
+
+.circular-progress-indicator-variant-solid-color-default {
+  @apply stroke-common-white;
+}
+
+.circular-progress-track-variant-outlined-color-default,
+.circular-progress-track-variant-control-color-default,
+.circular-progress-track-variant-ghost-color-default,
+.circular-progress-track-variant-text-color-default,
+.circular-progress-track-variant-link-color-default {
+  @apply stroke-primary-tint-alpha;
+}
+
+.circular-progress-indicator-variant-outlined-color-default,
+.circular-progress-indicator-variant-control-color-default,
+.circular-progress-indicator-variant-ghost-color-default,
+.circular-progress-indicator-variant-text-color-default,
+.circular-progress-indicator-variant-link-color-default {
+  @apply stroke-primary;
+}
+
+@each $swatch in $paletteSeverity {
+  .circular-progress-track-variant-solid-color-#{$swatch},
+  .circular-progress-track-variant-control-color-#{$swatch} {
+    @apply stroke-common-white;
+    @apply opacity-50;
+  }
+  .circular-progress-indicator-variant-solid-color-#{$swatch},
+  .circular-progress-indicator-variant-control-color-#{$swatch} {
+    @apply stroke-common-white;
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .circular-progress-track-variant-outlined-color-#{$swatch},
+  .circular-progress-track-variant-ghost-color-#{$swatch},
+  .circular-progress-track-variant-text-color-#{$swatch},
+  .circular-progress-track-variant-link-color-#{$swatch} {
+    @apply #{stroke- + $swatch};
+    @apply opacity-50;
+  }
+  .circular-progress-indicator-variant-outlined-color-#{$swatch},
+  .circular-progress-indicator-variant-ghost-color-#{$swatch},
+  .circular-progress-indicator-variant-text-color-#{$swatch},
+  .circular-progress-indicator-variant-link-color-#{$swatch} {
+    @apply #{stroke- + $swatch};
+  }
+}
+
+// DISABLED
+
+.circular-progress-track-disabled,
+.circular-progress-indicator-disabled {
+  @apply stroke-icon-disabled;
+}

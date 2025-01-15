@@ -1,0 +1,162 @@
+$controlPadding: theme('spacing.1');
+$dividerHeight: theme('spacing.4');
+
+.segmented-control {
+  @apply relative;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply p-1;
+  @apply rounded-md;
+  @apply bg-background;
+  @apply text-typography-primary;
+}
+
+// SIZE
+
+.segmented-control-size-sm {
+  @apply h-[theme('height.button.md')];
+  .button {
+    @apply min-h-[1.75rem];
+  }
+}
+
+.segmented-control-size-md {
+  @apply h-[theme('height.button.lg')];
+  .button {
+    @apply min-h-[2rem];
+  }
+}
+
+// VARIANTS
+
+.segmented-control-variant-outlined {
+  @apply border border-border;
+}
+
+// RADIO-OPTION
+
+.radio-option {
+  @apply relative;
+  @apply rounded;
+  &:focus-visible {
+    @apply outline;
+    @apply outline-offset-0;
+    @apply outline-2;
+    @apply outline-primary-focus;
+  }
+}
+
+.radio-option-full-width {
+  @apply grow;
+}
+
+// DIVIDER
+
+.radio-option-divider {
+  @apply rounded-none;
+  &:first-of-type {
+    @apply rounded;
+    @apply rounded-r-none;
+    &::before {
+      @apply hidden;
+    }
+  }
+  &:last-of-type {
+    @apply rounded;
+    @apply rounded-l-none;
+  }
+  &::before {
+    @apply content-[''];
+    @apply absolute;
+    @apply block;
+    @apply left-0;
+    top: calc((100% - #{$dividerHeight}) / 2);
+    height: $dividerHeight;
+    @apply w-px;
+    @apply bg-divider;
+  }
+}
+
+.radio-option-checked {
+  &::before {
+    @apply hidden;
+  }
+  & + .radio-option-divider::before {
+    @apply hidden;
+  }
+}
+
+// BUTTON
+
+.button {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply py-0.5 px-3;
+  @apply w-full;
+  @apply rounded-none;
+  @apply list-none;
+  @apply text-typography-secondary;
+  @apply whitespace-nowrap;
+  @apply select-none;
+  &:hover {
+    @apply text-typography-primary;
+    @apply cursor-pointer;
+  }
+  & .button-label {
+    @apply relative;
+    @apply flex;
+    @apply justify-center;
+    @apply text-sm;
+    transition: font-variation-settings 0.1s ease;
+    & .button-label-medium {
+      @apply absolute;
+      font-variation-settings: 'wght' 500;
+    }
+    & .button-label-semibold {
+      font-variation-settings: 'wght' 600;
+      opacity: 0;
+    }
+  }
+}
+
+.radio-option-checked {
+  & .button {
+    @apply rounded;
+    @apply bg-surface-01;
+    @apply text-typography-primary;
+    @apply shadow-xs;
+    & .button-label {
+      & .button-label-medium {
+        @apply absolute;
+        font-variation-settings: 'wght' 600;
+        opacity: 0;
+      }
+      & .button-label-semibold {
+        opacity: 100;
+      }
+    }
+  }
+}
+
+// DECORATOR
+
+.button-start-icon {
+  @apply mr-1.5;
+}
+
+.button-end-icon {
+  @apply ml-1.5;
+}
+
+// DISABLED
+
+.radio-option[aria-disabled='true'] {
+  @apply pointer-events-none;
+  @apply cursor-default;
+  .button,
+  .button:disabled {
+    @apply text-typography-disabled;
+  }
+}

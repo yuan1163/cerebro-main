@@ -1,0 +1,126 @@
+// CONTAINER
+
+.drawer-container {
+  @apply relative;
+  @apply fixed;
+  @apply z-modal;
+  @apply flex;
+  @apply border-r border-r-border;
+  @apply h-screen;
+  @apply bg-surface-01;
+}
+
+.drawer-collapsed {
+  @apply w-[theme('width.drawer.horizontal.collapsed')];
+}
+
+.drawer-expanded {
+  @apply w-[theme('width.drawer.horizontal.expanded')];
+}
+
+// DRAWER
+
+.nav {
+  @apply absolute;
+  @apply flex;
+  @apply flex-col;
+  @apply h-full;
+  @apply w-full;
+}
+
+// LIST
+
+.list-container {
+  @apply flex;
+  @apply flex-1;
+  @apply flex-col;
+  @apply justify-start;
+  // @apply overflow-y-auto;
+  @apply w-full;
+  & .list:nth-child(2) {
+    //@apply border-t-0;
+    @apply mt-4; // 1rem
+  }
+}
+
+.drawer-expanded {
+  .list-container {
+    @apply overflow-y-auto;
+  }
+}
+
+.list {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
+  @apply gap-1;
+  @apply p-2.5;
+  @apply w-full;
+  @apply border-t border-t-divider;
+}
+
+.list-item {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
+  @apply m-0;
+  @apply w-full;
+}
+
+// LOGOS
+
+.list-app {
+  @apply gap-0;
+  @apply py-0;
+  @apply px-2;
+  @apply pt-4;
+}
+
+.list-item-app {
+  //@apply h-[theme(height.toolbar)];
+  @apply h-10;
+}
+
+.list-item-company {
+  @apply px-0.5;
+  @apply h-10;
+  @apply rounded;
+  @apply bg-surface-02;
+}
+
+// TOGGLE BUTTON
+
+.toggle-button-container-top {
+  @apply flex;
+  @apply items-center;
+  @apply justify-end;
+  @apply py-2;
+  @apply px-3;
+  @apply border-b border-b-divider;
+  @apply sticky;
+  @apply top-0;
+  @apply z-10;
+  @apply bg-surface-01;
+}
+
+.toggle-button-container {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
+  @apply py-2;
+  @apply px-3;
+  @apply border-t border-t-divider;
+  .toggle-button {
+    @apply p-2.5;
+  }
+}
+
+.drawer-expanded {
+  & .toggle-button-container {
+    @apply items-end;
+  }
+}

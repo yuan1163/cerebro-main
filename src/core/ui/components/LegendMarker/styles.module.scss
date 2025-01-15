@@ -1,0 +1,50 @@
+@import '@styles/styles.scss';
+
+.legend-marker {
+  @apply inline-block;
+}
+
+// ICON
+
+.legend-mark-icon {
+  @apply h-4;
+  @apply w-4;
+  @apply text-icon-primary;
+}
+
+// COLORS
+
+@each $color in $paletteBrand {
+  .legend-marker-#{$color} {
+    @apply #{text- + $color};
+  }
+}
+
+@each $color in $paletteDefault {
+  .legend-marker-#{$color} {
+    @apply #{text- + $color};
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .legend-marker-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}
+
+// GUTTERS
+
+.legend-marker-gutters {
+  @apply mx-0.5;
+}
+
+.legend-marker-disable-gutter-left {
+  @apply mr-1.5;
+  @apply ml-0;
+}
+
+// DISABLED
+
+.legend-marker-disabled {
+  @apply text-icon-disabled;
+}

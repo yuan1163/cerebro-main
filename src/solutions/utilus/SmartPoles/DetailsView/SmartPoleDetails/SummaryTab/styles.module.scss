@@ -1,0 +1,13 @@
+.map {
+  @apply h-80 w-full;
+  @apply rounded-lg;
+}
+
+.metrics {
+  @apply flex flex-col gap-2;
+}
+
+.table {
+  @apply h-80 w-full;
+  @apply overflow-hidden;
+}

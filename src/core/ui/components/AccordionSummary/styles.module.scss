@@ -1,0 +1,63 @@
+@import '@styles/styles.scss';
+
+.accordion-summary {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply py-3.5;
+  @apply px-4;
+  @apply w-full;
+  @include focusVisible;
+  @apply border-b border-transparent;
+  @apply bg-transparent;
+  &:hover {
+    & .icon {
+      @apply text-icon-primary;
+    }
+  }
+}
+
+// DIVIDER
+
+.accordion-summary-divider {
+  @apply border-b border-divider;
+}
+
+@each $swatch in $paletteSurface {
+  .accordion-summary-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+// DISABLE GUTTERS
+
+.accordion-summary-disable-gutters {
+  @apply px-0;
+}
+
+// SIZES
+
+$sizes: 'sm', 'md', 'lg';
+
+@each $size in $sizes {
+  .accordion-summary-size-#{$size} {
+    & .accordion-summary-content {
+      @apply #{text- + $size};
+    }
+  }
+}
+
+// CONTENT
+
+.accordion-summary-content {
+  @apply font-semibold;
+}
+
+// DISABLED
+
+.accordion-summary-disabled {
+  @apply pointer-events-none;
+  .accordion-summary-content {
+    @apply text-typography-disabled;
+  }
+}

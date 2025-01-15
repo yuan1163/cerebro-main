@@ -1,0 +1,95 @@
+@import '@styles/styles.scss';
+
+.decorator-icon {
+  & svg {
+    @apply block;
+    @apply shrink-0;
+    @apply w-[1em] h-[1em];
+    @apply text-sm;
+    @apply select-none;
+    & path {
+      vector-effect: non-scaling-stroke;
+      stroke-width: theme('strokeWidth.md');
+    }
+  }
+}
+
+// SIZE
+
+.decorator-icon-size-xxs {
+  @apply h-[theme(width.decorator.xxs)];
+  @apply w-[theme(width.decorator.xxs)];
+  & svg {
+    @apply text-xxs;
+  }
+}
+
+.decorator-icon-size-xs {
+  @apply h-[theme(width.decorator.xs)];
+  @apply w-[theme(width.decorator.xs)];
+  & svg {
+    @apply text-xs;
+  }
+}
+
+.decorator-icon-size-sm {
+  @apply h-[theme(width.decorator.sm)];
+  @apply w-[theme(width.decorator.sm)];
+  & svg {
+    @apply text-base;
+  }
+}
+
+.decorator-icon-size-md {
+  @apply h-[theme(width.decorator.sm)];
+  @apply w-[theme(width.decorator.sm)];
+  & svg {
+    @apply text-base;
+  }
+}
+
+.decorator-icon-size-lg {
+  @apply h-[theme(width.decorator.md)];
+  @apply w-[theme(width.decorator.md)];
+  & svg {
+    @apply text-xl;
+  }
+}
+
+// COLORS
+
+@each $swatch in $paletteIcon {
+  .decorator-icon-color-icon-#{$swatch} {
+    @apply #{text-icon- + $swatch};
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .decorator-icon-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}
+
+@each $swatch in $paletteDefault {
+  .decorator-icon-color-#{$swatch} {
+    @apply #{text-accent- + $swatch};
+  }
+}
+
+.decorator-icon-color-secondary-tint-active {
+  @apply text-secondary-tint-active;
+}
+
+// LOADING
+
+.decorator-loading {
+  @apply absolute;
+  @apply left-1/2;
+  @apply -translate-x-1/2;
+}
+
+// DISABLED
+
+.decorator-disabled {
+  @apply text-icon-disabled;
+}

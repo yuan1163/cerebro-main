@@ -1,0 +1,26 @@
+.node-wrapper {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply gap-2;
+  @apply overflow-hidden;
+  @apply max-w-[12.5rem];
+}
+
+.node-wrapper-sub-flow {
+  @apply relative;
+  @apply flex;
+  &::before {
+    @apply content-[''];
+    @apply absolute;
+    @apply -z-10;
+    @apply top-0;
+    @apply left-0;
+    @apply p-2;
+    @apply w-full;
+    @apply border border-border;
+    @apply rounded-lg;
+    @apply bg-translucent-surface-01;
+    @apply pointer-events-none;
+  }
+}

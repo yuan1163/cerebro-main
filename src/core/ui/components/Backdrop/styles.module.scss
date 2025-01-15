@@ -1,0 +1,6 @@
+.backdrop {
+  @apply fixed;
+  @apply -z-[1];
+  @apply inset-0;
+  @apply bg-backdrop;
+}

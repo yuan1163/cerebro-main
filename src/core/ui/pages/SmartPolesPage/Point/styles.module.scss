@@ -1,0 +1,30 @@
+@import '@styles/styles.scss';
+
+.point-container {
+  @apply absolute;
+  @apply flex flex-col items-center;
+  @apply z-10;
+}
+
+.point {
+  @apply flex items-center justify-center;
+  @apply w-12 h-12;
+  @apply rounded-full;
+  @apply border-[3px] border-common-white border-solid;
+  @apply bg-gray-400;
+}
+
+.point-title {
+  @apply flex items-center justify-center;
+  @apply mt-1;
+  @apply rounded-md;
+  @apply px-3 py-1.5;
+  @apply bg-common-white;
+  @apply text-xs font-bold text-center whitespace-nowrap;
+}
+
+@each $swatch in $paletteSeverity {
+  .point-alert-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}

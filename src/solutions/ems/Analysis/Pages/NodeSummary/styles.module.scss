@@ -1,0 +1,31 @@
+$consumptionTrendHeight: 5rem;
+
+.container {
+  grid-template-rows: 16rem auto;
+  @apply gap-3;
+}
+
+.summary-unit {
+  // @apply grow;
+  &.summary-sidebar {
+    @apply max-w-sm;
+  }
+  @apply gap-5;
+}
+
+.divider {
+  @apply border border-solid h-full;
+}
+
+.progress-item {
+  @apply border border-divider px-4 py-2;
+}
+
+.grid-right-divider {
+  @apply border-r-2 border-divider border-solid;
+}
+
+.accordion-item-container {
+  @apply border-divider;
+  @apply border;
+}

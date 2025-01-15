@@ -1,0 +1,18 @@
+.input-label-wrapper {
+  @apply flex;
+}
+
+// LABEL
+
+.form-label {
+  @apply flex;
+  @apply items-center;
+  @apply mb-1;
+  @apply select-none;
+}
+
+// MARK
+
+.required-mark {
+  @apply ml-0.5;
+}

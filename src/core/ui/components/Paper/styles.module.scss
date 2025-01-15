@@ -1,0 +1,77 @@
+@import '@styles/styles.scss';
+
+.paper {
+  @apply text-typography-primary;
+}
+
+// ROUNDED
+
+.paper-rounded {
+  @apply rounded-lg;
+}
+
+// VARIANT
+
+.paper-variant-plain,
+.paper-variant-tint,
+.paper-variant-solid {
+  @apply border-0;
+}
+
+.paper-variant-outlined {
+  @apply border border-solid border-border;
+}
+
+// ELEVATION
+
+@each $shadow in $shadows {
+  .paper-elevation-#{$shadow} {
+    @apply #{shadow- + $shadow};
+  }
+}
+
+// COLOR
+
+.paper-variant-plain-color-default {
+  @apply bg-surface-01;
+}
+
+.paper-variant-plain-color-transparent {
+  @apply bg-transparent;
+}
+
+.paper-variant-outlined-color-default {
+  @apply bg-surface-01;
+}
+
+.paper-variant-plain-color-surface-02 {
+  @apply bg-surface-02;
+}
+
+.paper-variant-outlined-color-surface-02 {
+  @apply bg-surface-02;
+}
+
+@each $swatch in $paletteBrand {
+  .paper-variant-plain-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .paper-variant-plain-color-#{$swatch} {
+    @apply #{bg- + $swatch + -tint};
+  }
+}
+
+@each $swatch in $paletteSurface {
+  .paper-variant-plain-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+@each $swatch in $paletteDefault {
+  .paper-variant-plain-color-#{$swatch} {
+    @apply #{bg-accent- + $swatch};
+  }
+}

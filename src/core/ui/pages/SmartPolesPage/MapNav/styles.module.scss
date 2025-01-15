@@ -1,0 +1,47 @@
+.aside-container {
+  @apply absolute;
+  @apply top-0 left-0;
+  @apply z-drawer;
+  @apply h-screen w-[22.5rem];
+  @apply bg-common-white;
+  .widgets-container {
+    @apply flex grow shrink-0;
+  }
+  .content-container {
+    @apply w-full;
+    .header {
+      @apply py-3 px-4;
+    }
+    .card-content {
+      @apply pt-0;
+    }
+  }
+}
+
+.widget-button {
+  @apply flex items-center justify-center;
+  @apply h-24;
+  .widget-button-label {
+    @apply mt-2;
+  }
+}
+
+.search-container {
+  @apply p-2 pb-2;
+}
+
+.list,
+.scrollbar {
+  @apply h-44;
+}
+
+.footer {
+  @apply w-full;
+  .card-content {
+    @apply border-t border border-divider;
+    @apply p-4;
+    .button {
+      @apply -ml-3;
+    }
+  }
+}

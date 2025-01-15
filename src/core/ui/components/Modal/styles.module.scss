@@ -1,0 +1,19 @@
+.dialog {
+  @apply fixed;
+  @apply z-modal;
+  @apply inset-0;
+  @apply overflow-y-auto;
+}
+
+.dialog-panel-container {
+  @apply absolute;
+  @apply flex;
+  @apply flex-col;
+  @apply top-[50%];
+  @apply left-[50%];
+  transform: translate(-50%, -50%);
+  @apply p-2;
+  @apply min-w-[theme('spacing.72')];
+  max-width: calc(100vw - 2 * #{theme('spacing.4')});
+  max-height: calc(100vw - 2 * #{theme('spacing.4')});
+}

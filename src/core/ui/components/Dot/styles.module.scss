@@ -1,0 +1,22 @@
+@import '@styles/styles.scss';
+
+.dot-container {
+  @apply h-1.5;
+  @apply w-1.5;
+  @apply text-error;
+}
+
+.dot-container svg {
+  @apply h-full;
+  @apply w-full;
+}
+
+// COLOR
+
+@each $swatch in $paletteSeverity {
+  .dot-color-#{$swatch} {
+    & svg {
+      @apply #{fill- + $swatch};
+    }
+  }
+}

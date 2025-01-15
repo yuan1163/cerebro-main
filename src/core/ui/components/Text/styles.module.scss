@@ -1,0 +1,164 @@
+@import '@styles/styles.scss';
+
+@each $size in $sizes {
+  .text-variant-#{$size} {
+    @apply #{text- + $size};
+  }
+}
+
+// FONT-STYLE
+
+.text-italic {
+  @apply italic;
+}
+
+// FONT-WEIGHT
+
+$weights: 'thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black';
+
+@each $weight in $weights {
+  .font-weight-#{$weight} {
+    @apply #{font- + $weight};
+  }
+}
+
+// LETTER-SPACING
+
+$letterSpacings: 'tighter', 'tight', 'normal', 'wide', 'wider', 'widest';
+
+@each $letterSpacing in $letterSpacings {
+  .letter-spacing-#{$letterSpacing} {
+    @apply #{tracking- + $letterSpacing};
+  }
+}
+
+// LINE-HEIGHT
+
+$lineheights: 'none', 'tight', 'snug', 'normal', 'relaxed';
+
+@each $lineheight in $lineheights {
+  .line-height-#{$lineheight} {
+    @apply #{leading- + $lineheight};
+  }
+}
+
+// TEXT-ALIGN
+
+$aligns: 'left', 'center', 'right', 'justify';
+
+@each $align in $aligns {
+  .text-align-#{$align} {
+    @apply #{text- + $align};
+  }
+}
+
+// COLOR
+
+@each $swatch in $paletteTypography {
+  .text-color-typography-#{$swatch} {
+    @apply #{text-typography- + $swatch};
+  }
+}
+
+@each $swatch in $paletteBrand {
+  .text-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .text-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}
+
+// TEXT-DECORATION
+
+$decorations: 'underline', 'overline', 'line-through', 'no-underline';
+
+@each $decoration in $decorations {
+  .text-decoration-#{$decoration} {
+    @apply #{$decoration};
+  }
+}
+
+// TEXT-TRANSFORM
+
+$transforms: 'uppercase', 'lowercase', 'capitalize', 'normal-case';
+
+@each $transform in $transforms {
+  .text-transform-#{$transform} {
+    @apply #{$transform};
+  }
+}
+
+// OVERRFLOW
+
+.text-overflow-hidden {
+  @apply overflow-hidden;
+}
+
+// TEXT-OVERFLOW
+
+$overflows: 'ellipsis', 'clip';
+
+@each $overflow in $overflows {
+  .text-overflow-#{$overflow} {
+    @apply #{text- + $overflow};
+  }
+}
+
+.text-text-overflow-truncate {
+  @apply truncate;
+}
+
+// VERTICAL-ALIGN
+
+$verticalAligns: 'baseline', 'top', 'middle', 'bottom', 'text-top', 'text-bottom', 'sub', 'super';
+
+@each $verticalAlign in $verticalAligns {
+  .vertical-align-#{$verticalAlign} {
+    @apply #{align- + $verticalAlign};
+  }
+}
+
+// WHITE-SPACE
+
+$whiteSpaces: 'normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap';
+
+@each $whiteSpace in $whiteSpaces {
+  .white-space-#{$whiteSpace} {
+    @apply #{whitespace- + $whiteSpace};
+  }
+}
+
+// WORD-BREAK
+
+$wordBreaks: 'normal', 'words', 'all';
+
+@each $wordBreak in $wordBreaks {
+  .word-break-#{$wordBreak} {
+    @apply #{break- + $wordBreak};
+  }
+}
+
+// GUTTER-BOTTOM
+
+@each $size in $sizes {
+  .text-#{$size}-gutter-bottom {
+    // @apply mb-[theme(fontSize.7xl[1].marginBottom)];
+    margin-bottom: #{'theme\(fontSize\.'+ $size + '\[1\]\.marginBottom\)'};
+  }
+}
+
+// LINK
+
+.text a {
+  @include linkStyles;
+}
+
+// DISABLED
+
+.text-disabled {
+  @apply text-typography-disabled;
+}

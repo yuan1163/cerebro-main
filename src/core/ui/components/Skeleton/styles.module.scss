@@ -1,0 +1,32 @@
+.skeleton {
+  @apply block;
+  @apply animate-skeleton;
+  @apply bg-neutral-50;
+}
+
+// .skeleton-{variant}
+
+.skeleton-text {
+  @apply origin-[0_55%] scale-[1_0.60];
+  @apply my-0;
+  @apply h-auto;
+  @apply rounded-lg;
+
+  &:empty::before {
+    content: '\00a0';
+  }
+}
+
+.skeleton-circular {
+  @apply h-5;
+  @apply rounded-full;
+}
+
+.skeleton-rectangular {
+  @apply h-5;
+}
+
+.skeleton-rounded {
+  @apply h-5;
+  @apply rounded-lg;
+}

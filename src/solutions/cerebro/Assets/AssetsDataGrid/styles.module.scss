@@ -1,0 +1,18 @@
+.row {
+    @apply grid-cols-[2fr_1fr_1fr_1fr_1fr_auto];
+}
+
+.heading-content {
+    @apply items-center;
+    .heading {
+        @apply overflow-hidden;
+    }
+}
+
+.avatar {
+    @apply mr-3;
+}
+
+.icon {
+    @apply text-typography-tertiary;
+}

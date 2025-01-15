@@ -1,0 +1,37 @@
+@import '@core/ui/components/ButtonBase/styles.module.scss';
+
+.popover-panel {
+  @apply z-modal;
+}
+
+.panel {
+  @apply mt-2;
+  @apply w-[18.75rem];
+  @apply max-w-full;
+  @apply shadow-xs;
+}
+
+.button {
+  background-color: transparent;
+}
+
+.content-container {
+  @apply gap-2;
+  @apply p-3;
+  .row {
+    @apply items-center;
+    @apply p-2.5;
+    @apply rounded-lg;
+    @apply bg-background;
+    &.pointer {
+      @apply cursor-pointer;
+    }
+    .icon {
+      @apply mr-4;
+    }
+  }
+  .link-container {
+    @apply justify-center;
+    @apply my-1;
+  }
+}

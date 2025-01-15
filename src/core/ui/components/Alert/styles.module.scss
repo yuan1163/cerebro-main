@@ -1,0 +1,71 @@
+@import '@styles/styles.scss';
+
+.alert-container {
+  @apply flex;
+  @apply items-start;
+  @apply gap-2;
+  @apply p-3;
+  @apply w-full;
+  @apply rounded-md;
+}
+
+// COLOR
+
+$combinedPalette: $paletteBrand, $paletteSeverity;
+
+@each $palette in $combinedPalette {
+  @each $swatch in $palette {
+    .alert-container-color-#{$swatch} {
+      @apply #{bg- + $swatch + -tint-alpha};
+      @apply #{text- + $swatch + -dark};
+    }
+    .alert-container {
+      & .content-color-#{$swatch},
+      & .title-color-#{$swatch} {
+        @apply #{text- + $swatch + -dark};
+      }
+    }
+  }
+}
+
+// ICON
+
+.severity-icon-container {
+  @apply flex;
+  @apply items-start;
+}
+
+.severity-icon {
+  @apply mt-0.5;
+}
+
+// TITLE
+
+.alert-content {
+  @apply flex;
+  @apply flex-col;
+  @apply items-start;
+  @apply gap-1;
+  @apply grow;
+}
+
+// ACTIONS
+
+.action-container {
+  @apply flex;
+  @apply items-center;
+  @apply flex-nowrap;
+  @apply gap-2;
+}
+
+.alert-container-single-row {
+  & .action-container {
+    @apply self-center;
+  }
+}
+
+// BUTTON
+
+.button-container {
+  @apply mt-0.5;
+}

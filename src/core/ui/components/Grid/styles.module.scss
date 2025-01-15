@@ -1,0 +1,134 @@
+@use 'sass:math';
+@import '@styles/styles.scss';
+
+.grid-container {
+  @apply w-full;
+}
+
+// DISPLAY
+
+.grid-display-flex {
+  @apply flex;
+  @apply flex-row;
+}
+
+.grid-display-grid {
+  @apply grid;
+  @apply grid-flow-row;
+}
+
+// DIRECTION
+
+.grid-direction-row {
+  @apply flex-row;
+}
+
+.grid-direction-row-reverse {
+  @apply flex-row-reverse;
+}
+
+.grid-direction-column {
+  @apply flex-col;
+}
+
+.grid-direction-column-reverse {
+  @apply flex-col-reverse;
+}
+
+// ALIGN ITEMS
+
+$alignItemsProperties: 'start', 'center', 'end', 'stretch', 'baseline';
+
+@each $alignItemsProperty in $alignItemsProperties {
+  .grid-align-items-#{$alignItemsProperty} {
+    @apply #{items- + $alignItemsProperty};
+  }
+}
+
+// JUSTIFY CONTENT
+
+$justifyContentProperties: 'start', 'center', 'end', 'between', 'around', 'evenly';
+
+@each $justifyContentProperty in $justifyContentProperties {
+  .grid-justify-content-#{$justifyContentProperty} {
+    @apply #{justify- + $justifyContentProperty};
+  }
+}
+
+// .grid-{wrap}
+
+.grid-wrap {
+  @apply flex-wrap;
+}
+
+.grid-wrap-reverse {
+  @apply flex-wrap-reverse;
+}
+
+.grid-nowrap {
+  @apply flex-nowrap;
+}
+
+// SPACING
+
+@each $gap in $spaces {
+  .grid-spacing-#{$gap} {
+    @apply #{-mt- + $gap -ml- + $gap};
+    width: calc(100% + #{$gap} * 4px);
+    & > .grid-item {
+      @apply #{pt- + $gap pl- + $gap};
+    }
+  }
+}
+
+// GAP
+
+@each $gap in $spaces {
+  .grid-gap-row-#{$gap} {
+    @apply #{gap- + $gap};
+  }
+  .grid-gap-column-#{$gap} {
+    @apply #{gap- + $gap};
+  }
+}
+
+// .grid-lg-{size}
+
+$max: 11;
+$offset: 1;
+@mixin list-loop($className, $screenSize) {
+  $i: 1;
+  @while $i <= $max {
+    #{$className + $screenSize + $i} {
+      @apply #{basis- + $i + '/12'};
+      max-width: math.div($i, 12) * 100%;
+    }
+    $i: $i + $offset;
+  }
+}
+
+@include list-loop('.grid-', 'lg-');
+
+.grid-lg-12 {
+  @apply basis-full;
+}
+
+.grid-lg-auto {
+  @apply basis-auto;
+}
+
+// .grid-{grow}
+
+.grid-grow {
+  @apply grow;
+}
+
+// SIZE
+
+.grid-full-height {
+  @apply h-full;
+}
+
+.grid-full-width {
+  @apply w-full;
+}

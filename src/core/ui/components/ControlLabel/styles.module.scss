@@ -1,0 +1,29 @@
+@import '@styles/styles.scss';
+
+.label {
+  @apply flex-1;
+  @apply min-w-0;
+  @apply font-medium;
+}
+
+// SIZES
+
+.label-size-sm {
+  @apply ml-2;
+  @apply text-sm;
+  @apply leading-[theme("width.checkbox.sm")];
+}
+
+.label-size-md {
+  @apply ml-3;
+  @apply text-base;
+  @apply leading-[theme("width.checkbox.md")];
+}
+
+// COLORS
+
+@each $swatch in $paletteTypography {
+  .label-color-typography-#{$swatch} {
+    @apply #{text-typography- + $swatch};
+  }
+}

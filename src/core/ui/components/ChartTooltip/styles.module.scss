@@ -1,0 +1,108 @@
+.light .apexcharts-tooltip,
+.dark .apexcharts-tooltip {
+  @apply min-w-[10rem];
+  @apply rounded-md;
+  @apply shadow-lg;
+  @apply text-xs;
+  @apply bg-opacity-100;
+}
+
+.light .apexcharts-tooltip.apexcharts-theme-light,
+.dark .apexcharts-tooltip.apexcharts-theme-light {
+  @apply text-typography-secondary;
+  @apply border border-border-subtle;
+  @apply bg-surface-03;
+}
+
+// HEADER
+
+.light .apexcharts-tooltip .apexcharts-tooltip-title,
+.dark .apexcharts-tooltip .apexcharts-tooltip-title {
+  @apply py-2.5;
+  @apply px-3;
+  @apply text-xs;
+  @apply mb-4;
+}
+
+.light .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title,
+.dark .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  @apply bg-surface-03;
+  @apply border-b border-border-subtle;
+}
+
+// FOOTER
+
+.light .apexcharts-tooltip .apexcharts-tooltip-footer,
+.dark .apexcharts-tooltip .apexcharts-tooltip-footer {
+  @apply mb-0;
+}
+
+.light .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-footer,
+.dark .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-footer {
+  @apply border-b-0;
+  @apply border-t border-border-subtle;
+}
+
+// MARKER
+
+.light .apexcharts-tooltip-marker,
+.dark .apexcharts-tooltip-marker {
+  @apply shrink-0;
+  @apply h-1.5;
+  @apply min-h-[0.375rem];
+  @apply w-1.5;
+  @apply min-w-[0.375rem];
+  @apply ml-1.5;
+  @apply mr-1.5;
+}
+
+.light .apexcharts-disable-gutters,
+.dark .apexcharts-disable-gutters {
+  @apply mx-0;
+}
+
+// GROUP
+
+.light .apexcharts-tooltip-series-group.apexcharts-active.apexcharts-dense,
+.dark .apexcharts-tooltip-series-group.apexcharts-active.apexcharts-dense {
+  @apply -mt-1.5;
+  @apply mb-1.5;
+}
+
+// GROUP TEXT
+
+.light .apexcharts-tooltip-text,
+.dark .apexcharts-tooltip-text {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply flex-grow;
+  @apply w-full;
+}
+
+.light .apexcharts-tooltip-y-group,
+.dark .apexcharts-tooltip-y-group {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply w-full;
+}
+
+.light .apexcharts-dense .apexcharts-tooltip-y-group,
+.dark .apexcharts-dense .apexcharts-tooltip-y-group {
+  @apply p-0;
+}
+
+.light .apexcharts-tooltip-text-goals-value,
+.apexcharts-tooltip-text-y-value,
+.apexcharts-tooltip-text-z-value,
+.dark .apexcharts-tooltip-text-goals-value,
+.apexcharts-tooltip-text-y-value,
+.apexcharts-tooltip-text-z-value {
+  @apply flex;
+  @apply flex-grow;
+  @apply ml-2;
+  @apply font-semibold;
+  @apply text-typography-primary;
+  @apply text-right;
+}

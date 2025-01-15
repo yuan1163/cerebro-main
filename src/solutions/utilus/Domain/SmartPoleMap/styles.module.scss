@@ -1,0 +1,14 @@
+.map-container {
+  @apply grow;
+  @apply relative;
+  @apply w-full h-full;
+
+  .map {
+    @apply w-full h-full rounded-lg;
+  }
+
+  .icon-container {
+    @apply absolute;
+    @apply right-5 bottom-5;
+  }
+}

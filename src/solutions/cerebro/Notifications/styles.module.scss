@@ -1,0 +1,46 @@
+@import '@styles/styles.scss';
+
+.card {
+  @apply grid;
+  @apply grid-rows-[1fr];
+  @apply overflow-hidden;
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar') - theme('height.widget'));
+}
+
+.card-aside {
+  @apply grid-rows-[auto_1fr];
+}
+
+.data-grid {
+  @apply grid;
+  @apply h-full;
+  @apply grid-rows-[auto_auto_1fr];
+  @apply overflow-hidden;
+}
+
+.data-grid-row {
+  @apply grid-cols-[1fr_1fr_1fr_12ch];
+  //@apply grid-cols-[1fr_1fr_1fr_12ch_auto];
+  @apply w-full;
+}
+
+.empty-cell {
+  width: calc($iconPaddingXl * 1rem + $iconSizeXxl);
+}
+
+.avatar {
+  @apply mr-4;
+}
+
+.count {
+  @apply ml-2;
+}
+
+.data-select-grow {
+  @apply grow;
+  @apply w-full;
+}
+
+.stack {
+  @apply mb-4;
+}

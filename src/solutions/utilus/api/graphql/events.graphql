@@ -1,0 +1,24 @@
+query Events($where: EventWhereInput, $orderBy: [EventOrderByWithRelationInput!]) {
+  events(where: $where, orderBy: $orderBy) {
+    id
+    moment
+    message
+    device {
+      id
+      name
+      serial
+      smartPole {
+        id
+        name
+        zone {
+          id
+          name
+        }
+      }
+    }
+    priority {
+      id
+      name
+    }
+  }
+}

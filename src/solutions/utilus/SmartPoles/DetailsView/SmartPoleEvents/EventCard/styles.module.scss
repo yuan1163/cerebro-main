@@ -1,0 +1,23 @@
+.card {
+  @apply w-full;
+}
+.content {
+  @apply py-4 pr-4 pl-5;
+  @apply select-none;
+}
+.moment {
+  @apply text-typography-secondary text-xs;
+}
+.name {
+  @apply mt-0.5;
+}
+.device {
+  @apply mt-0.5;
+}
+.bull {
+  @apply inline-block;
+  @apply mx-1;
+}
+.divider {
+  @apply mt-2 mb-1.5;
+}

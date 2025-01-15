@@ -1,0 +1,39 @@
+.logo-wrapper {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply grow;
+  &.logo-wrapper-header {
+    height: calc(theme('height.toolbar') - (theme('height.2')) * 2);
+    max-height: theme('height.toolbar');
+  }
+  &.logo-wrapper-contained {
+    @apply h-14;
+    @apply rounded;
+    @apply bg-surface-02;
+  }
+  &.logo-wrapper-footer {
+    @apply pb-6;
+    @apply h-20;
+    @apply opacity-10;
+    @apply text-typography-secondary;
+  }
+  & .power-logo {
+    @apply max-lg:invisible;
+  }
+  & .logo-expanded {
+    @apply inline-block;
+    @apply max-lg:hidden;
+  }
+  & .logo-expanded-show {
+    @apply max-lg:inline-block;
+  }
+  .logo-collapsed-wrapper {
+    line-height: 0;
+  }
+  & .logo-collapsed {
+    @apply hidden;
+    @apply max-lg:inline-block;
+  }
+}

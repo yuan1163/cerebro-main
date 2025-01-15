@@ -1,0 +1,97 @@
+.container {
+  @apply relative;
+  @apply w-full;
+  @apply text-typography-secondary;
+}
+
+.options {
+  @apply absolute;
+  @apply z-modal;
+  @apply overflow-auto;
+  @apply mt-1;
+  @apply w-full;
+  @apply max-h-60;
+  @apply rounded-b-xl;
+  @apply bg-background;
+  @apply shadow-xs;
+  .option {
+    @apply relative;
+    @apply px-3 py-2;
+    @apply text-typography-primary;
+    @apply cursor-default select-none;
+  }
+  .option-active {
+    @apply bg-gray-200;
+  }
+  .label {
+    @apply block;
+    @apply text-sm font-normal truncate;
+  }
+  .selected {
+    @apply font-normal;
+  }
+}
+
+.scrollbar {
+  @apply max-h-[calc(100%)];
+}
+
+//
+
+.container {
+  @apply relative;
+  @apply w-full;
+  @apply text-typography-secondary;
+}
+
+.popover {
+  @apply w-full;
+  .button {
+    @apply appearance-none;
+    @apply flex;
+    @apply bg-transparent;
+    @apply outline-0;
+    &:focus,
+    &:focus-visible {
+      @apply outline-none;
+    }
+  }
+  .button-rounded {
+    @apply rounded-full;
+  }
+}
+
+.popover-panel {
+  @apply absolute right-0 p-3 z-10;
+  @apply overflow-hidden;
+  @apply m-0;
+  @apply mt-1;
+  @apply py-1;
+  @apply bg-surface-03;
+  // max-width: theme('spacing.80');
+  min-width: theme('spacing.64');
+  @apply border border-border-subtle;
+  @apply rounded-lg;
+  @apply z-modal; //If z-index isn't set, other elements with a set z-index will be displayed on top when opening the datepicker.
+  @apply shadow-lg;
+
+  .label,
+  .item-label {
+    @apply block;
+    @apply text-sm text-typography-primary font-normal truncate;
+  }
+
+  .item {
+    @apply bg-transparent;
+
+    &:hover {
+      @apply bg-gray-200;
+    }
+    .item-icon {
+      @apply text-sm text-typography-primary font-normal truncate;
+    }
+    &.selected {
+      @apply bg-gray-200;
+    }
+  }
+}

@@ -1,0 +1,4564 @@
+{
+  "gradient": {
+    "amber": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "blue": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.blue.300}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.blue.100}, 1) 0%, rgba({color.blue.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.blue.100}, 1) 0%, rgba({color.blue.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.blue.100}, 1) 0%, rgba({color.blue.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.blue.100}, 1) 0%, rgba({color.blue.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.blue.100}, 1) 0%, rgba({color.blue.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.blue.100}, 1) 0%, rgba({color.blue.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.blue.100}, 1) 0%, rgba({color.blue.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.blue.100}, 1) 0%, rgba({color.blue.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.blue.600}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.blue.600}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.blue.600}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.blue.600}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.blue.600}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.blue.600}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.blue.600}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.blue.600}, 1) 0%, rgba({color.blue.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.blue.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.blue.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.blue.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.blue.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.blue.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.blue.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.blue.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.blue.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "brown": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.brown.300}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.brown.100}, 1) 0%, rgba({color.brown.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.brown.100}, 1) 0%, rgba({color.brown.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.brown.100}, 1) 0%, rgba({color.brown.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.brown.100}, 1) 0%, rgba({color.brown.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.brown.100}, 1) 0%, rgba({color.brown.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.brown.100}, 1) 0%, rgba({color.brown.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.brown.100}, 1) 0%, rgba({color.brown.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.brown.100}, 1) 0%, rgba({color.brown.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.brown.600}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.brown.600}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.brown.600}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.brown.600}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.brown.600}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.brown.600}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.brown.600}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.brown.600}, 1) 0%, rgba({color.brown.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.brown.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.brown.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.brown.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.brown.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.brown.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.brown.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.brown.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.brown.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "common": {
+      "contrast-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "contrast-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "contrast-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "contrast-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "contrast-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "contrast-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "contrast-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "contrast-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "invariable-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.common.black}, 1) 0%, rgba({color.common.black}, 0) 100%)"
+      },
+      "invariable-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.common.black}, 1) 0%, rgba({color.common.black}, 0) 100%)"
+      },
+      "invariable-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.common.black}, 1) 0%, rgba({color.common.black}, 0) 100%)"
+      },
+      "invariable-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.common.black}, 1) 0%, rgba({color.common.black}, 0) 100%)"
+      },
+      "invariable-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.common.black}, 1) 0%, rgba({color.common.black}, 0) 100%)"
+      },
+      "invariable-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.common.black}, 1) 0%, rgba({color.common.black}, 0) 100%)"
+      },
+      "invariable-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.common.black}, 1) 0%, rgba({color.common.black}, 0) 100%)"
+      },
+      "invariable-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.common.black}, 1) 0%, rgba({color.common.black}, 0) 100%)"
+      },
+      "inverse-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "inverse-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "inverse-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "inverse-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "inverse-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "inverse-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "inverse-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      },
+      "inverse-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.common.white}, 1) 0%, rgba({color.common.white}, 0) 100%)"
+      }
+    },
+    "cyan": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.cyan.300}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.cyan.100}, 1) 0%, rgba({color.cyan.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.cyan.100}, 1) 0%, rgba({color.cyan.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.cyan.100}, 1) 0%, rgba({color.cyan.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.cyan.100}, 1) 0%, rgba({color.cyan.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.cyan.100}, 1) 0%, rgba({color.cyan.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.cyan.100}, 1) 0%, rgba({color.cyan.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.cyan.100}, 1) 0%, rgba({color.cyan.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.cyan.100}, 1) 0%, rgba({color.cyan.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.cyan.600}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.cyan.600}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.cyan.600}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.cyan.600}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.cyan.600}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.cyan.600}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.cyan.600}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.cyan.600}, 1) 0%, rgba({color.cyan.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.cyan.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.cyan.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.cyan.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.cyan.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.cyan.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.cyan.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.cyan.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.cyan.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "error": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "fuchsia": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.fuchsia.300}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.fuchsia.100}, 1) 0%, rgba({color.fuchsia.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.fuchsia.100}, 1) 0%, rgba({color.fuchsia.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.fuchsia.100}, 1) 0%, rgba({color.fuchsia.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.fuchsia.100}, 1) 0%, rgba({color.fuchsia.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.fuchsia.100}, 1) 0%, rgba({color.fuchsia.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.fuchsia.100}, 1) 0%, rgba({color.fuchsia.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.fuchsia.100}, 1) 0%, rgba({color.fuchsia.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.fuchsia.100}, 1) 0%, rgba({color.fuchsia.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.fuchsia.600}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.fuchsia.600}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.fuchsia.600}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.fuchsia.600}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.fuchsia.600}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.fuchsia.600}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.fuchsia.600}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.fuchsia.600}, 1) 0%, rgba({color.fuchsia.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.fuchsia.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.fuchsia.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.fuchsia.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.fuchsia.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.fuchsia.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.fuchsia.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.fuchsia.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.fuchsia.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "grass": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.grass.300}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.grass.100}, 1) 0%, rgba({color.grass.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.grass.100}, 1) 0%, rgba({color.grass.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.grass.100}, 1) 0%, rgba({color.grass.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.grass.100}, 1) 0%, rgba({color.grass.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.grass.100}, 1) 0%, rgba({color.grass.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.grass.100}, 1) 0%, rgba({color.grass.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.grass.100}, 1) 0%, rgba({color.grass.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.grass.100}, 1) 0%, rgba({color.grass.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.grass.600}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.grass.600}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.grass.600}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.grass.600}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.grass.600}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.grass.600}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.grass.600}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.grass.600}, 1) 0%, rgba({color.grass.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.grass.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.grass.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.grass.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.grass.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.grass.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.grass.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.grass.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.grass.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "green": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "indigo": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.indigo.300}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.indigo.100}, 1) 0%, rgba({color.indigo.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.indigo.100}, 1) 0%, rgba({color.indigo.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.indigo.100}, 1) 0%, rgba({color.indigo.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.indigo.100}, 1) 0%, rgba({color.indigo.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.indigo.100}, 1) 0%, rgba({color.indigo.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.indigo.100}, 1) 0%, rgba({color.indigo.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.indigo.100}, 1) 0%, rgba({color.indigo.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.indigo.100}, 1) 0%, rgba({color.indigo.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.indigo.600}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.indigo.600}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.indigo.600}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.indigo.600}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.indigo.600}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.indigo.600}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.indigo.600}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.indigo.600}, 1) 0%, rgba({color.indigo.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.indigo.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.indigo.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.indigo.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.indigo.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.indigo.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.indigo.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.indigo.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.indigo.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "lime": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.lime.300}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.lime.100}, 1) 0%, rgba({color.lime.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.lime.100}, 1) 0%, rgba({color.lime.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.lime.100}, 1) 0%, rgba({color.lime.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.lime.100}, 1) 0%, rgba({color.lime.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.lime.100}, 1) 0%, rgba({color.lime.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.lime.100}, 1) 0%, rgba({color.lime.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.lime.100}, 1) 0%, rgba({color.lime.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.lime.100}, 1) 0%, rgba({color.lime.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.lime.600}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.lime.600}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.lime.600}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.lime.600}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.lime.600}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.lime.600}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.lime.600}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.lime.600}, 1) 0%, rgba({color.lime.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.lime.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.lime.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.lime.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.lime.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.lime.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.lime.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.lime.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.lime.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "orange": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.orange.300}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.orange.100}, 1) 0%, rgba({color.orange.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.orange.100}, 1) 0%, rgba({color.orange.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.orange.100}, 1) 0%, rgba({color.orange.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.orange.100}, 1) 0%, rgba({color.orange.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.orange.100}, 1) 0%, rgba({color.orange.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.orange.100}, 1) 0%, rgba({color.orange.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.orange.100}, 1) 0%, rgba({color.orange.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.orange.100}, 1) 0%, rgba({color.orange.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.orange.600}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.orange.600}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.orange.600}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.orange.600}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.orange.600}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.orange.600}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.orange.600}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.orange.600}, 1) 0%, rgba({color.orange.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.orange.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.orange.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.orange.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.orange.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.orange.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.orange.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.orange.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.orange.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "pink": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.pink.300}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.pink.100}, 1) 0%, rgba({color.pink.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.pink.100}, 1) 0%, rgba({color.pink.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.pink.100}, 1) 0%, rgba({color.pink.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.pink.100}, 1) 0%, rgba({color.pink.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.pink.100}, 1) 0%, rgba({color.pink.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.pink.100}, 1) 0%, rgba({color.pink.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.pink.100}, 1) 0%, rgba({color.pink.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.pink.100}, 1) 0%, rgba({color.pink.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.pink.600}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.pink.600}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.pink.600}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.pink.600}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.pink.600}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.pink.600}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.pink.600}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.pink.600}, 1) 0%, rgba({color.pink.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.pink.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.pink.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.pink.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.pink.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.pink.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.pink.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.pink.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.pink.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "primary": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "purple": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.purple.300}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.purple.100}, 1) 0%, rgba({color.purple.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.purple.100}, 1) 0%, rgba({color.purple.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.purple.100}, 1) 0%, rgba({color.purple.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.purple.100}, 1) 0%, rgba({color.purple.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.purple.100}, 1) 0%, rgba({color.purple.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.purple.100}, 1) 0%, rgba({color.purple.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.purple.100}, 1) 0%, rgba({color.purple.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.purple.100}, 1) 0%, rgba({color.purple.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.purple.600}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.purple.600}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.purple.600}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.purple.600}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.purple.600}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.purple.600}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.purple.600}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.purple.600}, 1) 0%, rgba({color.purple.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.purple.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.purple.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.purple.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.purple.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.purple.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.purple.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.purple.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.purple.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "red": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.300}, 1) 0%, rgba({color.red.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.300}, 1) 0%, rgba({color.red.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.300}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.100}, 1) 0%, rgba({color.red.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.600}, 1) 0%, rgba({color.red.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.red.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "rose": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.rose.300}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.rose.100}, 1) 0%, rgba({color.rose.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.rose.100}, 1) 0%, rgba({color.rose.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.rose.100}, 1) 0%, rgba({color.rose.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.rose.100}, 1) 0%, rgba({color.rose.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.rose.100}, 1) 0%, rgba({color.rose.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.rose.100}, 1) 0%, rgba({color.rose.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.rose.100}, 1) 0%, rgba({color.rose.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.rose.100}, 1) 0%, rgba({color.rose.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.rose.600}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.rose.600}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.rose.600}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.rose.600}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.rose.600}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.rose.600}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.rose.600}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.rose.600}, 1) 0%, rgba({color.rose.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.rose.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.rose.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.rose.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.rose.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.rose.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.rose.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.rose.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.rose.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "secondary": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.gray.300}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.gray.100}, 1) 0%, rgba({color.gray.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.gray.100}, 1) 0%, rgba({color.gray.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.gray.100}, 1) 0%, rgba({color.gray.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.gray.100}, 1) 0%, rgba({color.gray.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.gray.100}, 1) 0%, rgba({color.gray.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.gray.100}, 1) 0%, rgba({color.gray.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.gray.100}, 1) 0%, rgba({color.gray.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.gray.100}, 1) 0%, rgba({color.gray.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.gray.600}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.gray.600}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.gray.600}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.gray.600}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.gray.600}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.gray.600}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.gray.600}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.gray.600}, 1) 0%, rgba({color.gray.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.gray.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.gray.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.gray.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.gray.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.gray.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.gray.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.gray.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.gray.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "sky": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.300}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.100}, 1) 0%, rgba({color.sky.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.600}, 1) 0%, rgba({color.sky.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.sky.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "success": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.300}, 1) 0%, rgba({color.green.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.300}, 1) 0%, rgba({color.green.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.300}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.100}, 1) 0%, rgba({color.green.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.600}, 1) 0%, rgba({color.green.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.green.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "teal": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.teal.300}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.teal.100}, 1) 0%, rgba({color.teal.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.teal.100}, 1) 0%, rgba({color.teal.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.teal.100}, 1) 0%, rgba({color.teal.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.teal.100}, 1) 0%, rgba({color.teal.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.teal.100}, 1) 0%, rgba({color.teal.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.teal.100}, 1) 0%, rgba({color.teal.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.teal.100}, 1) 0%, rgba({color.teal.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.teal.100}, 1) 0%, rgba({color.teal.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.teal.600}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.teal.600}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.teal.600}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.teal.600}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.teal.600}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.teal.600}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.teal.600}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.teal.600}, 1) 0%, rgba({color.teal.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.teal.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.teal.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.teal.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.teal.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.teal.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.teal.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.teal.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.teal.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "violet": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.violet.300}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.violet.100}, 1) 0%, rgba({color.violet.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.violet.100}, 1) 0%, rgba({color.violet.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.violet.100}, 1) 0%, rgba({color.violet.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.violet.100}, 1) 0%, rgba({color.violet.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.violet.100}, 1) 0%, rgba({color.violet.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.violet.100}, 1) 0%, rgba({color.violet.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.violet.100}, 1) 0%, rgba({color.violet.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.violet.100}, 1) 0%, rgba({color.violet.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.violet.600}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.violet.600}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.violet.600}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.violet.600}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.violet.600}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.violet.600}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.violet.600}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.violet.600}, 1) 0%, rgba({color.violet.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.violet.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.violet.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.violet.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.violet.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.violet.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.violet.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.violet.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.violet.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "warning": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.300}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.100}, 1) 0%, rgba({color.amber.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.600}, 1) 0%, rgba({color.amber.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.amber.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    },
+    "yellow": {
+      "alpha-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.300}, 0) 100%)"
+      },
+      "alpha-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.300}, 0) 100%)"
+      },
+      "alpha-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.300}, 0) 100%)"
+      },
+      "alpha-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.300}, 0) 100%)"
+      },
+      "alpha-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.300}, 0) 100%)"
+      },
+      "alpha-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.300}, 0) 100%)"
+      },
+      "alpha-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.300}, 0) 100%)"
+      },
+      "alpha-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.300}, 0) 100%)"
+      },
+      "bold-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.600}, 1) 100%)"
+      },
+      "bold-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.600}, 1) 100%)"
+      },
+      "bold-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.600}, 1) 100%)"
+      },
+      "bold-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.600}, 1) 100%)"
+      },
+      "bold-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.600}, 1) 100%)"
+      },
+      "bold-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.600}, 1) 100%)"
+      },
+      "bold-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.600}, 1) 100%)"
+      },
+      "bold-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.600}, 1) 100%)"
+      },
+      "bright-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "bright-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "bright-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "bright-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "bright-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "bright-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "bright-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "bright-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.yellow.300}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "dark-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.yellow.100}, 1) 0%, rgba({color.yellow.300}, 1) 100%)"
+      },
+      "dark-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.yellow.100}, 1) 0%, rgba({color.yellow.300}, 1) 100%)"
+      },
+      "dark-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.yellow.100}, 1) 0%, rgba({color.yellow.300}, 1) 100%)"
+      },
+      "dark-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.yellow.100}, 1) 0%, rgba({color.yellow.300}, 1) 100%)"
+      },
+      "dark-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.yellow.100}, 1) 0%, rgba({color.yellow.300}, 1) 100%)"
+      },
+      "dark-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.yellow.100}, 1) 0%, rgba({color.yellow.300}, 1) 100%)"
+      },
+      "dark-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.yellow.100}, 1) 0%, rgba({color.yellow.300}, 1) 100%)"
+      },
+      "dark-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.yellow.100}, 1) 0%, rgba({color.yellow.300}, 1) 100%)"
+      },
+      "subtle-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.yellow.600}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "subtle-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.yellow.600}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "subtle-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.yellow.600}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "subtle-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.yellow.600}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "subtle-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.yellow.600}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "subtle-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.yellow.600}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "subtle-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.yellow.600}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "subtle-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.yellow.600}, 1) 0%, rgba({color.yellow.900}, 1) 100%)"
+      },
+      "tint-b": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, rgba({color.yellow.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-bl": {
+        "type": "gradient",
+        "value": "linear-gradient(225deg, rgba({color.yellow.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-br": {
+        "type": "gradient",
+        "value": "linear-gradient(135deg, rgba({color.yellow.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-l": {
+        "type": "gradient",
+        "value": "linear-gradient(270deg, rgba({color.yellow.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-r": {
+        "type": "gradient",
+        "value": "linear-gradient(90deg, rgba({color.yellow.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-t": {
+        "type": "gradient",
+        "value": "linear-gradient(0deg, rgba({color.yellow.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tl": {
+        "type": "gradient",
+        "value": "linear-gradient(315deg, rgba({color.yellow.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      },
+      "tint-tr": {
+        "type": "gradient",
+        "value": "linear-gradient(45deg, rgba({color.yellow.50}, 1) 0%, rgba({color.neutral.100}, 1) 100%)"
+      }
+    }
+  }
+}

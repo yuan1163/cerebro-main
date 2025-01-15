@@ -1,0 +1,30 @@
+@import '@styles/styles.scss';
+
+.accordion {
+  @apply relative;
+  @apply w-full;
+}
+
+// VARIANT
+
+.accordion-variant-solid {
+  @apply bg-surface-01;
+}
+
+@each $swatch in $paletteSurface {
+  .accordion-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+// ROUNDED
+
+.accordion-rounded {
+  @apply rounded-lg;
+}
+
+// SHADOW
+
+.accordion-shadow {
+  @apply shadow-xs;
+}

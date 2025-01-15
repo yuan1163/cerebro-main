@@ -1,0 +1,74 @@
+.schema-container {
+  @apply relative;
+  @apply overflow-hidden;
+  @apply p-4;
+  @apply rounded-lg;
+  @apply bg-background;
+  @apply border border-border-subtle;
+}
+
+.icons-container {
+  @apply absolute;
+  @apply bottom-4 right-4;
+}
+
+.asset-chip-container {
+  @apply absolute;
+  @apply z-10;
+  @apply top-4 right-4;
+}
+
+.devices-container {
+  @apply absolute;
+  @apply z-10;
+  @apply bottom-4 left-4;
+}
+
+.image-container {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply h-full;
+  @apply w-auto;
+}
+
+.radar {
+  @apply absolute;
+  @apply border-2 border-common-white;
+}
+
+.radar-mini {
+  & svg {
+    @apply w-[1.25rem] h-[1.25rem];
+  }
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.floor-container {
+  @apply absolute;
+  @apply z-10;
+  @apply top-4 left-4;
+  @apply w-[194px];
+  @apply p-3;
+  @apply rounded-lg;
+  @apply bg-neutral-50;
+  .title {
+    @apply text-sm text-typography-primary font-bold;
+  }
+  .subtitle {
+    @apply text-xs text-typography-secondary;
+  }
+}
+
+.floor-container-hidden {
+  @apply hidden;
+}
+
+.icon-button {
+  @apply z-10;
+}

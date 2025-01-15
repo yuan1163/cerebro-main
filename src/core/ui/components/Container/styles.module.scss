@@ -1,0 +1,23 @@
+.container {
+  @apply block;
+  @apply w-full;
+  @apply px-[theme('spacing.container-x')];
+}
+
+// .container-{fixed}
+
+.container-fixed {
+  @apply max-w-[theme('screens.2xl')];
+  // @apply min-w-[theme('screens.md')]; current EMS can not fit in this weight
+  @apply min-w-[theme('screens.lg')];
+}
+
+// .container-maxWidth-{maxWidth}
+
+.container-fixed.container-maxWidth-2xl {
+  @apply max-w-[theme('screens.2xl')];
+}
+
+.container-maxWidth-2xl {
+  @apply max-w-full;
+}

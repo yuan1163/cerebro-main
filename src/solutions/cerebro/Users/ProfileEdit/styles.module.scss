@@ -1,0 +1,21 @@
+.card-content {
+  @apply pt-0;
+}
+
+.avatar-container {
+  @apply mt-1 mb-3;
+  @apply w-full;
+}
+
+.form {
+  @apply grid;
+  @apply grid-rows-[1fr_auto];
+  @apply overflow-hidden;
+  @apply h-full;
+  @apply w-full;
+}
+
+.card-footer {
+  @apply border-t border-t-divider;
+  @apply bg-surface-01;
+}

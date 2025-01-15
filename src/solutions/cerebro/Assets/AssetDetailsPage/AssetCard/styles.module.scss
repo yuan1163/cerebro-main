@@ -1,0 +1,36 @@
+.card {
+    @apply w-full;
+    .card-content {
+        @apply flex;
+        @apply w-full;
+    }
+    .content-container {
+        @apply grow shrink-0;
+        @apply pr-4;
+        @apply gap-1;
+        @apply overflow-hidden;
+        .header {
+            @apply gap-1;
+            @apply grow-0;
+        }
+        .body {
+            @apply grow;
+            @apply py-1.5;
+            .stack {
+                @apply items-center;
+            }
+        }
+        .footer {
+            @apply grow-0;
+        }
+    }
+
+    .card-media-container {
+        @apply grow-0 shrink-0;
+        @apply rounded-lg;
+        @apply bg-background;
+        .card-media {
+            @apply aspect-square w-32 h-32;
+        }
+    }
+}

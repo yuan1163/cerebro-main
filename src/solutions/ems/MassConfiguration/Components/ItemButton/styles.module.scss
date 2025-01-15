@@ -1,0 +1,41 @@
+.item-button-container {
+  @apply border rounded-md;
+  @apply p-6;
+  @apply cursor-pointer;
+  @apply gap-3;
+
+  &:hover {
+    @apply bg-action-hover;
+    @apply border-border-hover;
+  }
+}
+
+.disabled {
+  @apply bg-action-disabled border-border-disabled;
+  @apply cursor-not-allowed select-none;
+
+  .icon {
+    @apply bg-icon-disabled text-icon-disabled;
+  }
+
+  .title-text {
+    @apply text-typography-disabled;
+  }
+
+  .subTitle-text {
+    @apply text-typography-disabled;
+  }
+
+  &:hover {
+    @apply border-border-disabled;
+  }
+}
+
+.selected {
+  @apply bg-action-active border-border-active;
+
+  &:hover {
+    @apply bg-action-active;
+    @apply border-border-active;
+  }
+}

@@ -1,0 +1,23 @@
+.unit {
+  @apply gap-5;
+  @apply bg-common-white px-2 py-1 rounded-lg;
+}
+
+.map-container {
+  @apply grow;
+}
+
+.formation-map-container {
+  @apply min-h-[25rem] w-full;
+  @apply bg-background;
+  .formation-map {
+    @apply h-full w-full;
+  }
+}
+
+.zone-container {
+  @apply mt-2;
+  .icon {
+    @apply mr-2;
+  }
+}

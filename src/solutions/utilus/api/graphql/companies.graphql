@@ -1,0 +1,8 @@
+query Companies($orderBy: [CompanyOrderByWithRelationInput!]) {
+  companies(orderBy: $orderBy) {
+    id
+    name
+    logo
+    icon
+  }
+}

@@ -1,0 +1,15 @@
+.main {
+  @apply relative;
+  @apply items-center justify-center;
+  @apply w-full min-h-screen;
+  @apply bg-background bg-[url('./hero-illustration.svg')] bg-center bg-no-repeat bg-cover;
+}
+
+.footer {
+  @apply grid gap-0.5;
+  @apply absolute;
+  @apply left-0;
+  @apply bottom-0;
+  @apply p-6;
+  @apply w-full;
+}

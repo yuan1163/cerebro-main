@@ -1,0 +1,44 @@
+@import '@styles/styles.scss';
+
+.popover {
+  .button {
+    @apply appearance-none;
+    @apply flex;
+    @apply bg-transparent;
+    @apply outline-0;
+    &:focus,
+    &:focus-visible {
+      @apply outline-none;
+    }
+  }
+  .button-rounded {
+    @apply rounded-full;
+  }
+}
+
+.popover-panel {
+  @apply z-modal;
+  @apply overflow-auto;
+  @apply m-0;
+  @apply mt-1;
+  @apply px-0;
+  @apply py-1;
+  max-width: calc(100vw - 2 * #{theme('spacing.4')});
+  @apply min-w-0;
+  @apply border border-border-subtle;
+  @apply rounded-lg;
+  @apply bg-surface-03;
+  @apply shadow-lg;
+  @include scrollbar;
+  &:focus,
+  &:focus-visible {
+    @apply outline-0;
+  }
+}
+
+// DISABLE GUTTERS
+
+.popover-panel-disable-gutters {
+  @apply px-0;
+  @apply py-0;
+}

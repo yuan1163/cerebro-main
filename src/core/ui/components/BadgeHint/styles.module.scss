@@ -1,0 +1,83 @@
+@import '@styles/styles.scss';
+
+// CONTAINER
+
+.badge-hint-container {
+  @apply relative;
+}
+
+// HINT
+
+.badge-hint {
+  @apply absolute;
+  @apply top-0;
+  @apply right-0;
+  transform-origin: 100% 0%;
+  @apply z-[1];
+  @apply block;
+  @apply rounded-full;
+}
+
+// SIZE
+
+$sizes: (
+  'xs': 1,
+  'sm': 1.5,
+  'md': 2,
+  'lg': 2.5,
+  'xl': 3,
+);
+
+@each $name, $size in $sizes {
+  .badge-hint-size-#{$name} {
+    @apply #{h- + $size};
+    @apply #{w- + $size};
+  }
+}
+
+// POSITION
+
+.badge-hint {
+  transform: scale(1) translateX(-10%) translateY(-18%);
+}
+
+.badge-hint.badge-hint-size-xl {
+  transform: scale(1) translateX(10%) translateY(-18%);
+}
+
+.badge-hint-variant-text {
+  transform: scale(1) translateX(100%) translateY(0%);
+}
+
+// COLOR
+
+@each $swatch in $paletteBrand {
+  .badge-hint-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .badge-hint-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+@each $swatch in $paletteDefault {
+  .badge-hint-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+// BORDER
+
+.badge-hint-border {
+  @apply outline outline-2;
+  @apply outline-common-white;
+}
+
+// DISABLED
+
+.badge-hint-disabled {
+  @apply bg-gray-200;
+}

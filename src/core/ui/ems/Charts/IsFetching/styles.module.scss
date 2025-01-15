@@ -1,0 +1,12 @@
+.container {
+  @apply w-full flex justify-center items-center flex-col;
+
+  .icon {
+    width: 6rem;
+    height: 6rem;
+    & svg {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}

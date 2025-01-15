@@ -1,0 +1,23 @@
+.card {
+  @apply flex flex-col;
+  @apply h-full;
+  .filter {
+    @apply items-center;
+  }
+  .list {
+    @apply flex flex-col;
+  }
+  .list-item {
+    @apply border-b border-border;
+    &:last-child {
+      @apply border-0;
+    }
+  }
+}
+
+.progress {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply h-full;
+}

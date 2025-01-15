@@ -1,0 +1,22 @@
+.container {
+  @apply p-5 h-full;
+}
+
+.data-grid {
+  @apply mt-2;
+}
+
+.data-grid-row {
+  @apply grid grid-cols-[minmax(24ch,_28ch)_minmax(max-content,_6ch)_minmax(120px,_1fr)_minmax(auto,_4ch)] leading-none items-center;
+}
+
+.location-name {
+  @apply text-typography-primary font-bold;
+}
+
+.count {
+  @apply text-typography-tertiary font-bold text-right;
+  &:last-child {
+    @apply flex justify-end text-left;
+  }
+}

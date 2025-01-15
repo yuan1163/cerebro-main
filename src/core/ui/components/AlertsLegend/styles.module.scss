@@ -1,0 +1,17 @@
+.alerts-legend {
+  @apply flex;
+  @apply items-center;
+  @apply py-1.5;
+  @apply px-3;
+  @apply rounded-3xl;
+  @apply bg-surface-02;
+}
+
+.dot {
+  @apply 2xl:h-[0.46875rem];
+  @apply 2xl:w-[0.46875rem];
+}
+
+.count {
+  @apply 2xl:text-base;
+}

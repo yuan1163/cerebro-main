@@ -1,0 +1,19 @@
+.container {
+  @apply w-full h-full;
+  @apply relative;
+}
+
+.map {
+  @apply w-full h-full;
+  @apply bg-neutral-100;
+}
+
+.location {
+  @apply absolute top-5 left-5;
+  @apply bg-common-white rounded p-3;
+}
+
+.legend {
+  @apply absolute bottom-5 left-5;
+  @apply bg-common-white rounded p-3;
+}

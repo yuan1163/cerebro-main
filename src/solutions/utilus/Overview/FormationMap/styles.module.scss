@@ -1,0 +1,20 @@
+.map-container {
+  @apply relative;
+  @apply w-full h-full;
+  min-height: 17.75rem;
+  @apply rounded-lg;
+  // @apply bg-gray-100;
+  // @apply bg-[url(./charlotte-city-map.png)];
+  // @apply bg-no-repeat;
+  // @apply bg-cover;
+  // @apply bg-center;
+
+  .map {
+    @apply w-full h-full;
+  }
+}
+
+.icon-container {
+  @apply absolute;
+  @apply right-5 bottom-5;
+}

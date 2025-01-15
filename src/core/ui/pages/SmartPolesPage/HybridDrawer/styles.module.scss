@@ -1,0 +1,24 @@
+.hybrid-drawer {
+  @apply absolute;
+  @apply left-0 top-20;
+  @apply overflow-hidden;
+  @apply z-drawer;
+  height: calc(100% - 5rem);
+  @apply p-4 pt-0;
+  .hybrid-drawer-content {
+    @apply h-full;
+    .charts-content {
+      @apply h-full;
+      @apply w-[39.5rem];
+    }
+    .layers-widget {
+      @apply relative;
+      @apply bottom-0 left-0;
+      @apply ml-4;
+    }
+  }
+  .speed-dial {
+    @apply relative;
+    @apply ml-4;
+  }
+}

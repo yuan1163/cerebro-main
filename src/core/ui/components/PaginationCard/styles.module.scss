@@ -1,0 +1,17 @@
+.pagination-card-container {
+  @apply absolute;
+  @apply z-10;
+  @apply overflow-y-hidden;
+  @apply left-1/2;
+  @apply bottom-0;
+  @apply -translate-x-1/2;
+}
+
+.pagination-card {
+  @apply py-3;
+  @apply px-6;
+  @apply rounded-tl-2xl;
+  @apply rounded-tr-2xl;
+  @apply bg-translucent-default-ultrathick;
+  @apply shadow-lg;
+}

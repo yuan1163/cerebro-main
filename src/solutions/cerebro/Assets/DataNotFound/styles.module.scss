@@ -1,0 +1,18 @@
+.grid {
+  @apply w-full h-full;
+}
+
+.icon {
+  @apply mb-4;
+  & svg {
+    @apply opacity-60;
+  }
+}
+
+.title {
+  @apply mb-2;
+}
+
+.subtitle {
+  @apply max-w-[36ch];
+}

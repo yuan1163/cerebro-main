@@ -1,0 +1,63 @@
+@import '@styles/styles.scss';
+
+.snackbar-content {
+  @apply flex items-center flex-wrap grow-0;
+  @apply w-80 min-h-[3.25rem];
+  @apply py-2 px-4;
+  @apply rounded;
+  @apply bg-transparent;
+  &::after {
+    @apply content-[''];
+    @apply absolute;
+    @apply top-0 left-0;
+    @apply z-0;
+    @apply opacity-90;
+    @apply w-full;
+    @apply h-full;
+    @apply rounded;
+    @apply bg-neutral-900;
+  }
+}
+
+.snackbar-content-message {
+  @apply z-10;
+  @apply w-[32ch];
+  @apply py-1;
+}
+
+// ACTION
+
+.snackbar-content-action {
+  @apply absolute;
+  top: calc(theme('spacing.1') + theme('fontSize.sm[0]'));
+  @apply right-4;
+  @apply z-snackbar;
+  @apply flex items-center;
+}
+
+// TOAST
+
+.snackbar-content-default {
+  @apply relative;
+}
+
+.snackbar-content-toast {
+  @apply fixed;
+  @apply bottom-2 right-2;
+}
+
+// SEVERITY
+
+@each $swatch in $paletteSeverity {
+  .snackbar-content-#{$swatch} {
+    &::before {
+      @apply content-[''];
+      @apply absolute;
+      @apply z-10;
+      @apply left-0 top-0;
+      @apply w-1.5 h-full;
+      @apply rounded-l;
+      @apply #{bg- + $swatch};
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.card {
+  @apply w-full;
+  .card-content {
+    @apply justify-between;
+    .icon-container {
+      @apply grow;
+      .icon {
+        @apply mb-8;
+      }
+    }
+    .time {
+      @apply mt-1;
+      @apply text-xs text-typography-secondary;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.disabled-map-container {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply h-full;
+  @apply w-full;
+  @apply rounded-lg;
+  @apply bg-surface-02;
+}

@@ -1,0 +1,247 @@
+@import '@styles/styles.scss';
+
+// INPUT WRAPPER
+
+.input-wrapper {
+  @apply flex;
+  @apply items-center;
+  @apply flex-nowrap;
+  & > div:first-of-type {
+    @apply w-full;
+  }
+}
+
+.input-wrapper-type-file {
+  .input-base-wrapper {
+    @apply rounded-tr-none;
+    @apply rounded-br-none;
+  }
+}
+
+// INPUT BASE WRAPPER
+
+.input-base-wrapper {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply pr-2.5;
+  @apply pl-3;
+  @apply py-2;
+  @apply min-w-0;
+  @apply w-full;
+  @apply rounded-md;
+  @apply border border-border;
+  @apply bg-transparent;
+  @apply font-normal;
+  @apply text-typography-primary;
+  @apply cursor-text;
+  &:focus-visible {
+    @apply outline;
+    @apply outline-primary;
+    @apply outline-offset-0;
+    @apply outline-2;
+  }
+  &:hover {
+    @apply border-border-hover;
+  }
+}
+
+// MULTISELECT
+
+.input-base-wrapper-cursor-default {
+  @apply cursor-default;
+}
+
+.input-base-wrapper-chips {
+  @apply pl-1.5;
+}
+
+// FOCUS
+
+.input-base-wrapper-focus-visible,
+.input-base-wrapper-focus {
+  @apply border-transparent;
+  @apply outline;
+  @apply outline-primary;
+  @apply -outline-offset-2;
+  @apply outline-2;
+  &:hover {
+    @apply border-transparent;
+  }
+}
+
+// BASE
+
+.input-base {
+  @apply appearance-none;
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply flex-1;
+  @apply p-0;
+  @apply min-w-0;
+  @apply w-full;
+  @apply border-0;
+  @apply outline-none;
+  @apply bg-transparent;
+  @apply text-left;
+  @apply text-sm;
+  @apply text-ellipsis;
+  &:focus-visible {
+    @apply outline-none;
+  }
+}
+
+.input-base-type-file {
+  @apply invisible;
+  @apply h-0;
+  @apply w-full;
+}
+
+// SIZE
+
+.input-base-wrapper-size-sm {
+  @apply h-[theme('height.button.md')];
+  & .button-type-file {
+    @apply min-h-[theme('height.button.md')];
+  }
+}
+
+.input-base-wrapper-size-md {
+  @apply h-[theme('height.button.lg')];
+  & .button-type-file {
+    @apply min-h-[theme('height.button.lg')];
+  }
+}
+
+// URL
+
+.url-placeholder-prefix {
+  @apply mr-1;
+}
+
+// PLACEHOLDER
+
+.input-base::placeholder,
+.input-base-placeholder {
+  @apply text-typography-placeholder;
+  @apply select-none;
+}
+
+// ICONS
+
+.start-icon,
+.end-icon {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+}
+
+.start-icon {
+  @apply mr-2;
+}
+
+.input-base-wrapper-start-icon {
+  @apply pl-2.5;
+}
+
+.end-icon {
+  @apply ml-2;
+}
+
+// CLEAR BUTTON
+
+.icon-clear-button-decorator {
+  @apply ml-2;
+}
+
+// CAPTION
+
+.input-base-caption-start {
+  @apply mr-2;
+}
+
+.input-base-caption-end {
+  @apply ml-2;
+}
+
+// FORM CONTROL
+
+.form-control {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply w-full;
+}
+
+// SEVERITY
+
+@each $swatch in $paletteSeverity {
+  .form-control-severity-#{$swatch} {
+    & .input-base-wrapper {
+      @apply #{border- + $swatch};
+      &:hover {
+        @apply #{outline- + $swatch + -hover};
+      }
+      &:focus-visible {
+        @apply #{outline- + $swatch};
+      }
+    }
+    & .input-base-wrapper-focus-visible,
+    & .input-base-wrapper-focus {
+      @apply #{outline- + $swatch};
+    }
+  }
+}
+
+.severity-icon {
+  @apply ml-2;
+}
+
+// LOADING
+
+.loading-icon {
+  @apply ml-2;
+}
+
+// FILE BUTTON
+
+.button-type-file {
+  @apply rounded-tl-none;
+  @apply rounded-bl-none;
+  @apply border border-border;
+  @apply border-l-0;
+}
+
+// AUTOFILL
+
+.input-base {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--color-typography-primary);
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-surface-01) inset;
+  }
+}
+
+// DISABLED
+
+.form-control .input-base-wrapper-disabled {
+  @apply bg-action-disabled;
+  @apply text-typography-disabled;
+  @apply border-border-disabled;
+  @apply pointer-events-none;
+  & .input-base,
+  & .input-base::placeholder,
+  &::placeholder {
+    @apply text-typography-disabled;
+    @apply select-none;
+  }
+  & .icon-disabled button {
+    @apply text-typography-disabled;
+  }
+  button {
+    @apply pointer-events-none;
+  }
+}

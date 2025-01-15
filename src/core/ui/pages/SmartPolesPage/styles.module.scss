@@ -1,0 +1,73 @@
+.main {
+  @apply relative;
+  @apply flex flex-wrap;
+  @apply overflow-y-auto;
+  @apply min-h-screen;
+  @apply bg-background;
+}
+
+.menu-container {
+  @apply absolute;
+  @apply top-4 left-4;
+  @apply z-10;
+}
+
+.layers-container {
+  @apply absolute;
+  @apply bottom-4 left-4;
+  @apply z-10;
+}
+
+.map-container {
+  @apply relative;
+  @apply grow;
+}
+
+.header-widget {
+  @apply absolute;
+  @apply top-0 left-0;
+  @apply z-drawer;
+  @apply p-4;
+  @apply w-full h-20;
+}
+
+.icon-buttons-container {
+  @apply absolute;
+  @apply bottom-4 right-4;
+  @apply z-10;
+}
+
+// tab
+
+.tab-divider {
+  @apply self-center;
+  @apply h-6;
+}
+
+// map
+
+.layer-popover {
+  @apply absolute;
+  @apply left-4 bottom-4;
+  @apply z-drawer;
+  @apply w-auto;
+}
+
+// hybrid
+
+.drawer-menu-hybrid {
+  @apply w-[39.5rem];
+  @apply bg-common-white;
+  @apply text-typography-primary;
+}
+
+.drawer-menu {
+  @apply bg-common-white;
+  @apply text-typography-primary;
+}
+
+.drawer-menu-grid {
+  @apply rounded-lg;
+  @apply bg-common-white;
+  @apply text-typography-primary;
+}

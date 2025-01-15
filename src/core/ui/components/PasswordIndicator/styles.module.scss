@@ -1,0 +1,40 @@
+@import '@styles/styles.scss';
+
+// LIST
+
+.list {
+  @apply grid;
+  @apply grid-cols-4;
+  @apply w-full;
+  @apply gap-1;
+}
+
+// LIST ITEM
+
+.list-item {
+  @apply h-1;
+  @apply w-full;
+  @apply rounded-sm;
+}
+
+// COLORS
+
+.list-item-color-default {
+  @apply bg-secondary-tint-alpha;
+}
+
+@each $swatch in $paletteSeverity {
+  .list-item-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+.list-item-color-primary {
+  @apply bg-primary;
+}
+
+// LABEL
+
+.label {
+  @apply min-w-[4.25rem];
+}

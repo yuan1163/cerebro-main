@@ -1,0 +1,42 @@
+.stack {
+  @apply flex;
+}
+
+.stack-direction-column {
+  @apply flex-col;
+}
+
+.stack-direction-column-reverse {
+  @apply flex-col-reverse;
+}
+
+.stack-direction-row {
+  @apply flex-row;
+}
+
+.stack-direction-row-reverse {
+  @apply flex-row-reverse;
+}
+
+// full-width
+
+.stack-full-width {
+  @apply w-full;
+}
+
+// space
+
+$max: 11;
+$offset: 1;
+@mixin list-loop($className, $direction) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $direction + $i} {
+      @apply #{space- + $direction + $i};
+    }
+    $i: $i + $offset;
+  }
+}
+
+@include list-loop('.stack-space-', 'x-');
+@include list-loop('.stack-space-', 'y-');

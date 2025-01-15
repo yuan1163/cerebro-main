@@ -1,0 +1,104 @@
+.form-control {
+  @apply relative;
+  @apply grid;
+  @apply text-typography-primary;
+}
+
+// SIZE
+
+.form-control-size-sm {
+  @apply text-sm;
+}
+
+.form-control-size-md {
+  @apply text-base;
+}
+
+// HELPER TEXT
+
+.form-helper-text {
+  @apply flex;
+  @apply items-center;
+  @apply text-typography-secondary;
+}
+
+// LABEL
+
+.label {
+  @apply flex-1;
+  @apply min-w-0;
+  @apply font-medium;
+}
+
+// LABEL SM
+
+.form-control-variant-checkbox.form-control-size-sm,
+.form-control-variant-radio.form-control-size-sm,
+.form-control-variant-switch.form-control-size-sm {
+  & .label {
+    @apply text-sm;
+    @apply ml-2;
+  }
+}
+
+.form-control-variant-checkbox.form-control-size-sm,
+.form-control-variant-radio.form-control-size-sm {
+  & .label {
+    @apply leading-[theme("width.checkbox.sm")];
+  }
+  & .form-helper-text {
+    margin-left: calc(theme('width.checkbox.sm') + theme('spacing.2'));
+  }
+}
+
+.form-control-variant-switch.form-control-size-sm {
+  & .label {
+    @apply leading-[theme("height.switch.sm")];
+  }
+  & .form-helper-text {
+    margin-left: calc(theme('width.switch.sm') + theme('spacing.2'));
+  }
+}
+
+// LABEL MD
+
+.form-control-variant-checkbox.form-control-size-md,
+.form-control-variant-radio.form-control-size-md,
+.form-control-variant-switch.form-control-size-md {
+  & .label {
+    @apply text-base;
+    @apply ml-3;
+  }
+}
+
+.form-control-variant-checkbox.form-control-size-md,
+.form-control-variant-radio.form-control-size-md {
+  & .label {
+    @apply leading-[theme("width.checkbox.md")];
+  }
+  & .form-helper-text {
+    margin-left: calc(theme('width.checkbox.md') + theme('spacing.3'));
+  }
+}
+
+.form-control-variant-switch.form-control-size-md {
+  & .label {
+    @apply leading-[theme("height.switch.md")];
+  }
+  & .form-helper-text {
+    margin-left: calc(theme('width.switch.md') + theme('spacing.3'));
+  }
+}
+
+// FULL WIDTH
+
+.form-control-full-width {
+  @apply w-full;
+}
+
+// DISABLED
+
+.form-control-disabled,
+.form-control-disabled .form-helper-text {
+  @apply text-typography-disabled;
+}

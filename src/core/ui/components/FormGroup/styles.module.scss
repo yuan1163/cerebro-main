@@ -1,0 +1,11 @@
+.form-group {
+  @apply flex;
+  @apply flex-col;
+  @apply flex-wrap;
+}
+
+// row
+
+.form-group-row {
+  @apply flex-row;
+}

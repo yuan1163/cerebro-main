@@ -1,0 +1,15 @@
+.list-item {
+  @apply p-2;
+  @apply rounded;
+  @apply bg-common-white;
+}
+.list-item-content {
+  @apply items-center justify-between;
+  @apply w-full;
+}
+.title {
+  @apply text-xs text-typography-secondary;
+}
+.subtitle {
+  @apply text-xs font-bold text-right text-typography-secondary;
+}

@@ -1,0 +1,46 @@
+@import '@styles/styles.scss';
+
+.icon-base {
+  @apply select-none overflow-hidden inline-block text-center shrink-0;
+}
+
+// .icon-base-size-{size}
+
+$iconSizes: 'small' $iconSizeSm, 'medium' $iconSizeMd, 'large' $iconSizeLg, 'xl-large' $iconSizeXl,
+  'xxl-large' $iconSizeXxl;
+
+@each $iconSizePostfix, $iconSize in $iconSizes {
+  .icon-base-size-#{$iconSizePostfix} {
+    font-size: $iconSize;
+    & svg {
+      width: $iconSize;
+      height: $iconSize;
+    }
+  }
+}
+
+.icon-base-size-inherit {
+  @apply text-inherit;
+}
+
+// .icon-base-color-{color}
+
+$iconColors: 'inherit', 'primary', 'secondary', 'common-white', 'typography-primary', 'typography-secondary';
+
+@each $iconColor in $iconColors {
+  .icon-base-color-#{$iconColor} {
+    @apply #{text- + $iconColor};
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .icon-base-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}
+
+.icon-base-color-secondary {
+  @apply text-typography-secondary;
+}
+
+// disabled

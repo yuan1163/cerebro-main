@@ -1,0 +1,44 @@
+.card-header {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply gap-4;
+}
+
+// CHILDREN
+
+.card-header-middle {
+  @apply flex;
+  @apply grow;
+  @apply gap-2;
+}
+
+// AVATAR
+
+.card-header-avatar {
+  @apply flex-grow-0 flex-shrink-0 basis-auto;
+  @apply mr-4;
+}
+
+// CONTENT
+
+.card-header-content {
+  @apply flex;
+  @apply flex-col;
+}
+
+.card-header-title-container {
+  @apply flex;
+  @apply flex-nowrap;
+  @apply items-center;
+}
+
+.card-header-title {
+  @apply block;
+  @apply font-semibold;
+}
+
+.card-header-title-caption {
+  @apply block;
+  @apply ml-2;
+}

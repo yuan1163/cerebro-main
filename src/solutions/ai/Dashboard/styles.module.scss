@@ -1,0 +1,35 @@
+.unit-card {
+  @apply grid;
+  @apply grid-rows-[1fr_auto];
+  @apply h-full;
+}
+
+.location-container {
+  @apply grow;
+}
+
+.icon {
+  @apply ml-3;
+}
+
+.card-container {
+  @apply overflow-hidden;
+  @apply pt-0;
+}
+
+.header {
+  @apply pb-4;
+}
+
+.alerts-container {
+  @apply flex;
+  @apply gap-2.5;
+  @apply overflow-hidden;
+  .attention-card {
+    @apply basis-1/4;
+  }
+}
+
+.swiper-slide {
+  @apply max-w-[25%];
+}

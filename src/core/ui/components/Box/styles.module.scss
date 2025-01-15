@@ -1,0 +1,19 @@
+.card-trivial {
+  @apply bg-neutral-50 rounded py-2 px-4;
+}
+
+.card-white {
+  @apply bg-common-white rounded py-2 px-4;
+}
+
+.text-s1 {
+  @apply text-neutral-600 font-bold text-[15px]; // TODO use text-s1
+}
+
+.text-c2 {
+  @apply text-neutral-400 font-bold text-[12px]; // TODO use text-c2
+}
+
+.icon-wrapper {
+  @apply bg-action-hover p-2 rounded;
+}

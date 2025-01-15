@@ -1,0 +1,166 @@
+@import '@styles/styles.scss';
+
+// VARIANTS
+
+.icon {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply shrink-0;
+  @apply overflow-hidden;
+  @apply rounded;
+  @apply text-base;
+  @apply leading-none;
+  @apply select-none;
+}
+
+// ROUNDED
+
+.icon-rounded {
+  @apply rounded-full;
+}
+
+// SIZES
+
+@each $iconSize in $iconSizes {
+  .icon-variant-solid-size-#{$iconSize},
+  .icon-variant-soft-size-#{$iconSize},
+  .icon-variant-tint-size-#{$iconSize} {
+    height: #{theme + '\("width\.icon\.'+ $iconSize + '\.DEFAULT"\)'};
+    width: #{theme + '\("width\.icon\.'+ $iconSize + '\.DEFAULT"\)'};
+    & svg {
+      height: #{theme + '\("width\.icon\.'+ $iconSize + '\.icon"\)'};
+      width: #{theme + '\("width\.icon\.'+ $iconSize + '\.icon"\)'};
+    }
+  }
+}
+
+@each $iconSize in $iconSizes {
+  .icon-variant-plain-size-#{$iconSize} {
+    height: #{theme + '\("width\.decorator\.'+ $iconSize + '"\)'};
+    width: #{theme + '\("width\.decorator\.'+ $iconSize + '"\)'};
+    & svg {
+      height: #{theme + '\("width\.decorator\.'+ $iconSize + '"\)'};
+      width: #{theme + '\("width\.decorator\.'+ $iconSize + '"\)'};
+    }
+  }
+}
+
+// COLORS
+
+.icon-variant-solid-color-default {
+  @apply bg-primary;
+  @apply text-icon-contrast;
+}
+
+.icon-variant-soft-color-default {
+  @apply bg-surface-01;
+  @apply text-primary;
+}
+
+.icon-variant-tint-color-default {
+  @apply bg-primary-tint-alpha;
+  @apply text-primary;
+}
+
+.icon-variant-tint-color-icon-primary {
+  @apply text-icon-primary;
+}
+
+@each $swatch in $paletteBrand {
+  .icon-variant-solid-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+    @apply text-icon-contrast;
+  }
+  .icon-variant-soft-color-#{$swatch} {
+    @apply bg-surface-01;
+    @apply #{text- + $swatch};
+  }
+  .icon-variant-tint-color-#{$swatch} {
+    @apply #{bg- + $swatch + -tint-alpha};
+    @apply #{text- + $swatch};
+  }
+  .icon-variant-plain-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}
+
+@each $swatch in $paletteIcon {
+  .icon-variant-plain-color-icon-#{$swatch} {
+    @apply #{text-icon- + $swatch};
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .icon-variant-solid-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+    @apply text-icon-contrast;
+  }
+  .icon-variant-soft-color-#{$swatch} {
+    @apply bg-surface-01;
+    @apply #{text- + $swatch};
+  }
+  .icon-variant-tint-color-#{$swatch} {
+    @apply #{bg- + $swatch + -tint-alpha};
+    @apply #{text- + $swatch};
+  }
+  .icon-variant-plain-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}
+
+@each $swatch in $paletteDefault {
+  .icon-variant-solid-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+    @apply text-icon-contrast;
+  }
+  .icon-variant-solid-color-#{$swatch}Dark {
+    @apply #{bg-accent- + $swatch + -subtle};
+    @apply text-icon-contrast;
+  }
+  .icon-variant-soft-color-#{$swatch} {
+    @apply bg-surface-01;
+    @apply #{text- + $swatch};
+  }
+  .icon-variant-soft-color-#{$swatch}Dark {
+    @apply bg-surface-01;
+    @apply #{text-accent- + $swatch + -dark};
+  }
+  .icon-variant-tint-color-#{$swatch} {
+    @apply #{bg-accent- + $swatch + -tint-alpha};
+    @apply #{text- + $swatch};
+  }
+  .icon-variant-tint-color-#{$swatch}Dark {
+    @apply #{bg-accent- + $swatch + -tint-alpha};
+    @apply #{text-accent- + $swatch + -dark};
+  }
+  .icon-variant-plain-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+  .icon-variant-plain-color-#{$swatch}Dark {
+    @apply #{text-accent- + $swatch + -dark};
+  }
+}
+
+.icon-variant-tint-color-icon-secondary {
+  @apply bg-surface-02;
+  @apply text-icon-secondary;
+}
+
+.icon-variant-plain-color-icon-tertiary {
+  @apply text-icon-tertiary;
+}
+
+// DISABLED
+
+.icon-disabled.icon-variant-solid,
+.icon-disabled.icon-variant-soft,
+.icon-disabled.icon-variant-tint {
+  @apply bg-action-disabled;
+  @apply text-icon-disabled;
+}
+
+.icon-disabled.icon-variant-plain {
+  @apply text-icon-disabled;
+}

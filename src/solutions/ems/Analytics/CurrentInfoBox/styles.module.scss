@@ -1,0 +1,22 @@
+.card {
+  @apply grid grid-rows-[auto_1fr_auto];
+  @apply bg-trivial-tint-alpha;
+  min-width: 400px;
+
+  .card-content {
+    @apply flex flex-col;
+    @apply h-full;
+  }
+
+  &.active {
+    @apply bg-primary;
+    @apply text-common-white;
+  }
+}
+
+.subtext {
+  @apply text-typography-tertiary;
+  &.active {
+    @apply text-typography-contrast;
+  }
+}

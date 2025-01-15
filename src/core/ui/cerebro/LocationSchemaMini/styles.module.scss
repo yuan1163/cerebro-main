@@ -1,0 +1,14 @@
+.schema-container-mini {
+  @apply p-6;
+  @apply border border-divider;
+  @apply h-full;
+}
+
+.image-container-absolute {
+  @apply absolute;
+  @apply h-full;
+}
+
+.image-wrapper-relative {
+  @apply relative;
+}

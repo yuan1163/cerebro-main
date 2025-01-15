@@ -1,0 +1,51 @@
+// MAP
+
+.dialog-container {
+  @apply fixed;
+  @apply inset-0;
+  @apply overflow-y-auto;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+}
+
+.dialog {
+  @apply relative;
+  @apply z-modal;
+}
+
+.dialog-panel {
+  @apply w-full;
+  @apply overflow-hidden;
+  @apply bg-surface-01;
+  @apply transform;
+  @apply transition-all;
+}
+
+.map {
+  @apply h-full;
+  @apply w-full;
+  @apply rounded-md;
+}
+
+.map-expanded {
+  @apply absolute;
+  @apply top-0;
+  @apply left-0;
+  @apply h-full;
+  @apply w-full;
+}
+
+// ICON
+
+.icon {
+  @apply absolute;
+  @apply right-4;
+  @apply top-4;
+}
+
+.button-group {
+  @apply absolute;
+  @apply right-4;
+  @apply bottom-4;
+}

@@ -1,0 +1,22 @@
+.form {
+  @apply w-full;
+  .title-container {
+    @apply mb-4;
+    .title {
+      @apply text-lg font-bold;
+    }
+  }
+  .inputs-container {
+    @apply gap-4;
+  }
+  .buttons-container {
+    @apply justify-between;
+    @apply mt-5;
+    .button-container {
+      @apply grow;
+    }
+  }
+  .image {
+    @apply w-[100px];
+  }
+}

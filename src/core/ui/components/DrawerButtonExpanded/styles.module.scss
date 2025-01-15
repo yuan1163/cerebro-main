@@ -1,0 +1,12 @@
+.drawer-button-expanded-container {
+  @apply w-full;
+}
+
+.drawer-button-expanded {
+  @apply rounded;
+}
+
+.disabled {
+  @apply cursor-not-allowed;
+  @apply pointer-events-none;
+}

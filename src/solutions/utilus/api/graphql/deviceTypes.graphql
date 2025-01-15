@@ -1,0 +1,6 @@
+query DeviceTypes {
+  deviceTypes {
+    id
+    name
+  }
+}

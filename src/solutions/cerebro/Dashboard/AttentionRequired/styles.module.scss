@@ -1,0 +1,19 @@
+.header {
+  @apply pb-4;
+}
+.swiper-slide {
+  @apply max-w-[17.5rem];
+}
+
+.alerts-container {
+  @apply flex;
+  @apply gap-2.5;
+  @apply overflow-hidden;
+  .attention-card {
+    @apply basis-1/4;
+  }
+}
+
+.card-container {
+  @apply overflow-hidden;
+}

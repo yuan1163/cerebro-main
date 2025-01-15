@@ -1,0 +1,20 @@
+query Users {
+  users {
+    id
+    lastName
+    firstName
+    email
+    username
+    avatar
+    role {
+      id
+      name
+    }
+    groups {
+      id
+      name
+    }
+    phone
+    jobTitle
+  }
+}

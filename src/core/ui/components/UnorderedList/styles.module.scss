@@ -1,0 +1,85 @@
+@import '@styles/styles.scss';
+
+.list {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply grow;
+  @apply w-full;
+  @apply list-none;
+  @apply m-0;
+  @apply p-0;
+}
+
+// LI
+
+.list-item {
+  @apply relative;
+  @apply flex;
+  @apply items-baseline;
+  @apply flex-auto;
+  @apply grow-0;
+  @apply shrink-0;
+  @apply w-full;
+  @apply m-0;
+  @apply p-0;
+}
+
+$sizes: '7xl', '6xl', '5xl', '4xl', '3xl', '2xl', 'xl', 'lg', 'base', 'sm', 'xs';
+
+@each $size in $sizes {
+  .list-item-size-#{$size} {
+    @apply #{text- + $size};
+    // theme('fontSize.7xl[1].marginBottom')
+    --List-item-margin-bottom: #{"theme\('fontSize\."+ $size + "\[1\]\.marginBottom'\)"};
+    margin-bottom: calc(var(--List-item-margin-bottom) / 2);
+  }
+}
+
+// MARKER
+
+.marker-container {
+  @apply inline-flex;
+  @apply items-center;
+  @apply grow-0;
+  @apply shrink-0;
+  @apply mr-2.5;
+  & svg {
+    @apply inline-block;
+    @apply w-[0.875rem];
+    @apply min-w-[0.875rem];
+    @apply h-[0.875rem];
+    @apply min-h-[0.875rem];
+    @apply select-none;
+  }
+  & path {
+    vector-effect: non-scaling-stroke;
+    stroke-width: theme('strokeWidth.2xl');
+  }
+}
+
+@each $size in $sizes {
+  .marker-container-size-#{$size} {
+    // theme('fontSize.7xl[1].lineHeight')
+    --Marker-container-line-height: #{"theme\('fontSize\."+ $size + "\[1\]\.lineHeight'\)"};
+    // theme('fontSize.7xl')
+    --Marker-font-size: #{"theme\('fontSize\."+ $size + "'\)"};
+    @apply w-[var(--Marker-font-size)];
+    @apply h-[var(--Marker-font-size)];
+    & .disk-marker-icon {
+      @apply w-[var(--Marker-font-size)];
+    }
+    & .disk-marker-icon {
+      @apply h-[var(--Marker-font-size)];
+    }
+    transform: translateY(calc((var(--Marker-container-line-height) - var(--Marker-font-size)) / 2 - 0.125rem));
+  }
+}
+
+// COLORS
+
+@each $swatch in $paletteBrand {
+  .marker-container-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}

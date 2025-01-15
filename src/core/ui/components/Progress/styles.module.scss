@@ -1,0 +1,16 @@
+.progress {
+  @apply relative w-full;
+  @apply h-[5px];
+
+  .bar {
+    @apply absolute h-full rounded-full;
+
+    &.total {
+      @apply bg-neutral-200;
+    }
+
+    &.value {
+      @apply bg-primary;
+    }
+  }
+}

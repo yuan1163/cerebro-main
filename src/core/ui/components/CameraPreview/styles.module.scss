@@ -1,0 +1,19 @@
+.container {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply overflow-hidden;
+  @apply h-[10.25rem];
+  @apply w-full;
+  @apply rounded;
+  @apply bg-surface-02;
+}
+
+.image {
+  @apply block;
+  @apply w-full;
+  @apply object-cover;
+  @apply bg-center;
+  @apply bg-cover;
+  @apply bg-no-repeat;
+}

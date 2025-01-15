@@ -1,0 +1,152 @@
+@import "@styles/styles.scss";
+
+.progress-bar-wrapper {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply w-full;
+}
+
+.progress-bar-track {
+  @apply relative;
+  @apply flex;
+  @apply flex-1;
+  @apply items-center;
+  @apply border-0;
+  @apply overflow-hidden;
+}
+
+.progress-bar-progress {
+  @apply absolute;
+  @apply block;
+  @apply left-0;
+  @apply h-1.5;
+  @apply rounded-none;
+  @apply bg-current;
+  @apply text-inherit;
+}
+
+// SIZE
+
+$sizes: (
+  "sm": 1,
+  "md": 1.5,
+  "lg": 2,
+);
+
+@each $size, $value in $sizes {
+  .progress-bar-track-size-#{$size} {
+    @apply #{h- + $value};
+    // min-h-[theme('spacing.[1.5]')]
+    min-height: #{'theme\("spacing\.'+ "\["+ $value + "\]"+ '"\)'};
+    @apply #{rounded- + $size};
+  }
+  .progress-bar-progress-size-#{$size} {
+    @apply #{h- + $value};
+    @apply #{rounded-tl- + $size};
+    @apply #{rounded-bl- + $size};
+  }
+}
+
+.progress-bar-track-size-sm {
+  @apply rounded;
+}
+
+.progress-bar-progress-size-sm {
+  @apply rounded-tl;
+  @apply rounded-bl;
+}
+
+// COLOR
+
+@each $swatch in $paletteDefault {
+  .progress-bar-track-color-#{$swatch} {
+    @apply #{bg-accent- + $swatch + -subtle};
+  }
+}
+
+.progress-bar-progress-color-amber {
+  @apply bg-accent-cyan-subtle;
+}
+
+.progress-bar-progress-color-blue {
+  @apply bg-accent-yellow-subtle;
+}
+
+.progress-bar-progress-color-brown {
+  @apply bg-accent-green-subtle;
+}
+
+.progress-bar-progress-color-cyan {
+  @apply bg-accent-amber-subtle;
+}
+
+.progress-bar-progress-color-fuchsia {
+  @apply bg-accent-grass-subtle;
+}
+
+.progress-bar-progress-color-green {
+  @apply bg-accent-brown-subtle;
+}
+
+.progress-bar-progress-color-grass {
+  @apply bg-accent-orange-subtle;
+}
+
+.progress-bar-progress-color-indigo {
+  @apply bg-accent-orange-subtle;
+}
+
+.progress-bar-progress-color-lime {
+  @apply bg-accent-red-subtle;
+}
+
+.progress-bar-progress-color-orange {
+  @apply bg-accent-grass-subtle;
+}
+
+.progress-bar-progress-color-pink {
+  @apply bg-accent-green-subtle;
+}
+
+.progress-bar-progress-color-purple {
+  @apply bg-accent-lime-subtle;
+}
+
+.progress-bar-progress-color-red {
+  @apply bg-accent-lime-subtle;
+}
+
+.progress-bar-progress-color-rose {
+  @apply bg-accent-teal-subtle;
+}
+
+.progress-bar-progress-color-sky {
+  @apply bg-accent-violet-subtle;
+}
+
+.progress-bar-progress-color-teal {
+  @apply bg-accent-rose-subtle;
+}
+
+.progress-bar-progress-color-violet {
+  @apply bg-accent-sky-subtle;
+}
+
+.progress-bar-progress-color-yellow {
+  @apply bg-accent-blue-subtle;
+}
+
+// LABEL
+
+.label-wrapper {
+  @apply flex;
+  @apply items-baseline;
+  @apply justify-between;
+  @apply mt-2;
+  @apply w-full;
+}
+.label-text-wrapper {
+  @apply flex;
+  @apply gap-1;
+}

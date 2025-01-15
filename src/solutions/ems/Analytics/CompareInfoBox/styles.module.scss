@@ -1,0 +1,19 @@
+.card {
+  @apply grid grid-rows-[auto_1fr_auto];
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar'));
+  @apply bg-trivial-tint-alpha;
+
+  .card-content {
+    @apply flex flex-col;
+    @apply h-full;
+  }
+}
+
+// icon color
+$colors: 'success', 'error';
+
+@each $color in $colors {
+  .value-color-#{$color} {
+    @apply #{text- + $color};
+  }
+}

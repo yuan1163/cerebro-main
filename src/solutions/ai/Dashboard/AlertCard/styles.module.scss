@@ -1,0 +1,15 @@
+.card {
+  @apply max-w-[17.5rem] lg:max-w-[100%];
+}
+.card-content {
+  @apply overflow-hidden;
+}
+
+.title-container {
+  @apply overflow-hidden;
+}
+
+.alert-row {
+  @apply grid-cols-[auto_1fr];
+  @apply gap-2;
+}

@@ -1,0 +1,6 @@
+query Formation($where: FormationWhereUniqueInput!) {
+  formation(where: $where) {
+    id
+    name
+  }
+}

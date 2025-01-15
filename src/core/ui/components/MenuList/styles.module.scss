@@ -1,0 +1,19 @@
+@import '@styles/styles.scss';
+
+.menu-list {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply gap-1;
+  @apply grow;
+  @apply m-0;
+  @apply py-0.5;
+  @apply list-none;
+  @apply outline-0;
+}
+
+// DISABLE PADDING
+
+.menu-list-disable-padding {
+  @apply p-0;
+}

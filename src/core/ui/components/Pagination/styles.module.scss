@@ -1,0 +1,47 @@
+.pagination-container {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply gap-3;
+}
+
+.pagination-prev-button-container,
+.pagination-next-button-container {
+  @apply mb-1;
+}
+
+.pagination-prev-button-container {
+  @apply mr-1.5;
+}
+
+.pagination-next-button-container {
+  @apply ml-1.5;
+}
+
+.pagination-input-container {
+  @apply flex;
+  @apply items-center;
+  @apply shrink-0;
+  @apply w-[3.375rem];
+}
+
+.pagination-text-container {
+  @apply flex;
+  @apply items-center;
+  @apply gap-1;
+}
+
+.pagination-count {
+  @apply shrink-0;
+  @apply overflow-hidden;
+  @apply w-[3ch];
+}
+
+.no-spinners {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  -moz-appearance: textfield;
+}

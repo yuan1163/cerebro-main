@@ -1,0 +1,83 @@
+.card {
+  @apply flex;
+  @apply w-full;
+  @apply min-h-[17rem];
+  @apply rounded-lg;
+  @apply overflow-hidden;
+}
+
+.card-installed {
+  &:hover {
+    @apply shadow-sm;
+    @apply cursor-pointer;
+  }
+}
+
+.link {
+  @apply absolute;
+  @apply left-0;
+  @apply top-0;
+  @apply h-full;
+  @apply w-full;
+  @apply z-10;
+}
+
+.content-container {
+  @apply relative;
+  @apply overflow-hidden;
+  &::before {
+    @apply absolute;
+    @apply content-[''];
+    @apply top-0;
+    @apply left-0;
+    @apply h-full;
+    @apply w-full;
+  }
+}
+
+.content-container-bg-image {
+  @apply absolute;
+  @apply top-0;
+  @apply left-0;
+  @apply z-0;
+  & svg {
+    @apply opacity-80;
+  }
+}
+
+.content {
+  @apply z-10;
+  @apply pointer-events-none;
+}
+
+.content-header {
+  @apply mb-6;
+}
+
+// CHIP
+
+.chip {
+  @apply ml-2;
+}
+
+// BUTTON
+
+.button-link {
+  @apply pointer-events-auto;
+}
+
+.button {
+  @apply mt-2;
+}
+
+// DESCRIPTION
+
+.description-container {
+  @apply shrink-0;
+  @apply w-[18.375rem];
+  @apply max-w-[18.375rem];
+}
+
+.list-item li {
+  @apply mb-3;
+}

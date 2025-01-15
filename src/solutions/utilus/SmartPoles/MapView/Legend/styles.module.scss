@@ -1,0 +1,13 @@
+.item {
+  @apply min-w-[9rem] bg-surface-01 p-2 rounded;
+  @apply flex flex-row items-end justify-between;
+  .values {
+    @apply flex flex-col items-end justify-center gap-0;
+    .alerts {
+      @apply flex flex-row gap-1 items-center;
+    }
+    .devices {
+      @apply font-bold;
+    }
+  }
+}

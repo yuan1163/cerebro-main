@@ -1,0 +1,42 @@
+@import './preflight.css';
+
+@import '@core/ui/components/AccordionSummary/styles.module.scss';
+
+@import '@core/ui/components/ChartTooltip/styles.module.scss';
+@import '@core/ui/components/Scrollbar/styles.module.scss';
+@import '@core/ui/components/Slider/styles.module.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// TOKENS
+
+@import './global.css';
+@import './dark.css';
+@import './light.css';
+
+@import './datepicker/datepicker.scss';
+@import './ckeditor/ckeditor.scss';
+
+@import 'mapbox-gl/dist/mapbox-gl.css';
+@import './mapbox/mapbox-gl.scss';
+
+@import './reactflow/react-flow.scss';
+
+body {
+  @apply font-sans;
+  @apply antialiased;
+  @apply bg-background;
+  font-feature-settings: 'cv11' on;
+}
+
+*:focus {
+  @apply outline-none;
+  @apply outline-offset-0;
+}
+
+*:focus-visible {
+  @apply outline-offset-0;
+  @apply outline-primary-focus;
+}

@@ -1,0 +1,9 @@
+.country-code-button {
+  @apply w-[2.75rem];
+}
+
+.flag-image {
+  @apply shrink-0;
+  @apply mr-3;
+  @apply border border-border;
+}

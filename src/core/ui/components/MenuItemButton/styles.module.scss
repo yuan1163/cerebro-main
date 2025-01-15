@@ -1,0 +1,141 @@
+.menu-item-button {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply justify-start;
+  @apply flex-1;
+  @apply shrink-0;
+  @apply m-0;
+  @apply p-2;
+  @apply min-h-[theme('spacing.10')];
+  @apply w-full;
+  @apply border-0;
+  @apply rounded;
+  @apply bg-transparent;
+  @apply text-typography-primary;
+  @apply font-medium;
+  @apply text-left;
+  @apply whitespace-nowrap;
+  @apply select-none;
+  @apply outline-0;
+  &:hover,
+  &:active {
+    @apply bg-action-hover;
+    @apply no-underline;
+    @apply cursor-pointer;
+  }
+  &:active {
+    @apply bg-action-active;
+  }
+  &:hover .menu-item-icon {
+    @apply bg-surface-01;
+  }
+  &:focus-visible {
+    @apply outline-primary-focus;
+    @apply outline-offset-0;
+    @apply outline-4;
+  }
+}
+
+.menu-item-button-variant-action {
+  @apply justify-center;
+  &:hover,
+  &:active {
+    @apply bg-transparent;
+    @apply cursor-default;
+  }
+}
+
+.menu-item-button-disable-hover {
+  &:hover {
+    @apply bg-transparent;
+    @apply cursor-default;
+  }
+}
+
+// AVATAR
+
+.avatar {
+  @apply mr-3;
+}
+
+// ICONS
+
+.start-icon {
+  @apply mr-2;
+}
+
+.end-icon {
+  @apply ml-2;
+}
+
+.menu-item-icon {
+  @apply mr-3;
+}
+
+// SHORTCUT
+
+.shortcut {
+  @apply text-typography-tertiary;
+}
+
+// CONTROL
+
+.control {
+  @apply flex;
+  @apply flex-grow;
+  @apply items-center;
+  @apply mr-2;
+}
+
+// ACTION
+
+.action {
+  @apply ml-2;
+}
+
+// ACTIVE
+
+.menu-item-button-active,
+.menu-item-button-active:hover {
+  @apply bg-primary-tint-alpha;
+  @apply text-primary;
+  @apply cursor-default;
+  & span {
+    @apply text-primary;
+  }
+  & .start-icon,
+  & .end-icon {
+    @apply text-primary;
+  }
+  & .menu-item-icon {
+    @apply bg-surface-01;
+    @apply text-primary;
+  }
+}
+
+// DISABLED
+
+.menu-item-button:disabled {
+  @apply text-typography-disabled;
+  & span,
+  & .shortcut {
+    @apply text-typography-disabled;
+  }
+  & .start-icon {
+    @apply text-icon-disabled;
+  }
+  & .end-icon {
+    @apply text-icon-disabled;
+  }
+  & .menu-item-icon,
+  &:hover .menu-item-icon {
+    @apply bg-surface-02;
+    @apply text-icon-disabled;
+  }
+  &:hover {
+    @apply bg-transparent;
+    @apply text-typography-disabled;
+    @apply cursor-default;
+  }
+}

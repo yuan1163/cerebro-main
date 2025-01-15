@@ -1,0 +1,34 @@
+.divider {
+  @apply shrink-0;
+  @apply h-px;
+  @apply border-none;
+  @apply bg-divider;
+}
+
+// .divider-{variant}
+
+.divider-fullWidth {
+  @apply m-0;
+}
+
+.divider-inset {
+  @apply ml-20;
+}
+
+.divider-middle {
+  @apply mx-4;
+}
+
+// .divider-{orientation}
+
+.divider-vertical {
+  @apply w-px;
+  @apply h-full;
+}
+
+// .divider-{flexItem}
+
+.divider-flexItem {
+  @apply self-stretch;
+  @apply h-auto;
+}

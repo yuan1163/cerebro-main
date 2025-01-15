@@ -1,0 +1,34 @@
+.headline {
+  @apply flex;
+  @apply flex-col;
+  &.headline-sm {
+    h6 {
+      @apply text-sm font-semibold text-typography-primary;
+    }
+    span {
+      @apply text-xs text-typography-secondary font-normal;
+    }
+  }
+  &.headline-xxl {
+    h6 {
+      @apply text-lg font-semibold text-typography-primary leading-7;
+    }
+    span {
+      @apply text-typography-secondary leading-6 font-normal;
+    }
+  }
+  &.headline-dataGrid {
+    h6 {
+      @apply text-sm font-semibold text-typography-primary leading-5;
+    }
+    span {
+      @apply text-sm text-typography-secondary leading-5 font-normal;
+    }
+  }
+}
+
+// reverse
+
+.headline-reverse {
+  @apply flex-col-reverse;
+}

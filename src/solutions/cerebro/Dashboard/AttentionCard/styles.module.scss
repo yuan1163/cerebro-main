@@ -1,0 +1,8 @@
+.card {
+  @apply max-w-[17.5rem];
+}
+
+.alert-row {
+  @apply grid-cols-[auto_1fr];
+  @apply gap-2;
+}

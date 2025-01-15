@@ -1,0 +1,13 @@
+query Zones($where: ZoneWhereInput) {
+  zones(where: $where) {
+    id
+    name
+  }
+}
+
+query Zone($where: ZoneWhereUniqueInput!) {
+  zone(where: $where) {
+    id
+    name
+  }
+}

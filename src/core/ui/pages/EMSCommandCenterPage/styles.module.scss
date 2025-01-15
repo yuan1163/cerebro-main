@@ -1,0 +1,88 @@
+// LAYOUT
+
+.unit-container {
+  @apply h-screen;
+}
+
+.unit {
+  @apply relative;
+  @apply overflow-hidden;
+  @apply p-3;
+  @apply h-screen;
+  @apply max-h-full;
+}
+
+// GRID OF CARDS
+
+.container {
+  @apply grid;
+  @apply grid-cols-1;
+  @apply h-full;
+}
+
+// WIDGET
+
+.widget-container {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply py-3.5;
+  @apply px-4;
+  @apply w-full;
+  @apply rounded-lg;
+  @apply bg-surface-01;
+  @apply shadow-xs;
+}
+
+// CARDS
+
+.grid-line {
+  @apply grid;
+  @apply grid-cols-3;
+  @apply gap-1.5;
+  @apply grow;
+  @apply h-full;
+}
+
+.grid-line-single-row {
+  @apply grid-cols-1;
+  // @apply pt-3;
+}
+
+.block-title-container {
+  @apply p-4;
+  @apply pb-0;
+}
+
+.card {
+  @apply mt-4;
+}
+
+.card-content {
+  @apply overflow-hidden;
+}
+
+.title-container {
+  @apply pt-2 2xl:pt-4;
+  @apply pb-3 2xl:pb-5;
+  @apply pl-2.5;
+  .title {
+    @apply xl:text-lg;
+  }
+}
+
+// DRAWER
+
+.dialog {
+  @apply fixed;
+  @apply z-modal;
+  @apply inset-0;
+  @apply overflow-y-auto;
+}
+
+// SWIPER
+
+.swiper {
+  @apply h-full;
+  @apply w-full;
+}

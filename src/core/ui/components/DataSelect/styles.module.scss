@@ -1,0 +1,47 @@
+@import '@styles/styles.scss';
+
+.select-wrapper {
+  @apply relative;
+}
+
+// AVATAR
+
+.avatar {
+  @apply mr-2;
+}
+
+// START ICON
+
+.start-icon {
+  @apply mr-2;
+}
+
+// CHEVRON
+
+.decorator {
+  @apply ml-2.5;
+}
+
+// OPTIONS
+
+.options {
+  @apply absolute;
+  @apply w-full;
+  @apply mt-2;
+  max-height: calc(theme('height.button.lg') * 5 + theme('spacing.1') * 2);
+  @include focusVisibleSm;
+}
+
+// VARIANT
+
+.input-variant-control {
+  @apply border-0;
+  @apply bg-surface-01;
+  @apply shadow-xs;
+}
+
+// EMPTY LIST
+
+.empty-list-container {
+  @apply p-2;
+}

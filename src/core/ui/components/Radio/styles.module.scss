@@ -1,0 +1,148 @@
+@import '@styles/styles.scss';
+
+// WRAPPER
+
+.radio-wrapper {
+  @apply relative;
+  @apply inline-flex;
+}
+
+.radio-wrapper-disabled {
+  @apply text-typography-disabled;
+}
+
+@each $swatch in $paletteSeverity {
+  .radio-wrapper-color-#{$swatch} {
+    @apply #{text- + $swatch};
+  }
+}
+
+// RADIO
+
+.radio:focus {
+  @apply outline-none;
+}
+
+.radio {
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply shrink-0;
+  @apply text-icon-contrast;
+  @apply rounded-full;
+  @apply border border-border;
+  @apply bg-transparent;
+  &:focus-visible {
+    @apply outline-offset-0;
+    @apply outline-4;
+  }
+  &:hover {
+    @apply #{border-primary-hover};
+    @apply #{bg-primary-tint-alpha};
+  }
+}
+
+// ACTION
+
+.radio-action {
+  @apply absolute;
+  @apply top-0;
+  @apply left-0;
+  @apply bottom-0;
+  @apply right-0;
+  @apply z-10;
+}
+
+// INPUT
+
+.radio-input {
+  @apply appearance-none;
+  @apply absolute;
+  @apply m-0;
+  @apply opacity-0;
+  @apply w-full;
+  @apply h-full;
+  @apply cursor-pointer;
+}
+
+// CHECKMARK
+
+.radio-checkmark {
+  @apply block;
+}
+
+// SIZES
+
+$sizes: (
+  'sm': theme('width.checkbox.sm'),
+  'md': theme('width.checkbox.md'),
+);
+
+@each $name, $size in $sizes {
+  .radio-size-#{$name} {
+    width: $size;
+    height: $size;
+  }
+  .radio-size-#{$name} .radio-checkmark {
+    & svg {
+      width: calc(#{$size} / 2);
+      height: calc(#{$size} / 2);
+    }
+  }
+}
+
+// COLOR
+
+@each $swatch in $paletteBrand {
+  .radio-color-#{$swatch} {
+    @apply #{text- + $swatch};
+    &:focus-visible {
+      @apply #{outline- + $swatch + -focus};
+    }
+    &:hover {
+      @apply #{bg- + $swatch + -tint-alpha-hover};
+      @apply #{border- + $swatch + -hover};
+    }
+  }
+  .radio-checked.radio-color-#{$swatch} {
+    @apply #{border- + $swatch};
+    &:hover {
+      @apply #{bg- + $swatch + -tint-alpha-hover};
+      @apply #{border- + $swatch + -hover};
+    }
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .radio-color-#{$swatch} {
+    @apply #{border- + $swatch};
+    @apply #{text- + $swatch};
+    &:focus-visible {
+      @apply #{outline- + $swatch + -focus};
+    }
+    &:hover {
+      @apply #{bg- + $swatch + -tint-alpha-hover};
+      @apply #{border- + $swatch + -hover};
+    }
+  }
+  .radio-checked.radio-color-#{$swatch} {
+    @apply #{border- + $swatch};
+    &:hover {
+      @apply #{bg- + $swatch + -tint-alpha-hover};
+      @apply #{border- + $swatch + -hover};
+    }
+  }
+}
+
+// DISABLED
+
+.radio-disabled {
+  @apply bg-action-disabled;
+  @apply border-border-disabled;
+  @apply text-typography-disabled;
+  @apply pointer-events-none;
+}
+
+.radio-checked.radio-disabled {
+  @apply border-border-disabled;
+}

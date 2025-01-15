@@ -1,0 +1,9 @@
+.notification-card-content {
+  @apply justify-between;
+  .subtitle {
+    @apply mt-1;
+  }
+  .notification-data {
+    @apply text-xs text-typography-secondary;
+  }
+}

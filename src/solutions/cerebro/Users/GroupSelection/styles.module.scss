@@ -1,0 +1,30 @@
+.stack {
+  @apply mb-4;
+}
+
+.card {
+  @apply grid;
+  @apply grid-rows-[auto_1fr];
+  @apply overflow-hidden;
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar') - theme('height.widget'));
+}
+
+.card-aside {
+  @apply grid;
+  @apply grid-rows-[auto_1fr];
+}
+
+.count {
+  @apply ml-2;
+}
+
+.data-select-grow {
+  @apply grow;
+  @apply w-full;
+  @apply overflow-hidden;
+}
+
+.data-grid-row {
+  @apply grid-cols-[1fr_1fr_auto];
+  @apply w-full;
+}

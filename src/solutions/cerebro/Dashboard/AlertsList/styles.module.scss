@@ -1,0 +1,18 @@
+.card {
+  @apply flex;
+  @apply flex-col;
+  .filter {
+    @apply items-start;
+  }
+  .list {
+    @apply flex;
+    @apply flex-col;
+  }
+}
+
+.list-item {
+  @apply border-b border-border;
+  &:last-child {
+    @apply border-0;
+  }
+}

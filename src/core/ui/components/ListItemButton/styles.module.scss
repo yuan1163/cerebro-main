@@ -1,0 +1,54 @@
+.list-item-button {
+  @apply flex justify-start grow;
+  @apply py-2;
+  @apply min-w-0 w-full;
+  @apply text-left text-typography-primary;
+  &:hover {
+    @apply bg-action-hover;
+  }
+  &:hover span {
+    @apply no-underline;
+  }
+  &.list-item-button-dense {
+    @apply py-1;
+  }
+  &[aria-current='page'] {
+    @apply bg-action-hover;
+  }
+}
+
+// disableGutters
+
+.list-item-button-gutters {
+  @apply px-2;
+}
+
+// .list-item-button-alignItems-{alignItems}
+
+.list-item-button-alignItems-center {
+  @apply items-center;
+}
+
+.list-item-button-alignItems-start {
+  @apply items-start;
+}
+
+// .list-item-button-justifyContent-{justifyContent}
+
+$justifyParameters: 'start', 'center', 'between', 'around', 'evenly';
+
+@each $justifyParameter in $justifyParameters {
+  .list-item-button-justifyContent-#{$justifyParameter} {
+    @apply #{justify- + $justifyParameter};
+  }
+}
+
+// icons
+
+.start-icon {
+  @apply mr-2.5;
+}
+
+.end-icon {
+  @apply ml-2.5;
+}

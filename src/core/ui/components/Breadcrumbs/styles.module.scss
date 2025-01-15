@@ -1,0 +1,34 @@
+.breadcrumbs {
+  @apply relative;
+  @apply w-full;
+
+  .breadcrumbs-ol {
+    @apply flex;
+    @apply flex-wrap;
+    @apply items-center;
+    @apply gap-2;
+    @apply m-0;
+    @apply p-0;
+    @apply list-none;
+  }
+
+  .breadcrumbs-li {
+    @apply flex;
+    @apply items-center;
+    &:last-child a {
+      @apply text-typography-primary;
+      @apply pointer-events-none;
+    }
+    .crumb {
+      @apply font-medium;
+      &:hover {
+        @apply text-primary;
+      }
+    }
+  }
+
+  .breadcrumbs-separator {
+    @apply flex;
+    @apply select-none;
+  }
+}

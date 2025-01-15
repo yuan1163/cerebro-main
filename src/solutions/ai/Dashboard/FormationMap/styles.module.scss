@@ -1,0 +1,11 @@
+.map {
+  @apply h-full;
+  @apply relative;
+}
+
+.stat {
+  @apply absolute;
+  @apply left-0;
+  @apply bottom-0;
+  @apply p-3;
+}

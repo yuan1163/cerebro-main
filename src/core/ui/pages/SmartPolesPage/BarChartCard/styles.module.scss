@@ -1,0 +1,19 @@
+.barChart-container {
+  @apply w-full;
+}
+
+.card-content {
+  @apply flex;
+  @apply items-center;
+  @apply h-full;
+}
+
+.legend-container {
+  @apply pr-2;
+}
+.legend-standard-container {
+  @apply grow;
+}
+.title {
+  @apply mt-1;
+}

@@ -1,0 +1,33 @@
+query Alerts($where: AlertWhereInput) {
+  alerts(where: $where) {
+    id
+    message
+    device {
+      id
+      name
+      serial
+      smartPole {
+        zone {
+          id
+          name
+        }
+      }
+      type {
+        id
+        name
+      }
+    }
+    priority {
+      id
+      name
+    }
+  }
+}
+
+query AggregateAlert($where: AlertWhereInput) {
+  aggregateAlert(where: $where) {
+    _count {
+      id
+    }
+  }
+}

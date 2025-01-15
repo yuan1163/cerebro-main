@@ -1,0 +1,19 @@
+.radialBarChart-container {
+  @apply grow-0;
+  @apply w-20;
+}
+
+.header {
+  @apply mb-3;
+}
+
+.legend-content {
+  @apply grow;
+}
+
+.legend-container {
+  @apply pr-2;
+  .icon {
+    @apply mr-2;
+  }
+}

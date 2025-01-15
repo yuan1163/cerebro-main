@@ -1,0 +1,47 @@
+@import '@styles/styles.scss';
+
+// PADDING
+
+@each $name, $padding in $paddingsMobile {
+  .section-padding-#{$name} {
+    @apply #{py- + $padding};
+  }
+  .section-disable-padding-top.section-padding-bottom-#{$name} {
+    @apply #{pb- + $padding};
+  }
+  .section-disable-padding-bottom.section-padding-top-#{$name} {
+    @apply #{pt- + $padding};
+  }
+}
+
+@each $name, $padding in $paddings {
+  .section-padding-#{$name} {
+    @apply #{'sm\:' + py- + $padding};
+  }
+  .section-disable-padding-top.section-padding-bottom-#{$name} {
+    @apply #{'sm\:' + pb- + $padding};
+  }
+  .section-disable-padding-bottom.section-padding-top-#{$name} {
+    @apply #{'sm\:' + pt- + $padding};
+  }
+}
+
+// DISABLE PADDING
+
+.section-disable-padding-bottom {
+  @apply pb-0;
+}
+
+.section-disable-padding-top {
+  @apply pt-0;
+}
+
+// COLOR
+
+@each $palette in ($paletteBrand, $paletteDefault, $paletteSurface) {
+  @each $swatch in $palette {
+    .section-color-#{$swatch} {
+      @apply bg-#{$swatch};
+    }
+  }
+}

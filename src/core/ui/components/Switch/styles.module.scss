@@ -1,0 +1,207 @@
+@import '@styles/styles.scss';
+
+.switch:focus,
+.switch-track:focus {
+  @apply outline-none;
+}
+
+.switch {
+  @apply relative;
+  @apply inline-flex;
+  @apply items-center;
+  @apply self-center;
+  @apply p-0;
+  @apply border-none;
+  @apply cursor-pointer;
+}
+
+// TRACK
+
+$trackHeightSm: theme('spacing.5');
+$trackWidthSm: theme('spacing.9');
+$trackHeightMd: theme('spacing.container-x');
+$trackWidthMd: theme('spacing.11');
+$trackRadius: theme('borderRadius.xl');
+
+.switch-track {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply shrink-0;
+  @apply rounded-[#{$trackRadius}];
+  @apply border-current;
+  &:focus-visible {
+    @apply outline-offset-0;
+    @apply outline-4;
+  }
+}
+
+// THUMB
+
+$thumbWidthSm: theme('spacing.4');
+$thumbWidthMd: theme('spacing.5');
+$thumbOffset: theme('spacing.[0.5]');
+
+.switch-thumb {
+  @apply absolute;
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply top-[50%];
+  transform: translate(-50%, -50%);
+  @apply rounded-full;
+  @apply bg-icon-contrast;
+  @apply shadow-sm;
+  @apply transition-all;
+}
+
+// INPUT
+
+.switch-action {
+  @apply absolute;
+  @apply top-0;
+  @apply left-0;
+  @apply bottom-0;
+  @apply right-0;
+  @apply rounded-[#{$trackRadius}];
+}
+
+.switch-input {
+  @apply absolute;
+  @apply m-0;
+  @apply h-full;
+  @apply w-full;
+  @apply opacity-0;
+  @apply cursor-pointer;
+}
+
+// SIZES
+
+.switch-size-sm {
+  &.switch-track {
+    @apply h-[#{$trackHeightSm}];
+    @apply w-[#{$trackWidthSm}];
+  }
+  & .switch-thumb {
+    left: calc(50% - #{$trackWidthSm} / 2 + #{$thumbWidthSm} / 2 + #{$thumbOffset});
+    @apply h-[#{$thumbWidthSm}];
+    @apply w-[#{$thumbWidthSm}];
+  }
+  &.switch-checked {
+    & .switch-thumb {
+      left: calc(50% + #{$trackWidthSm} / 2 - #{$thumbWidthSm} / 2 - #{$thumbOffset});
+    }
+  }
+}
+
+.switch-size-md {
+  &.switch-track {
+    @apply h-[#{$trackHeightMd}];
+    @apply w-[#{$trackWidthMd}];
+  }
+  & .switch-thumb {
+    left: calc(50% - #{$trackWidthMd} / 2 + #{$thumbWidthMd} / 2 + #{$thumbOffset});
+    @apply h-[#{$thumbWidthMd}];
+    @apply w-[#{$thumbWidthMd}];
+  }
+  &.switch-checked {
+    & .switch-thumb {
+      left: calc(50% + #{$trackWidthMd} / 2 - #{$thumbWidthMd} / 2 - #{$thumbOffset});
+    }
+  }
+}
+
+// COLORS
+
+.switch {
+  &.switch-track {
+    @apply bg-secondary-tint-alpha;
+  }
+  &:hover.switch-track {
+    @apply bg-secondary-tint-alpha-hover;
+  }
+}
+
+@each $swatch in $paletteBrand {
+  .switch-color-#{$swatch} {
+    &.switch-track:focus-visible {
+      @apply #{outline- + $swatch + -focus};
+    }
+  }
+  .switch-color-#{$swatch}.switch-checked {
+    &.switch-track {
+      @apply #{bg- + $swatch};
+    }
+    &.switch-track:focus-visible {
+      @apply #{outline- + $swatch + -focus};
+    }
+    &:hover .switch-track {
+      @apply #{bg- + $swatch + -hover};
+    }
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .switch-color-#{$swatch} {
+    &.switch-track:focus-visible {
+      @apply #{outline- + $swatch + -focus};
+    }
+  }
+  .switch-color-#{$swatch}.switch-checked {
+    @apply #{text- + $swatch};
+    &.switch-track {
+      @apply #{bg- + $swatch};
+    }
+    &.switch-track:focus-visible {
+      @apply #{outline- + $swatch + -focus};
+    }
+    &:hover .switch-track {
+      @apply #{bg- + $swatch + -hover};
+    }
+  }
+}
+
+// SWITCH GROUP
+
+.switch-group {
+  @apply flex;
+  @apply flex-row;
+}
+
+// LABEL
+
+.switch-label {
+  @apply flex-1;
+  @apply min-w-0;
+  @apply font-medium;
+  @apply select-none;
+}
+
+.switch-label-size-sm {
+  @apply text-sm;
+  @apply leading-[theme("height.switch.sm")];
+  @apply ml-2;
+}
+
+.switch-label-size-md {
+  @apply text-base;
+  @apply leading-[theme("height.switch.md")];
+  @apply ml-3;
+}
+
+// DISABLED
+
+.switch-disabled {
+  @apply cursor-default;
+  @apply pointer-events-none;
+  &.switch-track,
+  &.switch-checked.switch-track {
+    @apply bg-action-disabled;
+  }
+  & .switch-thumb,
+  &.switch-checked .switch-thumb {
+    @apply bg-secondary-tint-alpha-active;
+    @apply shadow-none;
+  }
+}

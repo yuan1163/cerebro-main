@@ -1,0 +1,118 @@
+@import "@styles/styles.scss";
+
+.avatar {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply shrink-0;
+  @apply overflow-hidden;
+  @apply font-medium;
+  @apply leading-none;
+  @apply select-none;
+  @apply uppercase;
+}
+
+// ICON
+
+.avatar-icon {
+  @apply inline-block;
+  @apply select-none;
+  @apply shrink-0;
+}
+
+// IMAGE
+
+.avatar-image {
+  @apply w-full;
+  @apply h-full;
+  @apply object-cover;
+  @apply text-center;
+  @apply text-transparent;
+  @apply indent-['10000px'];
+}
+
+// SIZE
+
+@each $avatarSize in $avatarSizes {
+  .avatar-size-#{$avatarSize} {
+    height: #{theme + '\("width\.avatar\.'+ $avatarSize + '"\)'};
+    width: #{theme + '\("width\.avatar\.'+ $avatarSize + '"\)'};
+    min-width: #{theme + '\("width\.avatar\.'+ $avatarSize + '"\)'};
+    @apply rounded-md;
+  }
+}
+
+.avatar-size-xs,
+.avatar-size-sm {
+  @apply rounded;
+}
+
+.avatar-size-xxs {
+  @apply rounded-sm;
+}
+
+$textSizes: (
+  "xxs": "xxs",
+  "xs": "xxs",
+  "sm": "xxs",
+  "md": "xs",
+  "lg": "sm",
+  "xl": "base",
+  "2xl": "lg",
+  "3xl": "2xl",
+  "4xl": "2xl",
+);
+
+@each $size, $textSize in $textSizes {
+  .avatar-size-#{$size} {
+    @apply #{text- + $textSize};
+  }
+}
+
+$decoratorSizes: (
+  "xxs": "xxs",
+  "xs": "xs",
+  "sm": "xs",
+  "md": "sm",
+  "lg": "sm",
+  "xl": "md",
+  "2xl": "lg",
+  "3xl": "2xl",
+  "4xl": "3xl",
+);
+
+@each $size, $decoratorSize in $decoratorSizes {
+  .avatar-size-#{$size} {
+    & svg {
+      height: #{theme + '\("width\.decorator\.'+ $decoratorSize + '"\)'};
+      width: #{theme + '\("width\.decorator\.'+ $decoratorSize + '"\)'};
+    }
+  }
+}
+
+// ROUNDED
+
+.avatar-rounded {
+  @apply rounded-full;
+}
+
+// COLOR
+
+.avatar-color-default {
+  @apply bg-secondary-tint-alpha;
+  @apply text-secondary;
+}
+
+@each $swatch in $paletteDefault {
+  .avatar-color-#{$swatch} {
+    @apply #{bg-accent- + $swatch + -tint-alpha};
+    @apply #{text-accent- + $swatch};
+  }
+}
+
+// DISABLED
+
+.avatar-disabled {
+  @apply opacity-50;
+}

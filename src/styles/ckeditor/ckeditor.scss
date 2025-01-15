@@ -1,0 +1,119 @@
+.dark,
+.light {
+  .ck.ck-editor {
+    @apply w-full;
+  }
+
+  // TOOLBAR
+
+  .ck.ck-toolbar {
+    @apply bg-surface-02;
+    @apply border border-border;
+  }
+
+  .ck-rounded-corners :is(.ck.ck-editor__top .ck-sticky-panel .ck-toolbar),
+  .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
+    @apply rounded-tr-md;
+    @apply rounded-tl-md;
+  }
+
+  .ck.ck-reset_all,
+  .ck-reset_all *:not(.ck-reset_all-excluded *) {
+    @apply text-icon-primary;
+  }
+
+  // TOOLBAR SEPARATOR
+
+  .ck.ck-toolbar .ck.ck-toolbar__separator {
+    @apply self-center;
+    @apply h-5;
+    @apply bg-divider;
+  }
+
+  // TEXTAREA
+
+  .ck.ck-editor__editable_inline {
+    @apply py-8;
+    @apply px-8;
+    @apply text-paragraph-md;
+    @apply font-medium;
+  }
+
+  .ck.ck-editor__main > .ck-editor__editable {
+    @apply bg-transparent;
+  }
+
+  .ck.ck-editor__editable_inline > :first-child {
+    @apply mt-0;
+  }
+
+  .ck.ck-editor__editable_inline > :last-child {
+    @apply mb-0;
+  }
+
+  .ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
+    @apply shadow-none;
+  }
+
+  .ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable,
+  .ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
+    @apply border-border;
+  }
+
+  .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+    @apply rounded-br-md;
+    @apply rounded-bl-md;
+  }
+
+  // BUTTONS
+
+  .ck.ck-button,
+  a.ck.ck-button {
+    @apply min-h-[theme('height.button.sm')];
+    @apply min-w-[theme('height.button.sm')];
+    @apply border-none;
+  }
+
+  .ck-rounded-corners :is(.ck.ck-button, a.ck.ck-button),
+  .ck-rounded-corners:is(.ck.ck-button, a.ck.ck-button) {
+    @apply rounded;
+  }
+
+  .ck-on:is(.ck.ck-button, a.ck.ck-button) {
+    @apply bg-action-active;
+  }
+
+  .ck-on:is(.ck.ck-button, a.ck.ck-button):not(.ck-disabled):active {
+    @apply bg-action-active;
+  }
+
+  :is(.ck.ck-button, a.ck.ck-button):active,
+  :is(.ck.ck-button, a.ck.ck-button):focus {
+    @apply border-none;
+    @apply shadow-none;
+  }
+
+  .ck-on:is(.ck.ck-button, a.ck.ck-button) {
+    @apply text-icon-primary;
+  }
+
+  :is(.ck.ck-button, a.ck.ck-button):not(.ck-disabled):hover {
+    @apply bg-action-active;
+  }
+
+  .ck-on:is(.ck.ck-button, a.ck.ck-button):not(.ck-disabled):hover {
+    @apply bg-action-active;
+  }
+
+  .ck-disabled:is(.ck.ck-button, a.ck.ck-button):active,
+  .ck-disabled:is(.ck.ck-button, a.ck.ck-button):focus {
+    @apply shadow-none;
+  }
+
+  // ICONS
+
+  .ck.ck-icon {
+    height: 1rem;
+    width: 1rem;
+  }
+}

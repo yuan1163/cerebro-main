@@ -1,0 +1,106 @@
+.container {
+  @apply relative;
+  @apply w-full;
+  @apply text-typography-secondary;
+}
+
+.button {
+  @apply relative;
+  @apply flex;
+  @apply justify-between;
+  @apply w-full;
+  @apply text-left;
+  @apply cursor-default;
+  padding-right: calc((theme('fontSize[icon-md]') + (theme('spacing.2') * 2)));
+  &:focus {
+    @apply border-neutral-100 outline-none;
+  }
+  .button-text {
+    @apply block;
+    @apply text-sm truncate;
+  }
+  .icon-container {
+    @apply absolute;
+    @apply inset-y-0 right-0;
+    @apply flex items-center;
+    @apply pr-2;
+    @apply pointer-events-none;
+  }
+  .expanded {
+    @apply rotate-180 duration-[15ms] ease-in-out-standard;
+  }
+}
+
+.options {
+  @apply absolute;
+  @apply z-modal;
+  @apply overflow-visible;
+  @apply mt-1;
+  @apply w-full;
+  @apply max-h-60;
+  @apply rounded-b-xl;
+  @apply bg-background;
+  .option {
+    @apply relative;
+    @apply px-3 py-2;
+    @apply text-typography-primary;
+    @apply cursor-default select-none;
+  }
+  .option-active {
+    @apply bg-neutral-200;
+  }
+  .label {
+    @apply block;
+    @apply text-sm font-normal truncate;
+  }
+  .selected {
+    @apply font-normal;
+  }
+  @apply focus:outline-none;
+}
+
+.scrollbar {
+  @apply max-h-full;
+}
+
+.search-container {
+  @apply p-2 pb-2;
+}
+
+.card-container {
+  @apply pt-1;
+}
+
+.list,
+.scrollbar {
+  @apply h-44;
+}
+
+.chips-container {
+  @apply flex;
+  @apply grow;
+  @apply overflow-hidden;
+  @apply gap-1;
+  @apply text-typography-placeholder;
+}
+
+.chip-count {
+  @apply shrink-0;
+}
+
+.icon-button-close {
+  @apply pl-2;
+}
+
+.form-control-label {
+  @apply gap-2;
+}
+
+.disabled {
+  @apply select-none;
+  @apply cursor-not-allowed;
+}
+
+.listbox-option {
+  @apply flex;
+}

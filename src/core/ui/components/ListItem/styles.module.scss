@@ -1,0 +1,27 @@
+.list-item {
+  @apply relative;
+  @apply flex justify-start items-center;
+  @apply w-full;
+  @apply no-underline text-left;
+}
+
+// disableGutters
+
+.list-item-gutters.list-item-padding {
+  @apply px-3;
+  @apply py-2;
+}
+
+.list-item-padding {
+  @apply px-3;
+}
+
+.list-item.list-item-disable-padding-x {
+  @apply px-0;
+}
+
+// .list-item-{dense}
+
+.list-item-dense.list-item {
+  @apply py-1.5;
+}

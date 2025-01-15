@@ -1,0 +1,21 @@
+.card {
+  @apply grid grid-rows-[auto_auto_1fr_auto];
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar'));
+
+  .card-content {
+    @apply flex flex-col;
+    @apply h-full;
+  }
+  .location-container {
+    @apply gap-4;
+  }
+}
+
+.location-schema-container {
+  @apply grow;
+  @apply overflow-hidden;
+}
+
+.icon {
+  @apply ml-3;
+}

@@ -1,0 +1,22 @@
+$buttonPaddingLeft: 1rem;
+$lineSegmentWidth: 1px;
+
+.container {
+  @apply relative;
+  @apply w-full;
+  &::before {
+    @apply content-[''];
+    @apply absolute;
+    @apply top-2/4;
+    @apply -translate-y-2/4;
+    left: calc($buttonPaddingLeft + (theme('width.decorator.md') / 2));
+    @apply block;
+    height: calc(100% - theme('height.button.lg'));
+    @apply w-px;
+    @apply bg-secondary-tint-active;
+  }
+}
+
+.button {
+  @apply pl-[#{$buttonPaddingLeft}];
+}

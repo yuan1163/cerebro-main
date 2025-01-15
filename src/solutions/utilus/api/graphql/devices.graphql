@@ -1,0 +1,32 @@
+query AggregateDevice($where: DeviceWhereInput) {
+  aggregateDevice(where: $where) {
+    _count {
+      id
+    }
+  }
+}
+
+query Device($where: DeviceWhereUniqueInput!) {
+  device(where: $where) {
+    id
+    name
+    serial
+    type {
+      id
+      name
+    }
+    alerts {
+      id
+      message
+      priority {
+        id
+        name
+      }
+    }
+    connectParamIndex
+    smartPole {
+      connectLocationId
+      connectDeviceId
+    }
+  }
+}

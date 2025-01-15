@@ -1,0 +1,24 @@
+.accordion-details {
+  @apply p-4;
+  @apply pt-0;
+  @apply text-paragraph-md;
+  @apply text-typography-secondary;
+}
+
+// DIVIDER
+
+.accordion-details-divider {
+  @apply pt-4;
+}
+
+// DISABLE GUTTERS
+
+.accordion-details-disable-gutters {
+  @apply px-0;
+}
+
+// DISABLE PADDING
+
+.accordion-details-disable-gutters {
+  @apply p-0;
+}

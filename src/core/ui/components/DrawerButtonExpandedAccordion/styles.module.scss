@@ -1,0 +1,12 @@
+.disclosure-button {
+  @apply w-full;
+  & .button {
+    @apply font-medium;
+  }
+}
+
+.disclosure-panel {
+  @apply relative;
+  @apply py-1;
+  @apply w-full;
+}

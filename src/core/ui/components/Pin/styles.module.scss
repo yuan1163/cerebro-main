@@ -1,0 +1,342 @@
+@import '@styles/styles.scss';
+
+.pin-wrapper {
+  @apply relative; // absolute in Prod
+  @apply bg-transparent;
+}
+
+.pin-container {
+  @apply relative;
+  @apply h-full;
+  @apply w-full;
+}
+
+// ICON
+
+.pin-icon-wrapper {
+  @apply absolute;
+  @apply z-[11];
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply top-2/4;
+  @apply left-2/4;
+  @apply -translate-x-2/4;
+  @apply -translate-y-2/4;
+}
+
+// NEEDLE
+
+$needle-container-height: 4rem;
+$needle-button-height: 2.125rem;
+$needle-button-padding-y: 0.25rem;
+
+.pin-needle-container {
+  @apply absolute;
+  @apply bottom-0;
+  @apply left-2/4;
+  @apply -translate-x-2/4;
+  height: $needle-container-height;
+}
+
+.pin-needle-wrapper {
+  @apply relative;
+  height: $needle-container-height;
+}
+
+.pin-needle-button {
+  @apply block;
+  @apply flex;
+  @apply items-center;
+  @apply gap-2;
+  padding: $needle-button-padding-y;
+  @apply pr-2;
+  height: $needle-button-height;
+  @apply min-w-[7.375rem];
+  @apply bg-translucent-marker-background;
+  @apply border border-translucent-marker-border;
+  @apply rounded-full;
+  @apply backdrop-blur-lg;
+}
+
+$icon-container-height: calc($needle-button-height - ($needle-button-padding-y * 2));
+
+.pin-needle-icon-container {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply gap-1;
+  @apply py-1;
+  @apply px-2;
+  height: $icon-container-height;
+  min-width: $icon-container-height;
+  border-radius: calc($needle-button-height / 2);
+}
+
+.pin-needle-label-container {
+  @apply flex;
+  @apply items-center;
+  @apply overflow-hidden;
+}
+
+.pin-needle {
+  @apply absolute;
+  @apply z-0;
+  @apply left-2/4;
+  @apply bottom-0;
+  @apply -translate-x-2/4;
+  height: calc($needle-container-height - $needle-button-height);
+  @apply w-[0.09375rem];
+  @apply bg-translucent-marker-border;
+}
+
+// BORDER
+
+.pin-border {
+  @apply absolute;
+  @apply z-10;
+  @apply top-2/4;
+  @apply -translate-x-2/4;
+  @apply left-2/4;
+  @apply -translate-y-2/4;
+  @apply bg-translucent-marker-background;
+  @apply border border-translucent-marker-border;
+  @apply shadow-xs;
+  @apply backdrop-blur-lg;
+}
+
+.pin-wrapper-dot {
+  .pin-border {
+    @apply border-transparent;
+  }
+}
+
+// SIZE
+
+.pin-size-sm,
+.pin-icon-wrapper-sm {
+  @apply h-[1.625rem];
+  @apply w-[1.625rem];
+}
+
+.pin-wrapper-dot.pin-size-sm,
+.pin-wrapper-dot .pin-icon-wrapper-sm {
+  @apply h-2;
+  @apply w-2;
+}
+
+.pin-wrapper-dot.pin-wrapper:hover {
+  .pin-size-sm,
+  .pin-icon-wrapper-sm {
+    @apply h-2;
+    @apply w-2;
+  }
+}
+
+.pin-wrapper-selected,
+.pin-wrapper-selected.pin-wrapper:hover {
+  .pin-size-sm,
+  .pin-icon-wrapper-sm {
+    @apply h-8;
+    @apply w-8;
+  }
+}
+
+.pin-wrapper-dot {
+  @apply h-2;
+  @apply w-2;
+}
+
+// SIZE BORDER
+
+.pin-border-size-sm {
+  @apply h-[2.125rem];
+  @apply w-[2.125rem];
+}
+
+.pin-wrapper:hover {
+  & .pin-border-size-sm {
+    @apply h-[2.375rem];
+    @apply w-[2.375rem];
+  }
+}
+
+.pin-wrapper-dot.pin-wrapper:hover {
+  & .pin-border-size-sm {
+    @apply h-4;
+    @apply w-4;
+  }
+}
+
+.pin-wrapper-selected,
+.pin-wrapper-selected.pin-wrapper:hover {
+  & .pin-border-size-sm {
+    @apply h-12;
+    @apply w-12;
+  }
+}
+
+.pin-wrapper-dot {
+  & .pin-border-size-sm {
+    @apply h-3;
+    @apply w-3;
+  }
+}
+
+// SIZE WRAPPER
+
+.pin-icon-wrapper-sm {
+  & svg {
+    @apply h-4;
+    @apply w-4;
+  }
+}
+
+.pin-wrapper-selected {
+  & svg {
+    @apply h-5;
+    @apply w-5;
+  }
+}
+
+.pin-wrapper-dot .pin-icon-wrapper-sm {
+  & svg {
+    @apply hidden;
+  }
+}
+
+// SHAPE
+
+.pin-wrapper-dot.pin-shape-rounded,
+.pin-shape-rounded {
+  @apply rounded-full;
+  & .pin-icon-wrapper,
+  & .pin-border {
+    @apply rounded-full;
+  }
+}
+
+.pin-shape-square {
+  & .pin-icon-wrapper {
+    @apply rounded;
+  }
+  & .pin-border {
+    @apply rounded-lg;
+  }
+}
+
+.pin-wrapper-dot.pin-shape-square {
+  & .pin-icon-wrapper {
+    @apply rounded-sm;
+  }
+  & .pin-border {
+    @apply rounded;
+  }
+}
+
+.pin-wrapper-dot.pin-shape-square {
+  & .pin-icon-wrapper {
+    @apply rounded-sm;
+  }
+  & .pin-border {
+    @apply rounded;
+  }
+}
+
+.pin-wrapper-selected.pin-shape-square {
+  & .pin-icon-wrapper {
+    @apply rounded-md;
+  }
+  & .pin-border {
+    @apply rounded-xl;
+  }
+}
+
+// COLOR
+
+.pin-wrapper {
+  & .pin-icon-wrapper {
+    @apply bg-primary;
+    @apply text-icon-contrast;
+  }
+
+  .pin-needle-icon-container {
+    @apply bg-primary-tint-alpha;
+    @apply text-primary-dark;
+  }
+
+  &:hover {
+    & .pin-icon-wrapper {
+      @apply bg-primary-hover;
+    }
+  }
+
+  &.pin-wrapper-selected,
+  &:hover {
+    & .pin-border {
+      @apply bg-primary-tint-alpha-active;
+      @apply border-primary-tint-alpha-active;
+    }
+  }
+  &.pin-wrapper-selected,
+  &.pin-wrapper-selected:hover {
+    & .pin-border {
+      box-shadow: theme('colors.glow.primary');
+    }
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .pin-wrapper-dot.pin-icon-wrapper-color-#{$swatch},
+  .pin-wrapper.pin-icon-wrapper-color-#{$swatch} {
+    & .pin-icon-wrapper {
+      @apply #{bg- + $swatch};
+      @apply text-icon-contrast;
+    }
+    &:hover {
+      & .pin-icon-wrapper {
+        @apply #{bg- + $swatch + -hover};
+      }
+    }
+  }
+  .pin-wrapper-selected.pin-icon-wrapper-color-#{$swatch},
+  .pin-icon-wrapper-color-#{$swatch}.pin-wrapper:hover {
+    & .pin-border {
+      @apply #{bg- + $swatch + -tint-alpha-hover};
+      @apply #{border- + $swatch + -tint-alpha-hover};
+    }
+  }
+
+  .pin-wrapper-selected.pin-icon-wrapper-color-#{$swatch} {
+    & .pin-border {
+      box-shadow: #{'theme\("colors.glow.'+ $swatch + '"\)'};
+    }
+  }
+
+  .pin-wrapper-selected.pin-icon-wrapper-color-#{$swatch}.pin-wrapper-selected:hover {
+    & .pin-border {
+      box-shadow: #{'theme\("colors.glow.'+ $swatch + '"\)'};
+    }
+  }
+  .pin-needle-icon-container.pin-needle-icon-container-color-#{$swatch} {
+    @apply #{bg- + $swatch + -tint-alpha};
+    @apply #{text- + $swatch + -dark};
+  }
+}
+
+.pin-color-trivial {
+  @apply bg-trivial;
+  &:hover {
+    @apply bg-trivial-hover;
+  }
+}
+
+// BADGE
+
+.badge {
+  @apply absolute;
+  @apply top-0;
+  @apply right-0;
+  @apply z-[12];
+  transform: translate(50%, -50%);
+}

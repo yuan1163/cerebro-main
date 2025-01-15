@@ -1,0 +1,69 @@
+@import '@nodemodules/swiper/swiper.scss';
+@import '@nodemodules/swiper/modules/navigation/navigation.scss';
+@import '@nodemodules/swiper/modules/scrollbar/scrollbar.scss';
+
+.root {
+  @apply py-0 pr-20;
+}
+
+.swiper-container {
+  @apply relative;
+  // @apply h-full;
+  // @apply overflow-auto;
+}
+
+.swiper-container-vertical {
+  @apply h-full;
+}
+
+.swiper-button-customized-prev,
+.swiper-button-customized-next {
+  @apply absolute;
+  @apply top-[50%];
+  @apply z-10;
+  margin-top: calc(0px - theme('fontSize.icon-lg') / 0.75);
+  width: calc(theme('fontSize.icon-lg') + theme('width.1'));
+  height: calc(theme('fontSize.icon-lg') + theme('width.1'));
+  @apply p-1;
+  @apply border border-neutral-50 rounded;
+  @apply bg-surface-01;
+  @apply text-typography-primary;
+}
+
+.swiper-button-customized-prev {
+  left: calc(0px - theme('fontSize.icon-xl') / 2);
+}
+
+.swiper-button-customized-next {
+  right: calc(0px - theme('fontSize.icon-xl') / 2);
+}
+
+// node modules
+
+.swiper-scrollbar {
+  background: transparent;
+  .swiper-vertical > &,
+  &.swiper-scrollbar-vertical {
+    top: 0;
+    width: 6px;
+    height: 100%;
+  }
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  @apply relative;
+  @apply bottom-0;
+  left: 0%;
+  @apply w-full;
+}
+
+.swiper-scrollbar-drag {
+  @apply bg-neutral-300;
+}
+
+// custom
+
+.swiper-scrollbar {
+  @apply mt-2;
+}

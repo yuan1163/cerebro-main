@@ -1,0 +1,25 @@
+.unit {
+  @apply grow;
+  @apply w-full;
+  @apply h-full;
+}
+
+// .unit-height-{height}
+
+.unit-height-full {
+  @apply h-full;
+}
+
+.unit-height-screen {
+  max-height: calc(100vh - theme('height.toolbar') - theme('spacing.container-x'));
+}
+
+// sidebar
+
+.unit-sidebar {
+  @apply grow-0;
+  @apply shrink-0;
+  @apply min-w-[23.5rem];
+  @apply max-w-[23.5rem];
+  @apply basis-4/12;
+}

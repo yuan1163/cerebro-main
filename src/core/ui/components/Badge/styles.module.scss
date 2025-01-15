@@ -1,0 +1,227 @@
+@import '@styles/styles.scss';
+
+.badge {
+  @apply relative;
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply overflow-hidden;
+  @apply align-middle;
+  @apply font-semibold;
+  @apply no-underline;
+  @apply rounded;
+  @apply select-none;
+}
+
+// SIZE
+
+.badge-size-xs {
+  @apply min-h-[0.875rem];
+  @apply min-w-[0.875rem];
+  @apply px-1;
+  @apply text-xxs;
+}
+
+.badge-size-sm {
+  @apply min-h-[1rem];
+  @apply min-w-[1rem];
+  @apply px-1;
+  @apply text-xs;
+}
+
+.badge-size-md {
+  @apply min-h-[1.25rem];
+  @apply min-w-[1.25rem];
+  @apply px-1.5;
+  @apply text-xs;
+}
+
+.badge-size-lg {
+  @apply min-h-[1.5rem];
+  @apply min-w-[1.5rem];
+  @apply px-1.5;
+  @apply text-sm;
+}
+
+.badge-size-xl {
+  @apply min-h-[1.625rem];
+  @apply min-w-[1.625rem];
+  @apply px-2;
+  @apply text-md;
+}
+
+// SHAPE
+
+.badge-shape-circular {
+  @apply rounded-[6.25rem];
+}
+
+.badge-shape-rounded {
+  @apply rounded;
+}
+
+// BORDER
+
+.badge-border {
+  @apply outline outline-2 outline-common-white;
+}
+
+// LABEL
+
+.label {
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply grow;
+  @apply overflow-hidden;
+  @apply leading-tight;
+  @apply whitespace-nowrap;
+  @apply text-ellipsis;
+}
+
+// COLOR
+
+@each $swatch in $paletteBrand {
+  .badge-variant-solid.badge-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+    @apply text-common-white;
+  }
+  .badge-variant-tint.badge-color-#{$swatch} {
+    @apply #{bg- + $swatch + -tint-alpha};
+    @apply #{text- + $swatch + -dark};
+  }
+  .badge-variant-plain.badge-color-#{$swatch} {
+    @apply bg-common-white;
+    @apply #{text- + $swatch};
+  }
+  a.badge-variant-solid.badge-color-#{$swatch}:hover,
+  button.badge-variant-solid.badge-color-#{$swatch}:hover {
+    @apply #{bg- + $swatch + -hover};
+  }
+  a.badge-variant-plain.badge-color-#{$swatch}:hover,
+  button.badge-variant-plain.badge-color-#{$swatch}:hover {
+    @apply #{text- + $swatch + -hover};
+  }
+  a.badge-variant-tint.badge-color-#{$swatch}:hover,
+  button.badge-variant-tint.badge-color-#{$swatch}:hover {
+    @apply #{bg- + $swatch + -tint-alpha-hover};
+  }
+  a.badge-variant-solid.badge-color-#{$swatch}:active,
+  button.badge-variant-solid.badge-color-#{$swatch}:active {
+    @apply #{bg- + $swatch + -active};
+  }
+  a.badge-variant-plain.badge-color-#{$swatch}:active,
+  button.badge-variant-plain.badge-color-#{$swatch}:active {
+    @apply #{text- + $swatch + -active};
+  }
+  a.badge-variant-tint.badge-color-#{$swatch}:active,
+  button.badge-variant-tint.badge-color-#{$swatch}:active {
+    @apply #{bg- + $swatch + -tint-alpha-active};
+  }
+}
+
+@each $swatch in $paletteSeverity {
+  .badge-variant-solid.badge-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+    @apply text-common-white;
+  }
+  .badge-variant-tint.badge-color-#{$swatch} {
+    @apply #{bg- + $swatch  + -tint-alpha};
+    @apply #{text- + $swatch + -dark};
+  }
+  .badge-variant-plain.badge-color-#{$swatch} {
+    @apply bg-common-white;
+    @apply #{text- + $swatch};
+  }
+  a.badge-variant-solid.badge-color-#{$swatch}:hover,
+  button.badge-variant-solid.badge-color-#{$swatch}:hover {
+    @apply #{bg- + $swatch + -hover};
+  }
+  a.badge-variant-tint.badge-color-#{$swatch}:hover,
+  button.badge-variant-tint.badge-color-#{$swatch}:hover {
+    @apply #{bg- + $swatch + -tint-alpha-hover};
+  }
+  a.badge-variant-plain.badge-color-#{$swatch}:hover,
+  button.badge-variant-plain.badge-color-#{$swatch}:hover {
+    @apply #{text- + $swatch + -hover};
+  }
+  a.badge-variant-solid.badge-color-#{$swatch}:active,
+  button.badge-variant-solid.badge-color-#{$swatch}:active {
+    @apply #{bg- + $swatch + -active};
+  }
+  a.badge-variant-tint.badge-color-#{$swatch}:active,
+  button.badge-variant-tint.badge-color-#{$swatch}:active {
+    @apply #{bg- + $swatch + -tint-alpha-active};
+  }
+  a.badge-variant-plain.badge-color-#{$swatch}:active,
+  button.badge-variant-plain.badge-color-#{$swatch}:active {
+    @apply #{text- + $swatch + -active};
+  }
+}
+
+@each $swatch in $paletteDefault {
+  .badge-variant-solid.badge-color-#{$swatch} {
+    @apply #{bg-accent- + $swatch};
+    @apply text-common-white;
+  }
+  .badge-variant-tint.badge-color-#{$swatch} {
+    @apply #{bg-accent- + $swatch + -tint-alpha};
+    @apply #{text-accent- + $swatch + -dark};
+  }
+  .badge-variant-plain.badge-color-#{$swatch} {
+    @apply bg-common-white;
+    @apply #{text-accent- + $swatch};
+  }
+  a.badge-variant-solid.badge-color-#{$swatch}:hover,
+  button.badge-variant-solid.badge-color-#{$swatch}:hover {
+    @apply #{bg-accent- + $swatch + -hover};
+  }
+  a.badge-variant-tint.badge-color-#{$swatch}:hover,
+  button.badge-variant-tint.badge-color-#{$swatch}:hover {
+    @apply #{bg-accent- + $swatch + -tint-alpha-hover};
+  }
+  a.badge-variant-plain.badge-color-#{$swatch}:hover,
+  button.badge-variant-plain.badge-color-#{$swatch}:hover {
+    @apply #{text-accent- + $swatch + -hover};
+  }
+  a.badge-variant-solid.badge-color-#{$swatch}:active,
+  button.badge-variant-solid.badge-color-#{$swatch}:active {
+    @apply #{bg-accent- + $swatch + -active};
+  }
+  a.badge-variant-tint.badge-color-#{$swatch}:active,
+  button.badge-variant-tint.badge-color-#{$swatch}:active {
+    @apply #{bg-accent- + $swatch + -tint-alpha-active};
+  }
+  a.badge-variant-plain.badge-color-#{$swatch}:active,
+  button.badge-variant-plain.badge-color-#{$swatch}:active {
+    @apply #{text-accent- + $swatch + -active};
+  }
+}
+
+@each $swatch in $paletteSurface {
+  .badge-variant-solid.badge-color-#{$swatch} {
+    @apply #{bg- + $swatch};
+    @apply text-typography-primary;
+  }
+}
+
+.badge-variant-solid.badge-color-translucent {
+  @apply bg-translucent-default-thick;
+}
+
+.badge-variant-invariable {
+  @apply bg-common-white;
+  @apply text-typography-invariable;
+}
+
+// DISABLED
+
+.badge-disabled,
+.badge-variant-solid.badge-disabled,
+.badge-variant-tint.badge-disabled,
+.badge-variant-plain.badge-disabled,
+.badge-variant-invariable.badge-disabled {
+  @apply bg-action-disabled;
+  @apply text-typography-disabled;
+  @apply pointer-events-none;
+}

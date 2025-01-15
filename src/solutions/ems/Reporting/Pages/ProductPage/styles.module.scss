@@ -1,0 +1,39 @@
+.card {
+  @apply grid;
+  @apply grid-rows-[1fr];
+  @apply overflow-hidden;
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar') - theme('height.widget'));
+}
+
+.card-aside {
+  @apply grid-rows-[auto_1fr];
+}
+
+.data-grid {
+  @apply grid;
+  @apply h-full;
+  @apply grid-rows-[auto_auto_1fr];
+  @apply overflow-hidden;
+}
+
+.data-grid-row {
+  @apply grid-cols-[25%_20%_1fr];
+  @apply w-full;
+}
+
+.count {
+  @apply ml-2;
+}
+
+.stack {
+  @apply mb-4;
+}
+
+.data-select {
+  flex: 1 0 20rem;
+}
+
+.data-select-grow {
+  @apply grow;
+  @apply w-full;
+}

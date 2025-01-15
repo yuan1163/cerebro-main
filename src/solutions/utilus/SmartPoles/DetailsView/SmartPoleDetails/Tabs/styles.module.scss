@@ -1,0 +1,29 @@
+.tab {
+  @apply relative;
+
+  &::after {
+    @apply content-[''];
+    @apply block;
+    @apply absolute;
+    @apply bottom-0 left-0;
+    @apply h-px w-full;
+    @apply bg-divider;
+  }
+
+  .card-content {
+    @apply py-0;
+  }
+
+  .button {
+    @apply px-0;
+    @apply font-normal;
+    &.active {
+      @apply border-b-primary border-b-2;
+      text-shadow: 0.25px 0px 0.1px, -0.25px 0px 0.1px;
+    }
+    &.inactive {
+      @apply border-b-transparent border-b-2;
+      @apply text-typography-secondary;
+    }
+  }
+}

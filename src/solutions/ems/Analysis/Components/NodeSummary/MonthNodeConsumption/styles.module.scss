@@ -1,0 +1,12 @@
+.card {
+  @apply w-full;
+  // @apply h-full;
+  // @apply max-h-[];
+  @apply rounded-lg;
+  @apply overflow-hidden;
+}
+
+.select-locations {
+  @apply w-96;
+  @apply mr-3;
+}

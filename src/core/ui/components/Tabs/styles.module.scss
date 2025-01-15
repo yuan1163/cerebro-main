@@ -1,0 +1,61 @@
+@import '@core/ui/components/Button/styles.module.scss';
+
+.tab-group {
+  // CONTAINER
+
+  & .tab-list {
+    @apply flex;
+    @apply items-center;
+    @apply gap-4;
+    @apply border-b border-border;
+  }
+
+  // BUTTON
+
+  & .tab {
+    @apply relative;
+    @apply flex;
+    @apply self-stretch;
+    @apply gap-1;
+    @apply py-0.5;
+    @apply px-2;
+    @apply min-h-[3.25rem];
+    @apply border-b border-b-transparent;
+    @apply text-typography-secondary;
+    @apply font-medium;
+    @apply text-sm;
+    &::after {
+      @apply content-[''];
+      @apply block;
+      @apply absolute;
+      @apply m-auto;
+      @apply h-0.5;
+      @apply w-full;
+      @apply left-0;
+      @apply right-0;
+      @apply -bottom-px;
+    }
+  }
+
+  // FULL WIDTH
+
+  & .tab-full-width {
+    @apply w-full;
+  }
+
+  // SELECTED
+
+  & .tab-selected {
+    @apply text-typography-primary;
+    @apply font-medium;
+    &::after {
+      @apply bg-primary;
+    }
+  }
+
+  // DISABLED
+
+  & .button-disabled {
+    @apply text-typography-disabled;
+  }
+}

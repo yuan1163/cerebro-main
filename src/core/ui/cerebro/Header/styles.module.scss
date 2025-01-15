@@ -1,0 +1,18 @@
+.title-content-container {
+  @apply grow;
+}
+
+.title-content {
+  @apply flex;
+  @apply items-center;
+  @apply gap-3;
+}
+
+.widgets-container {
+  @apply items-center;
+  @apply justify-end;
+  @apply text-typography-secondary;
+  .widget-container {
+    @apply gap-x-2;
+  }
+}

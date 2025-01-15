@@ -1,0 +1,26 @@
+@import '@styles/styles.scss';
+
+.list-item-icon {
+  @apply inline-flex items-center justify-center shrink-0;
+  @apply min-w-0;
+}
+
+$iconSizes: 'small' $iconSizeSm, 'medium' $iconSizeMd, 'large' $iconSizeLg, 'x-large' $iconSizeXl,
+  'extra-large' $iconSizeXxl;
+
+// size
+
+@each $size, $iconSize in $iconSizes {
+  .list-item-icon-size-#{$size} {
+    & > svg {
+      width: $iconSize;
+      height: $iconSize;
+    }
+  }
+}
+
+// gap
+
+.list-item-icon-gap-medium {
+  @apply mr-3;
+}

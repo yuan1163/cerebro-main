@@ -1,0 +1,12 @@
+.card {
+    @apply grow;
+    .icon {
+        @apply mb-2.5;
+    }
+    .subtitle {
+        @apply mt-0.5;
+    }
+    .location {
+        @apply mt-1.5;
+    }
+}

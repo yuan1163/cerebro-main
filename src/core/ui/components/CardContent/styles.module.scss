@@ -1,0 +1,96 @@
+.card-content {
+  @apply relative;
+}
+
+.card-content-scrollable {
+  @apply grow;
+  @apply overflow-hidden;
+  @apply h-full;
+}
+
+// SIZES
+
+$sizes: (
+  'xxxxs': 1,
+  'xxxs': 1.5,
+  'xxs': 2,
+  'xs': 3,
+  'sm': 4,
+  'md': 6,
+  'lg': 8,
+  'xl': 10,
+);
+
+@each $name, $size in $sizes {
+  .card-content-size-#{$name} {
+    @apply #{p- + $size};
+  }
+}
+
+// DISABLE PADDING
+
+.card-content-disable-padding-bottom {
+  @apply pb-0;
+}
+
+.card-content-disable-padding-top {
+  @apply pt-0;
+}
+
+.card-content-disable-padding-x {
+  @apply px-0;
+}
+
+.card-content-disable-padding-y {
+  @apply py-0;
+}
+
+.card-content-disable-padding {
+  @apply p-0;
+}
+
+// HEIGHT & WIDTH
+
+.card-content-fullHeight {
+  @apply h-full;
+}
+
+.card-content-full-width {
+  @apply w-full;
+}
+
+// BORDER
+
+.card-content-border-bottom {
+  @apply border-b border-divider;
+}
+
+.card-content-border-top {
+  @apply border-t border-divider;
+}
+
+// ALIGN ITEMS
+
+$alignItemProperties: 'start', 'center', 'end', 'stretch', 'baseline';
+
+@each $alignItemProperty in $alignItemProperties {
+  .card-content-align-items-#{$alignItemProperty} {
+    @apply #{items- + $alignItemProperty};
+  }
+}
+
+// JUSTIFY CONTENT
+
+$justifyContentProperties: 'start', 'center', 'end', 'between', 'around', 'evenly';
+
+@each $justifyContentProperty in $justifyContentProperties {
+  .card-content-justify-content-#{$justifyContentProperty} {
+    @apply #{justify- + $justifyContentProperty};
+  }
+}
+
+// EVENT
+
+.card-content-hover {
+  @apply cursor-pointer;
+}

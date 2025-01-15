@@ -1,0 +1,8 @@
+.popover {
+  @apply relative;
+}
+
+.popover-panel {
+  @apply absolute;
+  @apply z-10;
+}

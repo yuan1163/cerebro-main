@@ -1,0 +1,28 @@
+@import '@nodemodules/simplebar-react/dist/simplebar.min.css';
+
+.scrollable-section {
+  @apply grow;
+  @apply overflow-hidden;
+  @apply h-full;
+}
+
+.simplebar {
+  @apply max-h-full h-full;
+}
+
+.simplebar-scrollbar {
+  &::before {
+    @apply bg-neutral-300;
+  }
+  &.simplebar-visible::before {
+    opacity: 1;
+  }
+}
+
+.simplebar-content {
+  @apply h-full;
+}
+
+.simplebar-track.simplebar-vertical {
+  @apply -right-0.5;
+}

@@ -1,0 +1,30 @@
+.radialBarChart-container {
+  @apply grow-0;
+  @apply w-48;
+}
+
+.card-content {
+  @apply h-full;
+}
+
+.header {
+  @apply mb-3;
+}
+
+.legend {
+  @apply h-full;
+}
+
+.legend-content {
+  @apply grow;
+  @apply h-full;
+}
+
+.legend-container {
+  @apply justify-between;
+  @apply h-full;
+  @apply pr-2;
+  .icon {
+    @apply mr-5;
+  }
+}

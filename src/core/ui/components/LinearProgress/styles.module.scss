@@ -1,0 +1,56 @@
+@import '@styles/styles.scss';
+
+.linear-progress {
+  @apply relative;
+  @apply z-0;
+  @apply flex;
+  @apply flex-1;
+  @apply items-center;
+  @apply justify-center;
+  @apply overflow-hidden;
+}
+
+.linear-progress-bar {
+  @apply absolute;
+  @apply block;
+  @apply top-0;
+  @apply left-0;
+  @apply bottom-0;
+  @apply w-full;
+}
+
+// SIZE
+
+$sizes: (
+  'sm': 1,
+  'md': 1.5,
+  'lg': 2,
+);
+
+@each $size, $value in $sizes {
+  .linear-progress-size-#{$size},
+  .linear-progress-bar-size-#{$size} {
+    @apply #{h- + $value};
+    @apply #{rounded- + $size};
+    min-height: #{'theme\("spacing\.'+ '\['+ $value + '\]'+ '"\)'};
+  }
+  .linear-progress-bar-size-#{$size} {
+    @apply rounded-r-none;
+    @apply #{rounded-l- + $size};
+  }
+}
+
+// COLOR
+
+$combinedPalette: $paletteBrand, $paletteSeverity;
+
+@each $palette in $combinedPalette {
+  @each $swatch in $palette {
+    .linear-progress-color {
+      @apply bg-secondary-tint-alpha;
+    }
+    .linear-progress-bar-color-#{$swatch} {
+      @apply #{bg- + $swatch};
+    }
+  }
+}

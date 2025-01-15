@@ -1,0 +1,18 @@
+@import '@styles/styles.scss';
+
+.card {
+  @apply grid grid-rows-[auto];
+  @apply h-full;
+  max-height: $unitWidgetScrollable;
+  .filters {
+    @apply w-full;
+  }
+  .location-schema-container {
+    @apply grow;
+    @apply overflow-hidden;
+  }
+}
+
+.stack {
+  @apply mb-4;
+}

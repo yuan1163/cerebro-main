@@ -1,0 +1,81 @@
+.input-base-wrapper {
+  @apply relative;
+  @apply inline-flex items-center;
+  @apply rounded-lg;
+  @apply font-normal text-sm leading-snug text-typography-secondary;
+  @apply cursor-text;
+  &.input-base-filled {
+    @apply bg-neutral-100;
+  }
+  &.input-base-standard {
+    @apply bg-common-white;
+  }
+}
+
+// .input-base-{variant}
+
+.input-base {
+  @apply block;
+  @apply m-0;
+  @apply w-full h-[2.75rem];
+  @apply px-3 py-2.5;
+  @apply border border-solid border-transparent rounded-lg;
+  @apply bg-transparent;
+  @apply text-current;
+  &:hover {
+    @apply border-neutral-100;
+  }
+  &:focus {
+    @apply border-primary outline-none;
+  }
+  &:disabled {
+    @apply border-transparent;
+    @apply cursor-not-allowed;
+    @apply select-none;
+    &::placeholder {
+      @apply text-typography-placeholder;
+    }
+    &:hover {
+      @apply border-transparent;
+    }
+    &:focus {
+      @apply border-transparent outline-none;
+    }
+  }
+}
+
+// full-width
+
+.input-base-full-width {
+  @apply w-full;
+}
+
+// adornment-icon
+
+.adornment-icon-position-start {
+  padding-left: calc((theme('fontSize[icon-md]') + (theme('spacing.3') * 2)));
+}
+
+.adornment-icon-position-end {
+  padding-right: calc((theme('fontSize[icon-md]') + (theme('spacing.3') * 2)));
+}
+
+.adornment-icon-position-between {
+  padding-left: calc((theme('fontSize[icon-md]') + (theme('spacing.3') * 2)));
+  padding-right: calc((theme('fontSize[icon-md]') + (theme('spacing.3') * 2)));
+}
+
+// select options
+
+.options {
+  @apply absolute;
+  @apply z-modal;
+  @apply overflow-auto;
+  @apply mt-1;
+  @apply w-full;
+  @apply max-h-60;
+  @apply rounded-b-xl;
+  @apply bg-background;
+  // TODO SHADOW
+  @apply shadow-xs;
+}

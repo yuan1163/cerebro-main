@@ -1,0 +1,6 @@
+.widget-container {
+  @apply gap-x-2;
+  svg {
+    @apply stroke-current;
+  }
+}

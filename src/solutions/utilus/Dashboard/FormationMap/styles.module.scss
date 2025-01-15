@@ -1,0 +1,10 @@
+.map {
+  @apply h-full;
+  @apply relative;
+}
+
+.stat {
+  @apply absolute left-0 bottom-0 p-3;
+  @apply flex flex-col gap-y-2;
+  @apply text-sm;
+}

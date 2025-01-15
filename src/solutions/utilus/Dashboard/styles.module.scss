@@ -1,0 +1,15 @@
+.card {
+  @apply flex flex-col;
+  @apply h-full;
+  .card-content {
+    @apply flex flex-col;
+    @apply grow;
+  }
+  .location-container {
+    @apply gap-4 grow;
+  }
+}
+
+.icon {
+  @apply ml-3;
+}

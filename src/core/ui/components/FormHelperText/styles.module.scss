@@ -1,0 +1,20 @@
+.form-helper-text {
+  @apply mt-1;
+  @apply mb-0;
+  @apply mx-0.5;
+  @apply text-typography-secondary;
+  @apply font-normal;
+  @apply text-xs;
+  @apply text-left;
+}
+
+// TODO style for disabled text
+
+// .disabled {
+//     @apply;
+// }
+// color: rgba(0, 0, 0, 0.38);
+
+.error {
+  @apply text-severity-error;
+}

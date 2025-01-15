@@ -1,0 +1,161 @@
+@import '@styles/styles.scss';
+
+.chip {
+  @apply relative;
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply overflow-hidden;
+  @apply align-middle;
+  @apply font-semibold;
+  @apply no-underline;
+  @apply rounded;
+  @apply select-none;
+  &:focus-visible {
+    @apply outline-none;
+  }
+}
+
+a.chip,
+button.chip {
+  @include focusVisible;
+}
+
+// SIZE
+
+.chip-size-sm {
+  @apply min-h-[1.5rem];
+  @apply px-1.5;
+  @apply text-button-sm;
+}
+
+.chip-size-md {
+  @apply min-h-[1.75rem];
+  @apply px-1.5;
+  @apply text-button-md;
+}
+
+// LABEL
+
+.label {
+  @apply inline-block;
+  @apply grow;
+  @apply overflow-hidden;
+  @apply leading-tight;
+  @apply whitespace-nowrap;
+  @apply text-ellipsis;
+}
+
+.label-line-through {
+  @apply line-through;
+}
+
+.label-uppercase {
+  @apply uppercase;
+}
+
+// ICONS
+
+.start-icon {
+  @apply mr-1;
+}
+
+.end-icon {
+  @apply ml-1;
+}
+
+.chip-size-sm .start-icon,
+.chip-size-sm .end-icon {
+  & > svg {
+    @apply w-[theme('width.decorator.xs')];
+    @apply h-[theme('width.decorator.xs')];
+  }
+}
+
+.chip-size-md .start-icon,
+.chip-size-md .end-icon {
+  & > svg {
+    @apply w-[theme('width.decorator.sm')];
+    @apply h-[theme('width.decorator.sm')];
+  }
+}
+
+// DELETABLE
+
+.chip-deletable-icon {
+  @apply opacity-60;
+  @apply ml-1;
+  & path {
+    vector-effect: non-scaling-stroke;
+  }
+  &:hover {
+    @apply opacity-80;
+  }
+  &:active {
+    @apply opacity-90;
+  }
+}
+
+.chip-deletable-icon-size-sm {
+  & path {
+    stroke-width: theme('strokeWidth.sm');
+  }
+}
+
+.chip-deletable-icon-size-md {
+  & path {
+    stroke-width: theme('strokeWidth.lg');
+  }
+}
+
+// COLOR
+
+@each $palette in ($paletteBrand, $paletteSeverity) {
+  @each $swatch in $palette {
+    .chip-color-#{$swatch} {
+      @apply #{bg- + $swatch + -tint-alpha};
+      @apply #{text- + $swatch + -dark};
+    }
+    a.chip-color-#{$swatch}:focus-visible,
+    button.chip-color-#{$swatch}:focus-visible {
+      @apply #{outline- + $swatch + -focus};
+    }
+    a.chip-color-#{$swatch}:hover,
+    button.chip-color-#{$swatch}:hover {
+      @apply #{bg- + $swatch + -tint-alpha-hover};
+    }
+    a.chip-color-#{$swatch}:active,
+    button.chip-color-#{$swatch}:active {
+      @apply #{bg- + $swatch + -tint-alpha-active};
+    }
+  }
+}
+
+@each $swatch in $paletteDefault {
+  .chip-color-#{$swatch} {
+    @apply #{bg-accent- + $swatch + -tint-alpha};
+    @apply #{text-accent- + $swatch + -dark};
+  }
+  a.chip-color-#{$swatch}:hover,
+  button.chip-color-#{$swatch}:hover {
+    @apply #{bg-accent- + $swatch + -tint-alpha-hover};
+  }
+  a.chip-color-#{$swatch}:active,
+  button.chip-color-#{$swatch}:active {
+    @apply #{bg-accent- + $swatch + -tint-alpha-active};
+  }
+}
+
+// DISABLED
+
+.chip-disabled {
+  @apply bg-action-disabled;
+  @apply text-typography-disabled;
+  @apply pointer-events-none;
+  & img {
+    @apply opacity-50;
+  }
+  & .chip-deletable-icon {
+    @apply text-icon-disabled;
+  }
+}

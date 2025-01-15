@@ -1,0 +1,23 @@
+@import '@styles/styles.scss';
+
+.drawer-expanded {
+  @apply flex;
+  @apply flex-col;
+  @apply h-screen;
+  @apply w-[22.5rem];
+  @apply bg-surface-01;
+  @apply shadow-lg;
+}
+
+.card-content {
+  @apply flex;
+  @apply grow;
+}
+
+.go-back-button-container {
+  @apply flex;
+  @apply grow-0;
+  @apply p-5;
+  @apply w-full;
+  @apply border-t border-border;
+}

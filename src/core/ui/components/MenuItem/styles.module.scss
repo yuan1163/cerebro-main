@@ -1,0 +1,72 @@
+.menu-item {
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply justify-start;
+  @apply px-1.5;
+  @apply w-full;
+  @apply text-left;
+}
+
+.menu-item-header {
+  @apply gap-3;
+  @apply pt-2;
+  @apply pb-1;
+  @apply px-4;
+}
+
+// MENU ITEM TEXT
+
+.menu-item-text {
+  @apply flex-auto;
+  @apply min-w-0;
+  @apply pr-4;
+}
+
+// CONTEXT
+
+.menu-item-text-content {
+  @apply flex;
+  @apply flex-col;
+}
+
+.title,
+.subtitle {
+  @apply overflow-hidden;
+  @apply text-ellipsis;
+  @apply whitespace-nowrap;
+}
+
+.title {
+  @apply text-typography-primary;
+}
+
+.subtitle {
+  @apply text-typography-secondary;
+}
+
+// WEIGHT
+
+.title-font-weight-medium {
+  @apply font-medium;
+}
+
+.title-font-weight-semibold {
+  @apply font-semibold;
+}
+
+.menu-item-header span:first-of-type.title {
+  @apply font-semibold;
+}
+
+// SHRINK
+
+.list-item-text-shrink {
+  @apply flex-initial;
+}
+
+// DISABLE PADDING
+
+.menu-item-disable-padding {
+  @apply p-0;
+}

@@ -1,0 +1,18 @@
+.unit {
+    @apply gap-5;
+}
+
+.card {
+    @apply flex flex-col;
+    @apply h-full;
+    .filter {
+        @apply w-full;
+        .select-container {
+            @apply grow;
+        }
+    }
+}
+
+.location-schema-container {
+    @apply aspect-[2/1];
+}

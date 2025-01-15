@@ -1,0 +1,48 @@
+.icon-button {
+  @apply relative;
+  @apply shrink-0;
+  @apply p-0;
+  &:focus-visible {
+    @apply outline-offset-0;
+    @apply outline-4;
+  }
+}
+
+// SIZES
+
+.icon-button-size-xs {
+  @apply h-[theme('height.button.xs')];
+  @apply w-[theme('height.button.xs')];
+}
+
+.icon-button-size-sm {
+  @apply h-[theme('height.button.sm')];
+  @apply w-[theme('height.button.sm')];
+}
+
+.icon-button-size-md {
+  @apply h-[theme('height.button.md')];
+  @apply w-[theme('height.button.md')];
+}
+
+.icon-button-size-lg {
+  @apply h-[theme('height.button.lg')];
+  @apply w-[theme('height.button.lg')];
+}
+
+// TEXT & LINK
+
+.icon-button-variant-text,
+.icon-button-variant-link {
+  @apply p-0;
+  @apply h-fit min-h-fit;
+  @apply w-fit min-w-fit;
+}
+
+// DOT
+
+.badge {
+  @apply absolute;
+  @apply top-1;
+  @apply right-1;
+}

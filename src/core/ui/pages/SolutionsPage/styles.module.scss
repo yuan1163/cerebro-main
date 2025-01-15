@@ -1,0 +1,18 @@
+.main {
+  @apply min-h-screen;
+  @apply bg-background;
+}
+
+.container {
+  @apply mx-auto;
+}
+
+.cards-container {
+  @apply grid;
+  @apply grid-cols-2;
+  @apply max-md:grid-cols-1;
+  @apply max-sm:grid-cols-1;
+  @apply gap-3;
+  min-height: calc(100vh - theme('height.toolbar') - theme('spacing.container-x'));
+  @apply sm:h-auto md:h-auto;
+}

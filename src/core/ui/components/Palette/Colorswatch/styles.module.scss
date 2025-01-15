@@ -1,0 +1,54 @@
+@import '@styles/styles.scss';
+
+.colorswatch {
+  @apply appearance-none;
+  @apply relative;
+  @apply flex items-center;
+  @apply m-0;
+  @apply w-8 h-8;
+  @apply text-inherit;
+  &::before {
+    @apply content-[''];
+    @apply absolute;
+    left: calc((100% - theme('spacing.5')) / 2);
+    top: calc((100% - theme('spacing.5')) / 2);
+    @apply inline-block;
+    @apply w-5 h-5;
+    @apply border-0 rounded-full;
+    @apply bg-surface-01;
+  }
+  &:checked {
+    @apply border border-divider rounded-md;
+  }
+  &:checked::before {
+    @apply border-primary;
+    @apply bg-primary;
+  }
+  &:checked::after {
+    @apply content-[''];
+    @apply absolute;
+    left: calc((100% - theme('spacing.4')) / 2);
+    top: calc((100% - theme('spacing.4')) / 2);
+    @apply inline-block;
+    @apply w-4 h-4;
+    @apply bg-no-repeat bg-[length:100%];
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpolygon points='19.225 9.04 17.094 6.909 9.938 14.064 6.946 11.072 4.815 13.203 9.937 18.325 9.938 18.324 9.939 18.325 19.225 9.04' fill='%23fff'/%3E%3C/svg%3E%0A");
+  }
+}
+
+// color
+
+$colors: $paletteDefault;
+
+@each $color in $colors {
+  .colorswatch.colorswatch-color-#{$color} {
+    &::before {
+      @apply #{bg-accent- + $color};
+    }
+  }
+  .colorswatch.colorswatch-color-secondary {
+    &::before {
+      @apply bg-secondary;
+    }
+  }
+}

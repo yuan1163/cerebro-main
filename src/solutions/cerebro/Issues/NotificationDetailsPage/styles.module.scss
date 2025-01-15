@@ -1,0 +1,18 @@
+.unit {
+    @apply gap-5;
+}
+
+.notification-card-container {
+    @apply w-[27.5rem];
+    @apply shrink-0 grow-0;
+}
+.asset-card-container {
+    @apply grow;
+}
+
+.location-card {
+    @apply w-full h-full;
+    .location-card-content {
+        @apply h-full;
+    }
+}

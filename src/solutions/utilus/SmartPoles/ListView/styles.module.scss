@@ -1,0 +1,60 @@
+.card {
+  @apply grid grid-rows-[auto_1fr];
+  @apply overflow-hidden;
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar') - theme('height.widget'));
+}
+
+.list {
+  .list-item-button:nth-child(1) {
+    .list-item-button-pseudo-element {
+      @apply border-t-0;
+    }
+  }
+  .list-item-button {
+    @apply relative;
+    @apply px-4;
+
+    &:first-child {
+      &::before {
+        @apply border-t border-transparent;
+      }
+    }
+
+    &::before {
+      @apply content-[''];
+      @apply absolute;
+      @apply block;
+      @apply top-0;
+      @apply left-4;
+      width: calc(100% - theme('spacing.4') * 2);
+      @apply h-full;
+      @apply border-t border-divider;
+    }
+
+    &:hover::before {
+      @apply w-full;
+      @apply bg-action-hover;
+    }
+
+    &[aria-current='page'],
+    &:hover {
+      &::before {
+        @apply w-full;
+        @apply left-0;
+        @apply bg-action-hover;
+        @apply border-b border-t border-divider;
+      }
+    }
+
+    &[aria-current='page'] + .list-item-button,
+    &:hover + .list-item-button {
+      &::before {
+        @apply border-t border-transparent;
+      }
+    }
+  }
+}
+
+.list-item-icon {
+  @apply text-inherit;
+}

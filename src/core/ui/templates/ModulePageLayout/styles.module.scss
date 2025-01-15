@@ -1,0 +1,29 @@
+.container {
+  @apply relative;
+  @apply grid;
+  grid-template-areas: 'nav body';
+  // @apply overflow-hidden;
+  @apply min-h-screen;
+  @apply w-full;
+  @apply bg-background;
+  &-drawer-expanded {
+    @apply grid-cols-[theme(width.drawer.horizontal.expanded)_1fr];
+  }
+  &-drawer-collapsed {
+    @apply grid-cols-[theme(width.drawer.horizontal.collapsed)_1fr];
+  }
+}
+
+// MAIN
+
+.main {
+  @apply relative;
+  grid-area: body;
+  // @apply overflow-y-auto;
+}
+
+.wrapper {
+  @apply pb-5;
+  @apply h-full;
+  @apply min-h-screen;
+}

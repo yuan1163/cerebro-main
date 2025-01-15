@@ -1,0 +1,16 @@
+.popover {
+  @apply relative z-modal flex;
+  .popover-button {
+    @apply outline-none rounded-full;
+  }
+  .popover-panel {
+    @apply absolute z-modal;
+    @apply right-0;
+    top: calc(theme('spacing.10') + theme('spacing.2'));
+  }
+  .popover-close-button {
+    @apply absolute;
+    @apply z-modal;
+    @apply top-4 right-4;
+  }
+}

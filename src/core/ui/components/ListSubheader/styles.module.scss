@@ -1,0 +1,35 @@
+.list-subheader {
+  @apply py-1;
+  @apply list-none;
+}
+
+// .list-subheader-color-{color}
+
+.list-subheader-color-default {
+  @apply text-typography-secondary;
+}
+
+.list-subheader-color-inherit {
+  @apply text-inherit;
+}
+
+.list-subheader-color-primary {
+  @apply text-primary;
+}
+
+// !disableGutters
+
+.list-subheader-gutters {
+  @apply px-4;
+}
+
+// variant
+
+.list-subheader-default {
+  @apply text-sm font-semibold text-typography-primary;
+  @apply leading-snug;
+}
+
+.list-subheader-menu {
+  @apply text-xs uppercase;
+}

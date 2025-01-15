@@ -1,0 +1,23 @@
+.accordion-map {
+  & > div {
+    @apply mt-1.5;
+    @apply min-h-[6.75rem];
+  }
+}
+
+.card-content-text {
+  @apply pt-3;
+  @apply pb-0;
+}
+
+.caption {
+  @apply mt-0.5;
+}
+
+.icon {
+  @apply top-1;
+}
+
+.features-container {
+  @apply mt-2;
+}

@@ -1,0 +1,26 @@
+.app-bar {
+  @apply relative;
+  @apply shrink-0;
+  @apply w-full;
+  @apply bg-transparent;
+}
+
+// .app-bar-color-{color}
+
+// $colors: 'inherit', 'primary', 'secondary', 'transparent';
+
+// @each $color in $colors {
+//   .app-bar-color-#{$color} {
+//     @apply #{bg- + $color};
+//   }
+// }
+
+// .app-bar-position-{position}
+
+$positions: 'absolute', 'fixed', 'relative', 'static', 'sticky';
+
+@each $position in $positions {
+  .app-bar-position-#{$position} {
+    @apply #{$position};
+  }
+}

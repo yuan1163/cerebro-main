@@ -1,0 +1,11 @@
+{
+  "themes": ["light", "dark", "global"],
+  "paths": {
+    "base": "src/styles/tokens/input/baseTokens",
+    "local": "src/styles/tokens/input/localTokens",
+    "output": "src/styles/tokens/output"
+  },
+  "options": {
+    "global": "--expandTypography"
+  }
+}

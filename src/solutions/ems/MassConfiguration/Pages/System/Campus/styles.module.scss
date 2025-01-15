@@ -1,0 +1,10 @@
+.card {
+  @apply grid;
+  @apply grid-rows-[1fr];
+  @apply overflow-hidden;
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar') - theme('height.widget'));
+}
+
+.card-aside {
+  @apply grid-rows-[auto_1fr];
+}

@@ -1,0 +1,9 @@
+.map-legend {
+  @apply absolute;
+  @apply z-10;
+  @apply left-2/4;
+  @apply -translate-x-2/4;
+  @apply bottom-4;
+  @apply py-2;
+  @apply px-4;
+}

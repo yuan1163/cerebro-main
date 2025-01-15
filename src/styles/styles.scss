@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Inter var';
+  src: url('@assets/fonts/Inter.var.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+// palette
+
+$paletteBrand: 'primary', 'secondary';
+$paletteDefault: 'amber', 'blue', 'brown', 'cyan', 'fuchsia', 'green', 'grass', 'indigo', 'lime', 'orange', 'pink',
+  'purple', 'red', 'rose', 'sky', 'teal', 'violet', 'yellow';
+$paletteIcon: 'primary', 'secondary', 'tertiary', 'quaternary', 'inverse';
+$paletteSeverity: 'error', 'success', 'trivial', 'warning';
+$paletteSurface: 'surface-01', 'surface-02', 'surface-03';
+$paletteTypography: 'primary', 'secondary', 'tertiary', 'inverse', 'placeholder';
+
+// spacing
+
+$spaces: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96;
+
+@each $space in $spaces {
+  .width-#{$space} {
+    @apply #{w- + $space};
+  }
+}
+
+@each $space in $spaces {
+  .height-#{$space} {
+    @apply #{h- + $space};
+  }
+}
+
+// sizes
+
+$iconSizes: '4xl', '3xl', '2xl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs';
+$avatarSizes: '4xl', '3xl', '2xl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs';
+
+// paddings
+
+$paddingsMobile: (
+  'xxs': 4,
+  'xs': 4,
+  'sm': 4,
+  'md': 6,
+  'lg': 8,
+  'xl': 12,
+  '2xl': 16,
+  '3xl': 20,
+  '4xl': 24,
+);
+
+$paddings: (
+  'xxs': 4,
+  'xs': 6,
+  'sm': 8,
+  'md': 12,
+  'lg': 16,
+  'xl': 20,
+  '2xl': 24,
+  '3xl': 28,
+  '4xl': 32,
+);
+
+// icon size
+
+$iconSizeXs: theme('fontSize[icon-xs]');
+$iconSizeSm: theme('fontSize[icon-sm]');
+$iconSizeMd: theme('fontSize[icon-md]');
+$iconSizeLg: theme('fontSize[icon-lg]');
+$iconSizeXl: theme('fontSize[icon-xl]');
+$iconSizeXxl: theme('fontSize[icon-xxl]');
+
+// icon padding
+
+$iconPaddingXs: 1;
+$iconPaddingSm: 1.5;
+$iconPaddingMd: 2.5;
+$iconPaddingLg: 2.5;
+$iconPaddingXl: 2.5;
+$iconPaddingXxl: 6;
+
+// font-size
+
+$sizes: '7xl', '6xl', '5xl', '4xl', '3xl', '2xl', 'xl', 'lg', 'base', 'sm', 'xs', 'xxs', 'paragraph-sm', 'paragraph-md',
+  'paragraph-lg';
+
+// shadows
+
+$shadows: 'none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl';
+
+// units
+
+$unitScrollable: calc(100vh - theme('spacing.container-x') - theme('height.toolbar'));
+$unitWidgetScrollable: calc(100vh - theme('spacing.container-x') - theme('height.toolbar') - theme('height.widget'));
+
+// SCROLLBAR
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    @apply h-1.5;
+    @apply w-1.5;
+    @apply bg-transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-lg;
+    @apply bg-secondary-tint-alpha-active;
+    @apply border border-secondary-tint-alpha-active;
+  }
+  &::-webkit-scrollbar-track {
+    @apply rounded-sm;
+    @apply bg-transparent;
+  }
+}
+
+// FOCUS
+
+@mixin focusVisibleBase($outlineWidth: 4) {
+  &:focus-visible {
+    @apply outline;
+    @apply outline-primary-focus;
+    @apply outline-offset-0;
+    @apply outline-#{$outlineWidth};
+  }
+}
+
+@mixin focusVisible {
+  @include focusVisibleBase(4);
+}
+
+@mixin focusVisibleSm {
+  @include focusVisibleBase(2);
+}
+
+// LINK
+
+@mixin linkStyles {
+  @apply underline;
+  @apply text-typography-link;
+  &:visited {
+    @apply text-typography-link-visited;
+  }
+  &:hover {
+    @apply text-typography-link-hover;
+  }
+}

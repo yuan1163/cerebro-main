@@ -1,0 +1,59 @@
+.unit-sidebar-grid {
+  grid-template-areas: 'widget' 'body';
+  @apply grid-rows-[auto_1fr];
+  @apply grid-cols-1;
+  @apply gap-1;
+  @apply h-full;
+  @apply overflow-hidden;
+}
+
+.unit-sidebar-widget {
+  grid-area: widget;
+}
+
+.unit-sidebar-body {
+  grid-area: body;
+  @apply overflow-hidden;
+}
+
+// MAP
+
+.container {
+  @apply relative;
+  grid-template-rows: 1fr;
+  @apply gap-3;
+  @apply overflow-hidden;
+  @apply rounded-lg;
+  @apply border border-border;
+}
+
+.card {
+  @apply flex flex-col;
+  @apply h-full;
+  @apply overflow-hidden;
+}
+
+.map {
+  @apply h-full;
+  @apply w-full;
+  @apply rounded-md;
+}
+
+.map-selector-container {
+  @apply absolute;
+  @apply z-10;
+  @apply top-4;
+  right: (theme('width.icon.lg.DEFAULT'));
+  @apply mr-6;
+  @apply w-[20.25rem];
+}
+
+// REACT FLOW
+
+.react-flow-container {
+  @apply overflow-hidden;
+  @apply rounded-lg;
+  @apply border border-border;
+  @apply h-[20rem];
+  @apply w-full;
+}

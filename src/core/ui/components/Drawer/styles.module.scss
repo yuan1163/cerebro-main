@@ -1,0 +1,21 @@
+.drawer {
+  @apply fixed;
+  @apply z-drawer;
+  @apply flex flex-col;
+  flex: 1 0 auto;
+  @apply h-full;
+  @apply overflow-hidden;
+  @apply bg-surface-01;
+@apply shadow-lg;
+}
+
+// .drawer-anchor-{anchor}
+
+.drawer-anchor-left {
+  @apply inset-y-0 left-0;
+}
+
+.dialog-panel {
+  @apply w-screen max-w-[22.5rem];
+  @apply pointer-events-auto;
+}

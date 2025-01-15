@@ -1,0 +1,75 @@
+query SmartPoles($where: SmartPoleWhereInput, $orderBy: [SmartPoleOrderByWithRelationInput!]) {
+  smartPoles(where: $where, orderBy: $orderBy) {
+    id
+    name
+    serial
+    latitude
+    longitude
+    zone {
+      id
+      name
+      formation {
+        id
+        name
+      }
+    }
+    devices {
+      alerts {
+        id
+      }
+    }
+  }
+}
+
+query SmartPole($where: SmartPoleWhereUniqueInput!) {
+  smartPole(where: $where) {
+    id
+    name
+    serial
+    latitude
+    longitude
+    zone {
+      id
+      name
+      formation {
+        id
+        name
+        address
+      }
+    }
+    devices {
+      id
+      name
+      serial
+      uuid
+      type {
+        id
+        name
+      }
+      alerts {
+        id
+        message
+        priority {
+          id
+          name
+        }
+      }
+      events {
+        id
+        moment
+        message
+        priority {
+          id
+          name
+        }
+      }
+      connectParamIndex
+      smartPole {
+        connectLocationId
+        connectDeviceId
+      }
+    }
+    connectLocationId
+    connectDeviceId
+  }
+}

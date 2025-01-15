@@ -1,0 +1,24 @@
+.card-header-content {
+  @apply flex;
+  @apply flex-nowrap;
+  @apply items-center;
+  @apply gap-2;
+}
+
+.card-content {
+  @apply flex;
+  @apply flex-col;
+  @apply gap-4;
+}
+
+.alert-container {
+  @apply flex;
+  @apply justify-between;
+  @apply gap-2;
+}
+
+.actions-container {
+  @apply flex;
+  @apply justify-end;
+  @apply gap-2;
+}

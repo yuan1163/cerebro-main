@@ -1,0 +1,20 @@
+.toolbar {
+  @apply relative;
+  @apply flex items-center justify-center gap-3;
+}
+
+// .toolbar-{variant}
+
+.toolbar-regular {
+  @apply min-h-[theme('height.toolbar')];
+}
+
+.toolbar-dense {
+  @apply min-h-[5rem];
+}
+
+// .toolbar-{disableGutters}
+
+.toolbar-gutters {
+  @apply px-4;
+}

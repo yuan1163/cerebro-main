@@ -1,0 +1,14 @@
+.grid-drawer {
+  @apply absolute;
+  @apply left-0 top-20;
+  @apply z-drawer;
+  @apply w-full;
+  height: calc(100% - 5rem);
+  @apply p-4 pt-0;
+  .grid-drawer-content {
+    @apply h-full;
+  }
+  .grid-drawer-item {
+    @apply grow;
+  }
+}

@@ -1,0 +1,15 @@
+.form {
+  @apply grid;
+  @apply grid-rows-[1fr_auto];
+  @apply overflow-hidden;
+  @apply h-full w-full;
+}
+
+.card-content {
+  @apply pt-0;
+}
+
+.card-footer {
+  @apply border-t border-t-divider;
+  @apply bg-surface-01;
+}

@@ -1,0 +1,20 @@
+.option {
+  @apply relative;
+  @apply px-3 py-2;
+  @apply text-typography-primary;
+  @apply cursor-default select-none;
+}
+.option-active {
+  @apply bg-action-hover;
+}
+.label {
+  @apply block;
+  @apply text-sm font-normal truncate;
+}
+.selected {
+  @apply font-normal;
+}
+
+.scrollbar {
+  @apply max-h-full;
+}

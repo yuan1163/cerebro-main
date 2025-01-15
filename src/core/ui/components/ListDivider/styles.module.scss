@@ -1,0 +1,11 @@
+.list-divider {
+  @apply relative;
+  @apply self-stretch;
+  @apply shrink-0;
+  @apply mx-0;
+  @apply my-1;
+  @apply h-px;
+  @apply border-0;
+  @apply list-none;
+  @apply bg-divider;
+}

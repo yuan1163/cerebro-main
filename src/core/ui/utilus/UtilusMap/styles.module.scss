@@ -1,0 +1,16 @@
+.title {
+  @apply font-semibold text-[14px] text-neutral-800;
+}
+
+.zone {
+  @apply text-[12px] text-neutral-600;
+}
+
+.formation {
+  @apply font-semibold text-[12px] text-neutral-600;
+}
+
+.cluster-label {
+  @apply bg-common-white w-[2rem] h-[2rem] rounded-full;
+  @apply flex items-center justify-center;
+}

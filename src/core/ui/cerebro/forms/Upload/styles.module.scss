@@ -1,0 +1,17 @@
+@import '@core/ui/components/InputBase/styles.module.scss';
+
+.label-wrapper {
+  @apply mb-1;
+}
+
+.input-base-wrapper {
+  @apply bg-typography-secondary/[0.8%];
+}
+
+.input-wrapper {
+  @apply relative text-typography-secondary;
+}
+
+.input-full-width {
+  @apply w-full;
+}

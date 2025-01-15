@@ -1,0 +1,26 @@
+@import '@core/ui/components/InputBase/styles.module.scss';
+
+.search-icon-wrapper {
+  @apply px-4;
+}
+
+.close-icon-wrapper {
+  @apply pl-4 pr-2;
+}
+
+.close-icon-wrapper-hidden {
+  @apply hidden;
+}
+
+.label-wrapper {
+  @apply mb-1;
+}
+
+.input-wrapper {
+  @apply relative;
+  @apply text-typography-secondary;
+}
+
+.input-full-width {
+  @apply w-full;
+}

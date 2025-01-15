@@ -1,0 +1,46 @@
+.module-navigator.module-navigator-button {
+  @apply justify-start;
+  @apply min-h-[2.5rem];
+  @apply py-0.5;
+  @apply px-4;
+  @apply max-2xl:px-4;
+  @apply max-xl:px-4;
+  @apply max-lg:px-2.5;
+  @apply max-md:px-2.5;
+  @apply w-full;
+  @apply rounded;
+  @apply text-typography-secondary;
+  @apply text-sm;
+  font-variation-settings: 'wght' 500;
+  & .icon {
+    @apply block;
+  }
+  & .icon-hover {
+    @apply hidden;
+  }
+  &:focus-visible {
+    @apply outline-primary-focus;
+  }
+  &:hover {
+    @apply bg-action-hover;
+  }
+  &:active {
+    @apply bg-action-active;
+  }
+  &[disabled],
+  &.disabled {
+    @apply text-typography-disabled;
+    @apply cursor-not-allowed;
+  }
+  &.module-navigator-button-active {
+    @apply bg-primary-tint-alpha;
+    @apply text-primary;
+    font-variation-settings: 'wght' 600;
+    & .icon {
+      @apply hidden;
+    }
+    & .icon-hover {
+      @apply block;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.card {
+  @apply grid grid-rows-[auto_1fr_auto];
+  max-height: calc(100vh - theme('spacing.container-x') - theme('height.toolbar'));
+  @apply bg-trivial-tint-alpha;
+
+  .card-content {
+    @apply relative;
+    @apply overflow-clip;
+  }
+
+  .icon-container {
+    @apply absolute;
+    @apply p-6;
+    @apply rounded-full;
+    @apply -top-3;
+    @apply -right-3;
+  }
+}
+
+// icon color
+$colors: 'primary', 'warning', 'error';
+
+@each $color in $colors {
+  .icon-color-#{$color} {
+    @apply #{text- + $color};
+  }
+}
+
+// icon bg color
+@each $color in $colors {
+  .icon-bg-color-#{$color} {
+    @apply #{bg- + $color + -tint-alpha};
+  }
+}

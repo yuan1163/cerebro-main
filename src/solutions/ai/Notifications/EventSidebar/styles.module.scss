@@ -1,0 +1,12 @@
+.avatar {
+  @apply mr-3;
+}
+
+.legend-marker {
+  @apply mx-1;
+}
+
+.map-wrapper {
+  @apply overflow-hidden;
+  @apply h-44 w-full;
+}

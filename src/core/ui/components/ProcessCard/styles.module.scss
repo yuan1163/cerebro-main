@@ -1,0 +1,65 @@
+@import '@styles/styles.scss';
+
+.card {
+  @apply min-w-[3.75rem];
+  @apply w-full;
+  @apply rounded 2xl:rounded-md;
+}
+
+// COLOR
+
+@each $swatch in $paletteSeverity {
+  .card-#{$swatch} {
+    @apply #{bg- + $swatch};
+  }
+}
+
+.card-content {
+  @apply 2xl:p-1.5;
+}
+
+// TITLE
+
+.title-container {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply overflow-hidden;
+  @apply grow;
+  @apply py-1;
+  // @apply max-h-[2.25rem] md:max-h-[3rem];
+  @apply min-h-[2.25rem] md:min-h-[3rem] 2xl:min-h-[6.25rem];
+  @apply w-full;
+  .title {
+    @apply overflow-hidden;
+    @apply text-sm 2xl:text-2xl;
+    @apply font-bold;
+    @apply text-center;
+    @apply whitespace-nowrap md:whitespace-normal 2xl:whitespace-normal;
+    @apply uppercase;
+    @apply text-ellipsis;
+    @apply select-none;
+  }
+}
+
+// COUNT
+
+.count-container {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply overflow-hidden;
+  @apply p-1;
+  @apply max-h-[2.75rem];
+  @apply w-full;
+  @apply rounded 2xl:rounded;
+  @apply bg-surface-01;
+  .count-content {
+    @apply overflow-hidden;
+    @apply text-sm 2xl:text-2xl;
+    @apply font-semibold;
+    @apply text-typography-primary;
+    @apply text-ellipsis;
+    @apply select-none;
+  }
+}
