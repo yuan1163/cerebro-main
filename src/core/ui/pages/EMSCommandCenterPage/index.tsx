@@ -251,8 +251,26 @@ export const EMSCommandCenterPage: React.FC = observer(() => {
 
   // FORMATIONS
 
-  const formations = locations.getFormations() || [];
-  const [selectedFormation, setSelectedFormation] = useState<Location | null>(currentFormation ?? null);
+  let formations:any = [];
+  if (locations.hasData()) {
+    formations = locations.getFormations();
+  }
+
+  // const formations = locations.getFormations() || [];
+  
+  const [selectedFormation, setSelectedFormation] = useState<Location | null>(formations && formations.length ? formations[0] : null);
+  // const [selectedFormation, setSelectedFormation] = useState<Location | null>(currentFormation ?? null);
+  
+  // 測試 工廠的值預設使用第一個選項
+  useEffect(() => {
+    try {
+      if (!selectedFormation && formations && formations.length){
+        setSelectedFormation(formations[0]);
+      }
+    } catch (err) {
+      console.error(err)
+    }
+  }, [formations])
 
   // DataSelect without Multiselect functionality
   // const getProductionLinesByFormation = (selectedFormation: Location | null): SchemeProductionLine[] => {
