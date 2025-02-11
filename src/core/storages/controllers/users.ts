@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { FilesInput, Location, User, UserGroup, UserRole, UsersInput } from '@core/api/types';
 
@@ -44,6 +44,13 @@ class UsersController {
 
   remove(user: Partial<User>) {
     this.removeHandler?.(user);
+  }
+
+  updateUserFileUrl(userId: number, url: string) {
+    const user = this.users?.find((u) => u.userId === userId);
+    if (user && user.files && user.files.length) {
+      user.files[0].url = url;
+    }
   }
 
   constructor(users?: User[], removeHandler?: (user: Partial<User>) => void) {
@@ -156,7 +163,9 @@ const IMAGE_TYPE = 4;
 const IMAGE_FILE_NAME = 'avatar';
 
 export const useAvatar = (user?: Partial<User>) => {
-  const imageQueryKey = ['user:avatar', user?.userId];
+  const [userId, setUserId] = React.useState<number | undefined>(user?.userId);
+
+  const imageQueryKey = ['user:avatar', userId];
 
   const [imageFile, setImageFile] = React.useState<File | null>();
 
@@ -165,21 +174,21 @@ export const useAvatar = (user?: Partial<User>) => {
     () =>
       apiGetFile({
         type: IMAGE_TYPE,
-        objectId: user?.userId?.toString(),
+        objectId: userId?.toString(),
         name: IMAGE_FILE_NAME,
         getUrl: true,
       }),
     {
-      enabled: !!user && !!user.userId,
+      enabled: !!userId,
     },
   );
 
-  const mtUpload = useMutation((file: File) =>
+  const mtUpload = useMutation((file: File) => 
     apiUploadFile({
       file,
       filter: {
         type: IMAGE_TYPE,
-        objectId: user?.userId?.toString(),
+        objectId: userId?.toString(),
         name: IMAGE_FILE_NAME,
       },
     }),
@@ -208,7 +217,7 @@ export const useAvatar = (user?: Partial<User>) => {
     }
   };
 
-  return { getUrl, setFile, update };
+  return { getUrl, setFile, update, setUserId };
 };
 
 export const useUser = (user: Partial<User>) => {
@@ -228,10 +237,14 @@ export const useUser = (user: Partial<User>) => {
   const groups = useUserGroups(user, user.groups);
 
   const avatar = useAvatar(user);
-
+  
   const add = async (data: Partial<User>) => {
+    
+    // 新增用戶、取得 userId
     const { userId } = await mtAdd.mutateAsync(data);
+    
     user.userId = userId;
+    avatar.setUserId(userId); // 更新 userId
 
     await userLocations.update();
     await userRole.update();

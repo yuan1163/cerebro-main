@@ -568,6 +568,7 @@ export const UserSelection = () => {
                               }}
                             >
                               <DataGridCell>
+                                {/* 大頭貼 照片 */}
                                 <DataGridIconCellContent
                                   startIcon={
                                     <Avatar
@@ -665,6 +666,10 @@ export const UserSelection = () => {
                 element={
                   <Unit variant='sidebar'>
                     <Card className={cn(styles['card'], styles['card-aside'])} fullHeight fullWidth scrollable>
+
+
+                    {/* 右邊區塊-使用者詳細資訊 */}
+
                       {state.open ? (
                         state.component
                       ) : (
