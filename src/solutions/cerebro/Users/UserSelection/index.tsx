@@ -576,8 +576,8 @@ export const UserSelection = () => {
                                       lastName={user.lastName}
                                       rounded
                                       size='xl'
-                                      src={user.files?.[0].url}
-                                    />
+                                      src={user.files?.[0]?.url && `${user.files?.[0].url}/${auth.accessToken}`}
+                                      />
                                   }
                                   title={`${user.firstName} ${user.lastName}`}
                                   subtitle={user.jobTitle ?? t('general.notAvailable.label', 'n/a', 'Not Available.')}

@@ -16,6 +16,10 @@ import { commands as utilusCommands } from '@core/ui/pages/SmartPolesPage/comman
 
 import { t } from '@core/utils/translate';
 
+// storages
+
+import { useAuth } from '@core/storages/auth';
+
 // hooks
 
 import useDrawerTooltip from '@core/hooks/useDrawerTooltip';
@@ -52,6 +56,11 @@ import IvedaIcon from '@assets/images/iveda-icon.svg?component';
 import IvedaLogo from '@assets/images/iveda-logo.svg?component';
 import PoweredLogo from '@assets/images/powered-logo.svg?component';
 
+
+// AUTHORIZATION
+
+const auth = useAuth();
+
 const brand = import.meta.env.VITE_BRAND === 'cerebro' ? { icon: <AppIcon />, logo: <AppLogo /> } : null;
 
 type Props = {
@@ -60,7 +69,6 @@ type Props = {
 
 export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
   const locations = useLocations();
-
   const { logo, icon } = locations.getCompanyLogos();
 
   // nav
@@ -237,6 +245,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             <ul className={cn(styles['list'], styles['list-app'])}>
               <li className={cn(styles['list-item'], styles['list-item-app'])}>{brand?.icon}</li>
               <li className={cn(styles['list-item'], styles['list-item-company'])}>
+                {/* {icon} */}
                 {icon ? (
                   <img
                     alt={t(
@@ -245,9 +254,9 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                       'Small graphical symbol that represents a brand.',
                     )}
                     height='32'
-                    src={icon}
+                    src={`${logo}/${auth.accessToken}`}
                     width='32'
-                  />
+                    />
                 ) : (
                   FallbackIcon
                 )}
@@ -342,7 +351,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             <ul className={cn(styles['list'], styles['list-app'])}>
               <li className={cn(styles['list-item'], styles['list-item-app'])}>{brand?.logo}</li>
               <li className={cn(styles['list-item'], styles['list-item-company'])}>
-                {logo ? (
+                {(logo && auth.accessToken) ? (
                   <img
                     alt={t(
                       'company.companyLogo.label',
@@ -352,12 +361,13 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                     height='30'
                     src={logo}
                     width='78'
-                  />
+                    />
                 ) : (
                   FallbackIcon
                 )}
               </li>
             </ul>
+
 
             {/* COMMON EXPANDED */}
 

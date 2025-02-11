@@ -155,8 +155,7 @@ export const Profile: React.FC<Props> = ({ className, handleEditProfile, user, .
                     lastName={user?.lastName}
                     className={styles['avatar']}
                     size='4xl'
-                    // src={user?.avatar ?? ''}
-                    src={user?.files?.[0]?.url ?? ''}
+                    src={user?.files?.[0]?.url && `${user?.files?.[0]?.url}/${auth.accessToken}`}
                     />
                   <Grid direction='column' justifyContent='between' fullWidth>
                     <Headline
