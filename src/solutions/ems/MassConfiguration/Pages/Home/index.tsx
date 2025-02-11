@@ -64,6 +64,7 @@ export const Home = () => {
               <Grid container fullHeight fullWidth spacing={3}>
                 {ConfigurationFileData.map((item) => {
                   return (
+                    /** 若是上傳按鈕 需要隱藏一個 input file */
                     <Grid item lg={3} key={item.title}>
                       {item.title ===
                         t(
@@ -71,6 +72,7 @@ export const Home = () => {
                           'Upload',
                           'Process of transferring data to a remote server or platform.',
                         ) && (
+                        /** 檔案上傳的按鈕, 點客製化按鈕透過 ref 來執行這檔案上傳按鈕 */
                         <input
                           accept='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
                           hidden

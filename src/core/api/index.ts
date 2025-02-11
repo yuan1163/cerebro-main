@@ -34,7 +34,7 @@ export class ApiLayer {
     };
     return fetch(url, init).then((response) => response.json());
   }
-
+  /** 檔案下載 api 請求 excel 檔案資源 */
   async requestBinary(method: METHOD, endpoint: string, data?: unknown, useToken?: string | null): Promise<unknown> {
     const url = `${SERVER}/${endpoint}`;
     const token = useToken || auth.accessToken;
@@ -47,7 +47,7 @@ export class ApiLayer {
       headers,
       body: data ? JSON.stringify(data) : undefined,
     };
-    return fetch(url, init).then((response) => response.blob());
+    return fetch(url, init).then(async (response) => await response.blob());
   }
 
   async upload(endpoint: string, contentType: string, data: BodyInit): Promise<unknown> {
@@ -84,8 +84,11 @@ export class ApiLayer {
     return this.request(METHOD.Get, endpoint, data) as Promise<Output>;
   }
 
+  /** 檔案下載 */
   async downloadFile<Input, Output>(endpoint: string, data?: Input): Promise<Output> {
-    return this.requestBinary(METHOD.Get, endpoint, data) as Promise<Output>;
+    const res = await this.requestBinary(METHOD.Get, endpoint, data) as Promise<Output>;
+    return res
+    // return this.requestBinary(METHOD.Get, endpoint, data) as Promise<Output>;
   }
 
   async post<Input, Output>(endpoint: string, data?: Input): Promise<Output> {
