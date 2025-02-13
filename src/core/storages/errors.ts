@@ -14,7 +14,7 @@ export class ErrorsStorage {
   showError(error?: any, timeout?: number | undefined) {
     let message;
     if ('message' in error) message = error.message;
-    else if ('resultCodeDesc' in error) message = error.resultCodeDesc;
+    else if ('resultCodeMessage' in error) message = error.resultCodeMessage;
     else if (typeof error === 'string') message = error;
     else if (typeof error === 'object') message = JSON.stringify(error);
     else message = error.toString();
