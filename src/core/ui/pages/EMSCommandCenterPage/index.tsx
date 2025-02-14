@@ -170,7 +170,7 @@ export const EMSCommandCenterPage: React.FC = observer(() => {
 
   // LOCATION
 
-  const currentLocation = locations.getElementById(ui.emsCurrentLocation);
+  // const currentLocation = locations.getElementById(ui.emsCurrentLocation);
 
   // RISK LEVEL
 
@@ -256,12 +256,9 @@ export const EMSCommandCenterPage: React.FC = observer(() => {
     formations = locations.getFormations();
   }
 
-  // const formations = locations.getFormations() || [];
-  
   const [selectedFormation, setSelectedFormation] = useState<Location | null>(formations && formations.length ? formations[0] : null);
-  // const [selectedFormation, setSelectedFormation] = useState<Location | null>(currentFormation ?? null);
   
-  // 測試 工廠的值預設使用第一個選項
+  // 工廠的值預設使用第一個選項
   useEffect(() => {
     try {
       if (!selectedFormation && formations && formations.length){
@@ -1133,8 +1130,7 @@ export const EMSCommandCenterPage: React.FC = observer(() => {
             title={t(
               'solutions.commandCenter.label',
               'Command Center',
-              'A hub for overseeing and controlling operations.',
-            )}
+              'A hub for overseeing and controlling operations.')}
             onBackNavigate={() => ui.gotoDashboard()}
             backLabel={t('solutions.backToDashboard.label', 'Back to Dashboard', 'Back to Dashboard button or link.')}
           >
