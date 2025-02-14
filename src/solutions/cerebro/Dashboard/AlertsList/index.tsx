@@ -66,6 +66,10 @@ const timeRange: SelectOption<number>[] = [
     label: t('date.last3hours.label', 'Last 3 hours', 'Choose a specific 3-hours time interval.'),
     value: moment().subtract(3, 'hour').valueOf(),
   },
+  {
+    label: '2024.11.1-2024.11.30',
+    value: 1730390400000
+  },
 ];
 
 type AlertsListProps = {
@@ -76,18 +80,28 @@ export const AlertsList: React.FC<AlertsListProps> = observer(({ className }) =>
   const ui = useUI();
 
   const [startDateFilter, setStartDateFilter] = useState(timeRange[0]);
+  const [endDateFilter, setEndDateFilter] = useState(0);
 
   const notifications = useNotifications(
     {
       locationId: ui.currentFormation,
       startDate: startDateFilter.value,
+      // @ts-ignore
+      endDate: endDateFilter.value,
       status: AlertStatus.Active,
     },
     true,
   );
 
   const onDateFilterChange = (option: SelectOption<number>) => {
-    setStartDateFilter(option);
+    if (option.label === '2024.11.1-2024.11.30') {
+      const startDate = 1730390400000;
+      const endDate = 1732982399000;
+      setStartDateFilter({ label: '2024.11.1-2024.11.30', value: startDate });
+      setEndDateFilter(endDate);
+    } else {
+      setStartDateFilter(option);
+    }
   };
 
   const onFilterIconClick = () => {
