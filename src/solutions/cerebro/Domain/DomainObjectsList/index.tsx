@@ -184,26 +184,6 @@ export const DomainObjectsList: React.FC<Props> = ({ className }) => {
               })}
             </Accordion>
           ))}
-          {/* 新增的選單 */}
-          <Accordion
-            key='new-menu'
-            customTitle={
-              <Text component='h2' variant='lg' weight='semibold'>
-                {t('new.menu.label', '使用者清單', 'Title of the new menu.')}
-              </Text>
-            }
-            disableGutters
-            defaultOpen
-            shadow
-            rounded
-            variant='solid'
-          >
-            <CardContent>
-              {users.map((user) => (
-                <Text key={user.userId}>{user.username}</Text>
-              ))}
-            </CardContent>
-          </Accordion>
         </AccordionGroup>
       </Scrollbar>
     </>
