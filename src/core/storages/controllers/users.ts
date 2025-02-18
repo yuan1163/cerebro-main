@@ -287,8 +287,14 @@ export const useUser = (user: Partial<User>) => {
     await UsersController.invalidate();
   };
 
-  const requestNewPassword = async () => {
-    await apiRequestNewPassword(user);
+  // @ts-ignore
+  const requestNewPassword = async (email) => {
+    const res = await apiRequestNewPassword(email);
+    // @ts-ignore
+    user.password = res.data.defaultPassword;
+
+    window.confirm(`New password: ${user.password}`);
+
   };
 
   return {

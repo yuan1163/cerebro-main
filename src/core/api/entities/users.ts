@@ -72,8 +72,11 @@ export async function apiRevokeUserRole({ user }: { user: Partial<User> }): Prom
   return api.put<void, ResultOutput>(`role?userId=${user.userId}&roleId=`).then(api.checkResulCode);
 }
 
-export async function apiRequestNewPassword(data: Partial<User>) {
-  const email = data.username;
-  if (email) return api.get<void, ResultOutput>(`password?username=${encodeURIComponent(email)}`).then(api.checkResulCode);
+// export async function apiRequestNewPassword(data: Partial<User>) {
+// @ts-ignore
+export async function apiRequestNewPassword(email) {
+  if (email) return api.post<{ user: { username: string } }, ResultOutput>('userWithDefaultPassword', {
+    user: { username: email }
+  }).then(api.checkResulCode);
   else return Promise.reject('Empty username/email');
 }

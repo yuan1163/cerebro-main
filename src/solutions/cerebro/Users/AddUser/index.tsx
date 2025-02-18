@@ -194,7 +194,8 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
     );
     setInitialLocationsState([...controller.locations]);
 
-    if (isAdmin) controller.requestNewPassword();
+    // @ts-ignore
+    if (isAdmin) controller.requestNewPassword(data.email);
 
     await controller.add({
       ...data,
