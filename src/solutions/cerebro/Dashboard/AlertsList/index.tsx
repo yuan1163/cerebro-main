@@ -99,6 +99,8 @@ export const AlertsList: React.FC<AlertsListProps> = observer(({ className }) =>
       const endDate = 1732982399000;
       setStartDateFilter({ label: '2024.11.1-2024.11.30', value: startDate });
       // setEndDateFilter(endDate);
+      // @ts-ignore
+      setEndDateFilter({ label: '2024.11.1-2024.11.30', value: endDate });
     } else {
       setStartDateFilter(option);
     }
