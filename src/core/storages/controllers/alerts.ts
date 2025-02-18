@@ -52,6 +52,7 @@ export const useAlerts = (filter: AlertsInput, priorities?: boolean) => {
     () => apiGetAlerts(useFilter, priorities),
     {
       enabled: !!filter.locationId,
+      // 每隔2分鐘刷新一次
       refetchInterval: REFRESH_TIME,
     },
   );

@@ -63,6 +63,7 @@ export const useFilters = () => {
     setFilterBuilding(ui.activeBuilding || buildings?.[0] || noBuildingsOption);
   }, [buildings]);
 
+  // 選擇建築後 取得該建築的樓層, 組出樓層選單 label, value
   useEffect(() => {
     const spaces =
       buildings &&

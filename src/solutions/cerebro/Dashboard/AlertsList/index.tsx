@@ -98,7 +98,7 @@ export const AlertsList: React.FC<AlertsListProps> = observer(({ className }) =>
       const startDate = 1730390400000;
       const endDate = 1732982399000;
       setStartDateFilter({ label: '2024.11.1-2024.11.30', value: startDate });
-      setEndDateFilter(endDate);
+      // setEndDateFilter(endDate);
     } else {
       setStartDateFilter(option);
     }
@@ -110,6 +110,7 @@ export const AlertsList: React.FC<AlertsListProps> = observer(({ className }) =>
 
   return (
     <Card fullHeight className={cn(styles['card'], className)} scrollable>
+      {/* 最近發生的事件-標題 */}
       <CardHeader disablePaddingBottom>
         <Grid alignItems='baseline' container spacing={2}>
           <Grid item>
@@ -124,6 +125,8 @@ export const AlertsList: React.FC<AlertsListProps> = observer(({ className }) =>
           </Grid>
         </Grid>
       </CardHeader>
+
+      {/* 事件日期區間-下拉選單 */}
       <CardContent borderBottom>
         <DataSelect
           id='time-range-select'
@@ -139,6 +142,8 @@ export const AlertsList: React.FC<AlertsListProps> = observer(({ className }) =>
           size='sm'
         />
       </CardContent>
+
+      {/* 事件清單 */}
       <CardContent disablePadding scrollable>
         <Scrollbar>
           <List className={styles['list']}>

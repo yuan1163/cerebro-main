@@ -88,6 +88,7 @@ export const LocationSchema: React.FC<Props> = observer(({ className, deviceType
     >
       <Stack className={styles['devices-container']} direction='column'>
         {locationTypes?.map((type) => (
+          // 設備、事件數量
           <LocationSchemaDevices
             key={type}
             caption={alerts.hasData() ? alerts.getCount(type) : '...'}
@@ -154,4 +155,5 @@ export const LocationSchema: React.FC<Props> = observer(({ className, deviceType
   );
 });
 
+// const locationTypes = [101, 102, 301, 305, 500];
 const locationTypes = [101, 102];

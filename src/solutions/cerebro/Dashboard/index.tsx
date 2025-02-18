@@ -65,7 +65,8 @@ export const Dashboard = () => {
             <CardHeader
               disablePaddingBottom
               title={t('location.locationSchema.label', 'Location Schema', 'Location schema title.')}
-            />
+              />
+            {/* 下拉選單 */}
             <CardContent>
               <Stack direction='row'>
                 <DataSelect
@@ -97,11 +98,15 @@ export const Dashboard = () => {
                 />
               </Stack>
             </CardContent>
+
+            {/* 追蹤器、重大事件 */}
             <CardContent disablePaddingTop className={styles['location-schema-container']}>
               {filters.buildings && filters.filterBuilding && filters.spaces && filters.filterSpace && (
                 <LocationSchema deviceType={filters.filterDeviceType} space={filters.filterSpace} maximized={false} />
               )}
             </CardContent>
+
+            {/* 需要注意的設備 */}
             {alerts.hasData() && alerts.getData().length > 0 && (
               <>
                 <CardContent disablePaddingTop>

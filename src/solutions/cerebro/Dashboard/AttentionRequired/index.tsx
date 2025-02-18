@@ -41,11 +41,13 @@ export const AttentionRequired: React.FC<Props> = observer(({ alerts, className 
   return (
     <>
       <CardContent disablePaddingTop className={styles['card-container']}>
+        {/* 判斷是否已 slider 呈現 */}
         {alerts && alerts.length > 2 ? (
           <>
             <Slider scrollbar>
               {alerts?.map((item: Alert, i: number) => (
                 <SwiperSlide key={`alerts-${i}`} className={styles['swiper-slide']}>
+                  {/* 需要注意設備 */}
                   <AttentionCard alert={item} />
                 </SwiperSlide>
               ))}
@@ -54,6 +56,7 @@ export const AttentionRequired: React.FC<Props> = observer(({ alerts, className 
         ) : (
           <Box className={styles['alerts-container']}>
             {alerts?.map((item: Alert, i: number) => (
+              // 需要注意設備
               <AttentionCard key={`alerts-${i}`} alert={item} />
             ))}
           </Box>
