@@ -422,7 +422,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                             disabled={!hasEditRights}
                             label={t('user.jobTitleInput.label', 'JOB', 'user job label.')}
                             onChange={onChange}
-                            placeholder={formFieldSettings.user.jobTitle.placeholder}
+                            placeholder={t('user.jobTitleInputPlaceholder.label', 'Job Title', 'Job Title')}
                             value={value}
                           />
                         )}
@@ -482,12 +482,12 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                   {isAdmin && (
                     <Grid item>
                       <UserRoleSelect
-                        label={formFieldSettings.user.role.label}
+                        label={t('user.roleInput.label', 'ROLE', 'user role label.')}
                         onSelect={(role) => {
                           setValue('role', role);
                           controller.grantRole(role);
                         }}
-                        placeholder={formFieldSettings.user.role.placeholder}
+                        placeholder={t('user.roleInputPlaceholder.label', 'ROLE', 'user role label.')}
                         value={getValues().role}
                         disabled={!hasEditRights}
                       />
@@ -619,6 +619,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
               {/* SECURITY */}
 
+              {/* 先關閉用戶重新設定密碼的電子郵件功能 */}
               {isAdmin && (
                 <Accordion disableSummaryGutters disableGutters title='Security'>
                   <Grid container direction='column' spacing={3}>
@@ -638,15 +639,16 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                             name={'oldPassword'}
                             control={passwordForm.control}
                             render={({ field: { onChange, value } }) => (
+                              // label={formFieldSettings.user.password.currentPassword.label}
                               <PasswordInput
                                 id='password'
                                 autoComplete='off'
-                                label={formFieldSettings.user.password.currentPassword.label}
+                                label={t('user.currentPassword.label', 'current password', 'current password')}
                                 name='password'
                                 onChange={onChange}
-                                placeholder={formFieldSettings.user.password.currentPassword.placeholder}
+                                placeholder={t('user.currentPasswordInputPlaceholder.label', 'current password', 'current password')}
                                 value={value}
-                              />
+                                />
                             )}
                           />
                         </Grid>
@@ -659,9 +661,9 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                               <PasswordInput
                                 id='newPassword'
                                 autoComplete='new-password'
-                                label={formFieldSettings.user.password.newUserPassword.label}
+                                label={t('user.newPasswordInput.label', 'new password', 'new password')}
                                 onChange={onChange}
-                                placeholder={formFieldSettings.user.password.newUserPassword.placeholder}
+                                placeholder={t('user.newPasswordInputPlaceholder.label', 'new password', 'new password')}
                                 value={value}
                               />
                             )}
@@ -678,12 +680,12 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                               <PasswordInput
                                 id='confirmPassword'
                                 autoComplete='confirmPassword'
-                                label={formFieldSettings.user.password.confermedUserPassword.label}
+                                label={t('user.newPasswordInputPlaceholder.label', 'new password', 'new password')}
                                 onChange={onChange}
-                                placeholder={formFieldSettings.user.password.confermedUserPassword.placeholder}
+                                placeholder={t('user.newPasswordInputPlaceholder.label', 'new password', 'new password')}
                                 value={value}
-                              />
-                            )}
+                                />
+                              )}
                           />
                         </Grid>
                         <Grid item>
@@ -693,7 +695,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         </Grid>
                       </>
                     ) : (
-                      <Button onClick={() => controller.requestNewPassword()} fullWidth variant='outlined'>
+                      <Button onClick={() => controller.requestNewPassword(user.email)} fullWidth variant='outlined'>
                         {t(
                           'general.sendResetPasswordEmail.label',
                           'Send reset password email',

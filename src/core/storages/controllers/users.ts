@@ -24,6 +24,8 @@ import { pack } from '@core/utils/pack';
 import { useLocations } from './locations';
 import { UserGroupsController } from './userGroups';
 
+import { t } from '@core/utils/translate';
+
 const CONTROLLER = 'users';
 
 class UsersController {
@@ -293,7 +295,8 @@ export const useUser = (user: Partial<User>) => {
     // @ts-ignore
     user.password = res.data.defaultPassword;
 
-    window.confirm(`New password: ${user.password}`);
+    const message = t('user.newPasswordInputPlaceholder.label', 'New password', 'New password');
+    window.confirm(`${message}: ${user.password}`);
 
   };
 

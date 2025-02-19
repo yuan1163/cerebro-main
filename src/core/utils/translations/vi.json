@@ -274,6 +274,11 @@
                 "translation": "Thay đổi"
             }
         },
+        "changeButton": {
+            "label": {
+                "translation": "Thay đổi"
+            }
+        },
         "clearButton": {
             "label": {
                 "translation": "Xóa"

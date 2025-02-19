@@ -274,6 +274,11 @@
                 "translation": "修改"
             }
         },
+        "changeButton": {
+            "label": {
+                "translation": "修改"
+            }
+        },
         "clearButton": {
             "label": {
                 "translation": "清除"

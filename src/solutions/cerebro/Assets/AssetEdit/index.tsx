@@ -249,7 +249,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             helperText={errors?.name?.message}
                             label={t('asset.name.label', 'Name', 'Name of the asset.')}
                             onChange={onChange}
-                            placeholder={formFieldSettings.asset.name.placeholder}
+                            placeholder={t('asset.name.label', 'Name', 'Name of the asset.')}
                             requiredLabel
                             severity={errors.name?.message ? 'error' : undefined}
                             value={value}
@@ -271,7 +271,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             helperText={errors?.description?.message}
                             label={t('asset.assetDescriptionInput.label', 'Description', 'Description of the asset.')}
                             onChange={onChange}
-                            placeholder={formFieldSettings.asset.description.placeholder}
+                            placeholder={t('asset.assetDescriptionInput.label', 'Description', 'Description of the asset.')}
                             requiredLabel
                             severity={errors.description?.message ? 'error' : undefined}
                             value={value}
@@ -292,7 +292,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             disabled={!hasEditRights}
                             label={t('asset.manufacturer.label', 'Manufacturer', 'Manufacturer of the asset.')}
                             onChange={onChange}
-                            placeholder={formFieldSettings.asset.manufacturer.placeholder}
+                            placeholder={t('asset.manufacturer.label', 'Manufacturer', 'Manufacturer of the asset.')}
                             value={value}
                           />
                         )}
@@ -311,7 +311,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             disabled={!hasEditRights}
                             label={t('asset.costRange.label', 'Cost range', 'Cost range of the asset.')}
                             onChange={onChange}
-                            placeholder={formFieldSettings.asset.costRange.placeholder}
+                            placeholder={t('asset.costRange.label', 'Cost range', 'Cost range of the asset.')}
                             value={value}
                           />
                         )}
@@ -330,7 +330,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             disabled={!hasEditRights}
                             label={t('asset.uid.label', 'UID', 'Unique identifier of the asset.')}
                             onChange={onChange}
-                            placeholder={formFieldSettings.asset.trackerID.placeholder}
+                            placeholder={t('asset.uid.label', 'UID', 'Unique identifier of the asset.')}
                             value={value}
                           />
                         )}

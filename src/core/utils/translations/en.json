@@ -1004,6 +1004,11 @@
         "notes": "No users data detected."
       }
     },
+    "newPasswordInputPlaceholder": {
+      "label": {
+        "translation": "New password"
+      }
+    },
     "editGroup": {
       "label": {
         "translation": "Edit Group",
@@ -1193,6 +1198,12 @@
       }
     },
     "imageFileChangeButton": {
+      "label": {
+        "translation": "Change",
+        "notes": "Change button."
+      }
+    },
+    "changeButton": {
       "label": {
         "translation": "Change",
         "notes": "Change button."
