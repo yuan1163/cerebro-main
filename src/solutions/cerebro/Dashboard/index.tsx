@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { observer } from 'mobx-react';
+
 // utils
 
 import { t } from '@core/utils/translate';
@@ -42,7 +44,7 @@ import { useFilters } from '../Locations/useFilters';
 
 import ModuleIcon from '@assets/icons/line/dashboard.svg?component';
 
-export const Dashboard = () => {
+export const Dashboard = observer(() => {
   const ui = useUI();
   const alerts = useAlerts({
     locationId: ui.currentFormation,
@@ -126,4 +128,4 @@ export const Dashboard = () => {
       </UnitContainer>
     </>
   );
-};
+});

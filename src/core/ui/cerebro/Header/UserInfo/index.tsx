@@ -174,6 +174,7 @@ export const UserInfo = observer(() => {
             title={t('general.selectLanguage.label', 'Select Language', 'Choose a language from the list.')}
           />
           <CardContent size='xxs'>
+            {/* 語言列表 */}
             <MenuList disablePadding>
               {languages.map((language) => (
                 <MenuItem key={language.id} disablePadding>

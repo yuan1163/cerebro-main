@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Route, Routes, useNavigate } from 'react-router';
+import { observer } from 'mobx-react';
 
 // utils
 
@@ -217,7 +218,7 @@ function DataRowMenu({ user, remove, handleClick, handleClose }: DataRowProps) {
   );
 }
 
-export const UserSelection = () => {
+export const UserSelection = observer(() => {
   // users list
   const locations = useLocations();
   const company = locations.getCompany();
@@ -687,4 +688,4 @@ export const UserSelection = () => {
       </UnitContainer>
     </>
   );
-};
+});

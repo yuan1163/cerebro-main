@@ -83,7 +83,7 @@ import ModuleIcon from '@assets/icons/line/line-chart-up-04.svg?component';
 import PlusLineIcon from '@assets/icons/line/plus.svg?component';
 import Trash01LineIcon from '@assets/icons/line/trash-01.svg?component';
 
-export const AssetsPage = () => {
+export const AssetsPage = observer(() => {
   const ui = useUI();
 
   // const [filterText, setFilterText] = React.useState<string | undefined>(undefined);
@@ -281,9 +281,10 @@ export const AssetsPage = () => {
         <Unit>
           <Card className={styles['card']} fullHeight fullWidth scrollable>
             <DataGrid className={styles['data-grid']}>
+              {/* title='All' */}
               <CardHeader
                 borderBottom={!showFiltersRow}
-                title='All'
+                title={t('general.all.label', 'All', 'ALL')}
                 titleCaption={applyFilters(list)?.length}
                 action={
                   <Stack direction='row' spacing={4}>
@@ -371,12 +372,12 @@ export const AssetsPage = () => {
                 <DataGridRow className={styles['data-grid-row']}>
                   <DataGridCell variant='button'>
                     <Button endIcon={<ChevronDownLineIcon />} size='sm' variant='text'>
-                      Name
+                      {t('asset.name.label', 'ASSET NAME', 'asset name')}
                     </Button>
                   </DataGridCell>
                   <DataGridCell variant='button'>
                     <Button endIcon={<ChevronDownLineIcon />} size='sm' variant='text'>
-                      Classes
+                      {t('asset.classes.label', 'ASSET CLASSES', 'asset classes')}
                     </Button>
                   </DataGridCell>
                   <DataGridCell variant='icon' />
@@ -571,4 +572,4 @@ export const AssetsPage = () => {
       />
     </>
   );
-};
+});

@@ -14,6 +14,7 @@ import { AlertStatus } from '@core/api/types';
 
 import { useNotifications } from '@core/storages/controllers/notifications';
 import { useUI } from '@core/storages/ui';
+import { useTranslation } from '@core/storages/translation';
 
 // styles
 import { cn } from '@core/utils/classnames';
@@ -40,44 +41,59 @@ import { Text } from '@core/ui/components/Text';
 
 import FilterFunnel01LineIcon from '@assets/icons/line/filter-funnel-01.svg?component';
 
-const timeRange: SelectOption<number>[] = [
-  //{ label: 'All messages' }, startDate is required parameter
-  {
-    label: t('date.lastMonth.label', 'Last month', 'The previous calendar month from the current date.'),
-    value: moment().subtract(1, 'month').valueOf(),
-  },
-  {
-    label: t('date.lastWeek.label', 'Last week', 'The seven days prior to the current day.'),
-    value: moment().subtract(7, 'day').valueOf(),
-  },
-  {
-    label: t('date.last3Days.label', 'Last 3 days', 'Choose a specific 3-days time interval.'),
-    value: moment().subtract(3, 'day').valueOf(),
-  },
-  {
-    label: t('date.last24hours.label', 'Last 24 hours', 'Choose a specific 24-hours time interval.'),
-    value: moment().subtract(24, 'hour').valueOf(),
-  },
-  {
-    label: t('date.last12hours.label', 'Last 12 hours', 'Choose a specific 12-hours time interval.'),
-    value: moment().subtract(12, 'hour').valueOf(),
-  },
-  {
-    label: t('date.last3hours.label', 'Last 3 hours', 'Choose a specific 3-hours time interval.'),
-    value: moment().subtract(3, 'hour').valueOf(),
-  },
-  {
-    label: '2024.11.1-2024.11.30',
-    value: 1730390400000
-  },
-];
-
 type AlertsListProps = {
   className?: string;
 };
 
 export const AlertsList: React.FC<AlertsListProps> = observer(({ className }) => {
   const ui = useUI();
+  const translation = useTranslation();
+
+  const timeRange: SelectOption<number>[] = [
+    //{ label: 'All messages' }, startDate is required parameter
+    {
+      // @ts-ignore
+      id: 1,
+      label: t('date.lastMonth.label', 'Last month', 'The previous calendar month from the current date.'),
+      value: moment().subtract(1, 'month').valueOf(),
+    },
+    {
+      // @ts-ignore
+      id: 2,
+      label: t('date.lastWeek.label', 'Last week', 'The seven days prior to the current day.'),
+      value: moment().subtract(7, 'day').valueOf(),
+    },
+    {
+      // @ts-ignore
+      id: 3,
+      label: t('date.last3Days.label', 'Last 3 days', 'Choose a specific 3-days time interval.'),
+      value: moment().subtract(3, 'day').valueOf(),
+    },
+    {
+      // @ts-ignore
+      id: 4,
+      label: t('date.last24hours.label', 'Last 24 hours', 'Choose a specific 24-hours time interval.'),
+      value: moment().subtract(24, 'hour').valueOf(),
+    },
+    {
+      // @ts-ignore
+      id: 5,
+      label: t('date.last12hours.label', 'Last 12 hours', 'Choose a specific 12-hours time interval.'),
+      value: moment().subtract(12, 'hour').valueOf(),
+    },
+    {
+      // @ts-ignore
+      id: 6,
+      label: t('date.last3hours.label', 'Last 3 hours', 'Choose a specific 3-hours time interval.'),
+      value: moment().subtract(3, 'hour').valueOf(),
+    },
+    {
+      // @ts-ignore
+      id: 7,
+      label: '2024.11.1-2024.11.30',
+      value: 1730390400000
+    },
+  ];
 
   const [startDateFilter, setStartDateFilter] = useState(timeRange[0]);
   const [endDateFilter, setEndDateFilter] = useState(0);
@@ -106,9 +122,17 @@ export const AlertsList: React.FC<AlertsListProps> = observer(({ className }) =>
     }
   };
 
+  useEffect(() => {
+    // 根據當前選項的值來更新語系
+    // @ts-ignore
+    const currentOption = timeRange.find(option => option.id === startDateFilter.id);
+    if (currentOption) setStartDateFilter(currentOption);
+  }, [translation.language]);
+
   const onFilterIconClick = () => {
     setStartDateFilter(startDateFilter);
   };
+  
 
   return (
     <Card fullHeight className={cn(styles['card'], className)} scrollable>

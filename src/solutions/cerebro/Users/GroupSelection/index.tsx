@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Route, Routes, useNavigate } from 'react-router-dom';
 import { createPortal } from 'react-dom';
+import { observer } from 'mobx-react';
 
 // api
 
@@ -197,7 +198,7 @@ function DataRowMenu({ group, remove, handleClick, handleClose }: DataRowProps) 
 }
 
 //export const GroupSelection: React.FC<GroupSelectionProps> = ({ list, item }) => {
-export const GroupSelection = () => {
+export const GroupSelection = observer(() => {
   const navigate = useNavigate();
   //const controller = useUserGroup(item);
 
@@ -512,4 +513,4 @@ export const GroupSelection = () => {
       />
     </>
   );
-};
+});

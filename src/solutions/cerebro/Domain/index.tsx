@@ -1,5 +1,6 @@
 import moment from 'moment';
 import React from 'react';
+import { observer } from 'mobx-react';
 
 // utils
 
@@ -30,7 +31,7 @@ import { Text } from '@core/ui/components/Text';
 
 // implementation
 
-export const Domain = () => {
+export const Domain = observer(() => {
   const [expendMap, setExpandMap] = React.useState(false);
 
   const handleExpand = () => {
@@ -74,4 +75,4 @@ export const Domain = () => {
       </UnitContainer>
     </>
   );
-};
+});

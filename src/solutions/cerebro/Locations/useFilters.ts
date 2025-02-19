@@ -12,23 +12,28 @@ import { SelectOption } from '@core/ui/components/Select';
 import { useUI } from '@core/storages/ui';
 import { useLocations } from '@core/storages/controllers/locations';
 //import { useRedirector } from '@core/storages/redirector';
+import { useTranslation } from '@core/storages/translation';
 
-const deviceTypes = [
-  { label: t('asset.allCategories.label', 'All categories', 'All categories of devices.'), value: undefined },
-  {
-    label: t('asset.stations.label', 'Stations', 'Centralized locations or setup for managing and accessing devices.'),
-    value: 101,
-  },
-  {
-    label: t('asset.trackers.label', 'Trackers', 'Tools or systems used to monitor and follow activities.'),
-    value: 102,
-  },
-];
+
+const translation = useTranslation();
 
 export const useFilters = () => {
   const ui = useUI();
   const locations = useLocations();
+  const translation = useTranslation();
+
   //const redirector = useRedirector();
+  const deviceTypes = [
+    { label: t('asset.allCategories.label', 'All categories', 'All categories of devices.'), value: undefined },
+    {
+      label: t('asset.stations.label', 'Stations', 'Centralized locations or setup for managing and accessing devices.'),
+      value: 101,
+    },
+    {
+      label: t('asset.trackers.label', 'Trackers', 'Tools or systems used to monitor and follow activities.'),
+      value: 102,
+    },
+  ];
 
   const noBuildingsOption = {
     label: t('location.buildingsWarning.label', 'There are no buildings', 'Buildings warning.'),
@@ -78,6 +83,10 @@ export const useFilters = () => {
   useEffect(() => {
     setFilterSpace(ui.activeSpace || spaces?.[0] || noSpacesOption);
   }, [spaces]);
+
+  useEffect(() => {
+    setFilterDeviceType(ui.activeDeviceType || deviceTypes[0]);
+  }, [translation.language]);
 
   return {
     buildings,

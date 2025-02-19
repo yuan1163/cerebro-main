@@ -247,7 +247,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             inputId='name'
                             disabled={!hasEditRights}
                             helperText={errors?.name?.message}
-                            label={formFieldSettings.asset.name.label}
+                            label={t('asset.name.label', 'Name', 'Name of the asset.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.asset.name.placeholder}
                             requiredLabel
@@ -269,7 +269,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             inputId='description'
                             disabled={!hasEditRights}
                             helperText={errors?.description?.message}
-                            label={formFieldSettings.asset.description.label}
+                            label={t('asset.assetDescriptionInput.label', 'Description', 'Description of the asset.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.asset.description.placeholder}
                             requiredLabel
@@ -290,7 +290,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                           <Input
                             inputId='manufacturer'
                             disabled={!hasEditRights}
-                            label={formFieldSettings.asset.manufacturer.label}
+                            label={t('asset.manufacturer.label', 'Manufacturer', 'Manufacturer of the asset.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.asset.manufacturer.placeholder}
                             value={value}
@@ -309,7 +309,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                           <Input
                             inputId='costRange'
                             disabled={!hasEditRights}
-                            label={formFieldSettings.asset.costRange.label}
+                            label={t('asset.costRange.label', 'Cost range', 'Cost range of the asset.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.asset.costRange.placeholder}
                             value={value}
@@ -328,7 +328,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                           <Input
                             inputId='assetUid'
                             disabled={!hasEditRights}
-                            label={formFieldSettings.asset.trackerID.label}
+                            label={t('asset.uid.label', 'UID', 'Unique identifier of the asset.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.asset.trackerID.placeholder}
                             value={value}
@@ -347,9 +347,9 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                           <Input
                             inputId='serialNumber'
                             disabled={!hasEditRights}
-                            label={formFieldSettings.asset.serialNumber.label}
+                            label={t('asset.serialNumber.label', 'Serial number', 'Serial number of the asset.')}
                             onChange={onChange}
-                            placeholder={formFieldSettings.asset.serialNumber.placeholder}
+                            placeholder={t('asset.serialNumber.label', 'Serial number', 'Serial number of the asset.')}
                             value={value}
                           />
                         )}
@@ -367,11 +367,11 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             {...field}
                             inputId='classes'
                             initial={initialClassesState}
-                            label={formFieldSettings.asset.classes.label}
+                            label={t('asset.classes.label', 'classes', 'asset.groups.label')}
                             onAppend={handleAppendGroup}
                             onChange={setSelectedClasses}
                             onRemove={handleRemoveGroup}
-                            placeholder={formFieldSettings.asset.classes.placeholder}
+                            placeholder={t('asset.classes.label', 'classes', 'asset.groups.label')}
                           />
                         )}
                       />
@@ -388,11 +388,11 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             {...field}
                             inputId='devices'
                             initial={initialDevicesState}
-                            label={formFieldSettings.asset.devices.label}
+                            label={t('asset.devices.label', 'devices', 'asset.devices.label')}
                             onAppend={handleAppendDevices}
                             onChange={setSelectedDevices}
                             onRemove={handleRemoveDevices}
-                            placeholder={formFieldSettings.asset.devices.placeholder}
+                            placeholder={t('asset.devices.label', 'devices', 'asset.devices.label')}
                           />
                         )}
                       />

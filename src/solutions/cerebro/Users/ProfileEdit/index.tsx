@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { observer } from 'mobx-react';
 
 // form
 
@@ -17,6 +18,7 @@ import { t } from '@core/utils/translate';
 import { useAuth } from '@core/storages/auth';
 import { useLocations } from '@core/storages/controllers/locations';
 import { useUser, useUsers } from '@core/storages/controllers/users';
+import { useTranslation } from '@core/storages/translation';
 
 // types
 
@@ -58,8 +60,9 @@ type Props = {
   user: Partial<User>;
 };
 
-export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...props }) => {
+export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user, ...props }) => {
   const controller = useUser(user);
+  const translation = useTranslation();
 
   // const [data, update] = React.useState<Partial<User>>({
   //   ...user,
@@ -339,7 +342,7 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...prop
                             inputId='fname'
                             disabled={!hasEditRights}
                             helperText={errors?.firstName?.message}
-                            label={formFieldSettings.user.firstName.label}
+                            label={t('user.firstNameInput.label', 'FIRST NAME', 'user first name label.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.user.firstName.placeholder}
                             requiredLabel
@@ -361,7 +364,7 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...prop
                             inputId='lname'
                             disabled={!hasEditRights}
                             helperText={errors?.lastName?.message}
-                            label={formFieldSettings.user.lastName.label}
+                            label={t('user.lastNameInput.label', 'LAST NAME', 'user last name label.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.user.lastName.placeholder}
                             requiredLabel
@@ -383,7 +386,7 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...prop
                             inputId='email'
                             disabled={!hasEditRights}
                             helperText={errors?.email?.message}
-                            label={formFieldSettings.user.email.label}
+                            label={t('user.emailInput.label', 'EMAIL', 'user email label.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.user.email.placeholder}
                             requiredLabel
@@ -417,7 +420,7 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...prop
                           <Input
                             inputId='jobTitle'
                             disabled={!hasEditRights}
-                            label={formFieldSettings.user.jobTitle.label}
+                            label={t('user.jobTitleInput.label', 'JOB', 'user job label.')}
                             onChange={onChange}
                             placeholder={formFieldSettings.user.jobTitle.placeholder}
                             value={value}
@@ -462,7 +465,7 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...prop
                       render={({ field: { onChange, value } }) => (
                         <UserCategorySelect
                           disabled={!profile?.permissions?.includes(UserPermissions.Roles)}
-                          label={formFieldSettings.user.categories.label}
+                          label={t('user.categoryInput.label', 'CATEGORY', 'user category label.')}
                           onSelect={(selectedValue) => {
                             onChange(selectedValue);
                             handleSelectCategory(selectedValue);
@@ -503,7 +506,7 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...prop
                           inputId='locations'
                           disabled={!hasEditRights}
                           initial={selectedLocations}
-                          label={formFieldSettings.user.locations.label}
+                          label={t('location.locations.label', 'CATEGORY', 'user category label.')}
                           onAppend={handleAppendLocation}
                           onChange={setSelectedLocations}
                           onRemove={handleRemoveLocation}
@@ -525,11 +528,11 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...prop
                           inputId='groups'
                           disabled={!hasEditRights}
                           initial={selectedGroups}
-                          label={formFieldSettings.user.groups.label}
+                          label={t('user.groups.label', 'CATEGORY', 'user category label.')}
                           onAppend={handleAppendGroup}
                           onChange={setSelectedGroups}
                           onRemove={handleRemoveGroup}
-                          placeholder={t('user.selectUserGroups.label', 'Select User Groups', 'Select User Groups.')}
+                          placeholder={t('general.selectGroupFromList.label', 'Select User Groups', 'Select User Groups.')}
                         />
                       )}
                     />
@@ -801,4 +804,4 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, user, ...prop
       </form>
     </>
   );
-};
+});

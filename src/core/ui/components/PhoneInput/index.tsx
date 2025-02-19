@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { observer } from 'mobx-react';
 
 // utils
 
@@ -56,7 +57,7 @@ type Props = {
   value?: string;
 } & React.HTMLAttributes<HTMLElement>;
 
-export const PhoneInput: React.FC<Props> = ({ children, className, disabled, onChange, severity, value, ...props }) => {
+export const PhoneInput: React.FC<Props> = observer(({ children, className, disabled, onChange, severity, value, ...props }) => {
   const [currentCountry, setCurrentCountry] = useState<CountryCode | ''>('US');
   const [inputValue, setInputValue] = useState('');
   const [placeholder, setPlaceholder] = useState('');
@@ -201,4 +202,4 @@ export const PhoneInput: React.FC<Props> = ({ children, className, disabled, onC
       value={inputValue}
     />
   );
-};
+});

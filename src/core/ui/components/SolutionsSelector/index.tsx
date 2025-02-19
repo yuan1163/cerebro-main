@@ -45,70 +45,6 @@ type Props = {
   className?: string;
 } & React.HTMLAttributes<HTMLElement>;
 
-const Titles: Record<Solutions, string> = {
-  ai: t('solutions.ai.label', 'IvedaAI', 'Title of AI Solution.'),
-  cerebro: t('solutions.pinPoint.label', 'PinPoint', 'Title of PinPoint Solution.'),
-  connect: t('solutions.connects.label', 'Connects', 'Title of Connects Solution.'),
-  ems: t('solutions.ems.label', 'EMS', 'Title of EMS Solution.'),
-  utilus: t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.'),
-};
-
-const getTitle = (solution?: Solutions) => {
-  switch (solution) {
-    case Solutions.ai:
-      return Titles.ai;
-    case Solutions.cerebro:
-      return Titles.cerebro;
-    case Solutions.connect:
-      return Titles.connect;
-    case Solutions.ems:
-      return Titles.ems;
-    case Solutions.utilus:
-      return Titles.utilus;
-    default:
-      return 'Choose solution';
-  }
-};
-
-const menuItems = [
-  {
-    id: 1,
-    title: Solutions.cerebro,
-    subtitle: t(
-      'solutions.solutionsSelector.cerebro.listItem.caption',
-      'Asset and personal tracking',
-      'Label for asset and personal tracking menu item.',
-    ),
-    icon: <TrackerLineIcon />,
-  },
-  {
-    id: 2,
-    title: Solutions.utilus,
-    subtitle: t(
-      'solutions.solutionsSelector.utilus.listItem.caption',
-      'Energy and lightning control',
-      'Label for energy and lightning control menu item.',
-    ),
-    icon: <SmartPoleLineIcon />,
-  },
-  {
-    id: 3,
-    title: Solutions.ems,
-    subtitle: t(
-      'solutions.solutionsSelector.ems.listItem.caption',
-      'Energy management system',
-      'Label for energy managment system menu item.',
-    ),
-    icon: <LightningLineIcon />,
-  },
-  {
-    id: 3,
-    title: Solutions.ai,
-    subtitle: t('solutions.solutionsSelector.ai.listItem.caption', 'IvedaAI', 'Label for IvedaAI menu item.'),
-    icon: <VideoRecorderLineIcon />,
-  },
-];
-
 interface CloseProps {
   close: () => void;
 }
@@ -116,6 +52,71 @@ interface CloseProps {
 export const SolutionsSelector: React.FC<Props> = observer(({ children, className, title, ...props }) => {
   const ui = useUI();
   const auth = useAuth();
+
+  const Titles: Record<Solutions, string> = {
+    ai: t('solutions.ai.label', 'IvedaAI', 'Title of AI Solution.'),
+    cerebro: t('solutions.pinPoint.label', 'PinPoint', 'Title of PinPoint Solution.'),
+    connect: t('solutions.connects.label', 'Connects', 'Title of Connects Solution.'),
+    ems: t('solutions.ems.label', 'EMS', 'Title of EMS Solution.'),
+    utilus: t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.'),
+  };
+  
+  const getTitle = (solution?: Solutions) => {
+    switch (solution) {
+      case Solutions.ai:
+        return Titles.ai;
+      case Solutions.cerebro:
+        return Titles.cerebro;
+      case Solutions.connect:
+        return Titles.connect;
+      case Solutions.ems:
+        return Titles.ems;
+      case Solutions.utilus:
+        return Titles.utilus;
+      default:
+        return 'Choose solution';
+    }
+  };
+
+  const menuItems = [
+    {
+      id: 1,
+      title: Solutions.cerebro,
+      subtitle: t(
+        'solutions.solutionsSelector.cerebro.listItem.caption',
+        'Asset and personal tracking',
+        'Label for asset and personal tracking menu item.',
+      ),
+      icon: <TrackerLineIcon />,
+    },
+    {
+      id: 2,
+      title: Solutions.utilus,
+      subtitle: t(
+        'solutions.solutionsSelector.utilus.listItem.caption',
+        'Energy and lightning control',
+        'Label for energy and lightning control menu item.',
+      ),
+      icon: <SmartPoleLineIcon />,
+    },
+    {
+      id: 3,
+      title: Solutions.ems,
+      subtitle: t(
+        'solutions.solutionsSelector.ems.listItem.caption',
+        'Energy management system',
+        'Label for energy managment system menu item.',
+      ),
+      icon: <LightningLineIcon />,
+    },
+    {
+      id: 3,
+      title: Solutions.ai,
+      subtitle: t('solutions.solutionsSelector.ai.listItem.caption', 'IvedaAI', 'Label for IvedaAI menu item.'),
+      icon: <VideoRecorderLineIcon />,
+    },
+  ];
+
   return (
     <Menu
       button={

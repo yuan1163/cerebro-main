@@ -14,7 +14,9 @@ class LanguageStorage {
   }
 
   constructor() {
-    this.language = (localStorage.getItem('language') as Language) || import.meta.env.VITE_DEFAULT_LANGUAGE || 'en';
+    //! 為方便測試 先關掉
+    // this.language = (localStorage.getItem('language') as Language) || import.meta.env.VITE_DEFAULT_LANGUAGE || 'en';
+    this.language = (localStorage.getItem('language') as Language) || import.meta.env.VITE_DEFAULT_LANGUAGE || 'zh-TW';
     makeObservable(this);
   }
 }
