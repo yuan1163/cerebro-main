@@ -295,9 +295,7 @@ export const useUser = (user: Partial<User>) => {
     // @ts-ignore
     user.password = res.data.defaultPassword;
 
-    const message = t('user.newPasswordInputPlaceholder.label', 'New password', 'New password');
-    window.confirm(`${message}: ${user.password}`);
-
+    return `${user.password}`
   };
 
   return {

@@ -292,6 +292,12 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
     onClose?.();
   };
 
+  const [newPassword, setNewPassword] = useState('')
+
+  async function getNewPassword() {
+    const newPwd = await controller.requestNewPassword(user.email)
+    setNewPassword(newPwd);
+  }
   return (
     <>
       <CardHeader
@@ -695,14 +701,23 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         </Grid>
                       </>
                     ) : (
-                      <Button onClick={() => controller.requestNewPassword(user.email)} fullWidth variant='outlined'>
+                      <Button onClick={getNewPassword} fullWidth variant='outlined'>
                         {t(
-                          'general.sendResetPasswordEmail.label',
+                          'general.resetPasswordButton.label',
                           'Send reset password email',
                           'A prompt that triggers an email to users for password recovery or change.',
                         )}
                       </Button>
                     )}
+
+                    {
+                      newPassword && (
+                        `
+                          ${t('user.newPasswordInputPlaceholder.label', 'New password', 'New password')}：
+                          ${newPassword}
+                        `
+                      )
+                    }
                   </Grid>
                 </Accordion>
               )}
