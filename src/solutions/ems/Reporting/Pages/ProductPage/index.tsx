@@ -4,6 +4,9 @@ import { Stack } from '@core/ui/components/Stack';
 import React, { useState } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 
+// utils
+import { t } from '@core/utils/translate';
+
 // styles
 import { cn } from '@core/utils/classnames';
 import styles from './styles.module.scss';
@@ -129,7 +132,8 @@ const ProductPage = () => {
                   startIcon={<PlusLineIcon></PlusLineIcon>}
                   onClick={handleClick(<AddProduct onClose={handleClose} />)}
                 >
-                  Add Product
+                  {/* Add Product */}
+                  {t('ems.addProductButton.label', 'Add Product', 'AddProduct')}
                 </Button>
                 <Grid className={'w-60'}>
                   <DataSelect
@@ -146,17 +150,20 @@ const ProductPage = () => {
                 <DataGridRow className={styles['data-grid-row']}>
                   <DataGridCell variant='button'>
                     <Button endIcon={<ChevronDownLineIcon />} size='sm' variant='text'>
-                      Name
+                      {/* Name */}
+                      {t('ems.productName.label', 'Product Name', 'Product Name')}
                     </Button>
                   </DataGridCell>
                   <DataGridCell variant='button'>
                     <Button endIcon={<ChevronDownLineIcon />} size='sm' variant='text'>
-                      Consumption/amount
+                      {/* Consumption/amount */}
+                      {t('ems.consumptionAmount.label', 'consumption/amount', 'consumption/amount')}
                     </Button>
                   </DataGridCell>
                   <DataGridCell variant='button'>
                     <Button endIcon={<ChevronDownLineIcon />} size='sm' variant='text'>
-                      Emission/amount
+                      {/* Emission/amount */}
+                      {t('ems.emissionAmount.label', 'Emission/amount', 'Emission/amount')}
                     </Button>
                   </DataGridCell>
                 </DataGridRow>

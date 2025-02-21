@@ -1562,6 +1562,11 @@
         "translation": "Search",
         "notes": "Exploration of a specific item."
       }
+    },
+    "resetPasswordButton": {
+      "label": {
+        "translation": "Reset user password"
+      }
     }
   },
   "events": {
@@ -2102,6 +2107,11 @@
     "locations": {
       "translation": "Locations",
       "notes": "Text for input label"
+    },
+    "allLocations": {
+        "label" : {
+        "translation": "All locations"
+        }
     },
     "priority": {
       "low": {
@@ -2695,6 +2705,46 @@
       "label": {
         "translation": "Edit contract capacity",
         "notes": "Edit contract capacity."
+      }
+    },
+    "addProductButton" :{
+      "label": {
+        "translation": "Add Product"
+      }
+    },
+    "productName" :{
+      "label": {
+          "translation": "Product Name"
+      }
+    },
+    "consumptionAmount" :{
+        "label": {
+            "translation": "Consumption/amount"
+        }
+    },
+    "emissionAmount" :{
+        "label": {
+            "translation": "Emission/amount"
+        }
+    },
+    "summarySwitch" :{
+      "label": {
+          "translation": "Summary"
+      }
+    },
+    "managementSwitch" :{
+      "label": {
+          "translation": "Management"
+      }
+    },
+    "product": {
+        "label": {
+            "translation": "Product"
+        }
+    },
+    "processHistory": {
+      "label": {
+          "translation": "Process History"
       }
     }
   },

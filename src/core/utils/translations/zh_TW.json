@@ -359,9 +359,9 @@
                 "translation": "電話"
             }
         },
-        "sendResetPasswordEmail": {
+        "resetPasswordButton": {
             "label": {
-                "translation": "發送重新設定密碼的電子郵件"
+                "translation": "重新設定密碼"
             }
         },
         "summary": {
@@ -2413,7 +2413,7 @@
         },
         "unit": {
             "label": {
-                "translation": "單元"
+                "translation": "單位"
             }
         },
         "selectUnit": {
@@ -2550,6 +2550,46 @@
         "selectZone": {
             "label": {
                 "translation": "選擇區域"
+            }
+        },
+        "addProductButton" :{
+            "label": {
+                "translation": "新增產品"
+            }
+        },
+        "productName" :{
+            "label": {
+                "translation": "產品名稱"
+            }
+        },
+        "consumptionAmount" :{
+            "label": {
+                "translation": "消耗/數量"
+            }
+        },
+        "emissionAmount" :{
+            "label": {
+                "translation": "排放/數量"
+            }
+        },
+        "summarySwitch" :{
+            "label": {
+                "translation": "摘要"
+            }
+        },
+        "managementSwitch" :{
+            "label": {
+                "translation": "管理"
+            }
+        },
+        "product": {
+            "label": {
+                "translation": "產品"
+            }
+        },
+        "processHistory": {
+            "label": {
+                "translation": "處理歷史"
             }
         }
     },
@@ -3329,6 +3369,11 @@
     "label": {
         "locations": {
             "translation": "地點"
+        },
+        "allLocations": {
+            "label" : {
+            "translation": "所有地點"
+            }
         },
         "priority": {
             "low": {

@@ -359,9 +359,9 @@
                 "translation": "电话"
             }
         },
-        "sendResetPasswordEmail": {
+        "resetPasswordButton": {
             "label": {
-                "translation": "发送重置密码电子邮件"
+                "translation": "重置密码"
             }
         },
         "summary": {
@@ -2413,7 +2413,7 @@
         },
         "unit": {
             "label": {
-                "translation": "单元"
+                "translation": "单位"
             }
         },
         "selectUnit": {
@@ -2550,6 +2550,46 @@
         "selectZone": {
             "label": {
                 "translation": "选择区域"
+            }
+        },
+        "addProductButton" :{
+            "label": {
+                "translation": "添加新产品"
+            }
+        },
+        "productName" :{
+            "label": {
+                "translation": "产品名称"
+            }
+        },
+        "consumptionAmount" :{
+            "label": {
+                "translation": "消耗/数量"
+            }
+        },
+        "emissionAmount" :{
+            "label": {
+                "translation": "排放/数量"
+            }
+        },
+        "summarySwitch" :{
+            "label": {
+                "translation": "摘要"
+            }
+        },
+        "managementSwitch" :{
+            "label": {
+                "translation": "管理"
+            }
+        },
+        "product": {
+            "label": {
+                "translation": "产品"
+            }
+        },
+        "processHistory": {
+            "label": {
+                "translation": "处理历史"
             }
         }
     },
@@ -3329,6 +3369,11 @@
     "label": {
         "locations": {
             "translation": "地点"
+        },
+        "allLocations": {
+            "label" : {
+            "translation": "所有地点"
+            }
         },
         "priority": {
             "low": {

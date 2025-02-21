@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { t } from '@core/utils/translate';
+
 // styles
 import styles from './styles.module.scss';
 
@@ -26,7 +28,7 @@ type Props = {
 const ProductData: React.FC<Props> = ({ productId, locationId }) => {
   return (
     <Card fullWidth>
-      <CardHeader disablePaddingBottom title='Product' />
+      <CardHeader disablePaddingBottom title={t('ems.product.label', '', '')} />
       <CardContent>
         <Grid container>
           <Grid item container spacing={4}>

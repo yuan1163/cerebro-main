@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navigate, Route, Routes, useNavigate } from 'react-router';
+import { observer } from 'mobx-react';
 
 // storages
 
@@ -40,7 +41,7 @@ import UnitPage from './Pages/UnitPage';
 // icons
 import FileIcon from '@assets/icons/line/file-05.svg?component';
 
-export const Reporting = () => {
+export const Reporting = observer(() => {
   return (
     <>
       <Header icon={<FileIcon />} title={t('solutions.reporting.label', 'Reporting', 'Reporting title.')} />
@@ -54,4 +55,4 @@ export const Reporting = () => {
       </Routes>
     </>
   );
-};
+});

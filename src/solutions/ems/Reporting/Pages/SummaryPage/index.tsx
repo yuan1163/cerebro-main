@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react';
+import { observer } from 'mobx-react';
+
+import { t } from '@core/utils/translate';
 
 // styles
 
@@ -35,9 +38,10 @@ type ProductsType = {
   name: string;
 }[];
 
-const SummaryPage = () => {
+const SummaryPage = observer(() => {
   const pageSwitch = getPageSwitch();
   const [selectedVariant, setSelectedVariant] = React.useState<string>('summary');
+
   const onSegmentedControlVariantChange = (value: string) => {
     setSelectedVariant(value);
     pageSwitch.toggleLists?.(value);
@@ -84,7 +88,8 @@ const SummaryPage = () => {
                     key={`summary.sidebar`}
                     customTitle={
                       <Text component='h2' variant='lg' weight='semibold'>
-                        Product
+                        {/* Product */}
+                        {t('ems.product.label', '', '')}
                       </Text>
                     }
                     disableGutters
@@ -142,6 +147,6 @@ const SummaryPage = () => {
       </Grid>
     </>
   );
-};
+});
 
 export default SummaryPage;

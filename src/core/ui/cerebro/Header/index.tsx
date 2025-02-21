@@ -152,6 +152,7 @@ export const Header: React.FC<Props> = ({
           )}
 
           {solutionSelector && <SolutionsSelector />}
+          {/* 通知 */}
           <Menu
             disableGutters
             button={
@@ -170,7 +171,9 @@ export const Header: React.FC<Props> = ({
             placement='bottom-end'
           >
             {/* DATA */}
-            {ui.activeSolution !== 'ems' && (
+            {(
+            //! 為方便測試 先關掉
+            // {ui.activeSolution !== 'ems' && (
               <MenuList>
                 <Card width={29}>
                   <CardHeader borderBottom>

@@ -1,6 +1,8 @@
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 
+import { t } from '@core/utils/translate';
+
 // styles
 import styles from './styles.module.scss';
 
@@ -84,7 +86,7 @@ export const UnitList: React.FC<Props> = ({ productId }) => {
 
   return (
     <Card className={styles['card']} fullHeight fullWidth scrollable>
-      <CardHeader title='Unit' disablePaddingBottom>
+      <CardHeader title={t('ems.unit.label', '', '')} disablePaddingBottom>
         {!unitInfo ? (
           <CircularProgress />
         ) : (
@@ -176,7 +178,8 @@ export const UnitList: React.FC<Props> = ({ productId }) => {
               </Grid>
               <Grid item>
                 <Text weight={'semibold'} variant={'lg'}>
-                  Process History
+                  {/* Process History */}
+                  {t('ems.processHistory.label', '', '')}
                 </Text>
               </Grid>
             </Grid>

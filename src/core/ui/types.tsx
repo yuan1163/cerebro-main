@@ -60,6 +60,7 @@ export const getModulesRoutes = (modules: Modules) => {
 };
 
 export const getModulesSection = (modules: Modules, section: ModuleSections) => {
+  // console.log('modules: ', modules)
   return modules.filter((mod) => {
     if ('isGroup' in mod) {
       return mod.section === section || (!mod.section && section === ModuleSections.Common);

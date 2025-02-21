@@ -359,9 +359,9 @@
                 "translation": "Điện thoại"
             }
         },
-        "sendResetPasswordEmail": {
+        "resetPasswordButton": {
             "label": {
-                "translation": "Gửi email đặt lại mật khẩu"
+                "translation": "Đặt lại mật khẩu"
             }
         },
         "summary": {
@@ -2551,7 +2551,47 @@
             "label": {
                 "translation": "Chọn vùng"
             }
-        }
+        },
+        "addProductButton" :{
+            "label": {
+                "translation": "Thêm sản phẩm mới"
+            }
+        },
+        "productName" :{
+            "label": {
+                "translation": "Tên sản phẩm"
+            }
+        },
+        "consumptionAmount" :{
+            "label": {
+                "translation": "Tiêu thụ/số lượng"
+            }
+        },
+        "emissionAmount" :{
+            "label": {
+                "translation": "Phát thải/số lượng"
+            }
+        },
+        "summarySwitch" :{
+            "label": {
+                "translation": "Tóm tắt"
+            }
+        },
+        "managementSwitch" :{
+            "label": {
+                "translation": "Quản lý"
+            }
+        },
+        "product": {
+            "label": {
+                "translation": "Sản phẩm"
+            }
+        },
+        "processHistory": {
+            "label": {
+                "translation": "Lịch sử quy trình"
+            }
+          }
     },
     "issue": {
         "attentionRequired": {
@@ -3329,6 +3369,11 @@
     "label": {
         "locations": {
             "translation": "Địa điểm"
+        },
+        "allLocations": {
+            "label" : {
+            "translation": "Tất cả địa điểm"
+            }
         },
         "priority": {
             "low": {

@@ -1,3 +1,6 @@
+import React from 'react';
+import { observer } from 'mobx-react';
+
 // utils
 import { t } from '@core/utils/translate';
 
@@ -12,7 +15,7 @@ import { InformationData } from './data/entryPageData';
 import { Route, Routes } from 'react-router';
 import { Home } from './Pages/Home';
 
-export const MassConfiguration = () => {
+export const MassConfiguration = observer(() => {
   return (
     <>
       <Header
@@ -31,4 +34,4 @@ export const MassConfiguration = () => {
       </Routes>
     </>
   );
-};
+});

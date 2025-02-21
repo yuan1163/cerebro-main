@@ -117,7 +117,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
     url?: string;
   }
 
-  const CollapsedButton: React.FC<{ item: ItemProps; type?: string }> = ({ item, type }) => {
+  const CollapsedButton: React.FC<{ item: ItemProps; type?: string }> = observer(({ item, type }) => {
     const { ref: divRef } = useDrawerTooltip<HTMLDivElement>();
     const {
       drawerTooltip: tooltipVisible,
@@ -150,6 +150,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
         break;
     }
 
+    const title = item.title;
+    
     return (
       <li className={styles['list-item']}>
         <DrawerButtonCollapsed
@@ -163,12 +165,12 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
           url={url}
         />
         {createPortal(
-          <Tooltip isVisible={tooltipVisible} placement='right' targetRef={divRef} title={item.title} />,
+          <Tooltip isVisible={tooltipVisible} placement='right' targetRef={divRef} title={t(title || '', '', '')} />,
           document.body,
         )}
       </li>
     );
-  };
+  });
 
   // TOGGLE BUTTON
 
@@ -217,7 +219,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
         isDrawerExpanded ? styles['drawer-expanded'] : styles['drawer-collapsed'],
       )}
     >
-      {/* COLLAPSED */}
+      {/* COLLAPSED 關閉選單的列表 */}
       {!isDrawerExpanded && (
         <nav className={cn(styles['nav'])}>
           {/* TOGGLE BUTTON */}
@@ -274,38 +276,42 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                 }}
                 type='home'
               />
-              {common.map((item) =>
-                'isGroup' in item ? (
+              {common.map((item) => {
+                const title = item.title
+
+                return 'isGroup' in item ? (
                   <DrawerButtonCollapsedAccordion
-                    key={item.title}
+                    key={t(title, '', '')}
                     categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))}
                     icon={item.icon}
                     iconSolid={item.iconSolid}
-                    title={item.title}
+                    title={t(title, '', '')}
                   />
                 ) : (
                   <CollapsedButton key={item.title} item={item} type='common' />
-                ),
-              )}
+                )
+              })}
             </ul>
 
             {/* UNIQUES */}
 
             {uniques.length > 0 ? (
               <ul className={styles['list']}>
-                {uniques.map((item) =>
-                  'isGroup' in item ? (
+                {uniques.map((item) => {
+                  const title = item.title
+
+                  return 'isGroup' in item ? (
                     <DrawerButtonCollapsedAccordion
-                      key={item.title}
+                      key={t(title, '', '')}
                       categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))}
                       icon={item.icon}
                       iconSolid={item.iconSolid}
-                      title={item.title}
+                      title={t(title, '', '')}
                     />
                   ) : (
-                    <CollapsedButton key={item.title} item={item} type='uniques' />
-                  ),
-                )}
+                    <CollapsedButton key={t(title, '', '')} item={item} type='uniques' />
+                  )
+                })}
               </ul>
             ) : null}
 
@@ -318,12 +324,25 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                 ))}
               </ul>
             ) : null}
+
+            {/* {commands.length > 0 ? (
+              <ul className={styles['list']}>
+                {
+                  commands.map((item) => {
+                    const title = item.title
+                    return (
+                      <CollapsedButton key={title} item={item} type='commands' />
+                    )
+                  })
+                }
+              </ul>
+            ) : null} */}
           </div>
         </nav>
       )}
 
-      {/* EXPANDED */}
 
+      {/* EXPANDED 開啟選單的列表 */}
       {isDrawerExpanded && (
         <nav className={cn(styles['nav'])}>
           {/* TOGGLE BUTTON */}
@@ -370,27 +389,36 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
 
             {/* COMMON EXPANDED */}
-
             <ul className={styles['list']}>
               <li className={styles['list-item']}>
                 <DrawerButtonExpanded
                   icon={<Home02LineIcon />}
                   iconHover={<Home02SolidIcon />}
-                  title={t('solutions.domain.label', 'Domain', 'Domain page title.')}
                   url={`domain`}
+                  title={t('solutions.domain.label', 'Domain', 'Domain page title.')}
                 />
               </li>
+
+
+              {/* 左側選單列表 */}
               {common.map((item) => {
+                const title=  item.title
+                console.log('title: ', title)
                 if ('isGroup' in item) {
                   return (
                     <li key={item.title} className={styles['list-item']}>
+                      {/* categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))} */}
                       <DrawerButtonExpandedAccordion
-                        categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))}
+                        categories={item.items.map((item) => { 
+                          console.log('test', item)
+                          return {...item, url: `${item.url}/${ui.currentFormation}, tltle: ${123456}`}
+                         })}
                         icon={item.icon}
                         iconSolid={item.iconSolid}
-                        title={item.title}
-                      />
+                        title={t(title, '', '')}
+                        />
                     </li>
+                        // title={item.title}
                   );
                 } else {
                   const url = `${item.url}/${ui.currentFormation}`;
@@ -400,10 +428,11 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                         disabled={!item.component}
                         icon={item.icon}
                         iconHover={item.iconSolid}
-                        title={item.title}
+                        title={t(title, '', '')}
                         url={url}
-                      />
+                        />
                     </li>
+                        // title={item.title}
                   );
                 }
               })}
@@ -414,6 +443,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             {uniques.length > 0 ? (
               <ul className={styles['list']}>
                 {uniques.map((item) => {
+                  const title=  item.title
+
                   if ('isGroup' in item) {
                     return (
                       <li key={item.title} className={styles['list-item']}>
@@ -424,7 +455,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                           }))}
                           icon={item.icon}
                           iconSolid={item.iconSolid}
-                          title={item.title}
+                          title={t(title, '', '')}
                         />
                       </li>
                     );
@@ -436,7 +467,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                           disabled={!item.component}
                           icon={item.icon}
                           iconHover={item.iconSolid}
-                          title={item.title}
+                          title={t(title, '', '')}
                           url={url}
                         />
                       </li>

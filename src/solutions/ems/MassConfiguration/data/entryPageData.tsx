@@ -95,23 +95,26 @@ export const DownloadMCFile = async (
   });
 };
 
-export const ConfigurationFileData: ConfigurationFileProps = [
-  {
-    icon: <PlusLineIcon />,
-    title: t('general.upload.label', 'Upload', 'Process of transferring data to a remote server or platform.'),
-    disabled: true,
-  },
-  {
-    icon: <ArrowDownLineIcon />,
-    title: t('general.download.label', 'Download', 'Process of transferring data to a local device.'),
-    disabled: false,
-  },
-  // {
-  //   icon: <ClockLineIcon />,
-  //   title: 'History',
-  //   disabled: true,
-  // },
-];
+export const ConfigurationFileData = (): ConfigurationFileProps => {
+  return [
+    {
+      icon: <PlusLineIcon />,
+      title: t('general.upload.label', 'Upload', 'Process of transferring data to a remote server or platform.'),
+      disabled: false, //! 為方便測試 先關掉
+      // disabled: true,
+    },
+    {
+      icon: <ArrowDownLineIcon />,
+      title: t('general.download.label', 'Download', 'Process of transferring data to a local device.'),
+      disabled: false,
+    },
+    // {
+    //   icon: <ClockLineIcon />,
+    //   title: 'History',
+    //   disabled: true,
+    // },
+  ];
+}
 
 export const InformationData = (): InformationProps => {
   return [
@@ -135,7 +138,8 @@ export const InformationData = (): InformationProps => {
       subTitle: null,
       path: 'device',
       component: <Device />,
-      disabled: DeviceIsDisabled(),
+      // disabled: DeviceIsDisabled(),
+      disabled: false, //! 為方便測試 先關掉
     },
     {
       icon: <Settings01LineIcon />,

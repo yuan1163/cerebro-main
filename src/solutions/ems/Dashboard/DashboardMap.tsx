@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { observer } from 'mobx-react';
 
 // storages
 
@@ -34,7 +35,7 @@ import { useDevices } from '@core/storages/controllers/devices';
 
 //const countDevices;
 
-export const DashboardMap = () => {
+export const DashboardMap = observer(() => {
   const locations = useLocations();
   const ui = useUI();
   const activeFormation = locations.getElementById(ui.currentFormation);
@@ -94,7 +95,7 @@ export const DashboardMap = () => {
               <DataSelect
                 onChange={handleSelectChange}
                 options={locations.getBuildings(activeFormation)}
-                placeholder={t('label.allLocations', 'All locations', 'All locations.')}
+                placeholder={t('label.allLocations.label', 'All locations', 'All locations.')}
                 present={(value) => value?.name}
                 size='md'
                 value={selectedLocations}
@@ -111,6 +112,6 @@ export const DashboardMap = () => {
       </UnitContainer>
     </>
   );
-};
+});
 
 const options = [{ name: 'Device Overview' }, { name: 'Event Monitoring' }];

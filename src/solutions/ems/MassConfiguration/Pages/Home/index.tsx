@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { observer } from 'mobx-react';
 
 // utils
 
@@ -28,7 +29,7 @@ import {
 } from '@solutions/ems/MassConfiguration/data/entryPageData';
 import { useNavigate } from 'react-router';
 
-export const Home = () => {
+export const Home = observer(() => {
   const navigate = useNavigate();
   const locations = useLocations();
 
@@ -62,7 +63,7 @@ export const Home = () => {
             />
             <CardContent fullWidth>
               <Grid container fullHeight fullWidth spacing={3}>
-                {ConfigurationFileData.map((item) => {
+                {ConfigurationFileData().map((item) => {
                   return (
                     /** 若是上傳按鈕 需要隱藏一個 input file */
                     <Grid item lg={3} key={item.title}>
@@ -169,4 +170,4 @@ export const Home = () => {
       </UnitContainer>
     </>
   );
-};
+});

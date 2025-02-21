@@ -1,5 +1,6 @@
 import moment from 'moment';
 import React from 'react';
+import { observer } from 'mobx-react';
 
 // utils
 
@@ -38,7 +39,7 @@ import { commands } from '@core/ui/pages/EMSCommandCenterPage/commands';
 
 // implementation
 
-export const Domain = () => {
+export const Domain = observer(() => {
   const [expendMap, setExpandMap] = React.useState(false);
 
   const handleExpand = () => {
@@ -117,4 +118,4 @@ export const Domain = () => {
       </UnitContainer>
     </>
   );
-};
+});
