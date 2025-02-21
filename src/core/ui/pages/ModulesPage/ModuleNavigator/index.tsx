@@ -272,7 +272,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                 item={{
                   icon: <Home02LineIcon />,
                   iconSolid: <Home02SolidIcon />,
-                  title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
+                  title: 'solutions.domain.label',
                 }}
                 type='home'
               />
