@@ -89,7 +89,8 @@ export class UIStateStorage {
 
   @action
   gotoWorkspace() {
-    this.to = `/${this.activeSolution}/`;
+    // this.to = `/${this.activeSolution}/`;
+    this.to = `/cerebro/`;
     this.redirect = true;
   }
 
