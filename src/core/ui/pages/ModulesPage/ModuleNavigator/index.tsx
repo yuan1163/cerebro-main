@@ -227,7 +227,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
           <div className={styles['toggle-button-container-top']}>
             <ToggleButton
               ariaLabel={t(
-                'general.expandDrawerButton.label',
+                'general.expandDrawerTooltip.label',
                 'Expand Drawer',
                 'A label for a button used to expand a Drawer in a UI.',
               )}
@@ -245,7 +245,11 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             {/* LOGOS */}
 
             <ul className={cn(styles['list'], styles['list-app'])}>
-              <li className={cn(styles['list-item'], styles['list-item-app'])}>{brand?.icon}</li>
+              <li className={cn(styles['list-item'], styles['list-item-app'])}>
+                <a href="/cerebro/">
+                  {brand?.icon}
+                </a>
+              </li>
               <li className={cn(styles['list-item'], styles['list-item-company'])}>
                 {/* {icon} */}
                 {icon ? (
@@ -350,7 +354,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
           <div className={styles['toggle-button-container-top']}>
             <ToggleButton
               ariaLabel={t(
-                'general.collapseDrawerButton.label',
+                'general.collapseDrawerTooltip.label',
                 'Collapse Drawer',
                 'A label for a button used to collapse a Drawer in a UI.',
               )}

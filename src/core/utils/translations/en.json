@@ -1141,6 +1141,11 @@
         "notes": "Text method to contact user."
       }
     },
+    "passwordMismatchError": {
+      "label": {
+          "translation": "新密碼與確認密碼不匹配，請確保兩者相同。"
+      }
+  },
     "methodOfContactEmail": {
       "label": {
         "translation": "Email",
@@ -1173,6 +1178,16 @@
     }
   },
   "general": {
+    "expandDrawerTooltip": {
+      "label": {
+        "translation": "Show Sidebar"
+      }
+    },
+    "collapseDrawerTooltip": {
+      "label": {
+          "translation": "Collapse Sidebar"
+      }
+  },
     "closeButton": {
       "label": {
         "translation": "Close",

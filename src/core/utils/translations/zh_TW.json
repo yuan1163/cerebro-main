@@ -254,6 +254,16 @@
         }
     },
     "general": {
+        "expandDrawerTooltip": {
+            "label": {
+                "translation": "顯示側邊欄"
+            }
+        },
+        "collapseDrawerTooltip": {
+            "label": {
+                "translation": "收合側邊欄"
+            }
+        },
         "backButton": {
             "label": {
                 "translation": "上一步"

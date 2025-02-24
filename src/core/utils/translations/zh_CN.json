@@ -254,6 +254,16 @@
         }
     },
     "general": {
+        "expandDrawerTooltip": {
+            "label": {
+                "translation": "显示侧边栏"
+            }
+        },
+        "collapseDrawerTooltip": {
+            "label": {
+                "translation": "收合侧边栏"
+            }
+        },
         "backButton": {
             "label": {
                 "translation": "上一步"
@@ -1094,6 +1104,11 @@
         "methodOfContactText": {
             "label": {
                 "translation": "文本"
+            }
+        },
+        "passwordMismatchError": {
+            "label": {
+                "translation": "新密碼與確認密碼不匹配，請確保兩者相同。"
             }
         },
         "groupNameInput": {

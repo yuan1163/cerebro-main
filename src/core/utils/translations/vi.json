@@ -254,6 +254,16 @@
         }
     },
     "general": {
+        "expandDrawerTooltip": {
+            "label": {
+                "translation": "Hiển thị thanh bên"
+            }
+        },
+        "collapseDrawerTooltip": {
+            "label": {
+                "translation": "Thu gọn thanh bên"
+            }
+        },
         "backButton": {
             "label": {
                 "translation": "Trở lại"
