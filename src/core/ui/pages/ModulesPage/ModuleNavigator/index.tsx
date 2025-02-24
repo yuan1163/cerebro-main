@@ -372,7 +372,9 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             {/* LOGOS */}
 
             <ul className={cn(styles['list'], styles['list-app'])}>
-              <li className={cn(styles['list-item'], styles['list-item-app'])}>{brand?.logo}</li>
+              <li className={cn(styles['list-item'], styles['list-item-app'])}>
+                <a href="/cerebro">{brand?.logo}</a>
+              </li>
               <li className={cn(styles['list-item'], styles['list-item-company'])}>
                 {(logo && auth.accessToken) ? (
                   <img
