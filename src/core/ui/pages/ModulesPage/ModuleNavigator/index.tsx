@@ -407,16 +407,12 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
               {/* 左側選單列表 */}
               {common.map((item) => {
                 const title=  item.title
-                console.log('title: ', title)
+                
                 if ('isGroup' in item) {
                   return (
                     <li key={item.title} className={styles['list-item']}>
-                      {/* categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))} */}
                       <DrawerButtonExpandedAccordion
-                        categories={item.items.map((item) => { 
-                          console.log('test', item)
-                          return {...item, url: `${item.url}/${ui.currentFormation}, tltle: ${123456}`}
-                         })}
+                        categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))}
                         icon={item.icon}
                         iconSolid={item.iconSolid}
                         title={t(title, '', '')}
@@ -436,7 +432,6 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                         url={url}
                         />
                     </li>
-                        // title={item.title}
                   );
                 }
               })}

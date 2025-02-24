@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { t } from '@core/utils/translate';
+
 // styles
 
 import { cn } from '@core/utils/classnames';
@@ -42,7 +44,9 @@ export const DrawerButtonMenu: React.FC<Props> = ({ disabled, categories }) => {
                 textColor={isActive ? 'primary' : 'typography-secondary'}
                 variant='ghost'
               >
-                {item.title ? item.title.charAt(0).toUpperCase() + item.title.slice(1) : ''}
+                {/* 手風琴內按鈕 */}
+                {/* {item.title ? item.title.charAt(0).toUpperCase() + item.title.slice(1) : ''} */}
+                {t(item.title as string, '', '')}
               </Button>
             )}
           </NavLink>
