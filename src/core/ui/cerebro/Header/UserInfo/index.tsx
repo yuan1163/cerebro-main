@@ -189,7 +189,7 @@ export const UserInfo = observer(() => {
               ))}
             </MenuList>
           </CardContent>
-          <CardActions borderTop>
+          {/* <CardActions borderTop>
             <div className='flex justify-end gap-2'>
               <Button onClick={() => setLanguageModalOpen(false)} variant='outlined'>
                 {t('general.cancelButton.label', 'Cancel', 'Cancel button.')}
@@ -198,7 +198,7 @@ export const UserInfo = observer(() => {
                 {t('general.applyButton.label', 'Apply', 'Confirms the selected choices.')}
               </Button>
             </div>
-          </CardActions>
+          </CardActions> */}
         </Card>
       </Modal>
     </>
