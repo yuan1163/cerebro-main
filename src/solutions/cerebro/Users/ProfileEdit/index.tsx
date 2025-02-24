@@ -170,11 +170,49 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
   const changeCurrentPassword = () => {
     const data = passwordForm.getValues();
-    auth.resetPassword({
-      oldPassword: data.oldPassword,
-      newPassword: data.newPassword,
-      brand: import.meta.env.VITE_BRAND,
-    });
+    const passwordInvalidMsgData: string[] = []
+    console.log('data: ', data)
+    const {
+      confirmPassword,
+      newPassword,
+      oldPassword
+    } = data
+
+    initPasswordInvalidMsg()
+    checkAllFieldEmpty()
+    checkNewPassword()
+
+    if(!passwordInvalidMsgData.length) {
+      console.log('密碼更換成功')
+      auth.resetPassword({
+        oldPassword: data.oldPassword,
+        newPassword: data.newPassword,
+        brand: import.meta.env.VITE_BRAND,
+      });
+    } else {
+      console.log('更換失敗')
+      setPasswordInvalidMsg(passwordInvalidMsgData)
+    }
+
+    function checkNewPassword() {
+      if (newPassword&&confirmPassword&&newPassword !== confirmPassword) {
+        // passwordInvalidMsgData.push('新密碼與二次確認密碼不一致，請確保兩者輸入相同。')
+        passwordInvalidMsgData.push('The new password and the confirmation password do not match. Please ensure both are entered the same')
+      }
+    }
+    function checkAllFieldEmpty() {
+      // if(!oldPassword) passwordInvalidMsgData.push('目前密碼 欄位不得為空')
+      if(!oldPassword) passwordInvalidMsgData.push('The current password field cannot be empty')
+
+      // if(!newPassword) passwordInvalidMsgData.push('新密碼 欄位不得為空')
+      if(!newPassword) passwordInvalidMsgData.push('The new password field cannot be empty')
+
+      // if(!confirmPassword) passwordInvalidMsgData.push('新密碼再確認 欄位不得為空')
+      if(!confirmPassword) passwordInvalidMsgData.push('The new password confirmation field cannot be empty')
+    }
+    function initPasswordInvalidMsg () {
+      setPasswordInvalidMsg([])
+    }
   };
 
   // CATEGORY
@@ -293,6 +331,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
   };
 
   const [newPassword, setNewPassword] = useState('')
+  const [passwordInvalidMsg, setPasswordInvalidMsg ] = useState<string[]>([])
 
   async function getNewPassword() {
     const newPwd = await controller.requestNewPassword(user.email)
@@ -675,9 +714,9 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                             )}
                           />
                         </Grid>
-                        <Grid item>
+                        {/* <Grid item>
                           <PasswordIndicator score={watchPassword} />
-                        </Grid>
+                        </Grid> */}
                         <Grid item>
                           <Controller
                             name={'confirmPassword'}
@@ -699,6 +738,16 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                             {t('general.changeButton.label', 'Change', 'Change button.')}
                           </Button>
                         </Grid>
+                        
+                        {passwordInvalidMsg.length > 0 && (
+                          passwordInvalidMsg.map(item=> {
+                            return (
+                              <Text color='error' key={item} className='my-1'>
+                                {item}
+                              </Text>
+                            )
+                          })
+                        )}
                       </>
                     ) : (
                       <Button onClick={getNewPassword} fullWidth variant='outlined'>
