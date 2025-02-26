@@ -136,7 +136,7 @@ export const DeviceListPage: React.FC<Props> = () => {
               <CardHeader
                 borderBottom={!showFiltersRow}
                 title={t('asset.deviceList.label', 'Device List', 'Device List')}
-                titleCaption={list.length.toString()}
+                titleCaption={list?.length?.toString()}
                 action={
                   <Stack direction='row' spacing={4}>
                     <Button disabled={!filter.clearFilter} variant='link' onClick={filter.clearFilters}>

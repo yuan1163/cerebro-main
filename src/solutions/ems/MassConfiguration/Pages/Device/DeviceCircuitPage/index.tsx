@@ -109,7 +109,7 @@ export const DeviceCircuitPage: React.FC<Props> = () => {
                   'Device Circuit',
                   'A specific electrical pathway within a device, essential for its operation.',
                 )}
-                titleCaption={list.length.toString()}
+                titleCaption={list?.length?.toString()}
                 action={
                   <Stack direction='row' spacing={4}>
                     <Button disabled={!filter.clearFilter} variant='link' onClick={filter.clearFilters}>

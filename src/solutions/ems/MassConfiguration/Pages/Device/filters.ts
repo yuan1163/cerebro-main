@@ -33,9 +33,11 @@ export const filterCampus = (selectedCampusValue: number | undefined, filteredLi
 
 export const useFilterIndex = (list: DevicePartProps[]) => {
   const indexs = new Set<string>();
-  list.forEach((device) => {
-    if (device.index) indexs.add(device.index.toString());
-  });
+  if (list !== undefined && list.length) {
+    list.forEach((device) => {
+      if (device.index) indexs.add(device.index.toString());
+    });
+  }
   type IndexOption = { value: string | undefined; label: string };
   const allIndex: IndexOption = { value: undefined, label: 'Index: All' };
   const filterIndexOptions: IndexOption[] = [
@@ -52,9 +54,11 @@ export const useFilterIndex = (list: DevicePartProps[]) => {
 
 export const useFilterDeviceType = (list: DeviceProps[]) => {
   const deviceTypes = new Set<string>();
-  list.forEach((device) => {
-    if (device.deviceType) deviceTypes.add(device.deviceType.toString());
-  });
+  if (list !== undefined && list.length) {
+    list.forEach((device) => {
+      if (device.deviceType) deviceTypes.add(device.deviceType.toString());
+    });
+  }
   type DeviceTypeOption = { value: string | undefined; label: string };
   const allDeviceType: DeviceTypeOption = {
     value: undefined,
@@ -75,9 +79,11 @@ export const useFilterDeviceType = (list: DeviceProps[]) => {
 
 export const useFilterOwnerLocation = (list: DeviceProps[] | DevicePartProps[]) => {
   const ownerLocations = new Set<string>();
-  list.forEach((device) => {
-    if (device.ownerLocationName) ownerLocations.add(device.ownerLocationName);
-  });
+  if (list !== undefined && list.length) {
+    list.forEach((device) => {
+      if (device.ownerLocationName) ownerLocations.add(device.ownerLocationName);
+    });
+  }
   type OwnerLocationOption = { value: string | undefined; label: string };
   const allOwnerLocation: OwnerLocationOption = {
     value: undefined,
@@ -103,9 +109,11 @@ export const useFilterOwnerLocation = (list: DeviceProps[] | DevicePartProps[]) 
 
 export const useFilterPartLocation = (list: DevicePartProps[]) => {
   const partLocations = new Set<string>();
-  list.forEach((device) => {
-    if (device.partLocationName) partLocations.add(device.partLocationName);
-  });
+  if (list !== undefined && list.length) { 
+    list.forEach((device) => {
+      if (device.partLocationName) partLocations.add(device.partLocationName);
+    });
+  }
   type PartLocationOption = { value: string | undefined; label: string };
   const allPartLocation: PartLocationOption = {
     value: undefined,
@@ -129,9 +137,11 @@ export const useFilterPartLocation = (list: DevicePartProps[]) => {
 
 export const useFilterStatus = (list: DeviceProps[]) => {
   const status = new Set<string>();
-  list.forEach((device) => {
-    status.add(device.connectionStatus.toString());
-  });
+  if (list !== undefined && list.length) { 
+    list.forEach((device) => {
+      status.add(device.connectionStatus.toString());
+    });
+  }
   type Status = { value: string | undefined; label: string };
   const allStatus: Status = {
     value: undefined,

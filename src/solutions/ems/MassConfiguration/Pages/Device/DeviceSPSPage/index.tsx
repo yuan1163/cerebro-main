@@ -102,7 +102,7 @@ export const DeviceSPSPage = () => {
               <CardHeader
                 borderBottom={!showFiltersRow}
                 title={t('asset.SPS.label', 'SPS', 'SPS.')}
-                titleCaption={list.length.toString()}
+                titleCaption={list?.length?.toString()}
                 action={
                   <Stack direction='row' spacing={4}>
                     <Button disabled variant='link'>
