@@ -120,7 +120,7 @@ export type SPSProps = {
   partLocationId: number;
   ownerLocationName?: string;
   partLocationName?: string;
-  uniqueId?: string; // 新增唯一識別標識符
+  uniqueId?: string; 
 };
 
 export const getSPS = (): SPSProps[] => {
@@ -130,8 +130,6 @@ export const getSPS = (): SPSProps[] => {
     locationId: 64,
     deviceId: '1c:69:7a:64:64:a7',
   });
-
-  console.log('Received response in getSPS:', response); 
 
   const jsonString = response && response[0].value;
   let SPSJson: SPSProps[] = [];
