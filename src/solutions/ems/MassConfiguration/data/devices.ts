@@ -131,15 +131,13 @@ export const getSPS = (): SPSProps[] => {
     deviceId: '1c:69:7a:64:64:a7',
   });
 
-  console.log('Received response in getSPS:', response); // Add this line
+  console.log('Received response in getSPS:', response); 
 
   const jsonString = response && response[0].value;
   let SPSJson: SPSProps[] = [];
 
   try {
-    // 手動解析 JSON 字符串
     if (jsonString) {
-      // 使用正則匹配所有的物件
       const regex = /'name':'([^']+)','deviceId':'([^']+)','SPBType':'([^']+)','gatewayIP':'([^']+)','localServerId':'([^']+)','index':'([^']+)','phase':'([^']+)','PTRatio':(\d+),'CTRatio':(\d+),'NFB':'([^']+)','ownerLocationId':(\d+),'partLocationId':(\d+)/g;
       
       let match;
@@ -157,7 +155,7 @@ export const getSPS = (): SPSProps[] => {
           NFB: match[10],
           ownerLocationId: Number(match[11]),
           partLocationId: Number(match[12]),
-          uniqueId: `${match[2]}_${match[6]}` // 添加唯一識別符，使用 deviceId 和 index 組合
+          uniqueId: `${match[2]}_${match[6]}` 
         });
       }
     }
