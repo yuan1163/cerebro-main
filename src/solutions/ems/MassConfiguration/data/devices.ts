@@ -41,7 +41,7 @@ export const SegmentedControlButton: RadioOption[] = [
   {
     label: t('asset.SPS.label', 'SPS', 'SPS.'),
     value: 'sps',
-    isDisabled: true,
+    isDisabled: false,
   },
 ];
 
@@ -120,6 +120,7 @@ export type SPSProps = {
   partLocationId: number;
   ownerLocationName?: string;
   partLocationName?: string;
+  uniqueId?: string; // 新增唯一識別標識符
 };
 
 export const getSPS = (): SPSProps[] => {
@@ -130,95 +131,40 @@ export const getSPS = (): SPSProps[] => {
     deviceId: '1c:69:7a:64:64:a7',
   });
 
-  const jsonString = response && response[0].value;
+  console.log('Received response in getSPS:', response); // Add this line
 
-  // const SPSJson: SPSProps[] = jsonString && JSON.parse(jsonString);
-  const SPSJson: SPSProps[] = [
-    {
-      'name': 'Storeroome',
-      'deviceId': '02:81:39:0c:92:88',
-      'SPBType': 'SPB-M',
-      'gatewayIP': '192.168.1.100',
-      'localServerId': '1c:69:7a:64:64:a7',
-      'index': 'S1',
-      'phase': '3',
-      'PTRatio': 1,
-      'CTRatio': 1,
-      'NFB': '200A',
-      'ownerLocationId': 64,
-      'partLocationId': 74,
-    },
-    {
-      'name': '1F AC',
-      'deviceId': '02:81:39:0c:92:88',
-      'SPBType': 'SPB-M',
-      'gatewayIP': '192.168.1.100',
-      'localServerId': '1c:69:7a:64:64:a7',
-      'index': 'S2',
-      'phase': '3',
-      'PTRatio': 1,
-      'CTRatio': 1,
-      'NFB': '200A',
-      'ownerLocationId': 64,
-      'partLocationId': 75,
-    },
-    {
-      'name': '2F AC',
-      'deviceId': '02:81:39:0c:92:88',
-      'SPBType': 'SPB-M',
-      'gatewayIP': '192.168.1.100',
-      'localServerId': '1c:69:7a:64:64:a7',
-      'index': 'S3',
-      'phase': '3',
-      'PTRatio': 1,
-      'CTRatio': 1,
-      'NFB': '200A',
-      'ownerLocationId': 64,
-      'partLocationId': 82,
-    },
-    {
-      'name': 'Office',
-      'deviceId': '02:81:39:0c:92:88',
-      'SPBType': 'SPB-M',
-      'gatewayIP': '192.168.1.100',
-      'localServerId': '1c:69:7a:64:64:a7',
-      'index': 'S4',
-      'phase': '3',
-      'PTRatio': 1,
-      'CTRatio': 1,
-      'NFB': '50A',
-      'ownerLocationId': 64,
-      'partLocationId': 72,
-    },
-    {
-      'name': 'QA & QC room',
-      'deviceId': '02:81:39:0c:92:88',
-      'SPBType': 'SPB-M',
-      'gatewayIP': '192.168.1.100',
-      'localServerId': '1c:69:7a:64:64:a7',
-      'index': 'S5',
-      'phase': '3',
-      'PTRatio': 1,
-      'CTRatio': 1,
-      'NFB': '50A',
-      'ownerLocationId': 64,
-      'partLocationId': 73,
-    },
-    {
-      'name': 'Total 110V',
-      'deviceId': '02:81:39:0c:92:88',
-      'SPBType': 'SPB-M',
-      'gatewayIP': '192.168.1.100',
-      'localServerId': '1c:69:7a:64:64:a7',
-      'index': 'S6',
-      'phase': '3',
-      'PTRatio': 1,
-      'CTRatio': 1,
-      'NFB': '50A',
-      'ownerLocationId': 64,
-      'partLocationId': 71,
-    },
-  ];
+  const jsonString = response && response[0].value;
+  let SPSJson: SPSProps[] = [];
+
+  try {
+    // 手動解析 JSON 字符串
+    if (jsonString) {
+      // 使用正則匹配所有的物件
+      const regex = /'name':'([^']+)','deviceId':'([^']+)','SPBType':'([^']+)','gatewayIP':'([^']+)','localServerId':'([^']+)','index':'([^']+)','phase':'([^']+)','PTRatio':(\d+),'CTRatio':(\d+),'NFB':'([^']+)','ownerLocationId':(\d+),'partLocationId':(\d+)/g;
+      
+      let match;
+      while ((match = regex.exec(jsonString)) !== null) {
+        SPSJson.push({
+          name: match[1],
+          deviceId: match[2],
+          SPBType: match[3],
+          gatewayIP: match[4],
+          localServerId: match[5],
+          index: match[6],
+          phase: match[7],
+          PTRatio: Number(match[8]),
+          CTRatio: Number(match[9]),
+          NFB: match[10],
+          ownerLocationId: Number(match[11]),
+          partLocationId: Number(match[12]),
+          uniqueId: `${match[2]}_${match[6]}` // 添加唯一識別符，使用 deviceId 和 index 組合
+        });
+      }
+    }
+  } catch (error) {
+    console.error('Failed to parse JSON:', jsonString, error);
+  }
+
   const result: SPSProps[] = [];
 
   SPSJson.map((sps) => {
@@ -230,8 +176,6 @@ export const getSPS = (): SPSProps[] => {
 
     result.push(sps);
   });
-
-  // console.log(result);
 
   return result;
 };

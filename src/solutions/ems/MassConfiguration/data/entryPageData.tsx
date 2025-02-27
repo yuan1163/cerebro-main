@@ -148,7 +148,7 @@ export const InformationData = (): InformationProps => {
       path: 'system',
       component: <System />,
       // disabled: SystemIsDisabled(),
-      disabled: true,
+      disabled: false,
     },
   ];
 };

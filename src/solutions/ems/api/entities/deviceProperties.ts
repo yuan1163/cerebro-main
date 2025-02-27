@@ -24,8 +24,12 @@ export type DevicePropertiesOutput = ResultOutput & {
 
 export async function apiGetDeviceProperties(filter: DevicePropertiesInput): Promise<Properties[]> {
   const query = new URLSearchParams(filter);
+  console.log('Calling apiGetDeviceProperties with query:', query.toString()); // Add this line
   return api
     .get<void, DevicePropertiesOutput>(`deviceProperties?${query}`)
     .then(api.checkResulCode)
-    .then((response) => (response.properties ? response.properties : []));
+    .then((response) => {
+      console.log('Received response from apiGetDeviceProperties:', response); // Add this line
+      return response.properties ? response.properties : [];
+    });
 }
