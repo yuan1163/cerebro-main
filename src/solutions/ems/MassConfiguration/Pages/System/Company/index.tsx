@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Route, Routes, Navigate, useNavigate } from 'react-router';
 
+import { getmcHomeURL } from '@solutions/ems/MassConfiguration/data/devices';
+
 // utils
 
 import { t } from '@core/utils/translate';
@@ -102,7 +104,7 @@ export const CompanyPage = () => {
 
   return (
     <>
-      <MCHeader previousPageURL='../' SegmentedControlObject={SegmentedControlObject} />
+      <MCHeader previousPageURL={getmcHomeURL()} SegmentedControlObject={SegmentedControlObject} />
       <UnitContainer>
         <Unit>
           <Card>
