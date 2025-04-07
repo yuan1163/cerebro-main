@@ -186,7 +186,7 @@ export const AuthResetPage = () => {
                   <Text align='center' color='typography-secondary' variant='sm'>
                     {t(
                       'general.setNewPassword.label',
-                      'Set new password',
+                      'Reset your new password',
                       'Action of establishing a fresh password for an account.',
                     )}
                   </Text>

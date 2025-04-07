@@ -254,6 +254,21 @@
         }
     },
     "general": {
+        "noNotifications": {
+            "label": {
+                "translation": "沒有通知"
+            }
+        },
+        "loadingNotifications": {
+            "label": {
+                "translation": "加载通知中..."
+            }
+        },
+        "noComment": {
+            "label": {
+                "translation": "此问题暂无评论。"
+            }
+        },
         "expandDrawerTooltip": {
             "label": {
                 "translation": "显示侧边栏"
@@ -2504,6 +2519,26 @@
         "CO2e": {
             "label": {
                 "translation": "二氧化碳当量"
+            }
+        },
+        "uploadConfirmTitle": {
+            "label": {
+                "translation": "是否确认上传?"
+            }
+        },
+        "confirmUploadMessage": {
+            "label": {
+                "translation": "数据覆盖警告： 上传此 Excel 文件将会替换现有的数据，这可能导致当前记录被移除并新增数据。此操作无法撤销。"
+            }
+        },
+        "Proceed": {
+            "label": {
+              "translation": "继续"
+            }
+          },
+        "Cancel": {
+            "label": {
+                "translation": "取消"
             }
         },
         "maximumPower": {

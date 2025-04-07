@@ -84,24 +84,27 @@ const ProcessHistoryPage = () => {
   };
 
   const managementChange = (option: SelectOption<number>) => {
-    const currentFormationPath = `${ui.activeSolution}/reporting/${ui.currentFormation}`;
+    // 將狀態更新延遲到下一個事件循環中執行，而不是在渲染過程中
+    setTimeout(() => {
+      const currentFormationPath = `${ui.activeSolution}/reporting/${ui.currentFormation}`;
 
-    switch (option.label) {
-      case 'Product':
-        ui.goto(`${currentFormationPath}/management/product`);
-        break;
-      case 'Unit':
-        ui.goto(`${currentFormationPath}/management/unit`);
-        break;
-      case 'Process':
-        ui.goto(`${currentFormationPath}/management/process`);
-        break;
-      case 'ProcessHistory':
-        ui.goto(`${currentFormationPath}/management/processHistory`);
-        break;
-    }
+      switch (option.label) {
+        case 'Product':
+          ui.goto(`${currentFormationPath}/management/product`);
+          break;
+        case 'Unit':
+          ui.goto(`${currentFormationPath}/management/unit`);
+          break;
+        case 'Process':
+          ui.goto(`${currentFormationPath}/management/process`);
+          break;
+        case 'ProcessHistory':
+          ui.goto(`${currentFormationPath}/management/processHistory`);
+          break;
+      }
 
-    setSelectedOptions(option);
+      setSelectedOptions(option);
+    }, 0);
   };
 
   const [state, setState] = React.useState<{

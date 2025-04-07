@@ -16,3 +16,100 @@
     @apply gap-x-2;
   }
 }
+
+.notification-item {
+  border-bottom: 1px solid var(--surface-03) !important;
+  padding-bottom: 12px !important;
+  padding-top: 12px !important;
+  
+  &:first-child {
+    padding-top: 0 !important;
+  }
+  
+  &:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.notification-clickable {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: var(--surface-hover) !important;
+  }
+}
+
+.comment-item {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+.comment-text {
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+
+.view-all-container {
+  padding: 8px;
+  background-color: var(--surface-01);
+  border-top: 1px solid var(--surface-03);
+  position: relative;
+  z-index: 10;
+}
+
+// 查看全部按鈕容器
+.view-all-button-container {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--surface-03);
+}
+
+// 確保按鈕明顯可見
+.view-all-button {
+  background-color: var(--primary-500) !important;
+  color: white !important;
+  font-weight: bold !important;
+  padding: 8px !important;
+  height: auto !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+// 鈴鐺填充效果 - 直接使用純紅色
+.bell-filled {
+  display: inline-block;
+  
+  svg {
+    fill: #ff0000 !important;
+  }
+  
+  path {
+    fill: #ff0000 !important;
+  }
+}
+
+// 查看更多按鈕區域
+.view-more-header {
+  background-color: var(--surface-02) !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+// 點點按鈕
+.dots-button {
+  width: 100% !important;
+  padding: 8px 0 !important;
+  margin: 0 !important;
+}
+
+// 點點文字
+.dots-text {
+  font-size: 28px !important;
+  font-weight: bold !important;
+  color: var(--primary-500) !important;
+  line-height: 0.5 !important;
+  letter-spacing: 2px !important;
+}

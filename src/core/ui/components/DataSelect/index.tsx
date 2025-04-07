@@ -85,6 +85,9 @@ export const DataSelect: React.FC<DataSelectProps> = ({
 
   let blurTimeout: ReturnType<typeof setTimeout>;
 
+  // 使用 useEffect 跟踪 Listbox 的 open 狀態而不是在渲染函數中直接設置
+  const openRef = useRef(false);
+  
   // CLEAR BUTTON
 
   const handleClearValue = () => {
@@ -182,7 +185,14 @@ export const DataSelect: React.FC<DataSelectProps> = ({
       <div className={styles['select-wrapper']}>
         <Listbox defaultValue={''} disabled={disabled} onChange={handleChange} value={value}>
           {({ open }) => {
-            setMenuOpen(open);
+            // 在渲染期間不直接調用 setState，而是存儲 open 狀態，稍後處理
+            if (open !== openRef.current) {
+              openRef.current = open;
+              // 使用 setTimeout 將狀態更新推遲到渲染後
+              setTimeout(() => {
+                setMenuOpen(open);
+              }, 0);
+            }
             return (
               <>
                 <Listbox.Button

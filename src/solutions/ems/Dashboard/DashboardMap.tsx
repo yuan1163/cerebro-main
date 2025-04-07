@@ -51,6 +51,8 @@ export const DashboardMap = observer(() => {
     navigate('../scheme');
   };
 
+  // console.log('Buildings data:', locations.getBuildings(activeFormation));
+
   return (
     <>
       <Header icon={<ModuleIcon />} title={t('solutions.dashboard.label', 'Dashboard', 'Dashboard page title.')} />

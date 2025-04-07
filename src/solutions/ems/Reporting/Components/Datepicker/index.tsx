@@ -33,7 +33,7 @@ type Props = {
   label?: string;
   isShowTime?: boolean;
   inputFormat?: string;
-  onChange: () => void;
+  onChange: (date: Date) => void;
   placeholderText?: string;
   severity?: string;
 } & React.HTMLAttributes<HTMLElement>;
@@ -76,7 +76,7 @@ export const Datepicker = ({
   });
 
   return (
-    <div className={cn(stylesInputBase['input-base'], styles['date-picker-container'], className)}>
+    <div className={cn(stylesInputBase['input-base'], styles['date-picker-container'], className)} {...rest}>
       {/* {label ? <InputLabel inputId={inputId} label={label} /> : null} */}
       <DatePicker
         className={styles['date-picker-input']}

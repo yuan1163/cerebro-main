@@ -4,6 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import * as yup from 'yup';
+// 直接引入 react-datepicker
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 // utils
 
@@ -53,6 +56,44 @@ type Props = {
   processHistory: ProcessHistory;
   unit: Unit[] | undefined;
 };
+
+// 自定義日期選擇器樣式
+const datePickerStyles = {
+  container: {
+    width: '100%',
+    marginBottom: '8px',
+  },
+  label: {
+    display: 'block',
+    marginBottom: '4px',
+    fontSize: '14px',
+    fontWeight: '500',
+  },
+  error: {
+    color: 'red',
+    fontSize: '12px',
+    marginTop: '4px',
+  }
+};
+
+// 自定義 className 用於 DatePicker 樣式
+const datePickerClassName = 'custom-datepicker-edit';
+
+// 添加全局樣式
+const DatePickerStyle = () => (
+  <style>
+    {`
+      .custom-datepicker-edit {
+        padding: 8px 12px;
+        width: 100%;
+        height: 38px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+    `}
+  </style>
+);
 
 export const ProcessHistoryEdit: React.FC<Props> = ({ className, onClose, unit, processHistory, ...props }) => {
   const navigate = useNavigate();
@@ -306,53 +347,77 @@ export const ProcessHistoryEdit: React.FC<Props> = ({ className, onClose, unit, 
                           </Grid>
                           {/* Start Date */}
                           <Grid item grow>
-                            <Controller
-                              name={`startDate`}
-                              control={control}
-                              defaultValue={defaultValues.startDate}
-                              render={({ field: { onChange, value } }) => (
-                                <Datepicker
-                                  inputId='startDate'
-                                  label={t('general.startDate.label', 'Start date', 'Start date.')}
-                                  placeholderText={t(
-                                    'general.selectStartDate.label',
-                                    'Select start date',
-                                    'Select start date.',
-                                  )}
-                                  date={moment(value).toDate()}
-                                  onChange={onChange}
-                                  severity={errors.startDate?.message ? 'error' : undefined}
-                                  helperText={errors.startDate && errors?.startDate?.message}
-                                  isShowTime
-                                  inputFormat={'DD/MM/YYYY HH:mm:00'}
-                                />
-                              )}
-                            />
+                            <div style={datePickerStyles.container}>
+                              <label style={datePickerStyles.label}>
+                                {t('general.startDate.label', 'Start date', 'Start date.')}
+                              </label>
+                              <Controller
+                                name={`startDate`}
+                                control={control}
+                                defaultValue={processHistoryInfos.startDate}
+                                render={({ field }) => (
+                                  <>
+                                    <DatePicker
+                                      selected={field.value}
+                                      onChange={(date: Date) => {
+                                        field.onChange(date);
+                                        setValue('startDate', date, { shouldValidate: true });
+                                      }}
+                                      showTimeSelect
+                                      timeFormat="HH:mm"
+                                      timeIntervals={15}
+                                      dateFormat="dd/MM/yyyy HH:mm"
+                                      placeholderText={t(
+                                        'general.selectStartDate.label',
+                                        'Select start date',
+                                        'Select start date.',
+                                      )}
+                                      className={datePickerClassName}
+                                    />
+                                    {errors.startDate?.message && (
+                                      <div style={datePickerStyles.error}>{errors.startDate.message}</div>
+                                    )}
+                                  </>
+                                )}
+                              />
+                            </div>
                           </Grid>
                           {/* End Date */}
                           <Grid item grow>
-                            <Controller
-                              name={`endDate`}
-                              control={control}
-                              defaultValue={defaultValues.endDate}
-                              render={({ field: { onChange, value } }) => (
-                                <Datepicker
-                                  inputId='endDate'
-                                  label={t('general.endDate.label', 'End date', 'End date.')}
-                                  placeholderText={t(
-                                    'general.selectEndDate.label',
-                                    'Select end date',
-                                    'Select end date.',
-                                  )}
-                                  date={moment(value).toDate()}
-                                  onChange={onChange}
-                                  severity={errors.endDate?.message ? 'error' : undefined}
-                                  helperText={errors.endDate && errors?.endDate?.message}
-                                  isShowTime
-                                  inputFormat={'DD/MM/YYYY HH:mm:00'}
-                                />
-                              )}
-                            />
+                            <div style={datePickerStyles.container}>
+                              <label style={datePickerStyles.label}>
+                                {t('general.endDate.label', 'End date', 'End date.')}
+                              </label>
+                              <Controller
+                                name={`endDate`}
+                                control={control}
+                                defaultValue={processHistoryInfos.endDate}
+                                render={({ field }) => (
+                                  <>
+                                    <DatePicker
+                                      selected={field.value}
+                                      onChange={(date: Date) => {
+                                        field.onChange(date);
+                                        setValue('endDate', date, { shouldValidate: true });
+                                      }}
+                                      showTimeSelect
+                                      timeFormat="HH:mm"
+                                      timeIntervals={15}
+                                      dateFormat="dd/MM/yyyy HH:mm"
+                                      placeholderText={t(
+                                        'general.selectEndDate.label',
+                                        'Select end date',
+                                        'Select end date.',
+                                      )}
+                                      className={datePickerClassName}
+                                    />
+                                    {errors.endDate?.message && (
+                                      <div style={datePickerStyles.error}>{errors.endDate.message}</div>
+                                    )}
+                                  </>
+                                )}
+                              />
+                            </div>
                           </Grid>
                         </Grid>
                       </Grid>

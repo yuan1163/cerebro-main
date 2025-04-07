@@ -92,6 +92,11 @@ export const CreateIssueModal: React.FC<Props> = ({ open, onClose, event }) => {
   };
 
   const create = () => {
+    if (!formData.priority) {
+      alert(t('issue.priorityRequired.label', 'Priority is required.', 'Priority field is mandatory.'));
+      return;
+    }
+
     issue.add({
       ...formData,
       locationId: ui.currentFormation,
@@ -158,7 +163,7 @@ export const CreateIssueModal: React.FC<Props> = ({ open, onClose, event }) => {
                 <Grid item lg={6}>
                   <IssuePrioritySelect
                     inputId='priority'
-                    label={t('events.priority.label', 'Priority', "Event's importance.")}
+                    label={t('events.priority.label', 'Priority', "Event's importance.") + ' *'}
                     onSelect={(option) => setFormData({ ...formData, priority: option })}
                     placeholder={`${t('issue.allPriority.label', 'All priority', 'Priority of issue.')}:`}
                     value={formData.priority}

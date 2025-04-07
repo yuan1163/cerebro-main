@@ -3,6 +3,9 @@ import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import * as yup from 'yup';
+// 直接引入 react-datepicker
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 // utils
 
@@ -34,14 +37,53 @@ import { CardHeader } from '@core/ui/components/CardHeader';
 import { CircuitSelect } from '../CircuitSelect';
 import { CircularProgress } from '@core/ui/components/CircularProgress';
 import { DataSelect } from '@core/ui/components/DataSelect';
-import { Datepicker } from '@solutions/ems/Reporting/Components/Datepicker';
+// import { Datepicker } from '@solutions/ems/Reporting/Components/Datepicker'; // 暫時不使用自定義的 Datepicker
 import { Grid } from '@core/ui/components/Grid';
 import { IconButton } from '@core/ui/components/IconButton';
 import { Input } from '@core/ui/components/Input';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
+import { Text } from '@core/ui/components/Text';
 
 // icons
 import XCloseLineIcon from '@assets/icons/line/x-close.svg?component';
+
+// 自定義日期選擇器樣式
+const datePickerStyles = {
+  container: {
+    width: '100%',
+    marginBottom: '8px',
+  },
+  label: {
+    display: 'block',
+    marginBottom: '4px',
+    fontSize: '14px',
+    fontWeight: '500',
+  },
+  error: {
+    color: 'red',
+    fontSize: '12px',
+    marginTop: '4px',
+  }
+};
+
+// 自定義 className 用於 DatePicker 樣式
+const datePickerClassName = 'custom-datepicker';
+
+// 添加全局樣式
+const DatePickerStyle = () => (
+  <style>
+    {`
+      .custom-datepicker {
+        padding: 8px 12px;
+        width: 100%;
+        height: 38px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+    `}
+  </style>
+);
 
 type Props = {
   className?: string;
@@ -79,6 +121,11 @@ export const AddProcessHistory: React.FC<Props> = ({ className, onClose, unit, .
     }
   }, [process]);
 
+  // 設定初始日期為現在時間，避免欄位為null
+  const currentDate = new Date();
+  const endDate = new Date();
+  endDate.setHours(currentDate.getHours() + 24); // 預設結束日期為現在時間+24小時
+
   // yup
   const validationSchema = yup.object().shape({
     unitId: yup.number().min(1, t('ems.unitRequire.label', 'Unit must be require', 'Unit is mandatory.')),
@@ -110,8 +157,8 @@ export const AddProcessHistory: React.FC<Props> = ({ className, onClose, unit, .
     processId: 0,
     deviceId: '',
     unitsNumber: 1,
-    startDate: null,
-    endDate: null,
+    startDate: currentDate, // 設定預設值為現在時間而非null
+    endDate: endDate, // 設定預設值為當前時間+24小時而非null
   };
 
   const {
@@ -144,8 +191,7 @@ export const AddProcessHistory: React.FC<Props> = ({ className, onClose, unit, .
       locationId: ui.currentFormation,
     };
 
-    controller.add(processHistory);
-
+    await controller.add(processHistory);
     onClose?.();
   };
 
@@ -288,54 +334,78 @@ export const AddProcessHistory: React.FC<Props> = ({ className, onClose, unit, .
 
                           {/* Start Date */}
                           <Grid item grow>
-                            <Controller
-                              name={`startDate`}
-                              control={control}
-                              defaultValue={defaultValues.startDate}
-                              render={({ field: { onChange, value } }) => (
-                                <Datepicker
-                                  inputId='startDate'
-                                  label={t('general.startDate.label', 'Start date', 'Start date.')}
-                                  placeholderText={t(
-                                    'general.selectStartDate.label',
-                                    'Select start date',
-                                    'Select start date.',
-                                  )}
-                                  date={value}
-                                  onChange={onChange}
-                                  severity={errors.startDate?.message ? 'error' : undefined}
-                                  helperText={errors.startDate && errors?.startDate?.message}
-                                  isShowTime
-                                  inputFormat={'DD/MM/YYYY HH:mm:00'}
-                                />
-                              )}
-                            />
+                            <div style={datePickerStyles.container}>
+                              <label style={datePickerStyles.label}>
+                                {t('general.startDate.label', 'Start date', 'Start date.')}
+                              </label>
+                              <Controller
+                                name={`startDate`}
+                                control={control}
+                                defaultValue={defaultValues.startDate}
+                                render={({ field }) => (
+                                  <>
+                                    <DatePicker
+                                      selected={field.value}
+                                      onChange={(date: Date) => {
+                                        field.onChange(date);
+                                        setValue('startDate', date, { shouldValidate: true });
+                                      }}
+                                      showTimeSelect
+                                      timeFormat="HH:mm"
+                                      timeIntervals={15}
+                                      dateFormat="dd/MM/yyyy HH:mm"
+                                      placeholderText={t(
+                                        'general.selectStartDate.label',
+                                        'Select start date',
+                                        'Select start date.',
+                                      )}
+                                      className={datePickerClassName}
+                                    />
+                                    {errors.startDate?.message && (
+                                      <div style={datePickerStyles.error}>{errors.startDate.message}</div>
+                                    )}
+                                  </>
+                                )}
+                              />
+                            </div>
                           </Grid>
 
                           {/* End Date */}
                           <Grid item grow>
-                            <Controller
-                              name={`endDate`}
-                              control={control}
-                              defaultValue={defaultValues.endDate}
-                              render={({ field: { onChange, value } }) => (
-                                <Datepicker
-                                  inputId='endDate'
-                                  label={t('general.endDate.label', 'End date', 'End date.')}
-                                  placeholderText={t(
-                                    'general.selectEndDate.label',
-                                    'Select end date',
-                                    'Select end date.',
-                                  )}
-                                  date={value}
-                                  onChange={onChange}
-                                  severity={errors.endDate?.message ? 'error' : undefined}
-                                  helperText={errors.endDate && errors?.endDate?.message}
-                                  isShowTime
-                                  inputFormat={'DD/MM/YYYY HH:mm:00'}
-                                />
-                              )}
-                            />
+                            <div style={datePickerStyles.container}>
+                              <label style={datePickerStyles.label}>
+                                {t('general.endDate.label', 'End date', 'End date.')}
+                              </label>
+                              <Controller
+                                name={`endDate`}
+                                control={control}
+                                defaultValue={defaultValues.endDate}
+                                render={({ field }) => (
+                                  <>
+                                    <DatePicker
+                                      selected={field.value}
+                                      onChange={(date: Date) => {
+                                        field.onChange(date);
+                                        setValue('endDate', date, { shouldValidate: true });
+                                      }}
+                                      showTimeSelect
+                                      timeFormat="HH:mm"
+                                      timeIntervals={15}
+                                      dateFormat="dd/MM/yyyy HH:mm"
+                                      placeholderText={t(
+                                        'general.selectEndDate.label',
+                                        'Select end date',
+                                        'Select end date.',
+                                      )}
+                                      className={datePickerClassName}
+                                    />
+                                    {errors.endDate?.message && (
+                                      <div style={datePickerStyles.error}>{errors.endDate.message}</div>
+                                    )}
+                                  </>
+                                )}
+                              />
+                            </div>
                           </Grid>
                         </Grid>
                       </Grid>
@@ -363,6 +433,7 @@ export const AddProcessHistory: React.FC<Props> = ({ className, onClose, unit, .
           </Grid>
         </CardContent>
       </form>
+      <DatePickerStyle />
     </>
   );
 };

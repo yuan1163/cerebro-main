@@ -40,6 +40,14 @@ export type alertMsg = {
   show: boolean;
   isLoading?: boolean;
 };
+
+// 添加確認上傳類型
+export type confirmUploadProps = {
+  show: boolean;
+  file: File | null;
+};
+
+// 修改上傳函數，添加確認邏輯
 export const UploadFile = async (
   topLocationId: number,
   file: File,
@@ -100,7 +108,7 @@ export const ConfigurationFileData = (): ConfigurationFileProps => {
     {
       icon: <PlusLineIcon />,
       title: t('general.upload.label', 'Upload', 'Process of transferring data to a remote server or platform.'),
-      disabled: false, //! 為方便測試 先關掉
+      disabled: false, 
       // disabled: true,
     },
     {

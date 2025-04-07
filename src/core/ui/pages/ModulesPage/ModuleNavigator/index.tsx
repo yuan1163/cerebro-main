@@ -246,7 +246,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
             <ul className={cn(styles['list'], styles['list-app'])}>
               <li className={cn(styles['list-item'], styles['list-item-app'])}>
-                <a href="/cerebro/">
+                <a href="/solutions/">
                   {brand?.icon}
                 </a>
               </li>

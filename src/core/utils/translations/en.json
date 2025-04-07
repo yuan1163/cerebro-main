@@ -1178,6 +1178,21 @@
     }
   },
   "general": {
+    "noNotifications": {
+      "label": {
+        "translation": "No notifications"
+      }
+    },
+    "loadingNotifications": {
+      "label": {
+        "translation": "Loading notifications..."
+      }
+    },
+    "noComment": {
+      "label": {
+        "translation": "There are no comments for this question yet."
+      }
+    },
     "expandDrawerTooltip": {
       "label": {
         "translation": "Show Sidebar"
@@ -1187,7 +1202,7 @@
       "label": {
           "translation": "Collapse Sidebar"
       }
-  },
+    },
     "closeButton": {
       "label": {
         "translation": "Close",
@@ -2472,6 +2487,26 @@
       "label": {
         "translation": "CO2e",
         "notes": "Emission of CO2 in kilogram."
+      }
+    },
+    "uploadConfirmTitle": {
+      "label": {
+        "translation": "Are you sure you want to proceed?"
+      }
+    },
+    "confirmUploadMessage": {
+      "label": {
+        "translation": "Data Override Warning: Uploading this Excel sheet will replace the existing data. This may result in the removal of current records and addition of new data. This action cannot be undone."
+      }
+    },
+    "Proceed": {
+      "label": {
+        "translation": "Proceed"
+      }
+    },
+    "Cancel": {
+      "label": {
+        "translation": "Cancel"
       }
     },
     "maximumPower": {

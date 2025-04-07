@@ -160,8 +160,7 @@ export const NotificationsPage = observer(() => {
   const timezone = locations.getElementById(ui.currentFormation)?.timezone;
   const navigate = useNavigate();
 
-  // filter by period
-
+  // filter by period 
   const periods = [0, 1, 2, 3, 4, 5].map((_, i) => {
     const month = moment().subtract(i, 'month');
     return {
@@ -171,7 +170,17 @@ export const NotificationsPage = observer(() => {
     };
   });
 
-  const [filterPeriod, setFilterPeriod] = useState(periods[0]);
+  // 新增一個當前月份+上個月的選項作為預設值
+  const currentAndLastMonth = {
+    label: `${moment().subtract(1, 'month').format('MMM')} - ${moment().format('MMM YYYY')}`,
+    startDate: moment().subtract(1, 'month').startOf('month').valueOf(),
+    endDate: moment().endOf('month').valueOf(),
+  };
+  
+  // 將新選項加入到陣列最前面
+  const periodOptions = [currentAndLastMonth, ...periods];
+
+  const [filterPeriod, setFilterPeriod] = useState(periodOptions[0]);
 
   // filter by asset category
 

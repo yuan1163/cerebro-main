@@ -254,6 +254,21 @@
         }
     },
     "general": {
+        "noNotifications": {
+            "label": {
+                "translation": "没有通知"
+            }
+        },
+        "loadingNotifications": {
+            "label": {
+                "translation": "載入通知中..."
+            }
+        },
+        "noComment": {
+            "label": {
+                "translation": "此問題暫無評論"
+            }
+        },
         "expandDrawerTooltip": {
             "label": {
                 "translation": "顯示側邊欄"
@@ -2499,6 +2514,26 @@
         "CO2e": {
             "label": {
                 "translation": "二氧化碳當量"
+            }
+        },
+        "uploadConfirmTitle": {
+            "label": {
+                "translation": "是否確認上傳?"
+            }
+        },
+        "confirmUploadMessage": {
+            "label": {
+                "translation": "資料覆蓋警告： 上傳此 Excel 檔案將會取代現有的資料，這可能導致目前的記錄被移除並新增資料。此操作無法復原。"
+            }
+        },
+        "Proceed": {
+            "label": {
+              "translation": "繼續"
+            }
+        },
+        "Cancel": {
+            "label": {
+                "translation": "取消"
             }
         },
         "maximumPower": {

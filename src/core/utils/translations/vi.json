@@ -254,6 +254,21 @@
         }
     },
     "general": {
+        "noNotifications": {
+            "label": {
+                "translation": "Không có thông báo"
+            }
+        },
+        "loadingNotifications": {
+            "label": {
+                "translation": "Đang tải thông báo..."
+            }
+        },
+        "noComment": {
+            "label": {
+                "translation": "hưa có bình luận cho câu hỏi này."
+            }
+        },
         "expandDrawerTooltip": {
             "label": {
                 "translation": "Hiển thị thanh bên"
@@ -2499,6 +2514,26 @@
         "CO2e": {
             "label": {
                 "translation": "CO2e"
+            }
+        },
+        "uploadConfirmTitle": {
+            "label": {
+                "translation": "Bạn có chắc chắn muốn tải lên khôn?"
+            }
+        },
+        "confirmUploadMessage": {
+            "label": {
+                "translation": "Cảnh báo ghi đè dữ liệu: Việc tải lên tệp Excel này sẽ thay thế dữ liệu hiện có. Điều này có thể dẫn đến việc xóa các bản ghi hiện tại và thêm dữ liệu mới. Hành động này không thể hoàn tác."
+            }
+        },    
+        "Proceed": {
+            "label": {
+              "translation": "Tiếp tục"
+            }
+        },
+        "Cancel": {
+            "label": {
+                "translation": "Hủy bỏ"
             }
         },
         "maximumPower": {
