@@ -1096,7 +1096,7 @@
     },
     "newPasswordInput": {
       "label": {
-        "translation": "New password",
+        "translation": "Confirm password",
         "notes": "New password field."
       }
     },
