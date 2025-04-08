@@ -22,7 +22,7 @@ const AGGREGATION_TYPE = {
 
 const dateTimeFormat = {
   hours: {
-    format: 'MM/DD/YY HH:00',
+    format: 'MM/DD/YYYY HH:00',
   },
   day: {
     format: 'DD',
