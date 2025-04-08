@@ -196,8 +196,8 @@ export const UnitList: React.FC<Props> = ({ productId }) => {
                         <ClockIcon />
                       </Icon>
                       <Text weight={'semibold'} variant='paragraph-md' color='typography-tertiary'>
-                        {moment(ph.startDateMs).format('DD/MM/YY HH:mm')} ~{' '}
-                        {moment(ph.endDateMs).format('DD/MM/YYYY HH:mm')}
+                        {moment(ph.startDateMs).format('MM/DD/YYYY HH:mm')} ~{' '}
+                        {moment(ph.endDateMs).format('MM/DD/YYYY HH:mm')}
                       </Text>
                     </Grid>
                   </Grid>
