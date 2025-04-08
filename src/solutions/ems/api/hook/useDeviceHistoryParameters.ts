@@ -30,7 +30,7 @@ export const useDeviceHistoryParameters = (filter: DeviceHistoryInput) => {
         console.log('[useDeviceHistoryParameters] API Response Data:', { 
           paramName: filter.paramName, 
           dataLength: data?.length,
-          dataSample: data?.slice(0, 2) // 只記錄前兩條數據作為示例
+          dataSample: data?.slice(0, 2) // 只記錄前兩筆紀錄
         });
       },
     },
