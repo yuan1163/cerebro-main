@@ -699,7 +699,7 @@ export const Header: React.FC<Props> = ({
                     onClick={handleViewAllClick}
                     className={styles['dots-button']}
                   >
-                    <span className={styles['dots-text']}>...</span>
+                    <span>{t("general.viewAll.label", "View All", "View all notifications.")}</span>
                   </Button>
                 </CardHeader>
               </Card>
