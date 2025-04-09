@@ -25,6 +25,7 @@ export const getPageSwitch = (rootLocation: boolean) => {
         label: t('ems.demand.label', 'Demand', 'The amount of power required or requested at a given time.'),
         value: 'demand',
         isDisabled: !(Boolean(hasSPBM.deviceSPBMId) && Boolean(rootLocation)),
+        // isDisabled: false,
       },
       {
         label: t('ems.consumption.label', 'Consumption', 'The amount of energy or resources used over a given period.'),

@@ -187,7 +187,8 @@ export const demandFromLastMonth = (locationId: number | undefined, deviceSPBMId
   }).data;
 
   demand.setCurrentQuarterMs(currentQuarter.valueOf());
-  demand.setDemandFromLastMonth(deviceSPBMId ? demandArray : []);
+  // demand.setDemandFromLastMonth(deviceSPBMId ? demandArray : []);
+  demand.setDemandFromLastMonth(demandArray);
 
   return demand;
 };
