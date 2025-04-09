@@ -132,17 +132,17 @@ const NodeSummary = () => {
       'current': {
         'title': 'This week',
         // 'subTitle': '11/07/23 ~ 11/12/23',
-        'subTitle': `${moment().weekday(1).format('MM/DD/YY')} ~ ${moment().format('MM/DD/YY')}`,
+        'subTitle': `${moment().weekday(1).format('MM/DD/YYYY')} ~ ${moment().format('MM/DD/YYYY')}`,
         'valueText': conThisWeek.toFixed(),
         'valueUnit': 'kWh',
         'valueColor': 'primary',
       },
       'previous': {
         'title': t('date.lastWeek.label', 'Last week', 'The seven days prior to the current day.'),
-        'subTitle': `${moment().subtract(7, 'days').weekday(1).format('MM/DD/YY')} ~ ${moment()
+        'subTitle': `${moment().subtract(7, 'days').weekday(1).format('MM/DD/YYYY')} ~ ${moment()
           .subtract(7, 'days')
           .weekday(7)
-          .format('MM/DD/YY')}`,
+          .format('MM/DD/YYYY')}`,
         'valueText': conLastWeek.toFixed(),
         'valueUnit': 'kWh',
         'valueColor': undefined,
@@ -151,17 +151,17 @@ const NodeSummary = () => {
     'month': {
       'current': {
         'title': 'This month',
-        'subTitle': `${moment().startOf('month').format('MM/DD/YY')} ~ ${moment().format('MM/DD/YY')}`,
+        'subTitle': `${moment().startOf('month').format('MM/DD/YYYY')} ~ ${moment().format('MM/DD/YYYY')}`,
         'valueText': conThisMon.toFixed(),
         'valueUnit': 'kWh',
         'valueColor': 'primary',
       },
       'previous': {
         'title': t('date.lastMonth.label', 'Last month', 'The previous calendar month from the current date.'),
-        'subTitle': `${moment().subtract(1, 'months').startOf('month').format('MM/DD/YY')} ~ ${moment()
+        'subTitle': `${moment().subtract(1, 'months').startOf('month').format('MM/DD/YYYY')} ~ ${moment()
           .subtract(1, 'months')
           .endOf('month')
-          .format('MM/DD/YY')}`,
+          .format('MM/DD/YYYY')}`,
         'valueText': conLastMon.toFixed(),
         'valueUnit': 'kWh',
         'valueColor': undefined,
@@ -173,17 +173,17 @@ const NodeSummary = () => {
     'month': {
       'current': {
         'title': 'This month',
-        'subTitle': `${moment().startOf('month').format('MM/DD/YY')} ~ ${moment().format('MM/DD/YY')}`,
+        'subTitle': `${moment().startOf('month').format('MM/DD/YYYY')} ~ ${moment().format('MM/DD/YYYY')}`,
         'valueText': co2eThisMon ? co2eThisMon.toFixed() : '-',
         'valueUnit': 'CO2e',
         'valueColor': 'primary',
       },
       'previous': {
         'title': t('date.lastMonth.label', 'Last month', 'The previous calendar month from the current date.'),
-        'subTitle': `${moment().subtract(1, 'months').startOf('month').format('MM/DD/YY')} ~ ${moment()
+        'subTitle': `${moment().subtract(1, 'months').startOf('month').format('MM/DD/YYYY')} ~ ${moment()
           .subtract(1, 'months')
           .endOf('month')
-          .format('MM/DD/YY')}`,
+          .format('MM/DD/YYYY')}`,
         'valueText': con2eLastMon ? con2eLastMon.toFixed() : '-',
         'valueUnit': 'CO2e',
         'valueColor': undefined,
@@ -195,17 +195,17 @@ const NodeSummary = () => {
     'month': {
       'current': {
         'title': 'This month',
-        'subTitle': `${moment().startOf('month').format('MM/DD/YY')} ~ ${moment().format('MM/DD/YY')}`,
+        'subTitle': `${moment().startOf('month').format('MM/DD/YYYY')} ~ ${moment().format('MM/DD/YYYY')}`,
         'valueText': maxDemandThisMon ? maxDemandThisMon.toFixed() : '-',
         'valueUnit': 'kW',
         'valueColor': 'primary',
       },
       'previous': {
         'title': t('date.lastMonth.label', 'Last month', 'The previous calendar month from the current date.'),
-        'subTitle': `${moment().subtract(1, 'months').startOf('month').format('MM/DD/YY')} ~ ${moment()
+        'subTitle': `${moment().subtract(1, 'months').startOf('month').format('MM/DD/YYYY')} ~ ${moment()
           .subtract(1, 'months')
           .endOf('month')
-          .format('MM/DD/YY')}`,
+          .format('MM/DD/YYYY')}`,
         'valueText': maxDemandLastMon ? maxDemandLastMon.toFixed() : '-',
         'valueUnit': 'kW',
         'valueColor': undefined,
