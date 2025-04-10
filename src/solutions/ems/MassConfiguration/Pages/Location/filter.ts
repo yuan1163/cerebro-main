@@ -80,7 +80,7 @@ export const useFilterSolution = (list: LocationsProp[]) => {
     ...Array.from(solutions).map((solution) => {
       let solutionName: string = '';
 
-      if (solution & SolutionsMasks.cerebro)
+      if (solution & SolutionsMasks.pinpoint)
         solutionName = t('solutions.cerebro.label', 'Cerebro', 'Title of Cerebro App.');
       if (solution & SolutionsMasks.utilus)
         solutionName = t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.');

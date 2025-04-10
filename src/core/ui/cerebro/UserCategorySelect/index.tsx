@@ -38,7 +38,7 @@ export const UserCategorySelect: React.FC<Props> = ({
 }) => {
   let options = [UserCategory.Administrator, UserCategory.Contact];
   const ui = useUI();
-  if (ui.activeSolution === Solutions.cerebro) {
+  if (ui.activeSolution === Solutions.pinpoint) {
     options.push(UserCategory.Trackable);
   }
 
