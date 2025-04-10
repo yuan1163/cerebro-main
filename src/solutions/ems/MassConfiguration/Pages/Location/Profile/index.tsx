@@ -163,7 +163,7 @@ export const Profile: React.FC<Props> = ({ location, locationColor = 'default' }
                           subtitle={t('solutions.solution.label', 'Solution', 'Solution.')}
                           chip={
                             <Chip color={'primary'} key={location.branchSolutions}>
-                              {(location.branchSolutions & SolutionsMasks.cerebro) !== 0 &&
+                              {(location.branchSolutions & SolutionsMasks.pinpoint) !== 0 &&
                                 t('solutions.pinPoint.label', 'PinPoint', 'Title of PinPoint Solution.')}
                               {(location.branchSolutions & SolutionsMasks.utilus) !== 0 &&
                                 t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.')}

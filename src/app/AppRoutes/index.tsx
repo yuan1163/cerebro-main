@@ -27,7 +27,7 @@ import { Solutions } from '@core/ui/types';
 import { SolutionsPage } from '@core/ui/pages/SolutionsPage';
 
 const solutions = [
-  { url: Solutions.cerebro, modules: cerebro },
+  { url: Solutions.pinpoint, modules: cerebro },
   { url: Solutions.utilus, modules: utilus, commands: utilusCommands },
   { url: Solutions.ai, modules: ai },
   { url: Solutions.connect, modules: connect },

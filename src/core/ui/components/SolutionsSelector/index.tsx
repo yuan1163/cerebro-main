@@ -55,7 +55,7 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
 
   const Titles: Record<Solutions, string> = {
     ai: t('solutions.ai.label', 'IvedaAI', 'Title of AI Solution.'),
-    cerebro: t('solutions.pinPoint.label', 'PinPoint', 'Title of PinPoint Solution.'),
+    pinpoint: t('solutions.pinPoint.label', 'PinPoint', 'Title of PinPoint Solution.'),
     connect: t('solutions.connects.label', 'Connects', 'Title of Connects Solution.'),
     ems: t('solutions.ems.label', 'EMS', 'Title of EMS Solution.'),
     utilus: t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.'),
@@ -65,8 +65,8 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
     switch (solution) {
       case Solutions.ai:
         return Titles.ai;
-      case Solutions.cerebro:
-        return Titles.cerebro;
+      case Solutions.pinpoint:
+        return Titles.pinpoint;
       case Solutions.connect:
         return Titles.connect;
       case Solutions.ems:
@@ -81,7 +81,7 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
   const menuItems = [
     {
       id: 1,
-      title: Solutions.cerebro,
+      title: Solutions.pinpoint,
       subtitle: t(
         'solutions.solutionsSelector.cerebro.listItem.caption',
         'Asset and personal tracking',

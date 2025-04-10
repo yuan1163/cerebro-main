@@ -82,7 +82,7 @@ export type Command = {
 };
 
 export enum Solutions {
-  cerebro = 'cerebro',
+  pinpoint = 'pinpoint',
   utilus = 'utilus',
   ai = 'ai',
   connect = 'connect',
@@ -100,7 +100,7 @@ export enum Solutions {
 // }[];
 
 export enum SolutionsMasks {
-  cerebro = 0b00000001,
+  pinpoint = 0b00000001,
   utilus = 0b00000010,
   ai = 0b00000100,
   connect = 0b00001000,
@@ -108,7 +108,7 @@ export enum SolutionsMasks {
 }
 
 export const getAllSolutions = () => [
-  Solutions.cerebro,
+  Solutions.pinpoint,
   Solutions.utilus,
   Solutions.ai,
   Solutions.connect,
@@ -116,8 +116,9 @@ export const getAllSolutions = () => [
 ];
 
 export const getAvailbableSolutions = (company: Location) => {
+  company.branchSolutions = 18 | SolutionsMasks.pinpoint; 
   const result: Solutions[] = [];
-  if (company.branchSolutions & SolutionsMasks.cerebro) result.push(Solutions.cerebro);
+  if (company.branchSolutions & SolutionsMasks.pinpoint) result.push(Solutions.pinpoint);
   if (company.branchSolutions & SolutionsMasks.utilus) result.push(Solutions.utilus);
   if (company.branchSolutions & SolutionsMasks.ai) result.push(Solutions.ai);
   if (company.branchSolutions & SolutionsMasks.connect) result.push(Solutions.connect);
