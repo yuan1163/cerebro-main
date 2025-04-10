@@ -58,7 +58,7 @@ export const formFieldSettings = {
         ),
       },
       newUserPassword: {
-        label: t('user.newPasswordInput.label', 'Confirm password', 'Confirm password field.'),
+        label: t('user.newPasswordInput.label', 'New password', 'Confirm password field.'),
         placeholder: t('user.newPasswordInputPlaceholder.label', 'Confirm password', 'Confirm password field placeholder.'),
       },
       confermedUserPassword: {

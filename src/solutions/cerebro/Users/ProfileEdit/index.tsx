@@ -725,9 +725,9 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                               <PasswordInput
                                 id='confirmPassword'
                                 autoComplete='confirmPassword'
-                                label={t('user.newPasswordInputPlaceholder.label', 'new password', 'new password')}
+                                label={t('user.confirmPasswordInput.label', 'confirm password', 'confirm password')}
                                 onChange={onChange}
-                                placeholder={t('user.newPasswordInputPlaceholder.label', 'new password', 'new password')}
+                                placeholder={t('user.confirmPasswordInputPlaceholder.label', 'confirm password', 'confirm password')}
                                 value={value}
                                 />
                               )}
