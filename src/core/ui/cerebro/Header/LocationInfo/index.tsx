@@ -37,8 +37,11 @@ import { getAccessLocationsId, getLocationBlackList } from '@solutions/ems/Analy
 interface CloseProps {
   close: () => void;
 }
+interface LocationInfoProps {
+  handleOpenIssues: () => void;
+}
 
-export const LocationInfo: React.FC = observer(() => {
+export const LocationInfo: React.FC<LocationInfoProps> = observer(({handleOpenIssues}) => {
   const ui = useUI();
   const url = useURL();
   const navigate = useNavigate();
@@ -85,6 +88,8 @@ export const LocationInfo: React.FC = observer(() => {
 
                           ui.gotoTheSamePage();
                           close();
+
+                          handleOpenIssues()
                         }}
                       >
                         <MenuItemText title={item.name} />

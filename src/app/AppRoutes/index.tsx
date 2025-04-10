@@ -46,19 +46,20 @@ export const AppRoutes = observer(() => {
       <Route path='/login' element={<AuthLoginPage />} />
       <Route path='/reset' element={<AuthResetPage />} />
       <Route path='/error' element={<ErrorPage />} />
+      <Route path='/cerebro' element={<Navigate replace to='/solutions' />} />
       <Route path='/solutions' element={<SolutionsPage />} />
       {solutions.map((solution) => (
-        <Route key='route:solution' path={`/${solution.url}/*`} element={<ModulesPage modules={solution.modules} />} />
+      <Route key='route:solution' path={`/${solution.url}/*`} element={<ModulesPage modules={solution.modules} />} />
       ))}
 
       {solutions.map((solution) =>
-        solution.commands?.map((command) => (
-          <Route
-            key={`route:command:${command.id}`}
-            path={`/${solution.url}/${command.url}`}
-            element={command.element}
-          />
-        )),
+      solution.commands?.map((command) => (
+        <Route
+        key={`route:command:${command.id}`}
+        path={`/${solution.url}/${command.url}`}
+        element={command.element}
+        />
+      )),
       )}
       <Route path='/' element={<Navigate replace to={auth.isAuthenticated() ? '/solutions' : '/login'} />} />
     </Routes>

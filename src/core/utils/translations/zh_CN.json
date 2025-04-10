@@ -898,7 +898,12 @@
             "label": {
                 "translation": "转到下一页"
             }
-        }
+        },
+        "viewAll": {
+            "label": {
+              "translation": "查看全部"
+            }
+          }
     },
     "user": {
         "reinviteUser": {

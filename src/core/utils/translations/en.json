@@ -1597,7 +1597,13 @@
       "label": {
         "translation": "Reset user password"
       }
+    },
+    "viewAll": {
+    "label": {
+      "translation": "View ALL",
+      "notes": "Viewing all notifications."
     }
+  }
   },
   "events": {
     "events": {

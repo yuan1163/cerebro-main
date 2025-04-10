@@ -224,6 +224,14 @@ export const Header: React.FC<Props> = ({
       setActiveSolution(storedActiveSolution);
     }
   }, [location.pathname, authStore]);
+
+  // 獲取通知列表
+  useEffect(() => {
+    if (openIssues) {
+      fetchNotifications();
+      setHasUnreadNotifications(false);
+    }
+  },[openIssues]);
   
   // 將API數據轉換為UI所需格式的函數
   const transformIssueToNotification = (issue: Issue): Notification => {
@@ -437,18 +445,24 @@ export const Header: React.FC<Props> = ({
   };
 
   // 打開通知面板時，重置未讀狀態並加載通知
-  const handleOpenNotifications = () => {
-    setOpenIssues(prev => {
-      const newState = !prev;
+  // const handleOpenNotifications = () => {
+  //   setOpenIssues(prev => {
+  //     const newState = !prev;
       
-      if (newState) {
-        setHasUnreadNotifications(false);
-        fetchNotifications();
-      }
+  //     if (newState) {
+  //       setHasUnreadNotifications(false);
+  //       fetchNotifications();
+  //     }
       
-      return newState;
-    });
-  };
+  //     return newState;
+  //   });
+  // };
+
+  const handleOpenIssues = () => {
+    if(openIssues) {
+      setOpenIssues(false);
+    }
+  }
 
   // 處理通知點擊事件
   const handleNotificationClick = (notification: Notification) => {
@@ -517,7 +531,7 @@ export const Header: React.FC<Props> = ({
                 </Grid>
               )}
               <Grid item>
-                <LocationInfo />
+                <LocationInfo handleOpenIssues={handleOpenIssues}/>
               </Grid>
             </Grid>
           )}
@@ -533,7 +547,7 @@ export const Header: React.FC<Props> = ({
                 component='div'
                 color='icon-secondary'
                 decoratorSize='lg'
-                onClick={handleOpenNotifications}
+                onClick={()=>setOpenIssues(prev=>!prev)}
                 size='md'
                 variant='ghost'
               >
@@ -699,7 +713,7 @@ export const Header: React.FC<Props> = ({
                     onClick={handleViewAllClick}
                     className={styles['dots-button']}
                   >
-                    <span className={styles['dots-text']}>...</span>
+                    <span>{t("general.viewAll.label", "View All", "View all notifications.")}</span>
                   </Button>
                 </CardHeader>
               </Card>

@@ -898,7 +898,12 @@
             "label": {
                 "translation": "Chuyển đến trang tiếp theo"
             }
-        }
+        },
+        "viewAll": {
+            "label": {
+              "translation": "Xem tất cả"
+            }
+          }
     },
     "user": {
         "reinviteUser": {
