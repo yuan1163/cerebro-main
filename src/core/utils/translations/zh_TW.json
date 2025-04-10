@@ -594,6 +594,11 @@
                 "translation": "畫面選擇"
             }
         },
+        "readme":{
+            "label": {
+              "translation": "注意事項"
+            }
+          },
         "upload": {
             "label": {
                 "translation": "上傳"

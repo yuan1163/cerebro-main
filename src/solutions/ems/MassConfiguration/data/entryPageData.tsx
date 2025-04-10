@@ -14,6 +14,7 @@ import { System } from '../Pages/System';
 
 // icons
 
+import FileIcon from '@assets/icons/line/file-05.svg?component';
 import ArrowDownLineIcon from '@assets/icons/line/arrow-down.svg?component';
 import MarkerPin01LineIcon from '@assets/icons/line/marker-pin-01.svg?component';
 import PlusLineIcon from '@assets/icons/line/plus.svg?component';
@@ -106,15 +107,20 @@ export const DownloadMCFile = async (
 export const ConfigurationFileData = (): ConfigurationFileProps => {
   return [
     {
-      icon: <PlusLineIcon />,
-      title: t('general.upload.label', 'Upload', 'Process of transferring data to a remote server or platform.'),
-      disabled: false, 
-      // disabled: true,
+      icon: <FileIcon />,
+      title: t('general.readme.label', 'ReadMe', 'ReadMe file.'),
+      disabled: false,
     },
     {
       icon: <ArrowDownLineIcon />,
       title: t('general.download.label', 'Download', 'Process of transferring data to a local device.'),
       disabled: false,
+    },
+    {
+      icon: <PlusLineIcon />,
+      title: t('general.upload.label', 'Upload', 'Process of transferring data to a remote server or platform.'),
+      disabled: false, 
+      // disabled: true,
     },
     // {
     //   icon: <ClockLineIcon />,
