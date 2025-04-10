@@ -1009,6 +1009,11 @@
         "translation": "New password"
       }
     },
+    "confirmPasswordInputPlaceholder": {
+      "label": {
+        "translation": "Confirm password"
+      }
+    },
     "editGroup": {
       "label": {
         "translation": "Edit Group",
@@ -1101,7 +1106,7 @@
     },
     "newPasswordInput": {
       "label": {
-        "translation": "Confirm password",
+        "translation": "New password",
         "notes": "New password field."
       }
     },
