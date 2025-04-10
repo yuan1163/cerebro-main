@@ -76,7 +76,7 @@ const solutions = [
     installed: true,
     title: t('solutions.solutionsPage.pinPoint.label', 'PinPoint', 'PinPoint solution title.'),
     abbr: '',
-    solutionTitle: 'cerebro',
+    solutionTitle: 'pinpoint',
     caption: t(
       'solutions.solutionsPage.pinPoint.content.label',
       'Iveda PinPoint centrally manages IoT trackers and sensors and display them on a map for exact location.',
@@ -95,7 +95,7 @@ const solutions = [
     linkContent: t('solutions.solutionsPage.learnMoreButton.label', 'Learn more', 'Label for Learn more button.'),
     path: 'https://iveda.com/technology/ivedapinpoint/',
     pathDescription: contactUsPath,
-    solutionLink: '/cerebro',
+    solutionLink: '/pinpoint',
   },
   {
     icon: <Lightning01LineIcon />,

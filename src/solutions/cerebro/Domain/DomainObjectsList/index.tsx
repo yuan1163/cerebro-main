@@ -124,7 +124,7 @@ export const DomainObjectsList: React.FC<Props> = ({ className }) => {
 
                 const solutionMappings = [
                   {
-                    mask: SolutionsMasks.cerebro,
+                    mask: SolutionsMasks.pinpoint,
                     title: t('solutions.pinPoint.label', 'PinPoint', 'Title of PinPoint Solution.'),
                   },
                   {
