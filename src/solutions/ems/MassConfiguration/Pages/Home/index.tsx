@@ -93,13 +93,22 @@ export const Home = observer(() => {
             />
             <CardContent fullWidth>
               <Grid container fullHeight fullWidth spacing={3}>
-                <Grid item lg={3}>
-                  <ItemButton
-                    icon="ReadMe" 
-                    title={t('general.readme.label', 'ReadMe', 'Documentation guide.')}
-                    onClick={handleReadMeClick}
-                  />
-                </Grid>
+                {ConfigurationFileData().map((item) => {
+                  if (item.title === t('general.readme.label', 'ReadMe', 'ReadMe file.')) {
+                    console.log('ReadMe button icon:', item.icon);
+                    return (
+                      <Grid item lg={3} key={item.title}>
+                        <ItemButton
+                          icon={item.icon}
+                          title={item.title}
+                          disabled={item.disabled}
+                          onClick={handleReadMeClick}
+                        ></ItemButton>
+                      </Grid>
+                    );
+                  }
+                  return null;
+                })}
                 
                 {ConfigurationFileData().map((item) => {
                   if (item.title === t(

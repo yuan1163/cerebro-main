@@ -594,6 +594,11 @@
                 "translation": "Lựa chọn màn hình"
             }
         },
+        "readme":{
+            "label": {
+              "translation": "Hướng dẫn sử dụng"
+            }
+          },
         "upload": {
             "label": {
                 "translation": "Tải lên"

@@ -594,6 +594,11 @@
                 "translation": "画面选择"
             }
         },
+        "readme":{
+            "label": {
+              "translation": "注意事项"
+            }
+          },
         "upload": {
             "label": {
                 "translation": "上传"

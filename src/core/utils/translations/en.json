@@ -1472,6 +1472,12 @@
         "notes": "Choose a language from the list."
       }
     },
+    "readme":{
+      "label": {
+        "translation": "ReadMe",
+        "notes": "ReadMe file."
+      }
+    },
     "upload": {
       "label": {
         "translation": "Upload",
