@@ -175,8 +175,8 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     },
     ref,
   ) => {
+    
     const [inputFocus, setInputFocus] = useState<boolean>(false);
-    const [inputValue, setInputValue] = useState(value || '');
     const [isHovered, setIsHovered] = useState(false);
     const [showClearButton, setShowClearButton] = useState<boolean>(false);
 
@@ -212,15 +212,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       }
     };
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const newValue = event.target.value;
-      setInputValue(newValue);
-      setShowClearButton(!!newValue);
-      if (onChange) {
-        onChange(event);
-      }
-    };
-
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
         event.preventDefault();
@@ -231,7 +222,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     // CLEAR
 
     const handleClearButtonClick = () => {
-      setInputValue('');
       const currentInput = inputRef.current;
       if (currentInput) {
         currentInput.value = '';
@@ -280,10 +270,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       };
     }, []);
 
-    useEffect(() => {
-      setInputValue(value || '');
-    }, [value]);
-
     return (
       <div className={cn(styles['form-control'], styles[`form-control-severity-${severity}`])}>
         {/* LABEL */}
@@ -330,19 +316,22 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 // defaultValue={defaultValue}
                 disabled={disabled}
                 name={name}
-                onChange={handleInputChange}
+                onChange={(event) => {
+                  setShowClearButton(!!event.target.value);
+                  onChange?.(event);
+                }}                
                 onKeyDown={handleKeyDown}
                 placeholder={placeholder}
-                ref={inputRef}
+                ref={ref}
                 required={required}
                 type={type}
-                value={inputValue}
+                value={value}
                 {...props}
               />
 
               {/* CLEAR BUTTON */}
 
-              {inputValue && showClearButton && (inputFocus || isHovered) && clearButton && (
+              {value && showClearButton && (inputFocus || isHovered) && clearButton && (
                 <Decorator className={styles['icon-clear-button-decorator']} disabled={disabled}>
                   <InputClearButton
                     disabled={disabled}
