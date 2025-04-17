@@ -1,6 +1,6 @@
 import { Grid } from '@core/ui/components/Grid';
 import { Text } from '@core/ui/components/Text';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // utils
 
@@ -68,11 +68,14 @@ const MonthNodeConsumptionData: React.FC<Props> = ({ searchLocations }) => {
 
     return childrenLocation.map((location) => location.locationId);
   });
-  // console.log(searchLocationsArray);
+
+  // 記錄 searchLocationsArray 的內容
+  console.log('[MonthNodeConsumption] searchLocationsArray:', searchLocationsArray);
 
   const ui = useUI();
   const consumption = consumptionFromLastMonth(ui.currentFormation);
-
+  console.log('consumption', consumption);
+  //)
   // CONSUMPTION
 
   const lastMonthConsumption = searchLocationsArray.map((locationIdArray) =>
@@ -82,10 +85,24 @@ const MonthNodeConsumptionData: React.FC<Props> = ({ searchLocations }) => {
     Number(consumption.getThisMonSum(locationIdArray).toFixed()),
   );
 
+  // 記錄原始消耗數據
+  console.log('[MonthNodeConsumption] 消耗數據:', {
+    lastMonthConsumption,
+    thisMonthConsumption,
+    consumptionStorageData: consumption.consumptionFromLastMonth?.length,
+    isFetching: consumption.IsFetching
+  });
+
   // VALUE
 
   const lastMonthValue = lastMonthConsumption.reduce((partSum, x) => partSum + x, 0);
   const thisMonthValue = thisMonthConsumption.reduce((partSum, x) => partSum + x, 0);
+
+  // 記錄總消耗值
+  console.log('[MonthNodeConsumption] 總消耗值:', {
+    lastMonthValue,
+    thisMonthValue
+  });
 
   // LIST
 
@@ -96,6 +113,39 @@ const MonthNodeConsumptionData: React.FC<Props> = ({ searchLocations }) => {
     thisMonthConsumption,
     thisMonthValue,
   );
+
+  // 記錄轉換為百分比後的列表
+  console.log('[MonthNodeConsumption] 百分比數據:', MonthValueList);
+
+  // 使用 useEffect 來追蹤資料狀態的變化
+  useEffect(() => {
+    if (!consumption.IsFetching && consumption.consumptionFromLastMonth) {
+      console.log('[MonthNodeConsumption] 資料載入完成:', {
+        dataLength: consumption.consumptionFromLastMonth.length,
+        firstItem: consumption.consumptionFromLastMonth[0],
+        lastItem: consumption.consumptionFromLastMonth[consumption.consumptionFromLastMonth.length - 1]
+      });
+
+      // 記錄月份數據處理方式的示例
+      const currentMonth = moment().format('YYYY-MM');
+      const lastMonth = moment().subtract(1, 'month').format('YYYY-MM');
+
+      const thisMonthData = consumption.consumptionFromLastMonth.filter(
+        item => item.measureDateMs && moment(item.measureDateMs).format('YYYY-MM') === currentMonth
+      );
+
+      const lastMonthData = consumption.consumptionFromLastMonth.filter(
+        item => item.measureDateMs && moment(item.measureDateMs).format('YYYY-MM') === lastMonth
+      );
+
+      console.log('[MonthNodeConsumption] 月份篩選示例:', {
+        currentMonth,
+        lastMonth,
+        thisMonthDataCount: thisMonthData.length,
+        lastMonthDataCount: lastMonthData.length
+      });
+    }
+  }, [consumption.IsFetching, consumption.consumptionFromLastMonth]);
 
   return (
     <Grid fullWidth className={styles['data-container']} display='grid'>

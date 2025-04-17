@@ -199,10 +199,9 @@ export const Header: React.FC<Props> = ({
     // 立即執行一次檢查
     checkUnreadNotifications();
     
-    // 設置兩分鐘間隔的定時器
     timerRef.current = window.setInterval(() => {
       checkUnreadNotifications();
-    }, 1 * 60 * 1000); // 1分鐘
+    }, 2 * 60 * 1000);
     
     // 組件卸載時清除定時器
     return () => {
