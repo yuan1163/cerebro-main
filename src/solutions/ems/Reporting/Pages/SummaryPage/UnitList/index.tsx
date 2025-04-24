@@ -181,6 +181,11 @@ export const UnitList: React.FC<Props> = ({ productId }) => {
                   {/* Process History */}
                   {t('ems.processHistory.label', '', '')}
                 </Text>
+                {processHistory.length === 0 ? (
+                  <span className='flex items-center'>
+                    <CircularProgress className='ml-4' />
+                  </span>
+                ) : null}
               </Grid>
             </Grid>
             {processHistory.map((ph) => {

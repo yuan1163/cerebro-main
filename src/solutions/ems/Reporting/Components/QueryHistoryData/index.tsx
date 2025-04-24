@@ -31,21 +31,18 @@ const QueryHistoryData: React.FC<Props> = ({ parameter, parameterId, locationId,
 
   const energyVal = getEnergy(locationId, parameter, parameterId);
 
-  return (
-    <>
-      {energyVal === undefined ? (
-        <CircularProgress />
-      ) : showEmission ? (
-        emissionFactor ? (
-          Number(energyVal * emissionFactor).toFixed(2)
-        ) : (
-          '-'
-        )
-      ) : (
-        Number(energyVal).toFixed(2)
-      )}
-    </>
-  );
+  if (energyVal === undefined || energyVal === 0) {
+    return <CircularProgress className='mr-4' />;
+  }
+
+  let historyDataValue: string;
+  if (showEmission) {
+    historyDataValue = emissionFactor !== undefined ? (energyVal * emissionFactor).toFixed(2) : '-';
+  } else {
+    historyDataValue = energyVal.toFixed(2);
+  }
+
+  return <>{historyDataValue}</>;
 };
 
 export default QueryHistoryData;
