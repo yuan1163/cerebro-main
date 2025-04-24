@@ -11,7 +11,7 @@ export const Users = () => {
       <Route path='admin/*' element={<AdminSelection />} />
       <Route path='user/*' element={<UserSelection />} />
       <Route path='group/*' element={<GroupSelection />} />
-      <Route path='/' element={<Navigate to='user' />} />
+      <Route path='/' element={<Navigate to='admin' />} />
     </Routes>
   );
 };
