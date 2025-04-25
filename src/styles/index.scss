@@ -7,6 +7,11 @@
 @import '@core/ui/components/Slider/styles.module.scss';
 
 @tailwind base;
+@layer base {
+  img {
+    @apply inline-block;
+  }
+}
 @tailwind components;
 @tailwind utilities;
 
