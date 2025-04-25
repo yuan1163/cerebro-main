@@ -20,9 +20,16 @@ type Props = {
   parameterId: number;
   locationId: number | undefined;
   showEmission?: boolean;
+  handleCalculating?: () => void;
 };
 
-const QueryHistoryData: React.FC<Props> = ({ parameter, parameterId, locationId, showEmission = false }) => {
+const QueryHistoryData: React.FC<Props> = ({
+  parameter,
+  parameterId,
+  locationId,
+  showEmission = false,
+  handleCalculating,
+}) => {
   // const QueryHistoryData: React.FC<Props> = ({ parameter, parameterId, showEmission = false }) => {
   // const ui = useUI();
   // emission
@@ -30,6 +37,12 @@ const QueryHistoryData: React.FC<Props> = ({ parameter, parameterId, locationId,
   const emissionFactor = getCarbonEmissionFactors({ locationId, year: moment().year() });
 
   const energyVal = getEnergy(locationId, parameter, parameterId);
+
+  useEffect(() => {
+    if (energyVal && typeof handleCalculating === 'function') {
+      handleCalculating();
+    }
+  }, [energyVal, handleCalculating]);
 
   if (energyVal === undefined || energyVal === 0) {
     return <CircularProgress className='mr-4' />;

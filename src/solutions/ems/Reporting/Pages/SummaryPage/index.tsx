@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { observer } from 'mobx-react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 import { t } from '@core/utils/translate';
 
@@ -32,6 +34,8 @@ import { Avatar } from '@core/ui/components/Avatar';
 import { Divider } from '@core/ui/components/Divider';
 import { useProducts } from '../../storages/controllers/product';
 import ProductData from './ProductData';
+import { Button } from '@core/ui/components/Button';
+import { set } from '@nodemodules/@types/lodash';
 
 type ProductsType = {
   image: React.ReactNode;
@@ -39,6 +43,7 @@ type ProductsType = {
 }[];
 
 const SummaryPage = observer(() => {
+  const [isCalculating, setIsCalculating] = React.useState(true);
   const pageSwitch = getPageSwitch();
   const [selectedVariant, setSelectedVariant] = React.useState<string>('summary');
 
@@ -65,6 +70,38 @@ const SummaryPage = observer(() => {
       setselectProductId(list.length ? list[0].productId : 0);
     }
   }, [list]);
+
+  const productRef = useRef(null);
+
+  const handleDownload = async () => {
+    const productInfo = productRef.current;
+    if (!productInfo) return;
+    const canvas = await html2canvas(productInfo, {
+      scale: 4,
+    });
+    const imgData = canvas.toDataURL('image/png');
+    const imgWidth = canvas.width;
+    const imgHeight = canvas.height;
+    const pdf = new jsPDF({
+      orientation: 'portrait',
+      unit: 'px',
+      format: [595, 842],
+    });
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+
+    const scale = Math.min(pageWidth / imgWidth, pageHeight / imgHeight);
+    const imageWidthScaled = imgWidth * scale;
+    const imageHeightScaled = imgHeight * scale;
+
+    const xOffset = (pageWidth - imageWidthScaled) / 2;
+
+    pdf.addImage(imgData, 'PNG', xOffset, 20, imageWidthScaled, imageHeightScaled);
+    pdf.save('ems-reporting-summary.pdf');
+  };
+  const handleCalculating = () => {
+    setIsCalculating(false);
+  };
 
   return (
     <>
@@ -132,16 +169,31 @@ const SummaryPage = observer(() => {
                 </AccordionGroup>
               </Scrollbar>
             </Unit>
-            <Unit height='full' className={styles['summary-unit']}>
-              <Grid>
-                <ProductData locationId={ui.currentFormation} productId={selectProductId}></ProductData>
-              </Grid>
-              <Grid container fullWidth spacing={3} direction='column' grow>
-                <Grid item fullHeight>
-                  <UnitList key={`unitList.${selectProductId}`} productId={selectProductId}></UnitList>
-                </Grid>
-              </Grid>
-            </Unit>
+            <div className='relative w-full'>
+              <Button
+                onClick={handleDownload}
+                disabled={isCalculating}
+                className='absolute right-8 top-4 z-10 bg-white p-2 rounded-md shadow-md leading-[20px]'
+              >
+                Download to PDF
+              </Button>
+              <div ref={productRef}>
+                <Unit height='full' className={styles['summary-unit']}>
+                  <Grid>
+                    <ProductData
+                      locationId={ui.currentFormation}
+                      productId={selectProductId}
+                      handleCalculating={handleCalculating}
+                    ></ProductData>
+                  </Grid>
+                  <Grid container fullWidth spacing={3} direction='column' grow>
+                    <Grid item fullHeight>
+                      <UnitList key={`unitList.${selectProductId}`} productId={selectProductId}></UnitList>
+                    </Grid>
+                  </Grid>
+                </Unit>
+              </div>
+            </div>
           </UnitContainer>
         </Grid>
       </Grid>

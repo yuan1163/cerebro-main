@@ -23,9 +23,10 @@ import PlugSolidIcon from '@assets/icons/solid/plug-in.svg?component';
 type Props = {
   productId: number;
   locationId: number | undefined;
+  handleCalculating: () => void;
 };
 
-const ProductData: React.FC<Props> = ({ productId, locationId }) => {
+const ProductData: React.FC<Props> = ({ productId, locationId, handleCalculating }) => {
   return (
     <Card fullWidth>
       <CardHeader disablePaddingBottom title={t('ems.product.label', '', '')} />
@@ -44,6 +45,7 @@ const ProductData: React.FC<Props> = ({ productId, locationId }) => {
                   key={`historyData.totalConsumption`}
                   parameter='productId'
                   parameterId={productId}
+                  handleCalculating={handleCalculating}
                 ></QueryHistoryData>{' '}
                 kWh
               </Text>
@@ -67,6 +69,7 @@ const ProductData: React.FC<Props> = ({ productId, locationId }) => {
                   parameter='productId'
                   parameterId={productId}
                   showEmission
+                  handleCalculating={handleCalculating}
                 ></QueryHistoryData>{' '}
                 CO2e
               </Text>
