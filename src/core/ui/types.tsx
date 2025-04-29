@@ -116,7 +116,6 @@ export const getAllSolutions = () => [
 ];
 
 export const getAvailbableSolutions = (company: Location) => {
-  company.branchSolutions = 18 | SolutionsMasks.pinpoint; 
   const result: Solutions[] = [];
   if (company.branchSolutions & SolutionsMasks.pinpoint) result.push(Solutions.pinpoint);
   if (company.branchSolutions & SolutionsMasks.utilus) result.push(Solutions.utilus);
@@ -125,6 +124,17 @@ export const getAvailbableSolutions = (company: Location) => {
   if (company.branchSolutions & SolutionsMasks.ems) result.push(Solutions.ems);
   return result;
 };
+/*
+export const getAvailbableSolutions = (company: Location) => {
+  company.branchSolutions = 18 | SolutionsMasks.pinpoint; 
+  const result: Solutions[] = [];
+  if (company.branchSolutions & SolutionsMasks.pinpoint) result.push(Solutions.pinpoint);
+  if (company.branchSolutions & SolutionsMasks.utilus) result.push(Solutions.utilus);
+  if (company.branchSolutions & SolutionsMasks.ai) result.push(Solutions.ai);
+  if (company.branchSolutions & SolutionsMasks.connect) result.push(Solutions.connect);
+  if (company.branchSolutions & SolutionsMasks.ems) result.push(Solutions.ems);
+  return result;
+};*/
 
 export const getPriorityData = (priority: IssuePriority) => {
   switch (priority) {
