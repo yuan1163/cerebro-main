@@ -73,7 +73,9 @@ export const CampusPage = () => {
   const contractCapacityObject: Partial<Properties> | undefined = filter.properties?.getContractCapacity();
   const contractCapacity = contractCapacityObject?.value && JSON.parse(contractCapacityObject.value);
   const emissionFactorObject: Partial<Properties> | undefined = filter.properties?.getEmissionFactor();
-  const emissionFactor = emissionFactorObject?.value && JSON.parse(emissionFactorObject.value);
+  const emissionFactors = emissionFactorObject?.value;
+  const emissionFactorsArr = emissionFactors && JSON.parse(emissionFactors);
+  const emissionFactor = emissionFactorsArr && emissionFactorsArr[0];
 
   // edit assets
 

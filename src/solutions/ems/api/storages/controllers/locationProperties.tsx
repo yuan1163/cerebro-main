@@ -2,6 +2,7 @@ import { queryClient } from '@app/DataAccessAdapter';
 import { Properties, apiUpdateLocationProperties } from '../../entities/locations';
 import { useLocationProperte } from '../../hook/useLocationProperte';
 import { useMutation } from '@tanstack/react-query';
+import { apiGetLocationProperties } from '../../entities/locations';
 
 const CONTROLLER = 'locationProperties';
 
@@ -56,7 +57,16 @@ export const useLocationProperty = () => {
     await LocationPropertiesController.invalidate();
   };
 
+  const get = async (locationId: number | undefined, name: string): Promise<{ value?: string } | undefined> => {
+    if (!locationId || !name) return undefined;
+    const filter = { locationId };
+    const properties = await apiGetLocationProperties(filter);
+    const foundProperty = properties.find((prop) => prop.name === name);
+    return foundProperty ? { value: foundProperty.value } : undefined;
+  };
+
   return {
     update,
+    get,
   };
 };
