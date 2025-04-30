@@ -52,15 +52,15 @@ type Props = {
 };
 
 export const ProfileEdit: React.FC<Props> = ({ className, onClose, emissionFactor, formationLocationId, ...props }) => {
-  const [emissionFactorState, setEmissionFactorState] = React.useState<{ [key: string]: string }[]>([]);
+  const [emissionFactorState, setEmissionFactorState] = React.useState<{ [key: string]: string }>({});
   const controller = useLocationProperty();
   useEffect(() => {
     const getEmissionFactor = async () => {
       if (!formationLocationId) return;
-      const emissionFactor = await controller.get(formationLocationId, 'emissionFactor');
-      console.log('emissionFactor', emissionFactor);
-      if (emissionFactor?.value) {
-        setEmissionFactorState(JSON.parse(emissionFactor.value));
+      const emissionFactorStored = await controller.get(formationLocationId, 'emissionFactor');
+      console.log('emissionFactor', emissionFactorStored);
+      if (emissionFactorStored?.value) {
+        setEmissionFactorState(JSON.parse(emissionFactorStored.value));
       }
     };
     getEmissionFactor();
@@ -90,32 +90,25 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, emissionFacto
 
     let yearFactor: {
       [key: string]: string;
-    }[] = [];
+    } = {};
     let input: Partial<Properties>;
 
     const existingData = await controller.get(formationLocationId, 'emissionFactor');
     if (existingData?.value) {
       const parsedExisting = JSON.parse(existingData.value);
-      yearFactor = [...parsedExisting];
+      if (Array.isArray(parsedExisting)) {
+        parsedExisting.forEach((item: { [key: string]: string }) => {
+          const year = Object.keys(item)[0];
+          const factor = Object.values(item)[0];
+          yearFactor[year] = factor;
+        });
+      } else {
+        yearFactor = parsedExisting;
+      }
     }
 
     if (data.year && data.factor) {
-      const yearExists = yearFactor.some((item) => Object.keys(item)[0] === data.year.toString());
-      if (yearExists) {
-        yearFactor = yearFactor.map((item) => {
-          if (Object.keys(item)[0] === data.year.toString()) {
-            return { [data.year]: data.factor };
-          }
-          return item;
-        });
-      } else {
-        yearFactor.push({ [data.year]: data.factor });
-        yearFactor.sort((a, b) => {
-          const yearA = parseInt(Object.keys(a)[0]);
-          const yearB = parseInt(Object.keys(b)[0]);
-          return yearB - yearA;
-        });
-      }
+      yearFactor[data.year.toString()] = data.factor;
       input = { name: 'emissionFactor', value: JSON.stringify(yearFactor) };
     } else {
       input = { name: 'emissionFactor', value: '' };
@@ -152,10 +145,9 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, emissionFacto
             </DataGridRow>
           </DataGridHead>
           <DataGridBody>
-            {emissionFactorState.length !== 0 &&
-              emissionFactorState.slice(0, 20).map((item: { [key: string]: string }) => {
-                const year = Object.keys(item)[0];
-                const factor = Object.values(item)[0];
+            {emissionFactorState &&
+              Object.keys(emissionFactorState).map((year: string) => {
+                const factor = emissionFactorState[year];
                 return (
                   <DataGridRow key={year} className={styles['data-grid-row']}>
                     <DataGridCell>
@@ -179,9 +171,10 @@ export const ProfileEdit: React.FC<Props> = ({ className, onClose, emissionFacto
                   </DataGridRow>
                 );
               })}
-            {emissionFactorState.length > 20 && (
+
+            {Object.keys(emissionFactorState).length > 20 && (
               <Text variant='sm' weight='bold' className='mt-4'>
-                Showing 20 of {emissionFactorState.length} years of factor data.
+                Showing 20 of {Object.keys(emissionFactorState).length} years of factor data.
               </Text>
             )}
           </DataGridBody>
