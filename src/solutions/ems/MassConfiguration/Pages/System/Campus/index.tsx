@@ -40,6 +40,8 @@ import { settingButtons } from '../Setting';
 import { useFilters } from './useFilter';
 import { useFilterText } from './filter';
 
+import { getmcHomeURL } from '@solutions/ems/MassConfiguration/data/devices';
+
 export const CampusPage = () => {
   const navigate = useNavigate();
 
@@ -102,7 +104,7 @@ export const CampusPage = () => {
 
   return (
     <>
-      <MCHeader previousPageURL='../' SegmentedControlObject={SegmentedControlObject} />
+      <MCHeader previousPageURL={getmcHomeURL()} SegmentedControlObject={SegmentedControlObject} />
       <UnitContainer>
         <Unit>
           <Card>
