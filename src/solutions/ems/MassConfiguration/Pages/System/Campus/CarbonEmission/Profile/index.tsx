@@ -54,7 +54,7 @@ export const Profile: React.FC<Props> = ({ className, handleEditProfile, emissio
   return (
     <>
       <CardHeader disablePaddingBottom>
-        <Grid container direction='column' spacing={4}>
+        <Grid container direction='column' spacing={4} justifyContent='center'>
           <Grid item alignItems='center'>
             <Icon className={styles['icon']} variant='tint' color={'primary'} size='3xl'>
               <Carbonemission01LineIcon />

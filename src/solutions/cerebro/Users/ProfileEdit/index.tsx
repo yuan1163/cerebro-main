@@ -170,48 +170,46 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
   const changeCurrentPassword = () => {
     const data = passwordForm.getValues();
-    const passwordInvalidMsgData: string[] = []
-    console.log('data: ', data)
-    const {
-      confirmPassword,
-      newPassword,
-      oldPassword
-    } = data
+    const passwordInvalidMsgData: string[] = [];
+    console.log('data: ', data);
+    const { confirmPassword, newPassword, oldPassword } = data;
 
-    initPasswordInvalidMsg()
-    checkAllFieldEmpty()
-    checkNewPassword()
+    initPasswordInvalidMsg();
+    checkAllFieldEmpty();
+    checkNewPassword();
 
-    if(!passwordInvalidMsgData.length) {
-      console.log('密碼更換成功')
+    if (!passwordInvalidMsgData.length) {
+      console.log('密碼更換成功');
       auth.resetPassword({
         oldPassword: data.oldPassword,
         newPassword: data.newPassword,
         brand: import.meta.env.VITE_BRAND,
       });
     } else {
-      console.log('更換失敗')
-      setPasswordInvalidMsg(passwordInvalidMsgData)
+      console.log('更換失敗');
+      setPasswordInvalidMsg(passwordInvalidMsgData);
     }
 
     function checkNewPassword() {
-      if (newPassword&&confirmPassword&&newPassword !== confirmPassword) {
+      if (newPassword && confirmPassword && newPassword !== confirmPassword) {
         // passwordInvalidMsgData.push('新密碼與二次確認密碼不一致，請確保兩者輸入相同。')
-        passwordInvalidMsgData.push('The new password and the confirmation password do not match. Please ensure both are entered the same')
+        passwordInvalidMsgData.push(
+          'The new password and the confirmation password do not match. Please ensure both are entered the same',
+        );
       }
     }
     function checkAllFieldEmpty() {
       // if(!oldPassword) passwordInvalidMsgData.push('目前密碼 欄位不得為空')
-      if(!oldPassword) passwordInvalidMsgData.push('The current password field cannot be empty')
+      if (!oldPassword) passwordInvalidMsgData.push('The current password field cannot be empty');
 
       // if(!newPassword) passwordInvalidMsgData.push('新密碼 欄位不得為空')
-      if(!newPassword) passwordInvalidMsgData.push('The new password field cannot be empty')
+      if (!newPassword) passwordInvalidMsgData.push('The new password field cannot be empty');
 
       // if(!confirmPassword) passwordInvalidMsgData.push('新密碼再確認 欄位不得為空')
-      if(!confirmPassword) passwordInvalidMsgData.push('The new password confirmation field cannot be empty')
+      if (!confirmPassword) passwordInvalidMsgData.push('The new password confirmation field cannot be empty');
     }
-    function initPasswordInvalidMsg () {
-      setPasswordInvalidMsg([])
+    function initPasswordInvalidMsg() {
+      setPasswordInvalidMsg([]);
     }
   };
 
@@ -330,11 +328,11 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
     onClose?.();
   };
 
-  const [newPassword, setNewPassword] = useState('')
-  const [passwordInvalidMsg, setPasswordInvalidMsg ] = useState<string[]>([])
+  const [newPassword, setNewPassword] = useState('');
+  const [passwordInvalidMsg, setPasswordInvalidMsg] = useState<string[]>([]);
 
   async function getNewPassword() {
-    const newPwd = await controller.requestNewPassword(user.email)
+    const newPwd = await controller.requestNewPassword(user.email);
     setNewPassword(newPwd);
   }
   return (
@@ -524,7 +522,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
                   {/* ROLE */}
 
-                  {isAdmin && (
+                  {/* {isAdmin && (
                     <Grid item>
                       <UserRoleSelect
                         label={t('user.roleInput.label', 'ROLE', 'user role label.')}
@@ -537,11 +535,11 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         disabled={!hasEditRights}
                       />
                     </Grid>
-                  )}
+                  )} */}
 
                   {/* ADMIN LOCATION */}
 
-                  <Grid item>
+                  {/* <Grid item>
                     <Controller
                       control={control}
                       name='locationIds'
@@ -559,11 +557,11 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         />
                       )}
                     />
-                  </Grid>
+                  </Grid> */}
 
                   {/* USER GROUP */}
 
-                  <Grid item>
+                  {/* <Grid item>
                     <Controller
                       control={control}
                       name='groups'
@@ -581,7 +579,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         />
                       )}
                     />
-                  </Grid>
+                  </Grid> */}
                 </Grid>
               </Accordion>
               {/* <Accordion square>
@@ -691,9 +689,13 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                                 label={t('user.currentPassword.label', 'current password', 'current password')}
                                 name='password'
                                 onChange={onChange}
-                                placeholder={t('user.currentPasswordInputPlaceholder.label', 'current password', 'current password')}
+                                placeholder={t(
+                                  'user.currentPasswordInputPlaceholder.label',
+                                  'current password',
+                                  'current password',
+                                )}
                                 value={value}
-                                />
+                              />
                             )}
                           />
                         </Grid>
@@ -708,7 +710,11 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                                 autoComplete='new-password'
                                 label={t('user.newPasswordInput.label', 'new password', 'new password')}
                                 onChange={onChange}
-                                placeholder={t('user.newPasswordInputPlaceholder.label', 'new password', 'new password')}
+                                placeholder={t(
+                                  'user.newPasswordInputPlaceholder.label',
+                                  'new password',
+                                  'new password',
+                                )}
                                 value={value}
                               />
                             )}
@@ -727,10 +733,14 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                                 autoComplete='confirmPassword'
                                 label={t('user.confirmPasswordInput.label', 'confirm password', 'confirm password')}
                                 onChange={onChange}
-                                placeholder={t('user.confirmPasswordInputPlaceholder.label', 'confirm password', 'confirm password')}
+                                placeholder={t(
+                                  'user.confirmPasswordInputPlaceholder.label',
+                                  'confirm password',
+                                  'confirm password',
+                                )}
                                 value={value}
-                                />
-                              )}
+                              />
+                            )}
                           />
                         </Grid>
                         <Grid item>
@@ -738,16 +748,15 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                             {t('general.changeButton.label', 'Change', 'Change button.')}
                           </Button>
                         </Grid>
-                        
-                        {passwordInvalidMsg.length > 0 && (
-                          passwordInvalidMsg.map(item=> {
+
+                        {passwordInvalidMsg.length > 0 &&
+                          passwordInvalidMsg.map((item) => {
                             return (
                               <Text color='error' key={item} className='my-1'>
                                 {item}
                               </Text>
-                            )
-                          })
-                        )}
+                            );
+                          })}
                       </>
                     ) : (
                       <Button onClick={getNewPassword} fullWidth variant='outlined'>
@@ -759,14 +768,11 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                       </Button>
                     )}
 
-                    {
-                      newPassword && (
-                        `
+                    {newPassword &&
+                      `
                           ${t('user.newPasswordInputPlaceholder.label', 'New password', 'New password')}：
                           ${newPassword}
-                        `
-                      )
-                    }
+                        `}
                   </Grid>
                 </Accordion>
               )}
