@@ -240,14 +240,32 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
   const [initialLocationsState, setInitialLocationsState] = useState([...controller.locations]);
   const [selectedLocations, setSelectedLocations] = useState(() => {
     const defaultLocation = locations.getCompany();
-    return controller.locations.length > 0 ? [...controller.locations] : [defaultLocation];
+    // 確保公司主要地點始終被包含在選擇中
+    return controller.locations.length > 0 
+      ? [...controller.locations, ...(controller.locations.some(loc => loc.locationId === defaultLocation.locationId) ? [] : [defaultLocation])]
+      : [defaultLocation];
   });
+
+  // 確保公司主要地點始終包含在selectedLocations中
+  const handleSetSelectedLocations = (newLocations: Location[]) => {
+    const companyLocation = locations.getCompany();
+    // 如果新的地點列表不包含公司主要地點，則添加它
+    if (!newLocations.some(loc => loc.locationId === companyLocation.locationId)) {
+      newLocations.push(companyLocation);
+    }
+    setSelectedLocations(newLocations);
+  };
 
   const handleAppendLocation = (location: Location) => {
     setSelectedLocations((prevLocations) => [...prevLocations, location]);
   };
 
   const handleRemoveLocation = (locationToRemove: Location) => {
+    const companyLocation = locations.getCompany();
+    // 如果嘗試移除的是公司主要地點，則不執行任何操作
+    if (locationToRemove.locationId === companyLocation.locationId) {
+      return;
+    }
     setSelectedLocations((prevLocations) =>
       prevLocations.filter((location) => location.locationId !== locationToRemove.locationId),
     );
@@ -522,7 +540,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
                   {/* ROLE */}
 
-                  {/* {isAdmin && (
+                  {isAdmin && (
                     <Grid item>
                       <UserRoleSelect
                         label={t('user.roleInput.label', 'ROLE', 'user role label.')}
@@ -535,11 +553,11 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         disabled={!hasEditRights}
                       />
                     </Grid>
-                  )} */}
+                  )}
 
                   {/* ADMIN LOCATION */}
 
-                  {/* <Grid item>
+                  <Grid item>
                     <Controller
                       control={control}
                       name='locationIds'
@@ -551,17 +569,18 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                           initial={selectedLocations}
                           label={t('location.locations.label', 'CATEGORY', 'user category label.')}
                           onAppend={handleAppendLocation}
-                          onChange={setSelectedLocations}
+                          onChange={handleSetSelectedLocations}
                           onRemove={handleRemoveLocation}
                           placeholder={formFieldSettings.user.locations.placeholder}
+                          onlyShowCompany={true}
                         />
                       )}
                     />
-                  </Grid> */}
+                  </Grid>
 
                   {/* USER GROUP */}
 
-                  {/* <Grid item>
+                  <Grid item>
                     <Controller
                       control={control}
                       name='groups'
@@ -579,7 +598,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         />
                       )}
                     />
-                  </Grid> */}
+                  </Grid>
                 </Grid>
               </Accordion>
               {/* <Accordion square>

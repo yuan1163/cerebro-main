@@ -138,14 +138,31 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
   const [initialLocationsState, setInitialLocationsState] = useState([...controller.locations]);
   const [selectedLocations, setSelectedLocations] = useState(() => {
     const defaultLocation = locations.getCompany();
-    return controller.locations.length > 0 ? [...controller.locations] : [defaultLocation];
+    return controller.locations.length > 0 
+      ? [...controller.locations, ...(controller.locations.some(loc => loc.locationId === defaultLocation.locationId) ? [] : [defaultLocation])]
+      : [defaultLocation];
   });
+
+  // 確保公司主要地點始終包含在selectedLocations中
+  const handleSetSelectedLocations = (newLocations: Location[]) => {
+    const companyLocation = locations.getCompany();
+    // 如果新的地點列表不包含公司主要地點，則添加它
+    if (!newLocations.some(loc => loc.locationId === companyLocation.locationId)) {
+      newLocations.push(companyLocation);
+    }
+    setSelectedLocations(newLocations);
+  };
 
   const handleAppendLocation = (location: Location) => {
     setSelectedLocations((prevLocations) => [...prevLocations, location]);
   };
 
   const handleRemoveLocation = (locationToRemove: Location) => {
+    const companyLocation = locations.getCompany();
+    // 如果嘗試移除的是公司主要地點，則不執行任何操作
+    if (locationToRemove.locationId === companyLocation.locationId) {
+      return;
+    }
     setSelectedLocations((prevLocations) =>
       prevLocations.filter((location) => location.locationId !== locationToRemove.locationId),
     );
@@ -447,14 +464,6 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
 
                   {isAdmin && (
                     <Grid item>
-                      {/* <SelectUserLocations
-                        inputId='locations'
-                        label={t('location.locations.label', 'Locations', 'Locations.')}
-                        initial={controller.locations}
-                        onAppend={(location) => controller.addLocation(location)}
-                        onRemove={(location) => controller.removeLocation(location)}
-                      /> */}
-
                       <Controller
                         control={control}
                         name='locationIds'
@@ -466,9 +475,10 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
                             inputId='locations'
                             label={formFieldSettings.user.locations.label}
                             onAppend={handleAppendLocation}
-                            onChange={setSelectedLocations}
+                            onChange={handleSetSelectedLocations}
                             onRemove={handleRemoveLocation}
                             placeholder={formFieldSettings.user.locations.placeholder}
+                            onlyShowCompany={true}
                           />
                         )}
                       />

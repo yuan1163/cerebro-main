@@ -22,6 +22,7 @@ type Props = {
   onChange?: (locations: Location[]) => void;
   onRemove?: (item: Location) => void;
   placeholder?: string;
+  onlyShowCompany?: boolean;
 };
 
 const flat = (hierarchy: Location[] | undefined): Location[] => {
@@ -63,9 +64,15 @@ export const SelectUserLocations: React.FC<Props> = ({
   onChange,
   onRemove,
   placeholder,
+  onlyShowCompany = false,
 }) => {
   const locations = useLocations();
-  const locationsList = React.useMemo(() => flat(locations.getData()), [locations.getData()]);
+  const locationsList = React.useMemo(() => {
+    if (onlyShowCompany) {
+      return [locations.getCompany()];
+    }
+    return flat(locations.getData());
+  }, [locations.getData(), onlyShowCompany]);
 
   return (
     <MultiSelect
@@ -80,7 +87,7 @@ export const SelectUserLocations: React.FC<Props> = ({
       onRemove={onRemove}
       placeholder={placeholder}
       present={(item: Location) => `${item.name} (${getType(item)})`}
-      searchable
+      searchable={!onlyShowCompany}
       source={locationsList}
       value={initial}
     />
