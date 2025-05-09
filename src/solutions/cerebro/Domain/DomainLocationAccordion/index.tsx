@@ -82,10 +82,13 @@ export const DomainLocationAccordion: React.FC<Props> = ({ items, locationId, lo
                 aria-label=''
                 variant='text'
                 size='lg'
-                disabled={locationType === 'areas'}
                 onClick={() => {
                   ui.setEmsCurrentLocation(item.locationId);
-                  navigate(`dashboard/${locationId}/scheme`);
+                  if (locationType === 'areas') {
+                    navigate(`dashboard/${item.locationId}/map`);
+                  } else if (locationType === 'buildings') {
+                    navigate(`dashboard/${locationId}/scheme`);
+                  }
                 }}
               >
                 <ArrowRightLineIcon />
