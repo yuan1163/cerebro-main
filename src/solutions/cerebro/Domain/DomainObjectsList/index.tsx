@@ -168,12 +168,16 @@ export const DomainObjectsList: React.FC<Props> = ({ className }) => {
                         <Grid container direction='column' spacing={2}>
                           {areas.length > 0 && (
                             <Grid item>
-                              <DomainLocationAccordion items={areas} />
+                              <DomainLocationAccordion items={areas} locationType='areas' />
                             </Grid>
                           )}
                           {!areas.length && (
                             <Grid item>
-                              <DomainLocationAccordion items={buildings} />
+                              <DomainLocationAccordion
+                                items={buildings}
+                                locationId={item.locationId}
+                                locationType='buildings'
+                              />
                             </Grid>
                           )}
                         </Grid>

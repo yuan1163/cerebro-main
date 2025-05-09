@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 // utils
 
@@ -40,9 +41,12 @@ import ArrowRightLineIcon from '@assets/icons/line/arrow-right.svg?component';
 type Props = {
   className?: string;
   items?: Location[];
+  locationId?: number;
+  locationType?: string;
 } & React.HTMLAttributes<HTMLElement>;
 
-export const DomainLocationAccordion: React.FC<Props> = ({ items }) => {
+export const DomainLocationAccordion: React.FC<Props> = ({ items, locationId, locationType }) => {
+  const navigate = useNavigate();
   const firstItemType = items?.[0]?.type;
   const pluralName = firstItemType ? getLocationType(firstItemType).pluralName : '';
 
@@ -74,7 +78,16 @@ export const DomainLocationAccordion: React.FC<Props> = ({ items }) => {
                   </Text>
                 </Grid>
               </Grid>
-              <IconButton aria-label='' disabled variant='text' size='lg'>
+              <IconButton
+                aria-label=''
+                variant='text'
+                size='lg'
+                disabled={locationType === 'areas'}
+                onClick={() => {
+                  ui.setEmsCurrentLocation(item.locationId);
+                  navigate(`dashboard/${locationId}/scheme`);
+                }}
+              >
                 <ArrowRightLineIcon />
               </IconButton>
             </Grid>
