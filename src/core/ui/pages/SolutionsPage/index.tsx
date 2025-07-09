@@ -74,13 +74,13 @@ const solutions = [
   {
     icon: <TrackerIcon />,
     installed: true,
-    title: t('solutions.solutionsPage.pinPoint.label', 'PinPoint', 'PinPoint solution title.'),
+    title: t('solutions.solutionsPage.pinPoint.label', 'IvedaRTLS', 'IvedaRTLS solution title.'),
     abbr: '',
-    solutionTitle: 'pinpoint',
+    solutionTitle: 'ivedartls',
     caption: t(
       'solutions.solutionsPage.pinPoint.content.label',
-      'Iveda PinPoint centrally manages IoT trackers and sensors and display them on a map for exact location.',
-      'Brief PinPoint solution description label.',
+      'Iveda RTLS centrally manages IoT trackers and sensors and display them on a map for exact location.',
+      'Brief IvedaRTLS solution description label.',
     ),
     options: [
       t('solutions.solutionsPage.pinPoint.options.01', 'Assets', 'Assets option label.'),
@@ -93,9 +93,9 @@ const solutions = [
       t('solutions.solutionsPage.pinPoint.options.04', 'Heatmaps', 'Heatmaps option label.'),
     ],
     linkContent: t('solutions.solutionsPage.learnMoreButton.label', 'Learn more', 'Label for Learn more button.'),
-    path: 'https://iveda.com/technology/ivedapinpoint/',
+    path: 'https://iveda.com/technology/ivedartls/',
     pathDescription: contactUsPath,
-    solutionLink: '/pinpoint',
+    solutionLink: '/ivedartls',
   },
   {
     icon: <Lightning01LineIcon />,

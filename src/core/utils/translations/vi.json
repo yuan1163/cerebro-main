@@ -1895,7 +1895,7 @@
                     }
                 },
                 "content": {
-                    "translation": "Iveda PinPoint quản lý tập trung các thiết bị theo dõi và cảm biến IoT, đồng thời hiển thị chúng trên bản đồ để biết vị trí chính xác."
+                    "translation": "Iveda RTLS quản lý tập trung các thiết bị theo dõi và cảm biến IoT, đồng thời hiển thị chúng trên bản đồ để biết vị trí chính xác."
                 },
                 "label": {
                     "translation": "xác định"
@@ -2228,7 +2228,7 @@
         },
         "pinPoint": {
             "label": {
-                "translation": "xác định"
+                "translation": "IvedaRTLS"
             }
         },
         "cerebro": {

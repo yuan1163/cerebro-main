@@ -1900,7 +1900,7 @@
                     }
                 },
                 "content": {
-                    "translation": "Iveda PinPoint 集中管理物联网跟踪器和传感器，并将其显示在地图上以获取准确位置。"
+                    "translation": "Iveda RTLS 集中管理物联网跟踪器和传感器，并将其显示在地图上以获取准确位置。"
                 },
                 "label": {
                     "translation": "查明"
@@ -2233,7 +2233,7 @@
         },
         "pinPoint": {
             "label": {
-                "translation": "查明"
+                "translation": "IvedaRTLS"
             }
         },
         "cerebro": {

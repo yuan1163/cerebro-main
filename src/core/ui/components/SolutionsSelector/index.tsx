@@ -55,7 +55,7 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
 
   const Titles: Record<Solutions, string> = {
     ai: t('solutions.ai.label', 'IvedaAI', 'Title of AI Solution.'),
-    pinpoint: t('solutions.pinPoint.label', 'PinPoint', 'Title of PinPoint Solution.'),
+    pinpoint: t('solutions.pinPoint.label', 'IvedaRTLS', 'Title of IvedaRTLS Solution.'),
     connect: t('solutions.connects.label', 'Connects', 'Title of Connects Solution.'),
     ems: t('solutions.ems.label', 'EMS', 'Title of EMS Solution.'),
     utilus: t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.'),

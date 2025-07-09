@@ -1,8 +1,8 @@
 `solutions` is the set of solutions specified components. 
 
-- `cerebro` implements the IvedaPinPoint solution
+- `cerebro` implements the IvedaRTLS solution
 
-Iveda PinPoint™ centrally manages IoT trackers and sensors and display them on a map for exact location. These devices can track precise locations of assets or humans in real-time.
+Iveda RTLS™ centrally manages IoT trackers and sensors and display them on a map for exact location. These devices can track precise locations of assets or humans in real-time.
 
 - `utilus` implements the IvedaUtilus solution
 

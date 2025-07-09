@@ -21,7 +21,7 @@ All components above are independent of the application logic and can be used in
 ### Solutions specified components
 
 - `ai` [folder](ai/README.md) implements IvedaAI solution specified compoments
-- `cerebro` [folder](cerebro/README.md) implements IvedaPinPoint solution specified compoments
+- `cerebro` [folder](cerebro/README.md) implements IvedaRTLS solution specified compoments
 - `connect` [folder](connect/README.md) implements SmartConnect solution specified compoments
 - `utilus` [folder](utilus/README.md) implements IvedaUtilus solution specified compoments
 

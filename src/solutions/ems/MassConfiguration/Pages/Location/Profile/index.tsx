@@ -164,7 +164,7 @@ export const Profile: React.FC<Props> = ({ location, locationColor = 'default' }
                           chip={
                             <Chip color={'primary'} key={location.branchSolutions}>
                               {(location.branchSolutions & SolutionsMasks.pinpoint) !== 0 &&
-                                t('solutions.pinPoint.label', 'PinPoint', 'Title of PinPoint Solution.')}
+                                t('solutions.pinPoint.label', 'IvedaRTLS', 'Title of IvedaRTLS Solution.')}
                               {(location.branchSolutions & SolutionsMasks.utilus) !== 0 &&
                                 t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.')}
                               {(location.branchSolutions & SolutionsMasks.ai) !== 0 &&

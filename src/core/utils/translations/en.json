@@ -520,8 +520,8 @@
     },
     "pinPoint": {
       "label": {
-        "translation": "PinPoint",
-        "notes": "Title of PinPoint Solution."
+        "translation": "IvedaRTLS",
+        "notes": "Title of IvedaRTLS Solution."
       }
     },
     "utilus": {
@@ -573,8 +573,8 @@
       },
       "pinPoint": {
         "label": {
-          "translation": "PinPoint",
-          "notes": "PinPoint solution title."
+          "translation": "IvedaRTLS",
+          "notes": "IvedaRTLS solution title."
         },
         "options": {
           "01": {

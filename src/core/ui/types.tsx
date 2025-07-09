@@ -82,7 +82,7 @@ export type Command = {
 };
 
 export enum Solutions {
-  pinpoint = 'pinpoint',
+  pinpoint = 'ivedartls',
   utilus = 'utilus',
   ai = 'ai',
   connect = 'connect',
