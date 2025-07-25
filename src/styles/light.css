@@ -201,7 +201,8 @@
   --color-yellow-900: hsl(41, 56%, 13%);
   --color-common-white: hsl(0, 0%, 100%);
   --color-common-black: hsl(0, 0%, 0%);
-  --color-primary-default: hsl(200, 82%, 50%);
+  --color-primary-default: hsl(198, 100%, 48%);
+  /* --color-primary-default: hsl(200, 82%, 50%); */
   --color-primary-hover: hsl(200, 82%, 46%);
   --color-primary-active: hsl(200, 82%, 42%);
   --color-primary-subtle: hsl(200, 100%, 68%);
@@ -210,9 +211,15 @@
   --color-primary-tint: hsl(201, 100%, 96%);
   --color-primary-tint-hover: hsl(198, 90%, 92%);
   --color-primary-tint-active: hsl(198, 81%, 88%);
+  --color-primary-tint-alpha: hsla(198, 100%, 48%, 0.08);
+  --color-primary-tint-alpha-hover: hsla(198, 100%, 48%, 0.16);
+  --color-primary-tint-alpha-active: hsla(198, 100%, 48%, 0.24);
+  /* --color-primary-tint: hsl(201, 100%, 96%);
+  --color-primary-tint-hover: hsl(198, 90%, 92%);
+  --color-primary-tint-active: hsl(198, 81%, 88%);
   --color-primary-tint-alpha: hsla(200, 82%, 50%, 0.08);
   --color-primary-tint-alpha-hover: hsla(200, 82%, 50%, 0.16);
-  --color-primary-tint-alpha-active: hsla(200, 82%, 50%, 0.24);
+  --color-primary-tint-alpha-active: hsla(200, 82%, 50%, 0.24); */
   --color-primary-dark: hsl(200, 82%, 42%);
   --color-primary-focus: hsl(198, 81%, 88%);
   --color-secondary-default: hsl(210, 16%, 56%);

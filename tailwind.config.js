@@ -2588,6 +2588,7 @@ module.exports = {
         wide: 'var(--typography-letter-spacing-wide)',
         wider: 'var(--typography-letter-spacing-wider)',
         widest: 'var(--typography-letter-spacing-widest)',
+        l: '0.28px',
       },
       lineHeight: {
         none: 'var(--typography-line-height-none)',
@@ -2602,6 +2603,9 @@ module.exports = {
       },
       borderRadius: {
         'xs': 'var(--border-radius-rounded-xs)',
+      },
+      borderWidth: {
+        '3': '3px',
       },
       strokeWidth: {
         xxs: 'var(--stroke-width-xxs)',
