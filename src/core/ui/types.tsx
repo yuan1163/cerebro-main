@@ -87,6 +87,7 @@ export enum Solutions {
   ai = 'ai',
   connect = 'connect',
   ems = 'ems',
+  levelnow = 'levelnow',
 }
 
 // TODO
@@ -105,6 +106,7 @@ export enum SolutionsMasks {
   ai = 0b00000100,
   connect = 0b00001000,
   ems = 0b00010000,
+  levelnow = 0b00100000,
 }
 
 export const getAllSolutions = () => [
@@ -113,6 +115,7 @@ export const getAllSolutions = () => [
   Solutions.ai,
   Solutions.connect,
   Solutions.ems,
+  Solutions.levelnow,
 ];
 
 export const getAvailbableSolutions = (company: Location) => {
@@ -122,6 +125,7 @@ export const getAvailbableSolutions = (company: Location) => {
   if (company.branchSolutions & SolutionsMasks.ai) result.push(Solutions.ai);
   if (company.branchSolutions & SolutionsMasks.connect) result.push(Solutions.connect);
   if (company.branchSolutions & SolutionsMasks.ems) result.push(Solutions.ems);
+  if (company.branchSolutions & SolutionsMasks.levelnow) result.push(Solutions.levelnow);
   return result;
 };
 /*
