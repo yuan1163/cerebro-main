@@ -36,6 +36,7 @@ module.exports = {
         dark: 'var(--color-primary-dark)',
       },
       secondary: {
+        '500': '#657989',
         DEFAULT: 'var(--color-secondary-default)',
         focus: 'var(--color-secondary-focus)',
         hover: 'var(--color-secondary-hover)',
@@ -2588,7 +2589,6 @@ module.exports = {
         wide: 'var(--typography-letter-spacing-wide)',
         wider: 'var(--typography-letter-spacing-wider)',
         widest: 'var(--typography-letter-spacing-widest)',
-        l: '0.28px',
       },
       lineHeight: {
         none: 'var(--typography-line-height-none)',

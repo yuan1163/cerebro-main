@@ -1,0 +1,27 @@
+$mapHeight: 21rem;
+$chartHeight: calc(100vh - theme('height.toolbar') - theme('spacing.3') - theme('spacing.container-x') - $mapHeight);
+
+// minmax(#{$mapHeight})
+
+.container {
+  grid-template-rows: minmax($mapHeight, 1fr) auto;
+  @apply gap-3;
+}
+
+.card {
+  @apply grid;
+  @apply grid-rows-[auto_auto];
+}
+
+.notification-wrapper {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center justify-center;
+  @apply gap-7;
+  @apply h-full;
+}
+
+.charts-container {
+  @apply grid-rows-[auto_auto];
+  @apply gap-3;
+}
