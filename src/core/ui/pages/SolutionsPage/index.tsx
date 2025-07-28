@@ -1,4 +1,3 @@
-import React from 'react';
 import { observer } from 'mobx-react';
 
 // storages
@@ -186,5 +185,35 @@ const solutions = [
     path: 'https://iveda.com/technology/ivedaai/',
     pathDescription: contactUsPath,
     solutionLink: '/ai',
+  },
+  {
+    icon: <VideoRecorderLineIcon />,
+    installed: true,
+    title: t('solutions.solutionsPage.LevelNOW.label', 'LevelNOW', 'LevelNOW solution title.'),
+    abbr: '',
+    solutionTitle: 'levelnow',
+    caption: t(
+      'solutions.solutionsPage.levelnow.content.label',
+      'IvedaAI™ uses deep learning technology for advanced AI Video Search, similar to Google for text search.',
+      'Brief IvedaAI solution description label.',
+    ),
+    options: [
+      t(
+        'solutions.solutionsPage.levelnow.options.01',
+        'Real-time video monitoring',
+        'Real-time video monitoring option label.',
+      ),
+      t('solutions.solutionsPage.levelnow.options.02', 'Perimeter protection', 'Perimeter protection option label.'),
+      t(
+        'solutions.solutionsPage.levelnow.options.03',
+        'Objects and face recognition',
+        'Objects and face recognition option label.',
+      ),
+      t('solutions.solutionsPage.levelnow.options.04', 'History of recordings', 'History of recordings option label.'),
+    ],
+    linkContent: t('solutions.solutionsPage.learnMoreButton.label', 'Learn more', 'Label for learn more button.'),
+    path: 'https://iveda.com/technology/levelnow/',
+    pathDescription: contactUsPath,
+    solutionLink: '/levelnow',
   },
 ];
