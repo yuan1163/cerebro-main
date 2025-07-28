@@ -1,12 +1,12 @@
-// import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
+import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
 
 import { Card } from '@core/ui/components/Card';
 import { CardContent } from '@core/ui/components/CardContent';
 
 const data = [
-  { name: '>205L', value: 3, color: '#22c55e' },
-  { name: '100-250L', value: 6, color: '#f97316' },
-  { name: '<100L', value: 3, color: '#ef4444' },
+  { name: '>205L', value: 3, color: '#2CD232' },
+  { name: '100-250L', value: 6, color: '#FF982F' },
+  { name: '<100L', value: 3, color: '#FF4545' },
 ];
 
 const stats = [
@@ -20,7 +20,7 @@ export default function Overview() {
   const total = data.reduce((sum, item) => sum + item.value, 0);
   return (
     <Card>
-      <CardContent>
+      <CardContent className='bg-neutral-50 rounded-[10px] px-5 py-0'>
         <div className='flex items-center justify-between'>
           {/* Left side stats */}
           <div className='flex flex-col gap-5'>
@@ -31,33 +31,34 @@ export default function Overview() {
               </div>
             ))}
           </div>
-
-          {/* Center donut chart */}
-          {/* <div className='relative'>
-            <ResponsiveContainer width={200} height={200}>
-              <PieChart>
-                <Pie data={data} cx='50%' cy='50%' innerRadius={60} outerRadius={80} paddingAngle={2} dataKey='value'>
-                  {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-              </PieChart>
-            </ResponsiveContainer>
-            <div className='absolute inset-0 flex flex-col items-center justify-center'>
-              <span className='text-sm text-muted-foreground'>Tanks</span>
-              <span className='text-3xl font-bold'>{total}</span>
-            </div>
-          </div> */}
-
-          {/* Right side legend */}
-          <div className='flex flex-col gap-5'>
-            {data.map((item) => (
-              <div key={item.name} className='flex items-center justify-between gap-2'>
-                <div className='w-2.5 aspect-square rounded-full' style={{ backgroundColor: item.color }} />
-                <span className='text-sm font-medium text-secondary-500 min-w-[85px]'>{item.name}</span>
-                <span className='text-sm font-medium text-neutral-900'>{item.value}</span>
+          <div className='flex items-center gap-5'>
+            {/* Center donut chart */}
+            <div className='relative'>
+              <ResponsiveContainer width={160} height={160}>
+                <PieChart>
+                  <Pie data={data} cx='50%' cy='50%' innerRadius={56} outerRadius={80} paddingAngle={2} dataKey='value'>
+                    {data.map((entry) => (
+                      <Cell key={entry.name} fill={entry.color} />
+                    ))}
+                  </Pie>
+                </PieChart>
+              </ResponsiveContainer>
+              <div className='absolute inset-0 flex flex-col items-center justify-center'>
+                <span className='text-base font-medium tracking-wide-l text-neutral-900'>Tanks</span>
+                <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{total}</span>
               </div>
-            ))}
+            </div>
+
+            {/* Right side legend */}
+            <div className='flex flex-col gap-5'>
+              {data.map((item) => (
+                <div key={item.name} className='flex items-center justify-between gap-2'>
+                  <div className='w-2.5 aspect-square rounded-full' style={{ backgroundColor: item.color }} />
+                  <span className='text-sm font-medium text-secondary-500 min-w-[85px]'>{item.name}</span>
+                  <span className='text-sm font-medium text-neutral-900'>{item.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </CardContent>

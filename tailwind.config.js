@@ -213,6 +213,7 @@ module.exports = {
         dark: 'var(--color-success-dark)',
       },
       warning: {
+        '400': '#FF982F',
         DEFAULT: 'var(--color-warning-default)',
         focus: 'var(--color-warning-focus)',
         hover: 'var(--color-warning-hover)',
@@ -2586,8 +2587,9 @@ module.exports = {
         normal: 'var(--typography-letter-spacing-normal)',
         tight: 'var(--typography-letter-spacing-tight)',
         tighter: 'var(--typography-letter-spacing-tighter)',
-        wide: 'var(--typography-letter-spacing-wide)',
-        wider: 'var(--typography-letter-spacing-wider)',
+        wide: 'var(--typography-letter-spacing-wide)', // 0.28
+        'wide-l': '0.32px', // 0.32
+        wider: 'var(--typography-letter-spacing-wider)', // 0.8
         widest: 'var(--typography-letter-spacing-widest)',
       },
       lineHeight: {
