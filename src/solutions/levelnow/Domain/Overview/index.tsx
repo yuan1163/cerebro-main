@@ -2,6 +2,9 @@ import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
 
 import { Card } from '@core/ui/components/Card';
 import { CardContent } from '@core/ui/components/CardContent';
+import { CardHeader } from '@core/ui/components/CardHeader';
+import { Text } from '@core/ui/components/Text';
+import { t } from '@core/utils/translate';
 
 const data = [
   { name: '>205L', value: 3, color: '#2CD232' },
@@ -19,9 +22,23 @@ const stats = [
 export default function Overview() {
   const total = data.reduce((sum, item) => sum + item.value, 0);
   return (
-    <Card>
-      <CardContent className='bg-neutral-50 rounded-[10px] px-5 py-0'>
-        <div className='flex items-center justify-between'>
+    <Card fullWidth fullHeight elevation='xs'>
+      <CardHeader className='flex items-center justify-between'>
+        <Text
+          component='h3'
+          variant='lg'
+          weight='medium'
+          className='flex items-center tracking-wide-l text-[#000] h-[34px]'
+        >
+          {t(
+            'solutions.domainOverview.overview',
+            'Overview',
+            "A summary of the domain's key features and functionalities.",
+          )}
+        </Text>
+      </CardHeader>
+      <CardContent disablePaddingTop>
+        <div className='flex items-center justify-between bg-neutral-50 rounded-[10px] px-5 py-10'>
           {/* Left side stats */}
           <div className='flex flex-col gap-5'>
             {stats.map((stat) => (

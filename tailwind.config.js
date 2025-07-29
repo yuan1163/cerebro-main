@@ -14,6 +14,8 @@ module.exports = {
       transparent: 'transparent',
       DEFAULT: 'var(--color-typography-secondary)',
       primary: {
+        '50': '#EBF8FE',
+        '500': '#00AAF3',
         DEFAULT: 'var(--color-primary-default)',
         focus: 'var(--color-primary-focus)',
         hover: 'var(--color-primary-hover)',
@@ -2393,6 +2395,7 @@ module.exports = {
       },
     },
     boxShadow: {
+      select: '0 4px 9px 4px rgba(0, 0, 0, 0.08)',
       none: 'none',
       xs: 'var(--shadow-xs)',
       sm: 'var(--shadow-sm)',
