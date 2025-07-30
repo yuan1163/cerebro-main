@@ -28,6 +28,7 @@ import { Issues } from '@solutions/cerebro/Issues';
 import { Locations } from '@solutions/cerebro/Locations';
 import { Notifications } from '@solutions/cerebro/Notifications';
 import { Users } from '@solutions/cerebro/Users';
+import ResponsibleTanksPage from '@core/ui/pages/ResponsibleTanksPage';
 
 export const modules: Modules = [
   {
@@ -36,15 +37,21 @@ export const modules: Modules = [
     icon: <Home02LineIcon />,
     iconSolid: <Home02SolidIcon />,
     component: <Domain />,
+    children: [
+      {
+        url: 'domain/responsibletanks',
+        component: <ResponsibleTanksPage />,
+      },
+    ],
   },
-    {
-      url: 'dashboard',
-      // title: t('solutions.dashboard.label', 'Dashboard', 'Dashboard page title.'),
-      title: 'solutions.dashboard.label',
-      icon: <DashboardLineIcon />,
-      iconSolid: <DashboardSolidIcon />,
-      component: <Dashboard />,
-    },
+  {
+    url: 'dashboard',
+    // title: t('solutions.dashboard.label', 'Dashboard', 'Dashboard page title.'),
+    title: 'solutions.dashboard.label',
+    icon: <DashboardLineIcon />,
+    iconSolid: <DashboardSolidIcon />,
+    component: <Dashboard />,
+  },
   //   // {
   //   //   url: 'overview',
   //   //   title: 'Overview',

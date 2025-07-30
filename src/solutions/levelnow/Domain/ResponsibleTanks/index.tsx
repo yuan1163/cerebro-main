@@ -2,11 +2,15 @@ import { useState } from 'react';
 
 import { Listbox } from '@headlessui/react';
 
+// UI components
 import { Card } from '@core/ui/components/Card';
 import { CardContent } from '@core/ui/components/CardContent';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { Text } from '@core/ui/components/Text';
 import { Button } from '@core/ui/components/Button';
+import { Link } from '@core/ui/components/Link';
+
+// Utils
 import { t } from '@core/utils/translate';
 
 // Icons
@@ -94,10 +98,13 @@ export default function ResponsibleTanks() {
             </div>
           </div>
           <Button
+            component={Link}
+            fullWidth
+            to='/levelnow/domain/responsibletanks'
             variant='outlined'
             className='text-[18px] font-medium tracking-wide-l text-neutral-900 rounded-md border-[#0000001F]'
           >
-            More Details
+            {t('general.details.label', 'More Details', 'Button or link that allows to access additional information.')}
           </Button>
         </div>
       </CardContent>
