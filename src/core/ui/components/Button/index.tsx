@@ -37,7 +37,7 @@ export const Button = <T extends React.ElementType = 'button'>({
   size = 'md',
   startIcon,
   textColor,
-  variant = 'solid',
+  variant,
   ...props
 }: ButtonProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof ButtonProps<T>>) => {
   const Component = component || ButtonBase;

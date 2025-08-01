@@ -13,6 +13,8 @@
   @apply select-none;
 }
 
+
+
 // SIZE
 
 .badge-size-xs {
@@ -77,6 +79,34 @@
   @apply leading-tight;
   @apply whitespace-nowrap;
   @apply text-ellipsis;
+}
+
+// VARIANT
+.badge-variant-gray {
+    @apply min-h-[1.5rem];
+  @apply min-w-[1.5rem];
+
+  @apply px-2;
+  @apply rounded-full;
+  @apply bg-neutral-50;
+
+  @apply text-md;
+  @apply font-medium;
+  @apply tracking-36;
+  @apply text-secondary-500;
+}
+.badge-variant-actived {
+    @apply min-h-[1.5rem];
+  @apply min-w-[1.5rem];
+
+  @apply px-2;
+  @apply rounded-full;
+  @apply bg-primary-50;
+
+  @apply text-md;
+  @apply font-medium;
+  @apply tracking-36;
+  @apply text-primary-500;
 }
 
 // COLOR

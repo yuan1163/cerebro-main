@@ -24,7 +24,7 @@ type BadgeProps<T extends React.ElementType> = {
   disabled?: boolean;
   shape?: 'circular' | 'rounded';
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'invariable' | 'plain' | 'solid' | 'tint';
+  variant?: 'invariable' | 'plain' | 'solid' | 'tint' | 'gray' | 'actived';
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Badge = <T extends React.ElementType = 'div'>({

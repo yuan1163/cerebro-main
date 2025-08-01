@@ -28,7 +28,7 @@ export default function Overview() {
           component='h3'
           variant='lg'
           weight='medium'
-          className='flex items-center tracking-wide-l text-[#000] h-[34px]'
+          className='flex items-center tracking-32 text-[#000] h-[34px]'
         >
           {t(
             'solutions.domainOverview.overview',
@@ -61,7 +61,7 @@ export default function Overview() {
                 </PieChart>
               </ResponsiveContainer>
               <div className='absolute inset-0 flex flex-col items-center justify-center'>
-                <span className='text-base font-medium tracking-wide-l text-neutral-900'>Tanks</span>
+                <span className='text-base font-medium tracking-32 text-neutral-900'>Tanks</span>
                 <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{total}</span>
               </div>
             </div>

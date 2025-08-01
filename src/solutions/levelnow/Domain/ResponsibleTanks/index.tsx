@@ -38,7 +38,7 @@ export default function ResponsibleTanks() {
   return (
     <Card fullWidth fullHeight elevation='xs' className='flex flex-col'>
       <CardHeader className='flex items-center justify-between'>
-        <Text component='h3' variant='lg' weight='medium' className='flex items-center tracking-wide-l text-[#000]'>
+        <Text component='h3' variant='lg' weight='medium' className='flex items-center tracking-32 text-[#000]'>
           {t(
             'solutions.domainOverview.responsibleTanks',
             'Responsible Tanks',
@@ -49,31 +49,42 @@ export default function ResponsibleTanks() {
         {/* Select */}
         <div className='relative flex items-center ml-auto'>
           <Listbox value={selectedPerson} onChange={setSelectedPerson}>
-            <Listbox.Button className='flex bg-[#FFF] items-center gap-2 px-3 py-1 border rounded-md border-primary-500'>
-              {selectedPerson.name}
-            </Listbox.Button>
-            <Listbox.Options
-              className={cn(
-                'absolute bottom-0 right-0 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select min-w-56 -translate-y-[50px]',
-              )}
-            >
-              {people.map((person) => {
-                const isSelected = selectedPerson.id === person.id;
-                return (
-                  <Listbox.Option
-                    key={person.id}
-                    value={person}
-                    className={cn(
-                      'flex items-center justify-between p-3 rounded',
-                      isSelected ? 'bg-primary-50 text-primary-500' : 'text-neutral-900 bg-[#FFF]',
-                    )}
-                  >
-                    <span>{person.name}</span>
-                    {isSelected && <CheckIcon className='text-primary-500' />}
-                  </Listbox.Option>
-                );
-              })}
-            </Listbox.Options>
+            {({ open }) => (
+              <>
+                <Listbox.Button
+                  className={cn(
+                    open ? 'border-primary-500' : 'border-neutral-200 hover:border-neutral-300',
+                    'flex bg-[#FFF] hover:bg-hover items-center gap-2 px-3 py-1 border rounded-md',
+                  )}
+                >
+                  {selectedPerson.name}
+                </Listbox.Button>
+                <Listbox.Options
+                  className={cn(
+                    'absolute bottom-0 right-0 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select min-w-56 -translate-y-[50px]',
+                  )}
+                >
+                  {people.map((person) => {
+                    return (
+                      <Listbox.Option key={person.id} value={person}>
+                        {({ active, selected }) => (
+                          <li
+                            className={cn(
+                              'flex items-center justify-between p-3 rounded',
+                              active && 'bg-hover',
+                              selected && 'bg-primary-50 text-primary-500',
+                            )}
+                          >
+                            <span>{person.name}</span>
+                            {selected && <CheckIcon className='text-primary-500' />}
+                          </li>
+                        )}
+                      </Listbox.Option>
+                    );
+                  })}
+                </Listbox.Options>
+              </>
+            )}
           </Listbox>
         </div>
       </CardHeader>
@@ -82,7 +93,7 @@ export default function ResponsibleTanks() {
           <div className='flex items-center justify-evenly'>
             {/* Total Counts */}
             <div className='flex flex-col justify-center gap-5'>
-              <span className='text-base font-medium tracking-wide-l text-neutral-900'>Tanks</span>
+              <span className='text-base font-medium tracking-32 text-neutral-900'>Tanks</span>
               <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{total}</span>
             </div>
 
@@ -102,7 +113,7 @@ export default function ResponsibleTanks() {
             fullWidth
             to='/levelnow/domain/responsibletanks'
             variant='outlined'
-            className='text-[18px] font-medium tracking-wide-l text-neutral-900 rounded-md border-[#0000001F]'
+            className='text-[18px] font-medium tracking-32 text-neutral-900 rounded-md border-[#0000001F]'
           >
             {t('general.details.label', 'More Details', 'Button or link that allows to access additional information.')}
           </Button>
