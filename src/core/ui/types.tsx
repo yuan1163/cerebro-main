@@ -49,7 +49,7 @@ type ModuleChildren = {
   component: React.ReactNode;
 };
 
-export type Modules = (Module | ModuleGroup | Routable)[];
+export type Modules = (Module | ModuleGroup)[];
 
 export const getModulesRoutes = (modules: Modules) => {
   const routes: Routable[] = [];

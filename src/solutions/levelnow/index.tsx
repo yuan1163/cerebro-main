@@ -17,17 +17,22 @@ import LineChartUp04SolidIcon from '@assets/icons/solid/line-chart-up-04.svg?com
 import Map02SolidIcon from '@assets/icons/solid/map-02.svg?component';
 import NotificationTextSolidIcon from '@assets/icons/solid/notification-text.svg?component';
 import Users01SolidIcon from '@assets/icons/solid/users-01.svg?component';
+
+import TankLineIcon from '@assets/icons/line/tank-line.svg?component';
+import TankSolidIcon from '@assets/icons/solid/tank-solid.svg?component';
 // types
 import { Modules, ModuleSections } from '@core/ui/types';
 import { t } from '@core/utils/translate';
 // components
 import { Assets } from '@solutions/cerebro/Assets';
 import { Dashboard } from '@solutions/cerebro/Dashboard';
-import { Domain } from '@solutions/levelnow/Domain';
 import { Issues } from '@solutions/cerebro/Issues';
 import { Locations } from '@solutions/cerebro/Locations';
 import { Notifications } from '@solutions/cerebro/Notifications';
 import { Users } from '@solutions/cerebro/Users';
+
+import { Domain } from '@solutions/levelnow/Domain';
+import { Tanks } from '@solutions/levelnow/Tanks';
 import ResponsibleTanksPage from '@core/ui/pages/ResponsibleTanksPage';
 
 export const modules: Modules = [
@@ -45,12 +50,12 @@ export const modules: Modules = [
     ],
   },
   {
-    url: 'dashboard',
-    // title: t('solutions.dashboard.label', 'Dashboard', 'Dashboard page title.'),
-    title: 'solutions.dashboard.label',
-    icon: <DashboardLineIcon />,
-    iconSolid: <DashboardSolidIcon />,
-    component: <Dashboard />,
+    url: 'tanks',
+    title: t('solutions.tanks.label', 'Tanks', 'Tanks page title.'),
+    icon: <TankLineIcon />,
+    iconSolid: <TankSolidIcon />,
+    component: <Tanks />,
+    // withoutFormation: true,
   },
   //   // {
   //   //   url: 'overview',
