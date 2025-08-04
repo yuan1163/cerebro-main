@@ -26,7 +26,9 @@ export const DrawerButtonExpanded: React.FC<Props> = ({ disabled, icon, iconHove
           align='start'
           color={isActive ? 'primary' : 'icon-secondary'}
           component='div'
-          className={styles['drawer-button-expanded']}
+          className={cn(styles['drawer-button-expanded']
+            ,isActive&&"border-3 border-primary-tint-active rounded-[10px]","tracking-l font-medium"
+          )}
           disabled={disabled}
           fontSize='sm'
           fontWeight={isActive ? 'semibold' : 'medium'}

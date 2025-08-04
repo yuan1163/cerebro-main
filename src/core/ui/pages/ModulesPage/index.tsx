@@ -33,13 +33,18 @@ export const ModulesPage: React.FC<Props> = observer(({ modules }) => {
 
   const routes = getModulesRoutes(modules);
 
+  const noCurrentRoutes = ['domain/responsibletanks'];
+
   return (
     <ModulePageLayout navigator={<ModuleNavigator modules={modules} />}>
       <Routes>
         {routes.map((mod) => {
           let path: string;
-          if (mod.url) path = `${mod.url}/:current/*`;
-          else path = `/*`;
+          if (noCurrentRoutes.includes(mod.url)) {
+            path = `${mod.url}/*`;
+          } else if (mod.url) {
+            path = `${mod.url}/:current/*`;
+          } else path = `/*`;
           return <Route key={mod.url} path={path} element={mod.component} />;
         })}
         {/* please don't add any routes here, use the `modules` array for each solution */}

@@ -60,7 +60,7 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
     ems: t('solutions.ems.label', 'EMS', 'Title of EMS Solution.'),
     utilus: t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.'),
   };
-  
+
   const getTitle = (solution?: Solutions) => {
     switch (solution) {
       case Solutions.ai:
@@ -120,7 +120,7 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
   return (
     <Menu
       button={
-        <Button component='div' startIcon={<DotsGridRectanglesLineIcon />}>
+        <Button component='div' variant='solid' startIcon={<DotsGridRectanglesLineIcon />}>
           {getTitle(ui.activeSolution)}
         </Button>
       }

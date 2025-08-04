@@ -16,7 +16,7 @@ export type ButtonProps<T extends React.ElementType> = {
   fontSize?: 'base' | 'sm';
   fontWeight?: 'medium' | 'semibold';
   fullWidth?: boolean;
-  iconColor?: 'primary' | 'icon-secondary' | 'secondary-tint-active';
+  iconColor?: 'primary' | 'icon-secondary' | 'secondary-tint-active' | 'neutral-900';
   loading?: boolean;
   size?: 'sm' | 'md' | 'lg';
   square?: boolean;

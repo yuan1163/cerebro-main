@@ -9,11 +9,15 @@ module.exports = {
   },
   theme: {
     colors: {
+      hover: '#F7F8F9',
       current: 'currentColor',
       inherit: 'inherit',
       transparent: 'transparent',
       DEFAULT: 'var(--color-typography-secondary)',
       primary: {
+        '50': '#EBF8FE',
+        '500': '#00AAF3',
+        '600': '#0097DA',
         DEFAULT: 'var(--color-primary-default)',
         focus: 'var(--color-primary-focus)',
         hover: 'var(--color-primary-hover)',
@@ -36,6 +40,7 @@ module.exports = {
         dark: 'var(--color-primary-dark)',
       },
       secondary: {
+        '500': '#657989',
         DEFAULT: 'var(--color-secondary-default)',
         focus: 'var(--color-secondary-focus)',
         hover: 'var(--color-secondary-hover)',
@@ -168,6 +173,7 @@ module.exports = {
         disabled: 'var(--color-action-disabled)',
       },
       error: {
+        '500': '#FF4545',
         DEFAULT: 'var(--color-error-default)',
         focus: 'var(--color-error-focus)',
         hover: 'var(--color-error-hover)',
@@ -212,6 +218,7 @@ module.exports = {
         dark: 'var(--color-success-dark)',
       },
       warning: {
+        '400': '#FF982F',
         DEFAULT: 'var(--color-warning-default)',
         focus: 'var(--color-warning-focus)',
         hover: 'var(--color-warning-hover)',
@@ -2391,6 +2398,8 @@ module.exports = {
       },
     },
     boxShadow: {
+      card: '0 2px 4px 0 rgba(0, 0, 0, 0.08)',
+      select: '0 4px 9px 4px rgba(0, 0, 0, 0.08)',
       none: 'none',
       xs: 'var(--shadow-xs)',
       sm: 'var(--shadow-sm)',
@@ -2425,6 +2434,7 @@ module.exports = {
         black: 'var(--typography-font-weight-black)',
       },
       fontSize: {
+        '16': ['16px'],
         '7xl': [
           'var(--typography-7xl-font-size)',
           {
@@ -2585,8 +2595,10 @@ module.exports = {
         normal: 'var(--typography-letter-spacing-normal)',
         tight: 'var(--typography-letter-spacing-tight)',
         tighter: 'var(--typography-letter-spacing-tighter)',
-        wide: 'var(--typography-letter-spacing-wide)',
-        wider: 'var(--typography-letter-spacing-wider)',
+        wide: 'var(--typography-letter-spacing-wide)', // 0.28
+        '32': '0.32px',
+        '36': '0.36px',
+        wider: 'var(--typography-letter-spacing-wider)', // 0.8
         widest: 'var(--typography-letter-spacing-widest)',
       },
       lineHeight: {
@@ -2602,6 +2614,9 @@ module.exports = {
       },
       borderRadius: {
         'xs': 'var(--border-radius-rounded-xs)',
+      },
+      borderWidth: {
+        '3': '3px',
       },
       strokeWidth: {
         xxs: 'var(--stroke-width-xxs)',
@@ -2756,5 +2771,31 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-box-shadow')],
+  plugins: [
+    require('tailwindcss-box-shadow'),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        // Scrollbar utilities
+        '.scrollbar-hide': {
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
+          /* Firefox */
+          'scrollbar-width': 'none',
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
+        '.scrollbar-thin': {
+          'scrollbar-width': 'thin',
+          '&::-webkit-scrollbar': {
+            width: '4px',
+            height: '4px',
+          },
+        },
+      };
+
+      addUtilities(newUtilities);
+    },
+  ],
 };

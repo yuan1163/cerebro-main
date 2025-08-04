@@ -28,6 +28,7 @@ type Module = Routable & {
   icon: React.ReactNode;
   iconSolid: React.ReactNode;
   section?: ModuleSections; // default: ModuleSections.Common
+  children?: ModuleChildren[];
 };
 
 type ModuleItem = Routable & {
@@ -43,7 +44,12 @@ type ModuleGroup = {
   section?: ModuleSections;
 };
 
-export type Modules = (Module | ModuleGroup)[];
+type ModuleChildren = {
+  url: string;
+  component: React.ReactNode;
+};
+
+export type Modules = (Module | ModuleGroup | Routable)[];
 
 export const getModulesRoutes = (modules: Modules) => {
   const routes: Routable[] = [];
@@ -54,6 +60,23 @@ export const getModulesRoutes = (modules: Modules) => {
       });
     } else {
       if (mod.component) routes.push(mod);
+      if ('children' in mod && mod.children) {
+        if (mod.url) {
+          mod.children.forEach((child) => {
+            routes.push({
+              url: `${mod.url}/${child.url}`,
+              component: child.component,
+            });
+          });
+        } else {
+          mod.children.forEach((child) => {
+            routes.push({
+              url: child.url,
+              component: child.component,
+            });
+          });
+        }
+      }
     }
   });
   return routes;
@@ -65,7 +88,12 @@ export const getModulesSection = (modules: Modules, section: ModuleSections) => 
     if ('isGroup' in mod) {
       return mod.section === section || (!mod.section && section === ModuleSections.Common);
     } else {
-      return !!mod.url && (mod.section === section || (!mod.section && section === ModuleSections.Common));
+      return (
+        !!mod.url &&
+        ('section' in mod
+          ? mod.section === section || (!mod.section && section === ModuleSections.Common)
+          : section === ModuleSections.Common)
+      );
     }
   });
 };
@@ -87,6 +115,7 @@ export enum Solutions {
   ai = 'ai',
   connect = 'connect',
   ems = 'ems',
+  levelnow = 'levelnow',
 }
 
 // TODO
@@ -105,6 +134,7 @@ export enum SolutionsMasks {
   ai = 0b00000100,
   connect = 0b00001000,
   ems = 0b00010000,
+  levelnow = 0b00100000,
 }
 
 export const getAllSolutions = () => [
@@ -113,6 +143,7 @@ export const getAllSolutions = () => [
   Solutions.ai,
   Solutions.connect,
   Solutions.ems,
+  Solutions.levelnow,
 ];
 
 export const getAvailbableSolutions = (company: Location) => {
@@ -122,6 +153,7 @@ export const getAvailbableSolutions = (company: Location) => {
   if (company.branchSolutions & SolutionsMasks.ai) result.push(Solutions.ai);
   if (company.branchSolutions & SolutionsMasks.connect) result.push(Solutions.connect);
   if (company.branchSolutions & SolutionsMasks.ems) result.push(Solutions.ems);
+  if (company.branchSolutions & SolutionsMasks.levelnow) result.push(Solutions.levelnow);
   return result;
 };
 /*

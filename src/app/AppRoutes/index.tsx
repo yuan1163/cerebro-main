@@ -12,6 +12,7 @@ import { modules as utilus } from '@solutions/utilus';
 import { modules as ai } from '@solutions/ai';
 import { modules as connect } from '@solutions/connect';
 import { modules as ems } from '@solutions/ems';
+import { modules as levelnow } from '@solutions/levelnow';
 
 // commands
 import { commands as utilusCommands } from '@core/ui/pages/SmartPolesPage/commands';
@@ -32,6 +33,7 @@ const solutions = [
   { url: Solutions.ai, modules: ai },
   { url: Solutions.connect, modules: connect },
   { url: Solutions.ems, modules: ems, commands: emsCommands },
+  { url: Solutions.levelnow, modules: levelnow },
 ];
 
 export const AppRoutes = observer(() => {
@@ -49,17 +51,17 @@ export const AppRoutes = observer(() => {
       <Route path='/cerebro' element={<Navigate replace to='/solutions' />} />
       <Route path='/solutions' element={<SolutionsPage />} />
       {solutions.map((solution) => (
-      <Route key='route:solution' path={`/${solution.url}/*`} element={<ModulesPage modules={solution.modules} />} />
+        <Route key='route:solution' path={`/${solution.url}/*`} element={<ModulesPage modules={solution.modules} />} />
       ))}
 
       {solutions.map((solution) =>
-      solution.commands?.map((command) => (
-        <Route
-        key={`route:command:${command.id}`}
-        path={`/${solution.url}/${command.url}`}
-        element={command.element}
-        />
-      )),
+        solution.commands?.map((command) => (
+          <Route
+            key={`route:command:${command.id}`}
+            path={`/${solution.url}/${command.url}`}
+            element={command.element}
+          />
+        )),
       )}
       <Route path='/' element={<Navigate replace to={auth.isAuthenticated() ? '/solutions' : '/login'} />} />
     </Routes>

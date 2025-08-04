@@ -1,0 +1,61 @@
+import { observer } from 'mobx-react';
+import { useState } from 'react';
+
+// icons
+import Home02LineIcon from '@assets/icons/line/home-02.svg?component';
+
+// core ui components
+import { Header } from '@core/ui/cerebro/Header';
+import { Grid } from '@core/ui/components/Grid';
+import { Unit } from '@core/ui/components/Unit';
+import { UnitContainer } from '@core/ui/components/UnitContainer';
+
+// styles
+import { cn } from '@core/utils/classnames';
+
+// utils
+import { t } from '@core/utils/translate';
+import { DomainObjectsList } from '@solutions/levelnow/Domain/DomainObjectsList';
+
+// own solution components
+import { DomainMap } from './DomainMap';
+import Overview from './Overview';
+import styles from './styles.module.scss';
+import ResponsibleTanks from './ResponsibleTanks';
+
+// implementation
+export const Domain = observer(() => {
+  const [expendMap, setExpandMap] = useState(false);
+
+  const handleExpand = () => {
+    setExpandMap(!expendMap);
+  };
+
+  return (
+    <>
+      <Header
+        icon={<Home02LineIcon />}
+        title={t(
+          'solutions.domainOverview.label',
+          'Domain Overview',
+          "An overview of the solution's core purpose and components.",
+        )}
+        widgets={false}
+      />
+      <UnitContainer>
+        <Unit variant='sidebar'>
+          <DomainObjectsList />
+        </Unit>
+        <Unit height='full'>
+          <Grid className={styles['container']} display='grid' fullHeight>
+            <DomainMap expendIconButton={true} expended={expendMap} onClick={handleExpand} />
+            <Grid className={cn(expendMap ? 'hidden' : '')} fullWidth fullHeight gap={5}>
+              <Overview />
+              <ResponsibleTanks />
+            </Grid>
+          </Grid>
+        </Unit>
+      </UnitContainer>
+    </>
+  );
+});
