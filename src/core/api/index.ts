@@ -2,6 +2,9 @@ import { auth } from '@core/storages/auth';
 import { LoginInput, LoginOutput, ResetPasswordInput, RestorePasswordInput, ResultOutput, User } from './types';
 
 export const SERVER = import.meta.env.VITE_API_HOST;
+export const LEVELNOW_SERVER = import.meta.env.VITE_LEVELNOW_API_HOST || SERVER;
+
+export type ApiSource = 'levelnow' | 'cerebro';
 
 export enum METHOD {
   Get = 'GET',
@@ -20,8 +23,27 @@ export enum ENDPOINT {
 }
 
 export class ApiLayer {
-  async request(method: METHOD, endpoint: string, data?: unknown, useToken?: string | null): Promise<unknown> {
-    const url = `${SERVER}/${endpoint}`;
+  private getServerUrl(source?: ApiSource): string {
+    switch (source) {
+      case 'levelnow':
+        return LEVELNOW_SERVER;
+      case 'cerebro':
+        return SERVER;
+      default:
+        return SERVER;
+    }
+  }
+
+  async request(
+    method: METHOD,
+    endpoint: string,
+    data?: unknown,
+    useToken?: string | null,
+    source?: ApiSource,
+  ): Promise<unknown> {
+    // const url = 'https://cerebro.sce.pccu.edu.tw/login';
+    const serverUrl = this.getServerUrl(source);
+    const url = `${serverUrl}/${endpoint}`;
     const token = useToken || auth.accessToken;
     const headers = {
       'Content-Type': 'application/json',
@@ -35,8 +57,15 @@ export class ApiLayer {
     return fetch(url, init).then((response) => response.json());
   }
   /** 檔案下載 api 請求 excel 檔案資源 */
-  async requestBinary(method: METHOD, endpoint: string, data?: unknown, useToken?: string | null): Promise<unknown> {
-    const url = `${SERVER}/${endpoint}`;
+  async requestBinary(
+    method: METHOD,
+    endpoint: string,
+    data?: unknown,
+    useToken?: string | null,
+    source?: ApiSource,
+  ): Promise<unknown> {
+    const serverUrl = this.getServerUrl(source);
+    const url = `${serverUrl}/${endpoint}`;
     const token = useToken || auth.accessToken;
     const headers = {
       'Content-Type': 'application/json',
@@ -50,8 +79,9 @@ export class ApiLayer {
     return fetch(url, init).then(async (response) => await response.blob());
   }
 
-  async upload(endpoint: string, contentType: string, data: BodyInit): Promise<unknown> {
-    const url = `${SERVER}/${endpoint}`;
+  async upload(endpoint: string, contentType: string, data: BodyInit, source?: ApiSource): Promise<unknown> {
+    const serverUrl = this.getServerUrl(source);
+    const url = `${serverUrl}/${endpoint}`;
     const token = auth.accessToken;
     const headers = {
       'Content-Type': contentType,
@@ -65,8 +95,14 @@ export class ApiLayer {
     return fetch(url, init).then((response) => response.json());
   }
 
-  async uploadMCFile<Input, Output>(endpoint: string, contentType: string, data: BodyInit): Promise<Output> {
-    const url = `${SERVER}/${endpoint}`;
+  async uploadMCFile<Input, Output>(
+    endpoint: string,
+    contentType: string,
+    data: BodyInit,
+    source?: ApiSource,
+  ): Promise<Output> {
+    const serverUrl = this.getServerUrl(source);
+    const url = `${serverUrl}/${endpoint}`;
     const token = auth.accessToken;
     const headers = {
       'Content-Type': contentType,
@@ -80,27 +116,27 @@ export class ApiLayer {
     return fetch(url, init).then((response) => response.json());
   }
 
-  async get<Input, Output>(endpoint: string, data?: Input): Promise<Output> {
-    return this.request(METHOD.Get, endpoint, data) as Promise<Output>;
+  async get<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {
+    return this.request(METHOD.Get, endpoint, data, null, source) as Promise<Output>;
   }
 
   /** 檔案下載 */
-  async downloadFile<Input, Output>(endpoint: string, data?: Input): Promise<Output> {
-    const res = await this.requestBinary(METHOD.Get, endpoint, data) as Promise<Output>;
-    return res
+  async downloadFile<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {
+    const res = (await this.requestBinary(METHOD.Get, endpoint, data, null, source)) as Promise<Output>;
+    return res;
     // return this.requestBinary(METHOD.Get, endpoint, data) as Promise<Output>;
   }
 
-  async post<Input, Output>(endpoint: string, data?: Input): Promise<Output> {
-    return this.request(METHOD.Post, endpoint, data) as Promise<Output>;
+  async post<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {
+    return this.request(METHOD.Post, endpoint, data, null, source) as Promise<Output>;
   }
 
-  async put<Input, Output>(endpoint: string, data?: Input): Promise<Output> {
-    return this.request(METHOD.Put, endpoint, data) as Promise<Output>;
+  async put<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {
+    return this.request(METHOD.Put, endpoint, data, null, source) as Promise<Output>;
   }
 
-  async delete<Input, Output>(endpoint: string, data?: Input): Promise<Output> {
-    return this.request(METHOD.Delete, endpoint, data) as Promise<Output>;
+  async delete<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {
+    return this.request(METHOD.Delete, endpoint, data, null, source) as Promise<Output>;
   }
 
   async checkResulCode<DataType extends ResultOutput>(result: DataType): Promise<DataType> {
@@ -116,8 +152,8 @@ export class ApiLayer {
     return this.get<void, void>(ENDPOINT.Logout);
   }
 
-  async checkToken(token: string): Promise<LoginOutput> {
-    return this.request(METHOD.Get, ENDPOINT.CheckToken, null, token) as Promise<LoginOutput>;
+  async checkToken(token: string, source?: ApiSource): Promise<LoginOutput> {
+    return this.request(METHOD.Get, ENDPOINT.CheckToken, null, token, source) as Promise<LoginOutput>;
   }
 
   async me(): Promise<User> {

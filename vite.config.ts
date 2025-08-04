@@ -47,4 +47,14 @@ export default defineConfig({
   define: {
     'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageJson.version),
   },
+  server: {
+    proxy: {
+      '/api/levelnow': {
+        target: 'https://cerebro.sce.pccu.edu.tw/lvapi/api',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/levelnow/, ''),
+        secure: true,
+      },
+    },
+  },
 });
