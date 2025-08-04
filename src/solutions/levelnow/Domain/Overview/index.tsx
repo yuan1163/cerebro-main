@@ -11,6 +11,7 @@ import { Text } from '@core/ui/components/Text';
 import { t } from '@core/utils/translate';
 import { useSummary } from '@core/storages/controllers/summary';
 import { Summary } from '@core/api/types';
+import { formatTankLevelCounts } from '@core/utils/levelnow/tankLevelCounts';
 
 export default observer(function Overview() {
   const navigate = useNavigate();
@@ -28,18 +29,8 @@ export default observer(function Overview() {
     { label: 'Battery Low', value: summary?.batteryLowCount || 0 },
   ];
 
-  const levelHighCounts =
-    summary?.tankLevelCounts
-      ?.filter((item) => item.range === '>205L' || item.range === 'Full')
-      .reduce((sum, item) => sum + item.count, 0) || 0;
-  const levelMediumCounts = summary?.tankLevelCounts?.find((item) => item.range === '100~205L')?.count || 0;
-  const levelLowCounts = summary?.tankLevelCounts?.find((item) => item.range === '<100L')?.count || 0;
-
-  const data = [
-    { range: '>205L', value: levelHighCounts, color: '#2CD232' },
-    { range: '100~205L', value: levelMediumCounts, color: '#FF982F' },
-    { range: '<100L', value: levelLowCounts, color: '#FF4545' },
-  ];
+  const tankLevelCounts = summary?.tankLevelCounts || [];
+  const data = formatTankLevelCounts(tankLevelCounts);
 
   const total = summary?.totalTanks || 0;
 

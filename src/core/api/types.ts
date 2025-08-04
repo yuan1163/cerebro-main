@@ -2,12 +2,15 @@ import { t } from '@core/utils/translate';
 
 // levelnow
 
+export type TankLevelCounts = {
+  range: 'Full' | '>205L' | '100~205L' | '<100L';
+  count: number;
+}[];
+
+// api/Overview/summary
 export type Summary = {
   totalTanks: number;
-  tankLevelCounts: {
-    range: string;
-    count: number;
-  }[];
+  tankLevelCounts: TankLevelCounts;
   locationsCount: number;
   brandCount: number;
   customerCount: number;
@@ -18,6 +21,17 @@ export type Summary = {
 export type SummaryParameters = {
   userId: number;
   brandId?: number;
+};
+
+// api/Overview/responsibleTanks
+export type ResponsibleTanks = {
+  userName: string;
+  tankLevelCounts: TankLevelCounts;
+}[];
+
+export type ResponsibleTanksParameters = {
+  userId: number;
+  locationId?: number;
 };
 
 // utils

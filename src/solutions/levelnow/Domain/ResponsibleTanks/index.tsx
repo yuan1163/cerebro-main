@@ -1,6 +1,9 @@
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import { observer } from 'mobx-react';
+import { useAuth } from '@core/storages/auth';
+import { useNavigate } from 'react-router-dom';
 import { Listbox } from '@headlessui/react';
+import { useResponsibleTanks } from '@core/storages/controllers/responsibleTanks';
 
 // UI components
 import { Card } from '@core/ui/components/Card';
@@ -16,25 +19,39 @@ import { t } from '@core/utils/translate';
 // Icons
 import CheckIcon from '@assets/icons/LevelNOW/check.svg?component';
 import { cn } from '@core/utils/classnames';
+import { formatTankLevelCounts } from '@core/utils/levelnow/tankLevelCounts';
 
-const data = [
-  { name: '>205L', value: 3, color: '#2CD232' },
-  { name: '100-250L', value: 6, color: '#FF982F' },
-  { name: '<100L', value: 3, color: '#FF4545' },
-];
+export default observer(function ResponsibleTanks() {
+  const [selectedPerson, setSelectedPerson] = useState<string | undefined>(undefined);
+  console.log('selectedPerson', selectedPerson);
 
-const people = [
-  { id: 1, name: 'Durward' },
-  { id: 2, name: 'Kenton' },
-  { id: 3, name: 'Therese' },
-  { id: 4, name: 'Benedict' },
-  { id: 5, name: 'Katelyn' },
-];
+  const navigate = useNavigate();
+  const { profile } = useAuth();
+  if (!profile) {
+    navigate('/login');
+    return null;
+  }
 
-export default function ResponsibleTanks() {
-  const [selectedPerson, setSelectedPerson] = useState(people[0]);
+  const responsibleTanks = useResponsibleTanks({ userId: profile.userId });
+  console.log('responsibleTanks', responsibleTanks);
 
+  const users =
+    responsibleTanks && Array.isArray(responsibleTanks) ? responsibleTanks.map((item) => item.userName) : [];
+
+  useEffect(() => {
+    if (!selectedPerson) {
+      if (users.length > 0) {
+        setSelectedPerson(users[0]);
+      }
+    }
+  }, [users]);
+
+  const tankLevelCounts = responsibleTanks?.find((item) => item.userName === selectedPerson)?.tankLevelCounts || [];
+  console.log('tankLevelCounts', tankLevelCounts);
+
+  const data = formatTankLevelCounts(tankLevelCounts);
   const total = data.reduce((sum, item) => sum + item.value, 0);
+
   return (
     <Card fullWidth fullHeight elevation='xs' className='flex flex-col'>
       <CardHeader className='flex items-center justify-between'>
@@ -57,16 +74,16 @@ export default function ResponsibleTanks() {
                     'flex bg-[#FFF] hover:bg-hover items-center gap-2 px-3 py-1 border rounded-md',
                   )}
                 >
-                  {selectedPerson.name}
+                  {selectedPerson?.split('@')[0]}
                 </Listbox.Button>
                 <Listbox.Options
                   className={cn(
                     'absolute bottom-0 right-0 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select min-w-56 -translate-y-[50px]',
                   )}
                 >
-                  {people.map((person) => {
+                  {users.map((user, index) => {
                     return (
-                      <Listbox.Option key={person.id} value={person}>
+                      <Listbox.Option key={index} value={user}>
                         {({ active, selected }) => (
                           <li
                             className={cn(
@@ -75,7 +92,7 @@ export default function ResponsibleTanks() {
                               selected && 'bg-primary-50 text-primary-500',
                             )}
                           >
-                            <span>{person.name}</span>
+                            <span>{user.split('@')[0]}</span>
                             {selected && <CheckIcon className='text-primary-500' />}
                           </li>
                         )}
@@ -92,7 +109,7 @@ export default function ResponsibleTanks() {
         <div className='px-5 py-10 bg-neutral-50 rounded-[10px] flex flex-col justify-between h-full'>
           <div className='flex items-center justify-evenly'>
             {/* Total Counts */}
-            <div className='flex flex-col justify-center gap-5'>
+            <div className='flex flex-col items-center'>
               <span className='text-base font-medium tracking-32 text-neutral-900'>Tanks</span>
               <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{total}</span>
             </div>
@@ -100,10 +117,12 @@ export default function ResponsibleTanks() {
             {/* Each Counts */}
             <div className='flex flex-col gap-5'>
               {data.map((item) => (
-                <div key={item.name} className='flex items-center justify-between gap-2'>
+                <div key={item.range} className='flex items-center justify-between gap-2'>
                   <div className='w-2.5 aspect-square rounded-full' style={{ backgroundColor: item.color }} />
-                  <span className='text-sm font-medium text-secondary-500 min-w-[85px]'>{item.name}</span>
-                  <span className='text-sm font-medium text-neutral-900'>{item.value}</span>
+                  <span className='text-sm font-medium text-secondary-500 min-w-[85px]'>{item.range}</span>
+                  <div className='flex items-center justify-center min-w-3'>
+                    <span className='text-sm font-medium text-neutral-900'>{item.value}</span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -121,4 +140,4 @@ export default function ResponsibleTanks() {
       </CardContent>
     </Card>
   );
-}
+});
