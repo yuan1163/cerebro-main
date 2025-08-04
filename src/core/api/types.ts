@@ -1,6 +1,26 @@
-// utils
-
 import { t } from '@core/utils/translate';
+
+// levelnow
+
+export type Summary = {
+  totalTanks: number;
+  tankLevelCounts: {
+    range: string;
+    count: number;
+  }[];
+  locationsCount: number;
+  brandCount: number;
+  customerCount: number;
+  batteryLowCount: number;
+  offlineDeviceCount: number;
+};
+
+export type SummaryParameters = {
+  userId: number;
+  brandId?: number;
+};
+
+// utils
 
 export type ResultOutput = {
   resultCode: number;
