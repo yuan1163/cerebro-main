@@ -49,16 +49,16 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
+      '/api/rsapi': {
         target: 'https://cerebro.sce.pccu.edu.tw/rsapi/cloud',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api\/rsapi/, ''),
         secure: true,
       },
-      '/api/levelnow': {
+      '/api/lvapi': {
         target: 'https://cerebro.sce.pccu.edu.tw/lvapi/api',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/levelnow/, ''),
+        rewrite: (path) => path.replace(/^\/api\/lvapi/, ''),
         secure: true,
       },
     },

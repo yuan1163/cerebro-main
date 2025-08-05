@@ -3,8 +3,9 @@ import { LoginInput, LoginOutput, ResetPasswordInput, RestorePasswordInput, Resu
 
 export const SERVER = import.meta.env.VITE_API_HOST;
 export const LEVELNOW_SERVER = import.meta.env.VITE_LEVELNOW_API_HOST || SERVER;
+export const LEVELNOW_LOGIN_SERVER = import.meta.env.VITE_LEVELNOW_API_LOGIN_HOST || SERVER;
 
-export type ApiSource = 'levelnow' | 'cerebro';
+export type ApiSource = 'levelnow' | 'levelnowLogin' | 'cerebro';
 
 export enum METHOD {
   Get = 'GET',
@@ -27,6 +28,8 @@ export class ApiLayer {
     switch (source) {
       case 'levelnow':
         return LEVELNOW_SERVER;
+      case 'levelnowLogin':
+        return LEVELNOW_LOGIN_SERVER;
       case 'cerebro':
         return SERVER;
       default:
@@ -41,7 +44,6 @@ export class ApiLayer {
     useToken?: string | null,
     source?: ApiSource,
   ): Promise<unknown> {
-    // const url = 'https://cerebro.sce.pccu.edu.tw/login';
     const serverUrl = this.getServerUrl(source);
     const url = `${serverUrl}/${endpoint}`;
     const token = useToken || auth.accessToken;
@@ -54,6 +56,7 @@ export class ApiLayer {
       headers,
       body: data ? JSON.stringify(data) : undefined,
     };
+
     return fetch(url, init).then((response) => response.json());
   }
   /** 檔案下載 api 請求 excel 檔案資源 */
@@ -145,7 +148,7 @@ export class ApiLayer {
   }
 
   async login(input: LoginInput): Promise<LoginOutput> {
-    return this.post<LoginInput, LoginOutput>(ENDPOINT.Login, input);
+    return this.post<LoginInput, LoginOutput>(ENDPOINT.Login, input, 'levelnowLogin');
   }
 
   async logout() {
@@ -157,7 +160,7 @@ export class ApiLayer {
   }
 
   async me(): Promise<User> {
-    return this.get<void, User>(ENDPOINT.User);
+    return this.get<void, User>(ENDPOINT.User, undefined, 'levelnowLogin');
   }
 
   async restorePassword(input: RestorePasswordInput): Promise<void> {
