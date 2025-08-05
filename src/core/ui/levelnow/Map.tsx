@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useRef, useContext, useMemo, useEffect, createRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
 import { Feature, Geometry, GeoJsonProperties } from 'geojson';
@@ -26,12 +26,8 @@ import { createRoot } from 'react-dom/client';
 
 // types
 
-import { IssuePriority, Location } from '@core/api/types';
+import { IssuePriority, Location, Locations } from '@core/api/types';
 import { CurrentTheme, SeverityPalette } from '@core/api/typesDesignSystem';
-
-// styles
-
-import styles from './styles.module.scss';
 
 // components
 
@@ -45,23 +41,17 @@ import Building01SolidIcon from '@assets/icons/solid/building-01.svg?component';
 import Map01LineIcon from '@assets/icons/solid/map-01.svg?component';
 import TrackerLineIcon from '@assets/icons/line/tracker.svg?component';
 
-// image
-
-import PinIcon from './pin_2.png';
-
 interface Point {
   latitude: number;
   longitude: number;
 }
 
-type Props = {
-  className?: string;
+type MapProps = {
   controls?: boolean;
   marker?: 'default' | 'dot' | 'needle';
-  onSelect?: (point: Location) => void;
-  points: Location[];
+  points: Point[];
   zoom: number;
-  shapes?: number[][][];
+  className?: string;
 };
 
 const getCenter = (points: Point[]): Point => {
@@ -119,24 +109,38 @@ const Marker: React.FC<Marker> = ({ color, markerContent, markerIcon, markerLabe
   );
 };
 
-export const Map: React.FC<Props> = ({ className, controls, marker = 'default', onSelect, points, zoom, shapes }) => {
+export default function Map({ controls, marker = 'default', points, zoom, className }: MapProps) {
+  console.log('Map points:', points);
+  console.log('Points length:', points.length);
+  console.log(
+    'Sample points:',
+    points.slice(0, 5).map((p, i) => ({
+      index: i,
+      lat: p.latitude,
+      lng: p.longitude,
+      riskLevel: (p as any)?.riskLevel,
+    })),
+  );
+
+  // Set Mapbox access token
+  mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_API_TOKEN;
+
   // const { isDrawerExpanded } = useContext(DrawerContext);
-  const { currentTheme, changeCurrentTheme } = useContext(ThemeContext);
-  const ref = React.useRef<HTMLDivElement>(null);
+  const { currentTheme } = useContext(ThemeContext);
+  const ref = useRef<HTMLDivElement>(null);
+  const center = useMemo(() => (points.length > 0 ? getCenter(points) : { latitude: 0, longitude: 0 }), [points]);
 
-  if (points.length === 0) {
-    return (
-      <div className={styles['disabled-map-container']}>
-        <Icon disabled size='lg' variant='plain'>
-          <Map01LineIcon />
-        </Icon>
-      </div>
-    );
-  }
+  //   if (points.length === 0) {
+  //     return (
+  //       <div>
+  //         <Icon disabled size='lg' variant='plain'>
+  //           <Map01LineIcon />
+  //         </Icon>
+  //       </div>
+  //     );
+  //   }
 
-  const center = React.useMemo(() => getCenter(points), [points]);
-
-  React.useEffect(() => {
+  useEffect(() => {
     if (ref.current) {
       const map = new mapboxgl.Map({
         container: ref.current,
@@ -145,8 +149,6 @@ export const Map: React.FC<Props> = ({ className, controls, marker = 'default', 
         projection: 'mercator' as any,
         zoom,
       });
-
-      // CONTROLS
 
       // translations draft
 
@@ -166,10 +168,6 @@ export const Map: React.FC<Props> = ({ className, controls, marker = 'default', 
 
       const draw = new MapboxDraw({
         displayControlsDefault: false,
-        // controls: {
-        //   polygon: true,
-        //   trash: true,
-        // },
       });
       map.addControl(draw);
       map.addControl(language);
@@ -193,38 +191,45 @@ export const Map: React.FC<Props> = ({ className, controls, marker = 'default', 
 
       // Add custom marker
 
-      points.forEach((point) => {
-        const ref = React.createRef<HTMLDivElement>();
-        let markerElement = ref.current;
-        markerElement = document.createElement('div');
-        createRoot(markerElement).render(
+      points.forEach((point, index) => {
+        // Check if coordinates are valid
+        if (
+          typeof point.latitude !== 'number' ||
+          typeof point.longitude !== 'number' ||
+          isNaN(point.latitude) ||
+          isNaN(point.longitude)
+        ) {
+          console.warn(`Invalid coordinates for point ${index}:`, point);
+          return;
+        }
+
+        const markerElement = document.createElement('div');
+        const root = createRoot(markerElement);
+
+        root.render(
           <Marker
             color={getCommandCenterSeverity((point as any)?.riskLevel) as any}
             markerContent={marker === 'needle' ? (point as any)?.markerContent : 0}
             markerLabel={marker === 'needle' ? (point as any)?.markerLabel : ''}
             variant={marker}
-            onClick={() => {
-              if (onSelect) {
-                onSelect(point);
-              }
-            }}
             point={point}
           />,
         );
+
         new mapboxgl.Marker(markerElement).setLngLat([point.longitude, point.latitude]).addTo(map);
       });
 
-      shapes?.forEach((shapeCoords) => {
-        const feature: Feature<Geometry, GeoJsonProperties> = {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'Polygon',
-            coordinates: [shapeCoords],
-          },
-        };
-        draw.add(feature);
-      });
+      //   shapes?.forEach((shapeCoords) => {
+      //     const feature: Feature<Geometry, GeoJsonProperties> = {
+      //       type: 'Feature',
+      //       properties: {},
+      //       geometry: {
+      //         type: 'Polygon',
+      //         coordinates: [shapeCoords],
+      //       },
+      //     };
+      //     draw.add(feature);
+      //   });
 
       // Add symbol marker
 
@@ -256,9 +261,16 @@ export const Map: React.FC<Props> = ({ className, controls, marker = 'default', 
 
       return () => map.remove();
     }
-  }, [ref, center, points, zoom, shapes, currentTheme]);
+  }, [ref, center, points, zoom, currentTheme]);
 
-  return <div className={className} ref={ref} />;
-};
-
-mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_API_TOKEN;
+  return (
+    <div
+      className={className}
+      ref={ref}
+      style={{
+        width: '100%',
+        height: '100%',
+      }}
+    />
+  );
+}
