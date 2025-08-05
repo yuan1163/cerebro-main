@@ -1,3507 +1,3514 @@
 {
+  "tanks": {
+    "tanks": {
+      "label": {
+        "translation": "Bể chứa"
+      }
+    }
+  },
+  "date": {
+    "day1": {
+      "label": {
+        "translation": "1 ngày"
+      }
+    },
+    "12hours": {
+      "label": {
+        "translation": "12 giờ"
+      }
+    },
+    "6hours": {
+      "label": {
+        "translation": "6 tiếng"
+      }
+    },
+    "months": {
+      "aprAbbr": {
+        "label": {
+          "translation": "tháng 4"
+        }
+      },
+      "augAbbr": {
+        "label": {
+          "translation": "tháng 8"
+        }
+      },
+      "decAbbr": {
+        "label": {
+          "translation": "Tháng 12"
+        }
+      },
+      "febAbbr": {
+        "label": {
+          "translation": "Tháng 2"
+        }
+      },
+      "janAbbr": {
+        "label": {
+          "translation": "Tháng 1"
+        }
+      },
+      "julAbbr": {
+        "label": {
+          "translation": "tháng 7"
+        }
+      },
+      "junAbbr": {
+        "label": {
+          "translation": "tháng 6"
+        }
+      },
+      "marAbbr": {
+        "label": {
+          "translation": "tháng 3"
+        }
+      },
+      "mayAbbr": {
+        "label": {
+          "translation": "tháng 5"
+        }
+      },
+      "novAbbr": {
+        "label": {
+          "translation": "tháng 11"
+        }
+      },
+      "octAbbr": {
+        "label": {
+          "translation": "Tháng 10"
+        }
+      },
+      "sepAbbr": {
+        "label": {
+          "translation": "tháng 9"
+        }
+      },
+      "april": {
+        "label": {
+          "translation": "Tháng 4"
+        }
+      },
+      "august": {
+        "label": {
+          "translation": "Tháng 8"
+        }
+      },
+      "december": {
+        "label": {
+          "translation": "Tháng 12"
+        }
+      },
+      "february": {
+        "label": {
+          "translation": "Tháng 2"
+        }
+      },
+      "january": {
+        "label": {
+          "translation": "Tháng 1"
+        }
+      },
+      "july": {
+        "label": {
+          "translation": "Tháng 7"
+        }
+      },
+      "june": {
+        "label": {
+          "translation": "Tháng 6"
+        }
+      },
+      "march": {
+        "label": {
+          "translation": "Tháng 3"
+        }
+      },
+      "may": {
+        "label": {
+          "translation": "Tháng 5"
+        }
+      },
+      "november": {
+        "label": {
+          "translation": "Tháng 11"
+        }
+      },
+      "october": {
+        "label": {
+          "translation": "Tháng 10"
+        }
+      },
+      "september": {
+        "label": {
+          "translation": "Tháng 9"
+        }
+      }
+    },
+    "last12hours": {
+      "label": {
+        "translation": "12 giờ qua"
+      }
+    },
+    "last24hours": {
+      "label": {
+        "translation": "24 giờ qua"
+      }
+    },
+    "last24h": {
+      "label": {
+        "translation": "24 giờ qua"
+      }
+    },
+    "last3Days": {
+      "label": {
+        "translation": "3 ngày qua"
+      }
+    },
+    "last3hours": {
+      "label": {
+        "translation": "3 giờ qua"
+      }
+    },
+    "last6hours": {
+      "label": {
+        "translation": "6 giờ qua"
+      }
+    },
+    "selectDate": {
+      "label": {
+        "translation": "Chọn ngày"
+      }
+    },
+    "createdAt": {
+      "label": {
+        "translation": "Được tạo vào lúc"
+      }
+    },
     "date": {
-        "day1": {
-            "label": {
-                "translation": "1 ngày"
-            }
-        },
-        "12hours": {
-            "label": {
-                "translation": "12 giờ"
-            }
-        },
-        "6hours": {
-            "label": {
-                "translation": "6 tiếng"
-            }
-        },
-        "months": {
-            "aprAbbr": {
-                "label": {
-                    "translation": "tháng 4"
-                }
-            },
-            "augAbbr": {
-                "label": {
-                    "translation": "tháng 8"
-                }
-            },
-            "decAbbr": {
-                "label": {
-                    "translation": "Tháng 12"
-                }
-            },
-            "febAbbr": {
-                "label": {
-                    "translation": "Tháng 2"
-                }
-            },
-            "janAbbr": {
-                "label": {
-                    "translation": "Tháng 1"
-                }
-            },
-            "julAbbr": {
-                "label": {
-                    "translation": "tháng 7"
-                }
-            },
-            "junAbbr": {
-                "label": {
-                    "translation": "tháng 6"
-                }
-            },
-            "marAbbr": {
-                "label": {
-                    "translation": "tháng 3"
-                }
-            },
-            "mayAbbr": {
-                "label": {
-                    "translation": "tháng 5"
-                }
-            },
-            "novAbbr": {
-                "label": {
-                    "translation": "tháng 11"
-                }
-            },
-            "octAbbr": {
-                "label": {
-                    "translation": "Tháng 10"
-                }
-            },
-            "sepAbbr": {
-                "label": {
-                    "translation": "tháng 9"
-                }
-            },
-            "april": {
-                "label": {
-                    "translation": "Tháng 4"
-                }
-            },
-            "august": {
-                "label": {
-                    "translation": "Tháng 8"
-                }
-            },
-            "december": {
-                "label": {
-                    "translation": "Tháng 12"
-                }
-            },
-            "february": {
-                "label": {
-                    "translation": "Tháng 2"
-                }
-            },
-            "january": {
-                "label": {
-                    "translation": "Tháng 1"
-                }
-            },
-            "july": {
-                "label": {
-                    "translation": "Tháng 7"
-                }
-            },
-            "june": {
-                "label": {
-                    "translation": "Tháng 6"
-                }
-            },
-            "march": {
-                "label": {
-                    "translation": "Tháng 3"
-                }
-            },
-            "may": {
-                "label": {
-                    "translation": "Tháng 5"
-                }
-            },
-            "november": {
-                "label": {
-                    "translation": "Tháng 11"
-                }
-            },
-            "october": {
-                "label": {
-                    "translation": "Tháng 10"
-                }
-            },
-            "september": {
-                "label": {
-                    "translation": "Tháng 9"
-                }
-            }
-        },
-        "last12hours": {
-            "label": {
-                "translation": "12 giờ qua"
-            }
-        },
-        "last24hours": {
-            "label": {
-                "translation": "24 giờ qua"
-            }
-        },
-        "last24h": {
-            "label": {
-                "translation": "24 giờ qua"
-            }
-        },
-        "last3Days": {
-            "label": {
-                "translation": "3 ngày qua"
-            }
-        },
-        "last3hours": {
-            "label": {
-                "translation": "3 giờ qua"
-            }
-        },
-        "last6hours": {
-            "label": {
-                "translation": "6 giờ qua"
-            }
-        },
-        "selectDate": {
-            "label": {
-                "translation": "Chọn ngày"
-            }
-        },
-        "createdAt": {
-            "label": {
-                "translation": "Được tạo vào lúc"
-            }
-        },
-        "date": {
-            "label": {
-                "translation": "Ngày"
-            }
-        },
-        "dueDateInput": {
-            "label": {
-                "translation": "Ngày đến hạn"
-            }
-        },
-        "dueDateInputPlaceholder": {
-            "label": {
-                "translation": "Chọn ngày đến hạn"
-            }
-        },
-        "month": {
-            "label": {
-                "translation": "Tháng"
-            }
-        },
-        "now": {
-            "label": {
-                "translation": "Hiện nay"
-            }
-        },
-        "yesterday": {
-            "label": {
-                "translation": "Hôm qua"
-            }
-        },
-        "lastMonth": {
-            "label": {
-                "translation": "Tháng trước"
-            }
-        },
-        "lastYear": {
-            "label": {
-                "translation": "Năm trước"
-            }
-        },
-        "lastWeek": {
-            "label": {
-                "translation": "Tuần trước"
-            }
-        },
-        "time": {
-            "label": {
-                "translation": "Thời gian"
-            }
-        },
-        "updatedAt": {
-            "label": {
-                "translation": "Cập nhật tại"
-            }
-        },
-        "last7days": {
-            "label": {
-                "translation": "7 ngày qua"
-            }
-        },
-        "thisMonth": {
-            "label": {
-                "translation": "Tháng này"
-            }
-        },
-        "thisYear": {
-            "label": {
-                "translation": "Năm nay"
-            }
-        },
-        "last12Month": {
-            "label": {
-                "translation": "12 tháng qua"
-            }
-        }
+      "label": {
+        "translation": "Ngày"
+      }
     },
-    "general": {
-        "noNotifications": {
-            "label": {
-                "translation": "Không có thông báo"
-            }
-        },
-        "loadingNotifications": {
-            "label": {
-                "translation": "Đang tải thông báo..."
-            }
-        },
-        "noComment": {
-            "label": {
-                "translation": "hưa có bình luận cho câu hỏi này."
-            }
-        },
-        "expandDrawerTooltip": {
-            "label": {
-                "translation": "Hiển thị thanh bên"
-            }
-        },
-        "collapseDrawerTooltip": {
-            "label": {
-                "translation": "Thu gọn thanh bên"
-            }
-        },
-        "backButton": {
-            "label": {
-                "translation": "Trở lại"
-            }
-        },
-        "cancelButton": {
-            "label": {
-                "translation": "Hủy bỏ"
-            }
-        },
-        "changePassword": {
-            "label": {
-                "translation": "Đổi mật khẩu"
-            }
-        },
-        "imageFileChangeButton": {
-            "label": {
-                "translation": "Thay đổi"
-            }
-        },
-        "changeButton": {
-            "label": {
-                "translation": "Thay đổi"
-            }
-        },
-        "clearButton": {
-            "label": {
-                "translation": "Xóa"
-            }
-        },
-        "closeButton": {
-            "label": {
-                "translation": "Đóng"
-            }
-        },
-        "confirmButton": {
-            "label": {
-                "translation": "Xác nhận"
-            }
-        },
-        "createButton": {
-            "label": {
-                "translation": "Tạo"
-            }
-        },
-        "goBack": {
-            "label": {
-                "translation": "Quay lại"
-            }
-        },
-        "nextButton": {
-            "label": {
-                "translation": "Kế tiếp"
-            }
-        },
-        "removeButton": {
-            "label": {
-                "translation": "Gỡ bỏ"
-            }
-        },
-        "imageFileRemoveButton": {
-            "label": {
-                "translation": "Gỡ bỏ"
-            }
-        },
-        "saveButton": {
-            "label": {
-                "translation": "Lưu"
-            }
-        },
-        "submitButton": {
-            "label": {
-                "translation": "Nộp"
-            }
-        },
-        "takeMeHome": {
-            "label": {
-                "translation": "Về trang chủ"
-            }
-        },
-        "collapse": {
-            "label": {
-                "translation": "Thu gọn"
-            }
-        },
-        "grid": {
-            "label": {
-                "translation": "Lưới"
-            }
-        },
-        "hybrid": {
-            "label": {
-                "translation": "Hỗn hợp"
-            }
-        },
-        "logo": {
-            "label": {
-                "translation": "Logo"
-            }
-        },
-        "phone": {
-            "label": {
-                "translation": "Điện thoại"
-            }
-        },
-        "resetPasswordButton": {
-            "label": {
-                "translation": "Đặt lại mật khẩu"
-            }
-        },
-        "summary": {
-            "label": {
-                "translation": "Bảng tóm tắt"
-            }
-        },
-        "access": {
-            "label": {
-                "translation": "Truy cập"
-            }
-        },
-        "copyLink": {
-            "label": {
-                "translation": "Sao chép đường dẫn"
-            }
-        },
-        "saveAndCloseButton": {
-            "label": {
-                "translation": "Lưu và đóng"
-            }
-        },
-        "uploadPhoto": {
-            "label": {
-                "translation": "Tải ảnh lên"
-            }
-        },
-        "updatePage": {
-            "label": {
-                "translation": "Trang cập nhật"
-            }
-        },
-        "addButton": {
-            "label": {
-                "translation": "Thêm vào"
-            }
-        },
-        "expandView": {
-            "label": {
-                "translation": "Mở rộng chế độ xem"
-            }
-        },
-        "app": {
-            "label": {
-                "translation": "ứng dụng"
-            }
-        },
-        "help": {
-            "label": {
-                "translation": "Giúp đỡ"
-            }
-        },
-        "view": {
-            "label": {
-                "translation": "Xem"
-            }
-        },
-        "youHaveUnsavedChanges": {
-            "label": {
-                "translation": "Bạn có các thay đổi chưa lưu."
-            }
-        },
-        "accessDeniedCaption": {
-            "label": {
-                "translation": "Quyền truy cập bị từ chối"
-            }
-        },
-        "requestNewPasswordCaption": {
-            "label": {
-                "translation": "Nếu bạn không biết mật khẩu hiện tại của mình – Hãy yêu cầu mật khẩu mới. Lưu ý: Bạn sẽ tự động đăng xuất và hướng dẫn đặt lại mật khẩu sẽ được gửi tới vlee@gmail.com"
-            }
-        },
-        "changePasswordButton": {
-            "label": {
-                "translation": "Đổi mật khẩu"
-            }
-        },
-        "list": {
-            "label": {
-                "translation": "Danh sách"
-            }
-        },
-        "details": {
-            "label": {
-                "translation": "Chi tiết"
-            }
-        },
-        "edit": {
-            "label": {
-                "translation": "Chỉnh sửa"
-            }
-        },
-        "email": {
-            "label": {
-                "translation": "E-mail"
-            }
-        },
-        "gatewayTimeout": {
-            "label": {
-                "translation": "Cổng Time-out."
-            }
-        },
-        "badRequest": {
-            "label": {
-                "translation": "Yêu cầu xấu"
-            }
-        },
-        "search": {
-            "label": {
-                "translation": "Tìm kiếm"
-            }
-        },
-        "filterByDate": {
-            "label": {
-                "translation": "Lọc theo ngày"
-            }
-        },
-        "index": {
-            "label": {
-                "translation": "Mục lục"
-            }
-        },
-        "uploadSuccessfully": {
-            "label": {
-                "translation": "Tải lên thành công!"
-            }
-        },
-        "oneUppercase": {
-            "label": {
-                "translation": "một chữ hoa"
-            }
-        },
-        "unauthorized": {
-            "label": {
-                "translation": "Không được phép"
-            }
-        },
-        "pageNotFound": {
-            "label": {
-                "translation": "Không tìm thấy trang."
-            }
-        },
-        "serviceUnavailable": {
-            "label": {
-                "translation": "Dịch vụ Không sẵn có."
-            }
-        },
-        "notImplemented": {
-            "label": {
-                "translation": "Không được thực hiện."
-            }
-        },
-        "setNewPassword": {
-            "label": {
-                "translation": "Đặt mật khẩu mới"
-            }
-        },
-        "information": {
-            "label": {
-                "translation": "Thông tin"
-            }
-        },
-        "enterNewPassword": {
-            "label": {
-                "translation": "Nhập mật khẩu mới"
-            }
-        },
-        "sortingAZ": {
-            "label": {
-                "translation": "Sắp xếp AZ"
-            }
-        },
-        "sortingZA": {
-            "label": {
-                "translation": "Sắp xếp ZA"
-            }
-        },
-        "notAvailable": {
-            "label": {
-                "translation": "không tồn tại"
-            }
-        },
-        "copyLinkSuccess": {
-            "label": {
-                "translation": "Sao chép vào clipboard!"
-            }
-        },
-        "noData": {
-            "label": {
-                "translation": "Không có dữ liệu"
-            }
-        },
-        "closeWithoutSavingButton": {
-            "label": {
-                "translation": "Đóng mà không lưu."
-            }
-        },
-        "description": {
-            "label": {
-                "translation": "Sự miêu tả"
-            }
-        },
-        "screenSelection": {
-            "label": {
-                "translation": "Lựa chọn màn hình"
-            }
-        },
-        "readme":{
-            "label": {
-              "translation": "Hướng dẫn sử dụng"
-            }
+    "dueDateInput": {
+      "label": {
+        "translation": "Ngày đến hạn"
+      }
+    },
+    "dueDateInputPlaceholder": {
+      "label": {
+        "translation": "Chọn ngày đến hạn"
+      }
+    },
+    "month": {
+      "label": {
+        "translation": "Tháng"
+      }
+    },
+    "now": {
+      "label": {
+        "translation": "Hiện nay"
+      }
+    },
+    "yesterday": {
+      "label": {
+        "translation": "Hôm qua"
+      }
+    },
+    "lastMonth": {
+      "label": {
+        "translation": "Tháng trước"
+      }
+    },
+    "lastYear": {
+      "label": {
+        "translation": "Năm trước"
+      }
+    },
+    "lastWeek": {
+      "label": {
+        "translation": "Tuần trước"
+      }
+    },
+    "time": {
+      "label": {
+        "translation": "Thời gian"
+      }
+    },
+    "updatedAt": {
+      "label": {
+        "translation": "Cập nhật tại"
+      }
+    },
+    "last7days": {
+      "label": {
+        "translation": "7 ngày qua"
+      }
+    },
+    "thisMonth": {
+      "label": {
+        "translation": "Tháng này"
+      }
+    },
+    "thisYear": {
+      "label": {
+        "translation": "Năm nay"
+      }
+    },
+    "last12Month": {
+      "label": {
+        "translation": "12 tháng qua"
+      }
+    }
+  },
+  "general": {
+    "noNotifications": {
+      "label": {
+        "translation": "Không có thông báo"
+      }
+    },
+    "loadingNotifications": {
+      "label": {
+        "translation": "Đang tải thông báo..."
+      }
+    },
+    "noComment": {
+      "label": {
+        "translation": "hưa có bình luận cho câu hỏi này."
+      }
+    },
+    "expandDrawerTooltip": {
+      "label": {
+        "translation": "Hiển thị thanh bên"
+      }
+    },
+    "collapseDrawerTooltip": {
+      "label": {
+        "translation": "Thu gọn thanh bên"
+      }
+    },
+    "backButton": {
+      "label": {
+        "translation": "Trở lại"
+      }
+    },
+    "cancelButton": {
+      "label": {
+        "translation": "Hủy bỏ"
+      }
+    },
+    "changePassword": {
+      "label": {
+        "translation": "Đổi mật khẩu"
+      }
+    },
+    "imageFileChangeButton": {
+      "label": {
+        "translation": "Thay đổi"
+      }
+    },
+    "changeButton": {
+      "label": {
+        "translation": "Thay đổi"
+      }
+    },
+    "clearButton": {
+      "label": {
+        "translation": "Xóa"
+      }
+    },
+    "closeButton": {
+      "label": {
+        "translation": "Đóng"
+      }
+    },
+    "confirmButton": {
+      "label": {
+        "translation": "Xác nhận"
+      }
+    },
+    "createButton": {
+      "label": {
+        "translation": "Tạo"
+      }
+    },
+    "goBack": {
+      "label": {
+        "translation": "Quay lại"
+      }
+    },
+    "nextButton": {
+      "label": {
+        "translation": "Kế tiếp"
+      }
+    },
+    "removeButton": {
+      "label": {
+        "translation": "Gỡ bỏ"
+      }
+    },
+    "imageFileRemoveButton": {
+      "label": {
+        "translation": "Gỡ bỏ"
+      }
+    },
+    "saveButton": {
+      "label": {
+        "translation": "Lưu"
+      }
+    },
+    "submitButton": {
+      "label": {
+        "translation": "Nộp"
+      }
+    },
+    "takeMeHome": {
+      "label": {
+        "translation": "Về trang chủ"
+      }
+    },
+    "collapse": {
+      "label": {
+        "translation": "Thu gọn"
+      }
+    },
+    "grid": {
+      "label": {
+        "translation": "Lưới"
+      }
+    },
+    "hybrid": {
+      "label": {
+        "translation": "Hỗn hợp"
+      }
+    },
+    "logo": {
+      "label": {
+        "translation": "Logo"
+      }
+    },
+    "phone": {
+      "label": {
+        "translation": "Điện thoại"
+      }
+    },
+    "resetPasswordButton": {
+      "label": {
+        "translation": "Đặt lại mật khẩu"
+      }
+    },
+    "summary": {
+      "label": {
+        "translation": "Bảng tóm tắt"
+      }
+    },
+    "access": {
+      "label": {
+        "translation": "Truy cập"
+      }
+    },
+    "copyLink": {
+      "label": {
+        "translation": "Sao chép đường dẫn"
+      }
+    },
+    "saveAndCloseButton": {
+      "label": {
+        "translation": "Lưu và đóng"
+      }
+    },
+    "uploadPhoto": {
+      "label": {
+        "translation": "Tải ảnh lên"
+      }
+    },
+    "updatePage": {
+      "label": {
+        "translation": "Trang cập nhật"
+      }
+    },
+    "addButton": {
+      "label": {
+        "translation": "Thêm vào"
+      }
+    },
+    "expandView": {
+      "label": {
+        "translation": "Mở rộng chế độ xem"
+      }
+    },
+    "app": {
+      "label": {
+        "translation": "ứng dụng"
+      }
+    },
+    "help": {
+      "label": {
+        "translation": "Giúp đỡ"
+      }
+    },
+    "view": {
+      "label": {
+        "translation": "Xem"
+      }
+    },
+    "youHaveUnsavedChanges": {
+      "label": {
+        "translation": "Bạn có các thay đổi chưa lưu."
+      }
+    },
+    "accessDeniedCaption": {
+      "label": {
+        "translation": "Quyền truy cập bị từ chối"
+      }
+    },
+    "requestNewPasswordCaption": {
+      "label": {
+        "translation": "Nếu bạn không biết mật khẩu hiện tại của mình – Hãy yêu cầu mật khẩu mới. Lưu ý: Bạn sẽ tự động đăng xuất và hướng dẫn đặt lại mật khẩu sẽ được gửi tới vlee@gmail.com"
+      }
+    },
+    "changePasswordButton": {
+      "label": {
+        "translation": "Đổi mật khẩu"
+      }
+    },
+    "list": {
+      "label": {
+        "translation": "Danh sách"
+      }
+    },
+    "details": {
+      "label": {
+        "translation": "Chi tiết"
+      }
+    },
+    "edit": {
+      "label": {
+        "translation": "Chỉnh sửa"
+      }
+    },
+    "email": {
+      "label": {
+        "translation": "E-mail"
+      }
+    },
+    "gatewayTimeout": {
+      "label": {
+        "translation": "Cổng Time-out."
+      }
+    },
+    "badRequest": {
+      "label": {
+        "translation": "Yêu cầu xấu"
+      }
+    },
+    "search": {
+      "label": {
+        "translation": "Tìm kiếm"
+      }
+    },
+    "filterByDate": {
+      "label": {
+        "translation": "Lọc theo ngày"
+      }
+    },
+    "index": {
+      "label": {
+        "translation": "Mục lục"
+      }
+    },
+    "uploadSuccessfully": {
+      "label": {
+        "translation": "Tải lên thành công!"
+      }
+    },
+    "oneUppercase": {
+      "label": {
+        "translation": "một chữ hoa"
+      }
+    },
+    "unauthorized": {
+      "label": {
+        "translation": "Không được phép"
+      }
+    },
+    "pageNotFound": {
+      "label": {
+        "translation": "Không tìm thấy trang."
+      }
+    },
+    "serviceUnavailable": {
+      "label": {
+        "translation": "Dịch vụ Không sẵn có."
+      }
+    },
+    "notImplemented": {
+      "label": {
+        "translation": "Không được thực hiện."
+      }
+    },
+    "setNewPassword": {
+      "label": {
+        "translation": "Đặt mật khẩu mới"
+      }
+    },
+    "information": {
+      "label": {
+        "translation": "Thông tin"
+      }
+    },
+    "enterNewPassword": {
+      "label": {
+        "translation": "Nhập mật khẩu mới"
+      }
+    },
+    "sortingAZ": {
+      "label": {
+        "translation": "Sắp xếp AZ"
+      }
+    },
+    "sortingZA": {
+      "label": {
+        "translation": "Sắp xếp ZA"
+      }
+    },
+    "notAvailable": {
+      "label": {
+        "translation": "không tồn tại"
+      }
+    },
+    "copyLinkSuccess": {
+      "label": {
+        "translation": "Sao chép vào clipboard!"
+      }
+    },
+    "noData": {
+      "label": {
+        "translation": "Không có dữ liệu"
+      }
+    },
+    "closeWithoutSavingButton": {
+      "label": {
+        "translation": "Đóng mà không lưu."
+      }
+    },
+    "description": {
+      "label": {
+        "translation": "Sự miêu tả"
+      }
+    },
+    "screenSelection": {
+      "label": {
+        "translation": "Lựa chọn màn hình"
+      }
+    },
+    "readme": {
+      "label": {
+        "translation": "Hướng dẫn sử dụng"
+      }
+    },
+    "upload": {
+      "label": {
+        "translation": "Tải lên"
+      }
+    },
+    "download": {
+      "label": {
+        "translation": "Tải xuống"
+      }
+    },
+    "selectCategory": {
+      "label": {
+        "translation": "Chọn danh mục"
+      }
+    },
+    "selectGroupFromList": {
+      "label": {
+        "translation": "Chọn nhóm"
+      }
+    },
+    "settings": {
+      "label": {
+        "translation": "Cài đặt"
+      }
+    },
+    "localServerID": {
+      "label": {
+        "translation": "ID máy chủ cục bộ"
+      }
+    },
+    "selectInterval": {
+      "label": {
+        "translation": "Chọn khoảng thời gian"
+      }
+    },
+    "unsavedChanges": {
+      "label": {
+        "translation": "Những thay đổi chưa được lưu"
+      }
+    },
+    "filterAlerts": {
+      "label": {
+        "translation": "Lọc cảnh báo"
+      }
+    },
+    "createPassword": {
+      "label": {
+        "translation": "Tạo mật khẩu"
+      }
+    },
+    "to": {
+      "label": {
+        "translation": "ĐẾN"
+      }
+    },
+    "all": {
+      "label": {
+        "translation": "Tất cả"
+      }
+    },
+    "color": {
+      "label": {
+        "translation": "Màu sắc"
+      }
+    },
+    "from": {
+      "label": {
+        "translation": "Từ"
+      }
+    },
+    "requestNewPasswordButton": {
+      "label": {
+        "translation": "Yêu cầu một cái mới"
+      }
+    },
+    "saveChanges": {
+      "label": {
+        "translation": "Lưu thay đổi"
+      }
+    },
+    "scheme": {
+      "label": {
+        "translation": "Sơ đồ"
+      }
+    },
+    "searchByName": {
+      "label": {
+        "translation": "Tìm kiếm theo tên"
+      }
+    },
+    "internalServerError": {
+      "label": {
+        "translation": "Lỗi máy chủ nội bộ."
+      }
+    },
+    "oneSpecialCharacter": {
+      "label": {
+        "translation": "một ký tự đặc biệt"
+      }
+    },
+    "language": {
+      "label": {
+        "translation": "Ngôn ngữ"
+      }
+    },
+    "min8character": {
+      "label": {
+        "translation": "tối thiểu 8 ký tự"
+      }
+    },
+    "oneNumberCharacter": {
+      "label": {
+        "translation": "một ký tự số"
+      }
+    },
+    "seeMore": {
+      "label": {
+        "translation": "Xem thêm"
+      }
+    },
+    "imageRecommendedSize": {
+      "label": {
+        "translation": "Khuyến nghị 500x500 px"
+      }
+    },
+    "internalServerErrorCaption": {
+      "label": {
+        "translation": "Xin lỗi, có lỗi xảy ra."
+      }
+    },
+    "badRequestCaption": {
+      "label": {
+        "translation": "Rất tiếc, trình duyệt của bạn đã gửi yêu cầu mà máy chủ này không thể hiểu được."
+      }
+    },
+    "accessDenied": {
+      "label": {
+        "translation": "Quyền truy cập bị từ chối"
+      }
+    },
+    "matchPassword": {
+      "label": {
+        "translation": "Mật khẩu không hợp lệ."
+      }
+    },
+    "setNewPasswordCaption": {
+      "label": {
+        "translation": "Mật khẩu mới của bạn phải đủ mạnh và khác với mật khẩu đã sử dụng trước đó"
+      }
+    },
+    "pageNotFoundCaption": {
+      "label": {
+        "translation": "Xin lỗi, trang bạn đang tìm kiếm không còn tồn tại hoặc đã bị di chuyển hoặc lưu trữ."
+      }
+    },
+    "serviceUnavailableCaption": {
+      "label": {
+        "translation": "Xin lỗi, máy chủ tạm thời bận, hãy thử lại sau."
+      }
+    },
+    "notImplementedCaption": {
+      "label": {
+        "translation": "Rất tiếc, máy chủ không nhận dạng được phương thức yêu cầu hoặc không có khả năng thực hiện yêu cầu."
+      }
+    },
+    "unauthorizedCaption": {
+      "label": {
+        "translation": "Rất tiếc, chúng tôi không thể xác thực thông tin đăng nhập của bạn, bạn cần được cấp quyền để truy cập trang này."
+      }
+    },
+    "gatewayTimeoutCaption": {
+      "label": {
+        "translation": "Xin lỗi, trang này tải quá lâu."
+      }
+    },
+    "confirmPasswordInput": {
+      "label": {
+        "translation": "Vui lòng nhập mật khẩu xác nhận của bạn"
+      }
+    },
+    "unsavedChangesCaption": {
+      "label": {
+        "translation": "Bạn có chắc chắn muốn đóng mà không lưu không? Mọi thay đổi chưa được lưu sẽ bị mất."
+      }
+    },
+    "title": {
+      "label": {
+        "translation": "Tiêu đề"
+      }
+    },
+    "confirmPassword": {
+      "label": {
+        "translation": "Để đặt mật khẩu mới, hãy xác nhận mật khẩu hiện tại của bạn."
+      }
+    },
+    "menu": {
+      "label": {
+        "translation": "Bảng chọn"
+      }
+    },
+    "toggleButton": {
+      "label": {
+        "translation": "Chuyển đổi chế độ hiển thị"
+      }
+    },
+    "filters": {
+      "label": {
+        "translation": "Bộ lọc"
+      }
+    },
+    "markAllIsRead": {
+      "label": {
+        "translation": "Tất cả đánh dấu đã được đọc"
+      }
+    },
+    "errorVerification": {
+      "label": {
+        "translation": "lỗi"
+      }
+    },
+    "applyButton": {
+      "label": {
+        "translation": "Áp dụng"
+      }
+    },
+    "assetsTitle": {
+      "label": {
+        "translation": "Tài sản"
+      }
+    },
+    "selectDate": {
+      "label": {
+        "translation": "Chọn ngày"
+      }
+    },
+    "selectLanguage": {
+      "label": {
+        "translation": "Chọn ngôn ngữ"
+      }
+    },
+    "vietnameseLanguage": {
+      "label": {
+        "translation": "Tiếng Việt"
+      }
+    },
+    "selectLocationFromList": {
+      "label": {
+        "translation": "Chọn địa điểm"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Tên"
+      }
+    },
+    "amount": {
+      "label": {
+        "translation": "Số lượng"
+      }
+    },
+    "enterStartDate": {
+      "label": {
+        "translation": "Bạn phải nhập ngày bắt đầu"
+      }
+    },
+    "enterAmount": {
+      "label": {
+        "translation": "Nhập số tiền"
+      }
+    },
+    "startDate": {
+      "label": {
+        "translation": "Ngày bắt đầu"
+      }
+    },
+    "endDate": {
+      "label": {
+        "translation": "Ngày cuối"
+      }
+    },
+    "imageFileUploadButton": {
+      "label": {
+        "translation": "Tải lên"
+      }
+    },
+    "updateSuccessfully": {
+      "label": {
+        "translation": "Cập nhật thành công"
+      }
+    },
+    "isLoading": {
+      "label": {
+        "translation": "Đang tải..."
+      }
+    },
+    "goToPreviousPageButton": {
+      "label": {
+        "translation": "Đi tới trang trước"
+      }
+    },
+    "goToNextPageButton": {
+      "label": {
+        "translation": "Chuyển đến trang tiếp theo"
+      }
+    },
+    "viewAll": {
+      "label": {
+        "translation": "Xem tất cả"
+      }
+    }
+  },
+  "user": {
+    "reinviteUser": {
+      "label": {
+        "translation": "Mời lại người dùng"
+      }
+    },
+    "addGroupButton": {
+      "label": {
+        "translation": "Thêm nhóm"
+      }
+    },
+    "addUser": {
+      "label": {
+        "translation": "Thêm người dùng"
+      }
+    },
+    "allGroups": {
+      "label": {
+        "translation": "Tất cả các nhóm"
+      }
+    },
+    "methodOfContactCall": {
+      "label": {
+        "translation": "Gọi"
+      }
+    },
+    "confirmPasswordInput": {
+      "label": {
+        "translation": "Xác nhận mật khẩu"
+      }
+    },
+    "deleteGroupQuestion": {
+      "label": {
+        "translation": "Bạn có chắc chắn muốn xóa nhóm không?"
+      }
+    },
+    "deleteAccountQuestion": {
+      "label": {
+        "translation": "Bạn có chắc chắn muốn xóa người dùng không?"
+      }
+    },
+    "currentPasswordInputPlaceholder": {
+      "label": {
+        "translation": "Nhập mật khẩu hiện tại của bạn"
+      }
+    },
+    "deleteUserCaption": {
+      "label": {
+        "translation": "Cẩn thận! Điều này sẽ xóa vĩnh viễn người dùng và tất cả thông tin của họ. Sau đó, người dùng sẽ không còn quyền truy cập vào hệ thống nữa."
+      }
+    },
+    "deleteAccount": {
+      "label": {
+        "translation": "Xóa tài khoản"
+      }
+    },
+    "deleteGroup": {
+      "label": {
+        "translation": "Xóa nhóm"
+      }
+    },
+    "editGroup": {
+      "label": {
+        "translation": "Chỉnh sửa nhóm"
+      }
+    },
+    "methodOfContactEmail": {
+      "label": {
+        "translation": "E-mail"
+      }
+    },
+    "feedbackDispatchCriteria": {
+      "label": {
+        "translation": "Gửi thông báo, khi…"
+      }
+    },
+    "feedbackDispatchCriteriaTickets": {
+      "label": {
+        "translation": "Tạo vé, nhận xét, giải quyết"
+      }
+    },
+    "groupNameInputPlaceholder": {
+      "label": {
+        "translation": "Nhập tên nhóm"
+      }
+    },
+    "descriptionInputPlaceholder": {
+      "label": {
+        "translation": "Nhập mô tả của nhóm"
+      }
+    },
+    "member": {
+      "label": {
+        "translation": "Thành viên"
+      }
+    },
+    "members": {
+      "label": {
+        "translation": "Các thành viên"
+      }
+    },
+    "editUser": {
+      "label": {
+        "translation": "Chỉnh sửa người dùng"
+      }
+    },
+    "emailFormatValidation": {
+      "label": {
+        "translation": "Vui lòng nhập email hợp lệ ở định dạng example@mail.com."
+      }
+    },
+    "groupDescriptionInputVerification": {
+      "label": {
+        "translation": "Bạn phải nhập mô tả của nhóm."
+      }
+    },
+    "emailValidation": {
+      "label": {
+        "translation": "Bạn phải nhập email."
+      }
+    },
+    "firstNameValidation": {
+      "label": {
+        "translation": "Bạn phải nhập tên."
+      }
+    },
+    "groupNameInputVerification": {
+      "label": {
+        "translation": "Bạn phải nhập tên nhóm của bạn."
+      }
+    },
+    "lastNameValidation": {
+      "label": {
+        "translation": "Bạn phải nhập họ."
+      }
+    },
+    "phoneValidation": {
+      "label": {
+        "translation": "Bạn phải nhập số điện thoại trong định dạng"
+      }
+    },
+    "memberSince": {
+      "label": {
+        "translation": "Thành viên kể từ"
+      }
+    },
+    "admins": {
+      "label": {
+        "translation": "Quản trị viên"
+      }
+    },
+    "groupsNotFoundCaption": {
+      "label": {
+        "translation": "Rất tiếc, không có nhóm nào, hãy thử phát hành bộ lọc hoặc tìm kiếm bằng từ khác"
+      }
+    },
+    "usersNotFoundCaption": {
+      "label": {
+        "translation": "Rất tiếc, không có người dùng, hãy thử bộ lọc phát hành hoặc tìm kiếm bằng từ khác"
+      }
+    },
+    "newPasswordInputPlaceholder": {
+      "label": {
+        "translation": "Mật khẩu mới"
+      }
+    },
+    "newPasswordInput": {
+      "label": {
+        "translation": "Mật khẩu mới"
+      }
+    },
+    "groupsNotFound": {
+      "label": {
+        "translation": "Không tìm thấy nhóm"
+      }
+    },
+    "usersNotFound": {
+      "label": {
+        "translation": "Không tìm thấy người dùng"
+      }
+    },
+    "notifications": {
+      "label": {
+        "translation": "Thông báo"
+      }
+    },
+    "permissions": {
+      "label": {
+        "translation": "Quyền hạn  <sự cho phép>"
+      }
+    },
+    "jobTitleSelectPlaceholder": {
+      "label": {
+        "translation": "Chọn chức danh"
+      }
+    },
+    "methodOfContact": {
+      "label": {
+        "translation": "Phương thức liên lạc ưa thích"
+      }
+    },
+    "confirmPasswordInputPlaceholder": {
+      "label": {
+        "translation": "Nhập lại mật khẩu"
+      }
+    },
+    "removeFromGroup": {
+      "label": {
+        "translation": "Loại bỏ khỏi nhóm"
+      }
+    },
+    "feedbackDispatchCriteriaNews": {
+      "label": {
+        "translation": "Tin tức và cập nhật"
+      }
+    },
+    "methodOfContactText": {
+      "label": {
+        "translation": "Chữ"
+      }
+    },
+    "groupNameInput": {
+      "label": {
+        "translation": "Tên nhóm"
+      }
+    },
+    "admin": {
+      "label": {
+        "translation": "Quản trị viên"
+      }
+    },
+    "groups": {
+      "label": {
+        "translation": "Các nhóm"
+      }
+    },
+    "profileImage": {
+      "label": {
+        "translation": "Hình ảnh hồ sơ cá nhân"
+      }
+    },
+    "avatar": {
+      "label": {
+        "translation": "hình đại diện"
+      }
+    },
+    "categoryInputPlaceholder": {
+      "label": {
+        "translation": "Chọn danh mục"
+      }
+    },
+    "categoryInput": {
+      "label": {
+        "translation": "Loại"
+      }
+    },
+    "contact": {
+      "label": {
+        "translation": "Liên hệ"
+      }
+    },
+    "contacts": {
+      "label": {
+        "translation": "Liên lạc"
+      }
+    },
+    "userDetails": {
+      "label": {
+        "translation": "Chi tiết người dùng"
+      }
+    },
+    "emailInput": {
+      "label": {
+        "translation": "E-mail"
+      }
+    },
+    "emailInputPlaceholder": {
+      "label": {
+        "translation": "Nhập email"
+      }
+    },
+    "firstNameInput": {
+      "label": {
+        "translation": "Tên đầu tiên"
+      }
+    },
+    "firstNameInputPlaceholder": {
+      "label": {
+        "translation": "Nhập tên đầu tiên"
+      }
+    },
+    "fullNameInput": {
+      "label": {
+        "translation": "Họ và tên"
+      }
+    },
+    "descriptionInput": {
+      "label": {
+        "translation": "Sự miêu tả"
+      }
+    },
+    "groupDetails": {
+      "label": {
+        "translation": "Chi tiết nhóm"
+      }
+    },
+    "groupName": {
+      "label": {
+        "translation": "Tên"
+      }
+    },
+    "group": {
+      "label": {
+        "translation": "Nhóm"
+      }
+    },
+    "viewProfile": {
+      "label": {
+        "translation": "Chức danh"
+      }
+    },
+    "jobTitleInputPlaceholder": {
+      "label": {
+        "translation": "Nhập chức danh"
+      }
+    },
+    "lastNameInput": {
+      "label": {
+        "translation": "Họ"
+      }
+    },
+    "lastNameInputPlaceholder": {
+      "label": {
+        "translation": "Nhập họ"
+      }
+    },
+    "phoneInput": {
+      "label": {
+        "translation": "Điện thoại"
+      }
+    },
+    "phoneInputPlaceholder": {
+      "label": {
+        "translation": "Nhập số điện thoại"
+      }
+    },
+    "roleInput": {
+      "label": {
+        "translation": "Vai trò"
+      }
+    },
+    "roleInputPlaceholder": {
+      "label": {
+        "translation": "Nhập vai trò"
+      }
+    },
+    "roleSelect": {
+      "label": {
+        "translation": "Chọn vai trò"
+      }
+    },
+    "roles": {
+      "label": {
+        "translation": "Vai trò"
+      },
+      "viewer": {
+        "translation": "Người xem"
+      }
+    },
+    "timezoneInput": {
+      "label": {
+        "translation": "Múi giờ"
+      }
+    },
+    "timezoneInputPlaceholder": {
+      "label": {
+        "translation": "Thêm múi giờ"
+      }
+    },
+    "jobTitleInput": {
+      "label": {
+        "translation": "Thêm múi giờ"
+      }
+    },
+    "userTitle": {
+      "label": {
+        "translation": "Người dùng"
+      }
+    },
+    "currentPassword": {
+      "label": {
+        "translation": "Mật khẩu hiện tại"
+      }
+    },
+    "usernameInput": {
+      "label": {
+        "translation": "tên tài khoản"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Tên"
+      }
+    },
+    "usersTitle": {
+      "label": {
+        "translation": "Người dùng"
+      }
+    },
+    "allUsers": {
+      "label": {
+        "translation": "Tất cả người dùng"
+      }
+    }
+  },
+  "asset": {
+    "circuit": {
+      "label": {
+        "translation": "Mạch"
+      }
+    },
+    "trackerLowBattery": {
+      "label": {
+        "translation": "Theo dõi pin yếu"
+      }
+    },
+    "unassignedAsset": {
+      "label": {
+        "translation": "Tài sản không được xác định"
+      }
+    },
+    "deviceCircuit": {
+      "label": {
+        "translation": "Mạch thiết bị"
+      }
+    },
+    "addAssetButton": {
+      "label": {
+        "translation": "Thêm tài sản"
+      }
+    },
+    "addAssetTitle": {
+      "label": {
+        "translation": "Thêm tài sản"
+      }
+    },
+    "addClassButton": {
+      "label": {
+        "translation": "Thêm lớp"
+      }
+    },
+    "addDeviceButton": {
+      "label": {
+        "translation": "Thêm thiết bị"
+      }
+    },
+    "addGroupButton": {
+      "label": {
+        "translation": "Thêm nhóm"
+      }
+    },
+    "editAsset": {
+      "label": {
+        "translation": "Chỉnh sửa nội dung"
+      }
+    },
+    "editClass": {
+      "label": {
+        "translation": "Chỉnh sửa lớp học"
+      }
+    },
+    "allCategories": {
+      "label": {
+        "translation": "Tất cả danh mục"
+      }
+    },
+    "trackablePerson": {
+      "label": {
+        "translation": "Người có thể theo dõi"
+      }
+    },
+    "assetDetails": {
+      "label": {
+        "translation": "Chi tiết tài sản"
+      }
+    },
+    "assetImage": {
+      "label": {
+        "translation": "Hình ảnh nội dung"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Tên tài sản"
+      }
+    },
+    "assetClass": {
+      "label": {
+        "translation": "Lớp tài sản"
+      }
+    },
+    "cameras": {
+      "label": {
+        "translation": "Máy ảnh"
+      }
+    },
+    "classes": {
+      "label": {
+        "translation": "Các lớp học"
+      }
+    },
+    "class": {
+      "label": {
+        "translation": "Lớp học"
+      }
+    },
+    "station": {
+      "label": {
+        "translation": "Ga tàu"
+      }
+    },
+    "stations": {
+      "label": {
+        "translation": "Trạm"
+      }
+    },
+    "classDetails": {
+      "label": {
+        "translation": "Chi tiết lớp học"
+      }
+    },
+    "classNameInputPlaceholder": {
+      "label": {
+        "translation": "Nhập tên lớp"
+      }
+    },
+    "classNameInput": {
+      "label": {
+        "translation": "Tên lớp"
+      }
+    },
+    "assetTitle": {
+      "label": {
+        "translation": "Tài sản"
+      }
+    },
+    "assetsTitle": {
+      "label": {
+        "translation": "Các tài sản"
+      }
+    },
+    "costRange": {
+      "label": {
+        "translation": "Phạm vi chi phí"
+      }
+    },
+    "deleteAssetCaption": {
+      "label": {
+        "translation": "Cẩn thận! Thao tác này sẽ xóa vĩnh viễn nội dung và tất cả dữ liệu được thu thập. Sau đó, thiết bị đã ghép nối sẽ tự động được hủy ghép nối."
+      }
+    },
+    "deleteAsset": {
+      "label": {
+        "translation": "Xóa nội dung"
+      }
+    },
+    "deleteClass": {
+      "label": {
+        "translation": "Xóa lớp"
+      }
+    },
+    "removeAssetProcess": {
+      "label": {
+        "translation": "Bạn có chắc chắn muốn xóa nội dung"
+      }
+    },
+    "removeClassProcess": {
+      "label": {
+        "translation": "Bạn có chắc chắn muốn xóa lớp học"
+      }
+    },
+    "circuitInformation": {
+      "label": {
+        "translation": "Thông tin mạch"
+      }
+    },
+    "deviceCTRatio": {
+      "label": {
+        "translation": "Tỷ lệ CT"
+      }
+    },
+    "deviceID": {
+      "label": {
+        "translation": "ID thiết bị"
+      }
+    },
+    "deviceList": {
+      "label": {
+        "translation": "Danh sách thiết bị"
+      }
+    },
+    "deviceNFB": {
+      "label": {
+        "translation": "NFB"
+      }
+    },
+    "deviceName": {
+      "label": {
+        "translation": "Tên"
+      }
+    },
+    "devicePTRatio": {
+      "label": {
+        "translation": "Tỷ lệ PT"
+      }
+    },
+    "devicePhase": {
+      "label": {
+        "translation": "Giai đoạn"
+      }
+    },
+    "deviceType": {
+      "label": {
+        "translation": "Loại thiết bị"
+      }
+    },
+    "deviceIsOffline": {
+      "label": {
+        "translation": "Thiết bị đang ngoại tuyến"
+      }
+    },
+    "isOffline": {
+      "label": {
+        "translation": "Ngoại tuyến"
+      }
+    },
+    "deviceIsOnline": {
+      "label": {
+        "translation": "Thiết bị đang trực tuyến"
+      }
+    },
+    "isOnline": {
+      "label": {
+        "translation": "Trực tuyến"
+      }
+    },
+    "manufacturer": {
+      "label": {
+        "translation": "nhà sản xuất"
+      }
+    },
+    "history": {
+      "label": {
+        "translation": "Lịch sử"
+      }
+    },
+    "device": {
+      "label": {
+        "translation": "Thiết bị"
+      }
+    },
+    "devices": {
+      "label": {
+        "translation": "Thiết bị"
+      }
+    },
+    "electronics": {
+      "label": {
+        "translation": "Thiết bị điện tử"
+      }
+    },
+    "assetNameInputPlaceholder": {
+      "label": {
+        "translation": "Nhập tên tài sản"
+      }
+    },
+    "leavingDesignatedZone": {
+      "label": {
+        "translation": "Rời khỏi khu vực được chỉ định"
+      }
+    },
+    "assetDescriptionInput": {
+      "label": {
+        "translation": "Sự miêu tả"
+      }
+    },
+    "classDescriptionInput": {
+      "label": {
+        "translation": "Sự miêu tả"
+      }
+    },
+    "gatewayIP": {
+      "label": {
+        "translation": "IP cổng"
+      }
+    },
+    "gateways": {
+      "label": {
+        "translation": "Cổng"
+      }
+    },
+    "groupName": {
+      "label": {
+        "translation": "Tên"
+      }
+    },
+    "group": {
+      "label": {
+        "translation": "Nhóm"
+      }
+    },
+    "groups": {
+      "label": {
+        "translation": "Các nhóm"
+      }
+    },
+    "handheld": {
+      "label": {
+        "translation": "cầm tay"
+      }
+    },
+    "groupDescriptionInputVerification": {
+      "label": {
+        "translation": "Bạn phải nhập mô tả của nhóm."
+      }
+    },
+    "groupNameInputVerification": {
+      "label": {
+        "translation": "Bạn phải nhập tên nhóm của bạn."
+      }
+    },
+    "LEDLights": {
+      "label": {
+        "translation": "Đèn LED"
+      }
+    },
+    "sensors": {
+      "label": {
+        "translation": "Cảm biến"
+      }
+    },
+    "searchDeviceID": {
+      "label": {
+        "translation": "Tìm kiếm ID thiết bị"
+      }
+    },
+    "mobile": {
+      "label": {
+        "translation": "Điện thoại di động"
+      }
+    },
+    "viewAsset": {
+      "label": {
+        "translation": "Xem nội dung"
+      }
+    },
+    "assetsNotFound": {
+      "label": {
+        "translation": "Không tìm thấy tài sản"
+      }
+    },
+    "classesNotFound": {
+      "label": {
+        "translation": "Không tìm thấy lớp học"
+      }
+    },
+    "noDevicePartMappingCaption": {
+      "label": {
+        "translation": "Chưa có bản đồ bộ phận thiết bị nào ở đây. Trước tiên hãy thêm ánh xạ bộ phận thiết bị vào cơ sở này bằng cách tải lên tệp Cấu hình lớn."
+      }
+    },
+    "noDevicePartMapping": {
+      "label": {
+        "translation": "Không có bản đồ phần thiết bị"
+      }
+    },
+    "noDevices": {
+      "label": {
+        "translation": "Không có thiết bị"
+      }
+    },
+    "noSPBCaption": {
+      "label": {
+        "translation": "Chưa có SPB nào ở đây. Trước tiên hãy thêm SPB vào cơ sở này bằng cách tải lên tệp Cấu hình hàng loạt."
+      }
+    },
+    "noSPB": {
+      "label": {
+        "translation": "Không có SPB"
+      }
+    },
+    "noAssigneeCaption": {
+      "label": {
+        "translation": "Không có người được chuyển nhượng. Khi bạn kết nối trình theo dõi với nội dung này, nó sẽ tự động chỉ định nhóm người dùng chịu trách nhiệm về nội dung này."
+      }
+    },
+    "assetDescriptionInputPlaceholder": {
+      "label": {
+        "translation": "Nhập mô tả tài sản"
+      }
+    },
+    "costRangeInputPlaceholder": {
+      "label": {
+        "translation": "Nhập phạm vi gần đúng"
+      }
+    },
+    "manufacturerInputPlaceholder": {
+      "label": {
+        "translation": "Nhập nhà sản xuất"
+      }
+    },
+    "classDescriptionInputPlaceholder": {
+      "label": {
+        "translation": "Nhập mô tả lớp học"
+      }
+    },
+    "serialNumberInputPlaceholder": {
+      "label": {
+        "translation": "Nhập số seri"
+      }
+    },
+    "removeDeviceButton": {
+      "label": {
+        "translation": "Gỡ bỏ thiết bị"
+      }
+    },
+    "removeGroupButton": {
+      "label": {
+        "translation": "Xóa nhóm"
+      }
+    },
+    "removeFromClass": {
+      "label": {
+        "translation": "Xóa khỏi lớp học"
+      }
+    },
+    "SPBType": {
+      "label": {
+        "translation": "loại SPB"
+      }
+    },
+    "SPS": {
+      "label": {
+        "translation": "SPS"
+      }
+    },
+    "searchName": {
+      "label": {
+        "translation": "Tim kiếm tên"
+      }
+    },
+    "searchDevice": {
+      "label": {
+        "translation": "Tìm kiếm thiết bị"
+      }
+    },
+    "selectDevice": {
+      "label": {
+        "translation": "Chọn thiết bị"
+      }
+    },
+    "serialNumber": {
+      "label": {
+        "translation": "Số seri"
+      }
+    },
+    "stationary": {
+      "label": {
+        "translation": "Đứng im"
+      }
+    },
+    "circuitName": {
+      "label": {
+        "translation": "Tên mạch"
+      }
+    },
+    "returnedToDesignatedZone": {
+      "label": {
+        "translation": "Đã quay trở lại khu vực được chỉ định"
+      }
+    },
+    "assignee": {
+      "label": {
+        "translation": "Người được chuyển nhượng"
+      }
+    },
+    "assetsNotFoundCaption": {
+      "label": {
+        "translation": "Rất tiếc, không có nội dung nào, hãy thử bộ lọc phát hành hoặc tìm kiếm bằng từ khác"
+      }
+    },
+    "classesNotFoundCaption": {
+      "label": {
+        "translation": "Rất tiếc, không có lớp nào, hãy thử bộ lọc phát hành hoặc tìm kiếm bằng từ khác"
+      }
+    },
+    "tracker": {
+      "label": {
+        "translation": "Trình theo dõi"
+      }
+    },
+    "trackers": {
+      "label": {
+        "translation": "Trình theo dõi"
+      }
+    },
+    "trackerID": {
+      "label": {
+        "translation": "ID theo dõi"
+      }
+    },
+    "unassignedDevice": {
+      "label": {
+        "translation": "Thiết bị chưa được chỉ định"
+      }
+    },
+    "assetUIDInputPlaceholder": {
+      "label": {
+        "translation": "Nhập UID nội dung"
+      }
+    },
+    "assetUIDInput": {
+      "label": {
+        "translation": "UID nội dung"
+      }
+    },
+    "uid": {
+      "label": {
+        "translation": "UID"
+      }
+    },
+    "unknownDevice": {
+      "label": {
+        "translation": "Thiết bị chưa biết"
+      }
+    },
+    "descriptionInputValidation": {
+      "label": {
+        "translation": "Bạn phải nhập mô tả."
+      }
+    },
+    "nameInputValidation": {
+      "label": {
+        "translation": "Bạn phải nhập tên."
+      }
+    },
+    "andDeviceIsOffline": {
+      "label": {
+        "translation": "và Thiết bị đang ngoại tuyến"
+      }
+    },
+    "partIndex": {
+      "label": {
+        "translation": "Chỉ mục phần"
+      }
+    }
+  },
+  "solutions": {
+    "commandCenter": {
+      "label": {
+        "translation": "Trung tâm chỉ huy"
+      }
+    },
+    "domainOverview": {
+      "label": {
+        "translation": "Tổng quan về tên miền"
+      }
+    },
+    "solutionsPage": {
+      "pinPoint": {
+        "options": {
+          "01": {
+            "translation": "Tài sản"
           },
-        "upload": {
-            "label": {
-                "translation": "Tải lên"
-            }
-        },
-        "download": {
-            "label": {
-                "translation": "Tải xuống"
-            }
-        },
-        "selectCategory": {
-            "label": {
-                "translation": "Chọn danh mục"
-            }
-        },
-        "selectGroupFromList": {
-            "label": {
-                "translation": "Chọn nhóm"
-            }
-        },
-        "settings": {
-            "label": {
-                "translation": "Cài đặt"
-            }
-        },
-        "localServerID": {
-            "label": {
-                "translation": "ID máy chủ cục bộ"
-            }
-        },
-        "selectInterval": {
-            "label": {
-                "translation": "Chọn khoảng thời gian"
-            }
-        },
-        "unsavedChanges": {
-            "label": {
-                "translation": "Những thay đổi chưa được lưu"
-            }
-        },
-        "filterAlerts": {
-            "label": {
-                "translation": "Lọc cảnh báo"
-            }
-        },
-        "createPassword": {
-            "label": {
-                "translation": "Tạo mật khẩu"
-            }
-        },
-        "to": {
-            "label": {
-                "translation": "ĐẾN"
-            }
-        },
-        "all": {
-            "label": {
-                "translation": "Tất cả"
-            }
-        },
-        "color": {
-            "label": {
-                "translation": "Màu sắc"
-            }
-        },
-        "from": {
-            "label": {
-                "translation": "Từ"
-            }
-        },
-        "requestNewPasswordButton": {
-            "label": {
-                "translation": "Yêu cầu một cái mới"
-            }
-        },
-        "saveChanges": {
-            "label": {
-                "translation": "Lưu thay đổi"
-            }
-        },
-        "scheme": {
-            "label": {
-                "translation": "Sơ đồ"
-            }
-        },
-        "searchByName": {
-            "label": {
-                "translation": "Tìm kiếm theo tên"
-            }
-        },
-        "internalServerError": {
-            "label": {
-                "translation": "Lỗi máy chủ nội bộ."
-            }
-        },
-        "oneSpecialCharacter": {
-            "label": {
-                "translation": "một ký tự đặc biệt"
-            }
-        },
-        "language": {
-            "label": {
-                "translation": "Ngôn ngữ"
-            }
-        },
-        "min8character": {
-            "label": {
-                "translation": "tối thiểu 8 ký tự"
-            }
-        },
-        "oneNumberCharacter": {
-            "label": {
-                "translation": "một ký tự số"
-            }
-        },
-        "seeMore": {
-            "label": {
-                "translation": "Xem thêm"
-            }
-        },
-        "imageRecommendedSize": {
-            "label": {
-                "translation": "Khuyến nghị 500x500 px"
-            }
-        },
-        "internalServerErrorCaption": {
-            "label": {
-                "translation": "Xin lỗi, có lỗi xảy ra."
-            }
-        },
-        "badRequestCaption": {
-            "label": {
-                "translation": "Rất tiếc, trình duyệt của bạn đã gửi yêu cầu mà máy chủ này không thể hiểu được."
-            }
-        },
-        "accessDenied": {
-            "label": {
-                "translation": "Quyền truy cập bị từ chối"
-            }
-        },
-        "matchPassword": {
-            "label": {
-                "translation": "Mật khẩu không hợp lệ."
-            }
-        },
-        "setNewPasswordCaption": {
-            "label": {
-                "translation": "Mật khẩu mới của bạn phải đủ mạnh và khác với mật khẩu đã sử dụng trước đó"
-            }
-        },
-        "pageNotFoundCaption": {
-            "label": {
-                "translation": "Xin lỗi, trang bạn đang tìm kiếm không còn tồn tại hoặc đã bị di chuyển hoặc lưu trữ."
-            }
-        },
-        "serviceUnavailableCaption": {
-            "label": {
-                "translation": "Xin lỗi, máy chủ tạm thời bận, hãy thử lại sau."
-            }
-        },
-        "notImplementedCaption": {
-            "label": {
-                "translation": "Rất tiếc, máy chủ không nhận dạng được phương thức yêu cầu hoặc không có khả năng thực hiện yêu cầu."
-            }
-        },
-        "unauthorizedCaption": {
-            "label": {
-                "translation": "Rất tiếc, chúng tôi không thể xác thực thông tin đăng nhập của bạn, bạn cần được cấp quyền để truy cập trang này."
-            }
-        },
-        "gatewayTimeoutCaption": {
-            "label": {
-                "translation": "Xin lỗi, trang này tải quá lâu."
-            }
-        },
-        "confirmPasswordInput": {
-            "label": {
-                "translation": "Vui lòng nhập mật khẩu xác nhận của bạn"
-            }
-        },
-        "unsavedChangesCaption": {
-            "label": {
-                "translation": "Bạn có chắc chắn muốn đóng mà không lưu không? Mọi thay đổi chưa được lưu sẽ bị mất."
-            }
-        },
-        "title": {
-            "label": {
-                "translation": "Tiêu đề"
-            }
-        },
-        "confirmPassword": {
-            "label": {
-                "translation": "Để đặt mật khẩu mới, hãy xác nhận mật khẩu hiện tại của bạn."
-            }
-        },
-        "menu": {
-            "label": {
-                "translation": "Bảng chọn"
-            }
-        },
-        "toggleButton": {
-            "label": {
-                "translation": "Chuyển đổi chế độ hiển thị"
-            }
-        },
-        "filters": {
-            "label": {
-                "translation": "Bộ lọc"
-            }
-        },
-        "markAllIsRead": {
-            "label": {
-                "translation": "Tất cả đánh dấu đã được đọc"
-            }
-        },
-        "errorVerification": {
-            "label": {
-                "translation": "lỗi"
-            }
-        },
-        "applyButton": {
-            "label": {
-                "translation": "Áp dụng"
-            }
-        },
-        "assetsTitle": {
-            "label": {
-                "translation": "Tài sản"
-            }
-        },
-        "selectDate": {
-            "label": {
-                "translation": "Chọn ngày"
-            }
-        },
-        "selectLanguage": {
-            "label": {
-                "translation": "Chọn ngôn ngữ"
-            }
-        },
-        "vietnameseLanguage": {
-            "label": {
-                "translation": "Tiếng Việt"
-            }
-        },
-        "selectLocationFromList": {
-            "label": {
-                "translation": "Chọn địa điểm"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "Tên"
-            }
-        },
-        "amount": {
-            "label": {
-                "translation": "Số lượng"
-            }
-        },
-        "enterStartDate": {
-            "label": {
-                "translation": "Bạn phải nhập ngày bắt đầu"
-            }
-        },
-        "enterAmount": {
-            "label": {
-                "translation": "Nhập số tiền"
-            }
-        },
-        "startDate": {
-            "label": {
-                "translation": "Ngày bắt đầu"
-            }
-        },
-        "endDate": {
-            "label": {
-                "translation": "Ngày cuối"
-            }
-        },
-        "imageFileUploadButton": {
-            "label": {
-                "translation": "Tải lên"
-            }
-        },
-        "updateSuccessfully": {
-            "label": {
-                "translation": "Cập nhật thành công"
-            }
-        },
-        "isLoading": {
-            "label": {
-                "translation": "Đang tải..."
-            }
-        },
-        "goToPreviousPageButton": {
-            "label": {
-                "translation": "Đi tới trang trước"
-            }
-        },
-        "goToNextPageButton": {
-            "label": {
-                "translation": "Chuyển đến trang tiếp theo"
-            }
-        },
-        "viewAll": {
-            "label": {
-              "translation": "Xem tất cả"
-            }
+          "02": {
+            "translation": "Theo dõi tài sản và con người"
+          },
+          "03": {
+            "translation": "Quy tắc và cảnh báo"
+          },
+          "04": {
+            "translation": "Bản đồ nhiệt"
           }
-    },
-    "user": {
-        "reinviteUser": {
-            "label": {
-                "translation": "Mời lại người dùng"
-            }
         },
-        "addGroupButton": {
-            "label": {
-                "translation": "Thêm nhóm"
-            }
+        "content": {
+          "translation": "Iveda RTLS quản lý tập trung các thiết bị theo dõi và cảm biến IoT, đồng thời hiển thị chúng trên bản đồ để biết vị trí chính xác."
         },
-        "addUser": {
-            "label": {
-                "translation": "Thêm người dùng"
-            }
-        },
-        "allGroups": {
-            "label": {
-                "translation": "Tất cả các nhóm"
-            }
-        },
-        "methodOfContactCall": {
-            "label": {
-                "translation": "Gọi"
-            }
-        },
-        "confirmPasswordInput": {
-            "label": {
-                "translation": "Xác nhận mật khẩu"
-            }
-        },
-        "deleteGroupQuestion": {
-            "label": {
-                "translation": "Bạn có chắc chắn muốn xóa nhóm không?"
-            }
-        },
-        "deleteAccountQuestion": {
-            "label": {
-                "translation": "Bạn có chắc chắn muốn xóa người dùng không?"
-            }
-        },
-        "currentPasswordInputPlaceholder": {
-            "label": {
-                "translation": "Nhập mật khẩu hiện tại của bạn"
-            }
-        },
-        "deleteUserCaption": {
-            "label": {
-                "translation": "Cẩn thận! Điều này sẽ xóa vĩnh viễn người dùng và tất cả thông tin của họ. Sau đó, người dùng sẽ không còn quyền truy cập vào hệ thống nữa."
-            }
-        },
-        "deleteAccount": {
-            "label": {
-                "translation": "Xóa tài khoản"
-            }
-        },
-        "deleteGroup": {
-            "label": {
-                "translation": "Xóa nhóm"
-            }
-        },
-        "editGroup": {
-            "label": {
-                "translation": "Chỉnh sửa nhóm"
-            }
-        },
-        "methodOfContactEmail": {
-            "label": {
-                "translation": "E-mail"
-            }
-        },
-        "feedbackDispatchCriteria": {
-            "label": {
-                "translation": "Gửi thông báo, khi…"
-            }
-        },
-        "feedbackDispatchCriteriaTickets": {
-            "label": {
-                "translation": "Tạo vé, nhận xét, giải quyết"
-            }
-        },
-        "groupNameInputPlaceholder": {
-            "label": {
-                "translation": "Nhập tên nhóm"
-            }
-        },
-        "descriptionInputPlaceholder": {
-            "label": {
-                "translation": "Nhập mô tả của nhóm"
-            }
-        },
-        "member": {
-            "label": {
-                "translation": "Thành viên"
-            }
-        },
-        "members": {
-            "label": {
-                "translation": "Các thành viên"
-            }
-        },
-        "editUser": {
-            "label": {
-                "translation": "Chỉnh sửa người dùng"
-            }
-        },
-        "emailFormatValidation": {
-            "label": {
-                "translation": "Vui lòng nhập email hợp lệ ở định dạng example@mail.com."
-            }
-        },
-        "groupDescriptionInputVerification": {
-            "label": {
-                "translation": "Bạn phải nhập mô tả của nhóm."
-            }
-        },
-        "emailValidation": {
-            "label": {
-                "translation": "Bạn phải nhập email."
-            }
-        },
-        "firstNameValidation": {
-            "label": {
-                "translation": "Bạn phải nhập tên."
-            }
-        },
-        "groupNameInputVerification": {
-            "label": {
-                "translation": "Bạn phải nhập tên nhóm của bạn."
-            }
-        },
-        "lastNameValidation": {
-            "label": {
-                "translation": "Bạn phải nhập họ."
-            }
-        },
-        "phoneValidation": {
-            "label": {
-                "translation": "Bạn phải nhập số điện thoại trong định dạng"
-            }
-        },
-        "memberSince": {
-            "label": {
-                "translation": "Thành viên kể từ"
-            }
-        },
-        "admins": {
-            "label": {
-                "translation": "Quản trị viên"
-            }
-        },
-        "groupsNotFoundCaption": {
-            "label": {
-                "translation": "Rất tiếc, không có nhóm nào, hãy thử phát hành bộ lọc hoặc tìm kiếm bằng từ khác"
-            }
-        },
-        "usersNotFoundCaption": {
-            "label": {
-                "translation": "Rất tiếc, không có người dùng, hãy thử bộ lọc phát hành hoặc tìm kiếm bằng từ khác"
-            }
-        },
-        "newPasswordInputPlaceholder": {
-            "label": {
-                "translation": "Mật khẩu mới"
-            }
-        },
-        "newPasswordInput": {
-            "label": {
-                "translation": "Mật khẩu mới"
-            }
-        },
-        "groupsNotFound": {
-            "label": {
-                "translation": "Không tìm thấy nhóm"
-            }
-        },
-        "usersNotFound": {
-            "label": {
-                "translation": "Không tìm thấy người dùng"
-            }
-        },
-        "notifications": {
-            "label": {
-                "translation": "Thông báo"
-            }
-        },
-        "permissions": {
-            "label": {
-                "translation": "Quyền hạn  <sự cho phép>"
-            }
-        },
-        "jobTitleSelectPlaceholder": {
-            "label": {
-                "translation": "Chọn chức danh"
-            }
-        },
-        "methodOfContact": {
-            "label": {
-                "translation": "Phương thức liên lạc ưa thích"
-            }
-        },
-        "confirmPasswordInputPlaceholder": {
-            "label": {
-                "translation": "Nhập lại mật khẩu"
-            }
-        },
-        "removeFromGroup": {
-            "label": {
-                "translation": "Loại bỏ khỏi nhóm"
-            }
-        },
-        "feedbackDispatchCriteriaNews": {
-            "label": {
-                "translation": "Tin tức và cập nhật"
-            }
-        },
-        "methodOfContactText": {
-            "label": {
-                "translation": "Chữ"
-            }
-        },
-        "groupNameInput": {
-            "label": {
-                "translation": "Tên nhóm"
-            }
-        },
-        "admin": {
-            "label": {
-                "translation": "Quản trị viên"
-            }
-        },
-        "groups": {
-            "label": {
-                "translation": "Các nhóm"
-            }
-        },
-        "profileImage": {
-            "label": {
-                "translation": "Hình ảnh hồ sơ cá nhân"
-            }
-        },
-        "avatar": {
-            "label": {
-                "translation": "hình đại diện"
-            }
-        },
-        "categoryInputPlaceholder": {
-            "label": {
-                "translation": "Chọn danh mục"
-            }
-        },
-        "categoryInput": {
-            "label": {
-                "translation": "Loại"
-            }
-        },
-        "contact": {
-            "label": {
-                "translation": "Liên hệ"
-            }
-        },
-        "contacts": {
-            "label": {
-                "translation": "Liên lạc"
-            }
-        },
-        "userDetails": {
-            "label": {
-                "translation": "Chi tiết người dùng"
-            }
-        },
-        "emailInput": {
-            "label": {
-                "translation": "E-mail"
-            }
-        },
-        "emailInputPlaceholder": {
-            "label": {
-                "translation": "Nhập email"
-            }
-        },
-        "firstNameInput": {
-            "label": {
-                "translation": "Tên đầu tiên"
-            }
-        },
-        "firstNameInputPlaceholder": {
-            "label": {
-                "translation": "Nhập tên đầu tiên"
-            }
-        },
-        "fullNameInput": {
-            "label": {
-                "translation": "Họ và tên"
-            }
-        },
-        "descriptionInput": {
-            "label": {
-                "translation": "Sự miêu tả"
-            }
-        },
-        "groupDetails": {
-            "label": {
-                "translation": "Chi tiết nhóm"
-            }
-        },
-        "groupName": {
-            "label": {
-                "translation": "Tên"
-            }
-        },
-        "group": {
-            "label": {
-                "translation": "Nhóm"
-            }
-        },
-        "viewProfile": {
-            "label": {
-                "translation": "Chức danh"
-            }
-        },
-        "jobTitleInputPlaceholder": {
-            "label": {
-                "translation": "Nhập chức danh"
-            }
-        },
-        "lastNameInput": {
-            "label": {
-                "translation": "Họ"
-            }
-        },
-        "lastNameInputPlaceholder": {
-            "label": {
-                "translation": "Nhập họ"
-            }
-        },
-        "phoneInput": {
-            "label": {
-                "translation": "Điện thoại"
-            }
-        },
-        "phoneInputPlaceholder": {
-            "label": {
-                "translation": "Nhập số điện thoại"
-            }
-        },
-        "roleInput": {
-            "label": {
-                "translation": "Vai trò"
-            }
-        },
-        "roleInputPlaceholder": {
-            "label": {
-                "translation": "Nhập vai trò"
-            }
-        },
-        "roleSelect": {
-            "label": {
-                "translation": "Chọn vai trò"
-            }
-        },
-        "roles": {
-            "label": {
-                "translation": "Vai trò"
-            },
-            "viewer": {
-                "translation": "Người xem"
-            }
-        },
-        "timezoneInput": {
-            "label": {
-                "translation": "Múi giờ"
-            }
-        },
-        "timezoneInputPlaceholder": {
-            "label": {
-                "translation": "Thêm múi giờ"
-            }
-        },
-        "jobTitleInput": {
-            "label": {
-                "translation": "Thêm múi giờ"
-            }
-        },
-        "userTitle": {
-            "label": {
-                "translation": "Người dùng"
-            }
-        },
-        "currentPassword": {
-            "label": {
-                "translation": "Mật khẩu hiện tại"
-            }
-        },
-        "usernameInput": {
-            "label": {
-                "translation": "tên tài khoản"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "Tên"
-            }
-        },
-        "usersTitle": {
-            "label": {
-                "translation": "Người dùng"
-            }
-        },
-        "allUsers": {
-            "label": {
-                "translation": "Tất cả người dùng"
-            }
+        "label": {
+          "translation": "xác định"
         }
-    },
-    "asset": {
-        "circuit": {
-            "label": {
-                "translation": "Mạch"
-            }
-        },
-        "trackerLowBattery": {
-            "label": {
-                "translation": "Theo dõi pin yếu"
-            }
-        },
-        "unassignedAsset": {
-            "label": {
-                "translation": "Tài sản không được xác định"
-            }
-        },
-        "deviceCircuit": {
-            "label": {
-                "translation": "Mạch thiết bị"
-            }
-        },
-        "addAssetButton": {
-            "label": {
-                "translation": "Thêm tài sản"
-            }
-        },
-        "addAssetTitle": {
-            "label": {
-                "translation": "Thêm tài sản"
-            }
-        },
-        "addClassButton": {
-            "label": {
-                "translation": "Thêm lớp"
-            }
-        },
-        "addDeviceButton": {
-            "label": {
-                "translation": "Thêm thiết bị"
-            }
-        },
-        "addGroupButton": {
-            "label": {
-                "translation": "Thêm nhóm"
-            }
-        },
-        "editAsset": {
-            "label": {
-                "translation": "Chỉnh sửa nội dung"
-            }
-        },
-        "editClass": {
-            "label": {
-                "translation": "Chỉnh sửa lớp học"
-            }
-        },
-        "allCategories": {
-            "label": {
-                "translation": "Tất cả danh mục"
-            }
-        },
-        "trackablePerson": {
-            "label": {
-                "translation": "Người có thể theo dõi"
-            }
-        },
-        "assetDetails": {
-            "label": {
-                "translation": "Chi tiết tài sản"
-            }
-        },
-        "assetImage": {
-            "label": {
-                "translation": "Hình ảnh nội dung"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "Tên tài sản"
-            }
-        },
-        "assetClass": {
-            "label": {
-                "translation": "Lớp tài sản"
-            }
-        },
-        "cameras": {
-            "label": {
-                "translation": "Máy ảnh"
-            }
-        },
-        "classes": {
-            "label": {
-                "translation": "Các lớp học"
-            }
-        },
-        "class": {
-            "label": {
-                "translation": "Lớp học"
-            }
-        },
-        "station": {
-            "label": {
-                "translation": "Ga tàu"
-            }
-        },
-        "stations": {
-            "label": {
-                "translation": "Trạm"
-            }
-        },
-        "classDetails": {
-            "label": {
-                "translation": "Chi tiết lớp học"
-            }
-        },
-        "classNameInputPlaceholder": {
-            "label": {
-                "translation": "Nhập tên lớp"
-            }
-        },
-        "classNameInput": {
-            "label": {
-                "translation": "Tên lớp"
-            }
-        },
-        "assetTitle": {
-            "label": {
-                "translation": "Tài sản"
-            }
-        },
-        "assetsTitle": {
-            "label": {
-                "translation": "Các tài sản"
-            }
-        },
-        "costRange": {
-            "label": {
-                "translation": "Phạm vi chi phí"
-            }
-        },
-        "deleteAssetCaption": {
-            "label": {
-                "translation": "Cẩn thận! Thao tác này sẽ xóa vĩnh viễn nội dung và tất cả dữ liệu được thu thập. Sau đó, thiết bị đã ghép nối sẽ tự động được hủy ghép nối."
-            }
-        },
-        "deleteAsset": {
-            "label": {
-                "translation": "Xóa nội dung"
-            }
-        },
-        "deleteClass": {
-            "label": {
-                "translation": "Xóa lớp"
-            }
-        },
-        "removeAssetProcess": {
-            "label": {
-                "translation": "Bạn có chắc chắn muốn xóa nội dung"
-            }
-        },
-        "removeClassProcess": {
-            "label": {
-                "translation": "Bạn có chắc chắn muốn xóa lớp học"
-            }
-        },
-        "circuitInformation": {
-            "label": {
-                "translation": "Thông tin mạch"
-            }
-        },
-        "deviceCTRatio": {
-            "label": {
-                "translation": "Tỷ lệ CT"
-            }
-        },
-        "deviceID": {
-            "label": {
-                "translation": "ID thiết bị"
-            }
-        },
-        "deviceList": {
-            "label": {
-                "translation": "Danh sách thiết bị"
-            }
-        },
-        "deviceNFB": {
-            "label": {
-                "translation": "NFB"
-            }
-        },
-        "deviceName": {
-            "label": {
-                "translation": "Tên"
-            }
-        },
-        "devicePTRatio": {
-            "label": {
-                "translation": "Tỷ lệ PT"
-            }
-        },
-        "devicePhase": {
-            "label": {
-                "translation": "Giai đoạn"
-            }
-        },
-        "deviceType": {
-            "label": {
-                "translation": "Loại thiết bị"
-            }
-        },
-        "deviceIsOffline": {
-            "label": {
-                "translation": "Thiết bị đang ngoại tuyến"
-            }
-        },
-        "isOffline": {
-            "label": {
-                "translation": "Ngoại tuyến"
-            }
-        },
-        "deviceIsOnline": {
-            "label": {
-                "translation": "Thiết bị đang trực tuyến"
-            }
-        },
-        "isOnline": {
-            "label": {
-                "translation": "Trực tuyến"
-            }
-        },
-        "manufacturer": {
-            "label": {
-                "translation": "nhà sản xuất"
-            }
-        },
-        "history": {
-            "label": {
-                "translation": "Lịch sử"
-            }
-        },
-        "device": {
-            "label": {
-                "translation": "Thiết bị"
-            }
-        },
-        "devices": {
-            "label": {
-                "translation": "Thiết bị"
-            }
-        },
-        "electronics": {
-            "label": {
-                "translation": "Thiết bị điện tử"
-            }
-        },
-        "assetNameInputPlaceholder": {
-            "label": {
-                "translation": "Nhập tên tài sản"
-            }
-        },
-        "leavingDesignatedZone": {
-            "label": {
-                "translation": "Rời khỏi khu vực được chỉ định"
-            }
-        },
-        "assetDescriptionInput": {
-            "label": {
-                "translation": "Sự miêu tả"
-            }
-        },
-        "classDescriptionInput": {
-            "label": {
-                "translation": "Sự miêu tả"
-            }
-        },
-        "gatewayIP": {
-            "label": {
-                "translation": "IP cổng"
-            }
-        },
-        "gateways": {
-            "label": {
-                "translation": "Cổng"
-            }
-        },
-        "groupName": {
-            "label": {
-                "translation": "Tên"
-            }
-        },
-        "group": {
-            "label": {
-                "translation": "Nhóm"
-            }
-        },
-        "groups": {
-            "label": {
-                "translation": "Các nhóm"
-            }
-        },
-        "handheld": {
-            "label": {
-                "translation": "cầm tay"
-            }
-        },
-        "groupDescriptionInputVerification": {
-            "label": {
-                "translation": "Bạn phải nhập mô tả của nhóm."
-            }
-        },
-        "groupNameInputVerification": {
-            "label": {
-                "translation": "Bạn phải nhập tên nhóm của bạn."
-            }
-        },
-        "LEDLights": {
-            "label": {
-                "translation": "Đèn LED"
-            }
-        },
-        "sensors": {
-            "label": {
-                "translation": "Cảm biến"
-            }
-        },
-        "searchDeviceID": {
-            "label": {
-                "translation": "Tìm kiếm ID thiết bị"
-            }
-        },
-        "mobile": {
-            "label": {
-                "translation": "Điện thoại di động"
-            }
-        },
-        "viewAsset": {
-            "label": {
-                "translation": "Xem nội dung"
-            }
-        },
-        "assetsNotFound": {
-            "label": {
-                "translation": "Không tìm thấy tài sản"
-            }
-        },
-        "classesNotFound": {
-            "label": {
-                "translation": "Không tìm thấy lớp học"
-            }
-        },
-        "noDevicePartMappingCaption": {
-            "label": {
-                "translation": "Chưa có bản đồ bộ phận thiết bị nào ở đây. Trước tiên hãy thêm ánh xạ bộ phận thiết bị vào cơ sở này bằng cách tải lên tệp Cấu hình lớn."
-            }
-        },
-        "noDevicePartMapping": {
-            "label": {
-                "translation": "Không có bản đồ phần thiết bị"
-            }
-        },
-        "noDevices": {
-            "label": {
-                "translation": "Không có thiết bị"
-            }
-        },
-        "noSPBCaption": {
-            "label": {
-                "translation": "Chưa có SPB nào ở đây. Trước tiên hãy thêm SPB vào cơ sở này bằng cách tải lên tệp Cấu hình hàng loạt."
-            }
-        },
-        "noSPB": {
-            "label": {
-                "translation": "Không có SPB"
-            }
-        },
-        "noAssigneeCaption": {
-            "label": {
-                "translation": "Không có người được chuyển nhượng. Khi bạn kết nối trình theo dõi với nội dung này, nó sẽ tự động chỉ định nhóm người dùng chịu trách nhiệm về nội dung này."
-            }
-        },
-        "assetDescriptionInputPlaceholder": {
-            "label": {
-                "translation": "Nhập mô tả tài sản"
-            }
-        },
-        "costRangeInputPlaceholder": {
-            "label": {
-                "translation": "Nhập phạm vi gần đúng"
-            }
-        },
-        "manufacturerInputPlaceholder": {
-            "label": {
-                "translation": "Nhập nhà sản xuất"
-            }
-        },
-        "classDescriptionInputPlaceholder": {
-            "label": {
-                "translation": "Nhập mô tả lớp học"
-            }
-        },
-        "serialNumberInputPlaceholder": {
-            "label": {
-                "translation": "Nhập số seri"
-            }
-        },
-        "removeDeviceButton": {
-            "label": {
-                "translation": "Gỡ bỏ thiết bị"
-            }
-        },
-        "removeGroupButton": {
-            "label": {
-                "translation": "Xóa nhóm"
-            }
-        },
-        "removeFromClass": {
-            "label": {
-                "translation": "Xóa khỏi lớp học"
-            }
-        },
-        "SPBType": {
-            "label": {
-                "translation": "loại SPB"
-            }
-        },
-        "SPS": {
-            "label": {
-                "translation": "SPS"
-            }
-        },
-        "searchName": {
-            "label": {
-                "translation": "Tim kiếm tên"
-            }
-        },
-        "searchDevice": {
-            "label": {
-                "translation": "Tìm kiếm thiết bị"
-            }
-        },
-        "selectDevice": {
-            "label": {
-                "translation": "Chọn thiết bị"
-            }
-        },
-        "serialNumber": {
-            "label": {
-                "translation": "Số seri"
-            }
-        },
-        "stationary": {
-            "label": {
-                "translation": "Đứng im"
-            }
-        },
-        "circuitName": {
-            "label": {
-                "translation": "Tên mạch"
-            }
-        },
-        "returnedToDesignatedZone": {
-            "label": {
-                "translation": "Đã quay trở lại khu vực được chỉ định"
-            }
-        },
-        "assignee": {
-            "label": {
-                "translation": "Người được chuyển nhượng"
-            }
-        },
-        "assetsNotFoundCaption": {
-            "label": {
-                "translation": "Rất tiếc, không có nội dung nào, hãy thử bộ lọc phát hành hoặc tìm kiếm bằng từ khác"
-            }
-        },
-        "classesNotFoundCaption": {
-            "label": {
-                "translation": "Rất tiếc, không có lớp nào, hãy thử bộ lọc phát hành hoặc tìm kiếm bằng từ khác"
-            }
-        },
-        "tracker": {
-            "label": {
-                "translation": "Trình theo dõi"
-            }
-        },
-        "trackers": {
-            "label": {
-                "translation": "Trình theo dõi"
-            }
-        },
-        "trackerID": {
-            "label": {
-                "translation": "ID theo dõi"
-            }
-        },
-        "unassignedDevice": {
-            "label": {
-                "translation": "Thiết bị chưa được chỉ định"
-            }
-        },
-        "assetUIDInputPlaceholder": {
-            "label": {
-                "translation": "Nhập UID nội dung"
-            }
-        },
-        "assetUIDInput": {
-            "label": {
-                "translation": "UID nội dung"
-            }
-        },
-        "uid": {
-            "label": {
-                "translation": "UID"
-            }
-        },
-        "unknownDevice": {
-            "label": {
-                "translation": "Thiết bị chưa biết"
-            }
-        },
-        "descriptionInputValidation": {
-            "label": {
-                "translation": "Bạn phải nhập mô tả."
-            }
-        },
-        "nameInputValidation": {
-            "label": {
-                "translation": "Bạn phải nhập tên."
-            }
-        },
-        "andDeviceIsOffline": {
-            "label": {
-                "translation": "và Thiết bị đang ngoại tuyến"
-            }
-        },
-        "partIndex": {
-            "label": {
-                "translation": "Chỉ mục phần"
-            }
+      },
+      "ems": {
+        "content": {
+          "translation": "Giải pháp Hệ thống quản lý năng lượng Iveda để giám sát và phân tích việc sử dụng năng lượng và theo dõi nhu cầu."
+        },
+        "options": {
+          "01": {
+            "translation": "Quản lý năng lượng"
+          },
+          "02": {
+            "translation": "Tiết kiệm điện thông minh"
+          },
+          "03": {
+            "translation": "Theo dõi nhu cầu"
+          },
+          "04": {
+            "translation": "Phân tích sử dụng năng lượng"
+          }
+        },
+        "label": {
+          "translation": "Hệ thống quản lý năng lượng"
         }
-    },
-    "solutions": {
-        "commandCenter": {
-            "label": {
-                "translation": "Trung tâm chỉ huy"
-            }
+      },
+      "ivedaAI": {
+        "content": {
+          "translation": "IvedaAI™ sử dụng công nghệ deep learning để tìm kiếm video AI nâng cao, tương tự như Google để tìm kiếm văn bản."
         },
-        "domainOverview": {
-            "label": {
-                "translation": "Tổng quan về tên miền"
-            }
+        "options": {
+          "01": {
+            "translation": "Giám sát video thời gian thực"
+          },
+          "02": {
+            "translation": "Bảo vệ chu vi"
+          },
+          "03": {
+            "translation": "Nhận dạng đối tượng và khuôn mặt"
+          },
+          "04": {
+            "translation": "Lịch sử ghi âm"
+          }
         },
-        "solutionsPage": {
-            "pinPoint": {
-                "options": {
-                    "01": {
-                        "translation": "Tài sản"
-                    },
-                    "02": {
-                        "translation": "Theo dõi tài sản và con người"
-                    },
-                    "03": {
-                        "translation": "Quy tắc và cảnh báo"
-                    },
-                    "04": {
-                        "translation": "Bản đồ nhiệt"
-                    }
-                },
-                "content": {
-                    "translation": "Iveda RTLS quản lý tập trung các thiết bị theo dõi và cảm biến IoT, đồng thời hiển thị chúng trên bản đồ để biết vị trí chính xác."
-                },
-                "label": {
-                    "translation": "xác định"
-                }
-            },
-            "ems": {
-                "content": {
-                    "translation": "Giải pháp Hệ thống quản lý năng lượng Iveda để giám sát và phân tích việc sử dụng năng lượng và theo dõi nhu cầu."
-                },
-                "options": {
-                    "01": {
-                        "translation": "Quản lý năng lượng"
-                    },
-                    "02": {
-                        "translation": "Tiết kiệm điện thông minh"
-                    },
-                    "03": {
-                        "translation": "Theo dõi nhu cầu"
-                    },
-                    "04": {
-                        "translation": "Phân tích sử dụng năng lượng"
-                    }
-                },
-                "label": {
-                    "translation": "Hệ thống quản lý năng lượng"
-                }
-            },
-            "ivedaAI": {
-                "content": {
-                    "translation": "IvedaAI™ sử dụng công nghệ deep learning để tìm kiếm video AI nâng cao, tương tự như Google để tìm kiếm văn bản."
-                },
-                "options": {
-                    "01": {
-                        "translation": "Giám sát video thời gian thực"
-                    },
-                    "02": {
-                        "translation": "Bảo vệ chu vi"
-                    },
-                    "03": {
-                        "translation": "Nhận dạng đối tượng và khuôn mặt"
-                    },
-                    "04": {
-                        "translation": "Lịch sử ghi âm"
-                    }
-                },
-                "label": {
-                    "translation": "IvedaAI"
-                }
-            },
-            "utilus": {
-                "content": {
-                    "translation": "Nền tảng IoT quản lý dữ liệu năng lượng, ánh sáng, bảo mật và môi trường bằng cách sử dụng các cảm biến thông minh, điện toán nhúng và điện toán đám mây."
-                },
-                "options": {
-                    "01": {
-                        "translation": "Quản lý năng lượng"
-                    },
-                    "02": {
-                        "translation": "Kiểm soát tia cực tím và ánh sáng"
-                    },
-                    "03": {
-                        "translation": "Đo lường môi trường"
-                    },
-                    "04": {
-                        "translation": "Cảnh báo bảo mật và tiện ích"
-                    }
-                },
-                "label": {
-                    "translation": "sử dụng"
-                }
-            },
-            "contactSalesButton": {
-                "label": {
-                    "translation": "Liên hệ bán hàng"
-                }
-            },
-            "installedChip": {
-                "label": {
-                    "translation": "Cài đặt"
-                }
-            },
-            "learnMoreButton": {
-                "label": {
-                    "translation": "Tìm hiểu thêm"
-                }
-            },
-            "notInstalledChip": {
-                "label": {
-                    "translation": "Chưa cài đặt"
-                }
-            },
-            "startTutorialButton": {
-                "label": {
-                    "translation": "Bắt đầu hướng dẫn"
-                }
-            },
-            "label": {
-                "translation": "Các giải pháp"
-            }
-        },
-        "averagePerPole": {
-            "label": {
-                "translation": "Trung bình mỗi cực"
-            }
-        },
-        "basicInformation": {
-            "label": {
-                "translation": "Thông tin cơ bản"
-            }
-        },
-        "camerasCaption": {
-            "label": {
-                "translation": "Quan sát những gì đã xảy ra trên máy ảnh"
-            }
-        },
-        "cameras": {
-            "label": {
-                "translation": "Máy ảnh"
-            }
-        },
-        "carbonEmissionFactor": {
-            "label": {
-                "translation": "Hệ số phát thải cacbon"
-            }
-        },
-        "configurationFile": {
-            "label": {
-                "translation": "Tập tin cấu hình"
-            }
-        },
-        "dashboard": {
-            "label": {
-                "translation": "bảng điều khiển"
-            }
-        },
-        "domain": {
-            "label": {
-                "translation": "Tên miền"
-            }
-        },
-        "editCarbonEmissionFactor": {
-            "label": {
-                "translation": "Chỉnh sửa hệ số phát thải carbon"
-            }
-        },
-        "factorInputPlaceholder": {
-            "label": {
-                "translation": "Nhập hệ số"
-            }
-        },
-        "yearInputPlaceholder": {
-            "label": {
-                "translation": "Nhập năm"
-            }
-        },
-        "environmentCaption": {
-            "label": {
-                "translation": "Khám phá ngày sinh thái"
-            }
-        },
-        "environment": {
-            "label": {
-                "translation": "Môi trường"
-            }
-        },
-        "factorInput": {
-            "label": {
-                "translation": "Nhân tố"
-            }
-        },
-        "health": {
-            "label": {
-                "translation": "Sức khỏe"
-            }
-        },
-        "ISOReport": {
-            "label": {
-                "translation": "Báo cáo ISO"
-            }
-        },
-        "solutionsSelector": {
-            "cerebro": {
-                "listItem": {
-                    "caption": {
-                        "translation": "Theo dõi tài sản và cá nhân"
-                    }
-                }
-            },
-            "utilus": {
-                "listItem": {
-                    "caption": {
-                        "translation": "Kiểm soát năng lượng và sét"
-                    }
-                }
-            },
-            "ems": {
-                "listItem": {
-                    "caption": {
-                        "translation": "Hệ thống quản lý năng lượng"
-                    }
-                }
-            },
-            "exploreButton": {
-                "label": {
-                    "translation": "Khám phá giải pháp"
-                }
-            },
-            "ai": {
-                "listItem": {
-                    "caption": {
-                        "translation": "IvedaAI"
-                    }
-                }
-            }
-        },
-        "lightingCaption": {
-            "label": {
-                "translation": "Quan sát điều gì đã xảy ra với đèn"
-            }
-        },
-        "lighting": {
-            "label": {
-                "translation": "Thắp sáng"
-            }
-        },
-        "massConfiguration": {
-            "label": {
-                "translation": "Cấu hình đại chúng"
-            }
-        },
-        "metering": {
-            "label": {
-                "translation": "Đo sáng"
-            }
-        },
-        "networksCaption": {
-            "label": {
-                "translation": "Kiểm tra kết nối và mạng"
-            }
-        },
-        "networks": {
-            "label": {
-                "translation": "Mạng"
-            }
-        },
-        "overview": {
-            "label": {
-                "translation": "Tổng quan"
-            }
-        },
-        "polesHumidity": {
-            "label": {
-                "translation": "Độ ẩm cực"
-            }
-        },
-        "polesTemperature": {
-            "label": {
-                "translation": "Nhiệt độ cực"
-            }
-        },
-        "poles": {
-            "label": {
-                "translation": "Người Ba Lan"
-            }
-        },
-        "powerCaption": {
-            "label": {
-                "translation": "Khám phá số liệu sức mạnh của khu vực được chọn"
-            }
-        },
-        "power": {
-            "label": {
-                "translation": "Quyền lực"
-            }
-        },
-        "reporting": {
-            "label": {
-                "translation": "Báo cáo"
-            }
-        },
-        "configureScreens": {
-            "label": {
-                "translation": "Định cấu hình màn hình"
-            }
-        },
-        "commandCenterTooltip": {
-            "label": {
-                "translation": "Chọn vị trí và chọn danh mục mà bạn muốn xem trước trên màn hình Trung tâm chỉ huy. Bạn có thể khám phá nó trong cùng một cửa sổ hoặc mở trong tab mới."
-            }
-        },
-        "smartPoleRealDevice": {
-            "label": {
-                "translation": "Cột thông minh này không được kết nối với thiết bị thực"
-            }
-        },
-        "smartPolesCaption": {
-            "label": {
-                "translation": "Khám phá vị trí của các cột và cảnh báo thông minh"
-            }
-        },
-        "smartPoles": {
-            "label": {
-                "translation": "Cột thông minh"
-            }
-        },
-        "solution": {
-            "label": {
-                "translation": "Giải pháp"
-            }
-        },
-        "system": {
-            "label": {
-                "translation": "Hệ thống"
-            }
-        },
-        "ai": {
-            "label": {
-                "translation": "trí tuệ nhân tạo"
-            }
-        },
-        "connects": {
-            "label": {
-                "translation": "Kết nối"
-            }
-        },
-        "ems": {
-            "label": {
-                "translation": "EMS"
-            }
-        },
-        "pinPoint": {
-            "label": {
-                "translation": "IvedaRTLS"
-            }
-        },
-        "cerebro": {
-            "label": {
-                "translation": "sử dụng"
-            }
-        },
-        "totalSmartPoles": {
-            "label": {
-                "translation": "Tổng số cột thông minh"
-            }
-        },
-        "yearInput": {
-            "label": {
-                "translation": "Năm"
-            }
-        },
-        "utilus": {
-            "label": {
-                "translation": "sử dụng"
-            }
-        },
-        "backToDashboard": {
-            "label": {
-                "translation": "Quay lại Trang tổng quan"
-            }
-        },
-        "analytics": {
-            "label": {
-                "translation": "phân tích"
-            }
-        },
-        "energyOverview": {
-            "label": {
-                "translation": "Tổng quan về năng lượng"
-            }
-        },
-        "energyAnalysis": {
-            "label": {
-                "translation": "Phân tích năng lượng"
-            }
+        "label": {
+          "translation": "IvedaAI"
         }
+      },
+      "utilus": {
+        "content": {
+          "translation": "Nền tảng IoT quản lý dữ liệu năng lượng, ánh sáng, bảo mật và môi trường bằng cách sử dụng các cảm biến thông minh, điện toán nhúng và điện toán đám mây."
+        },
+        "options": {
+          "01": {
+            "translation": "Quản lý năng lượng"
+          },
+          "02": {
+            "translation": "Kiểm soát tia cực tím và ánh sáng"
+          },
+          "03": {
+            "translation": "Đo lường môi trường"
+          },
+          "04": {
+            "translation": "Cảnh báo bảo mật và tiện ích"
+          }
+        },
+        "label": {
+          "translation": "sử dụng"
+        }
+      },
+      "contactSalesButton": {
+        "label": {
+          "translation": "Liên hệ bán hàng"
+        }
+      },
+      "installedChip": {
+        "label": {
+          "translation": "Cài đặt"
+        }
+      },
+      "learnMoreButton": {
+        "label": {
+          "translation": "Tìm hiểu thêm"
+        }
+      },
+      "notInstalledChip": {
+        "label": {
+          "translation": "Chưa cài đặt"
+        }
+      },
+      "startTutorialButton": {
+        "label": {
+          "translation": "Bắt đầu hướng dẫn"
+        }
+      },
+      "label": {
+        "translation": "Các giải pháp"
+      }
+    },
+    "averagePerPole": {
+      "label": {
+        "translation": "Trung bình mỗi cực"
+      }
+    },
+    "basicInformation": {
+      "label": {
+        "translation": "Thông tin cơ bản"
+      }
+    },
+    "camerasCaption": {
+      "label": {
+        "translation": "Quan sát những gì đã xảy ra trên máy ảnh"
+      }
+    },
+    "cameras": {
+      "label": {
+        "translation": "Máy ảnh"
+      }
+    },
+    "carbonEmissionFactor": {
+      "label": {
+        "translation": "Hệ số phát thải cacbon"
+      }
+    },
+    "configurationFile": {
+      "label": {
+        "translation": "Tập tin cấu hình"
+      }
+    },
+    "dashboard": {
+      "label": {
+        "translation": "bảng điều khiển"
+      }
+    },
+    "domain": {
+      "label": {
+        "translation": "Tên miền"
+      }
+    },
+    "editCarbonEmissionFactor": {
+      "label": {
+        "translation": "Chỉnh sửa hệ số phát thải carbon"
+      }
+    },
+    "factorInputPlaceholder": {
+      "label": {
+        "translation": "Nhập hệ số"
+      }
+    },
+    "yearInputPlaceholder": {
+      "label": {
+        "translation": "Nhập năm"
+      }
+    },
+    "environmentCaption": {
+      "label": {
+        "translation": "Khám phá ngày sinh thái"
+      }
+    },
+    "environment": {
+      "label": {
+        "translation": "Môi trường"
+      }
+    },
+    "factorInput": {
+      "label": {
+        "translation": "Nhân tố"
+      }
+    },
+    "health": {
+      "label": {
+        "translation": "Sức khỏe"
+      }
+    },
+    "ISOReport": {
+      "label": {
+        "translation": "Báo cáo ISO"
+      }
+    },
+    "solutionsSelector": {
+      "cerebro": {
+        "listItem": {
+          "caption": {
+            "translation": "Theo dõi tài sản và cá nhân"
+          }
+        }
+      },
+      "utilus": {
+        "listItem": {
+          "caption": {
+            "translation": "Kiểm soát năng lượng và sét"
+          }
+        }
+      },
+      "ems": {
+        "listItem": {
+          "caption": {
+            "translation": "Hệ thống quản lý năng lượng"
+          }
+        }
+      },
+      "exploreButton": {
+        "label": {
+          "translation": "Khám phá giải pháp"
+        }
+      },
+      "ai": {
+        "listItem": {
+          "caption": {
+            "translation": "IvedaAI"
+          }
+        }
+      }
+    },
+    "lightingCaption": {
+      "label": {
+        "translation": "Quan sát điều gì đã xảy ra với đèn"
+      }
+    },
+    "lighting": {
+      "label": {
+        "translation": "Thắp sáng"
+      }
+    },
+    "massConfiguration": {
+      "label": {
+        "translation": "Cấu hình đại chúng"
+      }
+    },
+    "metering": {
+      "label": {
+        "translation": "Đo sáng"
+      }
+    },
+    "networksCaption": {
+      "label": {
+        "translation": "Kiểm tra kết nối và mạng"
+      }
+    },
+    "networks": {
+      "label": {
+        "translation": "Mạng"
+      }
+    },
+    "overview": {
+      "label": {
+        "translation": "Tổng quan"
+      }
+    },
+    "polesHumidity": {
+      "label": {
+        "translation": "Độ ẩm cực"
+      }
+    },
+    "polesTemperature": {
+      "label": {
+        "translation": "Nhiệt độ cực"
+      }
+    },
+    "poles": {
+      "label": {
+        "translation": "Người Ba Lan"
+      }
+    },
+    "powerCaption": {
+      "label": {
+        "translation": "Khám phá số liệu sức mạnh của khu vực được chọn"
+      }
+    },
+    "power": {
+      "label": {
+        "translation": "Quyền lực"
+      }
+    },
+    "reporting": {
+      "label": {
+        "translation": "Báo cáo"
+      }
+    },
+    "configureScreens": {
+      "label": {
+        "translation": "Định cấu hình màn hình"
+      }
+    },
+    "commandCenterTooltip": {
+      "label": {
+        "translation": "Chọn vị trí và chọn danh mục mà bạn muốn xem trước trên màn hình Trung tâm chỉ huy. Bạn có thể khám phá nó trong cùng một cửa sổ hoặc mở trong tab mới."
+      }
+    },
+    "smartPoleRealDevice": {
+      "label": {
+        "translation": "Cột thông minh này không được kết nối với thiết bị thực"
+      }
+    },
+    "smartPolesCaption": {
+      "label": {
+        "translation": "Khám phá vị trí của các cột và cảnh báo thông minh"
+      }
+    },
+    "smartPoles": {
+      "label": {
+        "translation": "Cột thông minh"
+      }
+    },
+    "solution": {
+      "label": {
+        "translation": "Giải pháp"
+      }
+    },
+    "system": {
+      "label": {
+        "translation": "Hệ thống"
+      }
+    },
+    "ai": {
+      "label": {
+        "translation": "trí tuệ nhân tạo"
+      }
+    },
+    "connects": {
+      "label": {
+        "translation": "Kết nối"
+      }
     },
     "ems": {
-        "cO2e": {
-            "label": {
-                "translation": "CO2e"
-            }
-        },
-        "kWh": {
-            "label": {
-                "translation": "kWh"
-            }
-        },
-        "kW": {
-            "label": {
-                "translation": "kW"
-            }
-        },
-        "contractCapacityInputPlaceholder": {
-            "label": {
-                "translation": "Nhập năng suất hợp đồng"
-            }
-        },
-        "contractCapacity": {
-            "label": {
-                "translation": "Năng suất hợp đồng"
-            }
-        },
-        "contractCapacityEdit": {
-            "label": {
-                "translation": "Chỉnh sửa năng suất hợp đồng"
-            }
-        },
-        "consumption": {
-            "label": {
-                "translation": "Sự tiêu dùng"
-            },
-            "month": {
-                "translation": "Sự tiêu thụ"
-            }
-        },
-        "demand": {
-            "label": {
-                "translation": "Yêu cầu"
-            }
-        },
-        "cO2eDistribution": {
-            "label": {
-                "translation": "Phân phối CO2e"
-            }
-        },
-        "consumptionDistribution": {
-            "label": {
-                "translation": "Phân phối tiêu dùng"
-            }
-        },
-        "demandDistrubution": {
-            "label": {
-                "translation": "Phân phối nhu cầu"
-            }
-        },
-        "realTimePF": {
-            "label": {
-                "translation": "PF thời gian thực"
-            }
-        },
-        "lastHourConsumption": {
-            "label": {
-                "translation": "Mức tiêu thụ giờ cuối cùng"
-            }
-        },
-        "lastHourEmission": {
-            "label": {
-                "translation": "Giờ khí thải trước"
-            }
-        },
-        "cO2eTrend": {
-            "label": {
-                "translation": "Xu hướng CO2e"
-            }
-        },
-        "consumptionTrend": {
-            "label": {
-                "translation": "Xu hướng tiêu dùng"
-            }
-        },
-        "demandTrend": {
-            "label": {
-                "translation": "Xu hướng nhu cầu"
-            }
-        },
-        "currentCO2e": {
-            "label": {
-                "translation": "CO2e hiện tại"
-            }
-        },
-        "currentKW": {
-            "label": {
-                "translation": "kW hiện tại"
-            }
-        },
-        "carbonEmission": {
-            "label": {
-                "translation": "Khí thải cacbon"
-            }
-        },
-        "currentKWh": {
-            "label": {
-                "translation": "kWh hiện tại"
-            }
-        },
-        "valueInput": {
-            "label": {
-                "translation": "Giá trị"
-            }
-        },
-        "process": {
-            "label": {
-                "translation": "Quá trình"
-            }
-        },
-        "addProcess": {
-            "label": {
-                "translation": "Thêm quy trình"
-            }
-        },
-        "emission": {
-            "label": {
-                "translation": "Khí thải"
-            }
-        },
-        "noProcess": {
-            "label": {
-                "translation": "Không có quy trình"
-            }
-        },
-        "unitRequire": {
-            "label": {
-                "translation": "Đơn vị phải được yêu cầu"
-            }
-        },
-        "processRequire": {
-            "label": {
-                "translation": "Phải có quy trình"
-            }
-        },
-        "deviceId": {
-            "label": {
-                "translation": "Phải có ID thiết bị"
-            }
-        },
-        "unitsNumberBetterThanZero": {
-            "label": {
-                "translation": "Số đơn vị phải lớn hơn 0"
-            }
-        },
-        "enterAmount": {
-            "label": {
-                "translation": "Bạn phải nhập số tiền"
-            }
-        },
-        "mustEnterEndDate": {
-            "label": {
-                "translation": "Bạn phải nhập ngày kết thúc"
-            }
-        },
-        "addHistory": {
-            "label": {
-                "translation": "Thêm lịch sử"
-            }
-        },
-        "noUnit": {
-            "label": {
-                "translation": "Không có đơn vị"
-            }
-        },
-        "unit": {
-            "label": {
-                "translation": "Đơn vị"
-            }
-        },
-        "selectUnit": {
-            "label": {
-                "translation": "Chọn đơn vị"
-            }
-        },
-        "selectProcess": {
-            "label": {
-                "translation": "Chọn quy trình"
-            }
-        },
-        "circuitLoop": {
-            "label": {
-                "translation": "Vòng mạch"
-            }
-        },
-        "selectCircuit": {
-            "label": {
-                "translation": "Chọn mạch"
-            }
-        },
-        "enterProcessName": {
-            "label": {
-                "translation": "Nhập tên quy trình"
-            }
-        },
-        "editProcess": {
-            "label": {
-                "translation": "Chỉnh sửa quy trình"
-            }
-        },
-        "deleteProcess": {
-            "label": {
-                "translation": "Xóa quy trình"
-            }
-        },
-        "editHistory": {
-            "label": {
-                "translation": "Chỉnh sửa lịch sử"
-            }
-        },
-        "deleteHistory": {
-            "label": {
-                "translation": "Xóa lịch sử"
-            }
-        },
-        "energy_analysis": {
-            "label": {
-                "translation": "Phân tích năng lượng"
-            }
-        },
-        "riskLevel": {
-            "label": {
-                "translation": "Mức độ rủi ro"
-            }
-        },
-        "kWhLastMonth": {
-            "label": {
-                "translation": "kWh tháng trước"
-            }
-        },
-        "cO2eLastMonth": {
-            "label": {
-                "translation": "cO2e tháng trước"
-            }
-        },
-        "settingCircuitSummary": {
-            "label": {
-                "translation": "Tóm tắt mạch cài đặt"
-            }
-        },
-        "CO2e": {
-            "label": {
-                "translation": "CO2e"
-            }
-        },
-        "uploadConfirmTitle": {
-            "label": {
-                "translation": "Bạn có chắc chắn muốn tải lên khôn?"
-            }
-        },
-        "confirmUploadMessage": {
-            "label": {
-                "translation": "Cảnh báo ghi đè dữ liệu: Việc tải lên tệp Excel này sẽ thay thế dữ liệu hiện có. Điều này có thể dẫn đến việc xóa các bản ghi hiện tại và thêm dữ liệu mới. Hành động này không thể hoàn tác."
-            }
-        },    
-        "Proceed": {
-            "label": {
-              "translation": "Tiếp tục"
-            }
-        },
-        "Cancel": {
-            "label": {
-                "translation": "Hủy bỏ"
-            }
-        },
-        "maximumPower": {
-            "label": {
-                "translation": "Công suất tối đa"
-            }
-        },
-        "historicalTrend": {
-            "label": {
-                "translation": "Xu hướng lịch sử"
-            }
-        },
-        "factory": {
-            "label": {
-                "translation": "Nhà máy"
-            }
-        },
-        "Consumption(kWh)": {
-            "label": {
-                "translation": "Tiêu thụ (kWh)"
-            }
-        },
-        "selectLocations": {
-            "label": {
-                "translation": "Chọn địa điểm"
-            }
-        },
-        "kWhThisMonth": {
-            "label": {
-                "translation": "kWh tháng này"
-            }
-        },
-        "cO2eThisMonth": {
-            "label": {
-                "translation": "cO2e tháng này"
-            }
-        },
-        "thisMonth": {
-            "translation": "Tháng này"
-        },
-        "lastMonth": {
-            "translation": "Tháng trước"
-        },
-        "ConsumptionTrend": {
-            "legend": {
-                "translation": "Tiêu thụ (kWh)"
-            }
-        },
-        "selectBuildings": {
-            "label": {
-                "translation": "Chọn tòa nhà"
-            }
-        },
-        "selectFloor": {
-            "label": {
-                "translation": "Chọn tầng"
-            }
-        },
-        "selectZone": {
-            "label": {
-                "translation": "Chọn vùng"
-            }
-        },
-        "addProductButton" :{
-            "label": {
-                "translation": "Thêm sản phẩm mới"
-            }
-        },
-        "productName" :{
-            "label": {
-                "translation": "Tên sản phẩm"
-            }
-        },
-        "consumptionAmount" :{
-            "label": {
-                "translation": "Tiêu thụ/số lượng"
-            }
-        },
-        "emissionAmount" :{
-            "label": {
-                "translation": "Phát thải/số lượng"
-            }
-        },
-        "summarySwitch" :{
-            "label": {
-                "translation": "Tóm tắt"
-            }
-        },
-        "managementSwitch" :{
-            "label": {
-                "translation": "Quản lý"
-            }
-        },
-        "product": {
-            "label": {
-                "translation": "Sản phẩm"
-            }
-        },
-        "processHistory": {
-            "label": {
-                "translation": "Lịch sử quy trình"
-            }
-          }
+      "label": {
+        "translation": "EMS"
+      }
     },
-    "issue": {
-        "attentionRequired": {
-            "label": {
-                "translation": "Cần chú ý"
-            }
-        },
-        "aboutEvent": {
-            "label": {
-                "translation": "Về sự kiện"
-            }
-        },
-        "allAssignee": {
-            "label": {
-                "translation": "Tất cả người được chuyển nhượng"
-            }
-        },
-        "createIssue": {
-            "label": {
-                "translation": "Tạo vấn đề"
-            }
-        },
-        "createTicket": {
-            "label": {
-                "translation": "Vui lòng tạo vé để giải quyết vấn đề này."
-            }
-        },
-        "connectionStatus": {
-            "label": {
-                "translation": "Tình trạng kết nối"
-            }
-        },
-        "editIssueTitle": {
-            "label": {
-                "translation": "Chỉnh sửa vấn đề"
-            }
-        },
-        "description": {
-            "label": {
-                "translation": "Sự miêu tả"
-            }
-        },
-        "issueID": {
-            "label": {
-                "translation": "ID vấn đề"
-            }
-        },
-        "details": {
-            "label": {
-                "translation": "Chi tiết"
-            }
-        },
-        "issueCreated": {
-            "label": {
-                "translation": "Đã tạo sự cố cho sự kiện này."
-            }
-        },
-        "reporter": {
-            "label": {
-                "translation": "Người báo cáo"
-            }
-        },
-        "assignee": {
-            "label": {
-                "translation": "Người được chuyển nhượng"
-            }
-        },
-        "status": {
-            "label": {
-                "translation": "Trạng thái"
-            }
-        },
-        "issue": {
-            "label": {
-                "translation": "Vấn đề"
-            }
-        },
-        "issuesTitle": {
-            "label": {
-                "translation": "Các vấn đề"
-            }
-        },
-        "noIssuesCaption": {
-            "label": {
-                "translation": "Chưa có vấn đề gì ở đây"
-            }
-        },
-        "summary": {
-            "label": {
-                "translation": "Bản tóm tắt"
-            }
-        },
-        "allPriority": {
-            "label": {
-                "translation": "Tất cả ưu tiên"
-            }
-        },
-        "allStatus": {
-            "label": {
-                "translation": "Tất cả các trạng thái"
-            }
-        },
-        "notFound": {
-            "label": {
-                "translation": "Không tìm thấy vấn đề"
-            }
-        },
-        "noIssues": {
-            "label": {
-                "translation": "Không vấn đề"
-            }
-        },
-        "viewIssue": {
-            "label": {
-                "translation": "Xem vấn đề"
-            }
-        }
+    "pinPoint": {
+      "label": {
+        "translation": "IvedaRTLS"
+      }
     },
-    "location": {
-        "searchLocation": {
-            "label": {
-                "translation": "Tìm kiếm vị trí"
-            }
-        },
-        "changelocations": {
-            "label": {
-                "translation": "Thay đổi vị trí"
-            }
-        },
-        "addLocation": {
-            "label": {
-                "translation": "Thêm vị trí"
-            }
-        },
-        "building": {
-            "label": {
-                "translation": "Xây dựng"
-            }
-        },
-        "buildingsWarning": {
-            "label": {
-                "translation": "Không có tòa nhà nào"
-            }
-        },
-        "buildings": {
-            "label": {
-                "translation": "Các tòa nhà"
-            }
-        },
-        "city": {
-            "label": {
-                "translation": "Thành phố"
-            }
-        },
-        "company": {
-            "label": {
-                "translation": "Công ty"
-            }
-        },
-        "country": {
-            "label": {
-                "translation": "Quốc gia"
-            }
-        },
-        "current": {
-            "label": {
-                "translation": "Hiện hành"
-            }
-        },
-        "designated": {
-            "label": {
-                "translation": "được chỉ định"
-            }
-        },
-        "campus": {
-            "label": {
-                "translation": "Khuôn viên đại học"
-            }
-        },
-        "ownerLocation": {
-            "label": {
-                "translation": "Vị trí chủ sở hữu"
-            }
-        },
-        "parentLocation": {
-            "label": {
-                "translation": "Vị trí phụ huynh"
-            }
-        },
-        "allZones": {
-            "label": {
-                "translation": "Tất cả các vùng"
-            }
-        },
-        "space": {
-            "label": {
-                "translation": "Khoảng cách"
-            }
-        },
-        "spaces": {
-            "label": {
-                "translation": "Các khoảng cách"
-            }
-        },
-        "latitude": {
-            "label": {
-                "translation": "Vĩ độ"
-            }
-        },
-        "locationSchema": {
-            "label": {
-                "translation": "Lược đồ vị trí"
-            }
-        },
-        "location": {
-            "label": {
-                "translation": "Vị trí"
-            }
-        },
-        "locations": {
-            "label": {
-                "translation": "Các vị trí"
-            }
-        },
-        "longitude": {
-            "label": {
-                "translation": "Kinh độ"
-            }
-        },
-        "map": {
-            "label": {
-                "translation": "Bản đồ"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "Tên"
-            }
-        },
-        "formation": {
-            "label": {
-                "translation": "Cơ cấu"
-            }
-        },
-        "region": {
-            "label": {
-                "translation": "Khu vực"
-            }
-        },
-        "regions": {
-            "label": {
-                "translation": "Các khu vực"
-            }
-        },
-        "selectCampusSelectPlaceholder": {
-            "label": {
-                "translation": "Chọn trường"
-            }
-        },
-        "selectUserLocations": {
-            "label": {
-                "translation": "Chọn vị trí người dùng"
-            }
-        },
-        "selectLocationFromList": {
-            "label": {
-                "translation": "Chọn vị trí"
-            }
-        },
-        "moreLocations": {
-            "label": {
-                "translation": "Thêm vị trí"
-            }
-        },
-        "spacesWarning": {
-            "label": {
-                "translation": "Không có khoảng cách"
-            }
-        },
-        "zone": {
-            "label": {
-                "translation": "Vùng"
-            }
-        },
-        "partLocation": {
-            "label": {
-                "translation": "Vị trí một phần"
-            }
-        },
-        "street": {
-            "label": {
-                "translation": "Đường phố"
-            }
-        },
-        "timeZone": {
-            "label": {
-                "translation": "Múi giờ"
-            }
-        },
-        "type": {
-            "label": {
-                "translation": "Kiểu"
-            }
-        },
-        "unknown": {
-            "label": {
-                "translation": "không xác định"
-            }
-        },
-        "zip": {
-            "label": {
-                "translation": "Mã zip"
-            }
-        },
-        "proxyID": {
-            "label": {
-                "translation": "ID proxy"
-            }
-        },
-        "floor": {
-            "label": {
-                "translation": "Sàn nhà"
-            }
-        },
-        "productionLine": {
-            "label": {
-                "translation": "Dây chuyền sản xuất"
-            }
-        },
-        "displayedItems": {
-            "label": {
-                "translation": "Các mục được hiển thị"
-            }
-        },
-        "floors": {
-            "label": {
-                "translation": "Tầng"
-            }
-        },
-        "area": {
-            "label": {
-                "translation": "Khu vực"
-            }
-        },
-        "areas": {
-            "label": {
-                "translation": "Khu vực"
-            }
-        },
-        "formations": {
-            "label": {
-                "translation": "hình thành"
-            }
-        },
-        "zones": {
-            "label": {
-                "translation": "Khu vực"
-            }
-        },
-        "productionLines": {
-            "label": {
-                "translation": "Dây chuyền sản xuất"
-            }
-        },
-        "cameraSnapshot": {
-            "label": {
-                "translation": "Ảnh chụp nhanh của máy ảnh"
-            }
-        }
+    "cerebro": {
+      "label": {
+        "translation": "sử dụng"
+      }
     },
-    "login": {
-        "form": {
-            "email": {
-                "emailFormatValidation": {
-                    "label": {
-                        "translation": "Vui lòng nhập email hợp lệ ở định dạng example@mail.com."
-                    }
-                },
-                "emailRequired": {
-                    "label": {
-                        "translation": "Vui lòng nhập email của bạn."
-                    }
-                },
-                "defaultError": {
-                    "label": {
-                        "translation": "Lỗi"
-                    }
-                },
-                "placeholder": {
-                    "label": {
-                        "translation": "Nhập email"
-                    }
-                },
-                "label": {
-                    "translation": "E-mail"
-                }
-            },
-            "password": {
-                "passwordRequired": {
-                    "label": {
-                        "translation": "Vui lòng nhập mật khẩu của bạn."
-                    }
-                },
-                "passwordCharCountValidation": {
-                    "label": {
-                        "translation": "Mật khẩu cần dài ít nhất 8 ký tự."
-                    }
-                },
-                "defaultError": {
-                    "label": {
-                        "translation": "Lỗi"
-                    }
-                },
-                "placeholder": {
-                    "label": {
-                        "translation": "Nhập mật khẩu"
-                    }
-                },
-                "label": {
-                    "translation": "Mật khẩu"
-                }
-            },
-            "forgotPassword": {
-                "label": {
-                    "translation": "Quên mật khẩu"
-                }
-            },
-            "rememberMeCheckbox": {
-                "label": {
-                    "translation": "nhớ tôi"
-                }
-            }
-        },
-        "resetEmailPage": {
-            "resetEmailPageIntro": {
-                "label": {
-                    "translation": "Chúng tôi đã gửi liên kết đặt lại mật khẩu tới"
-                }
-            },
-            "label": {
-                "translation": "Kiểm tra hộp thư điện tử của bạn"
-            }
-        },
-        "forgotPasswordPage": {
-            "forgotPasswordPageIntro": {
-                "label": {
-                    "translation": "Đừng lo lắng, chúng tôi sẽ gửi cho bạn hướng dẫn đặt lại."
-                }
-            },
-            "backToSignIn": {
-                "label": {
-                    "translation": "Quay lại Đăng nhập"
-                }
-            },
-            "label": {
-                "translation": "Quên mật khẩu"
-            }
-        },
-        "loginPageFormIntro": {
-            "label": {
-                "translation": "Nhập thông tin xác thực của bạn để truy cập vào tài khoản của bạn"
-            }
-        },
-        "loginPageFormAlert": {
-            "label": {
-                "translation": "Email hoặc mật khẩu không chính xác, vui lòng thử lại"
-            }
-        },
-        "backToSignInButton": {
-            "label": {
-                "translation": "Quay lại Đăng nhập"
-            }
-        },
-        "resendEmailButton": {
-            "label": {
-                "translation": "Gửi lại email"
-            }
-        },
-        "resetPasswordButton": {
-            "label": {
-                "translation": "Đặt lại mật khẩu"
-            }
-        },
-        "signInLoadingButton": {
-            "label": {
-                "translation": "Đang đăng nhập..."
-            }
-        },
-        "signInButton": {
-            "label": {
-                "translation": "Đăng nhập"
-            }
-        },
-        "signOutButton": {
-            "label": {
-                "translation": "Đăng xuất"
-            }
-        },
-        "loginPage": {
-            "label": {
-                "translation": "Chào mừng đến với Cerebro"
-            }
-        },
-        "yourEmailPlaceholder": {
-            "label": {
-                "translation": "email của bạn"
-            }
-        }
+    "totalSmartPoles": {
+      "label": {
+        "translation": "Tổng số cột thông minh"
+      }
     },
-    "events": {
-        "alertMessage": {
-            "label": {
-                "translation": "Tin nhắn cảnh báo"
-            }
-        },
-        "allMessages": {
-            "label": {
-                "translation": "Tất cả các tin nhắn"
-            }
-        },
-        "checkHumidDevices": {
-            "label": {
-                "translation": "Kiểm tra thiết bị ẩm"
-            }
-        },
-        "checkOverheatedDevices": {
-            "label": {
-                "translation": "Kiểm tra thiết bị quá nóng"
-            }
-        },
-        "criticalEvent": {
-            "label": {
-                "translation": "Phê bình"
-            }
-        },
-        "default": {
-            "label": {
-                "translation": "Mặc định"
-            }
-        },
-        "disconnect": {
-            "label": {
-                "translation": "Ngắt kết nối"
-            }
-        },
-        "checkDisconnectedDevices": {
-            "label": {
-                "translation": "Kiểm tra các thiết bị đã ngắt kết nối"
-            }
-        },
-        "error": {
-            "label": {
-                "translation": "Lỗi"
-            }
-        },
-        "eventInfo": {
-            "label": {
-                "translation": "Thông tin sự kiện"
-            }
-        },
-        "priority": {
-            "label": {
-                "translation": "Sự ưu tiên"
-            }
-        },
-        "eventsHistory": {
-            "label": {
-                "translation": "Lịch sử sự kiện"
-            }
-        },
-        "events": {
-            "label": {
-                "translation": "Các sự kiện"
-            }
-        },
-        "highEvent": {
-            "label": {
-                "translation": "Cao"
-            }
-        },
-        "humid": {
-            "label": {
-                "translation": "Độ ẩm"
-            }
-        },
-        "lowEvent": {
-            "label": {
-                "translation": "Thấp"
-            }
-        },
-        "mediumEvent": {
-            "label": {
-                "translation": "Trung bình"
-            }
-        },
-        "noEventsCapture": {
-            "label": {
-                "translation": "Chưa có sự kiện nào ở đây"
-            }
-        },
-        "noEvents": {
-            "label": {
-                "translation": "Không có sự kiện"
-            }
-        },
-        "normal": {
-            "label": {
-                "translation": "Bình thường"
-            }
-        },
-        "notificationDetails": {
-            "label": {
-                "translation": "Chi tiết thông báo"
-            }
-        },
-        "overheated": {
-            "label": {
-                "translation": "Quá nóng"
-            }
-        },
-        "problem": {
-            "label": {
-                "translation": "Vấn đề"
-            }
-        },
-        "recentEvents": {
-            "label": {
-                "translation": "Sự kiện gần đây"
-            }
-        },
-        "criticalEvents": {
-            "label": {
-                "translation": "Sự kiện quan trọng"
-            }
-        },
-        "stable": {
-            "label": {
-                "translation": "Ổn định"
-            }
-        },
-        "success": {
-            "label": {
-                "translation": "Thành công"
-            }
-        },
-        "totalEvents": {
-            "label": {
-                "translation": "Tổng số sự kiện"
-            }
-        },
-        "trivial": {
-            "label": {
-                "translation": "Không đáng kể"
-            }
-        },
-        "unknown": {
-            "label": {
-                "translation": "không xác định"
-            }
-        },
-        "warning": {
-            "label": {
-                "translation": "Cảnh báo"
-            }
-        },
-        "total": {
-            "label": {
-                "translation": "Tổng cộng"
-            }
-        },
-        "eventDetails": {
-            "label": {
-                "translation": "chi tiết sự kiện"
-            }
-        }
+    "yearInput": {
+      "label": {
+        "translation": "Năm"
+      }
     },
-    "company": {
-        "poweredByCompany": {
-            "label": {
-                "translation": "được cung cấp bởi Iveda"
-            }
-        },
-        "company": {
-            "label": {
-                "translation": "Công ty"
-            }
-        },
-        "copyright": {
-            "label": {
-                "translation": "Được cung cấp bởi Iveda. Bản quyền"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "Giải Pháp Iveda"
-            }
-        },
-        "fromCerebroApp": {
-            "label": {
-                "translation": "từ ứng dụng Cerebro?"
-            }
-        },
-        "companyIcon": {
-            "label": {
-                "translation": "Biểu tượng công ty"
-            }
-        },
-        "companyLogo": {
-            "label": {
-                "translation": "Logo công ty"
-            }
-        }
+    "utilus": {
+      "label": {
+        "translation": "sử dụng"
+      }
     },
-    "map": {
-        "editDomainMapZoom": {
-            "label": {
-                "translation": "Chỉnh sửa kích thước phóng to bản đồ miền"
-            }
-        },
-        "domainMapZoom": {
-            "label": {
-                "translation": "Phóng to kích thước bản đồ tên miền"
-            }
-        },
-        "map": {
-            "label": {
-                "translation": "Bản đồ"
-            }
-        },
-        "nodeMap": {
-            "label": {
-                "translation": "Bản đồ nút"
-            }
-        },
-        "selectSize": {
-            "label": {
-                "translation": "Chọn kích cỡ"
-            }
-        }
+    "backToDashboard": {
+      "label": {
+        "translation": "Quay lại Trang tổng quan"
+      }
+    },
+    "analytics": {
+      "label": {
+        "translation": "phân tích"
+      }
+    },
+    "energyOverview": {
+      "label": {
+        "translation": "Tổng quan về năng lượng"
+      }
+    },
+    "energyAnalysis": {
+      "label": {
+        "translation": "Phân tích năng lượng"
+      }
+    }
+  },
+  "ems": {
+    "cO2e": {
+      "label": {
+        "translation": "CO2e"
+      }
+    },
+    "kWh": {
+      "label": {
+        "translation": "kWh"
+      }
+    },
+    "kW": {
+      "label": {
+        "translation": "kW"
+      }
+    },
+    "contractCapacityInputPlaceholder": {
+      "label": {
+        "translation": "Nhập năng suất hợp đồng"
+      }
+    },
+    "contractCapacity": {
+      "label": {
+        "translation": "Năng suất hợp đồng"
+      }
+    },
+    "contractCapacityEdit": {
+      "label": {
+        "translation": "Chỉnh sửa năng suất hợp đồng"
+      }
+    },
+    "consumption": {
+      "label": {
+        "translation": "Sự tiêu dùng"
+      },
+      "month": {
+        "translation": "Sự tiêu thụ"
+      }
+    },
+    "demand": {
+      "label": {
+        "translation": "Yêu cầu"
+      }
+    },
+    "cO2eDistribution": {
+      "label": {
+        "translation": "Phân phối CO2e"
+      }
+    },
+    "consumptionDistribution": {
+      "label": {
+        "translation": "Phân phối tiêu dùng"
+      }
+    },
+    "demandDistrubution": {
+      "label": {
+        "translation": "Phân phối nhu cầu"
+      }
+    },
+    "realTimePF": {
+      "label": {
+        "translation": "PF thời gian thực"
+      }
+    },
+    "lastHourConsumption": {
+      "label": {
+        "translation": "Mức tiêu thụ giờ cuối cùng"
+      }
+    },
+    "lastHourEmission": {
+      "label": {
+        "translation": "Giờ khí thải trước"
+      }
+    },
+    "cO2eTrend": {
+      "label": {
+        "translation": "Xu hướng CO2e"
+      }
+    },
+    "consumptionTrend": {
+      "label": {
+        "translation": "Xu hướng tiêu dùng"
+      }
+    },
+    "demandTrend": {
+      "label": {
+        "translation": "Xu hướng nhu cầu"
+      }
+    },
+    "currentCO2e": {
+      "label": {
+        "translation": "CO2e hiện tại"
+      }
+    },
+    "currentKW": {
+      "label": {
+        "translation": "kW hiện tại"
+      }
+    },
+    "carbonEmission": {
+      "label": {
+        "translation": "Khí thải cacbon"
+      }
+    },
+    "currentKWh": {
+      "label": {
+        "translation": "kWh hiện tại"
+      }
+    },
+    "valueInput": {
+      "label": {
+        "translation": "Giá trị"
+      }
+    },
+    "process": {
+      "label": {
+        "translation": "Quá trình"
+      }
+    },
+    "addProcess": {
+      "label": {
+        "translation": "Thêm quy trình"
+      }
+    },
+    "emission": {
+      "label": {
+        "translation": "Khí thải"
+      }
+    },
+    "noProcess": {
+      "label": {
+        "translation": "Không có quy trình"
+      }
+    },
+    "unitRequire": {
+      "label": {
+        "translation": "Đơn vị phải được yêu cầu"
+      }
+    },
+    "processRequire": {
+      "label": {
+        "translation": "Phải có quy trình"
+      }
+    },
+    "deviceId": {
+      "label": {
+        "translation": "Phải có ID thiết bị"
+      }
+    },
+    "unitsNumberBetterThanZero": {
+      "label": {
+        "translation": "Số đơn vị phải lớn hơn 0"
+      }
+    },
+    "enterAmount": {
+      "label": {
+        "translation": "Bạn phải nhập số tiền"
+      }
+    },
+    "mustEnterEndDate": {
+      "label": {
+        "translation": "Bạn phải nhập ngày kết thúc"
+      }
+    },
+    "addHistory": {
+      "label": {
+        "translation": "Thêm lịch sử"
+      }
+    },
+    "noUnit": {
+      "label": {
+        "translation": "Không có đơn vị"
+      }
+    },
+    "unit": {
+      "label": {
+        "translation": "Đơn vị"
+      }
+    },
+    "selectUnit": {
+      "label": {
+        "translation": "Chọn đơn vị"
+      }
+    },
+    "selectProcess": {
+      "label": {
+        "translation": "Chọn quy trình"
+      }
+    },
+    "circuitLoop": {
+      "label": {
+        "translation": "Vòng mạch"
+      }
+    },
+    "selectCircuit": {
+      "label": {
+        "translation": "Chọn mạch"
+      }
+    },
+    "enterProcessName": {
+      "label": {
+        "translation": "Nhập tên quy trình"
+      }
+    },
+    "editProcess": {
+      "label": {
+        "translation": "Chỉnh sửa quy trình"
+      }
+    },
+    "deleteProcess": {
+      "label": {
+        "translation": "Xóa quy trình"
+      }
+    },
+    "editHistory": {
+      "label": {
+        "translation": "Chỉnh sửa lịch sử"
+      }
+    },
+    "deleteHistory": {
+      "label": {
+        "translation": "Xóa lịch sử"
+      }
+    },
+    "energy_analysis": {
+      "label": {
+        "translation": "Phân tích năng lượng"
+      }
+    },
+    "riskLevel": {
+      "label": {
+        "translation": "Mức độ rủi ro"
+      }
+    },
+    "kWhLastMonth": {
+      "label": {
+        "translation": "kWh tháng trước"
+      }
+    },
+    "cO2eLastMonth": {
+      "label": {
+        "translation": "cO2e tháng trước"
+      }
+    },
+    "settingCircuitSummary": {
+      "label": {
+        "translation": "Tóm tắt mạch cài đặt"
+      }
+    },
+    "CO2e": {
+      "label": {
+        "translation": "CO2e"
+      }
+    },
+    "uploadConfirmTitle": {
+      "label": {
+        "translation": "Bạn có chắc chắn muốn tải lên khôn?"
+      }
+    },
+    "confirmUploadMessage": {
+      "label": {
+        "translation": "Cảnh báo ghi đè dữ liệu: Việc tải lên tệp Excel này sẽ thay thế dữ liệu hiện có. Điều này có thể dẫn đến việc xóa các bản ghi hiện tại và thêm dữ liệu mới. Hành động này không thể hoàn tác."
+      }
+    },
+    "Proceed": {
+      "label": {
+        "translation": "Tiếp tục"
+      }
+    },
+    "Cancel": {
+      "label": {
+        "translation": "Hủy bỏ"
+      }
+    },
+    "maximumPower": {
+      "label": {
+        "translation": "Công suất tối đa"
+      }
+    },
+    "historicalTrend": {
+      "label": {
+        "translation": "Xu hướng lịch sử"
+      }
+    },
+    "factory": {
+      "label": {
+        "translation": "Nhà máy"
+      }
+    },
+    "Consumption(kWh)": {
+      "label": {
+        "translation": "Tiêu thụ (kWh)"
+      }
+    },
+    "selectLocations": {
+      "label": {
+        "translation": "Chọn địa điểm"
+      }
+    },
+    "kWhThisMonth": {
+      "label": {
+        "translation": "kWh tháng này"
+      }
+    },
+    "cO2eThisMonth": {
+      "label": {
+        "translation": "cO2e tháng này"
+      }
+    },
+    "thisMonth": {
+      "translation": "Tháng này"
+    },
+    "lastMonth": {
+      "translation": "Tháng trước"
+    },
+    "ConsumptionTrend": {
+      "legend": {
+        "translation": "Tiêu thụ (kWh)"
+      }
+    },
+    "selectBuildings": {
+      "label": {
+        "translation": "Chọn tòa nhà"
+      }
+    },
+    "selectFloor": {
+      "label": {
+        "translation": "Chọn tầng"
+      }
+    },
+    "selectZone": {
+      "label": {
+        "translation": "Chọn vùng"
+      }
+    },
+    "addProductButton": {
+      "label": {
+        "translation": "Thêm sản phẩm mới"
+      }
+    },
+    "productName": {
+      "label": {
+        "translation": "Tên sản phẩm"
+      }
+    },
+    "consumptionAmount": {
+      "label": {
+        "translation": "Tiêu thụ/số lượng"
+      }
+    },
+    "emissionAmount": {
+      "label": {
+        "translation": "Phát thải/số lượng"
+      }
+    },
+    "summarySwitch": {
+      "label": {
+        "translation": "Tóm tắt"
+      }
+    },
+    "managementSwitch": {
+      "label": {
+        "translation": "Quản lý"
+      }
+    },
+    "product": {
+      "label": {
+        "translation": "Sản phẩm"
+      }
+    },
+    "processHistory": {
+      "label": {
+        "translation": "Lịch sử quy trình"
+      }
+    }
+  },
+  "issue": {
+    "attentionRequired": {
+      "label": {
+        "translation": "Cần chú ý"
+      }
+    },
+    "aboutEvent": {
+      "label": {
+        "translation": "Về sự kiện"
+      }
+    },
+    "allAssignee": {
+      "label": {
+        "translation": "Tất cả người được chuyển nhượng"
+      }
+    },
+    "createIssue": {
+      "label": {
+        "translation": "Tạo vấn đề"
+      }
+    },
+    "createTicket": {
+      "label": {
+        "translation": "Vui lòng tạo vé để giải quyết vấn đề này."
+      }
+    },
+    "connectionStatus": {
+      "label": {
+        "translation": "Tình trạng kết nối"
+      }
+    },
+    "editIssueTitle": {
+      "label": {
+        "translation": "Chỉnh sửa vấn đề"
+      }
+    },
+    "description": {
+      "label": {
+        "translation": "Sự miêu tả"
+      }
+    },
+    "issueID": {
+      "label": {
+        "translation": "ID vấn đề"
+      }
+    },
+    "details": {
+      "label": {
+        "translation": "Chi tiết"
+      }
+    },
+    "issueCreated": {
+      "label": {
+        "translation": "Đã tạo sự cố cho sự kiện này."
+      }
+    },
+    "reporter": {
+      "label": {
+        "translation": "Người báo cáo"
+      }
+    },
+    "assignee": {
+      "label": {
+        "translation": "Người được chuyển nhượng"
+      }
     },
     "status": {
-        "closedStatus": {
-            "label": {
-                "translation": "Đã đóng"
-            }
-        },
-        "inProgressStatus": {
-            "label": {
-                "translation": "Trong tiến trình"
-            }
-        },
-        "openStatus": {
-            "label": {
-                "translation": "Mở"
-            }
-        },
-        "resolvedStatus": {
-            "label": {
-                "translation": "Đã giải quyết"
-            }
-        }
+      "label": {
+        "translation": "Trạng thái"
+      }
     },
-    "theme": {
-        "dark": {
-            "label": {
-                "translation": "Chế độ tối"
-            }
-        },
-        "light": {
-            "label": {
-                "translation": "Chế độ sáng"
-            }
-        }
+    "issue": {
+      "label": {
+        "translation": "Vấn đề"
+      }
     },
-    "label": {
-        "locations": {
-            "translation": "Địa điểm"
-        },
-        "allLocations": {
-            "label" : {
-            "translation": "Tất cả địa điểm"
-            }
-        },
-        "priority": {
-            "low": {
-                "translation": "Thấp"
-            },
-            "medium": {
-                "translation": "Trung bình"
-            },
-            "high": {
-                "translation": "Cao"
-            }
-        },
-        "location": {
-            "translation": "Vị trí"
-        },
-        "assetPriority": {
-            "translation": "Sự ưu tiên"
-        },
-        "timezone": {
-            "translation": "Múi giờ"
-        },
-        "language": {
-            "translation": "Ngôn ngữ"
-        }
+    "issuesTitle": {
+      "label": {
+        "translation": "Các vấn đề"
+      }
     },
-    "solutionsd": {
-        "environmentCaption": {
-            "label": {
-                "translation": "Khám phá ngày sinh thái"
-            }
-        }
+    "noIssuesCaption": {
+      "label": {
+        "translation": "Chưa có vấn đề gì ở đây"
+      }
     },
-    "checkbox": {
-        "label": {
-            "translation": "Tin tức và cập nhật"
-        }
+    "summary": {
+      "label": {
+        "translation": "Bản tóm tắt"
+      }
     },
-    "data": {
-        "selectDate": {
-            "label": {
-                "translation": "Chọn ngày"
-            }
-        }
+    "allPriority": {
+      "label": {
+        "translation": "Tất cả ưu tiên"
+      }
     },
-    "alerts": {
-        "raised": {
-            "translation": "Báo động"
-        },
-        "resolved": {
-            "translation": "Đã giải quyết"
-        }
+    "allStatus": {
+      "label": {
+        "translation": "Tất cả các trạng thái"
+      }
     },
-    "deviceTypes": {
-        "Cameras": {
-            "translation": "Máy ảnh"
-        },
-        "cameraID": {
-            "translation": "ID máy ảnh"
-        },
-        "engineModels": {
-            "translation": "Mô hình động cơ"
-        },
-        "plugins": {
-            "translation": "bổ sung"
-        },
-        "profileName": {
-            "translation": "Tên hồ sơ"
-        },
-        "resolution": {
-            "translation": "Nghị quyết"
-        },
-        "streamUrl": {
-            "translation": "Url luồng"
-        }
+    "notFound": {
+      "label": {
+        "translation": "Không tìm thấy vấn đề"
+      }
+    },
+    "noIssues": {
+      "label": {
+        "translation": "Không vấn đề"
+      }
+    },
+    "viewIssue": {
+      "label": {
+        "translation": "Xem vấn đề"
+      }
     }
+  },
+  "location": {
+    "searchLocation": {
+      "label": {
+        "translation": "Tìm kiếm vị trí"
+      }
+    },
+    "changelocations": {
+      "label": {
+        "translation": "Thay đổi vị trí"
+      }
+    },
+    "addLocation": {
+      "label": {
+        "translation": "Thêm vị trí"
+      }
+    },
+    "building": {
+      "label": {
+        "translation": "Xây dựng"
+      }
+    },
+    "buildingsWarning": {
+      "label": {
+        "translation": "Không có tòa nhà nào"
+      }
+    },
+    "buildings": {
+      "label": {
+        "translation": "Các tòa nhà"
+      }
+    },
+    "city": {
+      "label": {
+        "translation": "Thành phố"
+      }
+    },
+    "company": {
+      "label": {
+        "translation": "Công ty"
+      }
+    },
+    "country": {
+      "label": {
+        "translation": "Quốc gia"
+      }
+    },
+    "current": {
+      "label": {
+        "translation": "Hiện hành"
+      }
+    },
+    "designated": {
+      "label": {
+        "translation": "được chỉ định"
+      }
+    },
+    "campus": {
+      "label": {
+        "translation": "Khuôn viên đại học"
+      }
+    },
+    "ownerLocation": {
+      "label": {
+        "translation": "Vị trí chủ sở hữu"
+      }
+    },
+    "parentLocation": {
+      "label": {
+        "translation": "Vị trí phụ huynh"
+      }
+    },
+    "allZones": {
+      "label": {
+        "translation": "Tất cả các vùng"
+      }
+    },
+    "space": {
+      "label": {
+        "translation": "Khoảng cách"
+      }
+    },
+    "spaces": {
+      "label": {
+        "translation": "Các khoảng cách"
+      }
+    },
+    "latitude": {
+      "label": {
+        "translation": "Vĩ độ"
+      }
+    },
+    "locationSchema": {
+      "label": {
+        "translation": "Lược đồ vị trí"
+      }
+    },
+    "location": {
+      "label": {
+        "translation": "Vị trí"
+      }
+    },
+    "locations": {
+      "label": {
+        "translation": "Các vị trí"
+      }
+    },
+    "longitude": {
+      "label": {
+        "translation": "Kinh độ"
+      }
+    },
+    "map": {
+      "label": {
+        "translation": "Bản đồ"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Tên"
+      }
+    },
+    "formation": {
+      "label": {
+        "translation": "Cơ cấu"
+      }
+    },
+    "region": {
+      "label": {
+        "translation": "Khu vực"
+      }
+    },
+    "regions": {
+      "label": {
+        "translation": "Các khu vực"
+      }
+    },
+    "selectCampusSelectPlaceholder": {
+      "label": {
+        "translation": "Chọn trường"
+      }
+    },
+    "selectUserLocations": {
+      "label": {
+        "translation": "Chọn vị trí người dùng"
+      }
+    },
+    "selectLocationFromList": {
+      "label": {
+        "translation": "Chọn vị trí"
+      }
+    },
+    "moreLocations": {
+      "label": {
+        "translation": "Thêm vị trí"
+      }
+    },
+    "spacesWarning": {
+      "label": {
+        "translation": "Không có khoảng cách"
+      }
+    },
+    "zone": {
+      "label": {
+        "translation": "Vùng"
+      }
+    },
+    "partLocation": {
+      "label": {
+        "translation": "Vị trí một phần"
+      }
+    },
+    "street": {
+      "label": {
+        "translation": "Đường phố"
+      }
+    },
+    "timeZone": {
+      "label": {
+        "translation": "Múi giờ"
+      }
+    },
+    "type": {
+      "label": {
+        "translation": "Kiểu"
+      }
+    },
+    "unknown": {
+      "label": {
+        "translation": "không xác định"
+      }
+    },
+    "zip": {
+      "label": {
+        "translation": "Mã zip"
+      }
+    },
+    "proxyID": {
+      "label": {
+        "translation": "ID proxy"
+      }
+    },
+    "floor": {
+      "label": {
+        "translation": "Sàn nhà"
+      }
+    },
+    "productionLine": {
+      "label": {
+        "translation": "Dây chuyền sản xuất"
+      }
+    },
+    "displayedItems": {
+      "label": {
+        "translation": "Các mục được hiển thị"
+      }
+    },
+    "floors": {
+      "label": {
+        "translation": "Tầng"
+      }
+    },
+    "area": {
+      "label": {
+        "translation": "Khu vực"
+      }
+    },
+    "areas": {
+      "label": {
+        "translation": "Khu vực"
+      }
+    },
+    "formations": {
+      "label": {
+        "translation": "hình thành"
+      }
+    },
+    "zones": {
+      "label": {
+        "translation": "Khu vực"
+      }
+    },
+    "productionLines": {
+      "label": {
+        "translation": "Dây chuyền sản xuất"
+      }
+    },
+    "cameraSnapshot": {
+      "label": {
+        "translation": "Ảnh chụp nhanh của máy ảnh"
+      }
+    }
+  },
+  "login": {
+    "form": {
+      "email": {
+        "emailFormatValidation": {
+          "label": {
+            "translation": "Vui lòng nhập email hợp lệ ở định dạng example@mail.com."
+          }
+        },
+        "emailRequired": {
+          "label": {
+            "translation": "Vui lòng nhập email của bạn."
+          }
+        },
+        "defaultError": {
+          "label": {
+            "translation": "Lỗi"
+          }
+        },
+        "placeholder": {
+          "label": {
+            "translation": "Nhập email"
+          }
+        },
+        "label": {
+          "translation": "E-mail"
+        }
+      },
+      "password": {
+        "passwordRequired": {
+          "label": {
+            "translation": "Vui lòng nhập mật khẩu của bạn."
+          }
+        },
+        "passwordCharCountValidation": {
+          "label": {
+            "translation": "Mật khẩu cần dài ít nhất 8 ký tự."
+          }
+        },
+        "defaultError": {
+          "label": {
+            "translation": "Lỗi"
+          }
+        },
+        "placeholder": {
+          "label": {
+            "translation": "Nhập mật khẩu"
+          }
+        },
+        "label": {
+          "translation": "Mật khẩu"
+        }
+      },
+      "forgotPassword": {
+        "label": {
+          "translation": "Quên mật khẩu"
+        }
+      },
+      "rememberMeCheckbox": {
+        "label": {
+          "translation": "nhớ tôi"
+        }
+      }
+    },
+    "resetEmailPage": {
+      "resetEmailPageIntro": {
+        "label": {
+          "translation": "Chúng tôi đã gửi liên kết đặt lại mật khẩu tới"
+        }
+      },
+      "label": {
+        "translation": "Kiểm tra hộp thư điện tử của bạn"
+      }
+    },
+    "forgotPasswordPage": {
+      "forgotPasswordPageIntro": {
+        "label": {
+          "translation": "Đừng lo lắng, chúng tôi sẽ gửi cho bạn hướng dẫn đặt lại."
+        }
+      },
+      "backToSignIn": {
+        "label": {
+          "translation": "Quay lại Đăng nhập"
+        }
+      },
+      "label": {
+        "translation": "Quên mật khẩu"
+      }
+    },
+    "loginPageFormIntro": {
+      "label": {
+        "translation": "Nhập thông tin xác thực của bạn để truy cập vào tài khoản của bạn"
+      }
+    },
+    "loginPageFormAlert": {
+      "label": {
+        "translation": "Email hoặc mật khẩu không chính xác, vui lòng thử lại"
+      }
+    },
+    "backToSignInButton": {
+      "label": {
+        "translation": "Quay lại Đăng nhập"
+      }
+    },
+    "resendEmailButton": {
+      "label": {
+        "translation": "Gửi lại email"
+      }
+    },
+    "resetPasswordButton": {
+      "label": {
+        "translation": "Đặt lại mật khẩu"
+      }
+    },
+    "signInLoadingButton": {
+      "label": {
+        "translation": "Đang đăng nhập..."
+      }
+    },
+    "signInButton": {
+      "label": {
+        "translation": "Đăng nhập"
+      }
+    },
+    "signOutButton": {
+      "label": {
+        "translation": "Đăng xuất"
+      }
+    },
+    "loginPage": {
+      "label": {
+        "translation": "Chào mừng đến với Cerebro"
+      }
+    },
+    "yourEmailPlaceholder": {
+      "label": {
+        "translation": "email của bạn"
+      }
+    }
+  },
+  "events": {
+    "alertMessage": {
+      "label": {
+        "translation": "Tin nhắn cảnh báo"
+      }
+    },
+    "allMessages": {
+      "label": {
+        "translation": "Tất cả các tin nhắn"
+      }
+    },
+    "checkHumidDevices": {
+      "label": {
+        "translation": "Kiểm tra thiết bị ẩm"
+      }
+    },
+    "checkOverheatedDevices": {
+      "label": {
+        "translation": "Kiểm tra thiết bị quá nóng"
+      }
+    },
+    "criticalEvent": {
+      "label": {
+        "translation": "Phê bình"
+      }
+    },
+    "default": {
+      "label": {
+        "translation": "Mặc định"
+      }
+    },
+    "disconnect": {
+      "label": {
+        "translation": "Ngắt kết nối"
+      }
+    },
+    "checkDisconnectedDevices": {
+      "label": {
+        "translation": "Kiểm tra các thiết bị đã ngắt kết nối"
+      }
+    },
+    "error": {
+      "label": {
+        "translation": "Lỗi"
+      }
+    },
+    "eventInfo": {
+      "label": {
+        "translation": "Thông tin sự kiện"
+      }
+    },
+    "priority": {
+      "label": {
+        "translation": "Sự ưu tiên"
+      }
+    },
+    "eventsHistory": {
+      "label": {
+        "translation": "Lịch sử sự kiện"
+      }
+    },
+    "events": {
+      "label": {
+        "translation": "Các sự kiện"
+      }
+    },
+    "highEvent": {
+      "label": {
+        "translation": "Cao"
+      }
+    },
+    "humid": {
+      "label": {
+        "translation": "Độ ẩm"
+      }
+    },
+    "lowEvent": {
+      "label": {
+        "translation": "Thấp"
+      }
+    },
+    "mediumEvent": {
+      "label": {
+        "translation": "Trung bình"
+      }
+    },
+    "noEventsCapture": {
+      "label": {
+        "translation": "Chưa có sự kiện nào ở đây"
+      }
+    },
+    "noEvents": {
+      "label": {
+        "translation": "Không có sự kiện"
+      }
+    },
+    "normal": {
+      "label": {
+        "translation": "Bình thường"
+      }
+    },
+    "notificationDetails": {
+      "label": {
+        "translation": "Chi tiết thông báo"
+      }
+    },
+    "overheated": {
+      "label": {
+        "translation": "Quá nóng"
+      }
+    },
+    "problem": {
+      "label": {
+        "translation": "Vấn đề"
+      }
+    },
+    "recentEvents": {
+      "label": {
+        "translation": "Sự kiện gần đây"
+      }
+    },
+    "criticalEvents": {
+      "label": {
+        "translation": "Sự kiện quan trọng"
+      }
+    },
+    "stable": {
+      "label": {
+        "translation": "Ổn định"
+      }
+    },
+    "success": {
+      "label": {
+        "translation": "Thành công"
+      }
+    },
+    "totalEvents": {
+      "label": {
+        "translation": "Tổng số sự kiện"
+      }
+    },
+    "trivial": {
+      "label": {
+        "translation": "Không đáng kể"
+      }
+    },
+    "unknown": {
+      "label": {
+        "translation": "không xác định"
+      }
+    },
+    "warning": {
+      "label": {
+        "translation": "Cảnh báo"
+      }
+    },
+    "total": {
+      "label": {
+        "translation": "Tổng cộng"
+      }
+    },
+    "eventDetails": {
+      "label": {
+        "translation": "chi tiết sự kiện"
+      }
+    }
+  },
+  "company": {
+    "poweredByCompany": {
+      "label": {
+        "translation": "được cung cấp bởi Iveda"
+      }
+    },
+    "company": {
+      "label": {
+        "translation": "Công ty"
+      }
+    },
+    "copyright": {
+      "label": {
+        "translation": "Được cung cấp bởi Iveda. Bản quyền"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Giải Pháp Iveda"
+      }
+    },
+    "fromCerebroApp": {
+      "label": {
+        "translation": "từ ứng dụng Cerebro?"
+      }
+    },
+    "companyIcon": {
+      "label": {
+        "translation": "Biểu tượng công ty"
+      }
+    },
+    "companyLogo": {
+      "label": {
+        "translation": "Logo công ty"
+      }
+    }
+  },
+  "map": {
+    "editDomainMapZoom": {
+      "label": {
+        "translation": "Chỉnh sửa kích thước phóng to bản đồ miền"
+      }
+    },
+    "domainMapZoom": {
+      "label": {
+        "translation": "Phóng to kích thước bản đồ tên miền"
+      }
+    },
+    "map": {
+      "label": {
+        "translation": "Bản đồ"
+      }
+    },
+    "nodeMap": {
+      "label": {
+        "translation": "Bản đồ nút"
+      }
+    },
+    "selectSize": {
+      "label": {
+        "translation": "Chọn kích cỡ"
+      }
+    }
+  },
+  "status": {
+    "closedStatus": {
+      "label": {
+        "translation": "Đã đóng"
+      }
+    },
+    "inProgressStatus": {
+      "label": {
+        "translation": "Trong tiến trình"
+      }
+    },
+    "openStatus": {
+      "label": {
+        "translation": "Mở"
+      }
+    },
+    "resolvedStatus": {
+      "label": {
+        "translation": "Đã giải quyết"
+      }
+    }
+  },
+  "theme": {
+    "dark": {
+      "label": {
+        "translation": "Chế độ tối"
+      }
+    },
+    "light": {
+      "label": {
+        "translation": "Chế độ sáng"
+      }
+    }
+  },
+  "label": {
+    "locations": {
+      "translation": "Địa điểm"
+    },
+    "allLocations": {
+      "label": {
+        "translation": "Tất cả địa điểm"
+      }
+    },
+    "priority": {
+      "low": {
+        "translation": "Thấp"
+      },
+      "medium": {
+        "translation": "Trung bình"
+      },
+      "high": {
+        "translation": "Cao"
+      }
+    },
+    "location": {
+      "translation": "Vị trí"
+    },
+    "assetPriority": {
+      "translation": "Sự ưu tiên"
+    },
+    "timezone": {
+      "translation": "Múi giờ"
+    },
+    "language": {
+      "translation": "Ngôn ngữ"
+    }
+  },
+  "solutionsd": {
+    "environmentCaption": {
+      "label": {
+        "translation": "Khám phá ngày sinh thái"
+      }
+    }
+  },
+  "checkbox": {
+    "label": {
+      "translation": "Tin tức và cập nhật"
+    }
+  },
+  "data": {
+    "selectDate": {
+      "label": {
+        "translation": "Chọn ngày"
+      }
+    }
+  },
+  "alerts": {
+    "raised": {
+      "translation": "Báo động"
+    },
+    "resolved": {
+      "translation": "Đã giải quyết"
+    }
+  },
+  "deviceTypes": {
+    "Cameras": {
+      "translation": "Máy ảnh"
+    },
+    "cameraID": {
+      "translation": "ID máy ảnh"
+    },
+    "engineModels": {
+      "translation": "Mô hình động cơ"
+    },
+    "plugins": {
+      "translation": "bổ sung"
+    },
+    "profileName": {
+      "translation": "Tên hồ sơ"
+    },
+    "resolution": {
+      "translation": "Nghị quyết"
+    },
+    "streamUrl": {
+      "translation": "Url luồng"
+    }
+  }
 }

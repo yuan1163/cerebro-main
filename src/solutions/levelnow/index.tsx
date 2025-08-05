@@ -51,11 +51,10 @@ export const modules: Modules = [
   },
   {
     url: 'tanks',
-    title: t('solutions.tanks.label', 'Tanks', 'Tanks page title.'),
+    title: 'tanks.tanks.label',
     icon: <TankLineIcon />,
     iconSolid: <TankSolidIcon />,
     component: <Tanks />,
-    // withoutFormation: true,
   },
   //   // {
   //   //   url: 'overview',

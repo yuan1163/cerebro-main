@@ -1,3512 +1,3519 @@
 {
+  "tanks": {
+    "tanks": {
+      "label": {
+        "translation": "油桶"
+      }
+    }
+  },
+  "date": {
+    "day1": {
+      "label": {
+        "translation": "1天"
+      }
+    },
+    "12hours": {
+      "label": {
+        "translation": "12小时"
+      }
+    },
+    "6hours": {
+      "label": {
+        "translation": "6个小时"
+      }
+    },
+    "months": {
+      "aprAbbr": {
+        "label": {
+          "translation": "四月"
+        }
+      },
+      "augAbbr": {
+        "label": {
+          "translation": "八月"
+        }
+      },
+      "decAbbr": {
+        "label": {
+          "translation": "十二月"
+        }
+      },
+      "febAbbr": {
+        "label": {
+          "translation": "二月"
+        }
+      },
+      "janAbbr": {
+        "label": {
+          "translation": "一月"
+        }
+      },
+      "julAbbr": {
+        "label": {
+          "translation": "七月"
+        }
+      },
+      "junAbbr": {
+        "label": {
+          "translation": "六月"
+        }
+      },
+      "marAbbr": {
+        "label": {
+          "translation": "三月"
+        }
+      },
+      "mayAbbr": {
+        "label": {
+          "translation": "五月"
+        }
+      },
+      "novAbbr": {
+        "label": {
+          "translation": "十一月"
+        }
+      },
+      "octAbbr": {
+        "label": {
+          "translation": "十月"
+        }
+      },
+      "sepAbbr": {
+        "label": {
+          "translation": "九月"
+        }
+      },
+      "april": {
+        "label": {
+          "translation": "四月"
+        }
+      },
+      "august": {
+        "label": {
+          "translation": "八月"
+        }
+      },
+      "december": {
+        "label": {
+          "translation": "十二月"
+        }
+      },
+      "february": {
+        "label": {
+          "translation": "二月"
+        }
+      },
+      "january": {
+        "label": {
+          "translation": "一月"
+        }
+      },
+      "july": {
+        "label": {
+          "translation": "七月"
+        }
+      },
+      "june": {
+        "label": {
+          "translation": "六月"
+        }
+      },
+      "march": {
+        "label": {
+          "translation": "三月"
+        }
+      },
+      "may": {
+        "label": {
+          "translation": "五月"
+        }
+      },
+      "november": {
+        "label": {
+          "translation": "十一月"
+        }
+      },
+      "october": {
+        "label": {
+          "translation": "十月"
+        }
+      },
+      "september": {
+        "label": {
+          "translation": "九月"
+        }
+      }
+    },
+    "last12hours": {
+      "label": {
+        "translation": "过去 12 小时"
+      }
+    },
+    "last24hours": {
+      "label": {
+        "translation": "过去 24 小时"
+      }
+    },
+    "last24h": {
+      "label": {
+        "translation": "最近 24 小时"
+      }
+    },
+    "last3Days": {
+      "label": {
+        "translation": "过去 3 天"
+      }
+    },
+    "last3hours": {
+      "label": {
+        "translation": "最后 3 小时"
+      }
+    },
+    "last6hours": {
+      "label": {
+        "translation": "最后 6 小时"
+      }
+    },
+    "selectDate": {
+      "label": {
+        "translation": "选择日期"
+      }
+    },
+    "createdAt": {
+      "label": {
+        "translation": "创建于"
+      }
+    },
     "date": {
-        "day1": {
-            "label": {
-                "translation": "1天"
-            }
-        },
-        "12hours": {
-            "label": {
-                "translation": "12小时"
-            }
-        },
-        "6hours": {
-            "label": {
-                "translation": "6个小时"
-            }
-        },
-        "months": {
-            "aprAbbr": {
-                "label": {
-                    "translation": "四月"
-                }
-            },
-            "augAbbr": {
-                "label": {
-                    "translation": "八月"
-                }
-            },
-            "decAbbr": {
-                "label": {
-                    "translation": "十二月"
-                }
-            },
-            "febAbbr": {
-                "label": {
-                    "translation": "二月"
-                }
-            },
-            "janAbbr": {
-                "label": {
-                    "translation": "一月"
-                }
-            },
-            "julAbbr": {
-                "label": {
-                    "translation": "七月"
-                }
-            },
-            "junAbbr": {
-                "label": {
-                    "translation": "六月"
-                }
-            },
-            "marAbbr": {
-                "label": {
-                    "translation": "三月"
-                }
-            },
-            "mayAbbr": {
-                "label": {
-                    "translation": "五月"
-                }
-            },
-            "novAbbr": {
-                "label": {
-                    "translation": "十一月"
-                }
-            },
-            "octAbbr": {
-                "label": {
-                    "translation": "十月"
-                }
-            },
-            "sepAbbr": {
-                "label": {
-                    "translation": "九月"
-                }
-            },
-            "april": {
-                "label": {
-                    "translation": "四月"
-                }
-            },
-            "august": {
-                "label": {
-                    "translation": "八月"
-                }
-            },
-            "december": {
-                "label": {
-                    "translation": "十二月"
-                }
-            },
-            "february": {
-                "label": {
-                    "translation": "二月"
-                }
-            },
-            "january": {
-                "label": {
-                    "translation": "一月"
-                }
-            },
-            "july": {
-                "label": {
-                    "translation": "七月"
-                }
-            },
-            "june": {
-                "label": {
-                    "translation": "六月"
-                }
-            },
-            "march": {
-                "label": {
-                    "translation": "三月"
-                }
-            },
-            "may": {
-                "label": {
-                    "translation": "五月"
-                }
-            },
-            "november": {
-                "label": {
-                    "translation": "十一月"
-                }
-            },
-            "october": {
-                "label": {
-                    "translation": "十月"
-                }
-            },
-            "september": {
-                "label": {
-                    "translation": "九月"
-                }
-            }
-        },
-        "last12hours": {
-            "label": {
-                "translation": "过去 12 小时"
-            }
-        },
-        "last24hours": {
-            "label": {
-                "translation": "过去 24 小时"
-            }
-        },
-        "last24h": {
-            "label": {
-                "translation": "最近 24 小时"
-            }
-        },
-        "last3Days": {
-            "label": {
-                "translation": "过去 3 天"
-            }
-        },
-        "last3hours": {
-            "label": {
-                "translation": "最后 3 小时"
-            }
-        },
-        "last6hours": {
-            "label": {
-                "translation": "最后 6 小时"
-            }
-        },
-        "selectDate": {
-            "label": {
-                "translation": "选择日期"
-            }
-        },
-        "createdAt": {
-            "label": {
-                "translation": "创建于"
-            }
-        },
-        "date": {
-            "label": {
-                "translation": "日期"
-            }
-        },
-        "dueDateInput": {
-            "label": {
-                "translation": "到期日"
-            }
-        },
-        "dueDateInputPlaceholder": {
-            "label": {
-                "translation": "选择截止日期"
-            }
-        },
-        "month": {
-            "label": {
-                "translation": "月"
-            }
-        },
-        "now": {
-            "label": {
-                "translation": "现在"
-            }
-        },
-        "yesterday": {
-            "label": {
-                "translation": "昨天"
-            }
-        },
-        "lastMonth": {
-            "label": {
-                "translation": "上个月"
-            }
-        },
-        "lastYear": {
-            "label": {
-                "translation": "去年"
-            }
-        },
-        "lastWeek": {
-            "label": {
-                "translation": "上星期"
-            }
-        },
-        "time": {
-            "label": {
-                "translation": "时间"
-            }
-        },
-        "updatedAt": {
-            "label": {
-                "translation": "更新于"
-            }
-        },
-        "last7days": {
-            "label": {
-                "translation": "过去 7 天"
-            }
-        },
-        "thisMonth": {
-            "label": {
-                "translation": "这个月"
-            }
-        },
-        "thisYear": {
-            "label": {
-                "translation": "今年"
-            }
-        },
-        "last12Month": {
-            "label": {
-                "translation": "过去 12 个月"
-            }
-        }
+      "label": {
+        "translation": "日期"
+      }
     },
-    "general": {
-        "noNotifications": {
-            "label": {
-                "translation": "沒有通知"
-            }
-        },
-        "loadingNotifications": {
-            "label": {
-                "translation": "加载通知中..."
-            }
-        },
-        "noComment": {
-            "label": {
-                "translation": "此问题暂无评论。"
-            }
-        },
-        "expandDrawerTooltip": {
-            "label": {
-                "translation": "显示侧边栏"
-            }
-        },
-        "collapseDrawerTooltip": {
-            "label": {
-                "translation": "收合侧边栏"
-            }
-        },
-        "backButton": {
-            "label": {
-                "translation": "上一步"
-            }
-        },
-        "cancelButton": {
-            "label": {
-                "translation": "取消"
-            }
-        },
-        "changePassword": {
-            "label": {
-                "translation": "变更密码"
-            }
-        },
-        "imageFileChangeButton": {
-            "label": {
-                "translation": "变更"
-            }
-        },
-        "changeButton": {
-            "label": {
-                "translation": "变更"
-            }
-        },
-        "clearButton": {
-            "label": {
-                "translation": "清除"
-            }
-        },
-        "closeButton": {
-            "label": {
-                "translation": "关闭"
-            }
-        },
-        "confirmButton": {
-            "label": {
-                "translation": "确认"
-            }
-        },
-        "createButton": {
-            "label": {
-                "translation": "创建"
-            }
-        },
-        "goBack": {
-            "label": {
-                "translation": "回上一层"
-            }
-        },
-        "nextButton": {
-            "label": {
-                "translation": "下一个"
-            }
-        },
-        "removeButton": {
-            "label": {
-                "translation": "移除"
-            }
-        },
-        "imageFileRemoveButton": {
-            "label": {
-                "translation": "移除"
-            }
-        },
-        "saveButton": {
-            "label": {
-                "translation": "储存"
-            }
-        },
-        "submitButton": {
-            "label": {
-                "translation": "提交"
-            }
-        },
-        "takeMeHome": {
-            "label": {
-                "translation": "回到主页"
-            }
-        },
-        "collapse": {
-            "label": {
-                "translation": "隐藏"
-            }
-        },
-        "grid": {
-            "label": {
-                "translation": "网格"
-            }
-        },
-        "hybrid": {
-            "label": {
-                "translation": "混合"
-            }
-        },
-        "logo": {
-            "label": {
-                "translation": "标识"
-            }
-        },
-        "phone": {
-            "label": {
-                "translation": "电话"
-            }
-        },
-        "resetPasswordButton": {
-            "label": {
-                "translation": "重置密码"
-            }
-        },
-        "summary": {
-            "label": {
-                "translation": "概括"
-            }
-        },
-        "access": {
-            "label": {
-                "translation": "访问"
-            }
-        },
-        "copyLink": {
-            "label": {
-                "translation": "复制链接"
-            }
-        },
-        "saveAndCloseButton": {
-            "label": {
-                "translation": "保存并关闭"
-            }
-        },
-        "uploadPhoto": {
-            "label": {
-                "translation": "上传图片"
-            }
-        },
-        "updatePage": {
-            "label": {
-                "translation": "更新页面"
-            }
-        },
-        "addButton": {
-            "label": {
-                "translation": "添加"
-            }
-        },
-        "expandView": {
-            "label": {
-                "translation": "展开视图"
-            }
-        },
-        "app": {
-            "label": {
-                "translation": "应用程序"
-            }
-        },
-        "help": {
-            "label": {
-                "translation": "帮助"
-            }
-        },
-        "view": {
-            "label": {
-                "translation": "浏览"
-            }
-        },
-        "youHaveUnsavedChanges": {
-            "label": {
-                "translation": "您有未保存的更改。"
-            }
-        },
-        "accessDeniedCaption": {
-            "label": {
-                "translation": "拒绝访问"
-            }
-        },
-        "requestNewPasswordCaption": {
-            "label": {
-                "translation": "如果您不知道当前密码 – 请设置一个新的密码。注意：您将自动退出当前登陆，密码重置说明将发送至 vlee@gmail.com"
-            }
-        },
-        "changePasswordButton": {
-            "label": {
-                "translation": "更改密码"
-            }
-        },
-        "list": {
-            "label": {
-                "translation": "列表"
-            }
-        },
-        "details": {
-            "label": {
-                "translation": "细节"
-            }
-        },
-        "edit": {
-            "label": {
-                "translation": "编辑"
-            }
-        },
-        "email": {
-            "label": {
-                "translation": "电子邮件"
-            }
-        },
-        "gatewayTimeout": {
-            "label": {
-                "translation": "网关超时。"
-            }
-        },
-        "badRequest": {
-            "label": {
-                "translation": "错误的请求"
-            }
-        },
-        "search": {
-            "label": {
-                "translation": "搜索"
-            }
-        },
-        "filterByDate": {
-            "label": {
-                "translation": "按日期过滤"
-            }
-        },
-        "index": {
-            "label": {
-                "translation": "指数"
-            }
-        },
-        "uploadSuccessfully": {
-            "label": {
-                "translation": "上传成功！"
-            }
-        },
-        "oneUppercase": {
-            "label": {
-                "translation": "一个大写"
-            }
-        },
-        "unauthorized": {
-            "label": {
-                "translation": "未经授权"
-            }
-        },
-        "pageNotFound": {
-            "label": {
-                "translation": "找不到网页。"
-            }
-        },
-        "serviceUnavailable": {
-            "label": {
-                "translation": "暂停服务。"
-            }
-        },
-        "notImplemented": {
-            "label": {
-                "translation": "未实现。"
-            }
-        },
-        "setNewPassword": {
-            "label": {
-                "translation": "设置新密码"
-            }
-        },
-        "information": {
-            "label": {
-                "translation": "信息"
-            }
-        },
-        "enterNewPassword": {
-            "label": {
-                "translation": "输入新密码"
-            }
-        },
-        "sortingAZ": {
-            "label": {
-                "translation": "排序A-Z"
-            }
-        },
-        "sortingZA": {
-            "label": {
-                "translation": "排序Z-A"
-            }
-        },
-        "notAvailable": {
-            "label": {
-                "translation": "不适用"
-            }
-        },
-        "copyLinkSuccess": {
-            "label": {
-                "translation": "已复制到剪贴板！"
-            }
-        },
-        "noData": {
-            "label": {
-                "translation": "没有数据"
-            }
-        },
-        "closeWithoutSavingButton": {
-            "label": {
-                "translation": "关闭而不保存。"
-            }
-        },
-        "description": {
-            "label": {
-                "translation": "描述"
-            }
-        },
-        "screenSelection": {
-            "label": {
-                "translation": "画面选择"
-            }
-        },
-        "readme":{
-            "label": {
-              "translation": "注意事项"
-            }
+    "dueDateInput": {
+      "label": {
+        "translation": "到期日"
+      }
+    },
+    "dueDateInputPlaceholder": {
+      "label": {
+        "translation": "选择截止日期"
+      }
+    },
+    "month": {
+      "label": {
+        "translation": "月"
+      }
+    },
+    "now": {
+      "label": {
+        "translation": "现在"
+      }
+    },
+    "yesterday": {
+      "label": {
+        "translation": "昨天"
+      }
+    },
+    "lastMonth": {
+      "label": {
+        "translation": "上个月"
+      }
+    },
+    "lastYear": {
+      "label": {
+        "translation": "去年"
+      }
+    },
+    "lastWeek": {
+      "label": {
+        "translation": "上星期"
+      }
+    },
+    "time": {
+      "label": {
+        "translation": "时间"
+      }
+    },
+    "updatedAt": {
+      "label": {
+        "translation": "更新于"
+      }
+    },
+    "last7days": {
+      "label": {
+        "translation": "过去 7 天"
+      }
+    },
+    "thisMonth": {
+      "label": {
+        "translation": "这个月"
+      }
+    },
+    "thisYear": {
+      "label": {
+        "translation": "今年"
+      }
+    },
+    "last12Month": {
+      "label": {
+        "translation": "过去 12 个月"
+      }
+    }
+  },
+  "general": {
+    "noNotifications": {
+      "label": {
+        "translation": "沒有通知"
+      }
+    },
+    "loadingNotifications": {
+      "label": {
+        "translation": "加载通知中..."
+      }
+    },
+    "noComment": {
+      "label": {
+        "translation": "此问题暂无评论。"
+      }
+    },
+    "expandDrawerTooltip": {
+      "label": {
+        "translation": "显示侧边栏"
+      }
+    },
+    "collapseDrawerTooltip": {
+      "label": {
+        "translation": "收合侧边栏"
+      }
+    },
+    "backButton": {
+      "label": {
+        "translation": "上一步"
+      }
+    },
+    "cancelButton": {
+      "label": {
+        "translation": "取消"
+      }
+    },
+    "changePassword": {
+      "label": {
+        "translation": "变更密码"
+      }
+    },
+    "imageFileChangeButton": {
+      "label": {
+        "translation": "变更"
+      }
+    },
+    "changeButton": {
+      "label": {
+        "translation": "变更"
+      }
+    },
+    "clearButton": {
+      "label": {
+        "translation": "清除"
+      }
+    },
+    "closeButton": {
+      "label": {
+        "translation": "关闭"
+      }
+    },
+    "confirmButton": {
+      "label": {
+        "translation": "确认"
+      }
+    },
+    "createButton": {
+      "label": {
+        "translation": "创建"
+      }
+    },
+    "goBack": {
+      "label": {
+        "translation": "回上一层"
+      }
+    },
+    "nextButton": {
+      "label": {
+        "translation": "下一个"
+      }
+    },
+    "removeButton": {
+      "label": {
+        "translation": "移除"
+      }
+    },
+    "imageFileRemoveButton": {
+      "label": {
+        "translation": "移除"
+      }
+    },
+    "saveButton": {
+      "label": {
+        "translation": "储存"
+      }
+    },
+    "submitButton": {
+      "label": {
+        "translation": "提交"
+      }
+    },
+    "takeMeHome": {
+      "label": {
+        "translation": "回到主页"
+      }
+    },
+    "collapse": {
+      "label": {
+        "translation": "隐藏"
+      }
+    },
+    "grid": {
+      "label": {
+        "translation": "网格"
+      }
+    },
+    "hybrid": {
+      "label": {
+        "translation": "混合"
+      }
+    },
+    "logo": {
+      "label": {
+        "translation": "标识"
+      }
+    },
+    "phone": {
+      "label": {
+        "translation": "电话"
+      }
+    },
+    "resetPasswordButton": {
+      "label": {
+        "translation": "重置密码"
+      }
+    },
+    "summary": {
+      "label": {
+        "translation": "概括"
+      }
+    },
+    "access": {
+      "label": {
+        "translation": "访问"
+      }
+    },
+    "copyLink": {
+      "label": {
+        "translation": "复制链接"
+      }
+    },
+    "saveAndCloseButton": {
+      "label": {
+        "translation": "保存并关闭"
+      }
+    },
+    "uploadPhoto": {
+      "label": {
+        "translation": "上传图片"
+      }
+    },
+    "updatePage": {
+      "label": {
+        "translation": "更新页面"
+      }
+    },
+    "addButton": {
+      "label": {
+        "translation": "添加"
+      }
+    },
+    "expandView": {
+      "label": {
+        "translation": "展开视图"
+      }
+    },
+    "app": {
+      "label": {
+        "translation": "应用程序"
+      }
+    },
+    "help": {
+      "label": {
+        "translation": "帮助"
+      }
+    },
+    "view": {
+      "label": {
+        "translation": "浏览"
+      }
+    },
+    "youHaveUnsavedChanges": {
+      "label": {
+        "translation": "您有未保存的更改。"
+      }
+    },
+    "accessDeniedCaption": {
+      "label": {
+        "translation": "拒绝访问"
+      }
+    },
+    "requestNewPasswordCaption": {
+      "label": {
+        "translation": "如果您不知道当前密码 – 请设置一个新的密码。注意：您将自动退出当前登陆，密码重置说明将发送至 vlee@gmail.com"
+      }
+    },
+    "changePasswordButton": {
+      "label": {
+        "translation": "更改密码"
+      }
+    },
+    "list": {
+      "label": {
+        "translation": "列表"
+      }
+    },
+    "details": {
+      "label": {
+        "translation": "细节"
+      }
+    },
+    "edit": {
+      "label": {
+        "translation": "编辑"
+      }
+    },
+    "email": {
+      "label": {
+        "translation": "电子邮件"
+      }
+    },
+    "gatewayTimeout": {
+      "label": {
+        "translation": "网关超时。"
+      }
+    },
+    "badRequest": {
+      "label": {
+        "translation": "错误的请求"
+      }
+    },
+    "search": {
+      "label": {
+        "translation": "搜索"
+      }
+    },
+    "filterByDate": {
+      "label": {
+        "translation": "按日期过滤"
+      }
+    },
+    "index": {
+      "label": {
+        "translation": "指数"
+      }
+    },
+    "uploadSuccessfully": {
+      "label": {
+        "translation": "上传成功！"
+      }
+    },
+    "oneUppercase": {
+      "label": {
+        "translation": "一个大写"
+      }
+    },
+    "unauthorized": {
+      "label": {
+        "translation": "未经授权"
+      }
+    },
+    "pageNotFound": {
+      "label": {
+        "translation": "找不到网页。"
+      }
+    },
+    "serviceUnavailable": {
+      "label": {
+        "translation": "暂停服务。"
+      }
+    },
+    "notImplemented": {
+      "label": {
+        "translation": "未实现。"
+      }
+    },
+    "setNewPassword": {
+      "label": {
+        "translation": "设置新密码"
+      }
+    },
+    "information": {
+      "label": {
+        "translation": "信息"
+      }
+    },
+    "enterNewPassword": {
+      "label": {
+        "translation": "输入新密码"
+      }
+    },
+    "sortingAZ": {
+      "label": {
+        "translation": "排序A-Z"
+      }
+    },
+    "sortingZA": {
+      "label": {
+        "translation": "排序Z-A"
+      }
+    },
+    "notAvailable": {
+      "label": {
+        "translation": "不适用"
+      }
+    },
+    "copyLinkSuccess": {
+      "label": {
+        "translation": "已复制到剪贴板！"
+      }
+    },
+    "noData": {
+      "label": {
+        "translation": "没有数据"
+      }
+    },
+    "closeWithoutSavingButton": {
+      "label": {
+        "translation": "关闭而不保存。"
+      }
+    },
+    "description": {
+      "label": {
+        "translation": "描述"
+      }
+    },
+    "screenSelection": {
+      "label": {
+        "translation": "画面选择"
+      }
+    },
+    "readme": {
+      "label": {
+        "translation": "注意事项"
+      }
+    },
+    "upload": {
+      "label": {
+        "translation": "上传"
+      }
+    },
+    "download": {
+      "label": {
+        "translation": "下载"
+      }
+    },
+    "selectCategory": {
+      "label": {
+        "translation": "选择类别"
+      }
+    },
+    "selectGroupFromList": {
+      "label": {
+        "translation": "选择组"
+      }
+    },
+    "settings": {
+      "label": {
+        "translation": "设置"
+      }
+    },
+    "localServerID": {
+      "label": {
+        "translation": "本地服务器ID"
+      }
+    },
+    "selectInterval": {
+      "label": {
+        "translation": "选择间隔"
+      }
+    },
+    "unsavedChanges": {
+      "label": {
+        "translation": "未保存的变更"
+      }
+    },
+    "filterAlerts": {
+      "label": {
+        "translation": "过滤警报"
+      }
+    },
+    "createPassword": {
+      "label": {
+        "translation": "创建密码"
+      }
+    },
+    "to": {
+      "label": {
+        "translation": "到"
+      }
+    },
+    "all": {
+      "label": {
+        "translation": "全部"
+      }
+    },
+    "color": {
+      "label": {
+        "translation": "颜色"
+      }
+    },
+    "from": {
+      "label": {
+        "translation": "从"
+      }
+    },
+    "requestNewPasswordButton": {
+      "label": {
+        "translation": "新增"
+      }
+    },
+    "saveChanges": {
+      "label": {
+        "translation": "保存更改"
+      }
+    },
+    "scheme": {
+      "label": {
+        "translation": "方案"
+      }
+    },
+    "searchByName": {
+      "label": {
+        "translation": "按名称搜索"
+      }
+    },
+    "internalServerError": {
+      "label": {
+        "translation": "内部服务器错误。"
+      }
+    },
+    "oneSpecialCharacter": {
+      "label": {
+        "translation": "一个特殊字符"
+      }
+    },
+    "language": {
+      "label": {
+        "translation": "语言"
+      }
+    },
+    "min8character": {
+      "label": {
+        "translation": "最少 8 个字符"
+      }
+    },
+    "oneNumberCharacter": {
+      "label": {
+        "translation": "一个数字字符"
+      }
+    },
+    "seeMore": {
+      "label": {
+        "translation": "查看更多"
+      }
+    },
+    "imageRecommendedSize": {
+      "label": {
+        "translation": "建议 500x500 像素"
+      }
+    },
+    "internalServerErrorCaption": {
+      "label": {
+        "translation": "抱歉，出了一些问题。"
+      }
+    },
+    "badRequestCaption": {
+      "label": {
+        "translation": "抱歉，您的浏览器发送了该服务器无法理解的请求。"
+      }
+    },
+    "accessDenied": {
+      "label": {
+        "translation": "拒绝访问"
+      }
+    },
+    "matchPassword": {
+      "label": {
+        "translation": "密码不匹配。"
+      }
+    },
+    "setNewPasswordCaption": {
+      "label": {
+        "translation": "您的新密码必须足够强大并且与之前使用的密码不同"
+      }
+    },
+    "pageNotFoundCaption": {
+      "label": {
+        "translation": "抱歉，您要查找的页面已不存在或已被移动或存档。"
+      }
+    },
+    "serviceUnavailableCaption": {
+      "label": {
+        "translation": "抱歉，服务器暂时繁忙，请稍后重试。"
+      }
+    },
+    "notImplementedCaption": {
+      "label": {
+        "translation": "抱歉，服务器无法识别请求方法，或者缺乏完成请求的能力"
+      }
+    },
+    "unauthorizedCaption": {
+      "label": {
+        "translation": "抱歉，我们无法验证您的凭证，您需要获得授权才能访问此页面。"
+      }
+    },
+    "gatewayTimeoutCaption": {
+      "label": {
+        "translation": "抱歉，此页面加载时间过长。"
+      }
+    },
+    "confirmPasswordInput": {
+      "label": {
+        "translation": "请输入您的确认密码"
+      }
+    },
+    "unsavedChangesCaption": {
+      "label": {
+        "translation": "您确定要关闭而不保存吗？任何未保存的更改都将丢失。"
+      }
+    },
+    "title": {
+      "label": {
+        "translation": "标题"
+      }
+    },
+    "confirmPassword": {
+      "label": {
+        "translation": "要设置新密码，请确认您当前的密码。"
+      }
+    },
+    "menu": {
+      "label": {
+        "translation": "菜单"
+      }
+    },
+    "toggleButton": {
+      "label": {
+        "translation": "切换可见性"
+      }
+    },
+    "filters": {
+      "label": {
+        "translation": "过滤器"
+      }
+    },
+    "markAllIsRead": {
+      "label": {
+        "translation": "标记全部已读"
+      }
+    },
+    "errorVerification": {
+      "label": {
+        "translation": "错误"
+      }
+    },
+    "applyButton": {
+      "label": {
+        "translation": "申请"
+      }
+    },
+    "assetsTitle": {
+      "label": {
+        "translation": "资产"
+      }
+    },
+    "selectDate": {
+      "label": {
+        "translation": "选择日期"
+      }
+    },
+    "selectLanguage": {
+      "label": {
+        "translation": "选择语言"
+      }
+    },
+    "vietnameseLanguage": {
+      "label": {
+        "translation": "越南语"
+      }
+    },
+    "selectLocationFromList": {
+      "label": {
+        "translation": "选择地点"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "姓名"
+      }
+    },
+    "amount": {
+      "label": {
+        "translation": "数量"
+      }
+    },
+    "enterStartDate": {
+      "label": {
+        "translation": "您必须输入开始日期"
+      }
+    },
+    "enterAmount": {
+      "label": {
+        "translation": "输入金额"
+      }
+    },
+    "startDate": {
+      "label": {
+        "translation": "开始日期"
+      }
+    },
+    "endDate": {
+      "label": {
+        "translation": "结束日期"
+      }
+    },
+    "imageFileUploadButton": {
+      "label": {
+        "translation": "上传"
+      }
+    },
+    "updateSuccessfully": {
+      "label": {
+        "translation": "更新成功"
+      }
+    },
+    "isLoading": {
+      "label": {
+        "translation": "加载中..."
+      }
+    },
+    "goToPreviousPageButton": {
+      "label": {
+        "translation": "转到上一页"
+      }
+    },
+    "goToNextPageButton": {
+      "label": {
+        "translation": "转到下一页"
+      }
+    },
+    "viewAll": {
+      "label": {
+        "translation": "查看全部"
+      }
+    }
+  },
+  "user": {
+    "reinviteUser": {
+      "label": {
+        "translation": "重新邀请用户"
+      }
+    },
+    "addGroupButton": {
+      "label": {
+        "translation": "添加群组"
+      }
+    },
+    "addUser": {
+      "label": {
+        "translation": "添加用户"
+      }
+    },
+    "allGroups": {
+      "label": {
+        "translation": "所有群组"
+      }
+    },
+    "methodOfContactCall": {
+      "label": {
+        "translation": "联络"
+      }
+    },
+    "confirmPasswordInput": {
+      "label": {
+        "translation": "确认密码"
+      }
+    },
+    "deleteGroupQuestion": {
+      "label": {
+        "translation": "您确定要删除群组吗？"
+      }
+    },
+    "deleteAccountQuestion": {
+      "label": {
+        "translation": "您确定要删除用户吗？"
+      }
+    },
+    "currentPasswordInputPlaceholder": {
+      "label": {
+        "translation": "输入您当前的密码"
+      }
+    },
+    "deleteUserCaption": {
+      "label": {
+        "translation": "注意！这将永久删除用户及其所有信息。此后，用户将无法再访问系统。"
+      }
+    },
+    "deleteAccount": {
+      "label": {
+        "translation": "删除帐户"
+      }
+    },
+    "deleteGroup": {
+      "label": {
+        "translation": "删除群组"
+      }
+    },
+    "editGroup": {
+      "label": {
+        "translation": "编辑群组"
+      }
+    },
+    "methodOfContactEmail": {
+      "label": {
+        "translation": "发送邮件"
+      }
+    },
+    "feedbackDispatchCriteria": {
+      "label": {
+        "translation": "发送通知，当..."
+      }
+    },
+    "feedbackDispatchCriteriaTickets": {
+      "label": {
+        "translation": "工单创建、评论、解决"
+      }
+    },
+    "groupNameInputPlaceholder": {
+      "label": {
+        "translation": "输入群组名称"
+      }
+    },
+    "descriptionInputPlaceholder": {
+      "label": {
+        "translation": "输入群组描述"
+      }
+    },
+    "member": {
+      "label": {
+        "translation": "成员"
+      }
+    },
+    "members": {
+      "label": {
+        "translation": "成员"
+      }
+    },
+    "editUser": {
+      "label": {
+        "translation": "编辑用户"
+      }
+    },
+    "emailFormatValidation": {
+      "label": {
+        "translation": "请以 example@mail.com 格式输入有效的电子邮件。"
+      }
+    },
+    "groupDescriptionInputVerification": {
+      "label": {
+        "translation": "您必须输入群组描述。"
+      }
+    },
+    "emailValidation": {
+      "label": {
+        "translation": "您必须输入电子邮件。"
+      }
+    },
+    "firstNameValidation": {
+      "label": {
+        "translation": "您必须输入名字。"
+      }
+    },
+    "groupNameInputVerification": {
+      "label": {
+        "translation": "您必须输入您的群组名称。"
+      }
+    },
+    "lastNameValidation": {
+      "label": {
+        "translation": "您必须输入姓氏。"
+      }
+    },
+    "phoneValidation": {
+      "label": {
+        "translation": "您必须按照以下格式输入电话"
+      }
+    },
+    "memberSince": {
+      "label": {
+        "translation": "会员自"
+      }
+    },
+    "admins": {
+      "label": {
+        "translation": "管理员"
+      }
+    },
+    "groupsNotFoundCaption": {
+      "label": {
+        "translation": "糟糕，没有找到该群组，请尝试释放过滤器或使用其他词搜索"
+      }
+    },
+    "usersNotFoundCaption": {
+      "label": {
+        "translation": "糟糕，没有找到该用户，请尝试释放过滤器或使用其他词搜索"
+      }
+    },
+    "newPasswordInputPlaceholder": {
+      "label": {
+        "translation": "新密码"
+      }
+    },
+    "newPasswordInput": {
+      "label": {
+        "translation": "新密码"
+      }
+    },
+    "groupsNotFound": {
+      "label": {
+        "translation": "找不到群组"
+      }
+    },
+    "usersNotFound": {
+      "label": {
+        "translation": "找不到用户"
+      }
+    },
+    "notifications": {
+      "label": {
+        "translation": "通知"
+      }
+    },
+    "permissions": {
+      "label": {
+        "translation": "权限"
+      }
+    },
+    "jobTitleSelectPlaceholder": {
+      "label": {
+        "translation": "选择职位名称"
+      }
+    },
+    "methodOfContact": {
+      "label": {
+        "translation": "首选联系方式"
+      }
+    },
+    "confirmPasswordInputPlaceholder": {
+      "label": {
+        "translation": "重新输入密码"
+      }
+    },
+    "removeFromGroup": {
+      "label": {
+        "translation": "从群组中删除"
+      }
+    },
+    "feedbackDispatchCriteriaNews": {
+      "label": {
+        "translation": "新闻和更新"
+      }
+    },
+    "methodOfContactText": {
+      "label": {
+        "translation": "文本"
+      }
+    },
+    "passwordMismatchError": {
+      "label": {
+        "translation": "新密碼與確認密碼不匹配，請確保兩者相同。"
+      }
+    },
+    "groupNameInput": {
+      "label": {
+        "translation": "群组名字"
+      }
+    },
+    "admin": {
+      "label": {
+        "translation": "管理员"
+      }
+    },
+    "groups": {
+      "label": {
+        "translation": "群组"
+      }
+    },
+    "profileImage": {
+      "label": {
+        "translation": "用户信息"
+      }
+    },
+    "avatar": {
+      "label": {
+        "translation": "用户头像"
+      }
+    },
+    "categoryInputPlaceholder": {
+      "label": {
+        "translation": "选择类别"
+      }
+    },
+    "categoryInput": {
+      "label": {
+        "translation": "类别"
+      }
+    },
+    "contact": {
+      "label": {
+        "translation": "联系"
+      }
+    },
+    "contacts": {
+      "label": {
+        "translation": "联系方式"
+      }
+    },
+    "userDetails": {
+      "label": {
+        "translation": "用户详细信息"
+      }
+    },
+    "emailInput": {
+      "label": {
+        "translation": "电子邮件"
+      }
+    },
+    "emailInputPlaceholder": {
+      "label": {
+        "translation": "输入电子邮件"
+      }
+    },
+    "firstNameInput": {
+      "label": {
+        "translation": "名字"
+      }
+    },
+    "firstNameInputPlaceholder": {
+      "label": {
+        "translation": "输入名字"
+      }
+    },
+    "fullNameInput": {
+      "label": {
+        "translation": "全名"
+      }
+    },
+    "descriptionInput": {
+      "label": {
+        "translation": "群组描述字段"
+      }
+    },
+    "groupDetails": {
+      "label": {
+        "translation": "群组详情"
+      }
+    },
+    "groupName": {
+      "label": {
+        "translation": "组名"
+      }
+    },
+    "group": {
+      "label": {
+        "translation": "群组"
+      }
+    },
+    "viewProfile": {
+      "label": {
+        "translation": "用户职称"
+      }
+    },
+    "jobTitleInputPlaceholder": {
+      "label": {
+        "translation": "输入用户职称"
+      }
+    },
+    "lastNameInput": {
+      "label": {
+        "translation": "姓"
+      }
+    },
+    "lastNameInputPlaceholder": {
+      "label": {
+        "translation": "输入姓氏"
+      }
+    },
+    "phoneInput": {
+      "label": {
+        "translation": "电话"
+      }
+    },
+    "phoneInputPlaceholder": {
+      "label": {
+        "translation": "输入电话号码"
+      }
+    },
+    "roleInput": {
+      "label": {
+        "translation": "角色"
+      }
+    },
+    "roleInputPlaceholder": {
+      "label": {
+        "translation": "输入角色"
+      }
+    },
+    "roleSelect": {
+      "label": {
+        "translation": "选择角色"
+      }
+    },
+    "roles": {
+      "label": {
+        "translation": "角色"
+      },
+      "viewer": {
+        "translation": "观众"
+      }
+    },
+    "timezoneInput": {
+      "label": {
+        "translation": "时区"
+      }
+    },
+    "timezoneInputPlaceholder": {
+      "label": {
+        "translation": "添加时区"
+      }
+    },
+    "jobTitleInput": {
+      "label": {
+        "translation": "添加时区"
+      }
+    },
+    "userTitle": {
+      "label": {
+        "translation": "用户"
+      }
+    },
+    "currentPassword": {
+      "label": {
+        "translation": "当前密码"
+      }
+    },
+    "usernameInput": {
+      "label": {
+        "translation": "用户名"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "姓名"
+      }
+    },
+    "usersTitle": {
+      "label": {
+        "translation": "用户"
+      }
+    },
+    "allUsers": {
+      "label": {
+        "translation": "全部用户"
+      }
+    }
+  },
+  "asset": {
+    "circuit": {
+      "label": {
+        "translation": "电路"
+      }
+    },
+    "trackerLowBattery": {
+      "label": {
+        "translation": "追踪器电池电量低"
+      }
+    },
+    "unassignedAsset": {
+      "label": {
+        "translation": "资产未分配"
+      }
+    },
+    "deviceCircuit": {
+      "label": {
+        "translation": "设备电路"
+      }
+    },
+    "addAssetButton": {
+      "label": {
+        "translation": "添加资产"
+      }
+    },
+    "addAssetTitle": {
+      "label": {
+        "translation": "添加资产"
+      }
+    },
+    "addClassButton": {
+      "label": {
+        "translation": "添加类别"
+      }
+    },
+    "addDeviceButton": {
+      "label": {
+        "translation": "添加设备"
+      }
+    },
+    "addGroupButton": {
+      "label": {
+        "translation": "添加群组"
+      }
+    },
+    "editAsset": {
+      "label": {
+        "translation": "编辑资产"
+      }
+    },
+    "editClass": {
+      "label": {
+        "translation": "编辑类别"
+      }
+    },
+    "allCategories": {
+      "label": {
+        "translation": "所有类别"
+      }
+    },
+    "trackablePerson": {
+      "label": {
+        "translation": "可追踪的人"
+      }
+    },
+    "assetDetails": {
+      "label": {
+        "translation": "资产详情"
+      }
+    },
+    "assetImage": {
+      "label": {
+        "translation": "资产图像"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "资产名称"
+      }
+    },
+    "assetClass": {
+      "label": {
+        "translation": "资产类别"
+      }
+    },
+    "cameras": {
+      "label": {
+        "translation": "相机"
+      }
+    },
+    "classes": {
+      "label": {
+        "translation": "课程"
+      }
+    },
+    "class": {
+      "label": {
+        "translation": "资产类别"
+      }
+    },
+    "station": {
+      "label": {
+        "translation": "基站"
+      }
+    },
+    "stations": {
+      "label": {
+        "translation": "基站"
+      }
+    },
+    "classDetails": {
+      "label": {
+        "translation": "类别详情"
+      }
+    },
+    "classNameInputPlaceholder": {
+      "label": {
+        "translation": "输入类别名称"
+      }
+    },
+    "classNameInput": {
+      "label": {
+        "translation": "类别名称"
+      }
+    },
+    "assetTitle": {
+      "label": {
+        "translation": "资产"
+      }
+    },
+    "assetsTitle": {
+      "label": {
+        "translation": "资产"
+      }
+    },
+    "costRange": {
+      "label": {
+        "translation": "设备成本范围"
+      }
+    },
+    "deleteAssetCaption": {
+      "label": {
+        "translation": "注意！这将永久删除资源和所有收集的数据。此后，配对的设备将自动取消配对。"
+      }
+    },
+    "deleteAsset": {
+      "label": {
+        "translation": "删除资产"
+      }
+    },
+    "deleteClass": {
+      "label": {
+        "translation": "删除类别"
+      }
+    },
+    "removeAssetProcess": {
+      "label": {
+        "translation": "您确定要删除资产吗"
+      }
+    },
+    "removeClassProcess": {
+      "label": {
+        "translation": "您确定要删除类别吗"
+      }
+    },
+    "circuitInformation": {
+      "label": {
+        "translation": "电路信息"
+      }
+    },
+    "deviceCTRatio": {
+      "label": {
+        "translation": "CT 比"
+      }
+    },
+    "deviceID": {
+      "label": {
+        "translation": "设备ID"
+      }
+    },
+    "deviceList": {
+      "label": {
+        "translation": "设备列表"
+      }
+    },
+    "deviceNFB": {
+      "label": {
+        "translation": "NFB"
+      }
+    },
+    "deviceName": {
+      "label": {
+        "translation": "姓名"
+      }
+    },
+    "devicePTRatio": {
+      "label": {
+        "translation": "PT 比率"
+      }
+    },
+    "devicePhase": {
+      "label": {
+        "translation": "阶段"
+      }
+    },
+    "deviceType": {
+      "label": {
+        "translation": "设备类型"
+      }
+    },
+    "deviceIsOffline": {
+      "label": {
+        "translation": "设备离线"
+      }
+    },
+    "isOffline": {
+      "label": {
+        "translation": "离线"
+      }
+    },
+    "deviceIsOnline": {
+      "label": {
+        "translation": "设备在线"
+      }
+    },
+    "isOnline": {
+      "label": {
+        "translation": "在线"
+      }
+    },
+    "manufacturer": {
+      "label": {
+        "translation": "制造商"
+      }
+    },
+    "history": {
+      "label": {
+        "translation": "历史"
+      }
+    },
+    "device": {
+      "label": {
+        "translation": "设备"
+      }
+    },
+    "devices": {
+      "label": {
+        "translation": "设备"
+      }
+    },
+    "electronics": {
+      "label": {
+        "translation": "电子产品"
+      }
+    },
+    "assetNameInputPlaceholder": {
+      "label": {
+        "translation": "输入资产名称"
+      }
+    },
+    "leavingDesignatedZone": {
+      "label": {
+        "translation": "离开指定区域"
+      }
+    },
+    "assetDescriptionInput": {
+      "label": {
+        "translation": "描述"
+      }
+    },
+    "classDescriptionInput": {
+      "label": {
+        "translation": "描述"
+      }
+    },
+    "gatewayIP": {
+      "label": {
+        "translation": "网关IP"
+      }
+    },
+    "gateways": {
+      "label": {
+        "translation": "网关"
+      }
+    },
+    "groupName": {
+      "label": {
+        "translation": "姓名"
+      }
+    },
+    "group": {
+      "label": {
+        "translation": "群组"
+      }
+    },
+    "groups": {
+      "label": {
+        "translation": "群组"
+      }
+    },
+    "handheld": {
+      "label": {
+        "translation": "手持式"
+      }
+    },
+    "groupDescriptionInputVerification": {
+      "label": {
+        "translation": "您必须输入群组的描述。"
+      }
+    },
+    "groupNameInputVerification": {
+      "label": {
+        "translation": "您必须输入您的群组名称。"
+      }
+    },
+    "LEDLights": {
+      "label": {
+        "translation": "LED灯"
+      }
+    },
+    "sensors": {
+      "label": {
+        "translation": "传感器"
+      }
+    },
+    "searchDeviceID": {
+      "label": {
+        "translation": "搜索设备ID"
+      }
+    },
+    "mobile": {
+      "label": {
+        "translation": "移动设备"
+      }
+    },
+    "viewAsset": {
+      "label": {
+        "translation": "查看资产"
+      }
+    },
+    "assetsNotFound": {
+      "label": {
+        "translation": "未找到资产"
+      }
+    },
+    "classesNotFound": {
+      "label": {
+        "translation": "未找到类别"
+      }
+    },
+    "noDevicePartMappingCaption": {
+      "label": {
+        "translation": "这里还没有设备部件映射。首先通过上传批量配置文件将设备部件映射添加到该园区。"
+      }
+    },
+    "noDevicePartMapping": {
+      "label": {
+        "translation": "无设备部件映射"
+      }
+    },
+    "noDevices": {
+      "label": {
+        "translation": "没有设备"
+      }
+    },
+    "noSPBCaption": {
+      "label": {
+        "translation": "这里还没有 SPB。首先通过上传批量配置文件将 SPB 添加到该园区。"
+      }
+    },
+    "noSPB": {
+      "label": {
+        "translation": "无SPB"
+      }
+    },
+    "noAssigneeCaption": {
+      "label": {
+        "translation": "没有指定人。当您将跟踪器连接到该资产时，它会自动分配负责该资产的用户组。"
+      }
+    },
+    "assetDescriptionInputPlaceholder": {
+      "label": {
+        "translation": "输入资产描述"
+      }
+    },
+    "costRangeInputPlaceholder": {
+      "label": {
+        "translation": "输入大概范围"
+      }
+    },
+    "manufacturerInputPlaceholder": {
+      "label": {
+        "translation": "输入制造商"
+      }
+    },
+    "classDescriptionInputPlaceholder": {
+      "label": {
+        "translation": "输入类别描述"
+      }
+    },
+    "serialNumberInputPlaceholder": {
+      "label": {
+        "translation": "输入序列号"
+      }
+    },
+    "removeDeviceButton": {
+      "label": {
+        "translation": "删除设备"
+      }
+    },
+    "removeGroupButton": {
+      "label": {
+        "translation": "删除群组"
+      }
+    },
+    "removeFromClass": {
+      "label": {
+        "translation": "从类别中删除"
+      }
+    },
+    "SPBType": {
+      "label": {
+        "translation": "SPB型"
+      }
+    },
+    "SPS": {
+      "label": {
+        "translation": "SPS"
+      }
+    },
+    "searchName": {
+      "label": {
+        "translation": "搜索名称"
+      }
+    },
+    "searchDevice": {
+      "label": {
+        "translation": "搜索设备"
+      }
+    },
+    "selectDevice": {
+      "label": {
+        "translation": "选择设备"
+      }
+    },
+    "serialNumber": {
+      "label": {
+        "translation": "序列号"
+      }
+    },
+    "stationary": {
+      "label": {
+        "translation": "固定式"
+      }
+    },
+    "circuitName": {
+      "label": {
+        "translation": "电路名称"
+      }
+    },
+    "returnedToDesignatedZone": {
+      "label": {
+        "translation": "返回指定区域"
+      }
+    },
+    "assignee": {
+      "label": {
+        "translation": "指定人"
+      }
+    },
+    "assetsNotFoundCaption": {
+      "label": {
+        "translation": "糟糕，没有资产，请尝试释放过滤器或使用其他词搜索"
+      }
+    },
+    "classesNotFoundCaption": {
+      "label": {
+        "translation": "糟糕，没有类别，请尝试释放过滤器或使用其他词搜索"
+      }
+    },
+    "tracker": {
+      "label": {
+        "translation": "追踪器"
+      }
+    },
+    "trackers": {
+      "label": {
+        "translation": "追踪器"
+      }
+    },
+    "trackerID": {
+      "label": {
+        "translation": "追踪器ID"
+      }
+    },
+    "unassignedDevice": {
+      "label": {
+        "translation": "未分配的设备"
+      }
+    },
+    "assetUIDInputPlaceholder": {
+      "label": {
+        "translation": "输入资产 UID"
+      }
+    },
+    "assetUIDInput": {
+      "label": {
+        "translation": "资产UID"
+      }
+    },
+    "uid": {
+      "label": {
+        "translation": "用户识别码"
+      }
+    },
+    "unknownDevice": {
+      "label": {
+        "translation": "未知设备"
+      }
+    },
+    "descriptionInputValidation": {
+      "label": {
+        "translation": "您必须输入描述。"
+      }
+    },
+    "nameInputValidation": {
+      "label": {
+        "translation": "您必须输入名称。"
+      }
+    },
+    "andDeviceIsOffline": {
+      "label": {
+        "translation": "并且设备离线"
+      }
+    },
+    "partIndex": {
+      "label": {
+        "translation": "零件索引"
+      }
+    }
+  },
+  "solutions": {
+    "commandCenter": {
+      "label": {
+        "translation": "指挥中心"
+      }
+    },
+    "domainOverview": {
+      "label": {
+        "translation": "域概述"
+      }
+    },
+    "solutionsPage": {
+      "pinPoint": {
+        "options": {
+          "01": {
+            "translation": "资产"
           },
-        "upload": {
-            "label": {
-                "translation": "上传"
-            }
-        },
-        "download": {
-            "label": {
-                "translation": "下载"
-            }
-        },
-        "selectCategory": {
-            "label": {
-                "translation": "选择类别"
-            }
-        },
-        "selectGroupFromList": {
-            "label": {
-                "translation": "选择组"
-            }
-        },
-        "settings": {
-            "label": {
-                "translation": "设置"
-            }
-        },
-        "localServerID": {
-            "label": {
-                "translation": "本地服务器ID"
-            }
-        },
-        "selectInterval": {
-            "label": {
-                "translation": "选择间隔"
-            }
-        },
-        "unsavedChanges": {
-            "label": {
-                "translation": "未保存的变更"
-            }
-        },
-        "filterAlerts": {
-            "label": {
-                "translation": "过滤警报"
-            }
-        },
-        "createPassword": {
-            "label": {
-                "translation": "创建密码"
-            }
-        },
-        "to": {
-            "label": {
-                "translation": "到"
-            }
-        },
-        "all": {
-            "label": {
-                "translation": "全部"
-            }
-        },
-        "color": {
-            "label": {
-                "translation": "颜色"
-            }
-        },
-        "from": {
-            "label": {
-                "translation": "从"
-            }
-        },
-        "requestNewPasswordButton": {
-            "label": {
-                "translation": "新增"
-            }
-        },
-        "saveChanges": {
-            "label": {
-                "translation": "保存更改"
-            }
-        },
-        "scheme": {
-            "label": {
-                "translation": "方案"
-            }
-        },
-        "searchByName": {
-            "label": {
-                "translation": "按名称搜索"
-            }
-        },
-        "internalServerError": {
-            "label": {
-                "translation": "内部服务器错误。"
-            }
-        },
-        "oneSpecialCharacter": {
-            "label": {
-                "translation": "一个特殊字符"
-            }
-        },
-        "language": {
-            "label": {
-                "translation": "语言"
-            }
-        },
-        "min8character": {
-            "label": {
-                "translation": "最少 8 个字符"
-            }
-        },
-        "oneNumberCharacter": {
-            "label": {
-                "translation": "一个数字字符"
-            }
-        },
-        "seeMore": {
-            "label": {
-                "translation": "查看更多"
-            }
-        },
-        "imageRecommendedSize": {
-            "label": {
-                "translation": "建议 500x500 像素"
-            }
-        },
-        "internalServerErrorCaption": {
-            "label": {
-                "translation": "抱歉，出了一些问题。"
-            }
-        },
-        "badRequestCaption": {
-            "label": {
-                "translation": "抱歉，您的浏览器发送了该服务器无法理解的请求。"
-            }
-        },
-        "accessDenied": {
-            "label": {
-                "translation": "拒绝访问"
-            }
-        },
-        "matchPassword": {
-            "label": {
-                "translation": "密码不匹配。"
-            }
-        },
-        "setNewPasswordCaption": {
-            "label": {
-                "translation": "您的新密码必须足够强大并且与之前使用的密码不同"
-            }
-        },
-        "pageNotFoundCaption": {
-            "label": {
-                "translation": "抱歉，您要查找的页面已不存在或已被移动或存档。"
-            }
-        },
-        "serviceUnavailableCaption": {
-            "label": {
-                "translation": "抱歉，服务器暂时繁忙，请稍后重试。"
-            }
-        },
-        "notImplementedCaption": {
-            "label": {
-                "translation": "抱歉，服务器无法识别请求方法，或者缺乏完成请求的能力"
-            }
-        },
-        "unauthorizedCaption": {
-            "label": {
-                "translation": "抱歉，我们无法验证您的凭证，您需要获得授权才能访问此页面。"
-            }
-        },
-        "gatewayTimeoutCaption": {
-            "label": {
-                "translation": "抱歉，此页面加载时间过长。"
-            }
-        },
-        "confirmPasswordInput": {
-            "label": {
-                "translation": "请输入您的确认密码"
-            }
-        },
-        "unsavedChangesCaption": {
-            "label": {
-                "translation": "您确定要关闭而不保存吗？任何未保存的更改都将丢失。"
-            }
-        },
-        "title": {
-            "label": {
-                "translation": "标题"
-            }
-        },
-        "confirmPassword": {
-            "label": {
-                "translation": "要设置新密码，请确认您当前的密码。"
-            }
-        },
-        "menu": {
-            "label": {
-                "translation": "菜单"
-            }
-        },
-        "toggleButton": {
-            "label": {
-                "translation": "切换可见性"
-            }
-        },
-        "filters": {
-            "label": {
-                "translation": "过滤器"
-            }
-        },
-        "markAllIsRead": {
-            "label": {
-                "translation": "标记全部已读"
-            }
-        },
-        "errorVerification": {
-            "label": {
-                "translation": "错误"
-            }
-        },
-        "applyButton": {
-            "label": {
-                "translation": "申请"
-            }
-        },
-        "assetsTitle": {
-            "label": {
-                "translation": "资产"
-            }
-        },
-        "selectDate": {
-            "label": {
-                "translation": "选择日期"
-            }
-        },
-        "selectLanguage": {
-            "label": {
-                "translation": "选择语言"
-            }
-        },
-        "vietnameseLanguage": {
-            "label": {
-                "translation": "越南语"
-            }
-        },
-        "selectLocationFromList": {
-            "label": {
-                "translation": "选择地点"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "姓名"
-            }
-        },
-        "amount": {
-            "label": {
-                "translation": "数量"
-            }
-        },
-        "enterStartDate": {
-            "label": {
-                "translation": "您必须输入开始日期"
-            }
-        },
-        "enterAmount": {
-            "label": {
-                "translation": "输入金额"
-            }
-        },
-        "startDate": {
-            "label": {
-                "translation": "开始日期"
-            }
-        },
-        "endDate": {
-            "label": {
-                "translation": "结束日期"
-            }
-        },
-        "imageFileUploadButton": {
-            "label": {
-                "translation": "上传"
-            }
-        },
-        "updateSuccessfully": {
-            "label": {
-                "translation": "更新成功"
-            }
-        },
-        "isLoading": {
-            "label": {
-                "translation": "加载中..."
-            }
-        },
-        "goToPreviousPageButton": {
-            "label": {
-                "translation": "转到上一页"
-            }
-        },
-        "goToNextPageButton": {
-            "label": {
-                "translation": "转到下一页"
-            }
-        },
-        "viewAll": {
-            "label": {
-              "translation": "查看全部"
-            }
+          "02": {
+            "translation": "资产和人员跟踪"
+          },
+          "03": {
+            "translation": "规则和警报"
+          },
+          "04": {
+            "translation": "热图"
           }
-    },
-    "user": {
-        "reinviteUser": {
-            "label": {
-                "translation": "重新邀请用户"
-            }
         },
-        "addGroupButton": {
-            "label": {
-                "translation": "添加群组"
-            }
+        "content": {
+          "translation": "Iveda RTLS 集中管理物联网跟踪器和传感器，并将其显示在地图上以获取准确位置。"
         },
-        "addUser": {
-            "label": {
-                "translation": "添加用户"
-            }
-        },
-        "allGroups": {
-            "label": {
-                "translation": "所有群组"
-            }
-        },
-        "methodOfContactCall": {
-            "label": {
-                "translation": "联络"
-            }
-        },
-        "confirmPasswordInput": {
-            "label": {
-                "translation": "确认密码"
-            }
-        },
-        "deleteGroupQuestion": {
-            "label": {
-                "translation": "您确定要删除群组吗？"
-            }
-        },
-        "deleteAccountQuestion": {
-            "label": {
-                "translation": "您确定要删除用户吗？"
-            }
-        },
-        "currentPasswordInputPlaceholder": {
-            "label": {
-                "translation": "输入您当前的密码"
-            }
-        },
-        "deleteUserCaption": {
-            "label": {
-                "translation": "注意！这将永久删除用户及其所有信息。此后，用户将无法再访问系统。"
-            }
-        },
-        "deleteAccount": {
-            "label": {
-                "translation": "删除帐户"
-            }
-        },
-        "deleteGroup": {
-            "label": {
-                "translation": "删除群组"
-            }
-        },
-        "editGroup": {
-            "label": {
-                "translation": "编辑群组"
-            }
-        },
-        "methodOfContactEmail": {
-            "label": {
-                "translation": "发送邮件"
-            }
-        },
-        "feedbackDispatchCriteria": {
-            "label": {
-                "translation": "发送通知，当..."
-            }
-        },
-        "feedbackDispatchCriteriaTickets": {
-            "label": {
-                "translation": "工单创建、评论、解决"
-            }
-        },
-        "groupNameInputPlaceholder": {
-            "label": {
-                "translation": "输入群组名称"
-            }
-        },
-        "descriptionInputPlaceholder": {
-            "label": {
-                "translation": "输入群组描述"
-            }
-        },
-        "member": {
-            "label": {
-                "translation": "成员"
-            }
-        },
-        "members": {
-            "label": {
-                "translation": "成员"
-            }
-        },
-        "editUser": {
-            "label": {
-                "translation": "编辑用户"
-            }
-        },
-        "emailFormatValidation": {
-            "label": {
-                "translation": "请以 example@mail.com 格式输入有效的电子邮件。"
-            }
-        },
-        "groupDescriptionInputVerification": {
-            "label": {
-                "translation": "您必须输入群组描述。"
-            }
-        },
-        "emailValidation": {
-            "label": {
-                "translation": "您必须输入电子邮件。"
-            }
-        },
-        "firstNameValidation": {
-            "label": {
-                "translation": "您必须输入名字。"
-            }
-        },
-        "groupNameInputVerification": {
-            "label": {
-                "translation": "您必须输入您的群组名称。"
-            }
-        },
-        "lastNameValidation": {
-            "label": {
-                "translation": "您必须输入姓氏。"
-            }
-        },
-        "phoneValidation": {
-            "label": {
-                "translation": "您必须按照以下格式输入电话"
-            }
-        },
-        "memberSince": {
-            "label": {
-                "translation": "会员自"
-            }
-        },
-        "admins": {
-            "label": {
-                "translation": "管理员"
-            }
-        },
-        "groupsNotFoundCaption": {
-            "label": {
-                "translation": "糟糕，没有找到该群组，请尝试释放过滤器或使用其他词搜索"
-            }
-        },
-        "usersNotFoundCaption": {
-            "label": {
-                "translation": "糟糕，没有找到该用户，请尝试释放过滤器或使用其他词搜索"
-            }
-        },
-        "newPasswordInputPlaceholder": {
-            "label": {
-                "translation": "新密码"
-            }
-        },
-        "newPasswordInput": {
-            "label": {
-                "translation": "新密码"
-            }
-        },
-        "groupsNotFound": {
-            "label": {
-                "translation": "找不到群组"
-            }
-        },
-        "usersNotFound": {
-            "label": {
-                "translation": "找不到用户"
-            }
-        },
-        "notifications": {
-            "label": {
-                "translation": "通知"
-            }
-        },
-        "permissions": {
-            "label": {
-                "translation": "权限"
-            }
-        },
-        "jobTitleSelectPlaceholder": {
-            "label": {
-                "translation": "选择职位名称"
-            }
-        },
-        "methodOfContact": {
-            "label": {
-                "translation": "首选联系方式"
-            }
-        },
-        "confirmPasswordInputPlaceholder": {
-            "label": {
-                "translation": "重新输入密码"
-            }
-        },
-        "removeFromGroup": {
-            "label": {
-                "translation": "从群组中删除"
-            }
-        },
-        "feedbackDispatchCriteriaNews": {
-            "label": {
-                "translation": "新闻和更新"
-            }
-        },
-        "methodOfContactText": {
-            "label": {
-                "translation": "文本"
-            }
-        },
-        "passwordMismatchError": {
-            "label": {
-                "translation": "新密碼與確認密碼不匹配，請確保兩者相同。"
-            }
-        },
-        "groupNameInput": {
-            "label": {
-                "translation": "群组名字"
-            }
-        },
-        "admin": {
-            "label": {
-                "translation": "管理员"
-            }
-        },
-        "groups": {
-            "label": {
-                "translation": "群组"
-            }
-        },
-        "profileImage": {
-            "label": {
-                "translation": "用户信息"
-            }
-        },
-        "avatar": {
-            "label": {
-                "translation": "用户头像"
-            }
-        },
-        "categoryInputPlaceholder": {
-            "label": {
-                "translation": "选择类别"
-            }
-        },
-        "categoryInput": {
-            "label": {
-                "translation": "类别"
-            }
-        },
-        "contact": {
-            "label": {
-                "translation": "联系"
-            }
-        },
-        "contacts": {
-            "label": {
-                "translation": "联系方式"
-            }
-        },
-        "userDetails": {
-            "label": {
-                "translation": "用户详细信息"
-            }
-        },
-        "emailInput": {
-            "label": {
-                "translation": "电子邮件"
-            }
-        },
-        "emailInputPlaceholder": {
-            "label": {
-                "translation": "输入电子邮件"
-            }
-        },
-        "firstNameInput": {
-            "label": {
-                "translation": "名字"
-            }
-        },
-        "firstNameInputPlaceholder": {
-            "label": {
-                "translation": "输入名字"
-            }
-        },
-        "fullNameInput": {
-            "label": {
-                "translation": "全名"
-            }
-        },
-        "descriptionInput": {
-            "label": {
-                "translation": "群组描述字段"
-            }
-        },
-        "groupDetails": {
-            "label": {
-                "translation": "群组详情"
-            }
-        },
-        "groupName": {
-            "label": {
-                "translation": "组名"
-            }
-        },
-        "group": {
-            "label": {
-                "translation": "群组"
-            }
-        },
-        "viewProfile": {
-            "label": {
-                "translation": "用户职称"
-            }
-        },
-        "jobTitleInputPlaceholder": {
-            "label": {
-                "translation": "输入用户职称"
-            }
-        },
-        "lastNameInput": {
-            "label": {
-                "translation": "姓"
-            }
-        },
-        "lastNameInputPlaceholder": {
-            "label": {
-                "translation": "输入姓氏"
-            }
-        },
-        "phoneInput": {
-            "label": {
-                "translation": "电话"
-            }
-        },
-        "phoneInputPlaceholder": {
-            "label": {
-                "translation": "输入电话号码"
-            }
-        },
-        "roleInput": {
-            "label": {
-                "translation": "角色"
-            }
-        },
-        "roleInputPlaceholder": {
-            "label": {
-                "translation": "输入角色"
-            }
-        },
-        "roleSelect": {
-            "label": {
-                "translation": "选择角色"
-            }
-        },
-        "roles": {
-            "label": {
-                "translation": "角色"
-            },
-            "viewer": {
-                "translation": "观众"
-            }
-        },
-        "timezoneInput": {
-            "label": {
-                "translation": "时区"
-            }
-        },
-        "timezoneInputPlaceholder": {
-            "label": {
-                "translation": "添加时区"
-            }
-        },
-        "jobTitleInput": {
-            "label": {
-                "translation": "添加时区"
-            }
-        },
-        "userTitle": {
-            "label": {
-                "translation": "用户"
-            }
-        },
-        "currentPassword": {
-            "label": {
-                "translation": "当前密码"
-            }
-        },
-        "usernameInput": {
-            "label": {
-                "translation": "用户名"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "姓名"
-            }
-        },
-        "usersTitle": {
-            "label": {
-                "translation": "用户"
-            }
-        },
-        "allUsers": {
-            "label": {
-                "translation": "全部用户"
-            }
+        "label": {
+          "translation": "查明"
         }
-    },
-    "asset": {
-        "circuit": {
-            "label": {
-                "translation": "电路"
-            }
-        },
-        "trackerLowBattery": {
-            "label": {
-                "translation": "追踪器电池电量低"
-            }
-        },
-        "unassignedAsset": {
-            "label": {
-                "translation": "资产未分配"
-            }
-        },
-        "deviceCircuit": {
-            "label": {
-                "translation": "设备电路"
-            }
-        },
-        "addAssetButton": {
-            "label": {
-                "translation": "添加资产"
-            }
-        },
-        "addAssetTitle": {
-            "label": {
-                "translation": "添加资产"
-            }
-        },
-        "addClassButton": {
-            "label": {
-                "translation": "添加类别"
-            }
-        },
-        "addDeviceButton": {
-            "label": {
-                "translation": "添加设备"
-            }
-        },
-        "addGroupButton": {
-            "label": {
-                "translation": "添加群组"
-            }
-        },
-        "editAsset": {
-            "label": {
-                "translation": "编辑资产"
-            }
-        },
-        "editClass": {
-            "label": {
-                "translation": "编辑类别"
-            }
-        },
-        "allCategories": {
-            "label": {
-                "translation": "所有类别"
-            }
-        },
-        "trackablePerson": {
-            "label": {
-                "translation": "可追踪的人"
-            }
-        },
-        "assetDetails": {
-            "label": {
-                "translation": "资产详情"
-            }
-        },
-        "assetImage": {
-            "label": {
-                "translation": "资产图像"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "资产名称"
-            }
-        },
-        "assetClass": {
-            "label": {
-                "translation": "资产类别"
-            }
-        },
-        "cameras": {
-            "label": {
-                "translation": "相机"
-            }
-        },
-        "classes": {
-            "label": {
-                "translation": "课程"
-            }
-        },
-        "class": {
-            "label": {
-                "translation": "资产类别"
-            }
-        },
-        "station": {
-            "label": {
-                "translation": "基站"
-            }
-        },
-        "stations": {
-            "label": {
-                "translation": "基站"
-            }
-        },
-        "classDetails": {
-            "label": {
-                "translation": "类别详情"
-            }
-        },
-        "classNameInputPlaceholder": {
-            "label": {
-                "translation": "输入类别名称"
-            }
-        },
-        "classNameInput": {
-            "label": {
-                "translation": "类别名称"
-            }
-        },
-        "assetTitle": {
-            "label": {
-                "translation": "资产"
-            }
-        },
-        "assetsTitle": {
-            "label": {
-                "translation": "资产"
-            }
-        },
-        "costRange": {
-            "label": {
-                "translation": "设备成本范围"
-            }
-        },
-        "deleteAssetCaption": {
-            "label": {
-                "translation": "注意！这将永久删除资源和所有收集的数据。此后，配对的设备将自动取消配对。"
-            }
-        },
-        "deleteAsset": {
-            "label": {
-                "translation": "删除资产"
-            }
-        },
-        "deleteClass": {
-            "label": {
-                "translation": "删除类别"
-            }
-        },
-        "removeAssetProcess": {
-            "label": {
-                "translation": "您确定要删除资产吗"
-            }
-        },
-        "removeClassProcess": {
-            "label": {
-                "translation": "您确定要删除类别吗"
-            }
-        },
-        "circuitInformation": {
-            "label": {
-                "translation": "电路信息"
-            }
-        },
-        "deviceCTRatio": {
-            "label": {
-                "translation": "CT 比"
-            }
-        },
-        "deviceID": {
-            "label": {
-                "translation": "设备ID"
-            }
-        },
-        "deviceList": {
-            "label": {
-                "translation": "设备列表"
-            }
-        },
-        "deviceNFB": {
-            "label": {
-                "translation": "NFB"
-            }
-        },
-        "deviceName": {
-            "label": {
-                "translation": "姓名"
-            }
-        },
-        "devicePTRatio": {
-            "label": {
-                "translation": "PT 比率"
-            }
-        },
-        "devicePhase": {
-            "label": {
-                "translation": "阶段"
-            }
-        },
-        "deviceType": {
-            "label": {
-                "translation": "设备类型"
-            }
-        },
-        "deviceIsOffline": {
-            "label": {
-                "translation": "设备离线"
-            }
-        },
-        "isOffline": {
-            "label": {
-                "translation": "离线"
-            }
-        },
-        "deviceIsOnline": {
-            "label": {
-                "translation": "设备在线"
-            }
-        },
-        "isOnline": {
-            "label": {
-                "translation": "在线"
-            }
-        },
-        "manufacturer": {
-            "label": {
-                "translation": "制造商"
-            }
-        },
-        "history": {
-            "label": {
-                "translation": "历史"
-            }
-        },
-        "device": {
-            "label": {
-                "translation": "设备"
-            }
-        },
-        "devices": {
-            "label": {
-                "translation": "设备"
-            }
-        },
-        "electronics": {
-            "label": {
-                "translation": "电子产品"
-            }
-        },
-        "assetNameInputPlaceholder": {
-            "label": {
-                "translation": "输入资产名称"
-            }
-        },
-        "leavingDesignatedZone": {
-            "label": {
-                "translation": "离开指定区域"
-            }
-        },
-        "assetDescriptionInput": {
-            "label": {
-                "translation": "描述"
-            }
-        },
-        "classDescriptionInput": {
-            "label": {
-                "translation": "描述"
-            }
-        },
-        "gatewayIP": {
-            "label": {
-                "translation": "网关IP"
-            }
-        },
-        "gateways": {
-            "label": {
-                "translation": "网关"
-            }
-        },
-        "groupName": {
-            "label": {
-                "translation": "姓名"
-            }
-        },
-        "group": {
-            "label": {
-                "translation": "群组"
-            }
-        },
-        "groups": {
-            "label": {
-                "translation": "群组"
-            }
-        },
-        "handheld": {
-            "label": {
-                "translation": "手持式"
-            }
-        },
-        "groupDescriptionInputVerification": {
-            "label": {
-                "translation": "您必须输入群组的描述。"
-            }
-        },
-        "groupNameInputVerification": {
-            "label": {
-                "translation": "您必须输入您的群组名称。"
-            }
-        },
-        "LEDLights": {
-            "label": {
-                "translation": "LED灯"
-            }
-        },
-        "sensors": {
-            "label": {
-                "translation": "传感器"
-            }
-        },
-        "searchDeviceID": {
-            "label": {
-                "translation": "搜索设备ID"
-            }
-        },
-        "mobile": {
-            "label": {
-                "translation": "移动设备"
-            }
-        },
-        "viewAsset": {
-            "label": {
-                "translation": "查看资产"
-            }
-        },
-        "assetsNotFound": {
-            "label": {
-                "translation": "未找到资产"
-            }
-        },
-        "classesNotFound": {
-            "label": {
-                "translation": "未找到类别"
-            }
-        },
-        "noDevicePartMappingCaption": {
-            "label": {
-                "translation": "这里还没有设备部件映射。首先通过上传批量配置文件将设备部件映射添加到该园区。"
-            }
-        },
-        "noDevicePartMapping": {
-            "label": {
-                "translation": "无设备部件映射"
-            }
-        },
-        "noDevices": {
-            "label": {
-                "translation": "没有设备"
-            }
-        },
-        "noSPBCaption": {
-            "label": {
-                "translation": "这里还没有 SPB。首先通过上传批量配置文件将 SPB 添加到该园区。"
-            }
-        },
-        "noSPB": {
-            "label": {
-                "translation": "无SPB"
-            }
-        },
-        "noAssigneeCaption": {
-            "label": {
-                "translation": "没有指定人。当您将跟踪器连接到该资产时，它会自动分配负责该资产的用户组。"
-            }
-        },
-        "assetDescriptionInputPlaceholder": {
-            "label": {
-                "translation": "输入资产描述"
-            }
-        },
-        "costRangeInputPlaceholder": {
-            "label": {
-                "translation": "输入大概范围"
-            }
-        },
-        "manufacturerInputPlaceholder": {
-            "label": {
-                "translation": "输入制造商"
-            }
-        },
-        "classDescriptionInputPlaceholder": {
-            "label": {
-                "translation": "输入类别描述"
-            }
-        },
-        "serialNumberInputPlaceholder": {
-            "label": {
-                "translation": "输入序列号"
-            }
-        },
-        "removeDeviceButton": {
-            "label": {
-                "translation": "删除设备"
-            }
-        },
-        "removeGroupButton": {
-            "label": {
-                "translation": "删除群组"
-            }
-        },
-        "removeFromClass": {
-            "label": {
-                "translation": "从类别中删除"
-            }
-        },
-        "SPBType": {
-            "label": {
-                "translation": "SPB型"
-            }
-        },
-        "SPS": {
-            "label": {
-                "translation": "SPS"
-            }
-        },
-        "searchName": {
-            "label": {
-                "translation": "搜索名称"
-            }
-        },
-        "searchDevice": {
-            "label": {
-                "translation": "搜索设备"
-            }
-        },
-        "selectDevice": {
-            "label": {
-                "translation": "选择设备"
-            }
-        },
-        "serialNumber": {
-            "label": {
-                "translation": "序列号"
-            }
-        },
-        "stationary": {
-            "label": {
-                "translation": "固定式"
-            }
-        },
-        "circuitName": {
-            "label": {
-                "translation": "电路名称"
-            }
-        },
-        "returnedToDesignatedZone": {
-            "label": {
-                "translation": "返回指定区域"
-            }
-        },
-        "assignee": {
-            "label": {
-                "translation": "指定人"
-            }
-        },
-        "assetsNotFoundCaption": {
-            "label": {
-                "translation": "糟糕，没有资产，请尝试释放过滤器或使用其他词搜索"
-            }
-        },
-        "classesNotFoundCaption": {
-            "label": {
-                "translation": "糟糕，没有类别，请尝试释放过滤器或使用其他词搜索"
-            }
-        },
-        "tracker": {
-            "label": {
-                "translation": "追踪器"
-            }
-        },
-        "trackers": {
-            "label": {
-                "translation": "追踪器"
-            }
-        },
-        "trackerID": {
-            "label": {
-                "translation": "追踪器ID"
-            }
-        },
-        "unassignedDevice": {
-            "label": {
-                "translation": "未分配的设备"
-            }
-        },
-        "assetUIDInputPlaceholder": {
-            "label": {
-                "translation": "输入资产 UID"
-            }
-        },
-        "assetUIDInput": {
-            "label": {
-                "translation": "资产UID"
-            }
-        },
-        "uid": {
-            "label": {
-                "translation": "用户识别码"
-            }
-        },
-        "unknownDevice": {
-            "label": {
-                "translation": "未知设备"
-            }
-        },
-        "descriptionInputValidation": {
-            "label": {
-                "translation": "您必须输入描述。"
-            }
-        },
-        "nameInputValidation": {
-            "label": {
-                "translation": "您必须输入名称。"
-            }
-        },
-        "andDeviceIsOffline": {
-            "label": {
-                "translation": "并且设备离线"
-            }
-        },
-        "partIndex": {
-            "label": {
-                "translation": "零件索引"
-            }
+      },
+      "ems": {
+        "content": {
+          "translation": "Iveda 能源管理系统解决方案用于监控和分析能源使用情况和需求跟踪。"
+        },
+        "options": {
+          "01": {
+            "translation": "能源管理"
+          },
+          "02": {
+            "translation": "智能省电"
+          },
+          "03": {
+            "translation": "需求追踪"
+          },
+          "04": {
+            "translation": "能源使用分析"
+          }
+        },
+        "label": {
+          "translation": "能源管理系统"
         }
-    },
-    "solutions": {
-        "commandCenter": {
-            "label": {
-                "translation": "指挥中心"
-            }
+      },
+      "ivedaAI": {
+        "content": {
+          "translation": "IvedaAI™ 使用深度学习技术进行高级人工智能视频搜索，类似于 Google 的文本搜索。"
         },
-        "domainOverview": {
-            "label": {
-                "translation": "域概述"
-            }
+        "options": {
+          "01": {
+            "translation": "实时视频监控"
+          },
+          "02": {
+            "translation": "周界防护"
+          },
+          "03": {
+            "translation": "物体和人脸识别"
+          },
+          "04": {
+            "translation": "录音历史"
+          }
         },
-        "solutionsPage": {
-            "pinPoint": {
-                "options": {
-                    "01": {
-                        "translation": "资产"
-                    },
-                    "02": {
-                        "translation": "资产和人员跟踪"
-                    },
-                    "03": {
-                        "translation": "规则和警报"
-                    },
-                    "04": {
-                        "translation": "热图"
-                    }
-                },
-                "content": {
-                    "translation": "Iveda RTLS 集中管理物联网跟踪器和传感器，并将其显示在地图上以获取准确位置。"
-                },
-                "label": {
-                    "translation": "查明"
-                }
-            },
-            "ems": {
-                "content": {
-                    "translation": "Iveda 能源管理系统解决方案用于监控和分析能源使用情况和需求跟踪。"
-                },
-                "options": {
-                    "01": {
-                        "translation": "能源管理"
-                    },
-                    "02": {
-                        "translation": "智能省电"
-                    },
-                    "03": {
-                        "translation": "需求追踪"
-                    },
-                    "04": {
-                        "translation": "能源使用分析"
-                    }
-                },
-                "label": {
-                    "translation": "能源管理系统"
-                }
-            },
-            "ivedaAI": {
-                "content": {
-                    "translation": "IvedaAI™ 使用深度学习技术进行高级人工智能视频搜索，类似于 Google 的文本搜索。"
-                },
-                "options": {
-                    "01": {
-                        "translation": "实时视频监控"
-                    },
-                    "02": {
-                        "translation": "周界防护"
-                    },
-                    "03": {
-                        "translation": "物体和人脸识别"
-                    },
-                    "04": {
-                        "translation": "录音历史"
-                    }
-                },
-                "label": {
-                    "translation": "Iveda人工智能"
-                }
-            },
-            "utilus": {
-                "content": {
-                    "translation": "使用智能传感器、嵌入式和云计算管理能源、照明、安全和环境数据的物联网平台。"
-                },
-                "options": {
-                    "01": {
-                        "translation": "能源管理"
-                    },
-                    "02": {
-                        "translation": "紫外线和照明控制"
-                    },
-                    "03": {
-                        "translation": "环境测量"
-                    },
-                    "04": {
-                        "translation": "安全和实用警报"
-                    }
-                },
-                "label": {
-                    "translation": "IVEDA Utilus (智能电杆)"
-                }
-            },
-            "contactSalesButton": {
-                "label": {
-                    "translation": "联系销售人员"
-                }
-            },
-            "installedChip": {
-                "label": {
-                    "translation": "已安装"
-                }
-            },
-            "learnMoreButton": {
-                "label": {
-                    "translation": "了解更多"
-                }
-            },
-            "notInstalledChip": {
-                "label": {
-                    "translation": "未安装"
-                }
-            },
-            "startTutorialButton": {
-                "label": {
-                    "translation": "开始教程"
-                }
-            },
-            "label": {
-                "translation": "解决方案"
-            }
-        },
-        "averagePerPole": {
-            "label": {
-                "translation": "每杆平均"
-            }
-        },
-        "basicInformation": {
-            "label": {
-                "translation": "基本信息"
-            }
-        },
-        "camerasCaption": {
-            "label": {
-                "translation": "观察摄像机上发生了什么"
-            }
-        },
-        "cameras": {
-            "label": {
-                "translation": "相机"
-            }
-        },
-        "carbonEmissionFactor": {
-            "label": {
-                "translation": "碳排放系数"
-            }
-        },
-        "configurationFile": {
-            "label": {
-                "translation": "配置文件"
-            }
-        },
-        "dashboard": {
-            "label": {
-                "translation": "仪表板"
-            }
-        },
-        "domain": {
-            "label": {
-                "translation": "域"
-            }
-        },
-        "editCarbonEmissionFactor": {
-            "label": {
-                "translation": "编辑碳排放因子"
-            }
-        },
-        "factorInputPlaceholder": {
-            "label": {
-                "translation": "输入系数"
-            }
-        },
-        "yearInputPlaceholder": {
-            "label": {
-                "translation": "输入年份"
-            }
-        },
-        "environmentCaption": {
-            "label": {
-                "translation": "探索环境数据"
-            }
-        },
-        "environment": {
-            "label": {
-                "translation": "环境"
-            }
-        },
-        "factorInput": {
-            "label": {
-                "translation": "因素"
-            }
-        },
-        "health": {
-            "label": {
-                "translation": "健康"
-            }
-        },
-        "ISOReport": {
-            "label": {
-                "translation": "国际标准化组织报告"
-            }
-        },
-        "solutionsSelector": {
-            "cerebro": {
-                "listItem": {
-                    "caption": {
-                        "translation": "资产和个人跟踪"
-                    }
-                }
-            },
-            "utilus": {
-                "listItem": {
-                    "caption": {
-                        "translation": "能源和闪电控制"
-                    }
-                }
-            },
-            "ems": {
-                "listItem": {
-                    "caption": {
-                        "translation": "能源管理系统"
-                    }
-                }
-            },
-            "exploreButton": {
-                "label": {
-                    "translation": "探索解决方案"
-                }
-            },
-            "ai": {
-                "listItem": {
-                    "caption": {
-                        "translation": "艾维达人工智能"
-                    }
-                }
-            }
-        },
-        "lightingCaption": {
-            "label": {
-                "translation": "观察灯光发生了什么"
-            }
-        },
-        "lighting": {
-            "label": {
-                "translation": "灯光"
-            }
-        },
-        "massConfiguration": {
-            "label": {
-                "translation": "批量配置"
-            }
-        },
-        "metering": {
-            "label": {
-                "translation": "测光"
-            }
-        },
-        "networksCaption": {
-            "label": {
-                "translation": "检查连接和网络"
-            }
-        },
-        "networks": {
-            "label": {
-                "translation": "网络"
-            }
-        },
-        "overview": {
-            "label": {
-                "translation": "概述"
-            }
-        },
-        "polesHumidity": {
-            "label": {
-                "translation": "电杆湿度"
-            }
-        },
-        "polesTemperature": {
-            "label": {
-                "translation": "电杆温度"
-            }
-        },
-        "poles": {
-            "label": {
-                "translation": "电杆"
-            }
-        },
-        "powerCaption": {
-            "label": {
-                "translation": "探索选定区域的功率指标"
-            }
-        },
-        "power": {
-            "label": {
-                "translation": "电量"
-            }
-        },
-        "reporting": {
-            "label": {
-                "translation": "报告"
-            }
-        },
-        "configureScreens": {
-            "label": {
-                "translation": "配置屏幕"
-            }
-        },
-        "commandCenterTooltip": {
-            "label": {
-                "translation": "选择位置并选择您想要在命令中心屏幕上预览的类别。您可以在同一窗口中浏览它或在新选项卡中打开。"
-            }
-        },
-        "smartPoleRealDevice": {
-            "label": {
-                "translation": "该智能杆未连接到真实设备"
-            }
-        },
-        "smartPolesCaption": {
-            "label": {
-                "translation": "探索智能杆和警报的位置"
-            }
-        },
-        "smartPoles": {
-            "label": {
-                "translation": "智能杆"
-            }
-        },
-        "solution": {
-            "label": {
-                "translation": "解决方案"
-            }
-        },
-        "system": {
-            "label": {
-                "translation": "系统"
-            }
-        },
-        "ai": {
-            "label": {
-                "translation": "人工智能"
-            }
-        },
-        "connects": {
-            "label": {
-                "translation": "连接"
-            }
-        },
-        "ems": {
-            "label": {
-                "translation": "特快专递"
-            }
-        },
-        "pinPoint": {
-            "label": {
-                "translation": "IvedaRTLS"
-            }
-        },
-        "cerebro": {
-            "label": {
-                "translation": "IVEDA Utilus (智能电杆)"
-            }
-        },
-        "totalSmartPoles": {
-            "label": {
-                "translation": "总计智能杆"
-            }
-        },
-        "yearInput": {
-            "label": {
-                "translation": "年"
-            }
-        },
-        "utilus": {
-            "label": {
-                "translation": "乌提卢斯"
-            }
-        },
-        "backToDashboard": {
-            "label": {
-                "translation": "返回仪表板"
-            }
-        },
-        "analytics": {
-            "label": {
-                "translation": "分析"
-            }
-        },
-        "energyOverview": {
-            "label": {
-                "translation": "能源概览"
-            }
-        },
-        "energyAnalysis": {
-            "label": {
-                "translation": "能量分析"
-            }
+        "label": {
+          "translation": "Iveda人工智能"
         }
+      },
+      "utilus": {
+        "content": {
+          "translation": "使用智能传感器、嵌入式和云计算管理能源、照明、安全和环境数据的物联网平台。"
+        },
+        "options": {
+          "01": {
+            "translation": "能源管理"
+          },
+          "02": {
+            "translation": "紫外线和照明控制"
+          },
+          "03": {
+            "translation": "环境测量"
+          },
+          "04": {
+            "translation": "安全和实用警报"
+          }
+        },
+        "label": {
+          "translation": "IVEDA Utilus (智能电杆)"
+        }
+      },
+      "contactSalesButton": {
+        "label": {
+          "translation": "联系销售人员"
+        }
+      },
+      "installedChip": {
+        "label": {
+          "translation": "已安装"
+        }
+      },
+      "learnMoreButton": {
+        "label": {
+          "translation": "了解更多"
+        }
+      },
+      "notInstalledChip": {
+        "label": {
+          "translation": "未安装"
+        }
+      },
+      "startTutorialButton": {
+        "label": {
+          "translation": "开始教程"
+        }
+      },
+      "label": {
+        "translation": "解决方案"
+      }
+    },
+    "averagePerPole": {
+      "label": {
+        "translation": "每杆平均"
+      }
+    },
+    "basicInformation": {
+      "label": {
+        "translation": "基本信息"
+      }
+    },
+    "camerasCaption": {
+      "label": {
+        "translation": "观察摄像机上发生了什么"
+      }
+    },
+    "cameras": {
+      "label": {
+        "translation": "相机"
+      }
+    },
+    "carbonEmissionFactor": {
+      "label": {
+        "translation": "碳排放系数"
+      }
+    },
+    "configurationFile": {
+      "label": {
+        "translation": "配置文件"
+      }
+    },
+    "dashboard": {
+      "label": {
+        "translation": "仪表板"
+      }
+    },
+    "domain": {
+      "label": {
+        "translation": "域"
+      }
+    },
+    "editCarbonEmissionFactor": {
+      "label": {
+        "translation": "编辑碳排放因子"
+      }
+    },
+    "factorInputPlaceholder": {
+      "label": {
+        "translation": "输入系数"
+      }
+    },
+    "yearInputPlaceholder": {
+      "label": {
+        "translation": "输入年份"
+      }
+    },
+    "environmentCaption": {
+      "label": {
+        "translation": "探索环境数据"
+      }
+    },
+    "environment": {
+      "label": {
+        "translation": "环境"
+      }
+    },
+    "factorInput": {
+      "label": {
+        "translation": "因素"
+      }
+    },
+    "health": {
+      "label": {
+        "translation": "健康"
+      }
+    },
+    "ISOReport": {
+      "label": {
+        "translation": "国际标准化组织报告"
+      }
+    },
+    "solutionsSelector": {
+      "cerebro": {
+        "listItem": {
+          "caption": {
+            "translation": "资产和个人跟踪"
+          }
+        }
+      },
+      "utilus": {
+        "listItem": {
+          "caption": {
+            "translation": "能源和闪电控制"
+          }
+        }
+      },
+      "ems": {
+        "listItem": {
+          "caption": {
+            "translation": "能源管理系统"
+          }
+        }
+      },
+      "exploreButton": {
+        "label": {
+          "translation": "探索解决方案"
+        }
+      },
+      "ai": {
+        "listItem": {
+          "caption": {
+            "translation": "艾维达人工智能"
+          }
+        }
+      }
+    },
+    "lightingCaption": {
+      "label": {
+        "translation": "观察灯光发生了什么"
+      }
+    },
+    "lighting": {
+      "label": {
+        "translation": "灯光"
+      }
+    },
+    "massConfiguration": {
+      "label": {
+        "translation": "批量配置"
+      }
+    },
+    "metering": {
+      "label": {
+        "translation": "测光"
+      }
+    },
+    "networksCaption": {
+      "label": {
+        "translation": "检查连接和网络"
+      }
+    },
+    "networks": {
+      "label": {
+        "translation": "网络"
+      }
+    },
+    "overview": {
+      "label": {
+        "translation": "概述"
+      }
+    },
+    "polesHumidity": {
+      "label": {
+        "translation": "电杆湿度"
+      }
+    },
+    "polesTemperature": {
+      "label": {
+        "translation": "电杆温度"
+      }
+    },
+    "poles": {
+      "label": {
+        "translation": "电杆"
+      }
+    },
+    "powerCaption": {
+      "label": {
+        "translation": "探索选定区域的功率指标"
+      }
+    },
+    "power": {
+      "label": {
+        "translation": "电量"
+      }
+    },
+    "reporting": {
+      "label": {
+        "translation": "报告"
+      }
+    },
+    "configureScreens": {
+      "label": {
+        "translation": "配置屏幕"
+      }
+    },
+    "commandCenterTooltip": {
+      "label": {
+        "translation": "选择位置并选择您想要在命令中心屏幕上预览的类别。您可以在同一窗口中浏览它或在新选项卡中打开。"
+      }
+    },
+    "smartPoleRealDevice": {
+      "label": {
+        "translation": "该智能杆未连接到真实设备"
+      }
+    },
+    "smartPolesCaption": {
+      "label": {
+        "translation": "探索智能杆和警报的位置"
+      }
+    },
+    "smartPoles": {
+      "label": {
+        "translation": "智能杆"
+      }
+    },
+    "solution": {
+      "label": {
+        "translation": "解决方案"
+      }
+    },
+    "system": {
+      "label": {
+        "translation": "系统"
+      }
+    },
+    "ai": {
+      "label": {
+        "translation": "人工智能"
+      }
+    },
+    "connects": {
+      "label": {
+        "translation": "连接"
+      }
     },
     "ems": {
-        "cO2e": {
-            "label": {
-                "translation": "二氧化碳当量"
-            }
-        },
-        "kWh": {
-            "label": {
-                "translation": "千瓦时"
-            }
-        },
-        "kW": {
-            "label": {
-                "translation": "千瓦"
-            }
-        },
-        "contractCapacityInputPlaceholder": {
-            "label": {
-                "translation": "输入合同容量"
-            }
-        },
-        "contractCapacity": {
-            "label": {
-                "translation": "合同产能"
-            }
-        },
-        "contractCapacityEdit": {
-            "label": {
-                "translation": "编辑合同容量"
-            }
-        },
-        "consumption": {
-            "label": {
-                "translation": "消耗"
-            },
-            "month": {
-                "translation": "消耗"
-            }
-        },
-        "demand": {
-            "label": {
-                "translation": "要求"
-            }
-        },
-        "cO2eDistribution": {
-            "label": {
-                "translation": "二氧化碳当量分布"
-            }
-        },
-        "consumptionDistribution": {
-            "label": {
-                "translation": "消费分布"
-            }
-        },
-        "demandDistrubution": {
-            "label": {
-                "translation": "需求分布"
-            }
-        },
-        "realTimePF": {
-            "label": {
-                "translation": "实时功率因数"
-            }
-        },
-        "lastHourConsumption": {
-            "label": {
-                "translation": "最后一小时消费"
-            }
-        },
-        "lastHourEmission": {
-            "label": {
-                "translation": "最后一小时排放量"
-            }
-        },
-        "cO2eTrend": {
-            "label": {
-                "translation": "二氧化碳当量趋势"
-            }
-        },
-        "consumptionTrend": {
-            "label": {
-                "translation": "消费趋势"
-            }
-        },
-        "demandTrend": {
-            "label": {
-                "translation": "需求趋势"
-            }
-        },
-        "currentCO2e": {
-            "label": {
-                "translation": "当前二氧化碳当量"
-            }
-        },
-        "currentKW": {
-            "label": {
-                "translation": "电流千瓦"
-            }
-        },
-        "carbonEmission": {
-            "label": {
-                "translation": "碳排放"
-            }
-        },
-        "currentKWh": {
-            "label": {
-                "translation": "当前千瓦时"
-            }
-        },
-        "valueInput": {
-            "label": {
-                "translation": "价值"
-            }
-        },
-        "process": {
-            "label": {
-                "translation": "过程"
-            }
-        },
-        "addProcess": {
-            "label": {
-                "translation": "添加进程"
-            }
-        },
-        "emission": {
-            "label": {
-                "translation": "排放"
-            }
-        },
-        "noProcess": {
-            "label": {
-                "translation": "无流程"
-            }
-        },
-        "unitRequire": {
-            "label": {
-                "translation": "单位必须为必填项"
-            }
-        },
-        "processRequire": {
-            "label": {
-                "translation": "必须有流程"
-            }
-        },
-        "deviceId": {
-            "label": {
-                "translation": "设备 ID 必须为必填项"
-            }
-        },
-        "unitsNumberBetterThanZero": {
-            "label": {
-                "translation": "单位数必须大于 0"
-            }
-        },
-        "enterAmount": {
-            "label": {
-                "translation": "您必须输入金额"
-            }
-        },
-        "mustEnterEndDate": {
-            "label": {
-                "translation": "您必须输入结束日期"
-            }
-        },
-        "addHistory": {
-            "label": {
-                "translation": "添加历史记录"
-            }
-        },
-        "noUnit": {
-            "label": {
-                "translation": "无单位"
-            }
-        },
-        "unit": {
-            "label": {
-                "translation": "单位"
-            }
-        },
-        "selectUnit": {
-            "label": {
-                "translation": "选择单位"
-            }
-        },
-        "selectProcess": {
-            "label": {
-                "translation": "选择流程"
-            }
-        },
-        "circuitLoop": {
-            "label": {
-                "translation": "电路回路"
-            }
-        },
-        "selectCircuit": {
-            "label": {
-                "translation": "选择电路"
-            }
-        },
-        "enterProcessName": {
-            "label": {
-                "translation": "输入进程名称"
-            }
-        },
-        "editProcess": {
-            "label": {
-                "translation": "编辑流程"
-            }
-        },
-        "deleteProcess": {
-            "label": {
-                "translation": "删除进程"
-            }
-        },
-        "editHistory": {
-            "label": {
-                "translation": "编辑历史记录"
-            }
-        },
-        "deleteHistory": {
-            "label": {
-                "translation": "删除历史记录"
-            }
-        },
-        "energy_analysis": {
-            "label": {
-                "translation": "能量分析"
-            }
-        },
-        "riskLevel": {
-            "label": {
-                "translation": "风险等级"
-            }
-        },
-        "kWhLastMonth": {
-            "label": {
-                "translation": "上个月千瓦时"
-            }
-        },
-        "cO2eLastMonth": {
-            "label": {
-                "translation": "上个月的二氧化碳排放量"
-            }
-        },
-        "settingCircuitSummary": {
-            "label": {
-                "translation": "设置电路概要"
-            }
-        },
-        "CO2e": {
-            "label": {
-                "translation": "二氧化碳当量"
-            }
-        },
-        "uploadConfirmTitle": {
-            "label": {
-                "translation": "是否确认上传?"
-            }
-        },
-        "confirmUploadMessage": {
-            "label": {
-                "translation": "数据覆盖警告： 上传此 Excel 文件将会替换现有的数据，这可能导致当前记录被移除并新增数据。此操作无法撤销。"
-            }
-        },
-        "Proceed": {
-            "label": {
-              "translation": "继续"
-            }
-          },
-        "Cancel": {
-            "label": {
-                "translation": "取消"
-            }
-        },
-        "maximumPower": {
-            "label": {
-                "translation": "最大功率"
-            }
-        },
-        "historicalTrend": {
-            "label": {
-                "translation": "历史趋势"
-            }
-        },
-        "factory": {
-            "label": {
-                "translation": "工厂"
-            }
-        },
-        "Consumption(kWh)": {
-            "label": {
-                "translation": "消耗量（千瓦时）"
-            }
-        },
-        "selectLocations": {
-            "label": {
-                "translation": "选择地点"
-            }
-        },
-        "kWhThisMonth": {
-            "label": {
-                "translation": "本月千瓦时"
-            }
-        },
-        "cO2eThisMonth": {
-            "label": {
-                "translation": "本月二氧化碳排放量"
-            }
-        },
-        "thisMonth": {
-            "translation": "这个月"
-        },
-        "lastMonth": {
-            "translation": "上个月"
-        },
-        "ConsumptionTrend": {
-            "legend": {
-                "translation": "消耗量（千瓦时）"
-            }
-        },
-        "selectBuildings": {
-            "label": {
-                "translation": "选择建筑物"
-            }
-        },
-        "selectFloor": {
-            "label": {
-                "translation": "选择楼层"
-            }
-        },
-        "selectZone": {
-            "label": {
-                "translation": "选择区域"
-            }
-        },
-        "addProductButton" :{
-            "label": {
-                "translation": "添加新产品"
-            }
-        },
-        "productName" :{
-            "label": {
-                "translation": "产品名称"
-            }
-        },
-        "consumptionAmount" :{
-            "label": {
-                "translation": "消耗/数量"
-            }
-        },
-        "emissionAmount" :{
-            "label": {
-                "translation": "排放/数量"
-            }
-        },
-        "summarySwitch" :{
-            "label": {
-                "translation": "摘要"
-            }
-        },
-        "managementSwitch" :{
-            "label": {
-                "translation": "管理"
-            }
-        },
-        "product": {
-            "label": {
-                "translation": "产品"
-            }
-        },
-        "processHistory": {
-            "label": {
-                "translation": "处理历史"
-            }
-        }
+      "label": {
+        "translation": "特快专递"
+      }
     },
-    "issue": {
-        "attentionRequired": {
-            "label": {
-                "translation": "需要注意"
-            }
-        },
-        "aboutEvent": {
-            "label": {
-                "translation": "关于活动"
-            }
-        },
-        "allAssignee": {
-            "label": {
-                "translation": "所有指定人"
-            }
-        },
-        "createIssue": {
-            "label": {
-                "translation": "创建问题"
-            }
-        },
-        "createTicket": {
-            "label": {
-                "translation": "请创建票证来解决此问题。"
-            }
-        },
-        "connectionStatus": {
-            "label": {
-                "translation": "连接状态"
-            }
-        },
-        "editIssueTitle": {
-            "label": {
-                "translation": "编辑问题"
-            }
-        },
-        "description": {
-            "label": {
-                "translation": "描述"
-            }
-        },
-        "issueID": {
-            "label": {
-                "translation": "问题ID"
-            }
-        },
-        "details": {
-            "label": {
-                "translation": "细节"
-            }
-        },
-        "issueCreated": {
-            "label": {
-                "translation": "已创建此事件的问题。"
-            }
-        },
-        "reporter": {
-            "label": {
-                "translation": "举报人"
-            }
-        },
-        "assignee": {
-            "label": {
-                "translation": "指定人"
-            }
-        },
-        "status": {
-            "label": {
-                "translation": "状态"
-            }
-        },
-        "issue": {
-            "label": {
-                "translation": "问题"
-            }
-        },
-        "issuesTitle": {
-            "label": {
-                "translation": "问题"
-            }
-        },
-        "noIssuesCaption": {
-            "label": {
-                "translation": "这里还没有问题"
-            }
-        },
-        "summary": {
-            "label": {
-                "translation": "概括"
-            }
-        },
-        "allPriority": {
-            "label": {
-                "translation": "全部优先"
-            }
-        },
-        "allStatus": {
-            "label": {
-                "translation": "所有状态"
-            }
-        },
-        "notFound": {
-            "label": {
-                "translation": "未发现问题"
-            }
-        },
-        "noIssues": {
-            "label": {
-                "translation": "没有问题"
-            }
-        },
-        "viewIssue": {
-            "label": {
-                "translation": "查看问题"
-            }
-        }
+    "pinPoint": {
+      "label": {
+        "translation": "IvedaRTLS"
+      }
     },
-    "location": {
-        "searchLocation": {
-            "label": {
-                "translation": "搜索地点"
-            }
-        },
-        "changelocations": {
-            "label": {
-                "translation": "改变地点"
-            }
-        },
-        "addLocation": {
-            "label": {
-                "translation": "添加位置"
-            }
-        },
-        "building": {
-            "label": {
-                "translation": "建筑"
-            }
-        },
-        "buildingsWarning": {
-            "label": {
-                "translation": "没有建筑物"
-            }
-        },
-        "buildings": {
-            "label": {
-                "translation": "建筑物"
-            }
-        },
-        "city": {
-            "label": {
-                "translation": "城市"
-            }
-        },
-        "company": {
-            "label": {
-                "translation": "公司"
-            }
-        },
-        "country": {
-            "label": {
-                "translation": "国家"
-            }
-        },
-        "current": {
-            "label": {
-                "translation": "当前的"
-            }
-        },
-        "designated": {
-            "label": {
-                "translation": "指定的"
-            }
-        },
-        "campus": {
-            "label": {
-                "translation": "校园"
-            }
-        },
-        "ownerLocation": {
-            "label": {
-                "translation": "业主位置"
-            }
-        },
-        "parentLocation": {
-            "label": {
-                "translation": "主区位置"
-            }
-        },
-        "allZones": {
-            "label": {
-                "translation": "所有区域"
-            }
-        },
-        "space": {
-            "label": {
-                "translation": "空间"
-            }
-        },
-        "spaces": {
-            "label": {
-                "translation": "空间"
-            }
-        },
-        "latitude": {
-            "label": {
-                "translation": "纬度"
-            }
-        },
-        "locationSchema": {
-            "label": {
-                "translation": "位置架构"
-            }
-        },
-        "location": {
-            "label": {
-                "translation": "地点"
-            }
-        },
-        "locations": {
-            "label": {
-                "translation": "地点"
-            }
-        },
-        "longitude": {
-            "label": {
-                "translation": "经度"
-            }
-        },
-        "map": {
-            "label": {
-                "translation": "地图"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "姓名"
-            }
-        },
-        "formation": {
-            "label": {
-                "translation": "编队"
-            }
-        },
-        "region": {
-            "label": {
-                "translation": "地区"
-            }
-        },
-        "regions": {
-            "label": {
-                "translation": "地区"
-            }
-        },
-        "selectCampusSelectPlaceholder": {
-            "label": {
-                "translation": "选择校区"
-            }
-        },
-        "selectUserLocations": {
-            "label": {
-                "translation": "选择用户位置"
-            }
-        },
-        "selectLocationFromList": {
-            "label": {
-                "translation": "选择地点"
-            }
-        },
-        "moreLocations": {
-            "label": {
-                "translation": "更多地点"
-            }
-        },
-        "spacesWarning": {
-            "label": {
-                "translation": "没有空格"
-            }
-        },
-        "zone": {
-            "label": {
-                "translation": "区"
-            }
-        },
-        "partLocation": {
-            "label": {
-                "translation": "部分位置"
-            }
-        },
-        "street": {
-            "label": {
-                "translation": "街道"
-            }
-        },
-        "timeZone": {
-            "label": {
-                "translation": "时区"
-            }
-        },
-        "type": {
-            "label": {
-                "translation": "类型"
-            }
-        },
-        "unknown": {
-            "label": {
-                "translation": "未知"
-            }
-        },
-        "zip": {
-            "label": {
-                "translation": "压缩"
-            }
-        },
-        "proxyID": {
-            "label": {
-                "translation": "代理ID"
-            }
-        },
-        "floor": {
-            "label": {
-                "translation": "地面"
-            }
-        },
-        "productionLine": {
-            "label": {
-                "translation": "生产线"
-            }
-        },
-        "displayedItems": {
-            "label": {
-                "translation": "显示项目"
-            }
-        },
-        "floors": {
-            "label": {
-                "translation": "楼层"
-            }
-        },
-        "area": {
-            "label": {
-                "translation": "区域"
-            }
-        },
-        "areas": {
-            "label": {
-                "translation": "领域"
-            }
-        },
-        "formations": {
-            "label": {
-                "translation": "阵型"
-            }
-        },
-        "zones": {
-            "label": {
-                "translation": "区域"
-            }
-        },
-        "productionLines": {
-            "label": {
-                "translation": "生产线"
-            }
-        },
-        "cameraSnapshot": {
-            "label": {
-                "translation": "相机快照"
-            }
-        }
+    "cerebro": {
+      "label": {
+        "translation": "IVEDA Utilus (智能电杆)"
+      }
     },
-    "login": {
-        "form": {
-            "email": {
-                "emailFormatValidation": {
-                    "label": {
-                        "translation": "请以 example@mail.com 格式输入有效的电子邮件。"
-                    }
-                },
-                "emailRequired": {
-                    "label": {
-                        "translation": "请输入您的电子邮件。"
-                    }
-                },
-                "defaultError": {
-                    "label": {
-                        "translation": "错误"
-                    }
-                },
-                "placeholder": {
-                    "label": {
-                        "translation": "输入电子邮件"
-                    }
-                },
-                "label": {
-                    "translation": "电子邮件"
-                }
-            },
-            "password": {
-                "passwordRequired": {
-                    "label": {
-                        "translation": "请输入您的密码。"
-                    }
-                },
-                "passwordCharCountValidation": {
-                    "label": {
-                        "translation": "密码必须至少8个字符。"
-                    }
-                },
-                "defaultError": {
-                    "label": {
-                        "translation": "错误"
-                    }
-                },
-                "placeholder": {
-                    "label": {
-                        "translation": "输入密码"
-                    }
-                },
-                "label": {
-                    "translation": "密码"
-                }
-            },
-            "forgotPassword": {
-                "label": {
-                    "translation": "忘记密码"
-                }
-            },
-            "rememberMeCheckbox": {
-                "label": {
-                    "translation": "记住账号"
-                }
-            }
-        },
-        "resetEmailPage": {
-            "resetEmailPageIntro": {
-                "label": {
-                    "translation": "我们将密码重置链接发送至"
-                }
-            },
-            "label": {
-                "translation": "查看您的电子邮件"
-            }
-        },
-        "forgotPasswordPage": {
-            "forgotPasswordPageIntro": {
-                "label": {
-                    "translation": "不用担心，我们会向您发送重置说明。"
-                }
-            },
-            "backToSignIn": {
-                "label": {
-                    "translation": "返回登录"
-                }
-            },
-            "label": {
-                "translation": "忘记密码"
-            }
-        },
-        "loginPageFormIntro": {
-            "label": {
-                "translation": "输入您的凭证以访问您的帐户"
-            }
-        },
-        "loginPageFormAlert": {
-            "label": {
-                "translation": "邮箱或密码错误，请重试"
-            }
-        },
-        "backToSignInButton": {
-            "label": {
-                "translation": "返回登录"
-            }
-        },
-        "resendEmailButton": {
-            "label": {
-                "translation": "重发电子邮件"
-            }
-        },
-        "resetPasswordButton": {
-            "label": {
-                "translation": "重设密码"
-            }
-        },
-        "signInLoadingButton": {
-            "label": {
-                "translation": "登录中..."
-            }
-        },
-        "signInButton": {
-            "label": {
-                "translation": "登入"
-            }
-        },
-        "signOutButton": {
-            "label": {
-                "translation": "注销"
-            }
-        },
-        "loginPage": {
-            "label": {
-                "translation": "欢迎来到Cerebro"
-            }
-        },
-        "yourEmailPlaceholder": {
-            "label": {
-                "translation": "您的邮件"
-            }
-        }
+    "totalSmartPoles": {
+      "label": {
+        "translation": "总计智能杆"
+      }
     },
-    "events": {
-        "alertMessage": {
-            "label": {
-                "translation": "警报信息"
-            }
-        },
-        "allMessages": {
-            "label": {
-                "translation": "所有消息"
-            }
-        },
-        "checkHumidDevices": {
-            "label": {
-                "translation": "检查潮湿设备"
-            }
-        },
-        "checkOverheatedDevices": {
-            "label": {
-                "translation": "检查过热设备"
-            }
-        },
-        "criticalEvent": {
-            "label": {
-                "translation": "紧急的"
-            }
-        },
-        "default": {
-            "label": {
-                "translation": "默认"
-            }
-        },
-        "disconnect": {
-            "label": {
-                "translation": "断开"
-            }
-        },
-        "checkDisconnectedDevices": {
-            "label": {
-                "translation": "检查断开连接的设备"
-            }
-        },
-        "error": {
-            "label": {
-                "translation": "错误"
-            }
-        },
-        "eventInfo": {
-            "label": {
-                "translation": "事件信息"
-            }
-        },
-        "priority": {
-            "label": {
-                "translation": "优先事项"
-            }
-        },
-        "eventsHistory": {
-            "label": {
-                "translation": "事件历史"
-            }
-        },
-        "events": {
-            "label": {
-                "translation": "事件"
-            }
-        },
-        "highEvent": {
-            "label": {
-                "translation": "高的"
-            }
-        },
-        "humid": {
-            "label": {
-                "translation": "湿"
-            }
-        },
-        "lowEvent": {
-            "label": {
-                "translation": "低的"
-            }
-        },
-        "mediumEvent": {
-            "label": {
-                "translation": "中等的"
-            }
-        },
-        "noEventsCapture": {
-            "label": {
-                "translation": "这里还没有事件"
-            }
-        },
-        "noEvents": {
-            "label": {
-                "translation": "没有事件"
-            }
-        },
-        "normal": {
-            "label": {
-                "translation": "正常的"
-            }
-        },
-        "notificationDetails": {
-            "label": {
-                "translation": "通知详情"
-            }
-        },
-        "overheated": {
-            "label": {
-                "translation": "过热"
-            }
-        },
-        "problem": {
-            "label": {
-                "translation": "问题"
-            }
-        },
-        "recentEvents": {
-            "label": {
-                "translation": "最近发生的事件"
-            }
-        },
-        "criticalEvents": {
-            "label": {
-                "translation": "重大事件"
-            }
-        },
-        "stable": {
-            "label": {
-                "translation": "稳定的"
-            }
-        },
-        "success": {
-            "label": {
-                "translation": "成功"
-            }
-        },
-        "totalEvents": {
-            "label": {
-                "translation": "事件总数"
-            }
-        },
-        "trivial": {
-            "label": {
-                "translation": "一般的"
-            }
-        },
-        "unknown": {
-            "label": {
-                "translation": "未知"
-            }
-        },
-        "warning": {
-            "label": {
-                "translation": "警告"
-            }
-        },
-        "total": {
-            "label": {
-                "translation": "全部的"
-            }
-        },
-        "eventDetails": {
-            "label": {
-                "translation": "活动详情"
-            }
-        }
+    "yearInput": {
+      "label": {
+        "translation": "年"
+      }
     },
-    "company": {
-        "poweredByCompany": {
-            "label": {
-                "translation": "由Iveda提供支持"
-            }
-        },
-        "company": {
-            "label": {
-                "translation": "公司"
-            }
-        },
-        "copyright": {
-            "label": {
-                "translation": "由Iveda提供技术支持。版权"
-            }
-        },
-        "name": {
-            "label": {
-                "translation": "Iveda解决方案"
-            }
-        },
-        "fromCerebroApp": {
-            "label": {
-                "translation": "来自 Cerebro 应用程序？"
-            }
-        },
-        "companyIcon": {
-            "label": {
-                "translation": "公司图标"
-            }
-        },
-        "companyLogo": {
-            "label": {
-                "translation": "公司标志"
-            }
-        }
+    "utilus": {
+      "label": {
+        "translation": "乌提卢斯"
+      }
     },
-    "map": {
-        "editDomainMapZoom": {
-            "label": {
-                "translation": "编辑域地图放大尺寸"
-            }
-        },
-        "domainMapZoom": {
-            "label": {
-                "translation": "域图放大"
-            }
-        },
-        "map": {
-            "label": {
-                "translation": "地图"
-            }
-        },
-        "nodeMap": {
-            "label": {
-                "translation": "节点图"
-            }
-        },
-        "selectSize": {
-            "label": {
-                "translation": "选择大小"
-            }
-        }
+    "backToDashboard": {
+      "label": {
+        "translation": "返回仪表板"
+      }
+    },
+    "analytics": {
+      "label": {
+        "translation": "分析"
+      }
+    },
+    "energyOverview": {
+      "label": {
+        "translation": "能源概览"
+      }
+    },
+    "energyAnalysis": {
+      "label": {
+        "translation": "能量分析"
+      }
+    }
+  },
+  "ems": {
+    "cO2e": {
+      "label": {
+        "translation": "二氧化碳当量"
+      }
+    },
+    "kWh": {
+      "label": {
+        "translation": "千瓦时"
+      }
+    },
+    "kW": {
+      "label": {
+        "translation": "千瓦"
+      }
+    },
+    "contractCapacityInputPlaceholder": {
+      "label": {
+        "translation": "输入合同容量"
+      }
+    },
+    "contractCapacity": {
+      "label": {
+        "translation": "合同产能"
+      }
+    },
+    "contractCapacityEdit": {
+      "label": {
+        "translation": "编辑合同容量"
+      }
+    },
+    "consumption": {
+      "label": {
+        "translation": "消耗"
+      },
+      "month": {
+        "translation": "消耗"
+      }
+    },
+    "demand": {
+      "label": {
+        "translation": "要求"
+      }
+    },
+    "cO2eDistribution": {
+      "label": {
+        "translation": "二氧化碳当量分布"
+      }
+    },
+    "consumptionDistribution": {
+      "label": {
+        "translation": "消费分布"
+      }
+    },
+    "demandDistrubution": {
+      "label": {
+        "translation": "需求分布"
+      }
+    },
+    "realTimePF": {
+      "label": {
+        "translation": "实时功率因数"
+      }
+    },
+    "lastHourConsumption": {
+      "label": {
+        "translation": "最后一小时消费"
+      }
+    },
+    "lastHourEmission": {
+      "label": {
+        "translation": "最后一小时排放量"
+      }
+    },
+    "cO2eTrend": {
+      "label": {
+        "translation": "二氧化碳当量趋势"
+      }
+    },
+    "consumptionTrend": {
+      "label": {
+        "translation": "消费趋势"
+      }
+    },
+    "demandTrend": {
+      "label": {
+        "translation": "需求趋势"
+      }
+    },
+    "currentCO2e": {
+      "label": {
+        "translation": "当前二氧化碳当量"
+      }
+    },
+    "currentKW": {
+      "label": {
+        "translation": "电流千瓦"
+      }
+    },
+    "carbonEmission": {
+      "label": {
+        "translation": "碳排放"
+      }
+    },
+    "currentKWh": {
+      "label": {
+        "translation": "当前千瓦时"
+      }
+    },
+    "valueInput": {
+      "label": {
+        "translation": "价值"
+      }
+    },
+    "process": {
+      "label": {
+        "translation": "过程"
+      }
+    },
+    "addProcess": {
+      "label": {
+        "translation": "添加进程"
+      }
+    },
+    "emission": {
+      "label": {
+        "translation": "排放"
+      }
+    },
+    "noProcess": {
+      "label": {
+        "translation": "无流程"
+      }
+    },
+    "unitRequire": {
+      "label": {
+        "translation": "单位必须为必填项"
+      }
+    },
+    "processRequire": {
+      "label": {
+        "translation": "必须有流程"
+      }
+    },
+    "deviceId": {
+      "label": {
+        "translation": "设备 ID 必须为必填项"
+      }
+    },
+    "unitsNumberBetterThanZero": {
+      "label": {
+        "translation": "单位数必须大于 0"
+      }
+    },
+    "enterAmount": {
+      "label": {
+        "translation": "您必须输入金额"
+      }
+    },
+    "mustEnterEndDate": {
+      "label": {
+        "translation": "您必须输入结束日期"
+      }
+    },
+    "addHistory": {
+      "label": {
+        "translation": "添加历史记录"
+      }
+    },
+    "noUnit": {
+      "label": {
+        "translation": "无单位"
+      }
+    },
+    "unit": {
+      "label": {
+        "translation": "单位"
+      }
+    },
+    "selectUnit": {
+      "label": {
+        "translation": "选择单位"
+      }
+    },
+    "selectProcess": {
+      "label": {
+        "translation": "选择流程"
+      }
+    },
+    "circuitLoop": {
+      "label": {
+        "translation": "电路回路"
+      }
+    },
+    "selectCircuit": {
+      "label": {
+        "translation": "选择电路"
+      }
+    },
+    "enterProcessName": {
+      "label": {
+        "translation": "输入进程名称"
+      }
+    },
+    "editProcess": {
+      "label": {
+        "translation": "编辑流程"
+      }
+    },
+    "deleteProcess": {
+      "label": {
+        "translation": "删除进程"
+      }
+    },
+    "editHistory": {
+      "label": {
+        "translation": "编辑历史记录"
+      }
+    },
+    "deleteHistory": {
+      "label": {
+        "translation": "删除历史记录"
+      }
+    },
+    "energy_analysis": {
+      "label": {
+        "translation": "能量分析"
+      }
+    },
+    "riskLevel": {
+      "label": {
+        "translation": "风险等级"
+      }
+    },
+    "kWhLastMonth": {
+      "label": {
+        "translation": "上个月千瓦时"
+      }
+    },
+    "cO2eLastMonth": {
+      "label": {
+        "translation": "上个月的二氧化碳排放量"
+      }
+    },
+    "settingCircuitSummary": {
+      "label": {
+        "translation": "设置电路概要"
+      }
+    },
+    "CO2e": {
+      "label": {
+        "translation": "二氧化碳当量"
+      }
+    },
+    "uploadConfirmTitle": {
+      "label": {
+        "translation": "是否确认上传?"
+      }
+    },
+    "confirmUploadMessage": {
+      "label": {
+        "translation": "数据覆盖警告： 上传此 Excel 文件将会替换现有的数据，这可能导致当前记录被移除并新增数据。此操作无法撤销。"
+      }
+    },
+    "Proceed": {
+      "label": {
+        "translation": "继续"
+      }
+    },
+    "Cancel": {
+      "label": {
+        "translation": "取消"
+      }
+    },
+    "maximumPower": {
+      "label": {
+        "translation": "最大功率"
+      }
+    },
+    "historicalTrend": {
+      "label": {
+        "translation": "历史趋势"
+      }
+    },
+    "factory": {
+      "label": {
+        "translation": "工厂"
+      }
+    },
+    "Consumption(kWh)": {
+      "label": {
+        "translation": "消耗量（千瓦时）"
+      }
+    },
+    "selectLocations": {
+      "label": {
+        "translation": "选择地点"
+      }
+    },
+    "kWhThisMonth": {
+      "label": {
+        "translation": "本月千瓦时"
+      }
+    },
+    "cO2eThisMonth": {
+      "label": {
+        "translation": "本月二氧化碳排放量"
+      }
+    },
+    "thisMonth": {
+      "translation": "这个月"
+    },
+    "lastMonth": {
+      "translation": "上个月"
+    },
+    "ConsumptionTrend": {
+      "legend": {
+        "translation": "消耗量（千瓦时）"
+      }
+    },
+    "selectBuildings": {
+      "label": {
+        "translation": "选择建筑物"
+      }
+    },
+    "selectFloor": {
+      "label": {
+        "translation": "选择楼层"
+      }
+    },
+    "selectZone": {
+      "label": {
+        "translation": "选择区域"
+      }
+    },
+    "addProductButton": {
+      "label": {
+        "translation": "添加新产品"
+      }
+    },
+    "productName": {
+      "label": {
+        "translation": "产品名称"
+      }
+    },
+    "consumptionAmount": {
+      "label": {
+        "translation": "消耗/数量"
+      }
+    },
+    "emissionAmount": {
+      "label": {
+        "translation": "排放/数量"
+      }
+    },
+    "summarySwitch": {
+      "label": {
+        "translation": "摘要"
+      }
+    },
+    "managementSwitch": {
+      "label": {
+        "translation": "管理"
+      }
+    },
+    "product": {
+      "label": {
+        "translation": "产品"
+      }
+    },
+    "processHistory": {
+      "label": {
+        "translation": "处理历史"
+      }
+    }
+  },
+  "issue": {
+    "attentionRequired": {
+      "label": {
+        "translation": "需要注意"
+      }
+    },
+    "aboutEvent": {
+      "label": {
+        "translation": "关于活动"
+      }
+    },
+    "allAssignee": {
+      "label": {
+        "translation": "所有指定人"
+      }
+    },
+    "createIssue": {
+      "label": {
+        "translation": "创建问题"
+      }
+    },
+    "createTicket": {
+      "label": {
+        "translation": "请创建票证来解决此问题。"
+      }
+    },
+    "connectionStatus": {
+      "label": {
+        "translation": "连接状态"
+      }
+    },
+    "editIssueTitle": {
+      "label": {
+        "translation": "编辑问题"
+      }
+    },
+    "description": {
+      "label": {
+        "translation": "描述"
+      }
+    },
+    "issueID": {
+      "label": {
+        "translation": "问题ID"
+      }
+    },
+    "details": {
+      "label": {
+        "translation": "细节"
+      }
+    },
+    "issueCreated": {
+      "label": {
+        "translation": "已创建此事件的问题。"
+      }
+    },
+    "reporter": {
+      "label": {
+        "translation": "举报人"
+      }
+    },
+    "assignee": {
+      "label": {
+        "translation": "指定人"
+      }
     },
     "status": {
-        "closedStatus": {
-            "label": {
-                "translation": "关闭"
-            }
-        },
-        "inProgressStatus": {
-            "label": {
-                "translation": "进行中"
-            }
-        },
-        "openStatus": {
-            "label": {
-                "translation": "打开"
-            }
-        },
-        "resolvedStatus": {
-            "label": {
-                "translation": "解决"
-            }
-        }
+      "label": {
+        "translation": "状态"
+      }
     },
-    "theme": {
-        "dark": {
-            "label": {
-                "translation": "深色模式"
-            }
-        },
-        "light": {
-            "label": {
-                "translation": "浅色模式"
-            }
-        }
+    "issue": {
+      "label": {
+        "translation": "问题"
+      }
     },
-    "label": {
-        "locations": {
-            "translation": "地点"
-        },
-        "allLocations": {
-            "label" : {
-            "translation": "所有地点"
-            }
-        },
-        "priority": {
-            "low": {
-                "translation": "低的"
-            },
-            "medium": {
-                "translation": "中等的"
-            },
-            "high": {
-                "translation": "高的"
-            }
-        },
-        "location": {
-            "translation": "地点"
-        },
-        "assetPriority": {
-            "translation": "优先事项"
-        },
-        "timezone": {
-            "translation": "时区"
-        },
-        "language": {
-            "translation": "语言"
-        }
+    "issuesTitle": {
+      "label": {
+        "translation": "问题"
+      }
     },
-    "solutionsd": {
-        "environmentCaption": {
-            "label": {
-                "translation": "探索环境数据"
-            }
-        }
+    "noIssuesCaption": {
+      "label": {
+        "translation": "这里还没有问题"
+      }
     },
-    "checkbox": {
-        "label": {
-            "translation": "新闻和更新"
-        }
+    "summary": {
+      "label": {
+        "translation": "概括"
+      }
     },
-    "data": {
-        "selectDate": {
-            "label": {
-                "translation": "选择日期"
-            }
-        }
+    "allPriority": {
+      "label": {
+        "translation": "全部优先"
+      }
     },
-    "alerts": {
-        "raised": {
-            "translation": "警报"
-        },
-        "resolved": {
-            "translation": "解决"
-        }
+    "allStatus": {
+      "label": {
+        "translation": "所有状态"
+      }
     },
-    "deviceTypes": {
-        "Cameras": {
-            "translation": "相机"
-        },
-        "cameraID": {
-            "translation": "相机ID"
-        },
-        "engineModels": {
-            "translation": "发动机型号"
-        },
-        "plugins": {
-            "translation": "插件"
-        },
-        "profileName": {
-            "translation": "个人资料名称"
-        },
-        "resolution": {
-            "translation": "解决"
-        },
-        "streamUrl": {
-            "translation": "串流网址"
-        }
+    "notFound": {
+      "label": {
+        "translation": "未发现问题"
+      }
+    },
+    "noIssues": {
+      "label": {
+        "translation": "没有问题"
+      }
+    },
+    "viewIssue": {
+      "label": {
+        "translation": "查看问题"
+      }
     }
+  },
+  "location": {
+    "searchLocation": {
+      "label": {
+        "translation": "搜索地点"
+      }
+    },
+    "changelocations": {
+      "label": {
+        "translation": "改变地点"
+      }
+    },
+    "addLocation": {
+      "label": {
+        "translation": "添加位置"
+      }
+    },
+    "building": {
+      "label": {
+        "translation": "建筑"
+      }
+    },
+    "buildingsWarning": {
+      "label": {
+        "translation": "没有建筑物"
+      }
+    },
+    "buildings": {
+      "label": {
+        "translation": "建筑物"
+      }
+    },
+    "city": {
+      "label": {
+        "translation": "城市"
+      }
+    },
+    "company": {
+      "label": {
+        "translation": "公司"
+      }
+    },
+    "country": {
+      "label": {
+        "translation": "国家"
+      }
+    },
+    "current": {
+      "label": {
+        "translation": "当前的"
+      }
+    },
+    "designated": {
+      "label": {
+        "translation": "指定的"
+      }
+    },
+    "campus": {
+      "label": {
+        "translation": "校园"
+      }
+    },
+    "ownerLocation": {
+      "label": {
+        "translation": "业主位置"
+      }
+    },
+    "parentLocation": {
+      "label": {
+        "translation": "主区位置"
+      }
+    },
+    "allZones": {
+      "label": {
+        "translation": "所有区域"
+      }
+    },
+    "space": {
+      "label": {
+        "translation": "空间"
+      }
+    },
+    "spaces": {
+      "label": {
+        "translation": "空间"
+      }
+    },
+    "latitude": {
+      "label": {
+        "translation": "纬度"
+      }
+    },
+    "locationSchema": {
+      "label": {
+        "translation": "位置架构"
+      }
+    },
+    "location": {
+      "label": {
+        "translation": "地点"
+      }
+    },
+    "locations": {
+      "label": {
+        "translation": "地点"
+      }
+    },
+    "longitude": {
+      "label": {
+        "translation": "经度"
+      }
+    },
+    "map": {
+      "label": {
+        "translation": "地图"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "姓名"
+      }
+    },
+    "formation": {
+      "label": {
+        "translation": "编队"
+      }
+    },
+    "region": {
+      "label": {
+        "translation": "地区"
+      }
+    },
+    "regions": {
+      "label": {
+        "translation": "地区"
+      }
+    },
+    "selectCampusSelectPlaceholder": {
+      "label": {
+        "translation": "选择校区"
+      }
+    },
+    "selectUserLocations": {
+      "label": {
+        "translation": "选择用户位置"
+      }
+    },
+    "selectLocationFromList": {
+      "label": {
+        "translation": "选择地点"
+      }
+    },
+    "moreLocations": {
+      "label": {
+        "translation": "更多地点"
+      }
+    },
+    "spacesWarning": {
+      "label": {
+        "translation": "没有空格"
+      }
+    },
+    "zone": {
+      "label": {
+        "translation": "区"
+      }
+    },
+    "partLocation": {
+      "label": {
+        "translation": "部分位置"
+      }
+    },
+    "street": {
+      "label": {
+        "translation": "街道"
+      }
+    },
+    "timeZone": {
+      "label": {
+        "translation": "时区"
+      }
+    },
+    "type": {
+      "label": {
+        "translation": "类型"
+      }
+    },
+    "unknown": {
+      "label": {
+        "translation": "未知"
+      }
+    },
+    "zip": {
+      "label": {
+        "translation": "压缩"
+      }
+    },
+    "proxyID": {
+      "label": {
+        "translation": "代理ID"
+      }
+    },
+    "floor": {
+      "label": {
+        "translation": "地面"
+      }
+    },
+    "productionLine": {
+      "label": {
+        "translation": "生产线"
+      }
+    },
+    "displayedItems": {
+      "label": {
+        "translation": "显示项目"
+      }
+    },
+    "floors": {
+      "label": {
+        "translation": "楼层"
+      }
+    },
+    "area": {
+      "label": {
+        "translation": "区域"
+      }
+    },
+    "areas": {
+      "label": {
+        "translation": "领域"
+      }
+    },
+    "formations": {
+      "label": {
+        "translation": "阵型"
+      }
+    },
+    "zones": {
+      "label": {
+        "translation": "区域"
+      }
+    },
+    "productionLines": {
+      "label": {
+        "translation": "生产线"
+      }
+    },
+    "cameraSnapshot": {
+      "label": {
+        "translation": "相机快照"
+      }
+    }
+  },
+  "login": {
+    "form": {
+      "email": {
+        "emailFormatValidation": {
+          "label": {
+            "translation": "请以 example@mail.com 格式输入有效的电子邮件。"
+          }
+        },
+        "emailRequired": {
+          "label": {
+            "translation": "请输入您的电子邮件。"
+          }
+        },
+        "defaultError": {
+          "label": {
+            "translation": "错误"
+          }
+        },
+        "placeholder": {
+          "label": {
+            "translation": "输入电子邮件"
+          }
+        },
+        "label": {
+          "translation": "电子邮件"
+        }
+      },
+      "password": {
+        "passwordRequired": {
+          "label": {
+            "translation": "请输入您的密码。"
+          }
+        },
+        "passwordCharCountValidation": {
+          "label": {
+            "translation": "密码必须至少8个字符。"
+          }
+        },
+        "defaultError": {
+          "label": {
+            "translation": "错误"
+          }
+        },
+        "placeholder": {
+          "label": {
+            "translation": "输入密码"
+          }
+        },
+        "label": {
+          "translation": "密码"
+        }
+      },
+      "forgotPassword": {
+        "label": {
+          "translation": "忘记密码"
+        }
+      },
+      "rememberMeCheckbox": {
+        "label": {
+          "translation": "记住账号"
+        }
+      }
+    },
+    "resetEmailPage": {
+      "resetEmailPageIntro": {
+        "label": {
+          "translation": "我们将密码重置链接发送至"
+        }
+      },
+      "label": {
+        "translation": "查看您的电子邮件"
+      }
+    },
+    "forgotPasswordPage": {
+      "forgotPasswordPageIntro": {
+        "label": {
+          "translation": "不用担心，我们会向您发送重置说明。"
+        }
+      },
+      "backToSignIn": {
+        "label": {
+          "translation": "返回登录"
+        }
+      },
+      "label": {
+        "translation": "忘记密码"
+      }
+    },
+    "loginPageFormIntro": {
+      "label": {
+        "translation": "输入您的凭证以访问您的帐户"
+      }
+    },
+    "loginPageFormAlert": {
+      "label": {
+        "translation": "邮箱或密码错误，请重试"
+      }
+    },
+    "backToSignInButton": {
+      "label": {
+        "translation": "返回登录"
+      }
+    },
+    "resendEmailButton": {
+      "label": {
+        "translation": "重发电子邮件"
+      }
+    },
+    "resetPasswordButton": {
+      "label": {
+        "translation": "重设密码"
+      }
+    },
+    "signInLoadingButton": {
+      "label": {
+        "translation": "登录中..."
+      }
+    },
+    "signInButton": {
+      "label": {
+        "translation": "登入"
+      }
+    },
+    "signOutButton": {
+      "label": {
+        "translation": "注销"
+      }
+    },
+    "loginPage": {
+      "label": {
+        "translation": "欢迎来到Cerebro"
+      }
+    },
+    "yourEmailPlaceholder": {
+      "label": {
+        "translation": "您的邮件"
+      }
+    }
+  },
+  "events": {
+    "alertMessage": {
+      "label": {
+        "translation": "警报信息"
+      }
+    },
+    "allMessages": {
+      "label": {
+        "translation": "所有消息"
+      }
+    },
+    "checkHumidDevices": {
+      "label": {
+        "translation": "检查潮湿设备"
+      }
+    },
+    "checkOverheatedDevices": {
+      "label": {
+        "translation": "检查过热设备"
+      }
+    },
+    "criticalEvent": {
+      "label": {
+        "translation": "紧急的"
+      }
+    },
+    "default": {
+      "label": {
+        "translation": "默认"
+      }
+    },
+    "disconnect": {
+      "label": {
+        "translation": "断开"
+      }
+    },
+    "checkDisconnectedDevices": {
+      "label": {
+        "translation": "检查断开连接的设备"
+      }
+    },
+    "error": {
+      "label": {
+        "translation": "错误"
+      }
+    },
+    "eventInfo": {
+      "label": {
+        "translation": "事件信息"
+      }
+    },
+    "priority": {
+      "label": {
+        "translation": "优先事项"
+      }
+    },
+    "eventsHistory": {
+      "label": {
+        "translation": "事件历史"
+      }
+    },
+    "events": {
+      "label": {
+        "translation": "事件"
+      }
+    },
+    "highEvent": {
+      "label": {
+        "translation": "高的"
+      }
+    },
+    "humid": {
+      "label": {
+        "translation": "湿"
+      }
+    },
+    "lowEvent": {
+      "label": {
+        "translation": "低的"
+      }
+    },
+    "mediumEvent": {
+      "label": {
+        "translation": "中等的"
+      }
+    },
+    "noEventsCapture": {
+      "label": {
+        "translation": "这里还没有事件"
+      }
+    },
+    "noEvents": {
+      "label": {
+        "translation": "没有事件"
+      }
+    },
+    "normal": {
+      "label": {
+        "translation": "正常的"
+      }
+    },
+    "notificationDetails": {
+      "label": {
+        "translation": "通知详情"
+      }
+    },
+    "overheated": {
+      "label": {
+        "translation": "过热"
+      }
+    },
+    "problem": {
+      "label": {
+        "translation": "问题"
+      }
+    },
+    "recentEvents": {
+      "label": {
+        "translation": "最近发生的事件"
+      }
+    },
+    "criticalEvents": {
+      "label": {
+        "translation": "重大事件"
+      }
+    },
+    "stable": {
+      "label": {
+        "translation": "稳定的"
+      }
+    },
+    "success": {
+      "label": {
+        "translation": "成功"
+      }
+    },
+    "totalEvents": {
+      "label": {
+        "translation": "事件总数"
+      }
+    },
+    "trivial": {
+      "label": {
+        "translation": "一般的"
+      }
+    },
+    "unknown": {
+      "label": {
+        "translation": "未知"
+      }
+    },
+    "warning": {
+      "label": {
+        "translation": "警告"
+      }
+    },
+    "total": {
+      "label": {
+        "translation": "全部的"
+      }
+    },
+    "eventDetails": {
+      "label": {
+        "translation": "活动详情"
+      }
+    }
+  },
+  "company": {
+    "poweredByCompany": {
+      "label": {
+        "translation": "由Iveda提供支持"
+      }
+    },
+    "company": {
+      "label": {
+        "translation": "公司"
+      }
+    },
+    "copyright": {
+      "label": {
+        "translation": "由Iveda提供技术支持。版权"
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Iveda解决方案"
+      }
+    },
+    "fromCerebroApp": {
+      "label": {
+        "translation": "来自 Cerebro 应用程序？"
+      }
+    },
+    "companyIcon": {
+      "label": {
+        "translation": "公司图标"
+      }
+    },
+    "companyLogo": {
+      "label": {
+        "translation": "公司标志"
+      }
+    }
+  },
+  "map": {
+    "editDomainMapZoom": {
+      "label": {
+        "translation": "编辑域地图放大尺寸"
+      }
+    },
+    "domainMapZoom": {
+      "label": {
+        "translation": "域图放大"
+      }
+    },
+    "map": {
+      "label": {
+        "translation": "地图"
+      }
+    },
+    "nodeMap": {
+      "label": {
+        "translation": "节点图"
+      }
+    },
+    "selectSize": {
+      "label": {
+        "translation": "选择大小"
+      }
+    }
+  },
+  "status": {
+    "closedStatus": {
+      "label": {
+        "translation": "关闭"
+      }
+    },
+    "inProgressStatus": {
+      "label": {
+        "translation": "进行中"
+      }
+    },
+    "openStatus": {
+      "label": {
+        "translation": "打开"
+      }
+    },
+    "resolvedStatus": {
+      "label": {
+        "translation": "解决"
+      }
+    }
+  },
+  "theme": {
+    "dark": {
+      "label": {
+        "translation": "深色模式"
+      }
+    },
+    "light": {
+      "label": {
+        "translation": "浅色模式"
+      }
+    }
+  },
+  "label": {
+    "locations": {
+      "translation": "地点"
+    },
+    "allLocations": {
+      "label": {
+        "translation": "所有地点"
+      }
+    },
+    "priority": {
+      "low": {
+        "translation": "低的"
+      },
+      "medium": {
+        "translation": "中等的"
+      },
+      "high": {
+        "translation": "高的"
+      }
+    },
+    "location": {
+      "translation": "地点"
+    },
+    "assetPriority": {
+      "translation": "优先事项"
+    },
+    "timezone": {
+      "translation": "时区"
+    },
+    "language": {
+      "translation": "语言"
+    }
+  },
+  "solutionsd": {
+    "environmentCaption": {
+      "label": {
+        "translation": "探索环境数据"
+      }
+    }
+  },
+  "checkbox": {
+    "label": {
+      "translation": "新闻和更新"
+    }
+  },
+  "data": {
+    "selectDate": {
+      "label": {
+        "translation": "选择日期"
+      }
+    }
+  },
+  "alerts": {
+    "raised": {
+      "translation": "警报"
+    },
+    "resolved": {
+      "translation": "解决"
+    }
+  },
+  "deviceTypes": {
+    "Cameras": {
+      "translation": "相机"
+    },
+    "cameraID": {
+      "translation": "相机ID"
+    },
+    "engineModels": {
+      "translation": "发动机型号"
+    },
+    "plugins": {
+      "translation": "插件"
+    },
+    "profileName": {
+      "translation": "个人资料名称"
+    },
+    "resolution": {
+      "translation": "解决"
+    },
+    "streamUrl": {
+      "translation": "串流网址"
+    }
+  }
 }
