@@ -9,7 +9,7 @@ import { CardContent } from '@core/ui/components/CardContent';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { Text } from '@core/ui/components/Text';
 import { t } from '@core/utils/translate';
-import { useSummary } from '@core/storages/controllers/summary';
+import { useSummary } from '@core/storages/controllers/levelnow/summary';
 import { Summary } from '@core/api/types';
 import { formatTankLevelCounts } from '@core/utils/levelnow/tankLevelCounts';
 

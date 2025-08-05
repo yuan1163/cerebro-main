@@ -52,8 +52,7 @@ import Home02SolidIcon from '@assets/icons/solid/home-02.svg?component';
 import Image05SolidIcon from '@assets/icons/solid/image-05.svg?component';
 import AppIcon from '@assets/images/app-icon.svg?component';
 import AppLogo from '@assets/images/app-logo.svg?component';
-import IvedaIcon from '@assets/images/iveda-icon.svg?component';
-import IvedaLogo from '@assets/images/iveda-logo.svg?component';
+import ivedaLogo from '@assets/images/iveda-logo.svg';
 import PoweredLogo from '@assets/images/powered-logo.svg?component';
 
 // AUTHORIZATION
@@ -262,7 +261,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                       'Small graphical symbol that represents a brand.',
                     )}
                     height='32'
-                    src={`${logo}/${auth.accessToken}`}
+                    src={ivedaLogo}
+                    // src={`${logo}/${auth.accessToken}`}
                     width='32'
                   />
                 ) : (
@@ -385,7 +385,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                       'Unique symbol that represents an organization.',
                     )}
                     height='30'
-                    src={logo}
+                    src={ivedaLogo}
+                    // src={logo}
                     width='78'
                   />
                 ) : (
@@ -408,6 +409,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
               {/* 左側選單列表 */}
               {common.map((item) => {
                 const title = item.title;
+                console.log('title', title);
 
                 if ('isGroup' in item) {
                   return (

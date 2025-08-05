@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { useAuth } from '@core/storages/auth';
 import { useNavigate } from 'react-router-dom';
 import { Listbox } from '@headlessui/react';
-import { useResponsibleTanks } from '@core/storages/controllers/responsibleTanks';
+import { useResponsibleTanks } from '@core/storages/controllers/levelnow/responsibleTanks';
 
 // UI components
 import { Card } from '@core/ui/components/Card';
@@ -33,7 +33,6 @@ export default observer(function ResponsibleTanks() {
   }
 
   const responsibleTanks = useResponsibleTanks({ userId: profile.userId });
-  console.log('responsibleTanks', responsibleTanks);
 
   const users =
     responsibleTanks && Array.isArray(responsibleTanks) ? responsibleTanks.map((item) => item.userName) : [];
@@ -46,8 +45,10 @@ export default observer(function ResponsibleTanks() {
     }
   }, [users]);
 
-  const tankLevelCounts = responsibleTanks?.find((item) => item.userName === selectedPerson)?.tankLevelCounts || [];
-  console.log('tankLevelCounts', tankLevelCounts);
+  const tankLevelCounts =
+    responsibleTanks && Array.isArray(responsibleTanks)
+      ? responsibleTanks.find((item) => item.userName === selectedPerson)?.tankLevelCounts || []
+      : [];
 
   const data = formatTankLevelCounts(tankLevelCounts);
   const total = data.reduce((sum, item) => sum + item.value, 0);
