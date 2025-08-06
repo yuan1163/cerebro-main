@@ -59,6 +59,7 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
     connect: t('solutions.connects.label', 'Connects', 'Title of Connects Solution.'),
     ems: t('solutions.ems.label', 'EMS', 'Title of EMS Solution.'),
     utilus: t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.'),
+    levelnow: t('solutions.levelnow.label', 'LevelNOW', 'Title of LevelNOW Solution.'),
   };
 
   const getTitle = (solution?: Solutions) => {
@@ -73,6 +74,8 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
         return Titles.ems;
       case Solutions.utilus:
         return Titles.utilus;
+      case Solutions.levelnow:
+        return Titles.levelnow;
       default:
         return 'Choose solution';
     }

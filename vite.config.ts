@@ -43,6 +43,13 @@ export default defineConfig({
     commonjsOptions: {
       include: ['tailwind.config.js', 'node_modules/**'],
     },
+    rollupOptions: {
+      external: [
+        'ckeditor5/src/core.js',
+        'ckeditor5/src/utils.js',
+        /^ckeditor5\//
+      ],
+    },
   },
   define: {
     'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageJson.version),
