@@ -35,7 +35,7 @@ export class AuthStorage extends AsyncStorage {
     this.loading = true;
     const token = localStorage.getItem('accessToken');
     if (token) {
-      const response: LoginOutput = yield api.checkToken(token);
+      const response: LoginOutput = yield api.checkToken(token, 'levelnowLogin');
       if (response.resultCode === 0) {
         this.accessToken = token;
         this.loading = false;

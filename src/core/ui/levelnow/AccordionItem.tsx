@@ -7,7 +7,6 @@ import { t } from '@core/utils/translate';
 // styles
 
 import { cn } from '@core/utils/classnames';
-import styles from './styles.module.scss';
 
 // components
 
@@ -21,24 +20,21 @@ import { Text } from '@core/ui/components/Text';
 import ArrowRightLineIcon from '@assets/icons/line/arrow-right.svg?component';
 
 type Props = {
-  className?: string;
-  features?: React.ReactNode;
-  map?: React.ReactNode;
-  onArrowClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  subtitle?: string;
-  title?: string;
+  title: string;
+  subtitle: string;
+  map: React.ReactNode;
 };
 
-export const AccordionDomain: React.FC<Props> = ({ className, features, map, onArrowClick, subtitle, title }) => {
+export const AccordionItem: React.FC<Props> = ({ title, subtitle, map }) => {
   return (
-    <Grid direction='column'>
-      <CardContent className={styles['card-content-text']} borderTop>
-        <Grid fullWidth alignItems='baseline' justifyContent='between'>
-          <Grid direction='column'>
+    <Grid direction='column' className='gap-5 p-5 py-0'>
+      <CardContent className='p-0'>
+        <Grid fullWidth alignItems='center' justifyContent='between'>
+          <Grid direction='column' gap={2}>
             <Text component='h3' variant='sm' weight='semibold'>
               {title}
             </Text>
-            <Text className={styles['caption']} color='typography-secondary' variant='sm'>
+            <Text color='typography-secondary' variant='sm'>
               {subtitle}
             </Text>
           </Grid>
@@ -48,9 +44,7 @@ export const AccordionDomain: React.FC<Props> = ({ className, features, map, onA
               'Update page',
               'Prompt that refreshes the content displayed on a webpage.',
             )}
-            className={styles['icon']}
             color='icon-secondary'
-            onClick={onArrowClick}
             size='lg'
             variant='text'
           >
@@ -58,13 +52,8 @@ export const AccordionDomain: React.FC<Props> = ({ className, features, map, onA
           </IconButton>
         </Grid>
       </CardContent>
-      <CardContent disablePaddingY>
-        <div className={cn(styles['accordion-map'])}>{map}</div>
-      </CardContent>
-      <CardContent disablePaddingTop>
-        <Grid className={styles['features-container']} wrap='wrap'>
-          {features}
-        </Grid>
+      <CardContent className='p-0'>
+        <div>{map}</div>
       </CardContent>
     </Grid>
   );

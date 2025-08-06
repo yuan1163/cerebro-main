@@ -18,6 +18,8 @@ import { Disclosure } from '@headlessui/react';
 
 type Props = {
   className?: string;
+  summaryClass?: string;
+  detailsClass?: string;
   color?: SurfacePalette;
   customTitle?: React.ReactNode;
   defaultOpen?: boolean;
@@ -36,6 +38,8 @@ type Props = {
 export const Accordion: React.FC<Props> = ({
   children,
   className,
+  summaryClass,
+  detailsClass,
   color,
   customTitle,
   defaultOpen = false,
@@ -56,6 +60,7 @@ export const Accordion: React.FC<Props> = ({
         {({ open }) => (
           <>
             <AccordionSummary
+              className={summaryClass}
               color={color}
               component={Disclosure.Button}
               disabled={disabled}
@@ -68,6 +73,7 @@ export const Accordion: React.FC<Props> = ({
               {customTitle}
             </AccordionSummary>
             <AccordionDetails
+              className={detailsClass}
               color={color}
               component={Disclosure.Panel}
               disableGutters={disableGutters}

@@ -1,5 +1,721 @@
 {
+  "user": {
+    "firstNameInput": {
+      "label": {
+        "translation": "First Name",
+        "notes": "User first name input label."
+      }
+    },
+    "firstNameInputPlaceholder": {
+      "label": {
+        "translation": "Enter first name",
+        "notes": "User first name input placeholder."
+      }
+    },
+    "lastNameInput": {
+      "label": {
+        "translation": "Last Name",
+        "notes": "User last name input label."
+      }
+    },
+    "lastNameInputPlaceholder": {
+      "label": {
+        "translation": "Enter last name",
+        "notes": "User last name input placeholder."
+      }
+    },
+    "emailInput": {
+      "label": {
+        "translation": "Email",
+        "notes": "User email input Label."
+      }
+    },
+    "emailInputPlaceholder": {
+      "label": {
+        "translation": "Enter email",
+        "notes": "User email input placeholder."
+      }
+    },
+    "emailValidation": {
+      "label": {
+        "translation": "You must enter email.",
+        "notes": "Input email for field verification."
+      }
+    },
+    "jobTitleInput": {
+      "label": {
+        "translation": "Job title",
+        "notes": "Job title input field."
+      }
+    },
+    "jobTitleInputPlaceholder": {
+      "label": {
+        "translation": "Job Title",
+        "notes": "Job Title"
+      }
+    },
+    "categoryInput": {
+      "label": {
+        "translation": "CATEGORY",
+        "notes": "user category label."
+      }
+    },
+    "categoryInputPlaceholder": {
+      "label": {
+        "translation": "Select category",
+        "notes": "User category placeholder."
+      }
+    },
+    "roleInput": {
+      "label": {
+        "translation": "ROLE",
+        "notes": "user role label."
+      }
+    },
+    "roleSelect": {
+      "label": {
+        "translation": "Select role",
+        "notes": "User role select label."
+      }
+    },
+    "newPasswordInput": {
+      "label": {
+        "translation": "new password",
+        "notes": "new password"
+      }
+    },
+    "newPasswordInputPlaceholder": {
+      "label": {
+        "translation": "New password",
+        "notes": "New password"
+      }
+    },
+    "confirmPasswordInput": {
+      "label": {
+        "translation": "confirm password",
+        "notes": "confirm password"
+      }
+    },
+    "confirmPasswordInputPlaceholder": {
+      "label": {
+        "translation": "Re-enter password",
+        "notes": "Re-enter password field."
+      }
+    },
+    "groupNameInput": {
+      "label": {
+        "translation": "Group name",
+        "notes": "The collective label for a team."
+      }
+    },
+    "groupNameInputPlaceholder": {
+      "label": {
+        "translation": "Enter group name",
+        "notes": "Group name placeholder."
+      }
+    },
+    "descriptionInput": {
+      "label": {
+        "translation": "Description",
+        "notes": "User group description field."
+      }
+    },
+    "groups": {
+      "label": {
+        "translation": "Groups",
+        "notes": "User groups."
+      }
+    },
+    "usersTitle": {
+      "label": {
+        "translation": "Users",
+        "notes": "Users Title."
+      }
+    },
+    "roles": {
+      "label": {
+        "translation": "Roles",
+        "notes": "User roles."
+      },
+      "viewer": {
+        "translation": "Viewer",
+        "notes": "Predefined Viewer role name"
+      }
+    },
+    "addGroupButton": {
+      "label": {
+        "translation": "Add group",
+        "notes": "Add Group Button."
+      }
+    },
+    "notifications": {
+      "label": {
+        "translation": "Notifications",
+        "notes": "Notifications."
+      }
+    },
+    "addUser": {
+      "label": {
+        "translation": "Add User",
+        "notes": "Add User Title."
+      }
+    },
+    "profileImage": {
+      "label": {
+        "translation": "Profile Image",
+        "notes": "User avatar image."
+      }
+    },
+    "selectUserGroups": {
+      "label": {
+        "translation": "Select User Groups",
+        "notes": "Select User Groups."
+      }
+    },
+    "admin": {
+      "label": {
+        "translation": "Admin",
+        "notes": "The main controller & manager."
+      }
+    },
+    "editUser": {
+      "label": {
+        "translation": "Edit User",
+        "notes": "Edit user."
+      }
+    },
+    "deleteAccount": {
+      "label": {
+        "translation": "Delete account",
+        "notes": "Delete user account."
+      }
+    },
+    "admins": {
+      "label": {
+        "translation": "Admins",
+        "notes": "Key overseers with elevated privileges."
+      }
+    },
+    "contacts": {
+      "label": {
+        "translation": "Contacts",
+        "notes": "User contacts."
+      }
+    },
+    "group": {
+      "label": {
+        "translation": "Group",
+        "notes": "User group."
+      }
+    },
+    "groupName": {
+      "label": {
+        "translation": "Name",
+        "notes": "User group name."
+      }
+    },
+    "usersNotFound": {
+      "label": {
+        "translation": "Users not found",
+        "notes": "No users data detected."
+      }
+    },
+    "editGroup": {
+      "label": {
+        "translation": "Edit Group",
+        "notes": "Edit user group."
+      }
+    },
+    "deleteGroup": {
+      "label": {
+        "translation": "Delete group",
+        "notes": "Delete user group button."
+      }
+    },
+    "fullNameInput": {
+      "label": {
+        "translation": "Full Name",
+        "notes": "User full name input label."
+      }
+    },
+    "phoneInput": {
+      "label": {
+        "translation": "Phone",
+        "notes": "User phone input label."
+      }
+    },
+    "removeFromGroup": {
+      "label": {
+        "translation": "Remove from group",
+        "notes": "Remove user from group."
+      }
+    },
+    "groupDetails": {
+      "label": {
+        "translation": "Group Details",
+        "notes": "User group details."
+      }
+    },
+    "member": {
+      "label": {
+        "translation": "Member",
+        "notes": "Group member."
+      }
+    },
+    "members": {
+      "label": {
+        "translation": "Members",
+        "notes": "Group members."
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Name",
+        "notes": "Username."
+      }
+    },
+    "groupsNotFound": {
+      "label": {
+        "translation": "Groups not found",
+        "notes": "No groups data detected."
+      }
+    },
+    "allUsers": {
+      "label": {
+        "translation": "All Users",
+        "notes": "All Users."
+      }
+    },
+    "allGroups": {
+      "label": {
+        "translation": "All Groups",
+        "notes": "All User Groups."
+      }
+    },
+    "currentLimitUsage": {
+      "label": {
+        "translation": "Current limit usage",
+        "notes": "Current limit."
+      }
+    },
+    "usersPlural": {
+      "label": {
+        "translation": "users",
+        "notes": "Label for the plural form of user, indicating multiple individuals."
+      }
+    },
+    "contact": {
+      "label": {
+        "translation": "Contact",
+        "notes": "User contact."
+      }
+    },
+    "memberSince": {
+      "label": {
+        "translation": "Member since",
+        "notes": "Joined on."
+      }
+    },
+    "reinviteUser": {
+      "label": {
+        "translation": "Reinvite User",
+        "notes": "A call to rejoin."
+      }
+    },
+    "userDetails": {
+      "label": {
+        "translation": "User Details",
+        "notes": "Information about a user."
+      }
+    },
+    "phoneInputPlaceholder": {
+      "label": {
+        "translation": "Enter phone number",
+        "notes": "User phone input placeholder."
+      }
+    },
+    "roleInputPlaceholder": {
+      "label": {
+        "translation": "ROLE",
+        "notes": "user role label."
+      }
+    },
+    "methodOfContactText": {
+      "label": {
+        "translation": "Text",
+        "notes": "Text method to contact user."
+      }
+    },
+    "methodOfContactEmail": {
+      "label": {
+        "translation": "Email",
+        "notes": "Email Method to Contact User."
+      }
+    },
+    "methodOfContactCall": {
+      "label": {
+        "translation": "Call",
+        "notes": "Call method to contact user."
+      }
+    },
+    "currentPassword": {
+      "label": {
+        "translation": "current password",
+        "notes": "current password"
+      }
+    },
+    "userTitle": {
+      "label": {
+        "translation": "User",
+        "notes": "User Title."
+      }
+    },
+    "usernameInput": {
+      "label": {
+        "translation": "Username",
+        "notes": "Username input label."
+      }
+    },
+    "avatar": {
+      "label": {
+        "translation": "Avatar",
+        "notes": "User avatar."
+      }
+    }
+  },
+  "location": {
+    "locations": {
+      "label": {
+        "translation": "Locations",
+        "notes": "Locations."
+      }
+    },
+    "selectUserLocations": {
+      "label": {
+        "translation": "Select User Locations",
+        "notes": "Select user locations."
+      }
+    },
+    "location": {
+      "label": {
+        "translation": "Location",
+        "notes": "Location title."
+      }
+    },
+    "building": {
+      "label": {
+        "translation": "Building",
+        "notes": "Building."
+      }
+    },
+    "current": {
+      "label": {
+        "translation": "Current",
+        "notes": "Current location."
+      }
+    },
+    "designated": {
+      "label": {
+        "translation": "Designated",
+        "notes": "Designated location."
+      }
+    },
+    "locationSchema": {
+      "label": {
+        "translation": "Location Schema",
+        "notes": "Location schema title."
+      }
+    },
+    "buildings": {
+      "label": {
+        "translation": "Buildings",
+        "notes": "Buildings."
+      }
+    },
+    "spaces": {
+      "label": {
+        "translation": "Spaces",
+        "notes": "Interiors within a building."
+      }
+    },
+    "zone": {
+      "label": {
+        "translation": "Zone",
+        "notes": "Specific area that is defined for a particular purpose."
+      }
+    },
+    "area": {
+      "label": {
+        "translation": "Area",
+        "notes": "Area."
+      }
+    },
+    "areas": {
+      "label": {
+        "translation": "Areas",
+        "notes": "Areas."
+      }
+    },
+    "formation": {
+      "label": {
+        "translation": "Formation",
+        "notes": "Organization."
+      }
+    },
+    "formations": {
+      "label": {
+        "translation": "Formations",
+        "notes": "Organizations."
+      }
+    },
+    "space": {
+      "label": {
+        "translation": "Space",
+        "notes": "Interior or enclosed areas within a building."
+      }
+    },
+    "zones": {
+      "label": {
+        "translation": "Zones",
+        "notes": "Specific areas that are defined for a particular purpose."
+      }
+    },
+    "productionLine": {
+      "label": {
+        "translation": "Production Line",
+        "notes": "Production line."
+      }
+    },
+    "productionLines": {
+      "label": {
+        "translation": "Production Lines",
+        "notes": "Production lines."
+      }
+    },
+    "partLocation": {
+      "label": {
+        "translation": "Part Location",
+        "notes": "Location associated with the legal part."
+      }
+    },
+    "buildingsWarning": {
+      "label": {
+        "translation": "There are no buildings",
+        "notes": "Buildings warning."
+      }
+    },
+    "spacesWarning": {
+      "label": {
+        "translation": "There are no spaces",
+        "notes": "Spaces warning."
+      }
+    },
+    "allZones": {
+      "label": {
+        "translation": "All zones",
+        "notes": "Inclusion of every available zone."
+      }
+    },
+    "selectLocationFromList": {
+      "label": {
+        "translation": "Select location",
+        "notes": "Select location from the list."
+      }
+    },
+    "moreLocations": {
+      "label": {
+        "translation": "More locations",
+        "notes": "Show More Locations button."
+      }
+    },
+    "floor": {
+      "label": {
+        "translation": "Floor",
+        "notes": "Floor."
+      }
+    },
+    "displayedItems": {
+      "label": {
+        "translation": "Displayed items",
+        "notes": "Displayed items."
+      }
+    },
+    "company": {
+      "label": {
+        "translation": "Company",
+        "notes": "Company."
+      }
+    },
+    "region": {
+      "label": {
+        "translation": "Region",
+        "notes": "Region."
+      }
+    },
+    "unknown": {
+      "label": {
+        "translation": "Unknown",
+        "notes": "Unknown location."
+      }
+    },
+    "type": {
+      "label": {
+        "translation": "Type",
+        "notes": "Type of location."
+      }
+    },
+    "ownerLocation": {
+      "label": {
+        "translation": "Owner Location",
+        "notes": "Location associated with the legal owner."
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Name",
+        "notes": "Name of the location."
+      }
+    },
+    "map": {
+      "label": {
+        "translation": "Map",
+        "notes": "Map."
+      }
+    },
+    "street": {
+      "label": {
+        "translation": "Street",
+        "notes": "Street."
+      }
+    },
+    "city": {
+      "label": {
+        "translation": "City",
+        "notes": "City."
+      }
+    },
+    "country": {
+      "label": {
+        "translation": "Country",
+        "notes": "Country."
+      }
+    },
+    "zip": {
+      "label": {
+        "translation": "Zip",
+        "notes": "Zip."
+      }
+    },
+    "latitude": {
+      "label": {
+        "translation": "Latitude",
+        "notes": "Latitude."
+      }
+    },
+    "timeZone": {
+      "label": {
+        "translation": "Time Zone",
+        "notes": "Time Zone."
+      }
+    },
+    "proxyID": {
+      "label": {
+        "translation": "Proxy ID",
+        "notes": "Proxy ID."
+      }
+    },
+    "regions": {
+      "label": {
+        "translation": "Regions",
+        "notes": "Regions."
+      }
+    },
+    "cameraSnapshot": {
+      "label": {
+        "translation": "Camera Snapshot",
+        "notes": "Camera snapshot."
+      }
+    },
+    "floors": {
+      "label": {
+        "translation": "Floors",
+        "notes": "Floors"
+      }
+    }
+  },
   "asset": {
+    "name": {
+      "label": {
+        "translation": "Asset Name",
+        "notes": "Asset name."
+      }
+    },
+    "assetDescriptionInput": {
+      "label": {
+        "translation": "Description",
+        "notes": "Field for asset description."
+      }
+    },
+    "costRange": {
+      "label": {
+        "translation": "Cost Range",
+        "notes": "Cost range of device."
+      }
+    },
+    "serialNumber": {
+      "label": {
+        "translation": "Serial number",
+        "notes": "Serial number of asset or device."
+      }
+    },
+    "uid": {
+      "label": {
+        "translation": "UID",
+        "notes": "Unique identifier."
+      }
+    },
+    "classNameInput": {
+      "label": {
+        "translation": "Class name",
+        "notes": "Class name field."
+      }
+    },
+    "classNameInputPlaceholder": {
+      "label": {
+        "translation": "Enter class name",
+        "notes": "Class name field placeholder."
+      }
+    },
+    "classes": {
+      "label": {
+        "translation": "Classes",
+        "notes": "Categories of assets."
+      }
+    },
+    "classesPlaceholder": {
+      "label": {
+        "translation": "Select Asset Classes",
+        "notes": "Asset Classes Input Placeholder."
+      }
+    },
+    "classDescriptionInput": {
+      "label": {
+        "translation": "Description",
+        "notes": "Field for class description."
+      }
+    },
+    "devices": {
+      "label": {
+        "translation": "Devices",
+        "notes": "Devices"
+      }
+    },
+    "devicesPlaceholder": {
+      "label": {
+        "translation": "Select Asset Devices",
+        "notes": "Asset Devices Input Placeholder."
+      }
+    },
     "station": {
       "label": {
         "translation": "Station",
@@ -24,34 +740,16 @@
         "notes": "Collections of hardware tools and gadgets."
       }
     },
-    "serialNumber": {
-      "label": {
-        "translation": "Serial number",
-        "notes": "Serial number of asset or device."
-      }
-    },
     "addAssetTitle": {
       "label": {
         "translation": "Add asset",
         "notes": "Add asset title."
       }
     },
-    "name": {
+    "assetImage": {
       "label": {
-        "translation": "Asset Name",
-        "notes": "Asset name."
-      }
-    },
-    "costRange": {
-      "label": {
-        "translation": "Cost Range",
-        "notes": "Cost range of device."
-      }
-    },
-    "assetUIDInput": {
-      "label": {
-        "translation": "Asset UID",
-        "notes": "Unique asset identifier."
+        "translation": "Asset Image",
+        "notes": "Asset image."
       }
     },
     "addAssetButton": {
@@ -60,52 +758,16 @@
         "notes": "Add asset button."
       }
     },
-    "addClassButton": {
-      "label": {
-        "translation": "Add class",
-        "notes": "Add class button."
-      }
-    },
-    "classNameInput": {
-      "label": {
-        "translation": "Class name",
-        "notes": "Class name field."
-      }
-    },
     "noDevices": {
       "label": {
         "translation": "No Devices",
         "notes": "No devices."
       }
     },
-    "cameras": {
+    "addClassButton": {
       "label": {
-        "translation": "Cameras",
-        "notes": "Cameras."
-      }
-    },
-    "devices": {
-      "label": {
-        "translation": "Devices",
-        "notes": "Devices"
-      }
-    },
-    "unassignedDevice": {
-      "label": {
-        "translation": "Unassigned device",
-        "notes": "Unassigned device."
-      }
-    },
-    "trackerID": {
-      "label": {
-        "translation": "Tracker ID",
-        "notes": "Tracker ID."
-      }
-    },
-    "assetTitle": {
-      "label": {
-        "translation": "Asset",
-        "notes": "Collection of hardware tools and gadgets."
+        "translation": "Add class",
+        "notes": "Add class button."
       }
     },
     "deviceIsOffline": {
@@ -120,28 +782,40 @@
         "notes": "Device is online."
       }
     },
+    "unassignedDevice": {
+      "label": {
+        "translation": "Unassigned device",
+        "notes": "Unassigned device."
+      }
+    },
+    "assetTitle": {
+      "label": {
+        "translation": "Asset",
+        "notes": "Collection of hardware tools and gadgets."
+      }
+    },
+    "trackerID": {
+      "label": {
+        "translation": "Tracker ID",
+        "notes": "Tracker ID."
+      }
+    },
+    "cameras": {
+      "label": {
+        "translation": "Cameras",
+        "notes": "Cameras."
+      }
+    },
     "editAsset": {
       "label": {
         "translation": "Edit asset",
         "notes": "Adjusting asset configuration."
       }
     },
-    "assetImage": {
+    "manufacturer": {
       "label": {
-        "translation": "Asset Image",
-        "notes": "Asset image."
-      }
-    },
-    "uid": {
-      "label": {
-        "translation": "UID",
-        "notes": "Unique identifier."
-      }
-    },
-    "classes": {
-      "label": {
-        "translation": "Classes",
-        "notes": "Categories of assets."
+        "translation": "Manufacturer",
+        "notes": "Manufacturer of the asset."
       }
     },
     "deleteAsset": {
@@ -204,6 +878,12 @@
         "notes": "No classes data detected."
       }
     },
+    "assetUIDInput": {
+      "label": {
+        "translation": "Asset UID",
+        "notes": "Unique asset identifier."
+      }
+    },
     "deviceName": {
       "label": {
         "translation": "Name",
@@ -232,6 +912,12 @@
       "label": {
         "translation": "Stationary",
         "notes": "Stationary Device."
+      }
+    },
+    "editClass": {
+      "label": {
+        "translation": "Edit class",
+        "notes": "Adjusting class configuration."
       }
     },
     "groups": {
@@ -264,10 +950,16 @@
         "notes": "Remove Device Button."
       }
     },
-    "editClass": {
+    "viewAsset": {
       "label": {
-        "translation": "Edit class",
-        "notes": "Adjusting class configuration."
+        "translation": "View asset",
+        "notes": "Navigate to the asset."
+      }
+    },
+    "removeFromClass": {
+      "label": {
+        "translation": "Remove from class",
+        "notes": "Remove asset from class."
       }
     },
     "group": {
@@ -282,36 +974,6 @@
         "notes": "Group name for assets."
       }
     },
-    "viewAsset": {
-      "label": {
-        "translation": "View asset",
-        "notes": "Navigate to the asset."
-      }
-    },
-    "removeFromClass": {
-      "label": {
-        "translation": "Remove from class",
-        "notes": "Remove asset from class."
-      }
-    },
-    "isOnline": {
-      "label": {
-        "translation": "Online",
-        "notes": "Device is online."
-      }
-    },
-    "assetDescriptionInput": {
-      "label": {
-        "translation": "Description",
-        "notes": "Field for asset description."
-      }
-    },
-    "assignee": {
-      "label": {
-        "translation": "Assignee",
-        "notes": "The person responsible for a specific device."
-      }
-    },
     "circuit": {
       "label": {
         "translation": "Circuit",
@@ -324,6 +986,18 @@
         "notes": "SPS."
       }
     },
+    "isOnline": {
+      "label": {
+        "translation": "Online",
+        "notes": "Device is online."
+      }
+    },
+    "assignee": {
+      "label": {
+        "translation": "Assignee",
+        "notes": "The person responsible for a specific device."
+      }
+    },
     "device": {
       "label": {
         "translation": "Device",
@@ -334,30 +1008,6 @@
       "label": {
         "translation": "Select device",
         "notes": "Select a device from the list."
-      }
-    },
-    "gateways": {
-      "label": {
-        "translation": "Gateways",
-        "notes": "Gateways"
-      }
-    },
-    "isOffline": {
-      "label": {
-        "translation": "Offline",
-        "notes": "Device is offline."
-      }
-    },
-    "LEDLights": {
-      "label": {
-        "translation": "LED Lights",
-        "notes": "LED Lights"
-      }
-    },
-    "sensors": {
-      "label": {
-        "translation": "Sensors",
-        "notes": "Sensors."
       }
     },
     "searchDeviceID": {
@@ -382,6 +1032,30 @@
       "label": {
         "translation": "Device List",
         "notes": "Device List"
+      }
+    },
+    "gateways": {
+      "label": {
+        "translation": "Gateways",
+        "notes": "Gateways"
+      }
+    },
+    "isOffline": {
+      "label": {
+        "translation": "Offline",
+        "notes": "Device is offline."
+      }
+    },
+    "LEDLights": {
+      "label": {
+        "translation": "LED Lights",
+        "notes": "LED Lights"
+      }
+    },
+    "sensors": {
+      "label": {
+        "translation": "Sensors",
+        "notes": "Sensors."
       }
     },
     "searchName": {
@@ -518,6 +1192,12 @@
         "notes": "Mass Configuration title."
       }
     },
+    "tanks": {
+      "label": {
+        "translation": "Tanks",
+        "notes": "Tanks page title."
+      }
+    },
     "pinPoint": {
       "label": {
         "translation": "IvedaRTLS",
@@ -564,6 +1244,34 @@
       "label": {
         "translation": "Smart Poles",
         "notes": "Smart Poles"
+      }
+    },
+    "commandCenter": {
+      "label": {
+        "translation": "Command Center",
+        "notes": "A hub for overseeing and controlling operations."
+      }
+    },
+    "backToDashboard": {
+      "label": {
+        "translation": "Back to Dashboard",
+        "notes": "Back to Dashboard button or link."
+      }
+    },
+    "events": {
+      "label": {
+        "translation": "Events",
+        "notes": "A list of events related to the solution."
+      },
+      "clearFilters": {
+        "translation": "Clear",
+        "notes": "Clear all active filters."
+      }
+    },
+    "system": {
+      "label": {
+        "translation": "System",
+        "notes": "System."
       }
     },
     "solutionsPage": {
@@ -645,6 +1353,24 @@
           }
         }
       },
+      "LevelNOW": {
+        "label": {
+          "translation": "LevelNOW",
+          "notes": "LevelNOW solution title."
+        }
+      },
+      "levelnow": {
+        "options": {
+          "02": {
+            "translation": "Perimeter protection",
+            "notes": "Perimeter protection option label."
+          },
+          "04": {
+            "translation": "History of recordings",
+            "notes": "History of recordings option label."
+          }
+        }
+      },
       "installedChip": {
         "label": {
           "translation": "Installed",
@@ -712,10 +1438,16 @@
         "notes": "Total Smart Poles."
       }
     },
-    "system": {
+    "solution": {
       "label": {
-        "translation": "System",
-        "notes": "System."
+        "translation": "Solution",
+        "notes": "Solution."
+      }
+    },
+    "cerebro": {
+      "label": {
+        "translation": "Cerebro",
+        "notes": "Title of Cerebro App."
       }
     },
     "polesTemperature": {
@@ -736,18 +1468,6 @@
         "notes": "Poles humidity."
       }
     },
-    "solution": {
-      "label": {
-        "translation": "Solution",
-        "notes": "Solution."
-      }
-    },
-    "cerebro": {
-      "label": {
-        "translation": "Cerebro",
-        "notes": "Title of Cerebro App."
-      }
-    },
     "metering": {
       "label": {
         "translation": "Metering",
@@ -764,18 +1484,6 @@
       "label": {
         "translation": "Health",
         "notes": "Health."
-      }
-    },
-    "configureScreens": {
-      "label": {
-        "translation": "Configure Screens",
-        "notes": "Screen configuration."
-      }
-    },
-    "backToDashboard": {
-      "label": {
-        "translation": "Back to Dashboard",
-        "notes": "Back to Dashboard button or link."
       }
     },
     "yearInput": {
@@ -796,6 +1504,12 @@
         "notes": "Carbon output rate."
       }
     },
+    "configureScreens": {
+      "label": {
+        "translation": "Configure Screens",
+        "notes": "Screen configuration."
+      }
+    },
     "editCarbonEmissionFactor": {
       "label": {
         "translation": "Edit carbon emission factor",
@@ -814,12 +1528,6 @@
         "notes": "Enter factor."
       }
     },
-    "commandCenter": {
-      "label": {
-        "translation": "Command Center",
-        "notes": "A hub for overseeing and controlling operations."
-      }
-    },
     "solutionsSelector": {
       "ai": {
         "listItem": {
@@ -831,383 +1539,117 @@
       }
     }
   },
-  "user": {
-    "usersTitle": {
+  "issue": {
+    "issuesTitle": {
       "label": {
-        "translation": "Users",
-        "notes": "Users Title."
+        "translation": "Issues",
+        "notes": "Issues title."
       }
     },
-    "profileImage": {
+    "issue": {
       "label": {
-        "translation": "Profile Image",
-        "notes": "User avatar image."
+        "translation": "Issue",
+        "notes": "Issue title"
       }
     },
-    "roles": {
+    "editIssueTitle": {
       "label": {
-        "translation": "Roles",
-        "notes": "User roles."
-      },
-      "viewer": {
-        "translation": "Viewer",
-        "notes": "Predefined Viewer role name"
+        "translation": "Edit Issue",
+        "notes": "Edit issue title."
       }
     },
-    "groups": {
+    "summary": {
       "label": {
-        "translation": "Groups",
-        "notes": "User groups."
+        "translation": "Summary",
+        "notes": "Overview of the issue."
       }
     },
-    "confirmPasswordInput": {
-      "label": {
-        "translation": "Confirm password",
-        "notes": "Confirm password field."
-      }
-    },
-    "notifications": {
-      "label": {
-        "translation": "Notifications",
-        "notes": "Notifications."
-      }
-    },
-    "addGroupButton": {
-      "label": {
-        "translation": "Add group",
-        "notes": "Add Group Button."
-      }
-    },
-    "groupNameInput": {
-      "label": {
-        "translation": "Group name",
-        "notes": "The collective label for a team."
-      }
-    },
-    "descriptionInput": {
+    "description": {
       "label": {
         "translation": "Description",
-        "notes": "User group description field."
+        "notes": "Issue description."
       }
     },
-    "firstNameValidation": {
+    "priorityRequired": {
       "label": {
-        "translation": "You must enter first name.",
-        "notes": "Input first name for field verification."
+        "translation": "Priority is required.",
+        "notes": "Priority field is mandatory."
       }
     },
-    "lastNameValidation": {
+    "createIssue": {
       "label": {
-        "translation": "You must enter last name.",
-        "notes": "Input last name for field verification."
+        "translation": "Create Issue",
+        "notes": "Create issue title."
       }
     },
-    "emailValidation": {
+    "allPriority": {
       "label": {
-        "translation": "You must enter email.",
-        "notes": "Input email for field verification."
+        "translation": "All priority",
+        "notes": "Priority of issue."
       }
     },
-    "addUser": {
+    "allAssignee": {
       "label": {
-        "translation": "Add User",
-        "notes": "Add User Title."
+        "translation": "All assignee",
+        "notes": "All assignees for the issue."
       }
     },
-    "firstNameInput": {
+    "allStatus": {
       "label": {
-        "translation": "First Name",
-        "notes": "User first name input label."
+        "translation": "All status",
+        "notes": "Statuses for issue."
       }
     },
-    "lastNameInput": {
+    "issueID": {
       "label": {
-        "translation": "Last Name",
-        "notes": "User last name input label."
+        "translation": "Issue ID",
+        "notes": "Issue ID"
       }
     },
-    "emailInput": {
+    "noIssues": {
       "label": {
-        "translation": "Email",
-        "notes": "User email input Label."
+        "translation": "There are no issues here yet",
+        "notes": "No issues caption."
       }
     },
-    "jobTitleInput": {
+    "issueCreated": {
       "label": {
-        "translation": "Job title",
-        "notes": "Job title input field."
+        "translation": "Issue for this event created.",
+        "notes": "Issue for this event created."
       }
     },
-    "categoryInput": {
+    "viewIssue": {
       "label": {
-        "translation": "Category",
-        "notes": "User category."
+        "translation": "View Issue",
+        "notes": "View issue button or link."
       }
     },
-    "roleInput": {
+    "aboutEvent": {
       "label": {
-        "translation": "Role",
-        "notes": "User role input label."
+        "translation": "About event",
+        "notes": "About event title."
       }
     },
-    "roleSelect": {
+    "details": {
       "label": {
-        "translation": "Select role",
-        "notes": "User role select label."
+        "translation": "Details",
+        "notes": "Issue specifics."
       }
     },
-    "admin": {
+    "notFound": {
       "label": {
-        "translation": "Admin",
-        "notes": "The main controller & manager."
+        "translation": "Issue not found",
+        "notes": "The issue is missing."
       }
     },
-    "editUser": {
+    "connectionStatus": {
       "label": {
-        "translation": "Edit User",
-        "notes": "Edit user."
-      }
-    },
-    "deleteAccount": {
-      "label": {
-        "translation": "Delete account",
-        "notes": "Delete user account."
-      }
-    },
-    "admins": {
-      "label": {
-        "translation": "Admins",
-        "notes": "Key overseers with elevated privileges."
-      }
-    },
-    "contacts": {
-      "label": {
-        "translation": "Contacts",
-        "notes": "User contacts."
-      }
-    },
-    "group": {
-      "label": {
-        "translation": "Group",
-        "notes": "User group."
-      }
-    },
-    "groupName": {
-      "label": {
-        "translation": "Name",
-        "notes": "User group name."
-      }
-    },
-    "usersNotFound": {
-      "label": {
-        "translation": "Users not found",
-        "notes": "No users data detected."
-      }
-    },
-    "newPasswordInputPlaceholder": {
-      "label": {
-        "translation": "New password"
-      }
-    },
-    "confirmPasswordInputPlaceholder": {
-      "label": {
-        "translation": "Confirm password"
-      }
-    },
-    "editGroup": {
-      "label": {
-        "translation": "Edit Group",
-        "notes": "Edit user group."
-      }
-    },
-    "deleteGroup": {
-      "label": {
-        "translation": "Delete group",
-        "notes": "Delete user group button."
-      }
-    },
-    "fullNameInput": {
-      "label": {
-        "translation": "Full Name",
-        "notes": "User full name input label."
-      }
-    },
-    "phoneInput": {
-      "label": {
-        "translation": "Phone",
-        "notes": "User phone input label."
-      }
-    },
-    "removeFromGroup": {
-      "label": {
-        "translation": "Remove from group",
-        "notes": "Remove user from group."
-      }
-    },
-    "groupDetails": {
-      "label": {
-        "translation": "Group Details",
-        "notes": "User group details."
-      }
-    },
-    "member": {
-      "label": {
-        "translation": "Member",
-        "notes": "Group member."
-      }
-    },
-    "members": {
-      "label": {
-        "translation": "Members",
-        "notes": "Group members."
-      }
-    },
-    "name": {
-      "label": {
-        "translation": "Name",
-        "notes": "Username."
-      }
-    },
-    "groupsNotFound": {
-      "label": {
-        "translation": "Groups not found",
-        "notes": "No groups data detected."
-      }
-    },
-    "allUsers": {
-      "label": {
-        "translation": "All Users",
-        "notes": "All Users."
-      }
-    },
-    "allGroups": {
-      "label": {
-        "translation": "All Groups",
-        "notes": "All User Groups."
-      }
-    },
-    "contact": {
-      "label": {
-        "translation": "Contact",
-        "notes": "User contact."
-      }
-    },
-    "memberSince": {
-      "label": {
-        "translation": "Member since",
-        "notes": "Joined on."
-      }
-    },
-    "userDetails": {
-      "label": {
-        "translation": "User Details",
-        "notes": "Information about a user."
-      }
-    },
-    "newPasswordInput": {
-      "label": {
-        "translation": "New password",
-        "notes": "New password field."
-      }
-    },
-    "reinviteUser": {
-      "label": {
-        "translation": "Reinvite User",
-        "notes": "A call to rejoin."
-      }
-    },
-    "emailInputPlaceholder": {
-      "label": {
-        "translation": "Enter email",
-        "notes": "User email input placeholder."
-      }
-    },
-    "phoneInputPlaceholder": {
-      "label": {
-        "translation": "Enter phone number",
-        "notes": "User phone input placeholder."
-      }
-    },
-    "jobTitleInputPlaceholder": {
-      "label": {
-        "translation": "Enter job title",
-        "notes": "User job title input placeholder."
-      }
-    },
-    "roleInputPlaceholder": {
-      "label": {
-        "translation": "Enter role",
-        "notes": "User role input placeholder."
-      }
-    },
-    "methodOfContactText": {
-      "label": {
-        "translation": "Text",
-        "notes": "Text method to contact user."
-      }
-    },
-    "passwordMismatchError": {
-      "label": {
-          "translation": "新密碼與確認密碼不匹配，請確保兩者相同。"
-      }
-  },
-    "methodOfContactEmail": {
-      "label": {
-        "translation": "Email",
-        "notes": "Email Method to Contact User."
-      }
-    },
-    "methodOfContactCall": {
-      "label": {
-        "translation": "Call",
-        "notes": "Call method to contact user."
-      }
-    },
-    "userTitle": {
-      "label": {
-        "translation": "User",
-        "notes": "User Title."
-      }
-    },
-    "usernameInput": {
-      "label": {
-        "translation": "Username",
-        "notes": "Username input label."
-      }
-    },
-    "avatar": {
-      "label": {
-        "translation": "Avatar",
-        "notes": "User avatar."
+        "translation": "Connection status",
+        "notes": "Device connectivity state."
       }
     }
   },
   "general": {
-    "noNotifications": {
-      "label": {
-        "translation": "No notifications"
-      }
-    },
-    "loadingNotifications": {
-      "label": {
-        "translation": "Loading notifications..."
-      }
-    },
-    "noComment": {
-      "label": {
-        "translation": "There are no comments for this question yet."
-      }
-    },
-    "expandDrawerTooltip": {
-      "label": {
-        "translation": "Show Sidebar"
-      }
-    },
-    "collapseDrawerTooltip": {
-      "label": {
-          "translation": "Collapse Sidebar"
-      }
-    },
     "closeButton": {
       "label": {
         "translation": "Close",
@@ -1226,28 +1668,10 @@
         "notes": "Cancel button."
       }
     },
-    "imageFileUploadButton": {
+    "clearButton": {
       "label": {
-        "translation": "Upload",
-        "notes": "Upload button."
-      }
-    },
-    "imageFileChangeButton": {
-      "label": {
-        "translation": "Change",
-        "notes": "Change button."
-      }
-    },
-    "changeButton": {
-      "label": {
-        "translation": "Change",
-        "notes": "Change button."
-      }
-    },
-    "errorVerification": {
-      "label": {
-        "translation": "error",
-        "notes": "Verification mistake."
+        "translation": "Clear",
+        "notes": "Clear button."
       }
     },
     "phone": {
@@ -1262,10 +1686,10 @@
         "notes": "Email."
       }
     },
-    "clearButton": {
+    "help": {
       "label": {
-        "translation": "Clear",
-        "notes": "Clear button."
+        "translation": "Help",
+        "notes": "Assistance or guidance."
       }
     },
     "edit": {
@@ -1280,6 +1704,12 @@
         "notes": "Collections of hardware tools and gadgets."
       }
     },
+    "all": {
+      "label": {
+        "translation": "All",
+        "notes": "Entirety of something."
+      }
+    },
     "menu": {
       "label": {
         "translation": "Menu",
@@ -1292,10 +1722,10 @@
         "notes": "Outline of a particular item or subject."
       }
     },
-    "help": {
+    "saveButton": {
       "label": {
-        "translation": "Help",
-        "notes": "Assistance or guidance."
+        "translation": "Save",
+        "notes": "Save button."
       }
     },
     "backButton": {
@@ -1310,34 +1740,22 @@
         "notes": "Next button or link."
       }
     },
-    "saveButton": {
-      "label": {
-        "translation": "Save",
-        "notes": "Save button."
-      }
-    },
-    "all": {
-      "label": {
-        "translation": "All",
-        "notes": "Entirety of something."
-      }
-    },
     "createButton": {
       "label": {
         "translation": "Create",
         "notes": "Create button."
       }
     },
+    "updateSuccessfully": {
+      "label": {
+        "translation": "Updated successfully",
+        "notes": "Updated successfully"
+      }
+    },
     "view": {
       "label": {
         "translation": "View",
         "notes": "Button or link that allows to access additional information."
-      }
-    },
-    "matchPassword": {
-      "label": {
-        "translation": "Passwords do not match.",
-        "notes": "Two passwords entered by the user do not match."
       }
     },
     "selectDate": {
@@ -1352,22 +1770,34 @@
         "notes": "Confirms the selected choices."
       }
     },
-    "updateSuccessfully": {
+    "processing": {
       "label": {
-        "translation": "Updated successfully",
-        "notes": "Updated successfully"
+        "translation": "Processing...",
+        "notes": "Indicates an action is in progress."
       }
     },
-    "from": {
+    "loadingNotifications": {
       "label": {
-        "translation": "From",
-        "notes": "Refers to the starting point."
+        "translation": "loadingNotifications",
+        "notes": "loadingNotifications"
       }
     },
-    "to": {
+    "noNotifications": {
       "label": {
-        "translation": "To",
-        "notes": "Endpoint of something."
+        "translation": "noNotifications",
+        "notes": "noNotifications"
+      }
+    },
+    "viewAll": {
+      "label": {
+        "translation": "View All",
+        "notes": "View all notifications."
+      }
+    },
+    "details": {
+      "label": {
+        "translation": "More Details",
+        "notes": "Button or link that allows to access additional information."
       }
     },
     "access": {
@@ -1394,6 +1824,60 @@
         "notes": "See more button or link."
       }
     },
+    "matchPassword": {
+      "label": {
+        "translation": "Passwords do not match.",
+        "notes": "Two passwords entered by the user do not match."
+      }
+    },
+    "errorVerification": {
+      "label": {
+        "translation": "error",
+        "notes": "Verification mistake."
+      }
+    },
+    "from": {
+      "label": {
+        "translation": "From",
+        "notes": "Refers to the starting point."
+      }
+    },
+    "to": {
+      "label": {
+        "translation": "To",
+        "notes": "Endpoint of something."
+      }
+    },
+    "copyLink": {
+      "label": {
+        "translation": "Copy link",
+        "notes": "Action that allows to duplicate a web link or URL."
+      }
+    },
+    "removeButton": {
+      "label": {
+        "translation": "Remove",
+        "notes": "Remove button."
+      }
+    },
+    "addButton": {
+      "label": {
+        "translation": "Add",
+        "notes": "Add button."
+      }
+    },
+    "changePassword": {
+      "label": {
+        "translation": "Change Password",
+        "notes": "Change Password button."
+      }
+    },
+    "submitButton": {
+      "label": {
+        "translation": "Submit",
+        "notes": "Submit button."
+      }
+    },
     "accessDeniedCaption": {
       "label": {
         "translation": "Access denied",
@@ -1418,40 +1902,10 @@
         "notes": "Take me home button or link."
       }
     },
-    "removeButton": {
-      "label": {
-        "translation": "Remove",
-        "notes": "Remove button."
-      }
-    },
-    "addButton": {
-      "label": {
-        "translation": "Add",
-        "notes": "Add button."
-      }
-    },
-    "copyLink": {
-      "label": {
-        "translation": "Copy link",
-        "notes": "Action that allows to duplicate a web link or URL."
-      }
-    },
     "expandView": {
       "label": {
         "translation": "Expand view",
         "notes": "Expand view button."
-      }
-    },
-    "changePassword": {
-      "label": {
-        "translation": "Change Password",
-        "notes": "Change Password button."
-      }
-    },
-    "submitButton": {
-      "label": {
-        "translation": "Submit",
-        "notes": "Submit button."
       }
     },
     "isLoading": {
@@ -1472,12 +1926,6 @@
         "notes": "Choose a language from the list."
       }
     },
-    "readme":{
-      "label": {
-        "translation": "ReadMe",
-        "notes": "ReadMe file."
-      }
-    },
     "upload": {
       "label": {
         "translation": "Upload",
@@ -1490,6 +1938,18 @@
         "notes": "Process of transferring data to a local device."
       }
     },
+    "readme": {
+      "label": {
+        "translation": "ReadMe",
+        "notes": "ReadMe file."
+      }
+    },
+    "search": {
+      "label": {
+        "translation": "Search",
+        "notes": "Exploration of a specific item."
+      }
+    },
     "collapse": {
       "label": {
         "translation": "Collapse",
@@ -1500,6 +1960,24 @@
       "label": {
         "translation": "Summary",
         "notes": "Brief overview."
+      }
+    },
+    "ofPreposition": {
+      "label": {
+        "translation": "of",
+        "notes": "Preposition indicating belonging."
+      }
+    },
+    "closePopover": {
+      "label": {
+        "translation": "Close popover",
+        "notes": "Close popover."
+      }
+    },
+    "information": {
+      "label": {
+        "translation": "Information",
+        "notes": "Data about a particular subject."
       }
     },
     "logo": {
@@ -1520,22 +1998,40 @@
         "notes": "Select location from the list."
       }
     },
-    "grid": {
+    "goToButton": {
       "label": {
-        "translation": "Grid",
-        "notes": "Organizes content into columns and rows."
-      }
-    },
-    "information": {
-      "label": {
-        "translation": "Information",
-        "notes": "Data about a particular subject."
+        "translation": "Go to",
+        "notes": "Label for Go to button."
       }
     },
     "uploadPhoto": {
       "label": {
         "translation": "Upload photo",
         "notes": "Action to transfer an image to an application."
+      }
+    },
+    "imageFileChangeButton": {
+      "label": {
+        "translation": "Change",
+        "notes": "Change button."
+      }
+    },
+    "selectGroupFromList": {
+      "label": {
+        "translation": "Select User Groups",
+        "notes": "Select User Groups."
+      }
+    },
+    "changeButton": {
+      "label": {
+        "translation": "Change",
+        "notes": "Change button."
+      }
+    },
+    "grid": {
+      "label": {
+        "translation": "Grid",
+        "notes": "Organizes content into columns and rows."
       }
     },
     "index": {
@@ -1580,10 +2076,40 @@
         "notes": "End date."
       }
     },
+    "imageFileUploadButton": {
+      "label": {
+        "translation": "Upload",
+        "notes": "Upload button."
+      }
+    },
+    "imageFileRemoveButton": {
+      "label": {
+        "translation": "Remove",
+        "notes": "Removal or deletion of an image button."
+      }
+    },
+    "deleteButton": {
+      "label": {
+        "translation": "Delete",
+        "notes": "Delete button."
+      }
+    },
+    "nothingFound": {
+      "label": {
+        "translation": "Nothing found",
+        "notes": "Description for an empty list."
+      }
+    },
     "confirmButton": {
       "label": {
         "translation": "Confirm",
         "notes": "Confirm button."
+      }
+    },
+    "selectAll": {
+      "label": {
+        "translation": "Select all",
+        "notes": "Toggle all options."
       }
     },
     "goToPreviousPageButton": {
@@ -1597,36 +2123,13 @@
         "translation": "Go to next page",
         "notes": "Go to next page button."
       }
-    },
-    "search": {
-      "label": {
-        "translation": "Search",
-        "notes": "Exploration of a specific item."
-      }
-    },
-    "resetPasswordButton": {
-      "label": {
-        "translation": "Reset user password"
-      }
-    },
-    "viewAll": {
-    "label": {
-      "translation": "View ALL",
-      "notes": "Viewing all notifications."
     }
-  }
   },
   "events": {
     "events": {
       "label": {
         "translation": "Events",
         "notes": "Events title."
-      }
-    },
-    "recentEvents": {
-      "label": {
-        "translation": "Recent events",
-        "notes": "Recent events."
       }
     },
     "totalEvents": {
@@ -1653,10 +2156,10 @@
         "notes": "Alert message."
       }
     },
-    "eventDetails": {
+    "recentEvents": {
       "label": {
-        "translation": "Event Details",
-        "notes": "In-depth information about the event."
+        "translation": "Recent events",
+        "notes": "Recent events."
       }
     },
     "eventInfo": {
@@ -1669,6 +2172,12 @@
       "label": {
         "translation": "No Events",
         "notes": "No events."
+      }
+    },
+    "eventDetails": {
+      "label": {
+        "translation": "Event Details",
+        "notes": "In-depth information about the event."
       }
     },
     "criticalEvent": {
@@ -1749,6 +2258,12 @@
         "notes": "Problem."
       }
     },
+    "unknown": {
+      "label": {
+        "translation": "Unknown",
+        "notes": "Unknown notification."
+      }
+    },
     "default": {
       "label": {
         "translation": "Default",
@@ -1778,424 +2293,389 @@
         "translation": "Check humid devices",
         "notes": "Check humid devices."
       }
-    },
-    "unknown": {
+    }
+  },
+  "tanks": {
+    "tanks": {
       "label": {
-        "translation": "Unknown",
-        "notes": "Unknown notification."
+        "translation": "Tanks",
+        "notes": "Tanks page title."
       }
     }
   },
-  "issue": {
-    "issuesTitle": {
+  "ems": {
+    "energy_analysis": {
       "label": {
-        "translation": "Issues",
-        "notes": "Issues title."
+        "translation": "Energy Analysis",
+        "notes": "Energy Analysis title."
       }
     },
-    "editIssueTitle": {
+    "riskLevel": {
       "label": {
-        "translation": "Edit Issue",
-        "notes": "Edit issue title."
+        "translation": "Risk level",
+        "notes": "Severity level."
       }
     },
-    "summary": {
+    "kWhLastMonth": {
       "label": {
-        "translation": "Summary",
-        "notes": "Overview of the issue."
+        "translation": "kWh last month",
+        "notes": "Month Node Consumption label"
       }
     },
-    "description": {
+    "cO2eLastMonth": {
       "label": {
-        "translation": "Description",
-        "notes": "Issue description."
+        "translation": "cO2e last month",
+        "notes": "Month Node Consumption label"
       }
     },
-    "createIssue": {
+    "consumption": {
       "label": {
-        "translation": "Create Issue",
-        "notes": "Create issue title."
+        "translation": "Consumption",
+        "notes": "The amount of energy or resources used over a given period."
+      },
+      "month": {
+        "translation": "Consumption",
+        "notes": "Month Node Consumption Data left"
       }
     },
-    "allPriority": {
+    "settingCircuitSummary": {
       "label": {
-        "translation": "All priority",
-        "notes": "Priority of issue."
+        "translation": "Setting circuit summary",
+        "notes": "Setting circuit summary title"
       }
     },
-    "allAssignee": {
+    "CO2e": {
       "label": {
-        "translation": "All assignee",
-        "notes": "All assignees for the issue."
+        "translation": "CO2e",
+        "notes": "Emission of CO2 in kilogram."
       }
     },
-    "allStatus": {
+    "maximumPower": {
       "label": {
-        "translation": "All status",
-        "notes": "Statuses for issue."
+        "translation": "Maximum Power",
+        "notes": "Maximum Power title"
       }
     },
-    "issueID": {
+    "historicalTrend": {
       "label": {
-        "translation": "Issue ID",
-        "notes": "Issue ID"
+        "translation": "Historical Trend",
+        "notes": "Historical Trend title"
       }
     },
-    "noIssues": {
+    "currentKW": {
       "label": {
-        "translation": "There are no issues here yet",
-        "notes": "No issues caption."
+        "translation": "Current kW",
+        "notes": "The present kilowatt measurement."
       }
     },
-    "viewIssue": {
+    "kW": {
       "label": {
-        "translation": "View Issue",
-        "notes": "View issue button or link."
+        "translation": "kW",
+        "notes": "A unit measuring power output or consumption."
       }
     },
-    "issueCreated": {
+    "kWh": {
       "label": {
-        "translation": "Issue for this event created.",
-        "notes": "Issue for this event created."
+        "translation": "kWh",
+        "notes": "A unit measuring energy consumption over time."
       }
     },
-    "issue": {
+    "demand": {
       "label": {
-        "translation": "Issue",
-        "notes": "Issue title"
+        "translation": "Demand",
+        "notes": "The amount of power required or requested at a given time."
       }
     },
-    "aboutEvent": {
+    "factory": {
       "label": {
-        "translation": "About event",
-        "notes": "About event title."
+        "translation": "Factory",
+        "notes": "Factory"
       }
     },
-    "details": {
+    "selectBuilding": {
       "label": {
-        "translation": "Details",
-        "notes": "Issue specifics."
+        "translation": "Select building",
+        "notes": "Select building placeholder"
       }
     },
-    "notFound": {
+    "selectFloor": {
       "label": {
-        "translation": "Issue not found",
-        "notes": "The issue is missing."
+        "translation": "Select floor",
+        "notes": "Select floor placeholder"
       }
     },
-    "connectionStatus": {
+    "selectZone": {
       "label": {
-        "translation": "Connection status",
-        "notes": "Device connectivity state."
-      }
-    }
-  },
-  "location": {
-    "locations": {
-      "label": {
-        "translation": "Locations",
-        "notes": "Locations."
-      }
-    },
-    "location": {
-      "label": {
-        "translation": "Location",
-        "notes": "Location title."
-      }
-    },
-    "current": {
-      "label": {
-        "translation": "Current",
-        "notes": "Current location."
-      }
-    },
-    "locationSchema": {
-      "label": {
-        "translation": "Location Schema",
-        "notes": "Location schema title."
-      }
-    },
-    "buildings": {
-      "label": {
-        "translation": "Buildings",
-        "notes": "Buildings."
-      }
-    },
-    "spaces": {
-      "label": {
-        "translation": "Spaces",
-        "notes": "Interiors within a building."
-      }
-    },
-    "designated": {
-      "label": {
-        "translation": "Designated",
-        "notes": "Designated location."
-      }
-    },
-    "building": {
-      "label": {
-        "translation": "Building",
-        "notes": "Building."
-      }
-    },
-    "area": {
-      "label": {
-        "translation": "Area",
-        "notes": "Area."
-      }
-    },
-    "areas": {
-      "label": {
-        "translation": "Areas",
-        "notes": "Areas."
-      }
-    },
-    "formation": {
-      "label": {
-        "translation": "Formation",
-        "notes": "Organization."
-      }
-    },
-    "formations": {
-      "label": {
-        "translation": "Formations",
-        "notes": "Organizations."
-      }
-    },
-    "space": {
-      "label": {
-        "translation": "Space",
-        "notes": "Interior or enclosed areas within a building."
-      }
-    },
-    "zone": {
-      "label": {
-        "translation": "Zone",
-        "notes": "Specific area that is defined for a particular purpose."
-      }
-    },
-    "zones": {
-      "label": {
-        "translation": "Zones",
-        "notes": "Specific areas that are defined for a particular purpose."
+        "translation": "Select zone",
+        "notes": "Select zone placeholder"
       }
     },
     "productionLine": {
       "label": {
         "translation": "Production line",
-        "notes": "Production line."
+        "notes": "Production line placeholder"
       }
     },
-    "productionLines": {
+    "ConsumptionTrend": {
+      "legend": {
+        "translation": "Consumption(kWh)",
+        "notes": "Consumption Trend legend label"
+      }
+    },
+    "consumptionTrend": {
       "label": {
-        "translation": "Production Lines",
-        "notes": "Production lines."
+        "translation": "Consumption Trend",
+        "notes": "Consumption Trend title"
       }
     },
-    "partLocation": {
+    "selectLocations": {
       "label": {
-        "translation": "Part Location",
-        "notes": "Location associated with the legal part."
+        "translation": "Select Locations",
+        "notes": "Select locations."
       }
     },
-    "buildingsWarning": {
+    "kWhThisMonth": {
       "label": {
-        "translation": "There are no buildings",
-        "notes": "Buildings warning."
+        "translation": "kWh this month",
+        "notes": "Month Node Consumption label"
       }
     },
-    "spacesWarning": {
+    "cO2eThisMonth": {
       "label": {
-        "translation": "There are no spaces",
-        "notes": "Spaces warning."
+        "translation": "cO2e this month",
+        "notes": "Month Node Consumption label"
       }
     },
-    "allZones": {
+    "thisMonth": {
+      "translation": "This Month",
+      "notes": "Month Node Consumption Data left"
+    },
+    "lastMonth": {
+      "translation": "Last Month",
+      "notes": "Month Node Consumption Data left"
+    },
+    "uploadConfirmTitle": {
       "label": {
-        "translation": "All zones",
-        "notes": "Inclusion of every available zone."
+        "translation": "uploadConfirmTitle",
+        "notes": "are you sure you want to proceed?"
       }
     },
-    "floor": {
+    "confirmUploadMessage": {
       "label": {
-        "translation": "Floor",
-        "notes": "Floor."
+        "translation": "confirmUploadMessage",
+        "notes": "Data Override Warning: Uploading this Excel sheet will replace the existing data. This may result in the removal of current records and addition of new data. This action cannot be undone."
       }
     },
-    "displayedItems": {
+    "Cancel": {
       "label": {
-        "translation": "Displayed items",
-        "notes": "Displayed items."
+        "translation": "Cancel",
+        "notes": "Cancel action."
       }
     },
-    "selectLocationFromList": {
+    "Proceed": {
       "label": {
-        "translation": "Select location",
-        "notes": "Select location from the list."
+        "translation": "Proceed",
+        "notes": "Confirm action."
       }
     },
-    "moreLocations": {
+    "process": {
       "label": {
-        "translation": "More locations",
-        "notes": "Show More Locations button."
+        "translation": "Process",
+        "notes": "Process."
       }
     },
-    "company": {
+    "addProcess": {
       "label": {
-        "translation": "Company",
-        "notes": "Company."
+        "translation": "Add Process",
+        "notes": "Add Process."
       }
     },
-    "region": {
+    "emission": {
       "label": {
-        "translation": "Region",
-        "notes": "Region."
+        "translation": "Emission",
+        "notes": "Emission."
       }
     },
-    "unknown": {
+    "noProcess": {
       "label": {
-        "translation": "Unknown",
-        "notes": "Unknown location."
+        "translation": "No Process",
+        "notes": "Process missing."
       }
     },
-    "map": {
+    "unitRequire": {
       "label": {
-        "translation": "Map",
-        "notes": "Map."
+        "translation": "Unit must be require",
+        "notes": "Unit is mandatory."
       }
     },
-    "ownerLocation": {
+    "processRequire": {
       "label": {
-        "translation": "Owner Location",
-        "notes": "Location associated with the legal owner."
+        "translation": "Process must be require",
+        "notes": "Process is mandatory."
       }
     },
-    "type": {
+    "deviceId": {
       "label": {
-        "translation": "Type",
-        "notes": "Type of location."
+        "translation": "Device Id must be require",
+        "notes": "Device Id is mandatory."
       }
     },
-    "selectUserLocations": {
+    "unitsNumberBetterThanZero": {
       "label": {
-        "translation": "Select User Locations",
-        "notes": "Select user locations."
+        "translation": "Units number must be better than 0",
+        "notes": "Unit number > 0."
       }
     },
-    "name": {
+    "enterAmount": {
       "label": {
-        "translation": "Name",
-        "notes": "Name of the location."
+        "translation": "You must enter amount",
+        "notes": "Amount required."
       }
     },
-    "proxyID": {
+    "mustEnterEndDate": {
       "label": {
-        "translation": "Proxy ID",
-        "notes": "Proxy ID."
+        "translation": "You must enter end date",
+        "notes": "End date required."
       }
     },
-    "street": {
+    "addHistory": {
       "label": {
-        "translation": "Street",
-        "notes": "Street."
+        "translation": "Add History",
+        "notes": "Add History."
       }
     },
-    "city": {
+    "noUnit": {
       "label": {
-        "translation": "City",
-        "notes": "City."
+        "translation": "No Unit",
+        "notes": "Unit missing."
       }
     },
-    "country": {
+    "unit": {
       "label": {
-        "translation": "Country",
-        "notes": "Country."
+        "translation": "Unit",
+        "notes": "Unit."
       }
     },
-    "zip": {
+    "selectUnit": {
       "label": {
-        "translation": "Zip",
-        "notes": "Zip."
+        "translation": "Select unit",
+        "notes": "Select a unit."
       }
     },
-    "latitude": {
+    "selectProcess": {
       "label": {
-        "translation": "Latitude",
-        "notes": "Latitude."
+        "translation": "Select process",
+        "notes": "Select a process."
       }
     },
-    "timeZone": {
+    "circuitLoop": {
       "label": {
-        "translation": "Time Zone",
-        "notes": "Time Zone."
+        "translation": "Circuit loop",
+        "notes": "Circuit loop."
       }
     },
-    "regions": {
+    "selectCircuit": {
       "label": {
-        "translation": "Regions",
-        "notes": "Regions."
+        "translation": "Select circuit",
+        "notes": "Select circuit."
       }
     },
-    "cameraSnapshot": {
+    "addProductButton": {
       "label": {
-        "translation": "Camera Snapshot",
-        "notes": "Camera snapshot."
+        "translation": "Add Product",
+        "notes": "AddProduct"
       }
     },
-    "floors": {
+    "productName": {
       "label": {
-        "translation": "Floors",
-        "notes": "Floors"
-      }
-    }
-  },
-  "label": {
-    "locations": {
-      "translation": "Locations",
-      "notes": "Text for input label"
-    },
-    "allLocations": {
-        "label" : {
-        "translation": "All locations"
-        }
-    },
-    "priority": {
-      "low": {
-        "translation": "Low",
-        "notes": "Text for Low priority"
-      },
-      "medium": {
-        "translation": "Medium",
-        "notes": "Text for Medium priority"
-      },
-      "high": {
-        "translation": "High",
-        "notes": "Text for High priority"
+        "translation": "Product Name",
+        "notes": "Product Name"
       }
     },
-    "timezone": {
-      "translation": "Timezone",
-      "notes": "Text for input label"
+    "consumptionAmount": {
+      "label": {
+        "translation": "consumption/amount",
+        "notes": "consumption/amount"
+      }
     },
-    "location": {
-      "translation": "Location",
-      "notes": "Text for Location input label"
+    "emissionAmount": {
+      "label": {
+        "translation": "Emission/amount",
+        "notes": "Emission/amount"
+      }
     },
-    "assetPriority": {
-      "translation": "Priority",
-      "notes": "Text for Priority input label"
+    "enterProcessName": {
+      "label": {
+        "translation": "Enter process name",
+        "notes": "Enter process name."
+      }
     },
-    "language": {
-      "translation": "Language",
-      "notes": "Text for input language label"
+    "contractCapacity": {
+      "label": {
+        "translation": "Contract capacity",
+        "notes": "Contract capacity."
+      }
+    },
+    "editProcess": {
+      "label": {
+        "translation": "Edit Process",
+        "notes": "Edit Process."
+      }
+    },
+    "deleteProcess": {
+      "label": {
+        "translation": "Delete Process",
+        "notes": "Delete Process."
+      }
+    },
+    "editHistory": {
+      "label": {
+        "translation": "Edit History",
+        "notes": "Edit History."
+      }
+    },
+    "deleteHistory": {
+      "label": {
+        "translation": "Delete History",
+        "notes": "Delete History."
+      }
+    },
+    "valueInput": {
+      "label": {
+        "translation": "Value",
+        "notes": "Value field."
+      }
+    },
+    "contractCapacityEdit": {
+      "label": {
+        "translation": "Edit contract capacity",
+        "notes": "Edit contract capacity."
+      }
     }
   },
   "date": {
+    "date": {
+      "label": {
+        "translation": "Date",
+        "notes": "Specific point in time."
+      }
+    },
     "lastMonth": {
       "label": {
         "translation": "Last month",
         "notes": "The previous calendar month from the current date."
+      }
+    },
+    "lastYear": {
+      "label": {
+        "translation": "Last year",
+        "notes": "The previous calendar year from the current date."
+      }
+    },
+    "last24hours": {
+      "label": {
+        "translation": "Last 24 hours",
+        "notes": "Choose a specific 24-hours time interval."
       }
     },
     "lastWeek": {
@@ -2210,34 +2690,16 @@
         "notes": "Choose a specific 3-days time interval."
       }
     },
-    "last24hours": {
-      "label": {
-        "translation": "Last 24 hours",
-        "notes": "Choose a specific 24-hours time interval."
-      }
-    },
-    "last12hours": {
-      "label": {
-        "translation": "Last 12 hours",
-        "notes": "Choose a specific 12-hours time interval."
-      }
-    },
     "last3hours": {
       "label": {
         "translation": "Last 3 hours",
         "notes": "Choose a specific 3-hours time interval."
       }
     },
-    "date": {
+    "last12hours": {
       "label": {
-        "translation": "Date",
-        "notes": "Specific point in time."
-      }
-    },
-    "lastYear": {
-      "label": {
-        "translation": "Last year",
-        "notes": "The previous calendar year from the current date."
+        "translation": "Last 12 hours",
+        "notes": "Choose a specific 12-hours time interval."
       }
     },
     "month": {
@@ -2250,6 +2712,12 @@
       "label": {
         "translation": "Due date",
         "notes": "Due date field."
+      }
+    },
+    "dueDateInputPlaceholder": {
+      "label": {
+        "translation": "Choose due date",
+        "notes": "Due date placeholder."
       }
     },
     "months": {
@@ -2404,16 +2872,16 @@
         "notes": "The day before today."
       }
     },
-    "now": {
-      "label": {
-        "translation": "Now",
-        "notes": "The current moment or present time."
-      }
-    },
     "last6hours": {
       "label": {
         "translation": "Last 6 hours",
         "notes": "Choose a specific 6-hours time interval."
+      }
+    },
+    "now": {
+      "label": {
+        "translation": "Now",
+        "notes": "The current moment or present time."
       }
     },
     "last7days": {
@@ -2459,360 +2927,56 @@
       }
     }
   },
-  "ems": {
-    "energy_analysis": {
-      "label": {
-        "translation": "Energy Analysis",
-        "notes": "Energy Analysis title."
-      }
+  "label": {
+    "locations": {
+      "translation": "Locations",
+      "notes": "Text for input label"
     },
-    "riskLevel": {
-      "label": {
-        "translation": "Risk level",
-        "notes": "Severity level."
-      }
-    },
-    "kWhLastMonth": {
-      "label": {
-        "translation": "kWh last month",
-        "notes": "Month Node Consumption label"
-      }
-    },
-    "cO2eLastMonth": {
-      "label": {
-        "translation": "cO2e last month",
-        "notes": "Month Node Consumption label"
-      }
-    },
-    "consumption": {
-      "label": {
-        "translation": "Consumption",
-        "notes": "The amount of energy or resources used over a given period."
+    "priority": {
+      "low": {
+        "translation": "Low",
+        "notes": "Text for Low priority"
       },
-      "month": {
-        "translation": "Consumption",
-        "notes": "Month Node Consumption Data left"
+      "medium": {
+        "translation": "Medium",
+        "notes": "Text for Medium priority"
+      },
+      "high": {
+        "translation": "High",
+        "notes": "Text for High priority"
       }
     },
-    "settingCircuitSummary": {
+    "allLocations": {
       "label": {
-        "translation": "Setting circuit summary",
-        "notes": "Setting circuit summary title"
+        "translation": "All locations",
+        "notes": "All locations."
       }
     },
-    "CO2e": {
-      "label": {
-        "translation": "CO2e",
-        "notes": "Emission of CO2 in kilogram."
-      }
+    "timezone": {
+      "translation": "Timezone",
+      "notes": "Text for input label"
     },
-    "uploadConfirmTitle": {
-      "label": {
-        "translation": "Are you sure you want to proceed?"
-      }
+    "location": {
+      "translation": "Location",
+      "notes": "Text for Location input label"
     },
-    "confirmUploadMessage": {
-      "label": {
-        "translation": "Data Override Warning: Uploading this Excel sheet will replace the existing data. This may result in the removal of current records and addition of new data. This action cannot be undone."
-      }
+    "assetPriority": {
+      "translation": "Priority",
+      "notes": "Text for Priority input label"
     },
-    "Proceed": {
-      "label": {
-        "translation": "Proceed"
-      }
+    "language": {
+      "translation": "Language",
+      "notes": "Text for input language label"
+    }
+  },
+  "alerts": {
+    "raised": {
+      "translation": "Alert",
+      "notes": "Alert raised prefix text"
     },
-    "Cancel": {
-      "label": {
-        "translation": "Cancel"
-      }
-    },
-    "maximumPower": {
-      "label": {
-        "translation": "Maximum Power",
-        "notes": "Maximum Power title"
-      }
-    },
-    "historicalTrend": {
-      "label": {
-        "translation": "Historical Trend",
-        "notes": "Historical Trend title"
-      }
-    },
-    "currentKW": {
-      "label": {
-        "translation": "Current kW",
-        "notes": "The present kilowatt measurement."
-      }
-    },
-    "kW": {
-      "label": {
-        "translation": "kW",
-        "notes": "A unit measuring power output or consumption."
-      }
-    },
-    "kWh": {
-      "label": {
-        "translation": "kWh",
-        "notes": "A unit measuring energy consumption over time."
-      }
-    },
-    "factory": {
-      "label": {
-        "translation": "Factory",
-        "notes": "Factory"
-      }
-    },
-    "selectBuildings": {
-      "label": {
-        "translation": "Select buildings",
-        "notes": "Select buildings placeholder"
-      }
-    },
-    "selectFloor": {
-      "label": {
-        "translation": "Select floor",
-        "notes": "Select floor placeholder"
-      }
-    },
-    "selectZone": {
-      "label": {
-        "translation": "Select zone",
-        "notes": "Select zone placeholder"
-      }
-    },
-    "demand": {
-      "label": {
-        "translation": "Demand",
-        "notes": "The amount of power required or requested at a given time."
-      }
-    },
-    "ConsumptionTrend": {
-      "legend": {
-        "translation": "Consumption(kWh)",
-        "notes": "Consumption Trend legend label"
-      }
-    },
-    "consumptionTrend": {
-      "label": {
-        "translation": "Consumption Trend",
-        "notes": "Consumption Trend title"
-      }
-    },
-    "selectLocations": {
-      "label": {
-        "translation": "Select Locations",
-        "notes": "Select locations."
-      }
-    },
-    "kWhThisMonth": {
-      "label": {
-        "translation": "kWh this month",
-        "notes": "Month Node Consumption label"
-      }
-    },
-    "cO2eThisMonth": {
-      "label": {
-        "translation": "cO2e this month",
-        "notes": "Month Node Consumption label"
-      }
-    },
-    "thisMonth": {
-      "translation": "This Month",
-      "notes": "Month Node Consumption Data left"
-    },
-    "lastMonth": {
-      "translation": "Last Month",
-      "notes": "Month Node Consumption Data left"
-    },
-    "process": {
-      "label": {
-        "translation": "Process",
-        "notes": "Process."
-      }
-    },
-    "addProcess": {
-      "label": {
-        "translation": "Add Process",
-        "notes": "Add Process."
-      }
-    },
-    "emission": {
-      "label": {
-        "translation": "Emission",
-        "notes": "Emission."
-      }
-    },
-    "noProcess": {
-      "label": {
-        "translation": "No Process",
-        "notes": "Process missing."
-      }
-    },
-    "unitRequire": {
-      "label": {
-        "translation": "Unit must be require",
-        "notes": "Unit is mandatory."
-      }
-    },
-    "processRequire": {
-      "label": {
-        "translation": "Process must be require",
-        "notes": "Process is mandatory."
-      }
-    },
-    "deviceId": {
-      "label": {
-        "translation": "Device Id must be require",
-        "notes": "Device Id is mandatory."
-      }
-    },
-    "unitsNumberBetterThanZero": {
-      "label": {
-        "translation": "Units number must be better than 0",
-        "notes": "Unit number > 0."
-      }
-    },
-    "enterAmount": {
-      "label": {
-        "translation": "You must enter amount",
-        "notes": "Amount required."
-      }
-    },
-    "mustEnterEndDate": {
-      "label": {
-        "translation": "You must enter end date",
-        "notes": "End date required."
-      }
-    },
-    "addHistory": {
-      "label": {
-        "translation": "Add History",
-        "notes": "Add History."
-      }
-    },
-    "noUnit": {
-      "label": {
-        "translation": "No Unit",
-        "notes": "Unit missing."
-      }
-    },
-    "unit": {
-      "label": {
-        "translation": "Unit",
-        "notes": "Unit."
-      }
-    },
-    "selectUnit": {
-      "label": {
-        "translation": "Select unit",
-        "notes": "Select a unit."
-      }
-    },
-    "selectProcess": {
-      "label": {
-        "translation": "Select process",
-        "notes": "Select a process."
-      }
-    },
-    "circuitLoop": {
-      "label": {
-        "translation": "Circuit loop",
-        "notes": "Circuit loop."
-      }
-    },
-    "selectCircuit": {
-      "label": {
-        "translation": "Select circuit",
-        "notes": "Select circuit."
-      }
-    },
-    "enterProcessName": {
-      "label": {
-        "translation": "Enter process name",
-        "notes": "Enter process name."
-      }
-    },
-    "contractCapacity": {
-      "label": {
-        "translation": "Contract capacity",
-        "notes": "Contract capacity."
-      }
-    },
-    "editProcess": {
-      "label": {
-        "translation": "Edit Process",
-        "notes": "Edit Process."
-      }
-    },
-    "deleteProcess": {
-      "label": {
-        "translation": "Delete Process",
-        "notes": "Delete Process."
-      }
-    },
-    "editHistory": {
-      "label": {
-        "translation": "Edit History",
-        "notes": "Edit History."
-      }
-    },
-    "deleteHistory": {
-      "label": {
-        "translation": "Delete History",
-        "notes": "Delete History."
-      }
-    },
-    "valueInput": {
-      "label": {
-        "translation": "Value",
-        "notes": "Value field."
-      }
-    },
-    "contractCapacityEdit": {
-      "label": {
-        "translation": "Edit contract capacity",
-        "notes": "Edit contract capacity."
-      }
-    },
-    "addProductButton" :{
-      "label": {
-        "translation": "Add Product"
-      }
-    },
-    "productName" :{
-      "label": {
-          "translation": "Product Name"
-      }
-    },
-    "consumptionAmount" :{
-        "label": {
-            "translation": "Consumption/amount"
-        }
-    },
-    "emissionAmount" :{
-        "label": {
-            "translation": "Emission/amount"
-        }
-    },
-    "summarySwitch" :{
-      "label": {
-          "translation": "Summary"
-      }
-    },
-    "managementSwitch" :{
-      "label": {
-          "translation": "Management"
-      }
-    },
-    "product": {
-        "label": {
-            "translation": "Product"
-        }
-    },
-    "processHistory": {
-      "label": {
-          "translation": "Process History"
-      }
+    "resolved": {
+      "translation": "Resolved",
+      "notes": "Alert resolved prefix text"
     }
   },
   "login": {
@@ -2859,22 +3023,6 @@
       }
     },
     "form": {
-      "email": {
-        "defaultError": {
-          "label": {
-            "translation": "Enter email",
-            "notes": "Placeholder for email address."
-          }
-        }
-      },
-      "password": {
-        "defaultError": {
-          "label": {
-            "translation": "Error",
-            "notes": "Default password error text."
-          }
-        }
-      },
       "rememberMeCheckbox": {
         "label": {
           "translation": "Remember me",
@@ -2885,6 +3033,14 @@
         "label": {
           "translation": "Forgot password",
           "notes": "Label for forgot password button."
+        }
+      },
+      "password": {
+        "placeholder": {
+          "label": {
+            "translation": "Enter password",
+            "notes": "Placeholder for password."
+          }
         }
       }
     },
@@ -2905,16 +3061,6 @@
         "translation": "Forgot password",
         "notes": "Title of Forgot password Page."
       }
-    }
-  },
-  "alerts": {
-    "raised": {
-      "translation": "Alert",
-      "notes": "Alert raised prefix text"
-    },
-    "resolved": {
-      "translation": "Resolved",
-      "notes": "Alert resolved prefix text"
     }
   },
   "company": {
@@ -2966,6 +3112,14 @@
       "label": {
         "translation": "Closed",
         "notes": "Closed status."
+      }
+    }
+  },
+  "notification": {
+    "noComment": {
+      "label": {
+        "translation": "No Comments",
+        "notes": "No Comments yet"
       }
     }
   },

@@ -1,6 +1,96 @@
-// utils
-
 import { t } from '@core/utils/translate';
+
+// levelnow -----
+
+export type TankLevelCounts = {
+  range: 'Full' | '>205L' | '100~205L' | '<100L';
+  count: number;
+}[];
+
+// api/Overview/summary
+export type Summary = {
+  totalTanks: number;
+  tankLevelCounts: TankLevelCounts;
+  locationsCount: number;
+  brandCount: number;
+  customerCount: number;
+  batteryLowCount: number;
+  offlineDeviceCount: number;
+};
+
+export type SummaryParameters = {
+  userId: number;
+  brandId?: number;
+};
+
+// api/Overview/responsibleTanks
+export type ResponsibleTanks = {
+  userName: string;
+  tankLevelCounts: TankLevelCounts;
+}[];
+
+export type ResponsibleTanksParameters = {
+  userId: number;
+  locationId?: number;
+};
+
+// api/Locations
+[
+  {
+    'locationId': 61,
+    'creationDate': '2023-04-07T02:01:14',
+    'parentId': null,
+    'type': 1,
+    'name': 'Iveda',
+    'timezone': 'Asia/Taipei',
+    'street': '2F-15, No.14, Lane 609, Sec.5, Chongxin Rd.',
+    'city': 'New Taipei city',
+    'state': '',
+    'country': 'TW',
+    'zip': '241',
+    'latitude': null,
+    'longitude': null,
+    'mapId': null,
+    'mapWidth': null,
+    'mapHeight': null,
+    'tracmoCloud': null,
+    'solution': 51,
+    'enabledSolutions': ['IvedaRTLS', 'utilus', 'ems', 'levelnow'],
+    'riskLevel': null,
+    'severity': null,
+    'shape': null,
+    'maxUsers': null,
+  },
+];
+export type Locations = {
+  locationId: number;
+  creationDate: string;
+  parentId: number | null;
+  type: number | null;
+  name: string | null;
+  timezone: string | null;
+  street: string | null;
+  city: string | null;
+  state: string | null;
+  country: string | null;
+  zip: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  mapId: number | null;
+  mapWidth: number | null;
+  mapHeight: number | null;
+  tracmoCloud: boolean | null;
+  solution: number;
+  enabledSolutions: string[];
+  riskLevel: number | null;
+  severity: number | null;
+  shape: number[][] | null;
+  maxUsers: number | null;
+}[];
+
+// -----
+
+// utils
 
 export type ResultOutput = {
   resultCode: number;

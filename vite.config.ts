@@ -47,4 +47,20 @@ export default defineConfig({
   define: {
     'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageJson.version),
   },
+  server: {
+    proxy: {
+      '/api/rsapi': {
+        target: 'https://cerebro.sce.pccu.edu.tw/rsapi/cloud',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/rsapi/, ''),
+        secure: true,
+      },
+      '/api/lvapi': {
+        target: 'https://cerebro.sce.pccu.edu.tw/lvapi/api',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/lvapi/, ''),
+        secure: true,
+      },
+    },
+  },
 });

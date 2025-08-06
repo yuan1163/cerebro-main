@@ -52,10 +52,8 @@ import Home02SolidIcon from '@assets/icons/solid/home-02.svg?component';
 import Image05SolidIcon from '@assets/icons/solid/image-05.svg?component';
 import AppIcon from '@assets/images/app-icon.svg?component';
 import AppLogo from '@assets/images/app-logo.svg?component';
-import IvedaIcon from '@assets/images/iveda-icon.svg?component';
-import IvedaLogo from '@assets/images/iveda-logo.svg?component';
+import ivedaLogo from '@assets/images/iveda-logo.svg';
 import PoweredLogo from '@assets/images/powered-logo.svg?component';
-
 
 // AUTHORIZATION
 
@@ -151,7 +149,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
     }
 
     const title = item.title;
-    
+
     return (
       <li className={styles['list-item']}>
         <DrawerButtonCollapsed
@@ -165,7 +163,12 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
           url={url}
         />
         {createPortal(
-          <Tooltip isVisible={tooltipVisible} placement='right' targetRef={divRef} title={t(title || '', '', '')} />,
+          <Tooltip
+            isVisible={tooltipVisible}
+            placement='right'
+            targetRef={divRef}
+            title={t(title || '', title || '', '')}
+          />,
           document.body,
         )}
       </li>
@@ -246,9 +249,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
             <ul className={cn(styles['list'], styles['list-app'])}>
               <li className={cn(styles['list-item'], styles['list-item-app'])}>
-                <a href="/solutions">
-                  {brand?.icon}
-                </a>
+                <a href='/solutions'>{brand?.icon}</a>
               </li>
               <li className={cn(styles['list-item'], styles['list-item-company'])}>
                 {/* {icon} */}
@@ -260,9 +261,10 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                       'Small graphical symbol that represents a brand.',
                     )}
                     height='32'
-                    src={`${logo}/${auth.accessToken}`}
+                    src={ivedaLogo}
+                    // src={`${logo}/${auth.accessToken}`}
                     width='32'
-                    />
+                  />
                 ) : (
                   FallbackIcon
                 )}
@@ -281,7 +283,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                 type='home'
               />
               {common.map((item) => {
-                const title = item.title
+                const title = item.title;
 
                 return 'isGroup' in item ? (
                   <DrawerButtonCollapsedAccordion
@@ -293,7 +295,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                   />
                 ) : (
                   <CollapsedButton key={item.title} item={item} type='common' />
-                )
+                );
               })}
             </ul>
 
@@ -302,7 +304,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             {uniques.length > 0 ? (
               <ul className={styles['list']}>
                 {uniques.map((item) => {
-                  const title = item.title
+                  const title = item.title;
 
                   return 'isGroup' in item ? (
                     <DrawerButtonCollapsedAccordion
@@ -314,7 +316,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                     />
                   ) : (
                     <CollapsedButton key={t(title, '', '')} item={item} type='uniques' />
-                  )
+                  );
                 })}
               </ul>
             ) : null}
@@ -345,7 +347,6 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
         </nav>
       )}
 
-
       {/* EXPANDED 開啟選單的列表 */}
       {isDrawerExpanded && (
         <nav className={cn(styles['nav'])}>
@@ -373,10 +374,10 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
             <ul className={cn(styles['list'], styles['list-app'])}>
               <li className={cn(styles['list-item'], styles['list-item-app'])}>
-                <a href="/cerebro">{brand?.logo}</a>
+                <a href='/cerebro'>{brand?.logo}</a>
               </li>
               <li className={cn(styles['list-item'], styles['list-item-company'])}>
-                {(logo && auth.accessToken) ? (
+                {logo && auth.accessToken ? (
                   <img
                     alt={t(
                       'company.companyLogo.label',
@@ -384,15 +385,15 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                       'Unique symbol that represents an organization.',
                     )}
                     height='30'
-                    src={logo}
+                    src={ivedaLogo}
+                    // src={logo}
                     width='78'
-                    />
+                  />
                 ) : (
                   FallbackIcon
                 )}
               </li>
             </ul>
-
 
             {/* COMMON EXPANDED */}
             <ul className={styles['list']}>
@@ -405,11 +406,11 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                 />
               </li>
 
-
               {/* 左側選單列表 */}
               {common.map((item) => {
-                const title=  item.title
-                
+                const title = item.title;
+                console.log('title', title);
+
                 if ('isGroup' in item) {
                   return (
                     <li key={item.title} className={styles['list-item']}>
@@ -418,9 +419,9 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                         icon={item.icon}
                         iconSolid={item.iconSolid}
                         title={t(title, '', '')}
-                        />
+                      />
                     </li>
-                        // title={item.title}
+                    // title={item.title}
                   );
                 } else {
                   const url = `${item.url}/${ui.currentFormation}`;
@@ -432,7 +433,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                         iconHover={item.iconSolid}
                         title={t(title, '', '')}
                         url={url}
-                        />
+                      />
                     </li>
                   );
                 }
@@ -444,7 +445,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             {uniques.length > 0 ? (
               <ul className={styles['list']}>
                 {uniques.map((item) => {
-                  const title=  item.title
+                  const title = item.title;
 
                   if ('isGroup' in item) {
                     return (

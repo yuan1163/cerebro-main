@@ -1,3 +1,7 @@
+import { observer } from 'mobx-react';
+import { useAuth } from '@core/storages/auth';
+import { useNavigate } from 'react-router-dom';
+
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
 
 import { Card } from '@core/ui/components/Card';
@@ -5,22 +9,31 @@ import { CardContent } from '@core/ui/components/CardContent';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { Text } from '@core/ui/components/Text';
 import { t } from '@core/utils/translate';
+import { useSummary } from '@core/storages/controllers/levelnow/summary';
+import { Summary } from '@core/api/types';
+import { formatTankLevelCounts } from '@core/utils/levelnow/tankLevelCounts';
 
-const data = [
-  { name: '>205L', value: 3, color: '#2CD232' },
-  { name: '100-250L', value: 6, color: '#FF982F' },
-  { name: '<100L', value: 3, color: '#FF4545' },
-];
+export default observer(function Overview() {
+  const navigate = useNavigate();
+  const { profile } = useAuth();
+  if (!profile) {
+    navigate('/login');
+    return null;
+  }
+  const summary: Summary | undefined = useSummary({ userId: profile.userId });
 
-const stats = [
-  { label: 'Customers', value: 5 },
-  { label: 'Locations', value: 4 },
-  { label: 'Off-line', value: 0 },
-  { label: 'Battery Low', value: 1 },
-];
+  const stats = [
+    { label: 'Customers', value: summary?.customerCount || 0 },
+    { label: 'Locations', value: summary?.locationsCount || 0 },
+    { label: 'Off-line', value: summary?.offlineDeviceCount || 0 },
+    { label: 'Battery Low', value: summary?.batteryLowCount || 0 },
+  ];
 
-export default function Overview() {
-  const total = data.reduce((sum, item) => sum + item.value, 0);
+  const tankLevelCounts = summary?.tankLevelCounts || [];
+  const data = formatTankLevelCounts(tankLevelCounts);
+
+  const total = summary?.totalTanks || 0;
+
   return (
     <Card fullWidth fullHeight elevation='xs'>
       <CardHeader className='flex items-center justify-between'>
@@ -55,7 +68,7 @@ export default function Overview() {
                 <PieChart>
                   <Pie data={data} cx='50%' cy='50%' innerRadius={56} outerRadius={80} paddingAngle={2} dataKey='value'>
                     {data.map((entry) => (
-                      <Cell key={entry.name} fill={entry.color} />
+                      <Cell key={entry.range} fill={entry.color} />
                     ))}
                   </Pie>
                 </PieChart>
@@ -69,9 +82,9 @@ export default function Overview() {
             {/* Right side legend */}
             <div className='flex flex-col gap-5'>
               {data.map((item) => (
-                <div key={item.name} className='flex items-center justify-between gap-2'>
+                <div key={item.range} className='flex items-center justify-between gap-2'>
                   <div className='w-2.5 aspect-square rounded-full' style={{ backgroundColor: item.color }} />
-                  <span className='text-sm font-medium text-secondary-500 min-w-[85px]'>{item.name}</span>
+                  <span className='text-sm font-medium text-secondary-500 min-w-[85px]'>{item.range}</span>
                   <span className='text-sm font-medium text-neutral-900'>{item.value}</span>
                 </div>
               ))}
@@ -81,4 +94,4 @@ export default function Overview() {
       </CardContent>
     </Card>
   );
-}
+});

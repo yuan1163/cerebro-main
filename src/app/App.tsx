@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
@@ -8,7 +7,6 @@ import { UIAdapter } from './UIAdapter';
 import { Wrapper } from '@googlemaps/react-wrapper';
 import ThemeContextWrapper from './ThemeAdapter/ThemeContextWrapper';
 import { TranslationAdapter } from './TranslationAdapter';
-console.log('AppRoutes', AppRoutes);
 export const App = () => (
   <ThemeContextWrapper>
     <DataAccessAdapter>

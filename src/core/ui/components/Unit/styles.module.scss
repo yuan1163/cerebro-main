@@ -23,3 +23,12 @@
   @apply max-w-[23.5rem];
   @apply basis-4/12;
 }
+// list
+
+.unit-list {
+  @apply grow-0;
+  @apply shrink-0;
+  @apply min-w-[32rem];
+  @apply max-w-[23.5rem];
+  @apply basis-4/12;
+}

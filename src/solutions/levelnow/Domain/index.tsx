@@ -15,7 +15,7 @@ import { cn } from '@core/utils/classnames';
 
 // utils
 import { t } from '@core/utils/translate';
-import { DomainObjectsList } from '@solutions/levelnow/Domain/DomainObjectsList';
+import { DomainLocationList } from '@solutions/levelnow/Domain/DomainLocationList';
 
 // own solution components
 import { DomainMap } from './DomainMap';
@@ -44,11 +44,11 @@ export const Domain = observer(() => {
       />
       <UnitContainer>
         <Unit variant='sidebar'>
-          <DomainObjectsList />
+          <DomainLocationList />
         </Unit>
         <Unit height='full'>
           <Grid className={styles['container']} display='grid' fullHeight>
-            <DomainMap expendIconButton={true} expended={expendMap} onClick={handleExpand} />
+            <DomainMap />
             <Grid className={cn(expendMap ? 'hidden' : '')} fullWidth fullHeight gap={5}>
               <Overview />
               <ResponsibleTanks />
