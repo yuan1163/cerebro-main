@@ -13,10 +13,10 @@ export type ButtonProps<T extends React.ElementType> = {
   component?: T;
   dot?: boolean;
   endIcon?: React.ReactNode;
-  fontSize?: 'base' | 'sm';
+  fontSize?: 'base' | 'sm' | 'md' | 'lg';
   fontWeight?: 'medium' | 'semibold';
   fullWidth?: boolean;
-  iconColor?: 'primary' | 'icon-secondary' | 'secondary-tint-active' | 'neutral-900';
+  iconColor?: 'primary' | 'icon-secondary' | 'secondary-tint-active' | 'white' | 'neutral-900';
   loading?: boolean;
   size?: 'sm' | 'md' | 'lg';
   square?: boolean;

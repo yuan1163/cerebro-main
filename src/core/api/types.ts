@@ -1,11 +1,56 @@
 import { t } from '@core/utils/translate';
 
 // levelnow -----
+export type DeviceLevelLabel = 'Full' | '>205L' | '100~205L' | '<100L';
+export type DeviceConnection = 0 | 1; // 0: Off-line, 1: On-line
+export type DeviceFault = 0 | 1; // 0: No fault, 1: Fault
 
 export type TankLevelCounts = {
-  range: 'Full' | '>205L' | '100~205L' | '<100L';
+  range: DeviceLevelLabel;
   count: number;
 }[];
+
+// api/Tank/list
+export type TankList = {
+  success: boolean;
+  data: TankLisItem[];
+};
+export type TankLisItem = {
+  tankId: number;
+  tankNo: string;
+  deviceReference: string;
+  deviceLevel: number;
+  deviceLevelLabel: DeviceLevelLabel;
+  deviceBattery: number;
+  deviceConnection: DeviceConnection;
+  deviceFault: DeviceFault;
+};
+
+// api/Tank/{id}
+export type Tank = {
+  success: boolean;
+  data: TankData;
+};
+export type TankData = {
+  tankNo: string;
+  deviceFillingDate: string;
+  deviceDescription: string;
+  deviceOilType: string;
+  deviceOilViscosity: string;
+  clientId: number;
+  brandId: number;
+  tankId: number;
+  deviceReference: string;
+  deviceLongitude: number | null;
+  deviceLatitude: number | null;
+  deviceLevel: number;
+  deviceLevelLabel: DeviceLevelLabel;
+  deviceBattery: number;
+  gatewayVersion: string;
+  deviceConnection: DeviceConnection;
+  salesRepUserId: number | null;
+  customerServiceRepUserId: number | null;
+};
 
 // api/Overview/summary
 export type Summary = {
@@ -35,33 +80,6 @@ export type ResponsibleTanksParameters = {
 };
 
 // api/Locations
-[
-  {
-    'locationId': 61,
-    'creationDate': '2023-04-07T02:01:14',
-    'parentId': null,
-    'type': 1,
-    'name': 'Iveda',
-    'timezone': 'Asia/Taipei',
-    'street': '2F-15, No.14, Lane 609, Sec.5, Chongxin Rd.',
-    'city': 'New Taipei city',
-    'state': '',
-    'country': 'TW',
-    'zip': '241',
-    'latitude': null,
-    'longitude': null,
-    'mapId': null,
-    'mapWidth': null,
-    'mapHeight': null,
-    'tracmoCloud': null,
-    'solution': 51,
-    'enabledSolutions': ['IvedaRTLS', 'utilus', 'ems', 'levelnow'],
-    'riskLevel': null,
-    'severity': null,
-    'shape': null,
-    'maxUsers': null,
-  },
-];
 export type Locations = {
   locationId: number;
   creationDate: string;

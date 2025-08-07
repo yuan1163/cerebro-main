@@ -56,6 +56,7 @@ export const Search = React.forwardRef<HTMLInputElement, Props>(
   ) => {
     return (
       <Input
+        noLabel
         aria-label='search'
         aria-autocomplete='both'
         aria-labelledby={inputId}

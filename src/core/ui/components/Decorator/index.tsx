@@ -12,7 +12,7 @@ import styles from './styles.module.scss';
 type Props = {
   children?: React.ReactNode;
   className?: string;
-  color?: BrandPalette | ColorPalette | IconPalette | SeverityPalette | PaletteString;
+  color?: BrandPalette | ColorPalette | IconPalette | SeverityPalette | PaletteString | 'neutral-900';
   disabled?: boolean;
   loading?: boolean;
   position?: 'center' | 'end' | 'start';

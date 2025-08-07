@@ -129,7 +129,7 @@
   & .button-start-icon-size-sm,
   & .button-start-icon-size-md,
   & .button-start-icon-size-lg {
-    @apply mr-1;
+    @apply mr-2;
   }
 
   &.button-align-start {
@@ -675,6 +675,12 @@
 
   &.button-font-size-sm {
     @apply text-sm;
+  }
+  &.button-font-size-md {
+    @apply text-md;
+  }
+  &.button-font-size-lg {
+    @apply text-lg;
   }
 
   // DRAWER

@@ -79,6 +79,12 @@
 .decorator-icon-color-secondary-tint-active {
   @apply text-secondary-tint-active;
 }
+.decorator-icon-color-white {
+  @apply text-common-white;
+}
+.decorator-icon-color-neutral-900 {
+  @apply text-neutral-900;
+}
 
 // LOADING
 
