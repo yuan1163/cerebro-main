@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 // icons
 import TankLineIcon from '@assets/icons/line/tank-line.svg?component';
@@ -17,11 +17,15 @@ import TankSearch from './TankSearch';
 import TankList from './TankList';
 import TankInfo from './TankInfo';
 import { useTanks } from '@core/storages/controllers/levelnow/tank';
-import { Scrollbar } from '@core/ui/components/Scrollbar';
+import Tabs from '@core/ui/levelnow/Tabs';
 
 export const Tanks = observer(() => {
+  const [selectedTankId, setSelectedTankId] = useState<number | null>(null);
   const tanks = useTanks();
-  console.log('tanks', tanks);
+
+  const handleTankSelect = useCallback((tankId: number) => {
+    setSelectedTankId(tankId);
+  }, []);
 
   return (
     <>
@@ -30,10 +34,13 @@ export const Tanks = observer(() => {
         title={t('solutions.tanks.label', 'Tanks', 'Tanks page title.')}
         widgets={false}
       />
-      <TankSearch />
+      <div className='flex items-center justify-between gap-5'>
+        <Tabs tabs={['Admins', 'Contacts', 'Groups']} />
+        <TankSearch />
+      </div>
       <UnitContainer className='mt-5'>
         <Unit variant='list'>
-          <TankList tanks={tanks} />
+          <TankList tanks={tanks} onTankSelect={handleTankSelect} selectedTankId={selectedTankId} />
         </Unit>
         <Unit>
           <TankInfo />

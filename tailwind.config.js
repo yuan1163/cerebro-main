@@ -2398,6 +2398,7 @@ module.exports = {
       },
     },
     boxShadow: {
+      tab: '0 2px 4px 0 rgba(0, 0, 0, 0.04)',
       card: '0 2px 4px 0 rgba(0, 0, 0, 0.08)',
       select: '0 4px 9px 4px rgba(0, 0, 0, 0.08)',
       none: 'none',
