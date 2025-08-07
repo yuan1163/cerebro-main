@@ -37,6 +37,7 @@ import ResponsibleTanksPage from '@core/ui/pages/ResponsibleTanksPage';
 
 export const modules: Modules = [
   {
+    system: 'levelnow',
     url: '',
     title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
     icon: <Home02LineIcon />,
@@ -50,6 +51,7 @@ export const modules: Modules = [
     ],
   },
   {
+    system: 'levelnow',
     url: 'tanks',
     title: 'tanks.tanks.label',
     icon: <TankLineIcon />,

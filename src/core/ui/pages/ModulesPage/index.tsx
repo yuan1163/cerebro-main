@@ -33,16 +33,25 @@ export const ModulesPage: React.FC<Props> = observer(({ modules }) => {
 
   const routes = getModulesRoutes(modules);
 
-  const noCurrentRoutes = ['domain/responsibletanks'];
+  // levelnow routes
+  const levelnowModules = modules.filter((mod) => mod.system === 'levelnow');
+  const levelnowRoutes = getModulesRoutes(levelnowModules);
 
   return (
     <ModulePageLayout navigator={<ModuleNavigator modules={modules} />}>
       <Routes>
+        {levelnowRoutes.map((mod) => {
+          let path: string;
+          if (mod.url) {
+            path = `${mod.url}/*`;
+          } else {
+            path = `/*`;
+          }
+          return <Route key={mod.url} path={path} element={mod.component} />;
+        })}
         {routes.map((mod) => {
           let path: string;
-          if (noCurrentRoutes.includes(mod.url)) {
-            path = `${mod.url}/*`;
-          } else if (mod.url) {
+          if (mod.url) {
             path = `${mod.url}/:current/*`;
           } else path = `/*`;
           return <Route key={mod.url} path={path} element={mod.component} />;
