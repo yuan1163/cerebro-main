@@ -19,7 +19,24 @@ export default defineConfig({
         },
       },
     }),
-    svgr(),
+    svgr({
+      svgrOptions: {
+        svgo: true,
+        svgoConfig: {
+          plugins: [
+            {
+              name: 'prefixIds',
+              params: {
+                prefixIds: true,
+                prefixClassNames: false,
+              },
+            },
+            'removeViewBox',
+            'cleanupIds',
+          ],
+        },
+      },
+    }),
     ckeditor5({ theme: require.resolve('@ckeditor/ckeditor5-theme-lark') }),
     VitePluginHtmlEnv(),
   ],
