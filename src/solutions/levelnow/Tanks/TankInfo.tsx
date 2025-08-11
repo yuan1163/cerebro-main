@@ -1,0 +1,72 @@
+// types
+import { TankData } from '@core/api/types';
+import { ClientData } from '@core/api/types';
+// ui components
+import { Card } from '@core/ui/components/Card';
+import { CardContent } from '@core/ui/components/CardContent';
+import { CardHeader } from '@core/ui/components/CardHeader';
+import DownloadButton from '@core/ui/levelnow/DownloadButton';
+import DataBlock from '@core/ui/levelnow/DataBlock';
+import EditButton from '@core/ui/levelnow/EditButton';
+import DeleteButton from '@core/ui/levelnow/DeleteButton';
+import { Scrollbar } from '@core/ui/components/Scrollbar';
+// components
+import TankInfoDetails from './TankInfoDetails';
+import TankInfoCustomer from './TankInfoCustomer';
+import TankInfoGW from './TankInfoGW';
+import TankInfoLevel from './TankInfoLevel';
+
+type TankInfoProps = {
+  tank: TankData | null;
+  client: ClientData | null;
+};
+export default function TankInfo({ tank, client }: TankInfoProps) {
+  console.log('client', client);
+
+  if (!tank) {
+    return null;
+  }
+  console.log('tank', tank);
+  const info = [
+    {
+      label: 'Tank No.',
+      value: tank.tankNo,
+    },
+    { label: 'Description', value: '-' },
+    { label: 'Oil Type', value: tank.deviceOilType },
+    { label: 'Oil Viscosity', value: tank.deviceOilViscosity },
+    { label: 'Last Oil Filling Date', value: new Date(tank.deviceFillingDate).toISOString().split('T')[0] },
+  ];
+
+  // const customer = [
+  //   { label: 'Customer Name',
+
+  //   ];
+
+  return (
+    <div className='flex grow'>
+      <Card className='flex flex-col flex-1'>
+        <CardHeader borderBottom>
+          <div className='flex items-center justify-between w-full'>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>{tank.tankNo}</h1>
+            <DownloadButton />
+          </div>
+        </CardHeader>
+        <CardContent className='h-[calc(100vh-244px)] overflow-auto grow'>
+          <Scrollbar>
+            <div className='grid grid-flow-row grid-cols-2 grid-rows-[auto,auto,auto] gap-5'>
+              {/* Info */}
+              <TankInfoDetails tank={tank} />
+              {/* Ievel & Location */}
+              <TankInfoLevel tank={tank} />
+              {/* Customer */}
+              <TankInfoCustomer client={client} />
+              {/* GW */}
+              <TankInfoGW client={client} />
+            </div>
+          </Scrollbar>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}

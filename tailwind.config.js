@@ -9,6 +9,8 @@ module.exports = {
   },
   theme: {
     colors: {
+      white: '#FFFFFF',
+      black: '#000000',
       hover: '#F7F8F9',
       current: 'currentColor',
       inherit: 'inherit',
@@ -174,6 +176,7 @@ module.exports = {
       },
       error: {
         '500': '#FF4545',
+        '600': '#E03B3B',
         DEFAULT: 'var(--color-error-default)',
         focus: 'var(--color-error-focus)',
         hover: 'var(--color-error-hover)',

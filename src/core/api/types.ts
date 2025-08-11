@@ -10,12 +10,48 @@ export type TankLevelCounts = {
   count: number;
 }[];
 
+// api/Client/{id}
+export type Client = {
+  success: boolean;
+  message: string | null;
+  data: ClientData;
+  error: string | null;
+};
+export type ClientData = {
+  clientId: number;
+  clientName: string;
+  clientNo: string;
+  clientContact: string;
+  clientPhone: string;
+  clientCountry: string;
+  clientState: string;
+  clientCity: string;
+  clientAddress: string;
+  clientPostCode: string;
+  brandId: number;
+  salesRepUserId: string | null;
+  customerServiceRepUserId: string | null;
+  clientTank: ClientTank[];
+};
+export type ClientTank = Pick<
+  TankData,
+  | 'tankNo'
+  | 'deviceFillingDate'
+  | 'deviceDescription'
+  | 'deviceOilType'
+  | 'deviceOilViscosity'
+  | 'tankId'
+  | 'deviceLevel'
+  | 'deviceLevelLabel'
+  | 'deviceConnection'
+>;
+
 // api/Tank/list
 export type TankList = {
   success: boolean;
-  data: TankLisItem[];
+  data: TankListItem[];
 };
-export type TankLisItem = {
+export type TankListItem = {
   tankId: number;
   tankNo: string;
   deviceReference: string;

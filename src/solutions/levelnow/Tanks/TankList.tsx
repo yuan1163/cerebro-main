@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { CardContent } from '@core/ui/components/CardContent';
 import { Card } from '@core/ui/components/Card';
@@ -6,19 +7,23 @@ import { getDeviceLevelIcon, getBatteryLevelIcon, getDeviceConnection } from '@c
 import FilterButton from '@core/ui/levelnow/FilterButton';
 import AddButton from '@core/ui/levelnow/AddButton';
 import NumberBadge from '@core/ui/levelnow/NumberBadge';
-import { TankLisItem } from '@core/api/types';
+import { ClientData, TankListItem } from '@core/api/types';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
 
-import { List } from '@core/ui/components/List';
-import { ListItem } from '@core/ui/components/ListItem';
-import { EventCard } from '@solutions/utilus/Dashboard/EventCard';
+import { cn } from '@core/utils/classnames';
 
 type TankListProps = {
-  tanks: TankLisItem[];
+  tanks: TankListItem[];
+  selectedTankId: number | null;
+  onTankSelect: (tankId: number) => void;
+};
+type TankItemProps = {
+  tank: TankListItem;
+  selectedTankId: number | null;
+  onTankSelect: (tankId: number) => void;
 };
 
-export default function TankList({ tanks }: TankListProps) {
-  const fakeTanks = [...tanks, ...tanks, ...tanks]; // For testing purposes, to simulate a longer list
+export default function TankList({ tanks, selectedTankId, onTankSelect }: TankListProps) {
   return (
     <Card className='grid grid-rows-[auto_1fr] h-full'>
       <CardHeader justifyContent='between' alignItems='center' borderBottom>
@@ -29,11 +34,11 @@ export default function TankList({ tanks }: TankListProps) {
         </div>
         <FilterButton />
       </CardHeader>
-      <CardContent scrollable className='px-5 pb-5 h-[calc(100vh-232px)]' disablePaddingTop>
+      <CardContent scrollable className='px-5 pb-5 h-[calc(100vh-244px)]' disablePaddingTop>
         <Scrollbar>
           <div className='flex flex-col pr-2.5'>
             {tanks.map((tank) => (
-              <TankItem key={tank.tankId} tank={tank} />
+              <TankItem key={tank.tankId} tank={tank} selectedTankId={selectedTankId} onTankSelect={onTankSelect} />
             ))}
           </div>
         </Scrollbar>
@@ -42,9 +47,19 @@ export default function TankList({ tanks }: TankListProps) {
   );
 }
 
-function TankItem({ tank }: { tank: TankLisItem }) {
+function TankItem({ tank, selectedTankId, onTankSelect }: TankItemProps) {
+  const isSelected = selectedTankId === tank.tankId;
+  const itemClass = isSelected ? 'bg-primary-50' : 'hover:bg-hover';
   return (
-    <div className='grid items-center grid-cols-[2fr_auto_auto_auto] gap-5 border-b py-7 border-neutral-200'>
+    <div
+      onClick={() => {
+        onTankSelect(tank.tankId);
+      }}
+      className={cn(
+        itemClass,
+        'grid items-center grid-cols-[2fr_auto_auto_auto] gap-5 border-b py-7 border-neutral-200',
+      )}
+    >
       {/* name */}
       <div className='flex flex-col gap-1'>
         <div className='font-medium text-16 tracking-32 text-neutral-900'>{tank.tankNo}</div>

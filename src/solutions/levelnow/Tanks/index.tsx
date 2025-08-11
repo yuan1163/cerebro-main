@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 // icons
 import TankLineIcon from '@assets/icons/line/tank-line.svg?component';
@@ -16,16 +16,24 @@ import { t } from '@core/utils/translate';
 import TankSearch from './TankSearch';
 import TankList from './TankList';
 import TankInfo from './TankInfo';
-import { useTanks } from '@core/storages/controllers/levelnow/tank';
+import { useTanks, useTank } from '@core/storages/controllers/levelnow/tank';
+import { useClient } from '@core/storages/controllers/levelnow/tank';
+// tabs
 import Tabs from '@core/ui/levelnow/Tabs';
 
 export const Tanks = observer(() => {
   const [selectedTankId, setSelectedTankId] = useState<number | null>(null);
   const tanks = useTanks();
+  const selectedTank = useTank(selectedTankId);
+  const client = useClient(selectedTank?.clientId || null);
 
   const handleTankSelect = useCallback((tankId: number) => {
     setSelectedTankId(tankId);
   }, []);
+
+  useEffect(() => {
+    setSelectedTankId(tanks[0]?.tankId);
+  }, [tanks]);
 
   return (
     <>
@@ -43,7 +51,7 @@ export const Tanks = observer(() => {
           <TankList tanks={tanks} onTankSelect={handleTankSelect} selectedTankId={selectedTankId} />
         </Unit>
         <Unit>
-          <TankInfo />
+          <TankInfo tank={selectedTank} client={client} />
         </Unit>
       </UnitContainer>
     </>
