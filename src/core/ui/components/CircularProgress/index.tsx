@@ -14,7 +14,7 @@ type Props = {
   color?: 'default' | PaletteString | SeverityPalette;
   disabled?: boolean;
   size?: 'xs' | 'sm' | 'md' | 'lg';
-  variant?: 'solid' | 'outlined' | 'ghost' | 'control' | 'tint' | 'text' | 'link';
+  variant?: 'solid' | 'outlined' | 'ghost' | 'control' | 'tint' | 'text' | 'link' | 'delete';
 } & React.HTMLAttributes<HTMLElement>;
 
 export const CircularProgress: React.FC<Props> = ({

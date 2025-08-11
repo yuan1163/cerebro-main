@@ -10,6 +10,11 @@ export type TankLevelCounts = {
   count: number;
 }[];
 
+export type ApiResponse = {
+  success: boolean;
+  message: string;
+};
+
 // api/Client/{id}
 export type Client = {
   success: boolean;

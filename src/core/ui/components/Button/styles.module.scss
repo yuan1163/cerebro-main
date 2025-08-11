@@ -161,6 +161,36 @@
     @apply ml-0;
   }
 
+  // DELETE
+
+  &.button-variant-delete {
+    @apply border-0;
+  }
+
+  &.button-color-delete-default {
+    @apply bg-error-600;
+    @apply text-common-white;
+    &:focus-visible {
+      @apply outline-primary-focus;
+    }
+    &:hover {
+      @apply bg-error-500;
+    }
+    &:active {
+      @apply bg-error-500;
+    }
+  }
+
+  & {
+    &:disabled,
+    &[disabled] {
+      &.button-variant-delete,
+      &.button-variant-delete:hover {
+        @apply bg-action-disabled;
+        @apply text-typography-disabled;
+      }
+    }
+  }
   // SOLID
 
   &.button-variant-solid {

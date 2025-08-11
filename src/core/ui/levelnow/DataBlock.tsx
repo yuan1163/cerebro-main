@@ -65,7 +65,6 @@ export default function DataBlock({
         <div className='grid gap-x-20 gap-y-3' style={{ gridTemplateColumns: gridTemplateColumns }}>
           {columnsData.map((column, colIndex) => {
             const items = padColumns ? [...column, ...Array(rowsPerColumn - column.length).fill(null)] : column;
-            console.log('items', items);
 
             return (
               <dl

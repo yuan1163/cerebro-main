@@ -1,5 +1,5 @@
-import { useQuery } from '@tanstack/react-query';
-import { apiGetTanks, apiGetTank } from '@core/api/entities/levelnow/tank';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { apiGetTanks, apiGetTank, apiUpdateTank, apiDeleteTank } from '@core/api/entities/levelnow/tank';
 import { apiGetClient } from '@core/api/entities/levelnow/client';
 
 export const useTanks = () => {
@@ -40,4 +40,43 @@ export const useClient = (clientId: number | null) => {
     return null;
   }
   return data.data;
+};
+
+export const useUpdateTank = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({
+      tankId,
+      data,
+    }: {
+      tankId: number;
+      data: Partial<{
+        tankNo: string;
+        deviceDescription: string;
+        deviceOilType: string;
+        deviceOilViscosity: string;
+      }>;
+    }) => apiUpdateTank(tankId, data),
+    onSuccess: (data, variables) => {
+      console.log('Tank updated successfully:', data);
+
+      // Invalidate and refetch tank queries
+      queryClient.invalidateQueries(['tanks']);
+      queryClient.invalidateQueries(['tank', variables.tankId]);
+    },
+  });
+};
+
+export const useDeleteTank = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (tankId: number) => apiDeleteTank(tankId),
+    onSuccess: (data, variables) => {
+      console.log('Tank deleted successfully:', data);
+      // Invalidate and refetch tank queries
+      queryClient.invalidateQueries(['tanks']);
+      queryClient.removeQueries(['tank', variables]);
+    },
+  });
 };

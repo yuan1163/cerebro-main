@@ -2599,7 +2599,7 @@ module.exports = {
         normal: 'var(--typography-letter-spacing-normal)',
         tight: 'var(--typography-letter-spacing-tight)',
         tighter: 'var(--typography-letter-spacing-tighter)',
-        wide: 'var(--typography-letter-spacing-wide)', // 0.28
+        wide: 'var(--typography-letter-spacing-wide)', // 0.24px
         '32': '0.32px',
         '36': '0.36px',
         wider: 'var(--typography-letter-spacing-wider)', // 0.8

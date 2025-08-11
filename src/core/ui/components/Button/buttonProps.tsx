@@ -22,5 +22,5 @@ export type ButtonProps<T extends React.ElementType> = {
   square?: boolean;
   startIcon?: React.ReactNode;
   textColor?: TypographyPalette | PaletteString;
-  variant?: 'solid' | 'outlined' | 'ghost' | 'control' | 'tint' | 'text' | 'link';
+  variant?: 'solid' | 'outlined' | 'ghost' | 'control' | 'tint' | 'text' | 'link' | 'delete';
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
