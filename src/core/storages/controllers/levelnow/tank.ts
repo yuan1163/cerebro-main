@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { apiGetTanks, apiGetTank, apiUpdateTank, apiDeleteTank } from '@core/api/entities/levelnow/tank';
+import { apiGetTanks, apiGetTank, apiUpdateTank, apiDeleteTank, apiAddTank } from '@core/api/entities/levelnow/tank';
 import { apiGetClient } from '@core/api/entities/levelnow/client';
 
 export const useTanks = () => {
@@ -77,6 +77,17 @@ export const useDeleteTank = () => {
       // Invalidate and refetch tank queries
       queryClient.invalidateQueries(['tanks']);
       queryClient.removeQueries(['tank', variables]);
+    },
+  });
+};
+
+export const useAddTank = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (deviceReference: string) => apiAddTank(deviceReference),
+    onSuccess: () => {
+      // Invalidate and refetch tank queries
+      queryClient.invalidateQueries(['tanks']);
     },
   });
 };

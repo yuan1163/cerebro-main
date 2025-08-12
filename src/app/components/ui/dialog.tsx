@@ -41,27 +41,39 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
->(({ className, children, ...props }, ref) => (
-  <DialogPortal data-slot='dialog-portal'>
-    <DialogOverlay />
-    <DialogPrimitive.Content
-      ref={ref}
-      data-slot='dialog-content'
-      className={cn(
-        'bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-tooltip grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg p-6 shadow-lg duration-200 sm:max-w-lg',
-        className,
-      )}
-      {...props}
-    >
-      {children}
-      <DialogPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
-        {/* <XIcon /> */}
-        <span className='sr-only'>Close</span>
-      </DialogPrimitive.Close>
-    </DialogPrimitive.Content>
-  </DialogPortal>
-));
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> & {
+    overlay?: boolean;
+    position?: 'top' | 'center' | 'bottom';
+  }
+>(({ className, children, overlay = true, position = 'center', ...props }, ref) => {
+  const positionClasses = {
+    top: 'top-0 left-[50%] translate-x-[-50%] translate-y-0',
+    center: 'top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]',
+    bottom: 'bottom-0 left-[50%] translate-x-[-50%] translate-y-0',
+  };
+  return (
+    <DialogPortal data-slot='dialog-portal'>
+      {overlay && <DialogOverlay />}
+      <DialogPrimitive.Content
+        ref={ref}
+        data-slot='dialog-content'
+        className={cn(
+          'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed  z-tooltip grid w-full max-w-[calc(100%-2rem)] rounded-lg shadow-lg duration-200 sm:max-w-lg outline-none',
+          positionClasses[position],
+          className,
+        )}
+        aria-describedby={undefined}
+        {...props}
+      >
+        {children}
+        <DialogPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
+          {/* <XIcon /> */}
+          <span className='sr-only'>Close</span>
+        </DialogPrimitive.Close>
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  );
+});
 DialogContent.displayName = DialogPrimitive.Content.displayName;
 
 const DialogHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
@@ -69,7 +81,7 @@ const DialogHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
     <div
       ref={ref}
       data-slot='dialog-header'
-      className={cn('flex flex-col gap-2 text-center sm:text-left', className)}
+      className={cn('flex flex-col text-center sm:text-left', className)}
       {...props}
     />
   ),
@@ -105,12 +117,7 @@ const DialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
-  <DialogPrimitive.Description
-    ref={ref}
-    data-slot='dialog-description'
-    className={cn('text-muted-foreground text-sm', className)}
-    {...props}
-  />
+  <DialogPrimitive.Description ref={ref} data-slot='dialog-description' className={cn('', className)} {...props} />
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
 

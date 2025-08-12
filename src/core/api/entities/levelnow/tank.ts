@@ -1,5 +1,6 @@
 import { api } from '@core/api/index';
 import { ApiResponse, Tank, TankList } from '@core/api/types';
+import { de } from '@nodemodules/zod/v4/locales/index.cjs';
 
 export async function apiGetTanks(): Promise<TankList> {
   const url = 'Tank/list';
@@ -34,4 +35,12 @@ export async function apiDeleteTank(tankId: number): Promise<ApiResponse> {
   const url = `Tank/${tankId.toString()}`;
 
   return api.delete<void, ApiResponse>(url, undefined, 'levelnow').then((response) => response);
+}
+
+export async function apiAddTank(deviceReference: string): Promise<ApiResponse> {
+  if (!deviceReference) {
+    throw new Error('Device Reference is required to add a tank');
+  }
+  const url = `Tank/${deviceReference}`;
+  return api.post<void, ApiResponse>(url, undefined, 'levelnow').then((response) => response);
 }
