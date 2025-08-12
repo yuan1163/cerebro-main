@@ -1,6 +1,4 @@
 import DataBlock from '@core/ui/levelnow/DataBlock';
-import EditButton from '@core/ui/levelnow/EditButton';
-import DeleteButton from '@core/ui/levelnow/DeleteButton';
 
 import { ClientData } from '@core/api/types';
 type TankInfoGWProps = {
@@ -8,7 +6,7 @@ type TankInfoGWProps = {
 };
 export default function TankInfoGW({ client }: TankInfoGWProps) {
   if (!client) {
-    return <DataBlock title='Customer' minHeight={94} />;
+    return <DataBlock minHeight={94} className='col-span-2' />;
   }
   const customer = [
     { label: 'GW Sales Rep', value: client.salesRepUserId },

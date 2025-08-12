@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { CardContent } from '@core/ui/components/CardContent';
 import { Card } from '@core/ui/components/Card';
@@ -7,7 +6,7 @@ import { getDeviceLevelIcon, getBatteryLevelIcon, getDeviceConnection } from '@c
 import FilterButton from '@core/ui/levelnow/FilterButton';
 import AddButton from '@core/ui/levelnow/AddButton';
 import NumberBadge from '@core/ui/levelnow/NumberBadge';
-import { ClientData, TankListItem } from '@core/api/types';
+import { TankListItem } from '@core/api/types';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
 
 import { cn } from '@core/utils/classnames';

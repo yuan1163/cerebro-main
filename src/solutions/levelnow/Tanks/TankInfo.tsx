@@ -6,9 +6,7 @@ import { Card } from '@core/ui/components/Card';
 import { CardContent } from '@core/ui/components/CardContent';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import DownloadButton from '@core/ui/levelnow/DownloadButton';
-import DataBlock from '@core/ui/levelnow/DataBlock';
-import EditButton from '@core/ui/levelnow/EditButton';
-import DeleteButton from '@core/ui/levelnow/DeleteButton';
+
 import { Scrollbar } from '@core/ui/components/Scrollbar';
 // components
 import TankInfoDetails from './TankInfoDetails';
@@ -22,33 +20,14 @@ type TankInfoProps = {
 };
 export default function TankInfo({ tank, client }: TankInfoProps) {
   console.log('client', client);
-
-  if (!tank) {
-    return null;
-  }
   console.log('tank', tank);
-  const info = [
-    {
-      label: 'Tank No.',
-      value: tank.tankNo,
-    },
-    { label: 'Description', value: '-' },
-    { label: 'Oil Type', value: tank.deviceOilType },
-    { label: 'Oil Viscosity', value: tank.deviceOilViscosity },
-    { label: 'Last Oil Filling Date', value: new Date(tank.deviceFillingDate).toISOString().split('T')[0] },
-  ];
-
-  // const customer = [
-  //   { label: 'Customer Name',
-
-  //   ];
 
   return (
     <div className='flex grow'>
       <Card className='flex flex-col flex-1'>
         <CardHeader borderBottom>
           <div className='flex items-center justify-between w-full'>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>{tank.tankNo}</h1>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>{tank?.tankNo || '-'}</h1>
             <DownloadButton />
           </div>
         </CardHeader>

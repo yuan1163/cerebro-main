@@ -9,7 +9,7 @@ type TankInfoCustomerProps = {
 };
 export default function TankInfoCustomer({ client }: TankInfoCustomerProps) {
   if (!client) {
-    return <DataBlock title='Customer' minHeight={241} />;
+    return <DataBlock title='Customer' minHeight={241} className='col-span-2' />;
   }
   const customer = [
     { label: 'Customer Name', value: client.clientName },
