@@ -72,6 +72,22 @@ export default function TankList({ tanks, selectedTankId, onTankSelect, searchQu
   };
 
   const filteredTanks = handleFilter(tanks);
+  const filterCounts = (() => {
+    let counts = 0;
+    if (deviceFilter) {
+      counts++;
+    }
+    if (levelFilter.length > 0) {
+      counts++;
+    }
+    return counts;
+  })();
+
+  const handleClearFilters = () => {
+    setDeviceFilter(null);
+    setLevelFilter([]);
+    setOpenFilter(false);
+  };
 
   return (
     <Card className='grid grid-rows-[auto_1fr] h-full'>
@@ -80,10 +96,14 @@ export default function TankList({ tanks, selectedTankId, onTankSelect, searchQu
           <div className='flex items-center justify-between'>
             <div className='flex items-center gap-3'>
               <span>All</span>
-              <NumberBadge number={tanks.length} />
+              <NumberBadge variant='gray' number={tanks.length} />
               <AddButton label='Tank' />
             </div>
-            <FilterButton onClick={() => setOpenFilter(!openFilter)} />
+            <FilterButton
+              onClick={() => setOpenFilter(!openFilter)}
+              counts={filterCounts}
+              onClear={handleClearFilters}
+            />
           </div>
           {openFilter && (
             <div className='flex flex-col gap-3 mt-5'>
