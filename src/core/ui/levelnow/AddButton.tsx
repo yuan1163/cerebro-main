@@ -11,7 +11,6 @@ import {
   DialogTrigger,
 } from '@app/components/ui/dialog';
 import { Button } from '@core/ui/components/Button';
-import { Card } from '@core/ui/components/Card';
 import Input from '@core/ui/levelnow/Input';
 // icons
 import AddIcon from '@assets/icons/LevelNOW/add.svg?component';
@@ -19,7 +18,6 @@ import { useForm, FieldErrors } from 'react-hook-form';
 import { z } from 'zod';
 import { customResolver } from '@core/utils/levelnow/resolver';
 import { useAddTank } from '@core/storages/controllers/levelnow/tank';
-import { on } from 'events';
 
 // zod schema
 const addTankSchema = z.object({
@@ -91,7 +89,6 @@ export default function AddButton({ label }: { label: string }) {
         <Button
           onClick={() => {
             setIsDialogOpen(true);
-            // reset(); // Clear form when opening dialog
           }}
           variant='solid'
           iconColor='white'
@@ -155,29 +152,3 @@ export default function AddButton({ label }: { label: string }) {
     </Dialog>
   );
 }
-
-/* <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent overlay={false} position='top' className='gap-8 bg-white p-5 gap-15 rounded-[10px]'>
-          <DialogHeader className='gap'>
-            <DialogTitle className='text-lg font-medium tracking-36 text-secondary-900 text-start'>
-              www.cerebro.level.now/levelnow says
-            </DialogTitle>
-            <DialogDescription className='mt-5 font-medium text-start text-md tracking-32 text-secondary-500'>
-              Please type in new Device Reference of a tank
-            </DialogDescription>
-            <Input className='mt-3' />
-            {/* <input
-              type='text'
-              className='px-4 py-2 mt-3 text-sm font-medium border rounded-md h-9 border-neutral-200 text-neutral-900 focus:outline-none'
-            /> */
-//     </DialogHeader>
-//     <DialogFooter className='flex items-center gap-3'>
-//       <Button variant='outlined' className='flex-1 px-3 py-2' onClick={() => setIsDialogOpen(false)}>
-//         Cancel
-//       </Button>
-//       <Button variant='solid' className='flex-1 px-3 py-2' onClick={handleAddTank}>
-//         Confirm
-//       </Button>
-//     </DialogFooter>
-//   </DialogContent>
-// </Dialog> */}
