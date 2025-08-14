@@ -41,7 +41,7 @@ import Building01SolidIcon from '@assets/icons/solid/building-01.svg?component';
 import Map01LineIcon from '@assets/icons/solid/map-01.svg?component';
 import TrackerLineIcon from '@assets/icons/line/tracker.svg?component';
 
-interface Point {
+export interface Point {
   latitude: number;
   longitude: number;
 }

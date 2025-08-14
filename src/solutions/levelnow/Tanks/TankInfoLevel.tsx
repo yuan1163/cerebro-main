@@ -2,6 +2,7 @@ import React from 'react';
 import DataBlock from '@core/ui/levelnow/DataBlock';
 
 import TankHighIcon from '@assets/icons/levelnow/tank/tank-high.svg?component';
+import Map, { Point } from '@core/ui/levelnow/Map';
 
 import { TankData } from '@core/api/types';
 type TankInfoDetailsProps = {
@@ -25,16 +26,33 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
     ],
   ];
 
+  // Map Properties
+  const points: Point[] =
+    tank.deviceLatitude && tank.deviceLongitude
+      ? [
+          {
+            latitude: tank.deviceLatitude,
+            longitude: tank.deviceLongitude,
+          },
+        ]
+      : [];
+  const zoom = points.length > 0 ? 16 : 1;
+
   return (
     <section className='flex flex-col gap-5'>
-      <div className='flex items-center'>
-        <h2 className='font-medium text-md tracking-32 text-neutral-900 w-[185px]'>Leveling</h2>
+      <div className='flex items-center gap-5 px-5'>
+        <h2 className='font-medium text-md tracking-32 text-neutral-900 w-[145px]'>Leveling</h2>
         <h2 className='font-medium text-md tracking-32 text-neutral-900'>Location</h2>
       </div>
       <div className='flex flex-col gap-6 p-5 rounded-lg bg-neutral-50' style={{ minHeight: '255px' }}>
         {/* image & map */}
-        <div>
-          <TankHighIcon className='w-[136px] h-[136px]' />
+        <div className='flex items-center gap-5'>
+          <div className='w-[145px]'>
+            <TankHighIcon className='w-[145px] h-[145px] aspect-square' />
+          </div>
+          <div className='w-full h-40'>
+            <Map points={points} zoom={zoom} className='rounded-[10px]' />
+          </div>
         </div>
         {/* grid */}
         <div className='grid grid-cols-2 mt-auto gap-x-20 gap-y-3'>
