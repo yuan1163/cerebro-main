@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 // types
 import { TankData } from '@core/api/types';
 import { ClientData } from '@core/api/types';
@@ -13,14 +14,23 @@ import TankInfoDetails from './TankInfoDetails';
 import TankInfoCustomer from './TankInfoCustomer';
 import TankInfoGW from './TankInfoGW';
 import TankInfoLevel from './TankInfoLevel';
+import { useAuth } from '@core/storages/auth';
+import CustomerAssign from './CustomerAssign';
 
 type TankInfoProps = {
   tank: TankData | null;
   client: ClientData | null;
 };
 export default function TankInfo({ tank, client }: TankInfoProps) {
-  console.log('client', client);
-  console.log('tank', tank);
+  const [isEditCustomer, setIsEditCustomer] = useState(false);
+
+  const onEditCustomer = () => {
+    setIsEditCustomer(true);
+  };
+
+  const onCancelEdit = () => {
+    setIsEditCustomer(false);
+  };
 
   return (
     <div className='flex grow'>
@@ -32,18 +42,22 @@ export default function TankInfo({ tank, client }: TankInfoProps) {
           </div>
         </CardHeader>
         <CardContent className='h-[calc(100vh-244px)] overflow-auto grow'>
-          <Scrollbar>
-            <div className='grid grid-flow-row grid-cols-2 grid-rows-[auto,auto,auto] gap-5'>
-              {/* Info */}
-              <TankInfoDetails tank={tank} />
-              {/* Ievel & Location */}
-              <TankInfoLevel tank={tank} />
-              {/* Customer */}
-              <TankInfoCustomer client={client} />
-              {/* GW */}
-              <TankInfoGW client={client} />
-            </div>
-          </Scrollbar>
+          {tank && isEditCustomer ? (
+            <CustomerAssign tank={tank} client={client} onCancelEdit={onCancelEdit} />
+          ) : (
+            <Scrollbar>
+              <div className='grid grid-flow-row grid-cols-2 grid-rows-[auto,auto,auto] gap-5'>
+                {/* Info */}
+                <TankInfoDetails tank={tank} />
+                {/* Ievel & Location */}
+                <TankInfoLevel tank={tank} />
+                {/* Customer */}
+                <TankInfoCustomer client={client} onEditCustomer={onEditCustomer} />
+                {/* GW */}
+                <TankInfoGW client={client} />
+              </div>
+            </Scrollbar>
+          )}
         </CardContent>
       </Card>
     </div>

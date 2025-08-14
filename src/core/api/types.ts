@@ -15,6 +15,9 @@ export type ApiResponse = {
   message: string;
 };
 
+// api/Client
+export type Clients = ClientData[];
+
 // api/Client/{id}
 export type Client = {
   success: boolean;

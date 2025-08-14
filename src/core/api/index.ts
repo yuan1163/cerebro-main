@@ -11,6 +11,7 @@ export enum METHOD {
   Get = 'GET',
   Post = 'POST',
   Put = 'PUT',
+  Patch = 'PATCH',
   Delete = 'DELETE',
 }
 
@@ -136,6 +137,10 @@ export class ApiLayer {
 
   async put<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {
     return this.request(METHOD.Put, endpoint, data, null, source) as Promise<Output>;
+  }
+
+  async patch<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {
+    return this.request(METHOD.Patch, endpoint, data, null, source) as Promise<Output>;
   }
 
   async delete<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {

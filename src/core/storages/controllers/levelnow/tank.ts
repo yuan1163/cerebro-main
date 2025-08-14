@@ -1,5 +1,12 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { apiGetTanks, apiGetTank, apiUpdateTank, apiDeleteTank, apiAddTank } from '@core/api/entities/levelnow/tank';
+import {
+  apiGetTanks,
+  apiGetTank,
+  apiUpdateTank,
+  apiDeleteTank,
+  apiAddTank,
+  apiUpdateTankClient,
+} from '@core/api/entities/levelnow/tank';
 import { apiGetClient } from '@core/api/entities/levelnow/client';
 
 export const useTanks = () => {
@@ -19,21 +26,6 @@ export const useTank = (tankId: number | null) => {
     cacheTime: 1000 * 60 * 10, // 10 minutes
   });
   if (!tankId) {
-    return null;
-  }
-  if (!data || !data.success) {
-    return null;
-  }
-  return data.data;
-};
-
-export const useClient = (clientId: number | null) => {
-  const { data } = useQuery(['client', clientId], () => apiGetClient(clientId), {
-    enabled: !!clientId, // Only fetch when we have a valid client ID
-    staleTime: 1000 * 60 * 5, // 5 minutes
-    cacheTime: 1000 * 60 * 10, // 10 minutes
-  });
-  if (!clientId) {
     return null;
   }
   if (!data || !data.success) {
@@ -64,6 +56,18 @@ export const useUpdateTank = () => {
       // Invalidate and refetch tank queries
       queryClient.invalidateQueries(['tanks']);
       queryClient.invalidateQueries(['tank', variables.tankId]);
+    },
+  });
+};
+
+export const useUpdateTankClient = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ tankId, clientId }: { tankId: number; clientId: number }) => apiUpdateTankClient(tankId, clientId),
+    onSuccess: (data, variables) => {
+      // Invalidate and refetch tank queries
+      queryClient.invalidateQueries(['tank', variables.tankId]);
+      queryClient.invalidateQueries(['tanks']);
     },
   });
 };

@@ -1,6 +1,5 @@
 import { api } from '@core/api/index';
 import { ApiResponse, Tank, TankList } from '@core/api/types';
-import { de } from '@nodemodules/zod/v4/locales/index.cjs';
 
 export async function apiGetTanks(): Promise<TankList> {
   const url = 'Tank/list';
@@ -29,6 +28,15 @@ export async function apiUpdateTank(
   const url = `Tank/${tankId.toString()}`;
 
   return api.put<typeof data, ApiResponse>(url, data, 'levelnow').then((response) => response);
+}
+
+export async function apiUpdateTankClient(tankId: number, clientId: number): Promise<ApiResponse> {
+  if (!tankId || clientId === undefined || clientId === null) {
+    throw new Error('Tank ID and Client ID are required to update tank client');
+  }
+  const url = `Tank/${tankId.toString()}/client`;
+
+  return api.patch<number, ApiResponse>(url, clientId, 'levelnow').then((response) => response);
 }
 
 export async function apiDeleteTank(tankId: number): Promise<ApiResponse> {

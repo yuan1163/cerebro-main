@@ -64,6 +64,10 @@ module.exports = {
         },
         dark: 'var(--color-secondary-dark)',
       },
+      tertiary: {
+        '500': '#9EABB6',
+        '600': '#8A97A4',
+      },
       typography: {
         primary: 'var(--color-typography-primary)',
         secondary: 'var(--color-typography-secondary)',
@@ -2401,6 +2405,7 @@ module.exports = {
       },
     },
     boxShadow: {
+      checkbox: '0 1px 2px 0 rgba(0, 0, 0, 0.08)',
       dialogContent: '0 4px 38px 0 rgba(0, 0, 0, 0.12)',
       tab: '0 2px 4px 0 rgba(0, 0, 0, 0.04)',
       card: '0 2px 4px 0 rgba(0, 0, 0, 0.08)',
@@ -2601,6 +2606,7 @@ module.exports = {
         tight: 'var(--typography-letter-spacing-tight)',
         tighter: 'var(--typography-letter-spacing-tighter)',
         wide: 'var(--typography-letter-spacing-wide)', // 0.24px
+        '28': '0.28px',
         '32': '0.32px',
         '36': '0.36px',
         wider: 'var(--typography-letter-spacing-wider)', // 0.8
