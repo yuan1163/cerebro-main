@@ -17,12 +17,14 @@ import TankSearch from './TankSearch';
 import TankList from './TankList';
 import TankInfo from './TankInfo';
 import { useTanks, useTank } from '@core/storages/controllers/levelnow/tank';
-import { useClient } from '@core/storages/controllers/levelnow/tank';
+import { useClient } from '@core/storages/controllers/levelnow/client';
 // tabs
 import Tabs from '@core/ui/levelnow/Tabs';
 
 export const Tanks = observer(() => {
   const [selectedTankId, setSelectedTankId] = useState<number | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+
   const tanks = useTanks();
   const selectedTank = useTank(selectedTankId);
   const client = useClient(selectedTank?.clientId || null);
@@ -30,6 +32,10 @@ export const Tanks = observer(() => {
   const handleTankSelect = useCallback((tankId: number) => {
     setSelectedTankId(tankId);
   }, []);
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+  };
 
   useEffect(() => {
     setSelectedTankId(tanks[0]?.tankId);
@@ -44,11 +50,16 @@ export const Tanks = observer(() => {
       />
       <div className='flex items-center justify-between gap-5'>
         <Tabs tabs={['Admins', 'Contacts', 'Groups']} />
-        <TankSearch />
+        <TankSearch onChange={handleSearchChange} />
       </div>
       <UnitContainer className='mt-5'>
         <Unit variant='list'>
-          <TankList tanks={tanks} onTankSelect={handleTankSelect} selectedTankId={selectedTankId} />
+          <TankList
+            tanks={tanks}
+            onTankSelect={handleTankSelect}
+            selectedTankId={selectedTankId}
+            searchQuery={searchQuery}
+          />
         </Unit>
         <Unit>
           <TankInfo tank={selectedTank} client={client} />
