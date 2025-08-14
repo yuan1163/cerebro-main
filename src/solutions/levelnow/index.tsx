@@ -20,6 +20,8 @@ import Users01SolidIcon from '@assets/icons/solid/users-01.svg?component';
 
 import TankLineIcon from '@assets/icons/line/tank-line.svg?component';
 import TankSolidIcon from '@assets/icons/solid/tank-solid.svg?component';
+import CustomerLineIcon from '@assets/icons/LevelNOW/sidebar/customer-line.svg?component';
+import CustomerSolidIcon from '@assets/icons/LevelNOW/sidebar/customer-solid.svg?component';
 // types
 import { Modules, ModuleSections } from '@core/ui/types';
 import { t } from '@core/utils/translate';
@@ -33,6 +35,7 @@ import { Users } from '@solutions/cerebro/Users';
 
 import { Domain } from '@solutions/levelnow/Domain';
 import { Tanks } from '@solutions/levelnow/Tanks';
+import { Customers } from '@solutions/levelnow/Customers';
 import ResponsibleTanksPage from '@core/ui/pages/ResponsibleTanksPage';
 
 export const modules: Modules = [
@@ -57,6 +60,14 @@ export const modules: Modules = [
     icon: <TankLineIcon />,
     iconSolid: <TankSolidIcon />,
     component: <Tanks />,
+  },
+  {
+    system: 'levelnow',
+    url: 'customers',
+    title: 'customers.customers.label',
+    icon: <CustomerLineIcon />,
+    iconSolid: <CustomerSolidIcon />,
+    component: <Customers />,
   },
   //   // {
   //   //   url: 'overview',
