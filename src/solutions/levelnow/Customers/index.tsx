@@ -24,7 +24,7 @@ import Tabs from '@core/ui/levelnow/Tabs';
 import CustomerList from './CustomerList';
 
 export const Customers = observer(() => {
-  //   const [selectedTankId, setSelectedTankId] = useState<number | null>(null);
+  const [selectedClientId, setSelectedClientId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   //   const tanks = useTanks();
@@ -33,17 +33,17 @@ export const Customers = observer(() => {
   const clients = useClients();
   console.log('clients', clients);
 
-  //   const handleTankSelect = useCallback((tankId: number) => {
-  //     setSelectedTankId(tankId);
-  //   }, []);
+  const handleCustomerSelect = useCallback((clientId: number) => {
+    setSelectedClientId(clientId);
+  }, []);
 
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
   };
 
-  //   useEffect(() => {
-  //     setSelectedTankId(tanks[0]?.tankId);
-  //   }, [tanks]);
+  useEffect(() => {
+    setSelectedClientId(clients[0]?.clientId);
+  }, [clients]);
 
   return (
     <>
@@ -58,10 +58,15 @@ export const Customers = observer(() => {
       </div>
       <UnitContainer className='mt-5'>
         <Unit variant='list'>
-          <CustomerList customers={clients} searchQuery={searchQuery} />
+          <CustomerList
+            customers={clients}
+            selectedClientId={selectedClientId}
+            onCustomerSelect={handleCustomerSelect}
+            searchQuery={searchQuery}
+          />
           {/* <TankList
             tanks={tanks}
-            onTankSelect={handleTankSelect}
+            onTankSelect={handleCustomerSelect}
             selectedTankId={selectedTankId}
             searchQuery={searchQuery}
           /> */}
