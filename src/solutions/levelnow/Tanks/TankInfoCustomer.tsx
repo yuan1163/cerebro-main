@@ -3,21 +3,21 @@ import EditButton from '@core/ui/levelnow/EditButton';
 import DeleteButton from '@core/ui/levelnow/DeleteButton';
 
 import { ClientData } from '@core/api/types';
+import { getCustomerProfileFields } from '@constants/fieldSettings';
 type TankInfoCustomerProps = {
   client: ClientData | null;
   onEditCustomer: () => void;
 };
 export default function TankInfoCustomer({ client, onEditCustomer }: TankInfoCustomerProps) {
+  // Get customer fields from centralized configuration
+  const customerFields = getCustomerProfileFields(client);
+
+  // Convert to the format expected by DataBlock (add address field)
   const customer = [
-    { label: 'Customer Name', value: client?.clientName || '-' },
-    { label: 'Customer No.', value: client?.clientNo || '-' },
-    { label: 'Primary Contact', value: client?.clientContact || '-' },
-    { label: 'Phone', value: client?.clientPhone || '-' },
-    { label: 'Post Code', value: client?.clientPostCode || '-' },
-    { label: 'Address', value: client?.clientAddress || '-' },
-    { label: 'Country', value: client?.clientCountry || '-' },
-    { label: 'State', value: client?.clientState || '-' },
-    { label: 'City', value: client?.clientCity || '-' },
+    ...customerFields.slice(0, 4), // customerName, customerNo, primaryContact, mobileNo
+    customerFields[4], // postcode
+    { label: 'Address', value: client?.clientAddress || '-' }, // Add address field
+    ...customerFields.slice(5), // country, state, city
   ];
 
   const handleDelete = () => {

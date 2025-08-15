@@ -22,6 +22,10 @@ import { useClients } from '@core/storages/controllers/levelnow/client';
 // tabs
 import Tabs from '@core/ui/levelnow/Tabs';
 import CustomerList from './CustomerList';
+import CustomerInfo from './CustomerInfo';
+
+// types
+import { ClientData } from '@core/api/types';
 
 export const Customers = observer(() => {
   const [selectedClientId, setSelectedClientId] = useState<number | null>(null);
@@ -32,6 +36,7 @@ export const Customers = observer(() => {
   //   const client = useClient(selectedTank?.clientId || null);
   const clients = useClients();
   console.log('clients', clients);
+  const selectedClient = clients.find((client) => client.clientId === selectedClientId) || null;
 
   const handleCustomerSelect = useCallback((clientId: number) => {
     setSelectedClientId(clientId);
@@ -64,14 +69,10 @@ export const Customers = observer(() => {
             onCustomerSelect={handleCustomerSelect}
             searchQuery={searchQuery}
           />
-          {/* <TankList
-            tanks={tanks}
-            onTankSelect={handleCustomerSelect}
-            selectedTankId={selectedTankId}
-            searchQuery={searchQuery}
-          /> */}
         </Unit>
-        <Unit>{/* <TankInfo tank={selectedTank} client={client} /> */}</Unit>
+        <Unit>
+          <CustomerInfo customer={selectedClient} />
+        </Unit>
       </UnitContainer>
     </>
   );

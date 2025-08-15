@@ -149,7 +149,7 @@ function TankItem({ tank, selectedTankId, onTankSelect }: TankItemProps) {
         <div className='font-medium text-16 tracking-32 text-secondary-500'>{tank.deviceReference}</div>
       </div>
       {/* device level */}
-      <div>{getDeviceLevelIcon(tank.deviceLevel)}</div>
+      <div>{getDeviceLevelIcon(tank.deviceLevel, 'sm')}</div>
       {/* battery level */}
       <div>{getBatteryLevelIcon(tank.deviceBattery)}</div>
       {/* connection */}

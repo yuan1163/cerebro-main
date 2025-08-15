@@ -13,17 +13,30 @@ import BatteryLevelThreeIcon from '@assets/icons/LevelNOW/battery/battery-level-
 import BatteryLevelFourIcon from '@assets/icons/LevelNOW/battery/battery-level-4.svg?component';
 
 // Device level
-export const getDeviceLevelIcon = (deviceLevel: number): React.ReactNode => {
-  const size = 'w-[52px] h-[52px]';
+type DeviceLevelSize = 'sm' | 'md' | 'lg';
+
+export const getDeviceLevelIcon = (deviceLevel: number, size: DeviceLevelSize): React.ReactNode => {
+  const sizeClass = (() => {
+    switch (size) {
+      case 'sm':
+        return 'w-13 h-13';
+      case 'md':
+        return 'w-28 h-28';
+      case 'lg':
+        return 'w-36 h-36';
+      default:
+        return 'w-28 h-28';
+    }
+  })();
   switch (deviceLevel) {
     case 0:
-      return <TankLowIcon className={size} />;
+      return <TankLowIcon className={sizeClass} />;
     case 1:
-      return <TankMediumIcon className={size} />;
+      return <TankMediumIcon className={sizeClass} />;
     case 3:
-      return <TankHighIcon className={size} />;
+      return <TankHighIcon className={sizeClass} />;
     default:
-      return <TankHighIcon className={size} />; // Default icon if no match found
+      return <TankHighIcon className={sizeClass} />; // Default icon if no match found
   }
 };
 

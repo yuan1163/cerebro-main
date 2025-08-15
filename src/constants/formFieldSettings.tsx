@@ -59,7 +59,11 @@ export const formFieldSettings = {
       },
       newUserPassword: {
         label: t('user.newPasswordInput.label', 'New password', 'Confirm password field.'),
-        placeholder: t('user.newPasswordInputPlaceholder.label', 'Confirm password', 'Confirm password field placeholder.'),
+        placeholder: t(
+          'user.newPasswordInputPlaceholder.label',
+          'Confirm password',
+          'Confirm password field placeholder.',
+        ),
       },
       confermedUserPassword: {
         label: t('user.confirmPasswordInput.label', 'Confirm password', 'Confirm password field.'),
@@ -176,6 +180,32 @@ export const formFieldSettings = {
       },
       label: t('asset.devices.label', 'Devices', 'Devices'),
       placeholder: t('asset.devicesPlaceholder.label', 'Select Asset Devices', 'Asset Devices Input Placeholder.'),
+    },
+  },
+  customer: {
+    customerName: {
+      label: t('customer.customerName.label', 'Customer Name', 'Customer name field.'),
+    },
+    customerNo: {
+      label: t('customer.customerNo.label', 'Customer No.', 'Customer number field.'),
+    },
+    primaryContact: {
+      label: t('customer.primaryContact.label', 'Primary Contact', 'Primary contact field.'),
+    },
+    mobileNo: {
+      label: t('customer.mobileNo.label', 'Mobile No.', 'Mobile number field.'),
+    },
+    postcode: {
+      label: t('customer.postcode.label', 'Post code', 'Post code field.'),
+    },
+    country: {
+      label: t('customer.country.label', 'Country', 'Country field.'),
+    },
+    state: {
+      label: t('customer.state.label', 'State', 'State field.'),
+    },
+    city: {
+      label: t('customer.city.label', 'City', 'City field.'),
     },
   },
 };

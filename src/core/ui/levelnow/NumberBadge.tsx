@@ -6,7 +6,7 @@ type NumberBadgeProps = {
   className?: string;
 };
 
-export default function NumberBadge({ number, variant, className }: NumberBadgeProps) {
+export default function NumberBadge({ number, variant = 'gray', className }: NumberBadgeProps) {
   return (
     <Badge variant={variant} className={className}>
       {number}

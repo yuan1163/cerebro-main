@@ -14,6 +14,7 @@ type DataBlockProps = {
   labelWidth?: string;
   minHeight?: number;
   padColumns?: boolean;
+  noPadding?: boolean;
   className?: string;
   children?: React.ReactNode;
 };
@@ -34,6 +35,7 @@ export default function DataBlock({
   labelWidth,
   minHeight,
   padColumns = false,
+  noPadding = false,
   className,
   children,
 }: DataBlockProps) {
@@ -54,12 +56,12 @@ export default function DataBlock({
   }, [data, rowsPerColumn]);
 
   const gridTemplateColumns = columnsCount > 1 ? `auto repeat(${columnsCount - 1}, minmax(0, 1fr))` : 'auto';
-
+  const padding = noPadding ? '' : 'p-5';
   return (
     <section className={cn('flex flex-col gap-5', className)}>
       {title && <h2 className='font-medium text-md tracking-32 text-neutral-900'>{title}</h2>}
       <div
-        className='flex flex-col justify-between p-5 rounded-lg bg-neutral-50'
+        className={cn('flex flex-col justify-between flex-1 rounded-lg bg-neutral-50', padding)}
         style={minHeight ? { minHeight } : undefined}
       >
         <div className='grid gap-x-20 gap-y-3' style={{ gridTemplateColumns: gridTemplateColumns }}>
@@ -71,7 +73,7 @@ export default function DataBlock({
                 key={colIndex}
                 className='grid gap-x-10 gap-y-3'
                 style={{
-                  gridTemplateColumns: `${labelWidth} minmax(0, 1fr)`,
+                  gridTemplateColumns: `${labelWidth || 'auto'} minmax(0, 1fr)`,
                 }}
               >
                 {items.map((item, rowIndex) => (
