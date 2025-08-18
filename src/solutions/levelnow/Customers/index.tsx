@@ -1,5 +1,6 @@
 import { observer } from 'mobx-react';
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 // icons
 import CustomerLineIcon from '@assets/icons/LevelNOW/sidebar/customer-line.svg?component';
@@ -21,16 +22,17 @@ import CustomerList from './CustomerList';
 import CustomerInfo from './CustomerInfo';
 
 export const Customers = observer(() => {
-  const [selectedClientId, setSelectedClientId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isAddCustomer, setIsAddCustomer] = useState(false);
-
+  // react-router hooks
+  const navigate = useNavigate();
+  // custom hooks
   const clients = useClients();
-  const selectedClient = clients.find((client) => client.clientId === selectedClientId) || null;
 
-  const handleCustomerSelect = useCallback((clientId: number) => {
-    setSelectedClientId(clientId);
-  }, []);
+  const params = useParams();
+  const selectedClientId = params.current ? parseInt(params.current, 10) : null;
+
+  const selectedClient = clients.find((client) => client.clientId === selectedClientId) || null;
 
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
@@ -40,9 +42,15 @@ export const Customers = observer(() => {
     setIsAddCustomer((prev) => !prev);
   };
 
+  // if no selected client id, set it to the first client
   useEffect(() => {
-    setSelectedClientId(clients[0]?.clientId);
-  }, [clients]);
+    if (selectedClientId === null && clients.length > 0) {
+      const firstClient = clients[0];
+      if (firstClient) {
+        navigate(`/levelnow/customers/${firstClient.clientId}`);
+      }
+    }
+  }, [selectedClientId, clients, navigate]);
 
   return (
     <>
@@ -60,7 +68,6 @@ export const Customers = observer(() => {
           <CustomerList
             customers={clients}
             selectedClientId={selectedClientId}
-            onCustomerSelect={handleCustomerSelect}
             searchQuery={searchQuery}
             isAdd={isAddCustomer}
             onToggleAdd={handleToggleAdd}

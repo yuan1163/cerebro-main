@@ -13,11 +13,11 @@ import { useState } from 'react';
 import { cn } from '@core/utils/classnames';
 
 import Select from '@core/ui/levelnow/Select';
+import { Link } from '@core/ui/components/Link';
 
 type CustomerListProps = {
   customers: ClientData[];
   selectedClientId: number | null;
-  onCustomerSelect: (clientId: number) => void;
   searchQuery: string;
   isAdd: boolean;
   onToggleAdd: () => void;
@@ -25,13 +25,11 @@ type CustomerListProps = {
 type CustomerItemProps = {
   customer: ClientData;
   selectedClientId: number | null;
-  onCustomerSelect: (clientId: number) => void;
 };
 
 export default function CustomerList({
   customers,
   selectedClientId,
-  onCustomerSelect,
   searchQuery,
   isAdd,
   onToggleAdd,
@@ -147,20 +145,13 @@ export default function CustomerList({
       </CardHeader>
       <CardContent
         scrollable
-        // className={cn('h-[calc(100vh-244px)]', 'p-0')}
         className={cn(openFilter ? 'h-[calc(100vh-414px)]' : 'h-[calc(100vh-244px)]', 'p-0')}
         disablePaddingTop
       >
         <Scrollbar>
           <div className='flex flex-col'>
             {filteredCustomers.map((customer) => (
-              <CustomerItem
-                key={customer.clientId}
-                selectedClientId={selectedClientId}
-                onCustomerSelect={onCustomerSelect}
-                customer={customer}
-              />
-              //   <TankItem key={customer.clientId} customer={customer} selectedTankId={selectedTankId} onTankSelect={onTankSelect} />
+              <CustomerItem key={customer.clientId} selectedClientId={selectedClientId} customer={customer} />
             ))}
           </div>
         </Scrollbar>
@@ -169,21 +160,19 @@ export default function CustomerList({
   );
 }
 
-function CustomerItem({ customer, selectedClientId, onCustomerSelect }: CustomerItemProps) {
+function CustomerItem({ customer, selectedClientId }: CustomerItemProps) {
   const isSelected = selectedClientId === customer.clientId;
   const itemClass = isSelected ? 'bg-primary-50' : 'hover:bg-hover';
 
   const customerAddress = `${customer.clientAddress}, ${customer.clientCity}, ${customer.clientState}, ${customer.clientCountry}`;
   return (
-    <div
-      onClick={() => {
-        onCustomerSelect(customer.clientId);
-      }}
+    <Link
+      to={`/levelnow/customers/${customer.clientId}`}
       className={cn(itemClass, 'flex flex-col gap-1 border-b px-10 py-7 border-neutral-200 cursor-pointer')}
     >
       <div className='text-sm font-medium tracking-28 text-neutral-900'>{customer.clientNo}</div>
       <div className='font-medium text-md tracking-32 text-neutral-900'>{customer.clientName}</div>
       <div className='font-medium text-md tracking-32 text-secondary-500'>{customerAddress}</div>
-    </div>
+    </Link>
   );
 }
