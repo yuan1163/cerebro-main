@@ -5,6 +5,7 @@ import { Scrollbar } from '@core/ui/components/Scrollbar';
 import { getCustomerTankFields } from '@constants/fieldSettings';
 import NumberBadge from '@core/ui/levelnow/NumberBadge';
 import { getDeviceLevelIcon } from '@core/utils/levelnow/deviceStatus';
+import { Link } from '@core/ui/components/Link';
 
 type Item = {
   label: string;
@@ -107,7 +108,10 @@ export default function CustomerTanks({ clientTank }: CustomerTanks) {
 function CustomerTankItem({ clientTank }: { clientTank: ClientTank }) {
   const tankFields = getCustomerTankFields(clientTank);
   return (
-    <div className='flex items-center justify-between px-5 py-3 cursor-pointer hover:bg-primary-50'>
+    <Link
+      to={`/levelnow/tanks/${clientTank.tankId}`}
+      className='flex items-center justify-between px-5 py-3 cursor-pointer hover:bg-primary-50'
+    >
       <dl className='grid gap-x-10 gap-y-3' style={{ gridTemplateColumns: 'auto minmax(0, 1fr)' }}>
         {tankFields.map((field) => (
           <React.Fragment key={field.name}>
@@ -117,6 +121,6 @@ function CustomerTankItem({ clientTank }: { clientTank: ClientTank }) {
         ))}
       </dl>
       {getDeviceLevelIcon(clientTank.deviceLevel, 'lg')}
-    </div>
+    </Link>
   );
 }
