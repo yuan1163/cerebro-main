@@ -16,22 +16,21 @@ import { cn } from '@core/utils/classnames';
 import Select from '@core/ui/levelnow/Select';
 import CheckSelect from '@core/ui/levelnow/CheckSelect';
 import { DeviceLevelLabel } from '@core/api/types';
+import { Link } from '@core/ui/components/Link';
 
 type TankListProps = {
   tanks: TankListItem[];
   selectedTankId: number | null;
-  onTankSelect: (tankId: number) => void;
   searchQuery: string;
 };
 type TankItemProps = {
   tank: TankListItem;
   selectedTankId: number | null;
-  onTankSelect: (tankId: number) => void;
 };
 
 const levelOptions: DeviceLevelLabel[] = ['<100L', '100~205L', '>205L'];
 
-export default function TankList({ tanks, selectedTankId, onTankSelect, searchQuery }: TankListProps) {
+export default function TankList({ tanks, selectedTankId, searchQuery }: TankListProps) {
   const [openFilter, setOpenFilter] = useState(false);
   const [deviceFilter, setDeviceFilter] = useState<string | null>(null);
   const [levelFilter, setLevelFilter] = useState<DeviceLevelLabel[]>([]);
@@ -121,7 +120,7 @@ export default function TankList({ tanks, selectedTankId, onTankSelect, searchQu
         <Scrollbar>
           <div className='flex flex-col pr-2.5'>
             {filteredTanks.map((tank) => (
-              <TankItem key={tank.tankId} tank={tank} selectedTankId={selectedTankId} onTankSelect={onTankSelect} />
+              <TankItem key={tank.tankId} tank={tank} selectedTankId={selectedTankId} />
             ))}
           </div>
         </Scrollbar>
@@ -130,14 +129,12 @@ export default function TankList({ tanks, selectedTankId, onTankSelect, searchQu
   );
 }
 
-function TankItem({ tank, selectedTankId, onTankSelect }: TankItemProps) {
+function TankItem({ tank, selectedTankId }: TankItemProps) {
   const isSelected = selectedTankId === tank.tankId;
   const itemClass = isSelected ? 'bg-primary-50' : 'hover:bg-hover';
   return (
-    <div
-      onClick={() => {
-        onTankSelect(tank.tankId);
-      }}
+    <Link
+      to={`/levelnow/tanks/${tank.tankId}`}
       className={cn(
         itemClass,
         'grid items-center grid-cols-[2fr_auto_auto_auto] gap-5 border-b py-7 border-neutral-200',
@@ -154,6 +151,6 @@ function TankItem({ tank, selectedTankId, onTankSelect }: TankItemProps) {
       <div>{getBatteryLevelIcon(tank.deviceBattery)}</div>
       {/* connection */}
       <div>{getDeviceConnection(tank.deviceConnection)}</div>
-    </div>
+    </Link>
   );
 }

@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react';
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 // icons
 import TankLineIcon from '@assets/icons/line/tank-line.svg?component';
@@ -20,26 +20,31 @@ import { useTanks, useTank } from '@core/storages/controllers/levelnow/tank';
 import { useClient } from '@core/storages/controllers/levelnow/client';
 // tabs
 import Tabs from '@core/ui/levelnow/Tabs';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export const Tanks = observer(() => {
-  const [selectedTankId, setSelectedTankId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   const tanks = useTanks();
+  const params = useParams();
+  const selectedTankId = params.current ? parseInt(params.current, 10) : null;
   const selectedTank = useTank(selectedTankId);
   const client = useClient(selectedTank?.clientId || null);
 
-  const handleTankSelect = useCallback((tankId: number) => {
-    setSelectedTankId(tankId);
-  }, []);
+  const navigate = useNavigate();
 
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
   };
 
   useEffect(() => {
-    setSelectedTankId(tanks[0]?.tankId);
-  }, [tanks]);
+    if (selectedTankId === null && tanks.length > 0) {
+      const firstTank = tanks[0];
+      if (firstTank) {
+        navigate(`/levelnow/tanks/${firstTank.tankId}`);
+      }
+    }
+  }, [selectedTankId, tanks, navigate]);
 
   return (
     <>
@@ -54,12 +59,7 @@ export const Tanks = observer(() => {
       </div>
       <UnitContainer className='mt-5'>
         <Unit variant='list'>
-          <TankList
-            tanks={tanks}
-            onTankSelect={handleTankSelect}
-            selectedTankId={selectedTankId}
-            searchQuery={searchQuery}
-          />
+          <TankList tanks={tanks} selectedTankId={selectedTankId} searchQuery={searchQuery} />
         </Unit>
         <Unit>
           <TankInfo tank={selectedTank} client={client} />
