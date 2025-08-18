@@ -2,13 +2,18 @@ import DataBlock from '@core/ui/levelnow/DataBlock';
 import EditButton from '@core/ui/levelnow/EditButton';
 import DeleteButton from '@core/ui/levelnow/DeleteButton';
 
-import { ClientData } from '@core/api/types';
+import { ClientData, TankData } from '@core/api/types';
 import { getCustomerProfileFields } from '@constants/fieldSettings';
+import { useUpdateTankClient } from '@core/storages/controllers/levelnow/tank';
+
 type TankInfoCustomerProps = {
+  tank: TankData | null;
   client: ClientData | null;
   onEditCustomer: () => void;
 };
-export default function TankInfoCustomer({ client, onEditCustomer }: TankInfoCustomerProps) {
+export default function TankInfoCustomer({ tank, client, onEditCustomer }: TankInfoCustomerProps) {
+  const updateTankClient = useUpdateTankClient();
+
   // Get customer fields from centralized configuration
   const customerFields = getCustomerProfileFields(client);
 
@@ -20,9 +25,25 @@ export default function TankInfoCustomer({ client, onEditCustomer }: TankInfoCus
     ...customerFields.slice(5), // country, state, city
   ];
 
-  const handleDelete = () => {
-    // Handle delete logic here
+  const handleDelete = async (): Promise<void> => {
+    if (!tank?.tankId) {
+      console.error('Tank ID is not available for deletion');
+      return;
+    }
+    if (client?.clientId === undefined || client.clientId === null) {
+      // could be 0 to remove client
+      console.error('Client ID is not available for deletion');
+      return;
+    }
+
+    try {
+      await updateTankClient.mutateAsync({ tankId: tank.tankId, clientId: 0 });
+    } catch (error) {
+      console.error('Failed to delete customer:', error);
+      throw error;
+    }
   };
+
   return (
     <DataBlock
       title='Customer'
@@ -36,7 +57,13 @@ export default function TankInfoCustomer({ client, onEditCustomer }: TankInfoCus
     >
       <div className='flex items-center justify-end gap-3'>
         <EditButton onEdit={onEditCustomer} />
-        <DeleteButton type='customer-assign' name={client?.clientName} onDelete={handleDelete} disabled={!client} />
+        <DeleteButton
+          type='customer-assign'
+          name={client?.clientName}
+          onDelete={handleDelete}
+          disabled={!client}
+          isloading={updateTankClient.isLoading}
+        />
       </div>
     </DataBlock>
   );

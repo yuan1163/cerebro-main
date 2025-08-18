@@ -36,7 +36,7 @@ export async function apiUpdateTankClient(tankId: number, clientId: number): Pro
   }
   const url = `Tank/${tankId.toString()}/client`;
 
-  return api.patch<number, ApiResponse>(url, clientId, 'levelnow').then((response) => response);
+  return api.patch<string, ApiResponse>(url, JSON.stringify(clientId), 'levelnow').then((response) => response);
 }
 
 export async function apiDeleteTank(tankId: number): Promise<ApiResponse> {

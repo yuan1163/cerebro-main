@@ -8,6 +8,7 @@ import {
   apiUpdateTankClient,
 } from '@core/api/entities/levelnow/tank';
 import { apiGetClient } from '@core/api/entities/levelnow/client';
+import { TankData } from '@core/api/types';
 
 export const useTanks = () => {
   const { data } = useQuery(['tanks'], () => apiGetTanks(), {
@@ -64,10 +65,38 @@ export const useUpdateTankClient = () => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: ({ tankId, clientId }: { tankId: number; clientId: number }) => apiUpdateTankClient(tankId, clientId),
-    onSuccess: (data, variables) => {
-      // Invalidate and refetch tank queries
-      queryClient.invalidateQueries(['tank', variables.tankId]);
-      queryClient.invalidateQueries(['tanks']);
+    onMutate: async ({ tankId, clientId }) => {
+      // Cancel any outgoing refetches (so they don't overwrite our optimistic update)
+      await queryClient.cancelQueries(['tank', tankId]);
+
+      // Snapshot the previous value
+      const previousTank = queryClient.getQueryData<TankData>(['tank', tankId]);
+
+      // Optimistically update to the new value
+      if (previousTank) {
+        queryClient.setQueryData(['tank', tankId], (old: TankData | undefined) => {
+          if (!old) return old;
+          return {
+            ...old,
+            clientId,
+          };
+        });
+      }
+      // Return a context object with the snapshotted value
+      return { previousTank, tankId };
+    },
+    onError: (err, variables, context) => {
+      // If the mutation fails, use the context returned from onMutate to roll back
+      if (context?.previousTank) {
+        queryClient.setQueryData(['tank', context.tankId], context.previousTank);
+      }
+    },
+    onSuccess: async (data, variables) => {
+      // Invalidate and refetch tank queries - await to ensure completion
+      await Promise.all([
+        queryClient.invalidateQueries(['tank', variables.tankId]),
+        queryClient.invalidateQueries(['tanks']),
+      ]);
     },
   });
 };

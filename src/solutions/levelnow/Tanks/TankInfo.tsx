@@ -52,7 +52,7 @@ export default function TankInfo({ tank, client }: TankInfoProps) {
                 {/* Ievel & Location */}
                 <TankInfoLevel tank={tank} />
                 {/* Customer */}
-                <TankInfoCustomer client={client} onEditCustomer={onEditCustomer} />
+                <TankInfoCustomer tank={tank} client={client} onEditCustomer={onEditCustomer} />
                 {/* GW */}
                 <TankInfoGW client={client} />
               </div>

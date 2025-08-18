@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // ui components
 import { Button } from '@core/ui/components/Button';
 // shadcn ui components
@@ -16,18 +16,34 @@ import DeleteIcon from '@assets/icons/LevelNOW/delete.svg?component';
 type DeleteButtonProps = {
   type?: 'tank' | 'customer' | 'customer-assign' | 'user';
   name?: string;
-  onDelete: () => void;
+  onDelete: () => Promise<void> | void;
   disabled?: boolean;
   isloading?: boolean;
 };
 
 export default function DeleteButton({ type, name, onDelete, disabled = false, isloading }: DeleteButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleDelete = () => {
-    onDelete();
-    setIsDialogOpen(!isDialogOpen);
+  const handleDelete = async () => {
+    setIsDeleting(true);
+    try {
+      await onDelete();
+      setIsDialogOpen(false);
+    } catch (error) {
+      console.error('Delete operation failed:', error);
+      setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred');
+    } finally {
+      setIsDeleting(false);
+    }
   };
+
+  useEffect(() => {
+    if (!isDialogOpen) {
+      setIsDeleting(false);
+    }
+  }, [isDialogOpen]);
 
   const title = (() => {
     switch (type) {
@@ -41,8 +57,8 @@ export default function DeleteButton({ type, name, onDelete, disabled = false, i
       case 'customer-assign':
         return (
           <>
-            <p>Confirm removal of customer from the tank?</p>
-            <p className='mt-2'>[ {name} ]</p>
+            <div>Confirm removal of customer from the tank?</div>
+            <div className='mt-2'>[ {name} ]</div>
           </>
         );
       default:
@@ -59,8 +75,8 @@ export default function DeleteButton({ type, name, onDelete, disabled = false, i
       case 'customer-assign':
         return (
           <>
-            <p>This action will remove the currently assigned customer.</p>
-            <p>To reassign the same customer, please edit the Customer field in the tank settings.</p>
+            <div>This action will remove the currently assigned customer.</div>
+            <div>To reassign the same customer, please edit the Customer field in the tank settings.</div>
           </>
         );
       default:
@@ -80,23 +96,41 @@ export default function DeleteButton({ type, name, onDelete, disabled = false, i
       </Button>
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className='bg-white min-w-fit p-11 gap-15 rounded-[10px]'>
+        <DialogContent
+          className='bg-white min-w-fit p-11 gap-15 rounded-[10px]'
+          onEscapeKeyDown={(e) => {
+            if (isDeleting) {
+              e.preventDefault();
+            }
+          }}
+          onPointerDownOutside={(e) => {
+            if (isDeleting) {
+              e.preventDefault();
+            }
+          }}
+          onInteractOutside={(e) => {
+            if (isDeleting) {
+              e.preventDefault();
+            }
+          }}
+        >
           <DialogHeader className='gap-5 p-5'>
             <DialogTitle className='text-2xl font-bold leading-6 text-center text-black'>{title} </DialogTitle>
             <DialogDescription className='text-xl font-medium text-center text-secondary-500'>
               {description}
             </DialogDescription>
           </DialogHeader>
+          {errorMessage && <div className='mt-4 text-center text-red-500'>{errorMessage}</div>}
           <DialogFooter className='flex items-center gap-3'>
             <Button
               variant='outlined'
               className='flex-1 p-4'
               onClick={() => setIsDialogOpen(false)}
-              disabled={isloading}
+              disabled={isDeleting}
             >
               Cancel
             </Button>
-            <Button variant='delete' className='flex-1 p-4' onClick={handleDelete} loading={isloading}>
+            <Button variant='delete' className='flex-1 p-4' onClick={handleDelete} loading={isDeleting}>
               Delete {type === 'customer-assign' ? 'customer' : type}
             </Button>
           </DialogFooter>
