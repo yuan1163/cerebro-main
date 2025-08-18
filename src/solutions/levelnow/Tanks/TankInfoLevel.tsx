@@ -4,6 +4,8 @@ import DataBlock from '@core/ui/levelnow/DataBlock';
 import TankHighIcon from '@assets/icons/levelnow/tank/tank-high.svg?component';
 import Map, { Point } from '@core/ui/levelnow/Map';
 
+import { getDeviceLevelIcon } from '@core/utils/levelnow/deviceStatus';
+
 import { TankData } from '@core/api/types';
 type TankInfoDetailsProps = {
   tank: TankData | null;
@@ -47,9 +49,7 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
       <div className='flex flex-col gap-6 p-5 rounded-lg bg-neutral-50' style={{ minHeight: '255px' }}>
         {/* image & map */}
         <div className='flex items-center gap-5'>
-          <div className='w-[145px]'>
-            <TankHighIcon className='w-[145px] h-[145px] aspect-square' />
-          </div>
+          <div className='w-36'>{getDeviceLevelIcon(tank.deviceLevel, 'lg')}</div>
           <div className='w-full h-40'>
             <Map points={points} zoom={zoom} className='rounded-[10px]' />
           </div>
