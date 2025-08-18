@@ -1,7 +1,6 @@
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { CardContent } from '@core/ui/components/CardContent';
 import { Card } from '@core/ui/components/Card';
-import { getDeviceLevelIcon, getBatteryLevelIcon, getDeviceConnection } from '@core/utils/levelnow/deviceStatus';
 
 import FilterButton from '@core/ui/levelnow/FilterButton';
 import AddButton from '@core/ui/levelnow/AddButton';
@@ -9,19 +8,19 @@ import NumberBadge from '@core/ui/levelnow/NumberBadge';
 import { ClientData } from '@core/api/types';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { cn } from '@core/utils/classnames';
 
 import Select from '@core/ui/levelnow/Select';
-import CheckSelect from '@core/ui/levelnow/CheckSelect';
-import { DeviceLevelLabel } from '@core/api/types';
 
 type CustomerListProps = {
   customers: ClientData[];
   selectedClientId: number | null;
   onCustomerSelect: (clientId: number) => void;
   searchQuery: string;
+  isAdd: boolean;
+  onToggleAdd: () => void;
 };
 type CustomerItemProps = {
   customer: ClientData;
@@ -29,71 +28,97 @@ type CustomerItemProps = {
   onCustomerSelect: (clientId: number) => void;
 };
 
-const levelOptions: DeviceLevelLabel[] = ['<100L', '100~205L', '>205L'];
-
 export default function CustomerList({
   customers,
   selectedClientId,
   onCustomerSelect,
   searchQuery,
+  isAdd,
+  onToggleAdd,
 }: CustomerListProps) {
-  //   const [openFilter, setOpenFilter] = useState(false);
-  //   const [deviceFilter, setDeviceFilter] = useState<string | null>(null);
-  //   const [levelFilter, setLevelFilter] = useState<DeviceLevelLabel[]>([]);
+  const [openFilter, setOpenFilter] = useState(false);
+  const [countryFilter, setCountryFilter] = useState<string | null>(null);
+  const [stateFilter, setStateFilter] = useState<string | null>(null);
+  const [cityFilter, setCityFilter] = useState<string | null>(null);
 
-  //   const deviceReferences = Array.from(
-  //     new Set(
-  //       tanks
-  //         .map((tank) => tank.deviceReference)
-  //         .filter((ref) => ref)
-  //         .sort((a, b) => a.localeCompare(b)),
-  //     ),
-  //   );
-  //   const deviceOptions = [
-  //     { label: 'Device Reference: All', value: 'all' },
-  //     ...deviceReferences.map((ref) => ({ label: ref, value: ref })),
-  //   ];
+  const getUnique = (data: ClientData[], key: keyof ClientData): string[] => {
+    return Array.from(
+      new Set(
+        data
+          .map((item) => item[key])
+          .filter((item) => item)
+          .map((item) => String(item))
+          .sort((a, b) => a.localeCompare(b)),
+      ),
+    );
+  };
+  const countries = getUnique(customers, 'clientCountry');
+  const states = getUnique(customers, 'clientState');
+  const cities = getUnique(customers, 'clientCity');
 
-  //   const handleDeviceSelect = (selectedDevice: string) => {
-  //     setDeviceFilter(selectedDevice === 'all' ? null : selectedDevice);
-  //   };
+  const countryOptions = [
+    { label: 'Country: All', value: 'all' },
+    ...countries.map((country) => ({ label: country, value: country })),
+  ];
+  const stateOptions = [
+    { label: 'State: All', value: 'all' },
+    ...states.map((state) => ({ label: state, value: state })),
+  ];
+  const cityOptions = [{ label: 'City: All', value: 'all' }, ...cities.map((city) => ({ label: city, value: city }))];
 
-  //   const handleLevelSelect = (selectedLevels: DeviceLevelLabel[]) => {
-  //     setLevelFilter(selectedLevels);
-  //   };
+  const handleCountrySelect = (selectedCountry: string) => {
+    setCountryFilter(selectedCountry === 'all' ? null : selectedCountry);
+  };
+  const handleStateSelect = (selectedState: string) => {
+    setStateFilter(selectedState === 'all' ? null : selectedState);
+  };
+  const handleCitySelect = (selectedCity: string) => {
+    setCityFilter(selectedCity === 'all' ? null : selectedCity);
+  };
 
-  //   const handleFilter = (tanks: TankListItem[]) => {
-  //     let filteredTanks = tanks;
-  //     if (deviceFilter) {
-  //       filteredTanks = filteredTanks.filter((tank) => tank.deviceReference === deviceFilter);
-  //     }
-  //     if (levelFilter.length !== 0) {
-  //       filteredTanks = filteredTanks.filter((tank) => levelFilter.includes(tank.deviceLevelLabel));
-  //     }
-  //     if (searchQuery) {
-  //       filteredTanks = filteredTanks.filter((tank) => tank.deviceReference.includes(searchQuery));
-  //     }
-  //     return filteredTanks;
-  //   };
+  const handleFilter = (customers: ClientData[]) => {
+    let filteredCustomers = customers;
+    if (countryFilter) {
+      filteredCustomers = filteredCustomers.filter((customer) => customer.clientCountry === countryFilter);
+    }
+    if (stateFilter) {
+      filteredCustomers = filteredCustomers.filter((customer) => customer.clientState === stateFilter);
+    }
+    if (cityFilter) {
+      filteredCustomers = filteredCustomers.filter((customer) => customer.clientCity === cityFilter);
+    }
+    if (searchQuery) {
+      filteredCustomers = filteredCustomers.filter(
+        (customer) =>
+          customer.clientName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          customer.clientNo.toLowerCase().includes(searchQuery.toLowerCase()),
+      );
+    }
+    return filteredCustomers;
+  };
 
-  //   const filteredTanks = handleFilter(tanks);
+  const filteredCustomers = handleFilter(customers);
 
-  //   const filterCounts = (() => {
-  //     let counts = 0;
-  //     if (deviceFilter) {
-  //       counts++;
-  //     }
-  //     if (levelFilter.length > 0) {
-  //       counts++;
-  //     }
-  //     return counts;
-  //   })();
+  const filterCounts = (() => {
+    let counts = 0;
+    if (countryFilter) {
+      counts++;
+    }
+    if (stateFilter) {
+      counts++;
+    }
+    if (cityFilter) {
+      counts++;
+    }
+    return counts;
+  })();
 
-  //   const handleClearFilters = () => {
-  //     setDeviceFilter(null);
-  //     setLevelFilter([]);
-  //     setOpenFilter(false);
-  //   };
+  const handleClearFilters = () => {
+    setCountryFilter(null);
+    setStateFilter(null);
+    setCityFilter(null);
+    setOpenFilter(false);
+  };
 
   return (
     <Card className='grid grid-rows-[auto_1fr] h-full'>
@@ -102,32 +127,33 @@ export default function CustomerList({
           <div className='flex items-center justify-between'>
             <div className='flex items-center gap-3'>
               <span>All</span>
-              <NumberBadge variant='gray' number={customers.length} />
-              <AddButton label='Customer' />
+              <NumberBadge variant='gray' number={filteredCustomers.length} />
+              <AddButton label='Customer' onClick={onToggleAdd} disabled={isAdd} />
             </div>
-            {/* <FilterButton
+            <FilterButton
               onClick={() => setOpenFilter(!openFilter)}
               counts={filterCounts}
               onClear={handleClearFilters}
-            /> */}
+            />
           </div>
-          {/* {openFilter && (
+          {openFilter && (
             <div className='flex flex-col gap-3 mt-5'>
-              <Select options={deviceOptions} activedFilter={deviceFilter} handleSelect={handleDeviceSelect} />
-              <CheckSelect options={levelOptions} activedFilter={levelFilter} handleSelect={handleLevelSelect} />
+              <Select options={countryOptions} activedFilter={countryFilter} handleSelect={handleCountrySelect} />
+              <Select options={stateOptions} activedFilter={stateFilter} handleSelect={handleStateSelect} />
+              <Select options={cityOptions} activedFilter={cityFilter} handleSelect={handleCitySelect} />
             </div>
-          )} */}
+          )}
         </div>
       </CardHeader>
       <CardContent
         scrollable
-        className={cn('h-[calc(100vh-244px)]', 'p-0')}
-        // className={cn(openFilter ? 'h-[calc(100vh-360px)]' : 'h-[calc(100vh-244px)]', 'px-5 pb-5')}
+        // className={cn('h-[calc(100vh-244px)]', 'p-0')}
+        className={cn(openFilter ? 'h-[calc(100vh-414px)]' : 'h-[calc(100vh-244px)]', 'p-0')}
         disablePaddingTop
       >
         <Scrollbar>
           <div className='flex flex-col'>
-            {customers.map((customer) => (
+            {filteredCustomers.map((customer) => (
               <CustomerItem
                 key={customer.clientId}
                 selectedClientId={selectedClientId}
