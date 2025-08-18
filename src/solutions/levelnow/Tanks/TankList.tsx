@@ -4,7 +4,7 @@ import { Card } from '@core/ui/components/Card';
 import { getDeviceLevelIcon, getBatteryLevelIcon, getDeviceConnection } from '@core/utils/levelnow/deviceStatus';
 
 import FilterButton from '@core/ui/levelnow/FilterButton';
-import AddButton from '@core/ui/levelnow/AddButton';
+import AddButton from '@solutions/levelnow/Tanks/AddTankButton';
 import NumberBadge from '@core/ui/levelnow/NumberBadge';
 import { TankListItem } from '@core/api/types';
 import { Scrollbar } from '@core/ui/components/Scrollbar';

@@ -7,41 +7,49 @@ export const getCustomerProfileFields = (customer: ClientData | null) => [
     name: 'customerName',
     label: t('customer.customerName.label', 'Customer Name', 'Customer name field.'),
     value: customer?.clientName || '-',
+    placeholder: 'Enter customer name',
   },
   {
     name: 'customerNo',
     label: t('customer.customerNo.label', 'Customer No.', 'Customer number field.'),
     value: customer?.clientNo || '-',
+    placeholder: 'Enter customer no.',
   },
   {
     name: 'primaryContact',
     label: t('customer.primaryContact.label', 'Primary Contact', 'Primary contact field.'),
     value: customer?.clientContact || '-',
+    placeholder: 'Enter primary contact',
   },
   {
     name: 'mobileNo',
     label: t('customer.mobileNo.label', 'Mobile No.', 'Mobile number field.'),
     value: customer?.clientPhone || '-',
+    placeholder: 'Enter mobile number',
   },
   {
     name: 'postcode',
     label: t('customer.postcode.label', 'Post code', 'Post code field.'),
     value: customer?.clientPostCode || '-',
+    placeholder: 'Enter post code',
   },
   {
     name: 'country',
     label: t('customer.country.label', 'Country', 'Country field.'),
     value: customer?.clientCountry || '-',
+    placeholder: 'Enter country',
   },
   {
     name: 'state',
     label: t('customer.state.label', 'State', 'State field.'),
     value: customer?.clientState || '-',
+    placeholder: 'Enter state',
   },
   {
     name: 'city',
     label: t('customer.city.label', 'City', 'City field.'),
     value: customer?.clientCity || '-',
+    placeholder: 'Enter city',
   },
 ];
 
@@ -50,6 +58,7 @@ export const getCustomerGWFields = (customer: ClientData | null) => [
     name: 'gwsalesrep',
     label: t('customer.gwsalesrep.label', 'GW Sales Rep', 'Sales representative field.'),
     value: customer?.salesRepUserId || '-',
+    placeholder: 'Enter sales rep',
   },
   {
     name: 'gwcustomerservicerep',
@@ -59,6 +68,7 @@ export const getCustomerGWFields = (customer: ClientData | null) => [
       'Customer service representative field.',
     ),
     value: customer?.customerServiceRepUserId || '-',
+    placeholder: 'Enter customer service rep',
   },
 ];
 

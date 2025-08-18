@@ -14,28 +14,18 @@ import { t } from '@core/utils/translate';
 
 // components
 import SearchBar from '@core/ui/levelnow/SearchBar';
-// import TankList from './TankList';
-// import TankInfo from './TankInfo';
-import { useTanks, useTank } from '@core/storages/controllers/levelnow/tank';
-import { useClient } from '@core/storages/controllers/levelnow/client';
 import { useClients } from '@core/storages/controllers/levelnow/client';
 // tabs
 import Tabs from '@core/ui/levelnow/Tabs';
 import CustomerList from './CustomerList';
 import CustomerInfo from './CustomerInfo';
 
-// types
-import { ClientData } from '@core/api/types';
-
 export const Customers = observer(() => {
   const [selectedClientId, setSelectedClientId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [isAddCustomer, setIsAddCustomer] = useState(false);
 
-  //   const tanks = useTanks();
-  //   const selectedTank = useTank(selectedTankId);
-  //   const client = useClient(selectedTank?.clientId || null);
   const clients = useClients();
-  console.log('clients', clients);
   const selectedClient = clients.find((client) => client.clientId === selectedClientId) || null;
 
   const handleCustomerSelect = useCallback((clientId: number) => {
@@ -44,6 +34,10 @@ export const Customers = observer(() => {
 
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
+  };
+
+  const handleToggleAdd = () => {
+    setIsAddCustomer((prev) => !prev);
   };
 
   useEffect(() => {
@@ -68,10 +62,12 @@ export const Customers = observer(() => {
             selectedClientId={selectedClientId}
             onCustomerSelect={handleCustomerSelect}
             searchQuery={searchQuery}
+            isAdd={isAddCustomer}
+            onToggleAdd={handleToggleAdd}
           />
         </Unit>
         <Unit>
-          <CustomerInfo customer={selectedClient} />
+          <CustomerInfo customer={selectedClient} isAdd={isAddCustomer} onToggleAdd={handleToggleAdd} />
         </Unit>
       </UnitContainer>
     </>

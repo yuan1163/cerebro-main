@@ -57,6 +57,7 @@
     "@types/react-html-parser": "^2.0.2",
     "apexcharts": "^4.7.0",
     "ckeditor5": "^46.0.0",
+    "country-flag-icons": "^1.5.19",
     "graphql": "^16.6.0",
     "html-react-parser": "^5.2.3",
     "html2canvas": "^1.4.1",

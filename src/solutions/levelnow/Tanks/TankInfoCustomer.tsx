@@ -36,7 +36,7 @@ export default function TankInfoCustomer({ client, onEditCustomer }: TankInfoCus
     >
       <div className='flex items-center justify-end gap-3'>
         <EditButton onEdit={onEditCustomer} />
-        <DeleteButton type='customer' name={client?.clientName} onDelete={handleDelete} disabled={!client} />
+        <DeleteButton type='customer-assign' name={client?.clientName} onDelete={handleDelete} disabled={!client} />
       </div>
     </DataBlock>
   );

@@ -1,5 +1,12 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { apiGetClients, apiGetClient } from '@core/api/entities/levelnow/client';
+import {
+  apiGetClients,
+  apiGetClient,
+  apiUpdateClient,
+  apiAddClient,
+  apiDeleteClient,
+} from '@core/api/entities/levelnow/client';
+import { ClientData } from '@core/api/types';
 
 export const useClients = () => {
   const { data } = useQuery(['clients'], () => apiGetClients(), {
@@ -22,4 +29,41 @@ export const useClient = (clientId: number | null) => {
     return null;
   }
   return data.data;
+};
+
+export const useUpdateClient = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ clientId, data }: { clientId: number; data: Partial<ClientData> }) =>
+      apiUpdateClient(clientId, data),
+    onSuccess: (data, variables) => {
+      // Invalidate and refetch tank queries
+      queryClient.invalidateQueries(['clients']);
+      queryClient.invalidateQueries(['client', variables.clientId]);
+    },
+  });
+};
+
+export const useAddClient = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (data: Partial<ClientData>) => apiAddClient(data), // Assuming 0 is used for new clients
+    onSuccess: (data) => {
+      // Invalidate and refetch clients
+      queryClient.invalidateQueries(['clients']);
+    },
+  });
+};
+
+export const useDeleteClient = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (clientId: number) => apiDeleteClient(clientId),
+    onSuccess: () => {
+      // Invalidate and refetch clients
+      queryClient.invalidateQueries(['clients']);
+    },
+  });
 };
