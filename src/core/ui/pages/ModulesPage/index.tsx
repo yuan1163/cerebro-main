@@ -31,7 +31,9 @@ export const ModulesPage: React.FC<Props> = observer(({ modules }) => {
 
   if (!locations.hasData()) return <WaitingPage />;
 
-  const routes = getModulesRoutes(modules);
+  // routes for non-levelnow solutions (these expect an extra ":current" segment)
+  const nonLevelnowModules = modules.filter((mod) => !('system' in mod) || mod.system !== 'levelnow');
+  const routes = getModulesRoutes(nonLevelnowModules);
 
   // levelnow routes
   const levelnowModules = modules.filter((mod) => mod.system === 'levelnow');

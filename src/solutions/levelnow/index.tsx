@@ -36,6 +36,8 @@ import { Users } from '@solutions/cerebro/Users';
 import { Domain } from '@solutions/levelnow/Domain';
 import { Tanks } from '@solutions/levelnow/Tanks';
 import { Customers } from '@solutions/levelnow/Customers';
+import { Events } from '@solutions/levelnow/Events';
+
 import ResponsibleTanksPage from '@core/ui/pages/ResponsibleTanksPage';
 
 export const modules: Modules = [
@@ -69,6 +71,14 @@ export const modules: Modules = [
     iconSolid: <CustomerSolidIcon />,
     component: <Customers />,
   },
+  {
+    system: 'levelnow',
+    url: 'events',
+    title: 'events.events.label',
+    icon: <NotificationTextLineIcon />,
+    iconSolid: <NotificationTextSolidIcon />,
+    component: <Events />,
+  },
   //   // {
   //   //   url: 'overview',
   //   //   title: 'Overview',
@@ -77,13 +87,6 @@ export const modules: Modules = [
   //   //   component: null,
   //   // },
   //   {
-  //     url: 'events',
-  //     // title: t('events.events.label', 'Events', 'Events title.'),
-  //     title: 'events.events.label',
-  //     icon: <NotificationTextLineIcon />,
-  //     iconSolid: <NotificationTextSolidIcon />,
-  //     component: <Notifications />,
-  //   },
   //   {
   //     url: 'issues',
   //     // title: t('issue.issuesTitle.label', 'Issues', 'Issues title.'),
