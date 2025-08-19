@@ -1,7 +1,7 @@
 import DataBlock from '@core/ui/levelnow/DataBlock';
 import EditButton from '@core/ui/levelnow/EditButton';
 import DeleteButton from '@core/ui/levelnow/DeleteButton';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { TankData } from '@core/api/types';
 import { Button } from '@core/ui/components/Button';
@@ -10,6 +10,7 @@ import { useDeleteTank, useUpdateTank } from '@core/storages/controllers/levelno
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { getTankFields } from '@constants/fieldSettings';
 
 // Define the form schema using zod
 const tankSchema = z.object({
@@ -33,6 +34,7 @@ export default function TankInfoDetails({ tank }: TankInfoDetailsProps) {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormValues>({
     resolver: zodResolver(tankSchema),
     defaultValues: {
@@ -43,37 +45,25 @@ export default function TankInfoDetails({ tank }: TankInfoDetailsProps) {
     },
   });
 
+  // Reset form when customer data changes
+  useEffect(() => {
+    if (tank) {
+      reset({
+        tankNo: tank.tankNo || '',
+        deviceDescription: tank.deviceDescription || '',
+        deviceOilType: tank.deviceOilType || '',
+        deviceOilViscosity: tank.deviceOilViscosity || '',
+      });
+    }
+  }, [tank, reset]);
+
   // If tank is null, return a placeholder DataBlock
   if (!tank) {
     return <DataBlock title='Oils' minHeight={255} />;
   }
-  const fields = [
-    {
-      name: 'tankNo',
-      label: 'Tank No.',
-      value: tank.tankNo || '-',
-    },
-    {
-      name: 'deviceDescription',
-      label: 'Description',
-      value: tank.deviceDescription || '-',
-    },
-    {
-      name: 'deviceOilType',
-      label: 'Oil Type',
-      value: tank.deviceOilType || '-',
-    },
-    {
-      name: 'deviceOilViscosity',
-      label: 'Oil Viscosity',
-      value: tank.deviceOilViscosity || '-',
-    },
-    {
-      name: 'deviceFillingDate',
-      label: 'Last Oil Filling Date',
-      value: new Date(tank.deviceFillingDate).toISOString().split('T')[0] || '-',
-    },
-  ];
+
+  const fields = getTankFields(tank);
+  console.log('Tank Fields:', fields);
 
   const handleSubmitForm = async (data: FormValues) => {
     if (!tank.tankId) {

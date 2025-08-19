@@ -1,6 +1,35 @@
 import { t } from '@core/utils/translate';
 import { ClientData, ClientTank } from '@core/api/types';
 
+// Tank
+export const getTankFields = (tank: ClientTank | null) => [
+  {
+    name: 'tankNo',
+    label: t('tank.tankNo.label', 'Tank No.', 'Tank number field.'),
+    value: tank?.tankNo || '-',
+  },
+  {
+    name: 'deviceDescription',
+    label: t('tank.description.label', 'Description', 'Tank description field.'),
+    value: tank?.deviceDescription || '-',
+  },
+  {
+    name: 'deviceOilType',
+    label: t('tank.oilType.label', 'Oil Type', 'Tank oil type field.'),
+    value: tank?.deviceOilType || '-',
+  },
+  {
+    name: 'deviceOilViscosity',
+    label: t('tank.oilViscosity.label', 'Oil Viscosity', 'Tank oil viscosity field.'),
+    value: tank?.deviceOilViscosity || '-',
+  },
+  {
+    name: 'deviceFillingDate',
+    label: t('tank.lastOilFillingDate.label', 'Last Oil Filling Date', 'Tank last oil filling date field.'),
+    value: tank?.deviceFillingDate ? new Date(tank.deviceFillingDate).toLocaleDateString() : '-',
+  },
+];
+
 // Customer
 export const getCustomerProfileFields = (customer: ClientData | null) => [
   {
