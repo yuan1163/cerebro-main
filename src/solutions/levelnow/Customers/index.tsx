@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react';
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 
 // icons
 import CustomerLineIcon from '@assets/icons/LevelNOW/sidebar/customer-line.svg?component';
@@ -29,8 +29,17 @@ export const Customers = observer(() => {
   // custom hooks
   const clients = useClients();
 
-  const params = useParams();
-  const selectedClientId = params.current ? parseInt(params.current, 10) : null;
+  const { pathname } = useLocation();
+  console.log('pathname:', pathname);
+
+  // Extract client ID from pathname (e.g., /levelnow/customers/customer/123 -> 123)
+  const selectedClientId = (() => {
+    const lastSegment = pathname.split('/').pop();
+    if (!lastSegment) return null;
+    const id = Number(lastSegment);
+    return isNaN(id) ? null : id;
+  })();
+  console.log('Selected Client ID:', selectedClientId);
 
   const selectedClient = clients.find((client) => client.clientId === selectedClientId) || null;
 
@@ -47,7 +56,7 @@ export const Customers = observer(() => {
     if (selectedClientId === null && clients.length > 0) {
       const firstClient = clients[0];
       if (firstClient) {
-        navigate(`/levelnow/customers/${firstClient.clientId}`);
+        navigate(`/levelnow/customers/customer/${firstClient.clientId}`);
       }
     }
   }, [selectedClientId, clients, navigate]);

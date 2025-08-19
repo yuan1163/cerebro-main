@@ -20,15 +20,29 @@ import { useTanks, useTank } from '@core/storages/controllers/levelnow/tank';
 import { useClient } from '@core/storages/controllers/levelnow/client';
 // tabs
 import Tabs from '@core/ui/levelnow/Tabs';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export const Tanks = observer(() => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const tanks = useTanks();
-  const params = useParams();
-  const selectedTankId = params.current ? parseInt(params.current, 10) : null;
+  const { pathname } = useLocation();
+  console.log('pathname:', pathname);
+
+  // Extract client ID from pathname (e.g., /levelnow/customers/customer/123 -> 123)
+  const selectedTankId = (() => {
+    const lastSegment = pathname.split('/').pop();
+    if (!lastSegment) return null;
+    const id = Number(lastSegment);
+    return isNaN(id) ? null : id;
+  })();
+  console.log('Selected Tank ID:', selectedTankId);
+
+  // const params = useParams();
+  // const selectedTankId = params.current ? parseInt(params.current, 10) : null;
   const selectedTank = useTank(selectedTankId);
+  console.log('Selected Tank:', selectedTank);
+
   const client = useClient(selectedTank?.clientId || null);
 
   const navigate = useNavigate();
@@ -41,7 +55,7 @@ export const Tanks = observer(() => {
     if (selectedTankId === null && tanks.length > 0) {
       const firstTank = tanks[0];
       if (firstTank) {
-        navigate(`/levelnow/tanks/${firstTank.tankId}`);
+        navigate(`/levelnow/tanks/tank/${firstTank.tankId}`);
       }
     }
   }, [selectedTankId, tanks, navigate]);

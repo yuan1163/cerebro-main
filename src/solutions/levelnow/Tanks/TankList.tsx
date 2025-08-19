@@ -134,7 +134,7 @@ function TankItem({ tank, selectedTankId }: TankItemProps) {
   const itemClass = isSelected ? 'bg-primary-50' : 'hover:bg-hover';
   return (
     <Link
-      to={`/levelnow/tanks/${tank.tankId}`}
+      to={`/levelnow/tanks/tank/${tank.tankId}`}
       className={cn(
         itemClass,
         'grid items-center grid-cols-[2fr_auto_auto_auto] gap-5 border-b py-7 border-neutral-200',

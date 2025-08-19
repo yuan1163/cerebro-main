@@ -109,7 +109,7 @@ function CustomerTankItem({ clientTank }: { clientTank: ClientTank }) {
   const tankFields = getCustomerTankFields(clientTank);
   return (
     <Link
-      to={`/levelnow/tanks/${clientTank.tankId}`}
+      to={`/levelnow/tanks/tank/${clientTank.tankId}`}
       className='flex items-center justify-between px-5 py-3 cursor-pointer hover:bg-primary-50'
     >
       <dl className='grid gap-x-10 gap-y-3' style={{ gridTemplateColumns: 'auto minmax(0, 1fr)' }}>

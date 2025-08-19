@@ -167,7 +167,7 @@ function CustomerItem({ customer, selectedClientId }: CustomerItemProps) {
   const customerAddress = `${customer.clientAddress}, ${customer.clientCity}, ${customer.clientState}, ${customer.clientCountry}`;
   return (
     <Link
-      to={`/levelnow/customers/${customer.clientId}`}
+      to={`/levelnow/customers/customer/${customer.clientId}`}
       className={cn(itemClass, 'flex flex-col gap-1 border-b px-10 py-7 border-neutral-200 cursor-pointer')}
     >
       <div className='text-sm font-medium tracking-28 text-neutral-900'>{customer.clientNo}</div>
