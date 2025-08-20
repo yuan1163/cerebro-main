@@ -1,12 +1,14 @@
 import * as React from 'react';
-
+import { Scrollbar } from '@core/ui/components/Scrollbar';
 // import { cn } from "@app/lib/utils"
 import { cn } from '@core/utils/classnames';
 
 const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
   ({ className, ...props }, ref) => (
-    <div className='relative w-full overflow-auto'>
-      <table ref={ref} className={cn('w-full caption-bottom text-sm', className)} {...props} />
+    <div className='relative w-full'>
+      <Scrollbar>
+        <table ref={ref} className={cn('w-full caption-bottom text-sm', className)} {...props} />
+      </Scrollbar>
     </div>
   ),
 );

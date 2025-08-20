@@ -14,7 +14,6 @@ import TankInfoDetails from './TankInfoDetails';
 import TankInfoCustomer from './TankInfoCustomer';
 import TankInfoGW from './TankInfoGW';
 import TankInfoLevel from './TankInfoLevel';
-import { useAuth } from '@core/storages/auth';
 import CustomerAssign from './CustomerAssign';
 
 type TankInfoProps = {
@@ -48,11 +47,11 @@ export default function TankInfo({ tank, client }: TankInfoProps) {
             <Scrollbar>
               <div className='grid grid-flow-row grid-cols-2 grid-rows-[auto,auto,auto] gap-5'>
                 {/* Info */}
-                <TankInfoDetails tank={tank} />
+                <TankInfoDetails tank={tank} editMode deleteMode />
                 {/* Ievel & Location */}
                 <TankInfoLevel tank={tank} />
                 {/* Customer */}
-                <TankInfoCustomer tank={tank} client={client} onEditCustomer={onEditCustomer} />
+                <TankInfoCustomer tank={tank} client={client} editMode onEditCustomer={onEditCustomer} deleteMode />
                 {/* GW */}
                 <TankInfoGW client={client} />
               </div>

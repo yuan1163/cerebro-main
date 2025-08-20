@@ -38,8 +38,6 @@ export const Tanks = observer(() => {
   })();
   console.log('Selected Tank ID:', selectedTankId);
 
-  // const params = useParams();
-  // const selectedTankId = params.current ? parseInt(params.current, 10) : null;
   const selectedTank = useTank(selectedTankId);
   console.log('Selected Tank:', selectedTank);
 

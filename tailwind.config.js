@@ -2804,6 +2804,24 @@ module.exports = {
             height: '4px',
           },
         },
+        // Custom scrollbar for regular divs
+        '.scrollbar-neutral': {
+          'scrollbar-width': 'thin',
+          'scrollbar-color': 'var(--color-neutral-300) transparent',
+          '&::-webkit-scrollbar': {
+            width: '6px',
+          },
+          '&::-webkit-scrollbar-track': {
+            background: 'transparent',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            'background-color': 'var(--color-neutral-300)',
+            'border-radius': '3px',
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            'background-color': 'var(--color-neutral-400)',
+          },
+        },
       };
 
       addUtilities(newUtilities);

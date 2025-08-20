@@ -39,14 +39,15 @@ export type Event = {
 };
 
 // api/Events/history/{deviceRef}
-export type EventHistory = {
+export type EventsHistory = EventsHistoryItem[];
+export type EventsHistoryItem = {
   eventDate: string;
   eventLevelLow: 1 | null;
   eventFault: 1 | null;
   eventBatteryLow: 1 | null;
   eventOffline: 1 | null;
   eventOilFilling: 1 | null;
-}[];
+};
 
 // api/Client
 export type Clients = ClientData[];

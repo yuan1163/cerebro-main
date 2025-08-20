@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { columns } from './eventsColumns';
+import { useNavigate } from 'react-router-dom';
 
 // core ui components
 import { Card } from '@core/ui/components/Card';
@@ -10,23 +11,23 @@ import { Button } from '@core/ui/components/Button';
 import { Header } from '@core/ui/cerebro/Header';
 import Tabs from '@core/ui/levelnow/Tabs';
 import SearchBar from '@core/ui/levelnow/SearchBar';
+import NumberBadge from '@core/ui/levelnow/NumberBadge';
 
+import { Scrollbar } from '@core/ui/components/Scrollbar';
 import { DataTable } from '@app/components/ui/data-table';
 import { Listbox } from '@headlessui/react';
 
 // utils
 import { t } from '@core/utils/translate';
 import { cn } from '@core/utils/classnames';
+import { useEvents } from '@core/storages/controllers/levelnow/event';
+import { Event, EventsIssue } from '@core/api/types';
 
 // icons
 import FilterIcon from '@assets/icons/LevelNOW/filter.svg?component';
 import CheckIcon from '@assets/icons/LevelNOW/check.svg?component';
 import ChevronsUpDownIcon from '@assets/icons/LevelNOW/chevrons-up-down.svg?component';
 import EventsIcon from '@assets/icons/line/notification-text.svg?component';
-import NumberBadge from '@core/ui/levelnow/NumberBadge';
-import { useEvents } from '@core/storages/controllers/levelnow/event';
-import { Event, EventsIssue } from '@core/api/types';
-import { Scrollbar } from '@core/ui/components/Scrollbar';
 
 type Date = {
   month: number;
@@ -63,6 +64,8 @@ const ResponsibleTanksPage = () => {
   const [selectedIssue, setSelectedIssue] = useState<keyof Event | null>(null);
   const [selectedDevice, setSelectedDevice] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+
+  const navigate = useNavigate();
 
   // initial events data
   const events = useEvents();
@@ -203,6 +206,11 @@ const ResponsibleTanksPage = () => {
 
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
+  };
+
+  const handleRowClick = (rowData: any) => {
+    console.log(rowData);
+    navigate(`tank/${rowData.tankId}`);
   };
 
   return (
@@ -388,7 +396,13 @@ const ResponsibleTanksPage = () => {
               </div>
             </div>
           )}
-          <DataTable columns={columns} data={filteredEvents} fixHeight={406} scrollable={isFilterOpen} />
+          <DataTable
+            columns={columns}
+            data={filteredEvents}
+            fixHeight={325}
+            scrollable={isFilterOpen}
+            onRowClick={handleRowClick}
+          />
         </CardContent>
       </Card>
     </>

@@ -46,7 +46,7 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
         <h2 className='font-medium text-md tracking-32 text-neutral-900 w-[145px]'>Leveling</h2>
         <h2 className='font-medium text-md tracking-32 text-neutral-900'>Location</h2>
       </div>
-      <div className='flex flex-col gap-6 p-5 rounded-lg bg-neutral-50' style={{ minHeight: '255px' }}>
+      <div className='flex flex-col gap-6 p-5 rounded-lg grow bg-neutral-50' style={{ minHeight: '255px' }}>
         {/* image & map */}
         <div className='flex items-center gap-5'>
           <div className='w-36'>{getDeviceLevelIcon(tank.deviceLevel, 'lg')}</div>

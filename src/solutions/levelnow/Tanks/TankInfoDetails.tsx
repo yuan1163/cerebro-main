@@ -23,9 +23,11 @@ type FormValues = z.infer<typeof tankSchema>;
 
 type TankInfoDetailsProps = {
   tank: TankData | null;
+  editMode?: boolean;
+  deleteMode?: boolean;
 };
 
-export default function TankInfoDetails({ tank }: TankInfoDetailsProps) {
+export default function TankInfoDetails({ tank, editMode = false, deleteMode = false }: TankInfoDetailsProps) {
   const [isEdit, setIsEdit] = useState(false);
   const updateTankMutation = useUpdateTank();
   const deleteTank = useDeleteTank();
@@ -107,10 +109,12 @@ export default function TankInfoDetails({ tank }: TankInfoDetailsProps) {
   if (!isEdit) {
     return (
       <DataBlock title='Oils' data={fields} columns={1} minHeight={255} labelWidth='138px'>
-        <div className='flex items-center justify-end gap-3 '>
-          <EditButton onEdit={handleToggleEdit} />
-          <DeleteButton type='tank' name={tank.tankNo} onDelete={handleDelete} />
-        </div>
+        {(editMode || deleteMode) && (
+          <div className='flex items-center justify-end gap-3 '>
+            {editMode && <EditButton onEdit={handleToggleEdit} />}
+            {deleteMode && <DeleteButton type='tank' name={tank.tankNo} onDelete={handleDelete} />}
+          </div>
+        )}
       </DataBlock>
     );
   }

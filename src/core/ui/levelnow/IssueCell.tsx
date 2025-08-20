@@ -1,5 +1,6 @@
 import { getIssueIcon } from '@core/utils/levelnow/issue';
 import { EventsIssue } from '@core/api/types';
+import { Scrollbar } from '../components/Scrollbar';
 
 type Issue = {
   issue: EventsIssue;
@@ -12,11 +13,11 @@ interface StatusCellProps {
 
 export default function IssueCell({ issues }: StatusCellProps) {
   return (
-    <div className='flex items-center h-full gap-5 w-fit'>
+    <div className='flex items-center h-full w-fit'>
       {issues.map((item) => {
         const { issue, issueType } = item;
         return (
-          <div key={issue} className='flex flex-col items-center justify-between grow w-fit'>
+          <div key={issue} className='flex flex-col items-center justify-between w-28 grow'>
             {getIssueIcon(issue)}
             <div
               className={`text-md font-medium tracking-32 ${

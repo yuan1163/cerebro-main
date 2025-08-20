@@ -9,9 +9,17 @@ import { useUpdateTankClient } from '@core/storages/controllers/levelnow/tank';
 type TankInfoCustomerProps = {
   tank: TankData | null;
   client: ClientData | null;
-  onEditCustomer: () => void;
+  editMode?: boolean;
+  onEditCustomer?: () => void;
+  deleteMode?: boolean;
 };
-export default function TankInfoCustomer({ tank, client, onEditCustomer }: TankInfoCustomerProps) {
+export default function TankInfoCustomer({
+  tank,
+  client,
+  editMode,
+  onEditCustomer,
+  deleteMode,
+}: TankInfoCustomerProps) {
   const updateTankClient = useUpdateTankClient();
 
   // Get customer fields from centralized configuration
@@ -50,21 +58,24 @@ export default function TankInfoCustomer({ tank, client, onEditCustomer }: TankI
       data={customer}
       columns={2}
       rows={5}
-      minHeight={241}
       padColumns
       labelWidth='138px'
       className='col-span-2'
     >
-      <div className='flex items-center justify-end gap-3'>
-        <EditButton onEdit={onEditCustomer} />
-        <DeleteButton
-          type='customer-assign'
-          name={client?.clientName}
-          onDelete={handleDelete}
-          disabled={!client}
-          isloading={updateTankClient.isLoading}
-        />
-      </div>
+      {(editMode || deleteMode) && (
+        <div className='flex items-center justify-end gap-3'>
+          {editMode && <EditButton onEdit={onEditCustomer} />}
+          {deleteMode && (
+            <DeleteButton
+              type='customer-assign'
+              name={client?.clientName}
+              onDelete={handleDelete}
+              disabled={!client}
+              isloading={updateTankClient.isLoading}
+            />
+          )}
+        </div>
+      )}
     </DataBlock>
   );
 }

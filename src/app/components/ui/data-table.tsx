@@ -17,9 +17,16 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
   fixHeight?: number;
   scrollable?: boolean;
+  onRowClick?: (row: TData) => void;
 }
 
-export function DataTable<TData, TValue>({ columns, data, fixHeight, scrollable }: DataTableProps<TData, TValue>) {
+export function DataTable<TData, TValue>({
+  columns,
+  data,
+  fixHeight,
+  scrollable,
+  onRowClick,
+}: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([{ id: 'eventDate', desc: true }]);
   const table = useReactTable({
     data,
@@ -32,29 +39,27 @@ export function DataTable<TData, TValue>({ columns, data, fixHeight, scrollable 
     },
   });
 
-  const maxHeight = fixHeight ? `h-[calc(100vh-${fixHeight}px)]` : '';
+  const heightStyle = fixHeight ? { height: `calc(100vh - ${fixHeight}px)` } : {};
+
   return (
     <>
-      <Table>
-        <TableHeader>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
-                  <TableHead key={header.id} className='px-0 py-3'>
-                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
-                  </TableHead>
-                );
-              })}
-            </TableRow>
-          ))}
-        </TableHeader>
-      </Table>
-
-      {/* Scrollable Body */}
-      <div className={cn(scrollable && maxHeight)}>
+      <div style={scrollable ? heightStyle : {}}>
         <Scrollbar>
-          <Table>
+          <Table style={scrollable ? heightStyle : {}}>
+            <TableHeader>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <TableRow key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => {
+                    return (
+                      <TableHead key={header.id} className='px-0 py-3'>
+                        {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
+                      </TableHead>
+                    );
+                  })}
+                </TableRow>
+              ))}
+            </TableHeader>
+
             <TableBody>
               {table.getRowModel().rows?.length ? (
                 table.getRowModel().rows.map((row) => (
@@ -62,7 +67,12 @@ export function DataTable<TData, TValue>({ columns, data, fixHeight, scrollable 
                     <tr className='h-5'>
                       <td colSpan={columns.length}></td>
                     </tr>
-                    <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
+                    <TableRow
+                      key={row.id}
+                      data-state={row.getIsSelected() && 'selected'}
+                      {...(onRowClick && { onClick: () => onRowClick(row.original) })}
+                      className={cn(onRowClick && 'cursor-pointer hover:bg-primary-50')}
+                    >
                       {row.getVisibleCells().map((cell) => (
                         <TableCell key={cell.id} className='py-2 px-[18px]'>
                           {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -73,9 +83,7 @@ export function DataTable<TData, TValue>({ columns, data, fixHeight, scrollable 
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={columns.length} className='h-24 text-center'>
-                    No results.
-                  </TableCell>
+                  <TableCell colSpan={columns.length} className='h-full text-center'></TableCell>
                 </TableRow>
               )}
             </TableBody>

@@ -61,7 +61,7 @@ export default function DataBlock({
     <section className={cn('flex flex-col gap-5', className)}>
       {title && <h2 className='font-medium text-md tracking-32 text-neutral-900'>{title}</h2>}
       <div
-        className={cn('flex flex-col justify-between flex-1 rounded-lg bg-neutral-50', padding)}
+        className={cn('flex flex-col justify-between grow rounded-lg bg-neutral-50', padding)}
         style={minHeight ? { minHeight } : undefined}
       >
         <div className='grid gap-x-20 gap-y-3' style={{ gridTemplateColumns: gridTemplateColumns }}>
