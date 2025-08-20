@@ -1,6 +1,8 @@
 import { t } from '@core/utils/translate';
 
 // levelnow -----
+export type EventsIssue = 'Level Low' | 'Oil Filling' | 'Battery Low' | 'Offline' | 'Fault';
+
 export type DeviceLevelLabel = 'Full' | '>205L' | '100~205L' | '<100L';
 export type DeviceConnection = 0 | 1; // 0: Off-line, 1: On-line
 export type DeviceFault = 0 | 1; // 0: No fault, 1: Fault
@@ -14,6 +16,37 @@ export type ApiResponse = {
   success: boolean;
   message: string;
 };
+
+// api/Events
+export type Events = Event[];
+export type Event = {
+  eventDate: string;
+  brandId: number;
+  tankId: number;
+  tankNo: string | null;
+  deviceReference: string;
+  customerNo: string;
+  customerName: string;
+  address: string;
+  contact: string;
+  phone: string;
+  salesRep: string;
+  eventLevelLow: 1 | null;
+  eventFault: 1 | null;
+  eventBatteryLow: 1 | null;
+  eventOffline: 1 | null;
+  eventOilFilling: 1 | null;
+};
+
+// api/Events/history/{deviceRef}
+export type EventHistory = {
+  eventDate: string;
+  eventLevelLow: 1 | null;
+  eventFault: 1 | null;
+  eventBatteryLow: 1 | null;
+  eventOffline: 1 | null;
+  eventOilFilling: 1 | null;
+}[];
 
 // api/Client
 export type Clients = ClientData[];
