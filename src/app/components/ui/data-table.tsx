@@ -45,7 +45,7 @@ export function DataTable<TData, TValue>({
     <>
       <div style={scrollable ? heightStyle : {}}>
         <Scrollbar>
-          <Table style={scrollable ? heightStyle : {}}>
+          <Table>
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>

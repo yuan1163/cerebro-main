@@ -58,7 +58,7 @@ const issueOptions = [
   { label: 'Oil Filling', value: 'Oil Filling' },
 ];
 
-const ResponsibleTanksPage = () => {
+const EventsPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedIssue, setSelectedIssue] = useState<keyof Event | null>(null);
@@ -409,4 +409,4 @@ const ResponsibleTanksPage = () => {
   );
 };
 
-export default ResponsibleTanksPage;
+export default EventsPage;

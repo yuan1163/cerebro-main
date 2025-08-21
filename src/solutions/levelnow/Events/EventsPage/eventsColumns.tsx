@@ -45,10 +45,6 @@ export const columns: ColumnDef<Event>[] = [
       );
     },
     cell: ({ row }) => {
-      console.log('issue value', row.getValue('contact'));
-
-      console.log('row', row);
-
       let issues: { issue: EventsIssue; issueType: 'warning' | 'info' }[] = [];
 
       const hasLevelLowIssue = row.original.eventLevelLow === 1;

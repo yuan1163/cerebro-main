@@ -1,26 +1,16 @@
 import { ColumnDef } from '@tanstack/react-table';
 import IssueCell from '@core/ui/levelnow/IssueCell';
 import { Button } from '@core/ui/components/Button';
+import { formatDate } from '@core/utils/levelnow/format';
 
 // Icon
 import ChevronUpIcon from '@assets/icons/LevelNOW/chevrons-up.svg?component';
 import ChevronDownIcon from '@assets/icons/LevelNOW/chevrons-down.svg?component';
+// Types
+import { Event } from '@core/api/types';
+import { EventsIssue } from '@core/api/types';
 
-export interface TankData {
-  eventDate: string;
-  issue: string;
-  issueType: 'warning' | 'info';
-  tankNo: string;
-  tankId: string;
-  customerNo: string;
-  customerId: string;
-  address: string;
-  contact: string;
-  contactPhone: string;
-  saleRep: string;
-}
-
-export const columns: ColumnDef<TankData>[] = [
+export const columns: ColumnDef<Event>[] = [
   {
     accessorKey: 'eventDate',
     header: ({ column }) => {
@@ -41,12 +31,7 @@ export const columns: ColumnDef<TankData>[] = [
     },
     cell: ({ row }) => {
       const eventDate = row.getValue('eventDate') as string;
-      return (
-        <div className='text-16 font-medium text-[#000] tracking-32   '>
-          {/* {new Date(eventDate).toLocaleDateString()} */}
-          {eventDate}
-        </div>
-      );
+      return <div className='text-16 font-medium text-[#000] tracking-32   '>{formatDate(eventDate)}</div>;
     },
   },
   {
@@ -60,9 +45,46 @@ export const columns: ColumnDef<TankData>[] = [
       );
     },
     cell: ({ row }) => {
-      const issue = row.getValue('issue') as string;
-      const issueType = row.original.issueType;
-      return <IssueCell issue={issue} issueType={issueType} />;
+      let issues: { issue: EventsIssue; issueType: 'warning' | 'info' }[] = [];
+
+      const hasLevelLowIssue = row.original.eventLevelLow === 1;
+      const hasFaultIssue = row.original.eventFault === 1;
+      const hasBatteryLowIssue = row.original.eventBatteryLow === 1;
+      const hasOfflineIssue = row.original.eventOffline === 1;
+      const hasOilFillingIssue = row.original.eventOilFilling === 1;
+
+      if (hasLevelLowIssue) {
+        issues.push({
+          issue: 'Level Low',
+          issueType: 'warning',
+        });
+      }
+      if (hasFaultIssue) {
+        issues.push({
+          issue: 'Fault',
+          issueType: 'warning',
+        });
+      }
+      if (hasBatteryLowIssue) {
+        issues.push({
+          issue: 'Battery Low',
+          issueType: 'warning',
+        });
+      }
+      if (hasOfflineIssue) {
+        issues.push({
+          issue: 'Offline',
+          issueType: 'warning',
+        });
+      }
+      if (hasOilFillingIssue) {
+        issues.push({
+          issue: 'Oil Filling',
+          issueType: 'info',
+        });
+      }
+
+      return <IssueCell issues={issues} />;
     },
   },
   {
@@ -81,8 +103,8 @@ export const columns: ColumnDef<TankData>[] = [
 
       return (
         <div className='flex flex-col gap-1'>
-          <div className='text-16 font-medium text-[#000]'>{tankNo}</div>
-          <div className='font-medium text-16 text-secondary-500'>{tankId}</div>
+          <div className='text-16 font-medium text-[#000]'>{tankNo || '-'}</div>
+          <div className='font-medium text-16 text-secondary-500'>{tankId || '-'}</div>
         </div>
       );
     },
@@ -99,12 +121,12 @@ export const columns: ColumnDef<TankData>[] = [
     },
     cell: ({ row }) => {
       const customerNo = row.getValue('customerNo') as string;
-      const customerId = row.original.customerId;
+      const customerName = row.original.customerName;
 
       return (
         <div className='flex flex-col gap-1'>
-          <div className='text-16 font-medium text-[#000]'>{customerNo}</div>
-          <div className='font-medium text-16 text-secondary-500'>{customerId}</div>
+          <div className='text-16 font-medium text-[#000]'>{customerNo || '-'}</div>
+          <div className='font-medium text-16 text-secondary-500'>{customerName || '-'}</div>
         </div>
       );
     },
@@ -121,7 +143,7 @@ export const columns: ColumnDef<TankData>[] = [
     },
     cell: ({ row }) => {
       const address = row.getValue('address') as string;
-      return <div className='text-16 font-medium text-[#000]'>{address}</div>;
+      return <div className='text-16 font-medium text-[#000]'>{address || '-'}</div>;
     },
   },
   {
@@ -136,29 +158,29 @@ export const columns: ColumnDef<TankData>[] = [
     },
     cell: ({ row }) => {
       const contact = row.getValue('contact') as string;
-      const contactPhone = row.original.contactPhone;
+      const phone = row.original.phone;
 
       return (
         <div className='flex flex-col gap-1'>
-          <div className='text-16 font-medium text-[#000]'>{contact}</div>
-          <div className='font-medium text-16 text-secondary-500'>{contactPhone}</div>
+          <div className='text-16 font-medium text-[#000]'>{contact || '-'}</div>
+          <div className='font-medium text-16 text-secondary-500'>{phone || '-'}</div>
         </div>
       );
     },
   },
   {
-    accessorKey: 'saleRep',
+    accessorKey: 'salesRep',
     header: ({ column }) => {
       return (
         <Button>
-          Sales Rep.
+          Sales Rep
           <ChevronDownIcon className='w-5 h-5 ' />
         </Button>
       );
     },
     cell: ({ row }) => {
-      const saleRep = row.getValue('saleRep') as string;
-      return <div className='text-16 font-medium text-[#000]'>{saleRep}</div>;
+      const salesRep = row.getValue('salesRep') as string;
+      return <div className='text-16 font-medium text-[#000]'>{salesRep || '-'}</div>;
     },
   },
 ];

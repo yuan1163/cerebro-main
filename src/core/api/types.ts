@@ -7,11 +7,6 @@ export type DeviceLevelLabel = 'Full' | '>205L' | '100~205L' | '<100L';
 export type DeviceConnection = 0 | 1; // 0: Off-line, 1: On-line
 export type DeviceFault = 0 | 1; // 0: No fault, 1: Fault
 
-export type TankLevelCounts = {
-  range: DeviceLevelLabel;
-  count: number;
-}[];
-
 export type ApiResponse = {
   success: boolean;
   message: string;
@@ -150,6 +145,11 @@ export type SummaryParameters = {
 export type ResponsibleTanks = {
   userName: string;
   tankLevelCounts: TankLevelCounts;
+}[];
+
+export type TankLevelCounts = {
+  range: DeviceLevelLabel;
+  count: number;
 }[];
 
 export type ResponsibleTanksParameters = {
