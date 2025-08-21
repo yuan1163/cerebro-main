@@ -18,25 +18,26 @@ import Map02SolidIcon from '@assets/icons/solid/map-02.svg?component';
 import NotificationTextSolidIcon from '@assets/icons/solid/notification-text.svg?component';
 import Users01SolidIcon from '@assets/icons/solid/users-01.svg?component';
 
-import TankLineIcon from '@assets/icons/line/tank-line.svg?component';
-import TankSolidIcon from '@assets/icons/solid/tank-solid.svg?component';
+import DomainLineIcon from '@assets/icons/LevelNOW/sidebar/domain-line.svg?component';
+import DomainSolidIcon from '@assets/icons/LevelNOW/sidebar/domain-solid.svg?component';
+import TankLineIcon from '@assets/icons/LevelNOW/sidebar/tank-line.svg?component';
+import TankSolidIcon from '@assets/icons/LevelNOW/sidebar/tank-solid.svg?component';
 import CustomerLineIcon from '@assets/icons/LevelNOW/sidebar/customer-line.svg?component';
 import CustomerSolidIcon from '@assets/icons/LevelNOW/sidebar/customer-solid.svg?component';
+import EventsLineIcon from '@assets/icons/LevelNOW/sidebar/events-line.svg?component';
+import EventsSolidIcon from '@assets/icons/LevelNOW/sidebar/events-solid.svg?component';
+import SnapshotLineIcon from '@assets/icons/LevelNOW/sidebar/snapshot-line.svg?component';
+import SnapshotSolidIcon from '@assets/icons/LevelNOW/sidebar/snapshot-solid.svg?component';
+
 // types
 import { Modules, ModuleSections } from '@core/ui/types';
 import { t } from '@core/utils/translate';
 // components
-import { Assets } from '@solutions/cerebro/Assets';
-import { Dashboard } from '@solutions/cerebro/Dashboard';
-import { Issues } from '@solutions/cerebro/Issues';
-import { Locations } from '@solutions/cerebro/Locations';
-import { Notifications } from '@solutions/cerebro/Notifications';
-import { Users } from '@solutions/cerebro/Users';
-
 import { Domain } from '@solutions/levelnow/Domain';
 import { Tanks } from '@solutions/levelnow/Tanks';
 import { Customers } from '@solutions/levelnow/Customers';
 import { Events } from '@solutions/levelnow/Events';
+import { Snapshot } from '@solutions/levelnow/Snapshot';
 
 import ResponsibleTanksPage from '@core/ui/pages/ResponsibleTanksPage';
 
@@ -45,8 +46,8 @@ export const modules: Modules = [
     system: 'levelnow',
     url: '',
     title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
-    icon: <Home02LineIcon />,
-    iconSolid: <Home02SolidIcon />,
+    icon: <DomainLineIcon />,
+    iconSolid: <DomainSolidIcon />,
     component: <Domain />,
     children: [
       {
@@ -75,9 +76,17 @@ export const modules: Modules = [
     system: 'levelnow',
     url: 'events',
     title: 'events.events.label',
-    icon: <NotificationTextLineIcon />,
-    iconSolid: <NotificationTextSolidIcon />,
+    icon: <EventsLineIcon />,
+    iconSolid: <EventsSolidIcon />,
     component: <Events />,
+  },
+  {
+    system: 'levelnow',
+    url: 'snapshot',
+    title: 'snapshot.snapshot.label',
+    icon: <SnapshotLineIcon />,
+    iconSolid: <SnapshotSolidIcon />,
+    component: <Snapshot />,
   },
   //   // {
   //   //   url: 'overview',
