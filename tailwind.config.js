@@ -179,6 +179,7 @@ module.exports = {
         disabled: 'var(--color-action-disabled)',
       },
       error: {
+        '200': '#FFC9C9',
         '500': '#FF4545',
         '600': '#E03B3B',
         DEFAULT: 'var(--color-error-default)',

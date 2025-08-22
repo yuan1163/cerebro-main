@@ -12,6 +12,12 @@ export type ApiResponse = {
   message: string;
 };
 
+export type PieChartData = {
+  range: string;
+  value: number;
+  color: string;
+}[];
+
 // api/Events
 export type Events = Event[];
 export type Event = {
