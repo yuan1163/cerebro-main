@@ -2,7 +2,7 @@ import { observer } from 'mobx-react';
 import { useState, useEffect } from 'react';
 
 // icons
-import TankLineIcon from '@assets/icons/line/tank-line.svg?component';
+import TankLineIcon from '@assets/icons/LevelNOW/sidebar/tank-line.svg?component';
 
 // core ui components
 import { Header } from '@core/ui/cerebro/Header';

@@ -27,7 +27,7 @@ import { Event, EventsIssue } from '@core/api/types';
 import FilterIcon from '@assets/icons/LevelNOW/filter.svg?component';
 import CheckIcon from '@assets/icons/LevelNOW/check.svg?component';
 import ChevronsUpDownIcon from '@assets/icons/LevelNOW/chevrons-up-down.svg?component';
-import EventsIcon from '@assets/icons/line/notification-text.svg?component';
+import EventsLineIcon from '@assets/icons/LevelNOW/sidebar/events-line.svg?component';
 
 type Date = {
   month: number;
@@ -215,7 +215,11 @@ const EventsPage = () => {
 
   return (
     <>
-      <Header icon={<EventsIcon />} title={t('events.eventsTitle.label', 'Events', 'Issues title.')} widgets={false} />
+      <Header
+        icon={<EventsLineIcon />}
+        title={t('events.eventsTitle.label', 'Events', 'Issues title.')}
+        widgets={false}
+      />
       <div className='flex items-center justify-between gap-5'>
         <Tabs tabs={['Admins', 'Contacts', 'Groups']} />
         <SearchBar onChange={handleSearchChange} />

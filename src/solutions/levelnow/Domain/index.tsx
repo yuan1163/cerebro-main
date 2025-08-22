@@ -2,7 +2,7 @@ import { observer } from 'mobx-react';
 import { useState } from 'react';
 
 // icons
-import Home02LineIcon from '@assets/icons/line/home-02.svg?component';
+import DomainLineIcon from '@assets/icons/LevelNOW/sidebar/domain-line.svg?component';
 
 // core ui components
 import { Header } from '@core/ui/cerebro/Header';
@@ -34,7 +34,7 @@ export const Domain = observer(() => {
   return (
     <>
       <Header
-        icon={<Home02LineIcon />}
+        icon={<DomainLineIcon />}
         title={t(
           'solutions.domainOverview.label',
           'Domain Overview',
