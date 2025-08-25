@@ -51,7 +51,7 @@ export default function EventPage() {
         </CardHeader>
         <CardContent className='flex grow'>
           {/* Tank Info */}
-          <div className='grow grid grid-flow-row grid-cols-2 grid-rows-[auto,auto,auto] gap-5'>
+          <div className='flex-1 grid grid-flow-row grid-cols-2 grid-rows-[auto,auto,auto] gap-5'>
             {/* Info */}
             <TankInfoDetails tank={tank} />
             {/* Ievel & Location */}
@@ -62,9 +62,9 @@ export default function EventPage() {
             <TankInfoGW client={client} />
           </div>
           {/* Events History */}
-          <div className='w-[400px]'>
+          <div className='w-[400px] flex-shrink-0 ml-5'>
             <h1 className='mb-5 font-medium text-md tracking-32 text-neutral-900'>Events History</h1>
-            <DataTable columns={columns} data={eventsHistory} />
+            <DataTable columns={columns} data={eventsHistory} fixHeight={258} />
           </div>
         </CardContent>
       </Card>

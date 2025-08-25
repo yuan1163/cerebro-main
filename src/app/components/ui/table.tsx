@@ -3,11 +3,15 @@ import { Scrollbar } from '@core/ui/components/Scrollbar';
 // import { cn } from "@app/lib/utils"
 import { cn } from '@core/utils/classnames';
 
-const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
-  ({ className, ...props }, ref) => (
-    <div className='relative w-full'>
-      <Scrollbar>
-        <table ref={ref} className={cn('w-full caption-bottom text-sm', className)} {...props} />
+const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement> & { fullHeight?: boolean }>(
+  ({ className, fullHeight, ...props }, ref) => (
+    <div className={cn('relative w-full', fullHeight && 'h-full flex flex-col')}>
+      <Scrollbar className={fullHeight ? 'flex-1 flex flex-col' : ''}>
+        <table
+          ref={ref}
+          className={cn('w-full caption-bottom text-sm', fullHeight && 'h-full', className)}
+          {...props}
+        />
       </Scrollbar>
     </div>
   ),
@@ -43,7 +47,7 @@ const TableHead = React.forwardRef<HTMLTableCellElement, React.ThHTMLAttributes<
     <th
       ref={ref}
       className={cn(
-        'h-10 px-2 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
+        'h-10 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
         className,
       )}
       {...props}

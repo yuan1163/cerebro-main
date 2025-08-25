@@ -197,6 +197,8 @@ const EventsPage = () => {
   };
   const activeFilterCount = getActiveFilterCount();
 
+  const isFiltering = !!(selectedDate || selectedIssue || selectedDevice || searchQuery);
+
   const handleClearFilters = () => {
     setSelectedDate(null);
     setSelectedIssue(null);
@@ -254,7 +256,7 @@ const EventsPage = () => {
             </Button>
           </div>
         </CardHeader>
-        <CardContent className='flex-1 p-0'>
+        <CardContent className='p-0 grow'>
           {isFilterOpen && (
             <div className='flex items-center flex-1 gap-3 p-5'>
               {/* Date Select*/}
@@ -403,9 +405,9 @@ const EventsPage = () => {
           <DataTable
             columns={columns}
             data={filteredEvents}
-            fixHeight={325}
-            scrollable={isFilterOpen}
+            fixHeight={isFilterOpen ? 325 : 283}
             onRowClick={handleRowClick}
+            isFiltering={isFiltering}
           />
         </CardContent>
       </Card>

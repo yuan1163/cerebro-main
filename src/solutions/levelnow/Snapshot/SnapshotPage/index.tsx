@@ -25,6 +25,7 @@ import ErrorIcon from '@assets/icons/LevelNOW/snapshot/error.svg?component';
 // hools
 import { useTanks } from '@core/storages/controllers/levelnow/tank';
 import PieChartCard from '@core/ui/levelnow/PieChartCard';
+import { Link } from '@nodemodules/react-router-dom/dist';
 
 /* Mock network ratio data, replace this with actual data from tanks,
 and use function in @core/utils/levelnow/tankLevelCounts.ts
@@ -112,88 +113,96 @@ export default function SnapshotPage() {
           </CardContent>
         </Card>
         {/* Level Low */}
-        <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
-          <CardHeader justifyContent='between' borderBottom>
-            <div className='flex items-center gap-3'>
-              <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
-                {t('snapshot.levellow.label', 'Level Low', 'Level Low title.')}
-              </h1>
-            </div>
-            <div className='absolute -top-3 -right-2 w-[60px] aspect-square rounded-full bg-primary-50 flex items-center justify-center'>
-              <LevelLowIcon />
-            </div>
-          </CardHeader>
-          <CardContent className='flex flex-col flex-1 gap-5 p-5'>
-            <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
-              {levelLowAmounts}
-            </div>
-            <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
-            <PieChartCard data={MOCK_NETWORK_RATIO} status='ratio' />
-          </CardContent>
-        </Card>
+        <Link to='levellow'>
+          <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+            <CardHeader justifyContent='between' borderBottom>
+              <div className='flex items-center gap-3'>
+                <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+                  {t('snapshot.levellow.label', 'Level Low', 'Level Low title.')}
+                </h1>
+              </div>
+              <div className='absolute -top-3 -right-2 w-[60px] aspect-square rounded-full bg-primary-50 flex items-center justify-center'>
+                <LevelLowIcon />
+              </div>
+            </CardHeader>
+            <CardContent className='flex flex-col flex-1 gap-5 p-5'>
+              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
+                {levelLowAmounts}
+              </div>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
+              <PieChartCard data={MOCK_NETWORK_RATIO} status='ratio' />
+            </CardContent>
+          </Card>
+        </Link>
 
         {/* Offline */}
-        <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
-          <CardHeader justifyContent='between' borderBottom>
-            <div className='flex items-center gap-3'>
-              <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
-                {t('snapshot.offline.label', 'Off-line', 'Offline title.')}
-              </h1>
-            </div>
-            <div className='absolute -top-3 -right-2 w-[60px] aspect-square rounded-full bg-primary-50 flex items-center justify-center'>
-              <OfflineIcon />
-            </div>
-          </CardHeader>
-          <CardContent className='flex flex-col flex-1 gap-5 p-5'>
-            <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
-              {offlineAmounts}
-            </div>
-            <h3 className='font-medium text-md tracking-32 text-neutral-900'>Gateway Status</h3>
-            <PieChartCard data={tankGatewayRatio} status='ratio' />
-          </CardContent>
-        </Card>
+        <Link to='offline'>
+          <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+            <CardHeader justifyContent='between' borderBottom>
+              <div className='flex items-center gap-3'>
+                <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+                  {t('snapshot.offline.label', 'Off-line', 'Offline title.')}
+                </h1>
+              </div>
+              <div className='absolute -top-3 -right-2 w-[60px] aspect-square rounded-full bg-primary-50 flex items-center justify-center'>
+                <OfflineIcon />
+              </div>
+            </CardHeader>
+            <CardContent className='flex flex-col flex-1 gap-5 p-5'>
+              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
+                {offlineAmounts}
+              </div>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900'>Gateway Status</h3>
+              <PieChartCard data={tankGatewayRatio} status='ratio' />
+            </CardContent>
+          </Card>
+        </Link>
 
         {/* Battery Low */}
-        <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
-          <CardHeader justifyContent='between' borderBottom>
-            <div className='flex items-center gap-3'>
-              <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
-                {t('snapshot.batterylow.label', 'Battery Low', 'Battery Low title.')}
-              </h1>
-            </div>
-            <div className='absolute -top-3 -right-2 w-[60px] aspect-square rounded-full bg-primary-50 flex items-center justify-center'>
-              <BatteryLowIcon />
-            </div>
-          </CardHeader>
-          <CardContent className='flex flex-col flex-1 gap-5 p-5'>
-            <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
-              {batteryLowAmounts}
-            </div>
-            <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
-            <PieChartCard data={tankBatteryLowRatio} status='ratio' />
-          </CardContent>
-        </Card>
+        <Link to='batterylow'>
+          <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+            <CardHeader justifyContent='between' borderBottom>
+              <div className='flex items-center gap-3'>
+                <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+                  {t('snapshot.batterylow.label', 'Battery Low', 'Battery Low title.')}
+                </h1>
+              </div>
+              <div className='absolute -top-3 -right-2 w-[60px] aspect-square rounded-full bg-primary-50 flex items-center justify-center'>
+                <BatteryLowIcon />
+              </div>
+            </CardHeader>
+            <CardContent className='flex flex-col flex-1 gap-5 p-5'>
+              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
+                {batteryLowAmounts}
+              </div>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
+              <PieChartCard data={tankBatteryLowRatio} status='ratio' />
+            </CardContent>
+          </Card>
+        </Link>
 
         {/* Sensor Error */}
-        <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
-          <CardHeader justifyContent='between' borderBottom>
-            <div className='flex items-center gap-3'>
-              <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
-                {t('snapshot.sensorerror.label', 'Sensor Error', 'Sensor Error title.')}
-              </h1>
-            </div>
-            <div className='absolute -top-3 -right-2 w-[60px] aspect-square rounded-full bg-primary-50 flex items-center justify-center'>
-              <ErrorIcon />
-            </div>
-          </CardHeader>
-          <CardContent className='flex flex-col flex-1 gap-5 p-5'>
-            <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
-              {errorAmounts}
-            </div>
-            <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
-            <PieChartCard data={tankErrorRatio} status='ratio' />
-          </CardContent>
-        </Card>
+        <Link to='sensorerror'>
+          <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+            <CardHeader justifyContent='between' borderBottom>
+              <div className='flex items-center gap-3'>
+                <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+                  {t('snapshot.sensorerror.label', 'Sensor Error', 'Sensor Error title.')}
+                </h1>
+              </div>
+              <div className='absolute -top-3 -right-2 w-[60px] aspect-square rounded-full bg-primary-50 flex items-center justify-center'>
+                <ErrorIcon />
+              </div>
+            </CardHeader>
+            <CardContent className='flex flex-col flex-1 gap-5 p-5'>
+              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
+                {errorAmounts}
+              </div>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
+              <PieChartCard data={tankErrorRatio} status='ratio' />
+            </CardContent>
+          </Card>
+        </Link>
       </div>
     </>
   );

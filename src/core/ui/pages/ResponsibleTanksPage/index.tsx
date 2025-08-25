@@ -195,6 +195,8 @@ const ResponsibleTanksPage = () => {
   };
   const activeFilterCount = getActiveFilterCount();
 
+  const isFiltering = !!(selectedDate || selectedIssue || selectedDevice);
+
   const handleClearFilters = () => {
     setSelectedDate(null);
     setSelectedIssue(null);
@@ -209,7 +211,11 @@ const ResponsibleTanksPage = () => {
 
   return (
     <>
-      <Header icon={<EventsIcon />} title={t('events.eventsTitle.label', 'Events', 'Issues title.')} widgets={false} />
+      <Header
+        icon={<EventsIcon />}
+        title={t('domain.responsibletanks.label', 'Responsible Tanks', 'Responsible Tanks title.')}
+        widgets={false}
+      />
       <Card className='rounded-[10px] shadow-card flex-1 flex flex-col mt-5'>
         <CardHeader justifyContent='between'>
           <div className='flex items-center gap-3'>
@@ -390,8 +396,8 @@ const ResponsibleTanksPage = () => {
             columns={columns}
             data={filteredEvents}
             fixHeight={277}
-            scrollable={isFilterOpen}
             onRowClick={handleRowClick}
+            isFiltering={isFiltering}
           />
         </CardContent>
       </Card>

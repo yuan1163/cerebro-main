@@ -19,6 +19,13 @@ export type PieChartData = {
 }[];
 
 // api/Events
+export enum EventType {
+  LowLevel = 'lowLevel',
+  SensorError = 'sensorerror',
+  BatteryLow = 'batteryLow',
+  Offline = 'offline',
+  OilFilling = 'oilFilling'
+}
 export type Events = Event[];
 export type Event = {
   eventDate: string;

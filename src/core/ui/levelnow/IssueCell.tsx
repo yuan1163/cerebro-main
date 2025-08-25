@@ -17,14 +17,16 @@ export default function IssueCell({ issues }: StatusCellProps) {
       {issues.map((item) => {
         const { issue, issueType } = item;
         return (
-          <div key={issue} className='flex flex-col items-center justify-between w-28 grow'>
-            {getIssueIcon(issue)}
-            <div
-              className={`text-md font-medium tracking-32 ${
-                issueType === 'warning' ? 'text-error-500' : 'text-primary-500'
-              }`}
-            >
-              {issue}
+          <div key={issue} className='w-28'>
+            <div className='flex flex-col items-center justify-center w-fit'>
+              {getIssueIcon(issue)}
+              <div
+                className={`text-md font-medium tracking-32 ${
+                  issueType === 'warning' ? 'text-error-500' : 'text-primary-500'
+                }`}
+              >
+                {issue}
+              </div>
             </div>
           </div>
         );
