@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, Route, Routes, useNavigate } from 'react-router-dom';
+import { NavLink, Route, Routes, useNavigate, useLocation } from 'react-router-dom';
 import { createPortal } from 'react-dom';
 import { observer } from 'mobx-react';
 
@@ -175,13 +175,15 @@ function DataRowMenu({ group, remove, handleClick, handleClose }: DataRowProps) 
         </MenuList>
       </Menu>
       <ModalDelete
-        content={`${t(
-          'user.deleteGroupQuestion.label',
-          'Are you sure you want to remove group?',
-          'Confirmation prompt: Delete group?',
-        )} “${group.name}” ${t('company.fromCerebroApp.label', 'from Cerebro App?', 'Refers to the source app.')}`}
+        content={`This action will permanently delete the group.`}
+        // content={`${t(
+        //   'user.deleteGroupQuestion.label',
+        //   'Are you sure you want to remove group?',
+        //   'Confirmation prompt: Delete group?',
+        // )} “${group.name}” ${t('company.fromCerebroApp.label', 'from Cerebro App?', 'Refers to the source app.')}`}
         open={openDialog}
-        title={t('user.deleteAccount.label', 'Delete account', 'Delete user account.')}
+        title={`Confirm to delete this group［ ${group.name} ］?`}
+        // title={t('user.deleteAccount.label', 'Delete account', 'Delete user account.')}
         close={() => {
           setDialogOpen(false);
         }}
@@ -200,6 +202,9 @@ function DataRowMenu({ group, remove, handleClick, handleClose }: DataRowProps) 
 //export const GroupSelection: React.FC<GroupSelectionProps> = ({ list, item }) => {
 export const GroupSelection = observer(() => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const selectedGroupId = location.pathname.split('/').pop();
+
   //const controller = useUserGroup(item);
 
   // users groups list
@@ -404,51 +409,57 @@ export const GroupSelection = observer(() => {
                           <CircularProgress />
                         </Grid>
                       ) : (
-                        applyFilters(list).map((group) => (
-                          <DataGridRow
-                            key={group.groupId}
-                            className={styles['data-grid-row']}
-                            onClick={() => {
-                              navigate(`../group/${group.groupId}`);
-                              handleClose();
-                            }}
-                          >
-                            {/* ICON */}
+                        applyFilters(list).map((group) => {
+                          const isSelected = group.groupId.toString() === selectedGroupId;
+                          return (
+                            <DataGridRow
+                              key={group.groupId}
+                              className={cn(styles['data-grid-row'], isSelected && 'bg-primary-50')}
+                              onClick={() => {
+                                navigate(`../group/${group.groupId}`);
+                                handleClose();
+                              }}
+                              disableHover={isSelected}
+                            >
+                              {/* ICON */}
 
-                            <DataGridCell>
-                              <DataGridIconCellContent
-                                startIcon={
-                                  <Icon className={styles['avatar']} color={group.style} size='lg' variant='tint'>
-                                    <FolderSolidIcon />
-                                  </Icon>
-                                }
-                                subtitle={group.description ?? t('general.notAvailable.label', 'n/a', 'Not Available.')}
-                                title={group.name ?? t('general.notAvailable.label', 'n/a', 'Not Available.')}
-                              />
-                            </DataGridCell>
-
-                            {/* LOCATION */}
-
-                            <DataGridCell>
-                              <DataGridCellContent>
-                                <Members group={group} />
-                              </DataGridCellContent>
-                            </DataGridCell>
-
-                            {/* MENU */}
-
-                            <DataGridCell variant='icon'>
-                              {hasEditRights && (
-                                <DataRowMenu
-                                  handleClick={handleClick}
-                                  handleClose={handleClose}
-                                  remove={remove}
-                                  group={group}
+                              <DataGridCell>
+                                <DataGridIconCellContent
+                                  startIcon={
+                                    <Icon className={styles['avatar']} color={group.style} size='lg' variant='tint'>
+                                      <FolderSolidIcon />
+                                    </Icon>
+                                  }
+                                  subtitle={
+                                    group.description ?? t('general.notAvailable.label', 'n/a', 'Not Available.')
+                                  }
+                                  title={group.name ?? t('general.notAvailable.label', 'n/a', 'Not Available.')}
                                 />
-                              )}
-                            </DataGridCell>
-                          </DataGridRow>
-                        ))
+                              </DataGridCell>
+
+                              {/* LOCATION */}
+
+                              <DataGridCell>
+                                <DataGridCellContent>
+                                  <Members group={group} />
+                                </DataGridCellContent>
+                              </DataGridCell>
+
+                              {/* MENU */}
+
+                              <DataGridCell variant='icon'>
+                                {hasEditRights && (
+                                  <DataRowMenu
+                                    handleClick={handleClick}
+                                    handleClose={handleClose}
+                                    remove={remove}
+                                    group={group}
+                                  />
+                                )}
+                              </DataGridCell>
+                            </DataGridRow>
+                          );
+                        })
                       )}
                       {applyFilters(list)?.length < 1 && (
                         <DataNotFound

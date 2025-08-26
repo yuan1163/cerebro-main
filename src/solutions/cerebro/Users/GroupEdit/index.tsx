@@ -245,7 +245,8 @@ export const GroupEdit: React.FC<Props> = ({ onClose, group }) => {
                     </Text>
                   </Grid>
                   <Grid item>
-                    <Button color='error' fullWidth onClick={() => setDialogOpen(true)} type='button'>
+                    <Button variant='delete' fullWidth onClick={() => setDialogOpen(true)} type='button'>
+                      {/* <Button color='error' fullWidth onClick={() => setDialogOpen(true)} type='button'> */}
                       {t('user.deleteGroup.label', 'Delete group', 'Delete user group button.')}
                     </Button>
                   </Grid>
@@ -256,13 +257,15 @@ export const GroupEdit: React.FC<Props> = ({ onClose, group }) => {
         </Scrollbar>
         <CardContent className={styles['card-footer']}>
           <ModalDelete
-            content={`${t(
-              'user.deleteGroupQuestion.label',
-              'Are you sure you want to remove group?',
-              'Confirmation prompt: Delete group?',
-            )} “${group.name}” ${t('company.fromCerebroApp.label', 'from Cerebro App?', 'Refers to the source app.')}`}
+            content={`This action will permanently delete the group.`}
+            // content={`${t(
+            //   'user.deleteGroupQuestion.label',
+            //   'Are you sure you want to remove group?',
+            //   'Confirmation prompt: Delete group?',
+            // )} “${group.name}” ${t('company.fromCerebroApp.label', 'from Cerebro App?', 'Refers to the source app.')}`}
             open={openDialog}
-            title={t('user.deleteGroup.label', 'Delete group', 'Delete user group button.')}
+            title={`Confirm to delete this group［ ${group.name} ］?`}
+            // title={t('user.deleteGroup.label', 'Delete group', 'Delete user group button.')}
             close={() => {
               setDialogOpen(false);
               onClose?.();

@@ -237,17 +237,19 @@ export const GroupProfile: React.FC<Props> = ({ className, group, handleEditProf
                   </Grid>
                 </Grid>
                 <ModalDelete
-                  content={`${t(
-                    'user.deleteGroupQuestion.label',
-                    'Are you sure you want to remove group?',
-                    'Confirmation prompt: Delete group?',
-                  )} “${group.name}” ${t(
-                    'company.fromCerebroApp.label',
-                    'from Cerebro App?',
-                    'Refers to the source app.',
-                  )}`}
+                  content={`This action will permanently delete the group.`}
+                  // content={`${t(
+                  //   'user.deleteGroupQuestion.label',
+                  //   'Are you sure you want to remove group?',
+                  //   'Confirmation prompt: Delete group?',
+                  // )} “${group.name}” ${t(
+                  //   'company.fromCerebroApp.label',
+                  //   'from Cerebro App?',
+                  //   'Refers to the source app.',
+                  // )}`}
                   open={openDialog}
-                  title={t('user.deleteGroup.label', 'Delete group', 'Delete user group button.')}
+                  title={`Confirm to delete this group［ ${group.name} ］?`}
+                  // title={t('user.deleteGroup.label', 'Delete group', 'Delete user group button.')}
                   close={() => {
                     setDialogOpen(false);
                   }}
