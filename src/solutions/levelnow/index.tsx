@@ -38,6 +38,7 @@ import { Tanks } from '@solutions/levelnow/Tanks';
 import { Customers } from '@solutions/levelnow/Customers';
 import { Events } from '@solutions/levelnow/Events';
 import { Snapshot } from '@solutions/levelnow/Snapshot';
+import { Users } from '@solutions/cerebro/Users';
 
 import ResponsibleTanksPage from '@core/ui/pages/ResponsibleTanksPage';
 
@@ -88,44 +89,12 @@ export const modules: Modules = [
     iconSolid: <SnapshotSolidIcon />,
     component: <Snapshot />,
   },
-  //   // {
-  //   //   url: 'overview',
-  //   //   title: 'Overview',
-  //   //   icon: <BarChartSquare01LineIcon />,
-  //   //   iconSolid: <BarChartSquare01SolidIcon />,
-  //   //   component: null,
-  //   // },
-  //   {
-  //   {
-  //     url: 'issues',
-  //     // title: t('issue.issuesTitle.label', 'Issues', 'Issues title.'),
-  //     title: 'issue.issuesTitle.label',
-  //     icon: <CheckDone01LineIcon />,
-  //     iconSolid: <CheckDone01SolidIcon />,
-  //     component: <Issues />,
-  //   },
-  //   {
-  //     url: 'locations',
-  //     // title: t('location.locations.label', 'Locations', 'Locations.'),
-  //     title: 'location.locations.label',
-  //     icon: <Map02LineIcon />,
-  //     iconSolid: <Map02SolidIcon />,
-  //     component: <Locations />,
-  //   },
-  //   {
-  //     url: 'users',
-  //     // title: t('user.usersTitle.label', 'Users', 'Users Title.'),
-  //     title: 'user.usersTitle.label',
-  //     icon: <Users01LineIcon />,
-  //     iconSolid: <Users01SolidIcon />,
-  //     component: <Users />,
-  //   },
-  //   {
-  //     url: 'assets',
-  //     // title: t('asset.assetsTitle.label', 'Assets', 'Collections of hardware tools and gadgets.'),
-  //     title: 'asset.assetsTitle.label',
-  //     icon: <LineChartUp04LineIcon />,
-  //     iconSolid: <LineChartUp04SolidIcon />,
-  //     component: <Assets />,
-  //   },
+  {
+    url: 'users',
+    // title: t('user.usersTitle.label', 'Users', 'Users Title.'),
+    title: 'user.usersTitle.label',
+    icon: <Users01LineIcon />,
+    iconSolid: <Users01SolidIcon />,
+    component: <Users />,
+  },
 ];
