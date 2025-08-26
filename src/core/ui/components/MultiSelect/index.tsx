@@ -423,14 +423,21 @@ export const MultiSelect: React.FC<Props> = ({
                                 <MenuItem component='div'>
                                   <MenuItemButton
                                     active={active}
-                                    endIcon={selectedOption ? <CheckLineIcon /> : null}
+                                    // endIcon={selectedOption ? <CheckLineIcon /> : null}
                                     onClick={handleMenuItemClick}
-                                    className={stylesMultiselect['menu-item-button']}
+                                    className={cn(
+                                      stylesMultiselect['menu-item-button'],
+                                      selectedOption && 'bg-primary-50',
+                                    )}
+                                    // className={stylesMultiselect['menu-item-button']}
                                     control={
                                       <>
                                         <CheckboxMarker isChecked={selectedOption} size='sm' />
                                         <Text
-                                          className={stylesMultiselect['checkbox-label']}
+                                          className={cn(
+                                            stylesMultiselect['checkbox-label'],
+                                            selectedOption && 'text-primary-500',
+                                          )}
                                           variant='sm'
                                           weight='medium'
                                         >

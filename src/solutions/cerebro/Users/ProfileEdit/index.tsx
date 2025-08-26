@@ -241,8 +241,13 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
   const [selectedLocations, setSelectedLocations] = useState(() => {
     const defaultLocation = locations.getCompany();
     // 確保公司主要地點始終被包含在選擇中
-    return controller.locations.length > 0 
-      ? [...controller.locations, ...(controller.locations.some(loc => loc.locationId === defaultLocation.locationId) ? [] : [defaultLocation])]
+    return controller.locations.length > 0
+      ? [
+          ...controller.locations,
+          ...(controller.locations.some((loc) => loc.locationId === defaultLocation.locationId)
+            ? []
+            : [defaultLocation]),
+        ]
       : [defaultLocation];
   });
 
@@ -250,7 +255,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
   const handleSetSelectedLocations = (newLocations: Location[]) => {
     const companyLocation = locations.getCompany();
     // 如果新的地點列表不包含公司主要地點，則添加它
-    if (!newLocations.some(loc => loc.locationId === companyLocation.locationId)) {
+    if (!newLocations.some((loc) => loc.locationId === companyLocation.locationId)) {
       newLocations.push(companyLocation);
     }
     setSelectedLocations(newLocations);
@@ -367,7 +372,9 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
           </IconButton>
         }
         title={t('user.editUser.label', 'Edit User', 'Editing User.')}
-        disablePaddingBottom
+        // disablePaddingBottom
+        borderBottom
+        className='py-5'
       />
       <form id='profile-edit-form' className={styles['form']} onSubmit={handleSubmit(save)}>
         <Scrollbar>
@@ -519,7 +526,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                 <Grid container direction='column' spacing={2}>
                   {/* CATEGORY */}
 
-                  <Grid item>
+                  {/* <Grid item>
                     <Controller
                       name='category'
                       control={control}
@@ -536,7 +543,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         />
                       )}
                     />
-                  </Grid>
+                  </Grid> */}
 
                   {/* ROLE */}
 
@@ -557,7 +564,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
                   {/* ADMIN LOCATION */}
 
-                  <Grid item>
+                  {/* <Grid item>
                     <Controller
                       control={control}
                       name='locationIds'
@@ -576,7 +583,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         />
                       )}
                     />
-                  </Grid>
+                  </Grid> */}
 
                   {/* USER GROUP */}
 
@@ -594,7 +601,11 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                           onAppend={handleAppendGroup}
                           onChange={setSelectedGroups}
                           onRemove={handleRemoveGroup}
-                          placeholder={t('general.selectGroupFromList.label', 'Select User Groups', 'Select User Groups.')}
+                          placeholder={t(
+                            'general.selectGroupFromList.label',
+                            'Select User Groups',
+                            'Select User Groups.',
+                          )}
                         />
                       )}
                     />
@@ -814,7 +825,8 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                     </Text>
                   </Grid>
                   <Grid item>
-                    <Button color='error' fullWidth onClick={() => setDialogOpen(true)} type='button'>
+                    <Button fullWidth onClick={() => setDialogOpen(true)} type='button' variant='delete'>
+                      {/* <Button color='error' fullWidth onClick={() => setDialogOpen(true)} type='button' > */}
                       {t('user.deleteAccount.label', 'Delete account', 'Delete user account.')}
                     </Button>
                   </Grid>
