@@ -87,7 +87,7 @@ export const DataSelect: React.FC<DataSelectProps> = ({
 
   // 使用 useEffect 跟踪 Listbox 的 open 狀態而不是在渲染函數中直接設置
   const openRef = useRef(false);
-  
+
   // CLEAR BUTTON
 
   const handleClearValue = () => {
@@ -284,34 +284,67 @@ export const DataSelect: React.FC<DataSelectProps> = ({
                       {options && options?.length > 0 ? (
                         options?.map((option, index) => (
                           <Listbox.Option key={index} value={option}>
-                            {({ active, selected }) => (
-                              <MenuItem component='div'>
-                                <MenuItemButton
-                                  active={active}
-                                  endIcon={selected ? <CheckLineIcon /> : null}
-                                  type='button'
-                                  // startIcon={startIcon?.(option) || ''}
-                                  // startIconColor={startIconColor?.(option)}
-                                >
-                                  {/* {avatar?.(option) ? (
-                              <Avatar
-                                className={styles['avatar']}
-                                disabled={disabled}
-                                rounded
-                                size="xs"
-                                src={option.icon.src}
-                              />
-                            ) : null} */}
-                                  {variant === 'avatar' &&
-                                    (avatarOptions?.(option) ? (
-                                      avatarOptions?.(option)
-                                    ) : (
-                                      <Avatar className={styles['avatar']} disabled={disabled} rounded size='xs' />
-                                    ))}
-                                  <MenuItemText title={present?.(option)} />
-                                </MenuItemButton>
-                              </MenuItem>
-                            )}
+                            {({ active, selected }) => {
+                              // Custom selection logic - safely compare objects
+                              const isSelected = (() => {
+                                // Handle null/undefined cases
+                                if (!value && !option) return true;
+                                if (!value || !option) return false;
+
+                                // If both have roleId property, compare by roleId
+                                if (
+                                  typeof value === 'object' &&
+                                  typeof option === 'object' &&
+                                  'roleId' in value &&
+                                  'roleId' in option
+                                ) {
+                                  return value.roleId === option.roleId;
+                                }
+
+                                // If both have value property, compare by value
+                                if (
+                                  typeof value === 'object' &&
+                                  typeof option === 'object' &&
+                                  'value' in value &&
+                                  'value' in option
+                                ) {
+                                  return value.value === option.value;
+                                }
+
+                                // Direct comparison for primitive values
+                                return value === option;
+                              })();
+
+                              return (
+                                <MenuItem component='div'>
+                                  <MenuItemButton
+                                    active={active}
+                                    selected={isSelected}
+                                    endIcon={isSelected ? <CheckLineIcon /> : null}
+                                    type='button'
+                                    // startIcon={startIcon?.(option) || ''}
+                                    // startIconColor={startIconColor?.(option)}
+                                  >
+                                    {/* {avatar?.(option) ? (
+                                <Avatar
+                                  className={styles['avatar']}
+                                  disabled={disabled}
+                                  rounded
+                                  size="xs"
+                                  src={option.icon.src}
+                                />
+                              ) : null} */}
+                                    {variant === 'avatar' &&
+                                      (avatarOptions?.(option) ? (
+                                        avatarOptions?.(option)
+                                      ) : (
+                                        <Avatar className={styles['avatar']} disabled={disabled} rounded size='xs' />
+                                      ))}
+                                    <MenuItemText title={present?.(option)} />
+                                  </MenuItemButton>
+                                </MenuItem>
+                              );
+                            }}
                           </Listbox.Option>
                         ))
                       ) : (
