@@ -138,8 +138,13 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
   const [initialLocationsState, setInitialLocationsState] = useState([...controller.locations]);
   const [selectedLocations, setSelectedLocations] = useState(() => {
     const defaultLocation = locations.getCompany();
-    return controller.locations.length > 0 
-      ? [...controller.locations, ...(controller.locations.some(loc => loc.locationId === defaultLocation.locationId) ? [] : [defaultLocation])]
+    return controller.locations.length > 0
+      ? [
+          ...controller.locations,
+          ...(controller.locations.some((loc) => loc.locationId === defaultLocation.locationId)
+            ? []
+            : [defaultLocation]),
+        ]
       : [defaultLocation];
   });
 
@@ -147,7 +152,7 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
   const handleSetSelectedLocations = (newLocations: Location[]) => {
     const companyLocation = locations.getCompany();
     // 如果新的地點列表不包含公司主要地點，則添加它
-    if (!newLocations.some(loc => loc.locationId === companyLocation.locationId)) {
+    if (!newLocations.some((loc) => loc.locationId === companyLocation.locationId)) {
       newLocations.push(companyLocation);
     }
     setSelectedLocations(newLocations);
@@ -263,7 +268,9 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
           </IconButton>
         }
         title={t('user.addUser.label', 'Add User', 'Add User Title.')}
-        disablePaddingBottom
+        // disablePaddingBottom
+        borderBottom
+        className='py-5'
       />
       <form id='add-user-form' className={styles['form']} onSubmit={handleSubmit(save)}>
         <Scrollbar>
@@ -424,7 +431,7 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
                 <Grid container direction='column' spacing={2}>
                   {/* CATEGORY */}
 
-                  <Grid item>
+                  {/* <Grid item>
                     <Controller
                       name='category'
                       control={control}
@@ -441,7 +448,7 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
                         />
                       )}
                     />
-                  </Grid>
+                  </Grid> */}
 
                   {/* ROLE */}
 
@@ -462,7 +469,7 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
 
                   {/* ADMIN LOCATION */}
 
-                  {isAdmin && (
+                  {/* {isAdmin && (
                     <Grid item>
                       <Controller
                         control={control}
@@ -483,7 +490,7 @@ export const AddUser: React.FC<Props> = ({ className, onClose, category }) => {
                         )}
                       />
                     </Grid>
-                  )}
+                  )} */}
 
                   {/* USER GROUP */}
 
