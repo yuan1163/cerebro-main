@@ -51,6 +51,8 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
       'tailwind.config.js': path.resolve(__dirname, './tailwind.config.js'),
       '@config': path.resolve(__dirname, './src/config'),
+  // Map CKEditor meta package deep imports to actual source directory.
+  'ckeditor5/src': path.resolve(__dirname, './node_modules/ckeditor5/src'),
     },
   },
   optimizeDeps: {
@@ -60,13 +62,9 @@ export default defineConfig({
     commonjsOptions: {
       include: ['tailwind.config.js', 'node_modules/**'],
     },
-    rollupOptions: {
-      external: [
-        'ckeditor5/src/core.js',
-        'ckeditor5/src/utils.js',
-        /^ckeditor5\//
-      ],
-    },
+  // Let @ckeditor/vite-plugin-ckeditor5 handle bundling CKEditor modules.
+  // Do not mark ckeditor5 modules as external, otherwise the browser will try
+  // to load bare imports like "ckeditor5/src/ui.js" at runtime and fail.
   },
   define: {
     'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageJson.version),
