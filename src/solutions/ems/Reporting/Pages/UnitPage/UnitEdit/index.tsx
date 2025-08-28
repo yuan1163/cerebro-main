@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import * as yup from 'yup';
 
@@ -148,14 +148,14 @@ const UnitEdit: React.FC<Props> = ({ className, onClose, unit, ...props }) => {
     control,
     watch,
     clearErrors,
-  } = useForm<EditUnitPropos>({
+  } = useForm<EditUnitPropos, any, EditUnitPropos>({
     defaultValues: unitProcess,
     // TODO
     // @ts-ignore
     resolver: yupResolver(validationSchema),
   });
 
-  const save = async (data: EditUnitPropos) => {
+  const save: SubmitHandler<EditUnitPropos> = async (data) => {
     const processIdArr = addProcessList.map((p) => {
       return data.processId[p.id];
     });

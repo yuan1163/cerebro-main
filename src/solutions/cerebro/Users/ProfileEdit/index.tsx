@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 
 // form
 
-import { Controller, Resolver, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { formFieldSettings } from '@constants/formFieldSettings';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -22,7 +22,7 @@ import { useTranslation } from '@core/storages/translation';
 
 // types
 
-import { Location, User, UserCategory, UserGroup, UserPermissions } from '@core/api/types';
+import { Location, User, UserCategory, UserGroup, UserPermissions, UserRole } from '@core/api/types';
 
 // styles
 
@@ -104,6 +104,18 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
   // UseForm PARAMETERS
 
+  type UserEditFormValues = {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone?: string;
+    jobTitle?: string;
+    category?: string;
+    newPassword?: string;
+    role?: UserRole;
+    groups?: UserGroup[];
+  };
+
   const {
     control,
     formState: { errors },
@@ -112,8 +124,17 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
     register,
     setValue,
     watch,
-  } = useForm<User>({
-    defaultValues: { ...user },
+  } = useForm<UserEditFormValues, any, UserEditFormValues>({
+    defaultValues: {
+      firstName: user.firstName ?? '',
+      lastName: user.lastName ?? '',
+      email: user.email ?? '',
+      phone: user.phone,
+      jobTitle: user.jobTitle,
+      category: user.category as any,
+      role: (user as any).role as UserRole | undefined,
+      groups: undefined,
+    },
     // TODO
     // @ts-ignore
     resolver: yupResolver(validationSchema),
@@ -123,7 +144,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
   // ADMIN
 
-  const [isAdmin, setIsAdmin] = React.useState(getValues().category === UserCategory.Administrator);
+  const [isAdmin, setIsAdmin] = React.useState(user.category === UserCategory.Administrator);
 
   type ChangePasswordForm = {
     oldPassword: string;
@@ -278,7 +299,7 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
 
   // ON SAVE
 
-  const save = async (data: User) => {
+  const save: SubmitHandler<UserEditFormValues> = async (data) => {
     // phone
 
     // const phoneNumberWithCode = `${countryCallingCode}${data.phone}`;
@@ -333,11 +354,13 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
     );
     setInitialLocationsState([...controller.locations]);
 
-    await controller.update({
+    const payload: Partial<User> = {
+      ...user,
       ...data,
       username: isAdmin ? data.email : undefined,
       category: selectedCategory,
-    });
+    } as Partial<User>;
+    await controller.update(payload);
     // phone: phoneNumberWithCode,
     onClose?.();
   };
@@ -552,11 +575,11 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                       <UserRoleSelect
                         label={t('user.roleInput.label', 'ROLE', 'user role label.')}
                         onSelect={(role) => {
-                          setValue('role', role);
+                          setValue('role', role as UserRole);
                           controller.grantRole(role);
                         }}
                         placeholder={t('user.roleInputPlaceholder.label', 'ROLE', 'user role label.')}
-                        value={getValues().role}
+                        value={getValues().role as unknown as any}
                         disabled={!hasEditRights}
                       />
                     </Grid>
@@ -588,26 +611,15 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                   {/* USER GROUP */}
 
                   <Grid item>
-                    <Controller
-                      control={control}
-                      name='groups'
-                      render={({ field }) => (
-                        <SelectUserGroups
-                          {...field}
-                          inputId='groups'
-                          disabled={!hasEditRights}
-                          initial={selectedGroups}
-                          label={t('user.groups.label', 'CATEGORY', 'user category label.')}
-                          onAppend={handleAppendGroup}
-                          onChange={setSelectedGroups}
-                          onRemove={handleRemoveGroup}
-                          placeholder={t(
-                            'general.selectGroupFromList.label',
-                            'Select User Groups',
-                            'Select User Groups.',
-                          )}
-                        />
-                      )}
+                    <SelectUserGroups
+                      inputId='groups'
+                      disabled={!hasEditRights}
+                      initial={selectedGroups}
+                      label={t('user.groups.label', 'CATEGORY', 'user category label.')}
+                      onAppend={handleAppendGroup}
+                      onChange={setSelectedGroups}
+                      onRemove={handleRemoveGroup}
+                      placeholder={t('general.selectGroupFromList.label', 'Select User Groups', 'Select User Groups.')}
                     />
                   </Grid>
                 </Grid>

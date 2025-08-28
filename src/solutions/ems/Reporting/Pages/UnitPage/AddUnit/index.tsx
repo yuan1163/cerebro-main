@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 // utils
@@ -106,14 +106,14 @@ const AddUnit: React.FC<Props> = ({ className, onClose, ...props }) => {
     setValue,
     control,
     clearErrors,
-  } = useForm<AddUnitPropos>({
+  } = useForm<AddUnitPropos, any, AddUnitPropos>({
     defaultValues,
     // TODO
     // @ts-ignore
     resolver: yupResolver(validationSchema),
   });
 
-  const save = async (data: AddUnitPropos) => {
+  const save: SubmitHandler<AddUnitPropos> = async (data) => {
     const processIdArr = addProcessList.map((p) => {
       return data.processId[p.id];
     });

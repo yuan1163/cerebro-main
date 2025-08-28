@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import * as yup from 'yup';
 // 直接引入 react-datepicker
@@ -73,7 +73,7 @@ const datePickerStyles = {
     color: 'red',
     fontSize: '12px',
     marginTop: '4px',
-  }
+  },
 };
 
 // 自定義 className 用於 DatePicker 樣式
@@ -168,6 +168,15 @@ export const ProcessHistoryEdit: React.FC<Props> = ({ className, onClose, unit, 
     endDate: moment(processHistory.endDateMs).toDate(),
   };
 
+  type EditProcessHistoryFormValues = {
+    unitId: number;
+    processId: number;
+    deviceId: string;
+    unitsNumber: number;
+    startDate: Date | null;
+    endDate: Date | null;
+  };
+
   const {
     formState: { isDirty, errors },
     handleSubmit,
@@ -176,14 +185,14 @@ export const ProcessHistoryEdit: React.FC<Props> = ({ className, onClose, unit, 
     setValue,
     control,
     watch,
-  } = useForm<EditProcessHistoryPropose>({
+  } = useForm<EditProcessHistoryFormValues, any, EditProcessHistoryFormValues>({
     defaultValues: processHistoryInfos,
     // TODO
     // @ts-ignore
     resolver: yupResolver(validationSchema),
   });
 
-  const save = async (data: EditProcessHistoryPropose) => {
+  const save: SubmitHandler<EditProcessHistoryFormValues> = async (data) => {
     const deviceId = data.deviceId.split('_', 2)[0];
     const partIndex = data.deviceId.split('_', 2)[1];
 
@@ -364,9 +373,9 @@ export const ProcessHistoryEdit: React.FC<Props> = ({ className, onClose, unit, 
                                         setValue('startDate', date, { shouldValidate: true });
                                       }}
                                       showTimeSelect
-                                      timeFormat="HH:mm"
+                                      timeFormat='HH:mm'
                                       timeIntervals={15}
-                                      dateFormat="dd/MM/yyyy HH:mm"
+                                      dateFormat='dd/MM/yyyy HH:mm'
                                       placeholderText={t(
                                         'general.selectStartDate.label',
                                         'Select start date',
@@ -401,9 +410,9 @@ export const ProcessHistoryEdit: React.FC<Props> = ({ className, onClose, unit, 
                                         setValue('endDate', date, { shouldValidate: true });
                                       }}
                                       showTimeSelect
-                                      timeFormat="HH:mm"
+                                      timeFormat='HH:mm'
                                       timeIntervals={15}
-                                      dateFormat="dd/MM/yyyy HH:mm"
+                                      dateFormat='dd/MM/yyyy HH:mm'
                                       placeholderText={t(
                                         'general.selectEndDate.label',
                                         'Select end date',

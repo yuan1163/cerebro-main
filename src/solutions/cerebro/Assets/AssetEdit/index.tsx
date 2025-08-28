@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 
 // form
 
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { formFieldSettings } from '@constants/formFieldSettings';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -83,6 +83,17 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
 
   // yup
 
+  type AssetEditFormValues = {
+    name: string;
+    description: string;
+    manufacturer?: string;
+    costRange?: string;
+    serialNumber?: string;
+    assetUid?: string;
+    groups?: AssetGroup[];
+    devices?: Device[];
+  };
+
   const validationSchema = yup.object().shape({
     name: yup.string().required(formFieldSettings.asset.group.required),
     description: yup.string().required(formFieldSettings.asset.group.description.required),
@@ -96,8 +107,17 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
     control,
     formState: { errors },
     handleSubmit,
-  } = useForm<Asset>({
-    defaultValues: { ...data },
+  } = useForm<AssetEditFormValues, any, AssetEditFormValues>({
+    defaultValues: {
+      name: data.name ?? '',
+      description: data.description ?? '',
+      manufacturer: data.manufacturer,
+      costRange: data.costRange,
+      serialNumber: data.serialNumber,
+      assetUid: data.assetUid,
+      groups: data.groups as any,
+      devices: data.devices as any,
+    },
     // @ts-ignore
     resolver: yupResolver(validationSchema),
   });
@@ -130,7 +150,7 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
 
   // ON SAVE
 
-  const save = async (data: Asset) => {
+  const save: SubmitHandler<AssetEditFormValues> = async (data) => {
     // CLASSES
 
     const classesToAdd = selectedClasses.filter(
@@ -177,7 +197,11 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
 
     setInitialDevicesState([...selectedDevices]);
 
-    await controller.update({ ...data });
+    const payload: Partial<Asset> = {
+      ...asset,
+      ...data,
+    } as Partial<Asset>;
+    await controller.update(payload);
     onClose?.();
   };
 
@@ -271,7 +295,11 @@ export const AssetEdit: React.FC<Props> = ({ className, onClose, asset }) => {
                             helperText={errors?.description?.message}
                             label={t('asset.assetDescriptionInput.label', 'Description', 'Description of the asset.')}
                             onChange={onChange}
-                            placeholder={t('asset.assetDescriptionInput.label', 'Description', 'Description of the asset.')}
+                            placeholder={t(
+                              'asset.assetDescriptionInput.label',
+                              'Description',
+                              'Description of the asset.',
+                            )}
                             requiredLabel
                             severity={errors.description?.message ? 'error' : undefined}
                             value={value}

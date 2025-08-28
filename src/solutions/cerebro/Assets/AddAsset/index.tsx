@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // form
 
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { formFieldSettings } from '@constants/formFieldSettings';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -73,6 +73,17 @@ export const AddAsset: React.FC<Props> = ({ className, onClose }) => {
 
   // FORM
 
+  type AssetFormValues = {
+    name: string;
+    description: string;
+    manufacturer?: string;
+    costRange?: string;
+    serialNumber?: string;
+    assetUid?: string;
+    groups?: AssetGroup[];
+    devices?: Device[];
+  };
+
   const validationSchema = yup.object().shape({
     name: yup.string().required(formFieldSettings.asset.group.required),
     description: yup.string().required(formFieldSettings.asset.group.description.required),
@@ -86,8 +97,7 @@ export const AddAsset: React.FC<Props> = ({ className, onClose }) => {
     formState: { errors },
     handleSubmit,
     control,
-  } = useForm<Asset>({
-    //@ts-ignore
+  } = useForm<AssetFormValues, any, AssetFormValues>({
     resolver: yupResolver(validationSchema),
   });
 
@@ -119,7 +129,7 @@ export const AddAsset: React.FC<Props> = ({ className, onClose }) => {
 
   // ON SAVE
 
-  const save = async (data: Asset) => {
+  const save: SubmitHandler<AssetFormValues> = async (data) => {
     // CLASSES
 
     const classesToAdd = selectedClasses.filter(

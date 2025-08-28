@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import * as yup from 'yup';
 
@@ -150,19 +150,19 @@ export const ProductEdit: React.FC<Props> = ({ className, onClose, product, ...p
     ),
   });
 
-  type defaultValuesPropos = {
+  type EditProductFormValues = {
     name: string;
     unitId: number[];
     unitsNumber: number[];
   };
 
-  const defaultValues: defaultValuesPropos = {
+  const defaultValues: EditProductFormValues = {
     name: '',
     unitId: [0],
     unitsNumber: [1],
   };
 
-  const productUnit = {
+  const productUnit: EditProductFormValues = {
     name: product.name,
     unitId: unit ? unit.map((u) => u.unitId) : [],
     unitsNumber: unit ? unit.map((u) => u.unitsNumber) : [],
@@ -177,14 +177,14 @@ export const ProductEdit: React.FC<Props> = ({ className, onClose, product, ...p
     control,
     watch,
     clearErrors,
-  } = useForm<EditProductPropos>({
+  } = useForm<EditProductFormValues, any, EditProductFormValues>({
     defaultValues: productUnit,
     // TODO
     // @ts-ignore
     resolver: yupResolver(validationSchema),
   });
 
-  const save = async (data: EditProductPropos) => {
+  const save: SubmitHandler<EditProductFormValues> = async (data) => {
     const unitData: { unitId: number; unitsNumber: number }[] | any[] = [];
     const oldUnitData: { unitId: number; unitsNumber: number }[] | any[] = [];
 

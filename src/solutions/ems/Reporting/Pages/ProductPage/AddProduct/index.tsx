@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 // utils
@@ -115,13 +115,13 @@ export const AddProduct: React.FC<Props> = ({ className, onClose }) => {
     ),
   });
 
-  type defaultValuesPropos = {
+  type AddProductFormValues = {
     name: string;
     unitId: number[];
     unitsNumber: number[];
   };
 
-  const defaultValues: defaultValuesPropos = {
+  const defaultValues: AddProductFormValues = {
     name: '',
     unitId: [0],
     unitsNumber: [1],
@@ -134,14 +134,14 @@ export const AddProduct: React.FC<Props> = ({ className, onClose }) => {
     getValues,
     setValue,
     clearErrors,
-  } = useForm<AddProductPropos>({
+  } = useForm<AddProductFormValues, any, AddProductFormValues>({
     defaultValues,
     // TODO
     // @ts-ignore
     resolver: yupResolver(validationSchema),
   });
 
-  const save = async (data: AddProductPropos) => {
+  const save: SubmitHandler<AddProductFormValues> = async (data) => {
     const unitData: { unitId: number; unitsNumber: number }[] | any[] = [];
 
     addUnitList.map((u) => {
