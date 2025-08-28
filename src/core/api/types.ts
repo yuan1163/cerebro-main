@@ -1,11 +1,142 @@
 import { t } from '@core/utils/translate';
 
 // levelnow -----
+export type EventsIssue = 'Level Low' | 'Oil Filling' | 'Battery Low' | 'Offline' | 'Fault';
 
-export type TankLevelCounts = {
-  range: 'Full' | '>205L' | '100~205L' | '<100L';
-  count: number;
+export type DeviceLevelLabel = 'Full' | '>205L' | '100~205L' | '<100L';
+export type DeviceConnection = 0 | 1; // 0: Off-line, 1: On-line
+export type DeviceFault = 0 | 1; // 0: No fault, 1: Fault
+
+export type ApiResponse = {
+  success: boolean;
+  message: string;
+};
+
+export type PieChartData = {
+  range: string;
+  value: number;
+  color: string;
 }[];
+
+// api/Events
+export enum EventType {
+  LowLevel = 'lowLevel',
+  SensorError = 'sensorerror',
+  BatteryLow = 'batteryLow',
+  Offline = 'offline',
+  OilFilling = 'oilFilling'
+}
+export type Events = Event[];
+export type Event = {
+  eventDate: string;
+  brandId: number;
+  tankId: number;
+  tankNo: string | null;
+  deviceReference: string;
+  customerNo: string;
+  customerName: string;
+  address: string;
+  contact: string;
+  phone: string;
+  salesRep: string;
+  eventLevelLow: 1 | null;
+  eventFault: 1 | null;
+  eventBatteryLow: 1 | null;
+  eventOffline: 1 | null;
+  eventOilFilling: 1 | null;
+};
+
+// api/Events/history/{deviceRef}
+export type EventsHistory = EventsHistoryItem[];
+export type EventsHistoryItem = {
+  eventDate: string;
+  eventLevelLow: 1 | null;
+  eventFault: 1 | null;
+  eventBatteryLow: 1 | null;
+  eventOffline: 1 | null;
+  eventOilFilling: 1 | null;
+};
+
+// api/Client
+export type Clients = ClientData[];
+
+// api/Client/{id}
+export type Client = {
+  success: boolean;
+  message: string | null;
+  data: ClientData;
+  error: string | null;
+};
+export type ClientData = {
+  clientId: number;
+  clientName: string;
+  clientNo: string;
+  clientContact: string;
+  clientPhone: string;
+  clientCountry: string;
+  clientState: string;
+  clientCity: string;
+  clientAddress: string;
+  clientPostCode: string;
+  brandId: number;
+  salesRepUserId: string | null;
+  customerServiceRepUserId: string | null;
+  clientTank: ClientTank[];
+};
+export type ClientTank = Pick<
+  TankData,
+  | 'tankNo'
+  | 'deviceFillingDate'
+  | 'deviceDescription'
+  | 'deviceOilType'
+  | 'deviceOilViscosity'
+  | 'tankId'
+  | 'deviceLevel'
+  | 'deviceLevelLabel'
+  | 'deviceConnection'
+>;
+
+// api/Tank/list
+export type TankList = {
+  success: boolean;
+  data: TankListItem[];
+};
+export type TankListItem = {
+  tankId: number;
+  tankNo: string;
+  deviceReference: string;
+  deviceLevel: number;
+  deviceLevelLabel: DeviceLevelLabel;
+  deviceBattery: number;
+  deviceConnection: DeviceConnection;
+  deviceFault: DeviceFault;
+};
+
+// api/Tank/{id}
+export type Tank = {
+  success: boolean;
+  data: TankData;
+};
+export type TankData = {
+  tankNo: string;
+  deviceFillingDate: string;
+  deviceDescription: string;
+  deviceOilType: string;
+  deviceOilViscosity: string;
+  clientId: number;
+  brandId: number;
+  tankId: number;
+  deviceReference: string;
+  deviceLongitude: number | null;
+  deviceLatitude: number | null;
+  deviceLevel: number;
+  deviceLevelLabel: DeviceLevelLabel;
+  deviceBattery: number;
+  gatewayVersion: string;
+  deviceConnection: DeviceConnection;
+  salesRepUserId: number | null;
+  customerServiceRepUserId: number | null;
+};
 
 // api/Overview/summary
 export type Summary = {
@@ -29,39 +160,17 @@ export type ResponsibleTanks = {
   tankLevelCounts: TankLevelCounts;
 }[];
 
+export type TankLevelCounts = {
+  range: DeviceLevelLabel;
+  count: number;
+}[];
+
 export type ResponsibleTanksParameters = {
   userId: number;
   locationId?: number;
 };
 
 // api/Locations
-[
-  {
-    'locationId': 61,
-    'creationDate': '2023-04-07T02:01:14',
-    'parentId': null,
-    'type': 1,
-    'name': 'Iveda',
-    'timezone': 'Asia/Taipei',
-    'street': '2F-15, No.14, Lane 609, Sec.5, Chongxin Rd.',
-    'city': 'New Taipei city',
-    'state': '',
-    'country': 'TW',
-    'zip': '241',
-    'latitude': null,
-    'longitude': null,
-    'mapId': null,
-    'mapWidth': null,
-    'mapHeight': null,
-    'tracmoCloud': null,
-    'solution': 51,
-    'enabledSolutions': ['IvedaRTLS', 'utilus', 'ems', 'levelnow'],
-    'riskLevel': null,
-    'severity': null,
-    'shape': null,
-    'maxUsers': null,
-  },
-];
 export type Locations = {
   locationId: number;
   creationDate: string;

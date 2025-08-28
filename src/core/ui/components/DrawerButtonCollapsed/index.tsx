@@ -27,7 +27,7 @@ export const DrawerButtonCollapsed = React.forwardRef<HTMLDivElement, Props>(
         {({ isActive }) => (
           <IconButton
             ariaLabel={title}
-            className={styles['drawer-button-collapsed']}
+            className={cn(styles['drawer-button-collapsed'], '')}
             color={isActive ? 'primary' : 'icon-secondary'}
             component='div'
             disabled={disabled}

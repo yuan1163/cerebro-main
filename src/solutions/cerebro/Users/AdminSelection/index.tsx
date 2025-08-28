@@ -194,15 +194,21 @@ function DataRowMenu({ user, remove, handleClick, handleClose }: DataRowProps) {
       <ModalDelete
         content={`${t(
           'user.deleteAccountQuestion.label',
-          'Are you sure you want to remove user?',
+          'This action will permanently delete the account.',
           'Confirmation prompt: Delete user profile?',
-        )} ${user?.firstName} ${user?.lastName} ${t(
-          'company.fromCerebroApp.label',
-          'from Cerebro App?',
-          'Refers to the source app.',
         )}`}
+        // content={`${t(
+        //   'user.deleteAccountQuestion.label',
+        //   'Are you sure you want to remove user?',
+        //   'Confirmation prompt: Delete user profile?',
+        // )} ${user?.firstName} ${user?.lastName} ${t(
+        //   'company.fromCerebroApp.label',
+        //   'from Cerebro App?',
+        //   'Refers to the source app.',
+        // )}`}
         open={openDialog}
-        title={t('user.deleteAccount.label', 'Delete account', 'Delete user account.')}
+        // title={t('user.deleteAccount.label', 'Delete account', 'Delete user account.')}
+        title={`Confirm to delete this account［ ${user.firstName} ${user.lastName} ］?`}
         close={() => {
           setDialogOpen(false);
         }}

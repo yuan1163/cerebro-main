@@ -26,19 +26,23 @@ export const DrawerButtonExpanded: React.FC<Props> = ({ disabled, icon, iconHove
           align='start'
           color={isActive ? 'primary' : 'icon-secondary'}
           component='div'
-          className={cn(styles['drawer-button-expanded']
-            ,isActive&&"border-3 border-primary-tint-active rounded-[10px]","tracking-l font-medium"
+          className={cn(
+            styles['drawer-button-expanded'],
+            isActive ? 'border-primary-tint-active rounded-[10px]' : 'border-white',
+            'tracking-l font-medium',
+            'border-3 gap-2.5',
           )}
           disabled={disabled}
           fontSize='sm'
           fontWeight={isActive ? 'semibold' : 'medium'}
           fullWidth
           size='lg'
-          startIcon={isActive ? iconHover : icon}
+          // startIcon={isActive ? iconHover : icon}
           textColor={isActive ? '' : 'typography-secondary'}
           variant={isActive ? 'tint' : 'ghost'}
         >
-          {title}
+          {isActive ? iconHover : icon}
+          <span>{title}</span>
         </Button>
       )}
     </NavLink>

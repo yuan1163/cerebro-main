@@ -41,7 +41,7 @@ import Building01SolidIcon from '@assets/icons/solid/building-01.svg?component';
 import Map01LineIcon from '@assets/icons/solid/map-01.svg?component';
 import TrackerLineIcon from '@assets/icons/line/tracker.svg?component';
 
-interface Point {
+export interface Point {
   latitude: number;
   longitude: number;
 }
@@ -110,17 +110,17 @@ const Marker: React.FC<Marker> = ({ color, markerContent, markerIcon, markerLabe
 };
 
 export default function Map({ controls, marker = 'default', points, zoom, className }: MapProps) {
-  console.log('Map points:', points);
-  console.log('Points length:', points.length);
-  console.log(
-    'Sample points:',
-    points.slice(0, 5).map((p, i) => ({
-      index: i,
-      lat: p.latitude,
-      lng: p.longitude,
-      riskLevel: (p as any)?.riskLevel,
-    })),
-  );
+  // console.log('Map points:', points);
+  // console.log('Points length:', points.length);
+  // console.log(
+  //   'Sample points:',
+  //   points.slice(0, 5).map((p, i) => ({
+  //     index: i,
+  //     lat: p.latitude,
+  //     lng: p.longitude,
+  //     riskLevel: (p as any)?.riskLevel,
+  //   })),
+  // );
 
   // Set Mapbox access token
   mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_API_TOKEN;

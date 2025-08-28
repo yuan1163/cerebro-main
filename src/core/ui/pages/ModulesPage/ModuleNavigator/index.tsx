@@ -54,6 +54,8 @@ import AppIcon from '@assets/images/app-icon.svg?component';
 import AppLogo from '@assets/images/app-logo.svg?component';
 import ivedaLogo from '@assets/images/iveda-logo.svg';
 import PoweredLogo from '@assets/images/powered-logo.svg?component';
+import DomainLineIcon from '@assets/icons/LevelNOW/sidebar/domain-line.svg?component';
+import DomainSolidIcon from '@assets/icons/LevelNOW/sidebar/domain-solid.svg?component';
 
 // AUTHORIZATION
 
@@ -108,6 +110,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
   // COLLAPSED BUTTON
 
   interface ItemProps {
+    system?: 'levelnow' | 'cerebro';
     component?: React.ReactNode;
     icon?: React.ReactNode;
     iconSolid?: React.ReactNode;
@@ -125,27 +128,34 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
     let url;
     let disabled;
-    switch (type) {
-      case 'home':
-        url = 'domain';
-        break;
-      case 'common':
-        url = `${item.url}/${ui.currentFormation}`;
-        disabled = !item.component;
-        break;
-      case 'uniques':
-        url = `${item.url}/${ui.currentFormation}`;
 
-        // FIXME: Sam: this is not working, maybe can fix it to "disabled = item.url === 'null' or disabled = !item.component"
-        disabled = url === 'null';
-        break;
-      case 'commands':
-        url = `${item.url}`;
-        disabled = url === 'null';
-        break;
-      default:
-        url = '#';
-        break;
+    // levelnow dont need to add formation to the url
+    if (item.system === 'levelnow') {
+      url = item.url || '';
+      disabled = !item.component;
+    } else {
+      switch (type) {
+        case 'home':
+          url = 'domain';
+          break;
+        case 'common':
+          url = `${item.url}/${ui.currentFormation}`;
+          disabled = !item.component;
+          break;
+        case 'uniques':
+          url = `${item.url}/${ui.currentFormation}`;
+
+          // FIXME: Sam: this is not working, maybe can fix it to "disabled = item.url === 'null' or disabled = !item.component"
+          disabled = url === 'null';
+          break;
+        case 'commands':
+          url = `${item.url}`;
+          disabled = url === 'null';
+          break;
+        default:
+          url = '#';
+          break;
+      }
     }
 
     const title = item.title;
@@ -276,8 +286,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             <ul className={styles['list']}>
               <CollapsedButton
                 item={{
-                  icon: <Home02LineIcon />,
-                  iconSolid: <Home02SolidIcon />,
+                  icon: <DomainLineIcon />,
+                  iconSolid: <DomainSolidIcon />,
                   title: 'solutions.domain.label',
                 }}
                 type='home'
@@ -399,8 +409,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             <ul className={styles['list']}>
               <li className={styles['list-item']}>
                 <DrawerButtonExpanded
-                  icon={<Home02LineIcon />}
-                  iconHover={<Home02SolidIcon />}
+                  icon={<DomainLineIcon />}
+                  iconHover={<DomainSolidIcon />}
                   url={`domain`}
                   title={t('solutions.domain.label', 'Domain', 'Domain page title.')}
                 />
@@ -424,7 +434,9 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                     // title={item.title}
                   );
                 } else {
-                  const url = `${item.url}/${ui.currentFormation}`;
+                  console.log('item.url', item.url);
+
+                  const url = item.system === 'levelnow' ? item.url || '' : `${item.url}/${ui.currentFormation}`;
                   return (
                     <li key={item.url} className={styles['list-item']}>
                       <DrawerButtonExpanded

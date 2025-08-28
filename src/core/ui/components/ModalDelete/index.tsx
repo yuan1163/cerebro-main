@@ -37,39 +37,50 @@ type Props = {
 
 export const ModalDelete: React.FC<Props> = ({ children, className, content, open, close, confirm, cancel, title }) => {
   return (
-    <Modal open={open} onClose={close} className='max-w-[28.5rem]'>
-      <Card>
-        <CardHeader
-          action={
-            <IconButton
-              ariaLabel={t('general.closeButton.label', 'Close', 'Close button.')}
-              color='icon-secondary'
-              onClick={close}
-              size='lg'
-              variant='text'
-            >
-              <XCloseLineIcon />
-            </IconButton>
-          }
-          className='card-header'
-          disablePaddingBottom
-          size='sm'
-          title={title}
-        />
-        <CardContent size='sm'>
-          <Text color='typography-secondary' variant='sm'>
-            {content}
-          </Text>
-        </CardContent>
-        <CardActions borderTop>
-          <Grid container justifyContent='end' spacing={2}>
-            <Grid item>
-              <Button color='secondary' onClick={cancel} variant='outlined'>
+    <Modal open={open} onClose={close}>
+      {/* <Modal open={open} onClose={close} className='max-w-[41rem]'> */}
+      {/* <Modal open={open} onClose={close} className='max-w-[28.5rem]'> */}
+      <Card className='p-11 h-[320px] justify-between flex flex-col'>
+        <div className='flex flex-col items-center gap-5 p-5 mb-15'>
+          <CardHeader
+            // action={
+            //   <IconButton
+            //     ariaLabel={t('general.closeButton.label', 'Close', 'Close button.')}
+            //     color='icon-secondary'
+            //     onClick={close}
+            //     size='lg'
+            //     variant='text'
+            //   >
+            //     <XCloseLineIcon />
+            //   </IconButton>
+            // }
+            className='flex items-center text-center justify-center p-0 card-header text-[24px] font-semibold text-neutral-900'
+            disablePaddingBottom
+            // size='sm'
+            // title={title}
+          >
+            <div>{title}</div>
+          </CardHeader>
+          <CardContent size='sm' className='p-0'>
+            <Text color='typography-secondary' variant='sm' className='text-[22px] font-medium text-secondary-500'>
+              {content}
+            </Text>
+          </CardContent>
+        </div>
+        <CardActions className='p-0'>
+          {/* <CardActions borderTop> */}
+          <Grid container justifyContent='center' gap={3} className='p-0'>
+            {/* <Grid container justifyContent='center' spacing={2}> */}
+            {/* <Grid container justifyContent='end' spacing={2}> */}
+            <Grid fullWidth>
+              {/* <Grid item> */}
+              <Button color='secondary' onClick={cancel} variant='outlined' fullWidth>
                 {t('general.cancelButton.label', 'Cancel', 'Cancel button.')}
               </Button>
             </Grid>
-            <Grid item>
-              <Button color='error' onClick={confirm} variant='solid'>
+            <Grid fullWidth>
+              {/* <Grid item> */}
+              <Button color='error' onClick={confirm} variant='solid' fullWidth>
                 {t('general.confirmButton.label', 'Confirm', 'Confirm button.')}
               </Button>
             </Grid>

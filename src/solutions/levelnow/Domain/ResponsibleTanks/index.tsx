@@ -31,6 +31,7 @@ export default observer(function ResponsibleTanks() {
     navigate('/login');
     return null;
   }
+  console.log('profile', profile);
 
   const responsibleTanks = useResponsibleTanks({ userId: profile.userId });
 

@@ -49,12 +49,15 @@
 }
 
 .decorator-icon-size-lg {
-  @apply h-[theme(width.decorator.md)];
-  @apply w-[theme(width.decorator.md)];
+  @apply h-[theme(width.decorator.lg)];
+  @apply w-[theme(width.decorator.lg)];
   & svg {
     @apply text-xl;
+    @apply w-[24px] h-[24px];
+
   }
 }
+
 
 // COLORS
 
@@ -78,6 +81,12 @@
 
 .decorator-icon-color-secondary-tint-active {
   @apply text-secondary-tint-active;
+}
+.decorator-icon-color-white {
+  @apply text-common-white;
+}
+.decorator-icon-color-neutral-900 {
+  @apply text-neutral-900;
 }
 
 // LOADING

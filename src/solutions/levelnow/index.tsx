@@ -18,29 +18,37 @@ import Map02SolidIcon from '@assets/icons/solid/map-02.svg?component';
 import NotificationTextSolidIcon from '@assets/icons/solid/notification-text.svg?component';
 import Users01SolidIcon from '@assets/icons/solid/users-01.svg?component';
 
-import TankLineIcon from '@assets/icons/line/tank-line.svg?component';
-import TankSolidIcon from '@assets/icons/solid/tank-solid.svg?component';
+import DomainLineIcon from '@assets/icons/LevelNOW/sidebar/domain-line.svg?component';
+import DomainSolidIcon from '@assets/icons/LevelNOW/sidebar/domain-solid.svg?component';
+import TankLineIcon from '@assets/icons/LevelNOW/sidebar/tank-line.svg?component';
+import TankSolidIcon from '@assets/icons/LevelNOW/sidebar/tank-solid.svg?component';
+import CustomerLineIcon from '@assets/icons/LevelNOW/sidebar/customer-line.svg?component';
+import CustomerSolidIcon from '@assets/icons/LevelNOW/sidebar/customer-solid.svg?component';
+import EventsLineIcon from '@assets/icons/LevelNOW/sidebar/events-line.svg?component';
+import EventsSolidIcon from '@assets/icons/LevelNOW/sidebar/events-solid.svg?component';
+import SnapshotLineIcon from '@assets/icons/LevelNOW/sidebar/snapshot-line.svg?component';
+import SnapshotSolidIcon from '@assets/icons/LevelNOW/sidebar/snapshot-solid.svg?component';
+
 // types
 import { Modules, ModuleSections } from '@core/ui/types';
 import { t } from '@core/utils/translate';
 // components
-import { Assets } from '@solutions/cerebro/Assets';
-import { Dashboard } from '@solutions/cerebro/Dashboard';
-import { Issues } from '@solutions/cerebro/Issues';
-import { Locations } from '@solutions/cerebro/Locations';
-import { Notifications } from '@solutions/cerebro/Notifications';
-import { Users } from '@solutions/cerebro/Users';
-
 import { Domain } from '@solutions/levelnow/Domain';
 import { Tanks } from '@solutions/levelnow/Tanks';
+import { Customers } from '@solutions/levelnow/Customers';
+import { Events } from '@solutions/levelnow/Events';
+import { Snapshot } from '@solutions/levelnow/Snapshot';
+import { Users } from '@solutions/cerebro/Users';
+
 import ResponsibleTanksPage from '@core/ui/pages/ResponsibleTanksPage';
 
 export const modules: Modules = [
   {
+    system: 'levelnow',
     url: '',
     title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
-    icon: <Home02LineIcon />,
-    iconSolid: <Home02SolidIcon />,
+    icon: <DomainLineIcon />,
+    iconSolid: <DomainSolidIcon />,
     component: <Domain />,
     children: [
       {
@@ -50,57 +58,43 @@ export const modules: Modules = [
     ],
   },
   {
+    system: 'levelnow',
     url: 'tanks',
     title: 'tanks.tanks.label',
     icon: <TankLineIcon />,
     iconSolid: <TankSolidIcon />,
     component: <Tanks />,
   },
-  //   // {
-  //   //   url: 'overview',
-  //   //   title: 'Overview',
-  //   //   icon: <BarChartSquare01LineIcon />,
-  //   //   iconSolid: <BarChartSquare01SolidIcon />,
-  //   //   component: null,
-  //   // },
-  //   {
-  //     url: 'events',
-  //     // title: t('events.events.label', 'Events', 'Events title.'),
-  //     title: 'events.events.label',
-  //     icon: <NotificationTextLineIcon />,
-  //     iconSolid: <NotificationTextSolidIcon />,
-  //     component: <Notifications />,
-  //   },
-  //   {
-  //     url: 'issues',
-  //     // title: t('issue.issuesTitle.label', 'Issues', 'Issues title.'),
-  //     title: 'issue.issuesTitle.label',
-  //     icon: <CheckDone01LineIcon />,
-  //     iconSolid: <CheckDone01SolidIcon />,
-  //     component: <Issues />,
-  //   },
-  //   {
-  //     url: 'locations',
-  //     // title: t('location.locations.label', 'Locations', 'Locations.'),
-  //     title: 'location.locations.label',
-  //     icon: <Map02LineIcon />,
-  //     iconSolid: <Map02SolidIcon />,
-  //     component: <Locations />,
-  //   },
-  //   {
-  //     url: 'users',
-  //     // title: t('user.usersTitle.label', 'Users', 'Users Title.'),
-  //     title: 'user.usersTitle.label',
-  //     icon: <Users01LineIcon />,
-  //     iconSolid: <Users01SolidIcon />,
-  //     component: <Users />,
-  //   },
-  //   {
-  //     url: 'assets',
-  //     // title: t('asset.assetsTitle.label', 'Assets', 'Collections of hardware tools and gadgets.'),
-  //     title: 'asset.assetsTitle.label',
-  //     icon: <LineChartUp04LineIcon />,
-  //     iconSolid: <LineChartUp04SolidIcon />,
-  //     component: <Assets />,
-  //   },
+  {
+    system: 'levelnow',
+    url: 'customers',
+    title: 'customers.customers.label',
+    icon: <CustomerLineIcon />,
+    iconSolid: <CustomerSolidIcon />,
+    component: <Customers />,
+  },
+  {
+    system: 'levelnow',
+    url: 'events',
+    title: 'events.events.label',
+    icon: <EventsLineIcon />,
+    iconSolid: <EventsSolidIcon />,
+    component: <Events />,
+  },
+  {
+    system: 'levelnow',
+    url: 'snapshot',
+    title: 'snapshot.snapshot.label',
+    icon: <SnapshotLineIcon />,
+    iconSolid: <SnapshotSolidIcon />,
+    component: <Snapshot />,
+  },
+  {
+    url: 'users',
+    // title: t('user.usersTitle.label', 'Users', 'Users Title.'),
+    title: 'user.usersTitle.label',
+    icon: <Users01LineIcon />,
+    iconSolid: <Users01SolidIcon />,
+    component: <Users />,
+  },
 ];

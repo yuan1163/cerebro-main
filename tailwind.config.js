@@ -9,6 +9,8 @@ module.exports = {
   },
   theme: {
     colors: {
+      white: '#FFFFFF',
+      black: '#000000',
       hover: '#F7F8F9',
       current: 'currentColor',
       inherit: 'inherit',
@@ -61,6 +63,10 @@ module.exports = {
           },
         },
         dark: 'var(--color-secondary-dark)',
+      },
+      tertiary: {
+        '500': '#9EABB6',
+        '600': '#8A97A4',
       },
       typography: {
         primary: 'var(--color-typography-primary)',
@@ -173,7 +179,9 @@ module.exports = {
         disabled: 'var(--color-action-disabled)',
       },
       error: {
+        '200': '#FFC9C9',
         '500': '#FF4545',
+        '600': '#E03B3B',
         DEFAULT: 'var(--color-error-default)',
         focus: 'var(--color-error-focus)',
         hover: 'var(--color-error-hover)',
@@ -2398,6 +2406,9 @@ module.exports = {
       },
     },
     boxShadow: {
+      checkbox: '0 1px 2px 0 rgba(0, 0, 0, 0.08)',
+      dialogContent: '0 4px 38px 0 rgba(0, 0, 0, 0.12)',
+      tab: '0 2px 4px 0 rgba(0, 0, 0, 0.04)',
       card: '0 2px 4px 0 rgba(0, 0, 0, 0.08)',
       select: '0 4px 9px 4px rgba(0, 0, 0, 0.08)',
       none: 'none',
@@ -2595,7 +2606,8 @@ module.exports = {
         normal: 'var(--typography-letter-spacing-normal)',
         tight: 'var(--typography-letter-spacing-tight)',
         tighter: 'var(--typography-letter-spacing-tighter)',
-        wide: 'var(--typography-letter-spacing-wide)', // 0.28
+        wide: 'var(--typography-letter-spacing-wide)', // 0.24px
+        '28': '0.28px',
         '32': '0.32px',
         '36': '0.36px',
         wider: 'var(--typography-letter-spacing-wider)', // 0.8
@@ -2791,6 +2803,24 @@ module.exports = {
           '&::-webkit-scrollbar': {
             width: '4px',
             height: '4px',
+          },
+        },
+        // Custom scrollbar for regular divs
+        '.scrollbar-neutral': {
+          'scrollbar-width': 'thin',
+          'scrollbar-color': 'var(--color-neutral-300) transparent',
+          '&::-webkit-scrollbar': {
+            width: '6px',
+          },
+          '&::-webkit-scrollbar-track': {
+            background: 'transparent',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            'background-color': 'var(--color-neutral-300)',
+            'border-radius': '3px',
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            'background-color': 'var(--color-neutral-400)',
           },
         },
       };

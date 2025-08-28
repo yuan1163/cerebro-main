@@ -21,6 +21,7 @@ import SearchMdLineIcon from '@assets/icons/line/search-md.svg?component';
 import { Icon } from '../Icon';
 
 type Props = {
+  customSize?: boolean;
   id?: string;
   className?: string;
   defaultValue?: string;
@@ -38,6 +39,7 @@ type Props = {
 export const Search = React.forwardRef<HTMLInputElement, Props>(
   (
     {
+      customSize = false,
       id,
       className,
       defaultValue,
@@ -56,6 +58,8 @@ export const Search = React.forwardRef<HTMLInputElement, Props>(
   ) => {
     return (
       <Input
+        size={customSize ? 'custom' : undefined}
+        noLabel
         aria-label='search'
         aria-autocomplete='both'
         aria-labelledby={inputId}

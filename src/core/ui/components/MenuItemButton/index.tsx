@@ -17,6 +17,7 @@ import { Text } from '@core/ui/components/Text';
 export type CustomMenuItemProps<T extends React.ElementType> = {
   action?: React.ReactNode;
   active?: boolean;
+  selected?: boolean;
   avatar?: React.ReactNode;
   children?: React.ReactNode;
   className?: string;
@@ -35,6 +36,7 @@ export type CustomMenuItemProps<T extends React.ElementType> = {
 export const MenuItemButton = <T extends React.ElementType = 'button'>({
   action,
   active,
+  selected,
   avatar,
   children,
   className,
@@ -55,6 +57,7 @@ export const MenuItemButton = <T extends React.ElementType = 'button'>({
     <Component
       className={cn(
         active && styles['menu-item-button-active'],
+        selected && styles['menu-item-button-selected'],
         disableHover && styles['menu-item-button-disable-hover'],
         styles['menu-item-button'],
         styles[`menu-item-button-variant-${variant}`],

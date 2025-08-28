@@ -60,13 +60,16 @@
 
 .input-base-wrapper-focus-visible,
 .input-base-wrapper-focus {
-  @apply border-transparent;
-  @apply outline;
-  @apply outline-primary;
-  @apply -outline-offset-2;
-  @apply outline-2;
+  @apply border-primary-500;
+  // @apply border-transparent;
+  // @apply outline;
+  // @apply outline-primary;
+  // @apply -outline-offset-2;
+  // @apply outline-2;
   &:hover {
-    @apply border-transparent;
+    // @apply border-transparent;
+  @apply border-primary-500;
+
   }
 }
 

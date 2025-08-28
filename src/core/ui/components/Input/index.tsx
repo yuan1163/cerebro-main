@@ -45,7 +45,7 @@ type InputProps = {
   required?: boolean;
   requiredLabel?: boolean;
   severity?: SeverityPalette;
-  size?: 'sm' | 'md';
+  size?: 'sm' | 'md' | 'custom';
   startButton?: React.ReactNode;
   startCaption?: string;
   startIcon?: React.ReactNode;
@@ -175,7 +175,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     },
     ref,
   ) => {
-    
     const [inputFocus, setInputFocus] = useState<boolean>(false);
     const [isHovered, setIsHovered] = useState(false);
     const [showClearButton, setShowClearButton] = useState<boolean>(false);
@@ -319,7 +318,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 onChange={(event) => {
                   setShowClearButton(!!event.target.value);
                   onChange?.(event);
-                }}                
+                }}
                 onKeyDown={handleKeyDown}
                 placeholder={placeholder}
                 ref={ref}

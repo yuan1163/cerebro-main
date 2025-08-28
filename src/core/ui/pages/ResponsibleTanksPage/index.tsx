@@ -1,62 +1,38 @@
 import { useState, useRef } from 'react';
-import { observer } from 'mobx-react';
-import { DataTable } from '@app/components/ui/data-table';
-import { TankData, columns } from './responsibleTanksColumns';
+import { columns } from './responsibleTanksColumns';
+import { useNavigate } from 'react-router-dom';
 
 // core ui components
 import { Card } from '@core/ui/components/Card';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { CardContent } from '@core/ui/components/CardContent';
 import { Button } from '@core/ui/components/Button';
-import { Badge } from '@core/ui/components/Badge';
-import { Listbox } from '@headlessui/react';
 
 import { Header } from '@core/ui/cerebro/Header';
+import Tabs from '@core/ui/levelnow/Tabs';
+import SearchBar from '@core/ui/levelnow/SearchBar';
+import NumberBadge from '@core/ui/levelnow/NumberBadge';
+
+import { Scrollbar } from '@core/ui/components/Scrollbar';
+import { DataTable } from '@app/components/ui/data-table';
+import { Listbox } from '@headlessui/react';
 
 // utils
 import { t } from '@core/utils/translate';
 import { cn } from '@core/utils/classnames';
+import { useEvents } from '@core/storages/controllers/levelnow/event';
+import { Event, EventsIssue } from '@core/api/types';
 
 // icons
-import Home02LineIcon from '@assets/icons/line/home-02.svg?component';
 import FilterIcon from '@assets/icons/LevelNOW/filter.svg?component';
 import CheckIcon from '@assets/icons/LevelNOW/check.svg?component';
 import ChevronsUpDownIcon from '@assets/icons/LevelNOW/chevrons-up-down.svg?component';
+import EventsIcon from '@assets/icons/line/notification-text.svg?component';
 
 type Date = {
   month: number;
   year: number;
 };
-
-const tankData: TankData[] = [
-  {
-    eventDate: '2025-05-31T08:16:27.458Z',
-    issue: 'Level low',
-    issueType: 'warning',
-    tankNo: 'Alexandria 1',
-    tankId: 'e07526586c47',
-    customerNo: 'Alexandria Automotive',
-    customerId: '700832',
-    address: '36-42 Henderson Rd',
-    contact: 'Nick',
-    contactPhone: '0432932083',
-    saleRep: 'bterry',
-  },
-  {
-    eventDate: '2025-07-31T08:16:27.458Z',
-    issue: 'Oil filling',
-    issueType: 'info',
-    tankNo: 'Alexandria 2',
-    tankId: 'e07526586c5b',
-    customerNo: 'Alexandria Automotive',
-    customerId: '700832',
-    address: '36-42 Henderson Rd',
-    contact: 'Nick',
-    contactPhone: '0432932083',
-    saleRep: 'bterry',
-  },
-];
-// const tankData = tankData.sort((a, b) => Number(b.eventDate) - Number(a.eventDate));
 
 const monthNames = [
   'January',
@@ -73,35 +49,68 @@ const monthNames = [
   'December',
 ];
 
-const ResponsibleTanksPage = observer(() => {
+const issueOptions = [
+  { label: 'Issue: All', value: null },
+  { label: 'Level Low', value: 'Level Low' },
+  { label: 'Fault', value: 'Fault' },
+  { label: 'Battery Low', value: 'Battery Low' },
+  { label: 'Offline', value: 'Offline' },
+  { label: 'Oil Filling', value: 'Oil Filling' },
+];
+
+const ResponsibleTanksPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [selectedIssue, setSelectedIssue] = useState<string | null>(null);
+  const [selectedIssue, setSelectedIssue] = useState<keyof Event | null>(null);
   const [selectedDevice, setSelectedDevice] = useState<string | null>(null);
 
-  const filteredData = tankData.filter((data) => {
+  const navigate = useNavigate();
+
+  // initial events data
+  const events = useEvents();
+
+  // Transform issue value to match event properties
+  const transformIssueValue = (issue: EventsIssue | null) => {
+    switch (issue) {
+      case 'Level Low':
+        return 'eventLevelLow';
+      case 'Fault':
+        return 'eventFault';
+      case 'Battery Low':
+        return 'eventBatteryLow';
+      case 'Offline':
+        return 'eventOffline';
+      case 'Oil Filling':
+        return 'eventOilFilling';
+      default:
+        return null;
+    }
+  };
+
+  // Filter events based on selected filters
+  const filteredEvents = events.filter((event) => {
     if (selectedDate) {
       const dateMatch = compareDates(selectedDate, {
-        month: new Date(data.eventDate).getUTCMonth() + 1,
-        year: new Date(data.eventDate).getUTCFullYear(),
+        month: new Date(event.eventDate).getUTCMonth() + 1,
+        year: new Date(event.eventDate).getUTCFullYear(),
       });
       if (!dateMatch) return false;
     }
-    if (selectedIssue && data.issue !== selectedIssue) return false;
-    if (selectedDevice && data.tankId !== selectedDevice) return false;
+    if (selectedIssue) {
+      const issueValue = transformIssueValue(selectedIssue as EventsIssue);
+      if (!issueValue || !event[issueValue]) return false;
+    }
+    // if (selectedIssue && !event[selectedIssue]) return false;
+    if (selectedDevice && event.deviceReference !== selectedDevice) return false;
     return true;
   });
 
-  const issueOptions = [
-    { label: 'Issue: All', value: null },
-    { label: 'Level low', value: 'Level low' },
-    { label: 'Oil filling', value: 'Oil filling' },
-  ];
-
+  // Refs for Listbox options width same with buttons
   const dateRef = useRef<HTMLButtonElement>(null);
   const issueRef = useRef<HTMLButtonElement>(null);
   const deviceRef = useRef<HTMLButtonElement>(null);
 
+  // Format date for date filter display
   const formatDate = (date: string | Date) => {
     if (typeof date === 'object') {
       const { month, year } = date;
@@ -114,18 +123,11 @@ const ResponsibleTanksPage = observer(() => {
     }
   };
 
-  const getActiveFilterCount = () => {
-    let count = 0;
-    if (selectedIssue) count++;
-    if (selectedDevice) count++;
-    return count;
-  };
-  const activeFilterCount = getActiveFilterCount();
-
+  // Get date range for display date select value
   const getDateRange = () => {
-    if (tankData.length === 0) return '-';
-    const sortedDates = tankData
-      .map((tank) => tank.eventDate)
+    if (events.length === 0) return '-';
+    const sortedDates = events
+      .map((event) => event.eventDate)
       .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
 
     const latestDate = formatDate(sortedDates[0]);
@@ -137,13 +139,13 @@ const ResponsibleTanksPage = observer(() => {
       return `${monthNames[previousMonth - 1]} - ${latestDate}`;
     }
   };
-
   const dateRange = getDateRange();
 
+  // Get date options for date options value
   const getDateOptions = (): Date[] => {
     const options: Date[] = [];
 
-    const years = tankData.map((tank) => tank.eventDate).map((date) => new Date(date).getUTCFullYear());
+    const years = events.map((event) => event.eventDate).map((date) => new Date(date).getUTCFullYear());
     const uniqueYears = Array.from(new Set(years));
     uniqueYears.forEach((year) => {
       monthNames.forEach((_, index) => {
@@ -157,6 +159,7 @@ const ResponsibleTanksPage = observer(() => {
   };
   const dateOptions = getDateOptions();
 
+  // Compare selected date with event date
   function compareDates(a: Date | null, b: Date) {
     if (!a) {
       return false;
@@ -164,8 +167,9 @@ const ResponsibleTanksPage = observer(() => {
     return a.month === b.month && a.year === b.year;
   }
 
+  // Get device options for device select
   const getDeviceOptions = () => {
-    const devices = tankData.map((tank) => tank.tankId);
+    const devices = events.map((event) => event.deviceReference);
     const options = Array.from(new Set(devices))
       .sort((a, b) => a.localeCompare(b))
       .map((device) => ({
@@ -182,6 +186,17 @@ const ResponsibleTanksPage = observer(() => {
   };
   const deviceOptions = getDeviceOptions();
 
+  // Get active filter count for number badge
+  const getActiveFilterCount = () => {
+    let count = 0;
+    if (selectedIssue) count++;
+    if (selectedDevice) count++;
+    return count;
+  };
+  const activeFilterCount = getActiveFilterCount();
+
+  const isFiltering = !!(selectedDate || selectedIssue || selectedDevice);
+
   const handleClearFilters = () => {
     setSelectedDate(null);
     setSelectedIssue(null);
@@ -189,24 +204,25 @@ const ResponsibleTanksPage = observer(() => {
     setIsFilterOpen(false);
   };
 
+  const handleRowClick = (rowData: any) => {
+    console.log(rowData);
+    navigate(`tank/${rowData.tankId}`);
+  };
+
   return (
     <>
       <Header
-        icon={<Home02LineIcon />}
-        title={t(
-          'solutions.domainOverview.label',
-          'Domain Overview',
-          "An overview of the solution's core purpose and components.",
-        )}
+        icon={<EventsIcon />}
+        title={t('domain.responsibletanks.label', 'Responsible Tanks', 'Responsible Tanks title.')}
         widgets={false}
       />
-      <Card className='rounded-[10px] shadow-card flex-1 flex flex-col'>
+      <Card className='rounded-[10px] shadow-card flex-1 flex flex-col mt-5'>
         <CardHeader justifyContent='between'>
           <div className='flex items-center gap-3'>
             <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
               {t('solutions.events.label', 'Events', 'A list of events related to the solution.')}
             </h1>
-            <Badge variant='gray'>{tankData.length}</Badge>
+            <NumberBadge variant='gray' number={events.length} />
           </div>
           <div>
             {activeFilterCount > 0 && (
@@ -226,11 +242,11 @@ const ResponsibleTanksPage = observer(() => {
               className='gap-2'
             >
               <span>Filters</span>
-              {activeFilterCount > 0 && <Badge variant='actived'>{activeFilterCount}</Badge>}
+              {activeFilterCount > 0 && <NumberBadge variant='actived' number={activeFilterCount} />}
             </Button>
           </div>
         </CardHeader>
-        <CardContent className='flex-1 p-0 max-h-[calc(100vh-188px)] overflow-auto scrollbar-hide'>
+        <CardContent className='flex-1 p-0'>
           {isFilterOpen && (
             <div className='flex items-center flex-1 gap-3 p-5'>
               {/* Date Select*/}
@@ -251,29 +267,29 @@ const ResponsibleTanksPage = observer(() => {
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
                       <Listbox.Options
-                        className={cn(
-                          'absolute max-h-60 overflow-auto left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select',
-                        )}
+                        className={cn('absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select')}
                         style={{ width: dateRef.current?.offsetWidth }}
                       >
-                        {dateOptions.map((date) => {
-                          return (
-                            <Listbox.Option key={`${date.month}/${date.year}`} value={date}>
-                              {({ active, selected }) => (
-                                <li
-                                  className={cn(
-                                    'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
-                                    active && 'bg-hover',
-                                    selected && 'bg-primary-50 text-primary-500',
-                                  )}
-                                >
-                                  <span className='font-medium text-md tracking-32'>{formatDate(date)}</span>
-                                  {selected && <CheckIcon className='text-primary-500' />}
-                                </li>
-                              )}
-                            </Listbox.Option>
-                          );
-                        })}
+                        <Scrollbar>
+                          {dateOptions.map((date) => {
+                            return (
+                              <Listbox.Option key={`${date.month}/${date.year}`} value={date}>
+                                {({ active, selected }) => (
+                                  <li
+                                    className={cn(
+                                      'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
+                                      active && 'bg-hover',
+                                      selected && 'bg-primary-50 text-primary-500',
+                                    )}
+                                  >
+                                    <span className='font-medium text-md tracking-32'>{formatDate(date)}</span>
+                                    {selected && <CheckIcon className='text-primary-500' />}
+                                  </li>
+                                )}
+                              </Listbox.Option>
+                            );
+                          })}
+                        </Scrollbar>
                       </Listbox.Options>
                     </div>
                   )}
@@ -298,30 +314,30 @@ const ResponsibleTanksPage = observer(() => {
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
                       <Listbox.Options
-                        className={cn(
-                          'absolute max-h-60 overflow-auto left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select',
-                        )}
+                        className={cn('absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select')}
                         style={{ width: dateRef.current?.offsetWidth }}
                       >
-                        {issueOptions.map((issue) => {
-                          const { label, value } = issue;
-                          return (
-                            <Listbox.Option key={label} value={value}>
-                              {({ active, selected }) => (
-                                <li
-                                  className={cn(
-                                    'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
-                                    active && 'bg-hover',
-                                    selected && 'bg-primary-50 text-primary-500',
-                                  )}
-                                >
-                                  <span className='font-medium text-md tracking-32'>{label}</span>
-                                  {selected && <CheckIcon className='text-primary-500' />}
-                                </li>
-                              )}
-                            </Listbox.Option>
-                          );
-                        })}
+                        <Scrollbar>
+                          {issueOptions.map((issue) => {
+                            const { label, value } = issue;
+                            return (
+                              <Listbox.Option key={label} value={value}>
+                                {({ active, selected }) => (
+                                  <li
+                                    className={cn(
+                                      'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
+                                      active && 'bg-hover',
+                                      selected && 'bg-primary-50 text-primary-500',
+                                    )}
+                                  >
+                                    <span className='font-medium text-md tracking-32'>{label}</span>
+                                    {selected && <CheckIcon className='text-primary-500' />}
+                                  </li>
+                                )}
+                              </Listbox.Option>
+                            );
+                          })}
+                        </Scrollbar>
                       </Listbox.Options>
                     </div>
                   )}
@@ -345,30 +361,30 @@ const ResponsibleTanksPage = observer(() => {
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
                       <Listbox.Options
-                        className={cn(
-                          'absolute max-h-60 overflow-auto left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select',
-                        )}
+                        className={cn('absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select')}
                         style={{ width: dateRef.current?.offsetWidth }}
                       >
-                        {deviceOptions.map((device) => {
-                          const { label, value } = device;
-                          return (
-                            <Listbox.Option key={label} value={value}>
-                              {({ active, selected }) => (
-                                <li
-                                  className={cn(
-                                    'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
-                                    active && 'bg-hover',
-                                    selected && 'bg-primary-50 text-primary-500',
-                                  )}
-                                >
-                                  <span className='font-medium text-md tracking-32'>{label}</span>
-                                  {selected && <CheckIcon className='text-primary-500' />}
-                                </li>
-                              )}
-                            </Listbox.Option>
-                          );
-                        })}
+                        <Scrollbar>
+                          {deviceOptions.map((device) => {
+                            const { label, value } = device;
+                            return (
+                              <Listbox.Option key={label} value={value}>
+                                {({ active, selected }) => (
+                                  <li
+                                    className={cn(
+                                      'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
+                                      active && 'bg-hover',
+                                      selected && 'bg-primary-50 text-primary-500',
+                                    )}
+                                  >
+                                    <span className='font-medium text-md tracking-32'>{label}</span>
+                                    {selected && <CheckIcon className='text-primary-500' />}
+                                  </li>
+                                )}
+                              </Listbox.Option>
+                            );
+                          })}
+                        </Scrollbar>
                       </Listbox.Options>
                     </div>
                   )}
@@ -376,11 +392,17 @@ const ResponsibleTanksPage = observer(() => {
               </div>
             </div>
           )}
-          <DataTable columns={columns} data={filteredData} />
+          <DataTable
+            columns={columns}
+            data={filteredEvents}
+            fixHeight={277}
+            onRowClick={handleRowClick}
+            isFiltering={isFiltering}
+          />
         </CardContent>
       </Card>
     </>
   );
-});
+};
 
 export default ResponsibleTanksPage;

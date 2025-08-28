@@ -66,7 +66,17 @@ export default observer(function Overview() {
             <div className='relative'>
               <ResponsiveContainer width={160} height={160}>
                 <PieChart>
-                  <Pie data={data} cx='50%' cy='50%' innerRadius={56} outerRadius={80} paddingAngle={2} dataKey='value'>
+                  <Pie
+                    data={data}
+                    cx='50%'
+                    cy='50%'
+                    innerRadius={56}
+                    outerRadius={80}
+                    paddingAngle={2}
+                    dataKey='value'
+                    startAngle={0}
+                    endAngle={-360}
+                  >
                     {data.map((entry) => (
                       <Cell key={entry.range} fill={entry.color} />
                     ))}
