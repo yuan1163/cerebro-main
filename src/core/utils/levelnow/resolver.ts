@@ -40,14 +40,15 @@ export const customResolver = (schema: ZodType) => {
       }
     } catch (error) {
       console.error('Resolver error: ', error);
+      type GlobalErrorLike = { type?: string | number; message?: string };
+      const rootObj: any = {
+        type: 'unknown',
+        message: 'An unknown error occurred during validation',
+      };
+      const root = rootObj as Record<string, GlobalErrorLike> & GlobalErrorLike;
       return {
         values: {},
-        errors: {
-          root: {
-            type: 'unknown',
-            message: 'An unknown error occurred during validation',
-          } as FieldError,
-        },
+        errors: { root } as unknown as FieldErrors,
       };
     }
   };
