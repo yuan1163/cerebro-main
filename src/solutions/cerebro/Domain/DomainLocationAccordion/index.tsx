@@ -7,7 +7,8 @@ import { t } from '@core/utils/translate';
 
 // types
 
-import { Location } from '@core/api/types';
+// import { Location } from '@core/api/types';
+import { Locations } from '@core/api/types';
 import { Solutions } from '@core/ui/types';
 
 // utils
@@ -40,7 +41,7 @@ import ArrowRightLineIcon from '@assets/icons/line/arrow-right.svg?component';
 
 type Props = {
   className?: string;
-  items?: Location[];
+  items?: Locations;
   locationId?: number;
   locationType?: string;
 } & React.HTMLAttributes<HTMLElement>;
@@ -58,7 +59,7 @@ export const DomainLocationAccordion: React.FC<Props> = ({ items, locationId, lo
       <Accordion disableGutters color='surface-02' rounded size='sm' title={pluralName} variant='solid'>
         {items?.map((item, index) => {
           const devices = useDevices({ locationId: item.locationId });
-          const count = useCamerasTotal ? devices.getCameras(item) : devices.getTotal(item);
+          // const count = useCamerasTotal ? devices.getCameras(item) : devices.getTotal(item);
           const label = useCamerasTotal
             ? t('asset.cameras.label', 'Cameras', 'Cameras')
             : t('asset.devices.label', 'Devices', 'Devices');
@@ -66,16 +67,22 @@ export const DomainLocationAccordion: React.FC<Props> = ({ items, locationId, lo
             <Grid key={index} alignItems='center' className={styles['accordion-item']} justifyContent='between'>
               <Grid gap={3}>
                 <Icon color='secondary' variant='soft' size='lg'>
-                  {getLocationType(item.type).icon}
+                  {getLocationType(5).icon}
+                  {/* {getLocationType(item.type).icon} */}
                 </Icon>
                 <Grid direction='column'>
                   <Text variant='sm' weight='medium'>
                     {item.name}
                   </Text>
+
                   <Text color='typography-secondary' variant='sm'>
-                    {`${count ?? t('general.notAvailable.label', 'n/a', 'Not Available.')}
+                    {`0
                     ${label}`}
                   </Text>
+                  {/* <Text color='typography-secondary' variant='sm'>
+                    {`${count ?? t('general.notAvailable.label', 'n/a', 'Not Available.')}
+                    ${label}`}
+                  </Text> */}
                 </Grid>
               </Grid>
               <IconButton

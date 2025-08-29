@@ -24,7 +24,7 @@ export enum EventType {
   SensorError = 'sensorerror',
   BatteryLow = 'batteryLow',
   Offline = 'offline',
-  OilFilling = 'oilFilling'
+  OilFilling = 'oilFilling',
 }
 export type Events = Event[];
 export type Event = {
@@ -173,6 +173,7 @@ export type ResponsibleTanksParameters = {
 // api/Locations
 export type Locations = {
   locationId: number;
+  bandType: 1 | null;
   creationDate: string;
   parentId: number | null;
   type: number | null;

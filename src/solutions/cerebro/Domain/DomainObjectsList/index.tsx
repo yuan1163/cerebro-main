@@ -7,7 +7,7 @@ import { t } from '@core/utils/translate';
 import { generateAddress } from '@core/utils/generateAddress';
 
 // storages
-
+import { useLocations as useLevelnowLocations } from '@core/storages/controllers/levelnow/locations';
 import { useLocations } from '@core/storages/controllers/locations';
 import { useUI } from '@core/storages/ui';
 
@@ -61,6 +61,14 @@ type User = {
 
 export const DomainObjectsList: React.FC<Props> = ({ className }) => {
   const locations = useLocations();
+  console.log('locations', locations);
+
+  const levelnowLocations = useLevelnowLocations();
+  console.log('levelnowLocations', levelnowLocations);
+  const placesToShow = levelnowLocations?.filter((loc) => loc.bandType === 1) || [];
+  const countriesToShow =
+    levelnowLocations?.filter((loc) => placesToShow.map((p) => p.parentId).includes(loc.locationId)) || [];
+
   const ui = useUI();
   const navigate = useNavigate();
   const [users, setUsers] = useState<User[]>([]);
@@ -100,7 +108,8 @@ export const DomainObjectsList: React.FC<Props> = ({ className }) => {
     <>
       <Scrollbar>
         <AccordionGroup gap>
-          {locations.getRegions().map((region) => (
+          {/* {locations.getRegions().map((region) => ( */}
+          {countriesToShow.map((region) => (
             <Accordion
               key={`region.${region.locationId}`}
               customTitle={
@@ -114,78 +123,88 @@ export const DomainObjectsList: React.FC<Props> = ({ className }) => {
               rounded
               variant='solid'
             >
-              {locations.getFormations(region).map((item) => {
-                // LOCATIONS
+              {/* {locations.getFormations(region).map((item) => { */}
+              {placesToShow
+                .filter((place) => place.parentId === region.locationId)
+                .map((item) => {
+                  // LOCATIONS
 
-                const areas = locations.getAreas(item);
-                const buildings = locations.getBuildings(item);
+                  // const areas = locations.getAreas(item);
+                  // const buildings = locations.getBuildings(item);
+                  const areas =
+                    levelnowLocations?.filter(
+                      (loc) => loc.parentId === item.locationId && (loc.type === 4 || loc.type === 5),
+                    ) || [];
+                  const buildings =
+                    levelnowLocations?.filter((loc) => areas.map((a) => a.locationId).includes(loc.parentId!)) || [];
 
-                // SOLUTIONS
+                  // SOLUTIONS
 
-                const solutionMappings = [
-                  {
-                    mask: SolutionsMasks.pinpoint,
-                    title: t('solutions.pinPoint.label', 'IvedaRTLS', 'Title of IvedaRTLS Solution.'),
-                  },
-                  {
-                    mask: SolutionsMasks.utilus,
-                    title: t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.'),
-                  },
-                  { mask: SolutionsMasks.ai, title: t('solutions.ai.label', 'AI', 'Title of AI Solution.') },
-                  {
-                    mask: SolutionsMasks.connect,
-                    title: t('solutions.connects.label', 'Connects', 'Title of Connects Solution.'),
-                  },
-                  { mask: SolutionsMasks.ems, title: t('solutions.ems.label', 'EMS', 'Title of EMS Solution.') },
-                ];
+                  const solutionMappings = [
+                    {
+                      mask: SolutionsMasks.pinpoint,
+                      title: t('solutions.pinPoint.label', 'IvedaRTLS', 'Title of IvedaRTLS Solution.'),
+                    },
+                    {
+                      mask: SolutionsMasks.utilus,
+                      title: t('solutions.utilus.label', 'Utilus', 'Title of Utilus Solution.'),
+                    },
+                    { mask: SolutionsMasks.ai, title: t('solutions.ai.label', 'AI', 'Title of AI Solution.') },
+                    {
+                      mask: SolutionsMasks.connect,
+                      title: t('solutions.connects.label', 'Connects', 'Title of Connects Solution.'),
+                    },
+                    { mask: SolutionsMasks.ems, title: t('solutions.ems.label', 'EMS', 'Title of EMS Solution.') },
+                  ];
 
-                return (
-                  <React.Fragment key={`formation.${item.locationId}`}>
-                    <AccordionDomain
-                      title={item.name || t('general.notAvailable.label', 'n/a', 'Not Available.')}
-                      subtitle={generateAddress(item)}
-                      onArrowClick={() => {
-                        if (ui.activeSolution == Solutions.ems) ui.setEmsCurrentLocation(item.locationId);
-                        ui.setCurrentFormation(item.locationId);
-                        navigate(`dashboard/${item.locationId}`);
-                      }}
-                      // map={<Map onSelect={pointClick} points={[item]} zoom={19} />}
-                      features={
-                        <>
-                          {solutionMappings.map(
-                            ({ mask, title }, index) =>
-                              (item.branchSolutions & mask) !== 0 && (
-                                <Chip key={index} className='mr-2'>
-                                  {title}
-                                </Chip>
-                              ),
-                          )}
-                        </>
-                      }
-                    />
-                    {(areas.length > 0 || buildings.length > 0) && (
-                      <CardContent disablePaddingTop>
-                        <Grid container direction='column' spacing={2}>
-                          {areas.length > 0 && (
-                            <Grid item>
-                              <DomainLocationAccordion items={areas} locationType='areas' />
-                            </Grid>
-                          )}
-                          {!areas.length && (
-                            <Grid item>
-                              <DomainLocationAccordion
-                                items={buildings}
-                                locationId={item.locationId}
-                                locationType='buildings'
-                              />
-                            </Grid>
-                          )}
-                        </Grid>
-                      </CardContent>
-                    )}
-                  </React.Fragment>
-                );
-              })}
+                  return (
+                    <React.Fragment key={`formation.${item.locationId}`}>
+                      <AccordionDomain
+                        title={item.name || t('general.notAvailable.label', 'n/a', 'Not Available.')}
+                        subtitle={generateAddress(item)}
+                        onArrowClick={() => {
+                          if (ui.activeSolution == Solutions.ems) ui.setEmsCurrentLocation(item.locationId);
+                          ui.setCurrentFormation(item.locationId);
+                          navigate(`dashboard/${item.locationId}`);
+                        }}
+                        // map={<Map onSelect={pointClick} points={[item]} zoom={19} />}
+                        // features={
+                        //   <>
+                        //     {solutionMappings.map(
+                        //       ({ mask, title }, index) =>
+
+                        //         (item.branchSolutions & mask) !== 0 && (
+                        //           <Chip key={index} className='mr-2'>
+                        //             {title}
+                        //           </Chip>
+                        //         ),
+                        //     )}
+                        //   </>
+                        // }
+                      />
+                      {(areas.length > 0 || buildings.length > 0) && (
+                        <CardContent disablePaddingTop>
+                          <Grid container direction='column' spacing={2}>
+                            {areas.length > 0 && (
+                              <Grid item>
+                                <DomainLocationAccordion items={areas} locationType='areas' />
+                              </Grid>
+                            )}
+                            {!areas.length && (
+                              <Grid item>
+                                <DomainLocationAccordion
+                                  items={buildings}
+                                  locationId={item.locationId}
+                                  locationType='buildings'
+                                />
+                              </Grid>
+                            )}
+                          </Grid>
+                        </CardContent>
+                      )}
+                    </React.Fragment>
+                  );
+                })}
             </Accordion>
           ))}
         </AccordionGroup>
