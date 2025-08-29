@@ -18,7 +18,7 @@ export default function AddButton({ label, onClick, disabled }: AddButtonProps) 
       className='px-3 text-white tracking-32 disabled:bg-primary-600'
     >
       <AddIcon className='mr-2' />
-      Add {label}
+      {label}
     </Button>
   );
 }

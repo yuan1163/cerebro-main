@@ -66,16 +66,16 @@
         "notes": "Need assistance with assigning a customer to the tank?"
       }
     },
-    "customer": {
-      "label": {
-        "translation": "Customer",
-        "notes": "Tank customer title."
-      }
-    },
     "unassignCustomer": {
       "label": {
         "translation": "Delete Customer",
         "notes": "Unassign Customer"
+      }
+    },
+    "customer": {
+      "label": {
+        "translation": "Customer",
+        "notes": "Tank customer title."
       }
     },
     "oils": {
@@ -94,56 +94,6 @@
       "label": {
         "translation": "Location",
         "notes": "Tank location title."
-      }
-    },
-    "assignCustomerDescription": {
-      "label": {
-        "translation": "Assign a customer to this tank",
-        "notes": "Select and assign a customer to the tank."
-      }
-    },
-    "createCustomer": {
-      "title": {
-        "label": {
-          "translation": "How to create a \" Customer \" ?",
-          "notes": "Instructions on creating a new customer."
-        }
-      },
-      "steps": {
-        "click": {
-          "label": {
-            "translation": "(1) Click the button \" Customers \" on the left navigation bar",
-            "notes": "Step 1 to create a new customer."
-          }
-        },
-        "fill": {
-          "label": {
-            "translation": "(2) Fill in customer information",
-            "notes": "Step 2 to create a new customer."
-          }
-        }
-      }
-    },
-    "clearCustomer": {
-      "title": {
-        "label": {
-          "translation": "Clear \" Customer \" for tank",
-          "notes": "Instructions on clearing the customer assignment."
-        }
-      },
-      "steps": {
-        "click": {
-          "label": {
-            "translation": "Click \" - Do not Assign \" directly",
-            "notes": "Step 1 to clear the customer assignment."
-          }
-        }
-      }
-    },
-    "doNotAssign": {
-      "label": {
-        "translation": "Do not Assign ( Clear Customer of the Tank )",
-        "notes": "Option to clear the customer assignment."
       }
     }
   },
@@ -169,7 +119,7 @@
     "mobileNo": {
       "label": {
         "translation": "Mobile No.",
-        "notes": "Mobile number field."
+        "notes": "Customer Mobile No."
       }
     },
     "postcode": {
@@ -200,6 +150,62 @@
       "label": {
         "translation": "GW Sales Rep",
         "notes": "Sales representative field."
+      }
+    },
+    "addCustomer": {
+      "label": {
+        "translation": "Add Customer",
+        "notes": "Add Customer"
+      }
+    },
+    "profile": {
+      "label": {
+        "translation": "Customer Profile",
+        "notes": "Customer Profile"
+      }
+    },
+    "basicInfo": {
+      "label": {
+        "translation": "Basic information",
+        "notes": "Customer Basic information"
+      }
+    },
+    "owner": {
+      "label": {
+        "translation": "Customer Owner",
+        "notes": "Customer Owner"
+      }
+    },
+    "filter": {
+      "countryAll": {
+        "label": {
+          "translation": "Country: All",
+          "notes": "All countries"
+        }
+      },
+      "stateAll": {
+        "label": {
+          "translation": "State: All",
+          "notes": "All states"
+        }
+      },
+      "cityAll": {
+        "label": {
+          "translation": "City: All",
+          "notes": "All cities"
+        }
+      }
+    },
+    "basicInformation": {
+      "label": {
+        "translation": "Basic information",
+        "notes": "Basic information"
+      }
+    },
+    "tanks": {
+      "label": {
+        "translation": "Tanks",
+        "notes": "Tanks"
       }
     }
   },
@@ -340,12 +346,6 @@
         "notes": "Predefined Viewer role name"
       }
     },
-    "addGroupButton": {
-      "label": {
-        "translation": "Add group",
-        "notes": "Add Group Button."
-      }
-    },
     "admins": {
       "label": {
         "translation": "Admins",
@@ -356,6 +356,18 @@
       "label": {
         "translation": "Contacts",
         "notes": "User contacts."
+      }
+    },
+    "addGroupButton": {
+      "label": {
+        "translation": "Add group",
+        "notes": "Add Group Button."
+      }
+    },
+    "notifications": {
+      "label": {
+        "translation": "Notifications",
+        "notes": "Notifications."
       }
     },
     "addUser": {
@@ -380,12 +392,6 @@
       "label": {
         "translation": "Admin",
         "notes": "The main controller & manager."
-      }
-    },
-    "notifications": {
-      "label": {
-        "translation": "Notifications",
-        "notes": "Notifications."
       }
     },
     "editUser": {
@@ -648,12 +654,6 @@
         "notes": "Specific area that is defined for a particular purpose."
       }
     },
-    "partLocation": {
-      "label": {
-        "translation": "Part Location",
-        "notes": "Location associated with the legal part."
-      }
-    },
     "area": {
       "label": {
         "translation": "Area",
@@ -700,6 +700,12 @@
       "label": {
         "translation": "Production Lines",
         "notes": "Production lines."
+      }
+    },
+    "partLocation": {
+      "label": {
+        "translation": "Part Location",
+        "notes": "Location associated with the legal part."
       }
     },
     "buildingsWarning": {
@@ -1124,18 +1130,6 @@
         "notes": "Adjusting class configuration."
       }
     },
-    "viewAsset": {
-      "label": {
-        "translation": "View asset",
-        "notes": "Navigate to the asset."
-      }
-    },
-    "removeFromClass": {
-      "label": {
-        "translation": "Remove from class",
-        "notes": "Remove asset from class."
-      }
-    },
     "groups": {
       "label": {
         "translation": "Groups",
@@ -1166,6 +1160,18 @@
         "notes": "Remove Device Button."
       }
     },
+    "viewAsset": {
+      "label": {
+        "translation": "View asset",
+        "notes": "Navigate to the asset."
+      }
+    },
+    "removeFromClass": {
+      "label": {
+        "translation": "Remove from class",
+        "notes": "Remove asset from class."
+      }
+    },
     "group": {
       "label": {
         "translation": "Group",
@@ -1178,12 +1184,6 @@
         "notes": "Group name for assets."
       }
     },
-    "isOnline": {
-      "label": {
-        "translation": "Online",
-        "notes": "Device is online."
-      }
-    },
     "circuit": {
       "label": {
         "translation": "Circuit",
@@ -1194,6 +1194,12 @@
       "label": {
         "translation": "SPS",
         "notes": "SPS."
+      }
+    },
+    "isOnline": {
+      "label": {
+        "translation": "Online",
+        "notes": "Device is online."
       }
     },
     "assignee": {
@@ -1612,6 +1618,12 @@
         "notes": "Overview title."
       }
     },
+    "ISOReport": {
+      "label": {
+        "translation": "ISO Report",
+        "notes": "ISO report Title."
+      }
+    },
     "events": {
       "label": {
         "translation": "Events",
@@ -1626,12 +1638,6 @@
       "label": {
         "translation": "Customers",
         "notes": "Customers page title."
-      }
-    },
-    "ISOReport": {
-      "label": {
-        "translation": "ISO Report",
-        "notes": "ISO report Title."
       }
     },
     "tanks": {
@@ -1665,12 +1671,6 @@
       }
     },
     "solutionsPage": {
-      "learnMoreButton": {
-        "label": {
-          "translation": "Learn more",
-          "notes": "Label for learn more button."
-        }
-      },
       "label": {
         "translation": "Solutions",
         "notes": "Title of Solutions Page."
@@ -1693,6 +1693,12 @@
             "translation": "Heatmaps",
             "notes": "Heatmaps option label."
           }
+        }
+      },
+      "learnMoreButton": {
+        "label": {
+          "translation": "Learn more",
+          "notes": "Label for learn more button."
         }
       },
       "ems": {
@@ -1840,12 +1846,6 @@
         "notes": "Title of Cerebro App."
       }
     },
-    "metering": {
-      "label": {
-        "translation": "Metering",
-        "notes": "Metering."
-      }
-    },
     "polesTemperature": {
       "label": {
         "translation": "Poles Temperature",
@@ -1862,6 +1862,12 @@
       "label": {
         "translation": "Poles Humidity",
         "notes": "Poles humidity."
+      }
+    },
+    "metering": {
+      "label": {
+        "translation": "Metering",
+        "notes": "Metering."
       }
     },
     "poles": {
@@ -1894,6 +1900,12 @@
         "notes": "Carbon output rate."
       }
     },
+    "configureScreens": {
+      "label": {
+        "translation": "Configure Screens",
+        "notes": "Screen configuration."
+      }
+    },
     "editCarbonEmissionFactor": {
       "label": {
         "translation": "Edit carbon emission factor",
@@ -1912,10 +1924,10 @@
         "notes": "Enter factor."
       }
     },
-    "configureScreens": {
+    "levelnow": {
       "label": {
-        "translation": "Configure Screens",
-        "notes": "Screen configuration."
+        "translation": "LevelNOW",
+        "notes": "Title of LevelNOW Solution."
       }
     },
     "solutionsSelector": {
@@ -1960,28 +1972,16 @@
         "notes": "Issue description."
       }
     },
-    "priorityRequired": {
+    "allAssignee": {
       "label": {
-        "translation": "Priority is required.",
-        "notes": "Priority field is mandatory."
-      }
-    },
-    "createIssue": {
-      "label": {
-        "translation": "Create Issue",
-        "notes": "Create issue title."
+        "translation": "All assignee",
+        "notes": "All assignees for the issue."
       }
     },
     "allPriority": {
       "label": {
         "translation": "All priority",
         "notes": "Priority of issue."
-      }
-    },
-    "allAssignee": {
-      "label": {
-        "translation": "All assignee",
-        "notes": "All assignees for the issue."
       }
     },
     "allStatus": {
@@ -2000,6 +2000,18 @@
       "label": {
         "translation": "There are no issues here yet",
         "notes": "No issues caption."
+      }
+    },
+    "priorityRequired": {
+      "label": {
+        "translation": "Priority is required.",
+        "notes": "Priority field is mandatory."
+      }
+    },
+    "createIssue": {
+      "label": {
+        "translation": "Create Issue",
+        "notes": "Create issue title."
       }
     },
     "issueCreated": {
@@ -2064,6 +2076,12 @@
         "notes": "Clear button."
       }
     },
+    "saveButton": {
+      "label": {
+        "translation": "Save",
+        "notes": "Save button."
+      }
+    },
     "phone": {
       "label": {
         "translation": "Phone",
@@ -2074,6 +2092,24 @@
       "label": {
         "translation": "Email",
         "notes": "Email."
+      }
+    },
+    "all": {
+      "label": {
+        "translation": "All",
+        "notes": "Entirety of something."
+      }
+    },
+    "addButton": {
+      "customer": {
+        "label": {
+          "translation": "Add Customer",
+          "notes": "Add a new customer"
+        }
+      },
+      "label": {
+        "translation": "Add",
+        "notes": "Add button."
       }
     },
     "help": {
@@ -2088,22 +2124,10 @@
         "notes": "Collections of hardware tools and gadgets."
       }
     },
-    "all": {
-      "label": {
-        "translation": "All",
-        "notes": "Entirety of something."
-      }
-    },
     "menu": {
       "label": {
         "translation": "Menu",
         "notes": "User Interface Navigation Menu."
-      }
-    },
-    "description": {
-      "label": {
-        "translation": "Description",
-        "notes": "Outline of a particular item or subject."
       }
     },
     "edit": {
@@ -2112,16 +2136,10 @@
         "notes": "Function that allows to make changes to content or data."
       }
     },
-    "saveButton": {
+    "description": {
       "label": {
-        "translation": "Save",
-        "notes": "Save button."
-      }
-    },
-    "createButton": {
-      "label": {
-        "translation": "Create",
-        "notes": "Create button."
+        "translation": "Description",
+        "notes": "Outline of a particular item or subject."
       }
     },
     "backButton": {
@@ -2136,6 +2154,12 @@
         "notes": "Next button or link."
       }
     },
+    "createButton": {
+      "label": {
+        "translation": "Create",
+        "notes": "Create button."
+      }
+    },
     "view": {
       "label": {
         "translation": "View",
@@ -2148,28 +2172,16 @@
         "notes": "Updated successfully"
       }
     },
-    "access": {
+    "selectDate": {
       "label": {
-        "translation": "Access",
-        "notes": "Ability to enter."
+        "translation": "Select Date",
+        "notes": "Choose a specific day using the date picker."
       }
     },
-    "scheme": {
+    "applyButton": {
       "label": {
-        "translation": "Scheme",
-        "notes": "A structured representation of a particular concept."
-      }
-    },
-    "list": {
-      "label": {
-        "translation": "List",
-        "notes": "Collection of items."
-      }
-    },
-    "seeMore": {
-      "label": {
-        "translation": "See More",
-        "notes": "See more button or link."
+        "translation": "Apply",
+        "notes": "Confirms the selected choices."
       }
     },
     "processing": {
@@ -2196,28 +2208,28 @@
         "notes": "View all notifications."
       }
     },
-    "selectDate": {
+    "access": {
       "label": {
-        "translation": "Select Date",
-        "notes": "Choose a specific day using the date picker."
+        "translation": "Access",
+        "notes": "Ability to enter."
       }
     },
-    "applyButton": {
+    "scheme": {
       "label": {
-        "translation": "Apply",
-        "notes": "Confirms the selected choices."
+        "translation": "Scheme",
+        "notes": "A structured representation of a particular concept."
       }
     },
-    "details": {
+    "list": {
       "label": {
-        "translation": "More Details",
-        "notes": "Button or link that allows to access additional information."
+        "translation": "List",
+        "notes": "Collection of items."
       }
     },
-    "copyLink": {
+    "seeMore": {
       "label": {
-        "translation": "Copy link",
-        "notes": "Action that allows to duplicate a web link or URL."
+        "translation": "See More",
+        "notes": "See more button or link."
       }
     },
     "matchPassword": {
@@ -2244,6 +2256,24 @@
         "notes": "Endpoint of something."
       }
     },
+    "details": {
+      "label": {
+        "translation": "More Details",
+        "notes": "Button or link that allows to access additional information."
+      }
+    },
+    "copyLink": {
+      "label": {
+        "translation": "Copy link",
+        "notes": "Action that allows to duplicate a web link or URL."
+      }
+    },
+    "removeButton": {
+      "label": {
+        "translation": "Remove",
+        "notes": "Remove button."
+      }
+    },
     "changePassword": {
       "label": {
         "translation": "Change Password",
@@ -2254,24 +2284,6 @@
       "label": {
         "translation": "Submit",
         "notes": "Submit button."
-      }
-    },
-    "removeButton": {
-      "label": {
-        "translation": "Remove",
-        "notes": "Remove button."
-      }
-    },
-    "addButton": {
-      "label": {
-        "translation": "Add",
-        "notes": "Add button."
-      }
-    },
-    "expandView": {
-      "label": {
-        "translation": "Expand view",
-        "notes": "Expand view button."
       }
     },
     "accessDeniedCaption": {
@@ -2298,10 +2310,34 @@
         "notes": "Take me home button or link."
       }
     },
+    "expandView": {
+      "label": {
+        "translation": "Expand view",
+        "notes": "Expand view button."
+      }
+    },
     "isLoading": {
       "label": {
         "translation": "Loading...",
         "notes": "Absence of information."
+      }
+    },
+    "filters": {
+      "label": {
+        "translation": "Filters",
+        "notes": "Various options hat users can apply to refine the displayed content."
+      }
+    },
+    "noData": {
+      "label": {
+        "translation": "No Data",
+        "notes": "Absence of information."
+      }
+    },
+    "selectLanguage": {
+      "label": {
+        "translation": "Select Language",
+        "notes": "Choose a language from the list."
       }
     },
     "upload": {
@@ -2328,24 +2364,6 @@
         "notes": "Exploration of a specific item."
       }
     },
-    "filters": {
-      "label": {
-        "translation": "Filters",
-        "notes": "Various options hat users can apply to refine the displayed content."
-      }
-    },
-    "selectLanguage": {
-      "label": {
-        "translation": "Select Language",
-        "notes": "Choose a language from the list."
-      }
-    },
-    "noData": {
-      "label": {
-        "translation": "No Data",
-        "notes": "Absence of information."
-      }
-    },
     "collapse": {
       "label": {
         "translation": "Collapse",
@@ -2364,16 +2382,16 @@
         "notes": "Preposition indicating belonging."
       }
     },
-    "information": {
-      "label": {
-        "translation": "Information",
-        "notes": "Data about a particular subject."
-      }
-    },
     "closePopover": {
       "label": {
         "translation": "Close popover",
         "notes": "Close popover."
+      }
+    },
+    "information": {
+      "label": {
+        "translation": "Information",
+        "notes": "Data about a particular subject."
       }
     },
     "logo": {
@@ -2394,18 +2412,6 @@
         "notes": "Select location from the list."
       }
     },
-    "imageFileChangeButton": {
-      "label": {
-        "translation": "Change",
-        "notes": "Change button."
-      }
-    },
-    "changeButton": {
-      "label": {
-        "translation": "Change",
-        "notes": "Change button."
-      }
-    },
     "goToButton": {
       "label": {
         "translation": "Go to",
@@ -2416,6 +2422,24 @@
       "label": {
         "translation": "Upload photo",
         "notes": "Action to transfer an image to an application."
+      }
+    },
+    "imageFileChangeButton": {
+      "label": {
+        "translation": "Change",
+        "notes": "Change button."
+      }
+    },
+    "selectGroupFromList": {
+      "label": {
+        "translation": "Select User Groups",
+        "notes": "Select User Groups."
+      }
+    },
+    "changeButton": {
+      "label": {
+        "translation": "Change",
+        "notes": "Change button."
       }
     },
     "grid": {
@@ -2512,356 +2536,6 @@
       "label": {
         "translation": "Go to next page",
         "notes": "Go to next page button."
-      }
-    }
-  },
-  "ems": {
-    "energy_analysis": {
-      "label": {
-        "translation": "Energy Analysis",
-        "notes": "Energy Analysis title."
-      }
-    },
-    "kWhLastMonth": {
-      "label": {
-        "translation": "kWh last month",
-        "notes": "Month Node Consumption label"
-      }
-    },
-    "cO2eLastMonth": {
-      "label": {
-        "translation": "cO2e last month",
-        "notes": "Month Node Consumption label"
-      }
-    },
-    "riskLevel": {
-      "label": {
-        "translation": "Risk level",
-        "notes": "Severity level."
-      }
-    },
-    "consumption": {
-      "label": {
-        "translation": "Consumption",
-        "notes": "The amount of energy or resources used over a given period."
-      },
-      "month": {
-        "translation": "Consumption",
-        "notes": "Month Node Consumption Data left"
-      }
-    },
-    "settingCircuitSummary": {
-      "label": {
-        "translation": "Setting circuit summary",
-        "notes": "Setting circuit summary title"
-      }
-    },
-    "CO2e": {
-      "label": {
-        "translation": "CO2e",
-        "notes": "Emission of CO2 in kilogram."
-      }
-    },
-    "maximumPower": {
-      "label": {
-        "translation": "Maximum Power",
-        "notes": "Maximum Power title"
-      }
-    },
-    "historicalTrend": {
-      "label": {
-        "translation": "Historical Trend",
-        "notes": "Historical Trend title"
-      }
-    },
-    "currentKW": {
-      "label": {
-        "translation": "Current kW",
-        "notes": "The present kilowatt measurement."
-      }
-    },
-    "kW": {
-      "label": {
-        "translation": "kW",
-        "notes": "A unit measuring power output or consumption."
-      }
-    },
-    "kWh": {
-      "label": {
-        "translation": "kWh",
-        "notes": "A unit measuring energy consumption over time."
-      }
-    },
-    "demand": {
-      "label": {
-        "translation": "Demand",
-        "notes": "The amount of power required or requested at a given time."
-      }
-    },
-    "ConsumptionTrend": {
-      "legend": {
-        "translation": "Consumption(kWh)",
-        "notes": "Consumption Trend legend label"
-      }
-    },
-    "consumptionTrend": {
-      "label": {
-        "translation": "Consumption Trend",
-        "notes": "Consumption Trend title"
-      }
-    },
-    "factory": {
-      "label": {
-        "translation": "Factory",
-        "notes": "Factory"
-      }
-    },
-    "selectBuilding": {
-      "label": {
-        "translation": "Select building",
-        "notes": "Select building placeholder"
-      }
-    },
-    "selectFloor": {
-      "label": {
-        "translation": "Select floor",
-        "notes": "Select floor placeholder"
-      }
-    },
-    "selectZone": {
-      "label": {
-        "translation": "Select zone",
-        "notes": "Select zone placeholder"
-      }
-    },
-    "productionLine": {
-      "label": {
-        "translation": "Production line",
-        "notes": "Production line placeholder"
-      }
-    },
-    "selectLocations": {
-      "label": {
-        "translation": "Select Locations",
-        "notes": "Select locations."
-      }
-    },
-    "kWhThisMonth": {
-      "label": {
-        "translation": "kWh this month",
-        "notes": "Month Node Consumption label"
-      }
-    },
-    "cO2eThisMonth": {
-      "label": {
-        "translation": "cO2e this month",
-        "notes": "Month Node Consumption label"
-      }
-    },
-    "thisMonth": {
-      "translation": "This Month",
-      "notes": "Month Node Consumption Data left"
-    },
-    "lastMonth": {
-      "translation": "Last Month",
-      "notes": "Month Node Consumption Data left"
-    },
-    "uploadConfirmTitle": {
-      "label": {
-        "translation": "uploadConfirmTitle",
-        "notes": "are you sure you want to proceed?"
-      }
-    },
-    "confirmUploadMessage": {
-      "label": {
-        "translation": "confirmUploadMessage",
-        "notes": "Data Override Warning: Uploading this Excel sheet will replace the existing data. This may result in the removal of current records and addition of new data. This action cannot be undone."
-      }
-    },
-    "Cancel": {
-      "label": {
-        "translation": "Cancel",
-        "notes": "Cancel action."
-      }
-    },
-    "Proceed": {
-      "label": {
-        "translation": "Proceed",
-        "notes": "Confirm action."
-      }
-    },
-    "process": {
-      "label": {
-        "translation": "Process",
-        "notes": "Process."
-      }
-    },
-    "addProcess": {
-      "label": {
-        "translation": "Add Process",
-        "notes": "Add Process."
-      }
-    },
-    "emission": {
-      "label": {
-        "translation": "Emission",
-        "notes": "Emission."
-      }
-    },
-    "noProcess": {
-      "label": {
-        "translation": "No Process",
-        "notes": "Process missing."
-      }
-    },
-    "unitRequire": {
-      "label": {
-        "translation": "Unit must be require",
-        "notes": "Unit is mandatory."
-      }
-    },
-    "processRequire": {
-      "label": {
-        "translation": "Process must be require",
-        "notes": "Process is mandatory."
-      }
-    },
-    "deviceId": {
-      "label": {
-        "translation": "Device Id must be require",
-        "notes": "Device Id is mandatory."
-      }
-    },
-    "unitsNumberBetterThanZero": {
-      "label": {
-        "translation": "Units number must be better than 0",
-        "notes": "Unit number > 0."
-      }
-    },
-    "enterAmount": {
-      "label": {
-        "translation": "You must enter amount",
-        "notes": "Amount required."
-      }
-    },
-    "mustEnterEndDate": {
-      "label": {
-        "translation": "You must enter end date",
-        "notes": "End date required."
-      }
-    },
-    "addHistory": {
-      "label": {
-        "translation": "Add History",
-        "notes": "Add History."
-      }
-    },
-    "noUnit": {
-      "label": {
-        "translation": "No Unit",
-        "notes": "Unit missing."
-      }
-    },
-    "unit": {
-      "label": {
-        "translation": "Unit",
-        "notes": "Unit."
-      }
-    },
-    "selectUnit": {
-      "label": {
-        "translation": "Select unit",
-        "notes": "Select a unit."
-      }
-    },
-    "selectProcess": {
-      "label": {
-        "translation": "Select process",
-        "notes": "Select a process."
-      }
-    },
-    "circuitLoop": {
-      "label": {
-        "translation": "Circuit loop",
-        "notes": "Circuit loop."
-      }
-    },
-    "selectCircuit": {
-      "label": {
-        "translation": "Select circuit",
-        "notes": "Select circuit."
-      }
-    },
-    "addProductButton": {
-      "label": {
-        "translation": "Add Product",
-        "notes": "AddProduct"
-      }
-    },
-    "productName": {
-      "label": {
-        "translation": "Product Name",
-        "notes": "Product Name"
-      }
-    },
-    "consumptionAmount": {
-      "label": {
-        "translation": "consumption/amount",
-        "notes": "consumption/amount"
-      }
-    },
-    "emissionAmount": {
-      "label": {
-        "translation": "Emission/amount",
-        "notes": "Emission/amount"
-      }
-    },
-    "enterProcessName": {
-      "label": {
-        "translation": "Enter process name",
-        "notes": "Enter process name."
-      }
-    },
-    "contractCapacity": {
-      "label": {
-        "translation": "Contract capacity",
-        "notes": "Contract capacity."
-      }
-    },
-    "editProcess": {
-      "label": {
-        "translation": "Edit Process",
-        "notes": "Edit Process."
-      }
-    },
-    "deleteProcess": {
-      "label": {
-        "translation": "Delete Process",
-        "notes": "Delete Process."
-      }
-    },
-    "editHistory": {
-      "label": {
-        "translation": "Edit History",
-        "notes": "Edit History."
-      }
-    },
-    "deleteHistory": {
-      "label": {
-        "translation": "Delete History",
-        "notes": "Delete History."
-      }
-    },
-    "valueInput": {
-      "label": {
-        "translation": "Value",
-        "notes": "Value field."
-      }
-    },
-    "contractCapacityEdit": {
-      "label": {
-        "translation": "Edit contract capacity",
-        "notes": "Edit contract capacity."
       }
     }
   },
@@ -3139,6 +2813,356 @@
       }
     }
   },
+  "ems": {
+    "energy_analysis": {
+      "label": {
+        "translation": "Energy Analysis",
+        "notes": "Energy Analysis title."
+      }
+    },
+    "riskLevel": {
+      "label": {
+        "translation": "Risk level",
+        "notes": "Severity level."
+      }
+    },
+    "kWhLastMonth": {
+      "label": {
+        "translation": "kWh last month",
+        "notes": "Month Node Consumption label"
+      }
+    },
+    "cO2eLastMonth": {
+      "label": {
+        "translation": "cO2e last month",
+        "notes": "Month Node Consumption label"
+      }
+    },
+    "consumption": {
+      "label": {
+        "translation": "Consumption",
+        "notes": "The amount of energy or resources used over a given period."
+      },
+      "month": {
+        "translation": "Consumption",
+        "notes": "Month Node Consumption Data left"
+      }
+    },
+    "settingCircuitSummary": {
+      "label": {
+        "translation": "Setting circuit summary",
+        "notes": "Setting circuit summary title"
+      }
+    },
+    "CO2e": {
+      "label": {
+        "translation": "CO2e",
+        "notes": "Emission of CO2 in kilogram."
+      }
+    },
+    "historicalTrend": {
+      "label": {
+        "translation": "Historical Trend",
+        "notes": "Historical Trend title"
+      }
+    },
+    "maximumPower": {
+      "label": {
+        "translation": "Maximum Power",
+        "notes": "Maximum Power title"
+      }
+    },
+    "currentKW": {
+      "label": {
+        "translation": "Current kW",
+        "notes": "The present kilowatt measurement."
+      }
+    },
+    "kW": {
+      "label": {
+        "translation": "kW",
+        "notes": "A unit measuring power output or consumption."
+      }
+    },
+    "kWh": {
+      "label": {
+        "translation": "kWh",
+        "notes": "A unit measuring energy consumption over time."
+      }
+    },
+    "demand": {
+      "label": {
+        "translation": "Demand",
+        "notes": "The amount of power required or requested at a given time."
+      }
+    },
+    "factory": {
+      "label": {
+        "translation": "Factory",
+        "notes": "Factory"
+      }
+    },
+    "selectBuilding": {
+      "label": {
+        "translation": "Select building",
+        "notes": "Select building placeholder"
+      }
+    },
+    "selectFloor": {
+      "label": {
+        "translation": "Select floor",
+        "notes": "Select floor placeholder"
+      }
+    },
+    "selectZone": {
+      "label": {
+        "translation": "Select zone",
+        "notes": "Select zone placeholder"
+      }
+    },
+    "productionLine": {
+      "label": {
+        "translation": "Production line",
+        "notes": "Production line placeholder"
+      }
+    },
+    "ConsumptionTrend": {
+      "legend": {
+        "translation": "Consumption(kWh)",
+        "notes": "Consumption Trend legend label"
+      }
+    },
+    "consumptionTrend": {
+      "label": {
+        "translation": "Consumption Trend",
+        "notes": "Consumption Trend title"
+      }
+    },
+    "selectLocations": {
+      "label": {
+        "translation": "Select Locations",
+        "notes": "Select locations."
+      }
+    },
+    "kWhThisMonth": {
+      "label": {
+        "translation": "kWh this month",
+        "notes": "Month Node Consumption label"
+      }
+    },
+    "cO2eThisMonth": {
+      "label": {
+        "translation": "cO2e this month",
+        "notes": "Month Node Consumption label"
+      }
+    },
+    "thisMonth": {
+      "translation": "This Month",
+      "notes": "Month Node Consumption Data left"
+    },
+    "lastMonth": {
+      "translation": "Last Month",
+      "notes": "Month Node Consumption Data left"
+    },
+    "uploadConfirmTitle": {
+      "label": {
+        "translation": "uploadConfirmTitle",
+        "notes": "are you sure you want to proceed?"
+      }
+    },
+    "confirmUploadMessage": {
+      "label": {
+        "translation": "confirmUploadMessage",
+        "notes": "Data Override Warning: Uploading this Excel sheet will replace the existing data. This may result in the removal of current records and addition of new data. This action cannot be undone."
+      }
+    },
+    "Cancel": {
+      "label": {
+        "translation": "Cancel",
+        "notes": "Cancel action."
+      }
+    },
+    "Proceed": {
+      "label": {
+        "translation": "Proceed",
+        "notes": "Confirm action."
+      }
+    },
+    "process": {
+      "label": {
+        "translation": "Process",
+        "notes": "Process."
+      }
+    },
+    "addProcess": {
+      "label": {
+        "translation": "Add Process",
+        "notes": "Add Process."
+      }
+    },
+    "emission": {
+      "label": {
+        "translation": "Emission",
+        "notes": "Emission."
+      }
+    },
+    "noProcess": {
+      "label": {
+        "translation": "No Process",
+        "notes": "Process missing."
+      }
+    },
+    "unitRequire": {
+      "label": {
+        "translation": "Unit must be require",
+        "notes": "Unit is mandatory."
+      }
+    },
+    "processRequire": {
+      "label": {
+        "translation": "Process must be require",
+        "notes": "Process is mandatory."
+      }
+    },
+    "deviceId": {
+      "label": {
+        "translation": "Device Id must be require",
+        "notes": "Device Id is mandatory."
+      }
+    },
+    "unitsNumberBetterThanZero": {
+      "label": {
+        "translation": "Units number must be better than 0",
+        "notes": "Unit number > 0."
+      }
+    },
+    "enterAmount": {
+      "label": {
+        "translation": "You must enter amount",
+        "notes": "Amount required."
+      }
+    },
+    "mustEnterEndDate": {
+      "label": {
+        "translation": "You must enter end date",
+        "notes": "End date required."
+      }
+    },
+    "addHistory": {
+      "label": {
+        "translation": "Add History",
+        "notes": "Add History."
+      }
+    },
+    "noUnit": {
+      "label": {
+        "translation": "No Unit",
+        "notes": "Unit missing."
+      }
+    },
+    "unit": {
+      "label": {
+        "translation": "Unit",
+        "notes": "Unit."
+      }
+    },
+    "selectUnit": {
+      "label": {
+        "translation": "Select unit",
+        "notes": "Select a unit."
+      }
+    },
+    "selectProcess": {
+      "label": {
+        "translation": "Select process",
+        "notes": "Select a process."
+      }
+    },
+    "circuitLoop": {
+      "label": {
+        "translation": "Circuit loop",
+        "notes": "Circuit loop."
+      }
+    },
+    "selectCircuit": {
+      "label": {
+        "translation": "Select circuit",
+        "notes": "Select circuit."
+      }
+    },
+    "addProductButton": {
+      "label": {
+        "translation": "Add Product",
+        "notes": "AddProduct"
+      }
+    },
+    "productName": {
+      "label": {
+        "translation": "Product Name",
+        "notes": "Product Name"
+      }
+    },
+    "consumptionAmount": {
+      "label": {
+        "translation": "consumption/amount",
+        "notes": "consumption/amount"
+      }
+    },
+    "emissionAmount": {
+      "label": {
+        "translation": "Emission/amount",
+        "notes": "Emission/amount"
+      }
+    },
+    "enterProcessName": {
+      "label": {
+        "translation": "Enter process name",
+        "notes": "Enter process name."
+      }
+    },
+    "contractCapacity": {
+      "label": {
+        "translation": "Contract capacity",
+        "notes": "Contract capacity."
+      }
+    },
+    "editHistory": {
+      "label": {
+        "translation": "Edit History",
+        "notes": "Edit History."
+      }
+    },
+    "deleteHistory": {
+      "label": {
+        "translation": "Delete History",
+        "notes": "Delete History."
+      }
+    },
+    "editProcess": {
+      "label": {
+        "translation": "Edit Process",
+        "notes": "Edit Process."
+      }
+    },
+    "deleteProcess": {
+      "label": {
+        "translation": "Delete Process",
+        "notes": "Delete Process."
+      }
+    },
+    "valueInput": {
+      "label": {
+        "translation": "Value",
+        "notes": "Value field."
+      }
+    },
+    "contractCapacityEdit": {
+      "label": {
+        "translation": "Edit contract capacity",
+        "notes": "Edit contract capacity."
+      }
+    }
+  },
   "label": {
     "locations": {
       "translation": "Locations",
@@ -3189,32 +3213,6 @@
     "resolved": {
       "translation": "Resolved",
       "notes": "Alert resolved prefix text"
-    }
-  },
-  "company": {
-    "fromCerebroApp": {
-      "label": {
-        "translation": "from Cerebro App?",
-        "notes": "Refers to the source app."
-      }
-    },
-    "copyright": {
-      "label": {
-        "translation": "Powered by Iveda. Copyright",
-        "notes": "Organization that holds the copyright."
-      }
-    },
-    "name": {
-      "label": {
-        "translation": "Iveda Solutions",
-        "notes": "Refers to the official title of an organization."
-      }
-    },
-    "company": {
-      "label": {
-        "translation": "Company",
-        "notes": "Organization."
-      }
     }
   },
   "login": {
@@ -3298,6 +3296,32 @@
       "label": {
         "translation": "Forgot password",
         "notes": "Title of Forgot password Page."
+      }
+    }
+  },
+  "company": {
+    "fromCerebroApp": {
+      "label": {
+        "translation": "from Cerebro App?",
+        "notes": "Refers to the source app."
+      }
+    },
+    "copyright": {
+      "label": {
+        "translation": "Powered by Iveda. Copyright",
+        "notes": "Organization that holds the copyright."
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Iveda Solutions",
+        "notes": "Refers to the official title of an organization."
+      }
+    },
+    "company": {
+      "label": {
+        "translation": "Company",
+        "notes": "Organization."
       }
     }
   },
@@ -3461,19 +3485,19 @@
       }
     }
   },
-  "data": {
-    "selectDate": {
-      "label": {
-        "translation": "Select Date",
-        "notes": "Choose a specific day using the date picker."
-      }
-    }
-  },
   "solutionsd": {
     "environmentCaption": {
       "label": {
         "translation": "Explore environmental data",
         "notes": "Environment metrics caption."
+      }
+    }
+  },
+  "data": {
+    "selectDate": {
+      "label": {
+        "translation": "Select Date",
+        "notes": "Choose a specific day using the date picker."
       }
     }
   },

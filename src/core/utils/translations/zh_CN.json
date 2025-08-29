@@ -167,7 +167,54 @@
     },
     "gwsalesrep": {
       "label": {
-        "translation": "GW销售代表"
+        "translation": "销售代表"
+      }
+    },
+    "basicInfo": {
+      "label": {
+        "translation": "基本信息"
+      }
+    },
+    "profile": {
+      "label": {
+        "translation": "客户资料"
+      }
+    },
+    "addCustomer": {
+      "label": {
+        "translation": "新增客户"
+      }
+    },
+    "owner": {
+      "label": {
+        "translation": "客户负责人"
+      }
+    },
+    "gwcustomerservicerep": {
+      "label": {
+        "translation": "客户服务代表"
+      }
+    },
+    "tanks": {
+      "label": {
+        "translation": "油桶"
+      }
+    },
+    "filter": {
+      "countryAll": {
+        "label": {
+          "translation": "国家：全部"
+        }
+      },
+      "stateAll": {
+        "label": {
+          "translation": "州/省：全部"
+        }
+      },
+      "cityAll": {
+        "label": {
+          "translation": "城市：全部"
+        }
       }
     }
   },
@@ -1506,7 +1553,7 @@
     },
     "eventsTitle": {
       "label": {
-        "translation": "Events"
+        "translation": "事件"
       }
     },
     "eventsHistory": {
@@ -1777,6 +1824,11 @@
     "addButton": {
       "label": {
         "translation": "添加"
+      },
+      "customer": {
+        "label": {
+          "translation": "新增客户"
+        }
       }
     },
     "copyLink": {
@@ -2378,20 +2430,20 @@
     },
     "customers": {
       "label": {
-        "translation": "Customers"
+        "translation": "客户"
       }
     },
     "events": {
       "label": {
-        "translation": "Events"
+        "translation": "事件"
       },
       "clearFilters": {
-        "translation": "Clear"
+        "translation": "清除"
       }
     },
     "tanks": {
       "label": {
-        "translation": "Tanks"
+        "translation": "油桶"
       }
     },
     "commandCenter": {

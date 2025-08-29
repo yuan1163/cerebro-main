@@ -15,6 +15,9 @@ import { cn } from '@core/utils/classnames';
 import Select from '@core/ui/levelnow/Select';
 import { Link } from '@core/ui/components/Link';
 
+// utils
+import { t } from '@core/utils/translate';
+
 type CustomerListProps = {
   customers: ClientData[];
   selectedClientId: number | null;
@@ -55,14 +58,26 @@ export default function CustomerList({
   const cities = getUnique(customers, 'clientCity');
 
   const countryOptions = [
-    { label: 'Country: All', value: 'all' },
+    {
+      label: t('customer.filter.countryAll.label', 'Country: All', 'All countries'),
+      value: 'all',
+    },
     ...countries.map((country) => ({ label: country, value: country })),
   ];
   const stateOptions = [
-    { label: 'State: All', value: 'all' },
+    {
+      label: t('customer.filter.stateAll.label', 'State: All', 'All states'),
+      value: 'all',
+    },
     ...states.map((state) => ({ label: state, value: state })),
   ];
-  const cityOptions = [{ label: 'City: All', value: 'all' }, ...cities.map((city) => ({ label: city, value: city }))];
+  const cityOptions = [
+    {
+      label: t('customer.filter.cityAll.label', 'City: All', 'All cities'),
+      value: 'all',
+    },
+    ...cities.map((city) => ({ label: city, value: city })),
+  ];
 
   const handleCountrySelect = (selectedCountry: string) => {
     setCountryFilter(selectedCountry === 'all' ? null : selectedCountry);
@@ -124,9 +139,13 @@ export default function CustomerList({
         <div className='flex flex-col w-full'>
           <div className='flex items-center justify-between'>
             <div className='flex items-center gap-3'>
-              <span>All</span>
+              <span>{t('general.all.label', 'All', 'Entirety of something.')}</span>
               <NumberBadge variant='gray' number={filteredCustomers.length} />
-              <AddButton label='Customer' onClick={onToggleAdd} disabled={isAdd} />
+              <AddButton
+                label={t('general.addButton.customer.label', 'Add Customer', 'Add a new customer')}
+                onClick={onToggleAdd}
+                disabled={isAdd}
+              />
             </div>
             <FilterButton
               onClick={() => setOpenFilter(!openFilter)}

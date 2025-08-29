@@ -6,6 +6,7 @@ import { getCustomerTankFields } from '@constants/fieldSettings';
 import NumberBadge from '@core/ui/levelnow/NumberBadge';
 import { getDeviceLevelIcon } from '@core/utils/levelnow/deviceStatus';
 import { Link } from '@core/ui/components/Link';
+import { t } from '@core/utils/translate';
 
 type Item = {
   label: string;
@@ -89,7 +90,9 @@ export default function CustomerTanks({ clientTank }: CustomerTanks) {
   return (
     <section className='flex flex-col gap-5'>
       <div className='flex items-center gap-2'>
-        <h2 className='font-medium text-md tracking-32 text-neutral-900'>Tanks</h2>
+        <h2 className='font-medium text-md tracking-32 text-neutral-900'>
+          {t('customer.tanks.label', 'Tanks', 'Tanks')}
+        </h2>
         <NumberBadge number={clientTank.length} variant='gray' />
       </div>
       <div className='h-4 pt-2 pb-5 rounded-lg bg-neutral-50 grow'>

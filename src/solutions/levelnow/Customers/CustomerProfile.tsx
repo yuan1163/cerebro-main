@@ -13,6 +13,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import Map, { Point } from '@core/ui/levelnow/Map';
 import { getCustomerGWFields, getCustomerProfileFields } from '@constants/fieldSettings';
+import { t } from '@core/utils/translate';
 
 // Define the form schema using zod
 const customerSchema = z.object({
@@ -134,7 +135,13 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
 
   if (!isEdit) {
     return (
-      <DataBlock title='Customer Profile' data={basicFields} columns={1} labelWidth='191px' className='h-full'>
+      <DataBlock
+        title={t('customer.profile.label', 'Customer Profile', 'Customer Profile')}
+        data={basicFields}
+        columns={1}
+        labelWidth='191px'
+        className='h-full'
+      >
         <div className='w-full h-40'>
           <Map points={[]} zoom={1} className='rounded-[10px]' />
         </div>
@@ -154,7 +161,9 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
   return (
     <form onSubmit={handleSubmit(handleSubmitForm)} className='flex flex-col gap-8'>
       <div className='flex flex-col gap-5'>
-        <h1 className='font-medium text-md text-secondary-900'>Basic information</h1>
+        <h1 className='font-medium text-md text-secondary-900'>
+          {t('customer.basicInfo.label', 'Basic information', 'Basic information')}
+        </h1>
         <div className='grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-5 gap-y-3'>
           {basicFields.map((field) => (
             <div key={field.name} className='flex flex-col gap-1'>
@@ -172,7 +181,9 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
         </div>
       </div>
       <div className='flex flex-col gap-5'>
-        <h1 className='font-medium text-md text-secondary-900'>Owner</h1>
+        <h1 className='font-medium text-md text-secondary-900'>
+          {t('customer.owner.label', 'Customer Owner', 'Customer Owner')}
+        </h1>
         <div className='grid grid-cols-2 gap-x-5'>
           {ownerFields.map((field) => (
             <div key={field.name} className='flex flex-col gap-1'>
@@ -197,10 +208,10 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
           onClick={handleToggleEdit}
           disabled={updateClientMutation.isLoading}
         >
-          Cancel
+          {t('general.cancelButton.label', 'Cancel', 'Cancel')}
         </Button>
         <Button type='submit' variant='solid' fullWidth loading={updateClientMutation.isLoading}>
-          Save changes
+          {t('general.saveButton.label', 'Save changes', 'Save changes')}
         </Button>
       </div>
     </form>

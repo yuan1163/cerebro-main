@@ -208,7 +208,11 @@ function DataRowMenu({ user, remove, handleClick, handleClose }: DataRowProps) {
         // )}`}
         open={openDialog}
         // title={t('user.deleteAccount.label', 'Delete account', 'Delete user account.')}
-        title={`Confirm to delete this account［ ${user.firstName} ${user.lastName} ］?`}
+        title={t(
+          `user.confirmDeleteAccount.label［ ${user.firstName} ${user.lastName} ］?`,
+          `Confirm to delete this account［ ${user.firstName} ${user.lastName} ］?`,
+          'Delete user account.',
+        )}
         close={() => {
           setDialogOpen(false);
         }}

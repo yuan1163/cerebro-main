@@ -169,6 +169,53 @@
       "label": {
         "translation": "Đại diện bán hàng toàn cầu"
       }
+    },
+    "basicInfo": {
+      "label": {
+        "translation": "Thông tin cơ bản"
+      }
+    },
+    "profile": {
+      "label": {
+        "translation": "Hồ sơ khách hàng"
+      }
+    },
+    "addCustomer": {
+      "label": {
+        "translation": "Thêm khách hàng"
+      }
+    },
+    "owner": {
+      "label": {
+        "translation": "Chủ sở hữu khách hàng"
+      }
+    },
+    "gwcustomerservicerep": {
+      "label": {
+        "translation": "Đại diện dịch vụ khách hàng GW"
+      }
+    },
+    "tanks": {
+      "label": {
+        "translation": "Bể chứa"
+      }
+    },
+    "filter": {
+      "countryAll": {
+        "label": {
+          "translation": "Quốc gia: Tất cả"
+        }
+      },
+      "stateAll": {
+        "label": {
+          "translation": "Bang/Tỉnh: Tất cả"
+        }
+      },
+      "cityAll": {
+        "label": {
+          "translation": "Thành phố: Tất cả"
+        }
+      }
     }
   },
   "user": {
@@ -1775,6 +1822,11 @@
     "addButton": {
       "label": {
         "translation": "Thêm vào"
+      },
+      "customer": {
+        "label": {
+          "translation": "Thêm khách hàng"
+        }
       }
     },
     "copyLink": {
@@ -2376,7 +2428,7 @@
     },
     "customers": {
       "label": {
-        "translation": "Khách hàngs"
+        "translation": "Khách hàng"
       }
     },
     "events": {
@@ -2384,7 +2436,7 @@
         "translation": "Sự kiện"
       },
       "clearFilters": {
-        "translation": "Clear"
+        "translation": "Xóa"
       }
     },
     "tanks": {

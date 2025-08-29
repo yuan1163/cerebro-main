@@ -17,6 +17,7 @@ import { useAddClient } from '@core/storages/controllers/levelnow/client';
 // flags
 import { countryFlagIcons } from '@core/utils/levelnow/countryFlagIcons';
 import CountryCodeSelect from './CountryCodeSelect';
+import { t } from '@core/utils/translate';
 
 type CustomerInfoProps = {
   customer: ClientData | null;
@@ -124,14 +125,20 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
       <div className='flex grow'>
         <Card className='flex flex-col flex-1'>
           <CardHeader borderBottom className=' min-h-[69px]'>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>Add Customer</h1>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+              {t('customer.addCustomer.label', 'Add Customer', 'Add Customer')}
+            </h1>
           </CardHeader>
           <CardContent className='p-5 grow'>
             <div className='flex flex-col h-full gap-5'>
-              <h1 className='font-medium text-md tracking-32 text-secondary-900'>Customer Profile</h1>
+              <h1 className='font-medium text-md tracking-32 text-secondary-900'>
+                {t('customer.profile.label', 'Customer Profile', 'Customer Profile')}
+              </h1>
               <form onSubmit={handleSubmit(onAddClient)} className='flex flex-col gap-8 grow'>
                 <div className='flex flex-col gap-5'>
-                  <h1 className='font-medium text-md text-secondary-900'>Basic information</h1>
+                  <h1 className='font-medium text-md text-secondary-900'>
+                    {t('customer.basicInfo.label', 'Basic information', 'Customer Basic information')}
+                  </h1>
                   <div className='grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-5 gap-y-3'>
                     {/* Left Side */}
                     {basicFieldsLeftSide.map((field) => (
@@ -150,7 +157,9 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
                     ))}
                     {/* Phone Select */}
                     <div className='flex flex-col gap-1'>
-                      <label className='text-xs font-medium tracking-wide text-secondary-500'>Mobile No.</label>
+                      <label className='text-xs font-medium tracking-wide text-secondary-500'>
+                        {t('customer.mobileNo.label', 'Mobile No.', 'Customer Mobile No.')}
+                      </label>
                       <CountryCodeSelect options={countryFlagIcons} setValue={setValue} watch={watch} />
                     </div>
                     {/* Right Side */}
@@ -171,7 +180,9 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
                   </div>
                 </div>
                 <div className='flex flex-col gap-5'>
-                  <h1 className='font-medium text-md text-secondary-900'>Owner</h1>
+                  <h1 className='font-medium text-md text-secondary-900'>
+                    {t('customer.owner.label', 'Customer Owner', 'Customer Owner')}
+                  </h1>
                   <div className='grid grid-cols-2 gap-x-5'>
                     {ownerFields.map((field) => (
                       <div key={field.name} className='flex flex-col gap-1'>
@@ -198,10 +209,10 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
                     onClick={handleCancelEdit}
                     disabled={addClient.isLoading}
                   >
-                    Cancel
+                    {t('general.cancelButton.label', 'Cancel', 'Cancel')}
                   </Button>
                   <Button type='submit' variant='solid' fullWidth loading={addClient.isLoading}>
-                    Save changes
+                    {t('general.saveButton.label', 'Cancel', 'Cancel')}
                   </Button>
                 </div>
               </form>
