@@ -59,7 +59,7 @@ export default observer(function ResponsibleTanks() {
       <CardHeader className='flex items-center justify-between'>
         <Text component='h3' variant='lg' weight='medium' className='flex items-center tracking-32 text-[#000]'>
           {t(
-            'solutions.domainOverview.responsibleTanks',
+            'domain.responsibletanks.label',
             'Responsible Tanks',
             "A list of tanks responsible for the domain's operations.",
           )}

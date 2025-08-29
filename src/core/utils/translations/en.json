@@ -1,4 +1,208 @@
 {
+  "tank": {
+    "tankNo": {
+      "label": {
+        "translation": "Tank No.",
+        "notes": "Tank number field."
+      }
+    },
+    "description": {
+      "label": {
+        "translation": "Description",
+        "notes": "Tank description field."
+      }
+    },
+    "oilType": {
+      "label": {
+        "translation": "Oil Type",
+        "notes": "Tank oil type field."
+      }
+    },
+    "oilViscosity": {
+      "label": {
+        "translation": "Oil Viscosity",
+        "notes": "Tank oil viscosity field."
+      }
+    },
+    "lastOilFillingDate": {
+      "label": {
+        "translation": "Last Oil Filling Date",
+        "notes": "Tank last oil filling date field."
+      }
+    },
+    "deviceReference": {
+      "label": {
+        "translation": "Device Reference",
+        "notes": "Tank device reference field."
+      }
+    },
+    "batteryLevel": {
+      "label": {
+        "translation": "Battery Level",
+        "notes": "Tank battery level field."
+      }
+    },
+    "gatewayVersion": {
+      "label": {
+        "translation": "Gateway Version",
+        "notes": "Tank gateway version field."
+      }
+    },
+    "gatewayStatus": {
+      "label": {
+        "translation": "Gateway Status",
+        "notes": "Tank gateway status field."
+      }
+    },
+    "chooseCustomer": {
+      "label": {
+        "translation": "Choose a Customer",
+        "notes": "Select and assign a customer to the tank."
+      }
+    },
+    "help": {
+      "label": {
+        "translation": "Help?",
+        "notes": "Need assistance with assigning a customer to the tank?"
+      }
+    },
+    "customer": {
+      "label": {
+        "translation": "Customer",
+        "notes": "Tank customer title."
+      }
+    },
+    "unassignCustomer": {
+      "label": {
+        "translation": "Delete Customer",
+        "notes": "Unassign Customer"
+      }
+    },
+    "oils": {
+      "title": {
+        "translation": "Oils",
+        "notes": "Title for the oils section"
+      }
+    },
+    "level": {
+      "label": {
+        "translation": "Leveling",
+        "notes": "Tank level title."
+      }
+    },
+    "location": {
+      "label": {
+        "translation": "Location",
+        "notes": "Tank location title."
+      }
+    },
+    "assignCustomerDescription": {
+      "label": {
+        "translation": "Assign a customer to this tank",
+        "notes": "Select and assign a customer to the tank."
+      }
+    },
+    "createCustomer": {
+      "title": {
+        "label": {
+          "translation": "How to create a \" Customer \" ?",
+          "notes": "Instructions on creating a new customer."
+        }
+      },
+      "steps": {
+        "click": {
+          "label": {
+            "translation": "(1) Click the button \" Customers \" on the left navigation bar",
+            "notes": "Step 1 to create a new customer."
+          }
+        },
+        "fill": {
+          "label": {
+            "translation": "(2) Fill in customer information",
+            "notes": "Step 2 to create a new customer."
+          }
+        }
+      }
+    },
+    "clearCustomer": {
+      "title": {
+        "label": {
+          "translation": "Clear \" Customer \" for tank",
+          "notes": "Instructions on clearing the customer assignment."
+        }
+      },
+      "steps": {
+        "click": {
+          "label": {
+            "translation": "Click \" - Do not Assign \" directly",
+            "notes": "Step 1 to clear the customer assignment."
+          }
+        }
+      }
+    },
+    "doNotAssign": {
+      "label": {
+        "translation": "Do not Assign ( Clear Customer of the Tank )",
+        "notes": "Option to clear the customer assignment."
+      }
+    }
+  },
+  "customer": {
+    "customerName": {
+      "label": {
+        "translation": "Customer Name",
+        "notes": "Customer name field."
+      }
+    },
+    "customerNo": {
+      "label": {
+        "translation": "Customer No.",
+        "notes": "Customer number field."
+      }
+    },
+    "primaryContact": {
+      "label": {
+        "translation": "Primary Contact",
+        "notes": "Primary contact field."
+      }
+    },
+    "mobileNo": {
+      "label": {
+        "translation": "Mobile No.",
+        "notes": "Mobile number field."
+      }
+    },
+    "postcode": {
+      "label": {
+        "translation": "Post code",
+        "notes": "Post code field."
+      }
+    },
+    "country": {
+      "label": {
+        "translation": "Country",
+        "notes": "Country field."
+      }
+    },
+    "state": {
+      "label": {
+        "translation": "State",
+        "notes": "State field."
+      }
+    },
+    "city": {
+      "label": {
+        "translation": "City",
+        "notes": "City field."
+      }
+    },
+    "gwsalesrep": {
+      "label": {
+        "translation": "GW Sales Rep",
+        "notes": "Sales representative field."
+      }
+    }
+  },
   "user": {
     "firstNameInput": {
       "label": {
@@ -84,12 +288,6 @@
         "notes": "new password"
       }
     },
-    "newPasswordInputPlaceholder": {
-      "label": {
-        "translation": "New password",
-        "notes": "New password"
-      }
-    },
     "confirmPasswordInput": {
       "label": {
         "translation": "confirm password",
@@ -148,10 +346,16 @@
         "notes": "Add Group Button."
       }
     },
-    "notifications": {
+    "admins": {
       "label": {
-        "translation": "Notifications",
-        "notes": "Notifications."
+        "translation": "Admins",
+        "notes": "Key overseers with elevated privileges."
+      }
+    },
+    "contacts": {
+      "label": {
+        "translation": "Contacts",
+        "notes": "User contacts."
       }
     },
     "addUser": {
@@ -178,6 +382,12 @@
         "notes": "The main controller & manager."
       }
     },
+    "notifications": {
+      "label": {
+        "translation": "Notifications",
+        "notes": "Notifications."
+      }
+    },
     "editUser": {
       "label": {
         "translation": "Edit User",
@@ -188,18 +398,6 @@
       "label": {
         "translation": "Delete account",
         "notes": "Delete user account."
-      }
-    },
-    "admins": {
-      "label": {
-        "translation": "Admins",
-        "notes": "Key overseers with elevated privileges."
-      }
-    },
-    "contacts": {
-      "label": {
-        "translation": "Contacts",
-        "notes": "User contacts."
       }
     },
     "group": {
@@ -364,6 +562,12 @@
         "notes": "current password"
       }
     },
+    "newPasswordInputPlaceholder": {
+      "label": {
+        "translation": "New password",
+        "notes": "New password"
+      }
+    },
     "userTitle": {
       "label": {
         "translation": "User",
@@ -444,6 +648,12 @@
         "notes": "Specific area that is defined for a particular purpose."
       }
     },
+    "partLocation": {
+      "label": {
+        "translation": "Part Location",
+        "notes": "Location associated with the legal part."
+      }
+    },
     "area": {
       "label": {
         "translation": "Area",
@@ -490,12 +700,6 @@
       "label": {
         "translation": "Production Lines",
         "notes": "Production lines."
-      }
-    },
-    "partLocation": {
-      "label": {
-        "translation": "Part Location",
-        "notes": "Location associated with the legal part."
       }
     },
     "buildingsWarning": {
@@ -920,6 +1124,18 @@
         "notes": "Adjusting class configuration."
       }
     },
+    "viewAsset": {
+      "label": {
+        "translation": "View asset",
+        "notes": "Navigate to the asset."
+      }
+    },
+    "removeFromClass": {
+      "label": {
+        "translation": "Remove from class",
+        "notes": "Remove asset from class."
+      }
+    },
     "groups": {
       "label": {
         "translation": "Groups",
@@ -950,18 +1166,6 @@
         "notes": "Remove Device Button."
       }
     },
-    "viewAsset": {
-      "label": {
-        "translation": "View asset",
-        "notes": "Navigate to the asset."
-      }
-    },
-    "removeFromClass": {
-      "label": {
-        "translation": "Remove from class",
-        "notes": "Remove asset from class."
-      }
-    },
     "group": {
       "label": {
         "translation": "Group",
@@ -974,6 +1178,12 @@
         "notes": "Group name for assets."
       }
     },
+    "isOnline": {
+      "label": {
+        "translation": "Online",
+        "notes": "Device is online."
+      }
+    },
     "circuit": {
       "label": {
         "translation": "Circuit",
@@ -984,12 +1194,6 @@
       "label": {
         "translation": "SPS",
         "notes": "SPS."
-      }
-    },
-    "isOnline": {
-      "label": {
-        "translation": "Online",
-        "notes": "Device is online."
       }
     },
     "assignee": {
@@ -1113,6 +1317,186 @@
       }
     }
   },
+  "events": {
+    "none": {
+      "translation": "There are no events here yet.",
+      "notes": "Message displayed when there is no data."
+    },
+    "events": {
+      "label": {
+        "translation": "Events",
+        "notes": "Events title."
+      }
+    },
+    "totalEvents": {
+      "label": {
+        "translation": "Total events",
+        "notes": "Total number of events."
+      }
+    },
+    "total": {
+      "label": {
+        "translation": "Total",
+        "notes": "Total events."
+      }
+    },
+    "recentEvents": {
+      "label": {
+        "translation": "Recent events",
+        "notes": "Recent events."
+      }
+    },
+    "allMessages": {
+      "label": {
+        "translation": "All messages",
+        "notes": "All messages."
+      }
+    },
+    "alertMessage": {
+      "label": {
+        "translation": "Alert message",
+        "notes": "Alert message."
+      }
+    },
+    "eventInfo": {
+      "label": {
+        "translation": "Event Info",
+        "notes": "Event info."
+      }
+    },
+    "noEvents": {
+      "label": {
+        "translation": "No Events",
+        "notes": "No events."
+      }
+    },
+    "eventDetails": {
+      "label": {
+        "translation": "Event Details",
+        "notes": "In-depth information about the event."
+      }
+    },
+    "criticalEvent": {
+      "label": {
+        "translation": "Critical",
+        "notes": "Critical event."
+      }
+    },
+    "highEvent": {
+      "label": {
+        "translation": "High",
+        "notes": "High priority notification."
+      }
+    },
+    "mediumEvent": {
+      "label": {
+        "translation": "Medium",
+        "notes": "Medium priority notification."
+      }
+    },
+    "lowEvent": {
+      "label": {
+        "translation": "Low",
+        "notes": "Low priority notification."
+      }
+    },
+    "warning": {
+      "label": {
+        "translation": "Warning",
+        "notes": "Warning notification."
+      }
+    },
+    "normal": {
+      "label": {
+        "translation": "Normal",
+        "notes": "Normal notification."
+      }
+    },
+    "trivial": {
+      "label": {
+        "translation": "Trivial",
+        "notes": "Trivial notification."
+      }
+    },
+    "eventsTitle": {
+      "label": {
+        "translation": "Events",
+        "notes": "Issues title."
+      }
+    },
+    "error": {
+      "label": {
+        "translation": "Error",
+        "notes": "Error notification."
+      }
+    },
+    "success": {
+      "label": {
+        "translation": "Success",
+        "notes": "Success notification."
+      }
+    },
+    "eventsHistory": {
+      "label": {
+        "translation": "Events History",
+        "notes": "Events history."
+      }
+    },
+    "notificationDetails": {
+      "label": {
+        "translation": "Notification Details",
+        "notes": "Notification details title."
+      }
+    },
+    "stable": {
+      "label": {
+        "translation": "Stable",
+        "notes": "Stable."
+      }
+    },
+    "problem": {
+      "label": {
+        "translation": "Problem",
+        "notes": "Problem."
+      }
+    },
+    "unknown": {
+      "label": {
+        "translation": "Unknown",
+        "notes": "Unknown notification."
+      }
+    },
+    "default": {
+      "label": {
+        "translation": "Default",
+        "notes": "Default event."
+      }
+    },
+    "overheated": {
+      "label": {
+        "translation": "Overheated",
+        "notes": "Overheated Pole."
+      }
+    },
+    "checkOverheatedDevices": {
+      "label": {
+        "translation": "Check overheated devices",
+        "notes": "Check overheated devices."
+      }
+    },
+    "humid": {
+      "label": {
+        "translation": "Humid",
+        "notes": "Humid Pole."
+      }
+    },
+    "checkHumidDevices": {
+      "label": {
+        "translation": "Check humid devices",
+        "notes": "Check humid devices."
+      }
+    }
+  },
   "deviceTypes": {
     "Cameras": {
       "translation": "Cameras",
@@ -1192,12 +1576,6 @@
         "notes": "Mass Configuration title."
       }
     },
-    "tanks": {
-      "label": {
-        "translation": "Tanks",
-        "notes": "Tanks page title."
-      }
-    },
     "pinPoint": {
       "label": {
         "translation": "IvedaRTLS",
@@ -1234,10 +1612,32 @@
         "notes": "Overview title."
       }
     },
+    "events": {
+      "label": {
+        "translation": "Events",
+        "notes": "A list of events related to the solution."
+      },
+      "clearFilters": {
+        "translation": "Clear",
+        "notes": "Clear all active filters."
+      }
+    },
+    "customers": {
+      "label": {
+        "translation": "Customers",
+        "notes": "Customers page title."
+      }
+    },
     "ISOReport": {
       "label": {
         "translation": "ISO Report",
         "notes": "ISO report Title."
+      }
+    },
+    "tanks": {
+      "label": {
+        "translation": "Tanks",
+        "notes": "Tanks page title."
       }
     },
     "smartPoles": {
@@ -1258,16 +1658,6 @@
         "notes": "Back to Dashboard button or link."
       }
     },
-    "events": {
-      "label": {
-        "translation": "Events",
-        "notes": "A list of events related to the solution."
-      },
-      "clearFilters": {
-        "translation": "Clear",
-        "notes": "Clear all active filters."
-      }
-    },
     "system": {
       "label": {
         "translation": "System",
@@ -1275,6 +1665,12 @@
       }
     },
     "solutionsPage": {
+      "learnMoreButton": {
+        "label": {
+          "translation": "Learn more",
+          "notes": "Label for learn more button."
+        }
+      },
       "label": {
         "translation": "Solutions",
         "notes": "Title of Solutions Page."
@@ -1297,12 +1693,6 @@
             "translation": "Heatmaps",
             "notes": "Heatmaps option label."
           }
-        }
-      },
-      "learnMoreButton": {
-        "label": {
-          "translation": "Learn more",
-          "notes": "Label for learn more button."
         }
       },
       "ems": {
@@ -1450,6 +1840,12 @@
         "notes": "Title of Cerebro App."
       }
     },
+    "metering": {
+      "label": {
+        "translation": "Metering",
+        "notes": "Metering."
+      }
+    },
     "polesTemperature": {
       "label": {
         "translation": "Poles Temperature",
@@ -1466,12 +1862,6 @@
       "label": {
         "translation": "Poles Humidity",
         "notes": "Poles humidity."
-      }
-    },
-    "metering": {
-      "label": {
-        "translation": "Metering",
-        "notes": "Metering."
       }
     },
     "poles": {
@@ -1504,12 +1894,6 @@
         "notes": "Carbon output rate."
       }
     },
-    "configureScreens": {
-      "label": {
-        "translation": "Configure Screens",
-        "notes": "Screen configuration."
-      }
-    },
     "editCarbonEmissionFactor": {
       "label": {
         "translation": "Edit carbon emission factor",
@@ -1526,6 +1910,12 @@
       "label": {
         "translation": "Enter factor",
         "notes": "Enter factor."
+      }
+    },
+    "configureScreens": {
+      "label": {
+        "translation": "Configure Screens",
+        "notes": "Screen configuration."
       }
     },
     "solutionsSelector": {
@@ -1692,12 +2082,6 @@
         "notes": "Assistance or guidance."
       }
     },
-    "edit": {
-      "label": {
-        "translation": "Edit",
-        "notes": "Function that allows to make changes to content or data."
-      }
-    },
     "assetsTitle": {
       "label": {
         "translation": "Assets",
@@ -1722,10 +2106,22 @@
         "notes": "Outline of a particular item or subject."
       }
     },
+    "edit": {
+      "label": {
+        "translation": "Edit",
+        "notes": "Function that allows to make changes to content or data."
+      }
+    },
     "saveButton": {
       "label": {
         "translation": "Save",
         "notes": "Save button."
+      }
+    },
+    "createButton": {
+      "label": {
+        "translation": "Create",
+        "notes": "Create button."
       }
     },
     "backButton": {
@@ -1740,64 +2136,16 @@
         "notes": "Next button or link."
       }
     },
-    "createButton": {
-      "label": {
-        "translation": "Create",
-        "notes": "Create button."
-      }
-    },
-    "updateSuccessfully": {
-      "label": {
-        "translation": "Updated successfully",
-        "notes": "Updated successfully"
-      }
-    },
     "view": {
       "label": {
         "translation": "View",
         "notes": "Button or link that allows to access additional information."
       }
     },
-    "selectDate": {
+    "updateSuccessfully": {
       "label": {
-        "translation": "Select Date",
-        "notes": "Choose a specific day using the date picker."
-      }
-    },
-    "applyButton": {
-      "label": {
-        "translation": "Apply",
-        "notes": "Confirms the selected choices."
-      }
-    },
-    "processing": {
-      "label": {
-        "translation": "Processing...",
-        "notes": "Indicates an action is in progress."
-      }
-    },
-    "loadingNotifications": {
-      "label": {
-        "translation": "loadingNotifications",
-        "notes": "loadingNotifications"
-      }
-    },
-    "noNotifications": {
-      "label": {
-        "translation": "noNotifications",
-        "notes": "noNotifications"
-      }
-    },
-    "viewAll": {
-      "label": {
-        "translation": "View All",
-        "notes": "View all notifications."
-      }
-    },
-    "details": {
-      "label": {
-        "translation": "More Details",
-        "notes": "Button or link that allows to access additional information."
+        "translation": "Updated successfully",
+        "notes": "Updated successfully"
       }
     },
     "access": {
@@ -1824,6 +2172,54 @@
         "notes": "See more button or link."
       }
     },
+    "processing": {
+      "label": {
+        "translation": "Processing...",
+        "notes": "Indicates an action is in progress."
+      }
+    },
+    "loadingNotifications": {
+      "label": {
+        "translation": "loadingNotifications",
+        "notes": "loadingNotifications"
+      }
+    },
+    "noNotifications": {
+      "label": {
+        "translation": "noNotifications",
+        "notes": "noNotifications"
+      }
+    },
+    "viewAll": {
+      "label": {
+        "translation": "View All",
+        "notes": "View all notifications."
+      }
+    },
+    "selectDate": {
+      "label": {
+        "translation": "Select Date",
+        "notes": "Choose a specific day using the date picker."
+      }
+    },
+    "applyButton": {
+      "label": {
+        "translation": "Apply",
+        "notes": "Confirms the selected choices."
+      }
+    },
+    "details": {
+      "label": {
+        "translation": "More Details",
+        "notes": "Button or link that allows to access additional information."
+      }
+    },
+    "copyLink": {
+      "label": {
+        "translation": "Copy link",
+        "notes": "Action that allows to duplicate a web link or URL."
+      }
+    },
     "matchPassword": {
       "label": {
         "translation": "Passwords do not match.",
@@ -1848,10 +2244,16 @@
         "notes": "Endpoint of something."
       }
     },
-    "copyLink": {
+    "changePassword": {
       "label": {
-        "translation": "Copy link",
-        "notes": "Action that allows to duplicate a web link or URL."
+        "translation": "Change Password",
+        "notes": "Change Password button."
+      }
+    },
+    "submitButton": {
+      "label": {
+        "translation": "Submit",
+        "notes": "Submit button."
       }
     },
     "removeButton": {
@@ -1866,16 +2268,10 @@
         "notes": "Add button."
       }
     },
-    "changePassword": {
+    "expandView": {
       "label": {
-        "translation": "Change Password",
-        "notes": "Change Password button."
-      }
-    },
-    "submitButton": {
-      "label": {
-        "translation": "Submit",
-        "notes": "Submit button."
+        "translation": "Expand view",
+        "notes": "Expand view button."
       }
     },
     "accessDeniedCaption": {
@@ -1902,28 +2298,10 @@
         "notes": "Take me home button or link."
       }
     },
-    "expandView": {
-      "label": {
-        "translation": "Expand view",
-        "notes": "Expand view button."
-      }
-    },
     "isLoading": {
       "label": {
         "translation": "Loading...",
         "notes": "Absence of information."
-      }
-    },
-    "noData": {
-      "label": {
-        "translation": "No Data",
-        "notes": "Absence of information."
-      }
-    },
-    "selectLanguage": {
-      "label": {
-        "translation": "Select Language",
-        "notes": "Choose a language from the list."
       }
     },
     "upload": {
@@ -1950,6 +2328,24 @@
         "notes": "Exploration of a specific item."
       }
     },
+    "filters": {
+      "label": {
+        "translation": "Filters",
+        "notes": "Various options hat users can apply to refine the displayed content."
+      }
+    },
+    "selectLanguage": {
+      "label": {
+        "translation": "Select Language",
+        "notes": "Choose a language from the list."
+      }
+    },
+    "noData": {
+      "label": {
+        "translation": "No Data",
+        "notes": "Absence of information."
+      }
+    },
     "collapse": {
       "label": {
         "translation": "Collapse",
@@ -1968,16 +2364,16 @@
         "notes": "Preposition indicating belonging."
       }
     },
-    "closePopover": {
-      "label": {
-        "translation": "Close popover",
-        "notes": "Close popover."
-      }
-    },
     "information": {
       "label": {
         "translation": "Information",
         "notes": "Data about a particular subject."
+      }
+    },
+    "closePopover": {
+      "label": {
+        "translation": "Close popover",
+        "notes": "Close popover."
       }
     },
     "logo": {
@@ -1998,6 +2394,18 @@
         "notes": "Select location from the list."
       }
     },
+    "imageFileChangeButton": {
+      "label": {
+        "translation": "Change",
+        "notes": "Change button."
+      }
+    },
+    "changeButton": {
+      "label": {
+        "translation": "Change",
+        "notes": "Change button."
+      }
+    },
     "goToButton": {
       "label": {
         "translation": "Go to",
@@ -2008,24 +2416,6 @@
       "label": {
         "translation": "Upload photo",
         "notes": "Action to transfer an image to an application."
-      }
-    },
-    "imageFileChangeButton": {
-      "label": {
-        "translation": "Change",
-        "notes": "Change button."
-      }
-    },
-    "selectGroupFromList": {
-      "label": {
-        "translation": "Select User Groups",
-        "notes": "Select User Groups."
-      }
-    },
-    "changeButton": {
-      "label": {
-        "translation": "Change",
-        "notes": "Change button."
       }
     },
     "grid": {
@@ -2125,195 +2515,11 @@
       }
     }
   },
-  "events": {
-    "events": {
-      "label": {
-        "translation": "Events",
-        "notes": "Events title."
-      }
-    },
-    "totalEvents": {
-      "label": {
-        "translation": "Total events",
-        "notes": "Total number of events."
-      }
-    },
-    "total": {
-      "label": {
-        "translation": "Total",
-        "notes": "Total events."
-      }
-    },
-    "allMessages": {
-      "label": {
-        "translation": "All messages",
-        "notes": "All messages."
-      }
-    },
-    "alertMessage": {
-      "label": {
-        "translation": "Alert message",
-        "notes": "Alert message."
-      }
-    },
-    "recentEvents": {
-      "label": {
-        "translation": "Recent events",
-        "notes": "Recent events."
-      }
-    },
-    "eventInfo": {
-      "label": {
-        "translation": "Event Info",
-        "notes": "Event info."
-      }
-    },
-    "noEvents": {
-      "label": {
-        "translation": "No Events",
-        "notes": "No events."
-      }
-    },
-    "eventDetails": {
-      "label": {
-        "translation": "Event Details",
-        "notes": "In-depth information about the event."
-      }
-    },
-    "criticalEvent": {
-      "label": {
-        "translation": "Critical",
-        "notes": "Critical event."
-      }
-    },
-    "highEvent": {
-      "label": {
-        "translation": "High",
-        "notes": "High priority notification."
-      }
-    },
-    "mediumEvent": {
-      "label": {
-        "translation": "Medium",
-        "notes": "Medium priority notification."
-      }
-    },
-    "lowEvent": {
-      "label": {
-        "translation": "Low",
-        "notes": "Low priority notification."
-      }
-    },
-    "warning": {
-      "label": {
-        "translation": "Warning",
-        "notes": "Warning notification."
-      }
-    },
-    "normal": {
-      "label": {
-        "translation": "Normal",
-        "notes": "Normal notification."
-      }
-    },
-    "trivial": {
-      "label": {
-        "translation": "Trivial",
-        "notes": "Trivial notification."
-      }
-    },
-    "error": {
-      "label": {
-        "translation": "Error",
-        "notes": "Error notification."
-      }
-    },
-    "success": {
-      "label": {
-        "translation": "Success",
-        "notes": "Success notification."
-      }
-    },
-    "eventsHistory": {
-      "label": {
-        "translation": "Events History",
-        "notes": "Events history."
-      }
-    },
-    "notificationDetails": {
-      "label": {
-        "translation": "Notification Details",
-        "notes": "Notification details title."
-      }
-    },
-    "stable": {
-      "label": {
-        "translation": "Stable",
-        "notes": "Stable."
-      }
-    },
-    "problem": {
-      "label": {
-        "translation": "Problem",
-        "notes": "Problem."
-      }
-    },
-    "unknown": {
-      "label": {
-        "translation": "Unknown",
-        "notes": "Unknown notification."
-      }
-    },
-    "default": {
-      "label": {
-        "translation": "Default",
-        "notes": "Default event."
-      }
-    },
-    "overheated": {
-      "label": {
-        "translation": "Overheated",
-        "notes": "Overheated Pole."
-      }
-    },
-    "checkOverheatedDevices": {
-      "label": {
-        "translation": "Check overheated devices",
-        "notes": "Check overheated devices."
-      }
-    },
-    "humid": {
-      "label": {
-        "translation": "Humid",
-        "notes": "Humid Pole."
-      }
-    },
-    "checkHumidDevices": {
-      "label": {
-        "translation": "Check humid devices",
-        "notes": "Check humid devices."
-      }
-    }
-  },
-  "tanks": {
-    "tanks": {
-      "label": {
-        "translation": "Tanks",
-        "notes": "Tanks page title."
-      }
-    }
-  },
   "ems": {
     "energy_analysis": {
       "label": {
         "translation": "Energy Analysis",
         "notes": "Energy Analysis title."
-      }
-    },
-    "riskLevel": {
-      "label": {
-        "translation": "Risk level",
-        "notes": "Severity level."
       }
     },
     "kWhLastMonth": {
@@ -2326,6 +2532,12 @@
       "label": {
         "translation": "cO2e last month",
         "notes": "Month Node Consumption label"
+      }
+    },
+    "riskLevel": {
+      "label": {
+        "translation": "Risk level",
+        "notes": "Severity level."
       }
     },
     "consumption": {
@@ -2386,6 +2598,18 @@
         "notes": "The amount of power required or requested at a given time."
       }
     },
+    "ConsumptionTrend": {
+      "legend": {
+        "translation": "Consumption(kWh)",
+        "notes": "Consumption Trend legend label"
+      }
+    },
+    "consumptionTrend": {
+      "label": {
+        "translation": "Consumption Trend",
+        "notes": "Consumption Trend title"
+      }
+    },
     "factory": {
       "label": {
         "translation": "Factory",
@@ -2414,18 +2638,6 @@
       "label": {
         "translation": "Production line",
         "notes": "Production line placeholder"
-      }
-    },
-    "ConsumptionTrend": {
-      "legend": {
-        "translation": "Consumption(kWh)",
-        "notes": "Consumption Trend legend label"
-      }
-    },
-    "consumptionTrend": {
-      "label": {
-        "translation": "Consumption Trend",
-        "notes": "Consumption Trend title"
       }
     },
     "selectLocations": {
@@ -2690,16 +2902,16 @@
         "notes": "Choose a specific 3-days time interval."
       }
     },
-    "last3hours": {
-      "label": {
-        "translation": "Last 3 hours",
-        "notes": "Choose a specific 3-hours time interval."
-      }
-    },
     "last12hours": {
       "label": {
         "translation": "Last 12 hours",
         "notes": "Choose a specific 12-hours time interval."
+      }
+    },
+    "last3hours": {
+      "label": {
+        "translation": "Last 3 hours",
+        "notes": "Choose a specific 3-hours time interval."
       }
     },
     "month": {
@@ -2979,6 +3191,32 @@
       "notes": "Alert resolved prefix text"
     }
   },
+  "company": {
+    "fromCerebroApp": {
+      "label": {
+        "translation": "from Cerebro App?",
+        "notes": "Refers to the source app."
+      }
+    },
+    "copyright": {
+      "label": {
+        "translation": "Powered by Iveda. Copyright",
+        "notes": "Organization that holds the copyright."
+      }
+    },
+    "name": {
+      "label": {
+        "translation": "Iveda Solutions",
+        "notes": "Refers to the official title of an organization."
+      }
+    },
+    "company": {
+      "label": {
+        "translation": "Company",
+        "notes": "Organization."
+      }
+    }
+  },
   "login": {
     "signOutButton": {
       "label": {
@@ -3063,32 +3301,6 @@
       }
     }
   },
-  "company": {
-    "fromCerebroApp": {
-      "label": {
-        "translation": "from Cerebro App?",
-        "notes": "Refers to the source app."
-      }
-    },
-    "copyright": {
-      "label": {
-        "translation": "Powered by Iveda. Copyright",
-        "notes": "Organization that holds the copyright."
-      }
-    },
-    "name": {
-      "label": {
-        "translation": "Iveda Solutions",
-        "notes": "Refers to the official title of an organization."
-      }
-    },
-    "company": {
-      "label": {
-        "translation": "Company",
-        "notes": "Organization."
-      }
-    }
-  },
   "status": {
     "openStatus": {
       "label": {
@@ -3112,6 +3324,64 @@
       "label": {
         "translation": "Closed",
         "notes": "Closed status."
+      }
+    }
+  },
+  "errors": {
+    "tankNotFound": {
+      "translation": "Tank not found",
+      "notes": "Error message when tank ID is not provided."
+    }
+  },
+  "snapshot": {
+    "snapshot": {
+      "label": {
+        "translation": "Snapshot",
+        "notes": "Snapshot title."
+      }
+    },
+    "batterylow": {
+      "label": {
+        "translation": "Battery Low",
+        "notes": "Battery Low title."
+      }
+    },
+    "levellow": {
+      "label": {
+        "translation": "Level Low",
+        "notes": "Level Low title."
+      }
+    },
+    "offline": {
+      "label": {
+        "translation": "Off-line",
+        "notes": "Offline title."
+      }
+    },
+    "sensorerror": {
+      "label": {
+        "translation": "Sensor Error",
+        "notes": "Sensor Error title."
+      }
+    },
+    "overview": {
+      "label": {
+        "translation": "Overview",
+        "notes": "Snapshot overview."
+      }
+    }
+  },
+  "filter": {
+    "level": {
+      "label": {
+        "translation": "Leveling:",
+        "notes": "Label for level filter"
+      }
+    },
+    "device": {
+      "all": {
+        "translation": "Device Reference: All",
+        "notes": "Filter option to show all devices"
       }
     }
   },
@@ -3149,11 +3419,45 @@
       }
     }
   },
-  "solutionsd": {
-    "environmentCaption": {
+  "tanks": {
+    "deleteTank": {
+      "confirmTitle": {
+        "label": {
+          "translation": "Confirm to delete this tank?",
+          "notes": "Delete tank."
+        }
+      },
       "label": {
-        "translation": "Explore environmental data",
-        "notes": "Environment metrics caption."
+        "translation": "Delete tank",
+        "notes": "Delete tank."
+      }
+    },
+    "download": {
+      "label": {
+        "translation": "Tanks Report",
+        "notes": "Download tanks report as an Excel file."
+      }
+    },
+    "addTank": {
+      "label": {
+        "translation": "Add Tank",
+        "notes": "Add Tank Title."
+      }
+    }
+  },
+  "customers": {
+    "deleteCustomer": {
+      "label": {
+        "translation": "Delete customer",
+        "notes": "Delete customer."
+      }
+    }
+  },
+  "domain": {
+    "responsibletanks": {
+      "label": {
+        "translation": "Responsible Tanks",
+        "notes": "Responsible Tanks title."
       }
     }
   },
@@ -3162,6 +3466,14 @@
       "label": {
         "translation": "Select Date",
         "notes": "Choose a specific day using the date picker."
+      }
+    }
+  },
+  "solutionsd": {
+    "environmentCaption": {
+      "label": {
+        "translation": "Explore environmental data",
+        "notes": "Environment metrics caption."
       }
     }
   },

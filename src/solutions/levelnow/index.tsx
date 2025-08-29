@@ -60,7 +60,7 @@ export const modules: Modules = [
   {
     system: 'levelnow',
     url: 'tanks',
-    title: 'tanks.tanks.label',
+    title: 'modules.tanks.label',
     icon: <TankLineIcon />,
     iconSolid: <TankSolidIcon />,
     component: <Tanks />,
@@ -68,7 +68,7 @@ export const modules: Modules = [
   {
     system: 'levelnow',
     url: 'customers',
-    title: 'customers.customers.label',
+    title: 'modules.customers.label',
     icon: <CustomerLineIcon />,
     iconSolid: <CustomerSolidIcon />,
     component: <Customers />,
@@ -91,7 +91,6 @@ export const modules: Modules = [
   },
   {
     url: 'users',
-    // title: t('user.usersTitle.label', 'Users', 'Users Title.'),
     title: 'user.usersTitle.label',
     icon: <Users01LineIcon />,
     iconSolid: <Users01SolidIcon />,

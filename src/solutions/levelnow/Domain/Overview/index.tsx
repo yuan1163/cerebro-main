@@ -43,11 +43,7 @@ export default observer(function Overview() {
           weight='medium'
           className='flex items-center tracking-32 text-[#000] h-[34px]'
         >
-          {t(
-            'solutions.domainOverview.overview',
-            'Overview',
-            "A summary of the domain's key features and functionalities.",
-          )}
+          {t('solutions.overview.label', 'Overview', "A summary of the domain's key features and functionalities.")}
         </Text>
       </CardHeader>
       <CardContent disablePaddingTop>

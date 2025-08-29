@@ -48,7 +48,7 @@ export const Domain = observer(() => {
         </Unit>
         <Unit height='full'>
           <Grid className={styles['container']} display='grid' fullHeight>
-            <DomainMap />
+            <DomainMap expended={expendMap} onClick={handleExpand} />
             <Grid className={cn(expendMap ? 'hidden' : '')} fullWidth fullHeight gap={5}>
               <Overview />
               <ResponsibleTanks />
