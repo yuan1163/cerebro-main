@@ -19,6 +19,9 @@ import { z } from 'zod';
 import { customResolver } from '@core/utils/levelnow/resolver';
 import { useAddTank } from '@core/storages/controllers/levelnow/tank';
 
+// utils
+import { t } from '@core/utils/translate';
+
 // zod schema
 const addTankSchema = z.object({
   deviceReference: z.string().min(1, 'Warning ! Device Reference can not be blank !'),
@@ -97,7 +100,7 @@ export default function AddButton({ label }: { label: string }) {
           className='px-3 tracking-32 text-common-white'
         >
           <AddIcon className='mr-2' />
-          Add {label}
+          {label}
         </Button>
       </DialogTrigger>
       <DialogContent overlay={false} position='top' className='bg-white p-5 rounded-[10px]'>

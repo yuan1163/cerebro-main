@@ -29,6 +29,11 @@ export const Tanks = observer(() => {
   const { pathname } = useLocation();
   console.log('pathname:', pathname);
 
+  const tabs = [
+    t('user.admins.label', 'Admins', 'Key overseers with elevated privileges.'),
+    t('user.contacts.label', 'Contacts', 'User contacts.'),
+    t('user.groups.label', 'Groups', 'User groups.'),
+  ];
   // Extract client ID from pathname (e.g., /levelnow/customers/customer/123 -> 123)
   const selectedTankId = (() => {
     const lastSegment = pathname.split('/').pop();
@@ -66,7 +71,7 @@ export const Tanks = observer(() => {
         widgets={false}
       />
       <div className='flex items-center justify-between gap-5'>
-        <Tabs tabs={['Admins', 'Contacts', 'Groups']} />
+        <Tabs tabs={tabs} />
         <TankSearch onChange={handleSearchChange} />
       </div>
       <UnitContainer className='mt-5'>

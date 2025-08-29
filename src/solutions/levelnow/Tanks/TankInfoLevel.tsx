@@ -7,6 +7,11 @@ import Map, { Point } from '@core/ui/levelnow/Map';
 import { getDeviceLevelIcon } from '@core/utils/levelnow/deviceStatus';
 
 import { TankData } from '@core/api/types';
+import { getTankLevelFields } from '@constants/fieldSettings';
+
+// utils
+import { t } from '@core/utils/translate';
+
 type TankInfoDetailsProps = {
   tank: TankData | null;
 };
@@ -14,19 +19,9 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
   if (!tank) {
     return <DataBlock title='Oils' minHeight={255} />;
   }
-  const level = [
-    [
-      {
-        label: 'Device Reference',
-        value: tank.deviceReference,
-      },
-      { label: 'Battery Level', value: tank.deviceBattery },
-    ],
-    [
-      { label: 'Gateway Version', value: tank.gatewayVersion },
-      { label: 'Gateway Status', value: tank.deviceConnection },
-    ],
-  ];
+
+  const levelFields = getTankLevelFields(tank);
+  const level = [levelFields.slice(0, 2), levelFields.slice(2, 4)];
 
   // Map Properties
   const points: Point[] =
@@ -43,8 +38,12 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
   return (
     <section className='flex flex-col gap-5'>
       <div className='flex items-center gap-5 px-5'>
-        <h2 className='font-medium text-md tracking-32 text-neutral-900 w-[145px]'>Leveling</h2>
-        <h2 className='font-medium text-md tracking-32 text-neutral-900'>Location</h2>
+        <h2 className='font-medium text-md tracking-32 text-neutral-900 w-[145px]'>
+          {t('tank.level.label', 'Leveling', 'Tank level title.')}
+        </h2>
+        <h2 className='font-medium text-md tracking-32 text-neutral-900'>
+          {t('tank.location.label', 'Location', 'Tank location title.')}
+        </h2>
       </div>
       <div className='flex flex-col gap-6 p-5 rounded-lg grow bg-neutral-50' style={{ minHeight: '255px' }}>
         {/* image & map */}

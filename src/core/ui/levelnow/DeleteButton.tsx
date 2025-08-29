@@ -12,9 +12,10 @@ import {
 } from '@app/components/ui/dialog';
 // icons
 import DeleteIcon from '@assets/icons/LevelNOW/delete.svg?component';
+import { t } from '@core/utils/translate';
 
 type DeleteButtonProps = {
-  type?: 'tank' | 'customer' | 'customer-assign' | 'user';
+  type?: 'tank' | 'customer' | 'customer-assign';
   name?: string;
   onDelete: () => Promise<void> | void;
   disabled?: boolean;
@@ -49,38 +50,89 @@ export default function DeleteButton({ type, name, onDelete, disabled = false, i
     switch (type) {
       case 'tank':
         if (name) {
-          return `Confirm to delete this tank [ ${name} ]?`;
+          return t(
+            `tanks.deleteTank.confirmTitle.label［ ${name} ］?`,
+            `Confirm to delete this tank［ ${name} ］?`,
+            'Delete tank.',
+          );
         }
-        return 'Confirm to delete this tank?';
+        return t('tanks.deleteTank.confirmTitle.label', 'Confirm to delete this tank?', 'Delete tank.');
       case 'customer':
-        return `Confirm to delete this customer［ ${name} ］?`;
+        return t(
+          'customers.deleteCustomer.confirmTitle.label',
+          `Confirm to delete this customer [ ${name} ] ?`,
+          'Delete customer.',
+        );
       case 'customer-assign':
         return (
           <>
-            <div>Confirm removal of customer from the tank?</div>
+            <div>
+              {t(
+                'tank.unassignCustomer.confirmTitle.label',
+                'Confirm removal of customer from the tank?',
+                'Unassign Customer',
+              )}
+            </div>
             <div className='mt-2'>[ {name} ]</div>
           </>
         );
       default:
-        return `Confirm to delete this ${type}?`;
+        return t('general.deleteItem.title.label', `Confirm to delete this ${type}?`, 'Delete item.');
     }
   })();
 
   const description = (() => {
     switch (type) {
       case 'tank':
-        return 'This action will permanently delete the tank.';
+        return t(
+          'tanks.deleteTank.confirmDescription.label',
+          'This action will permanently delete the tank.',
+          'Delete tank.',
+        );
       case 'customer':
-        return 'This action will permanently delete the customer.';
+        return t(
+          'customers.deleteCustomer.confirmDescription.label',
+          'This action will permanently delete the customer.',
+          'Delete customer.',
+        );
       case 'customer-assign':
         return (
           <>
-            <div>This action will remove the currently assigned customer.</div>
-            <div>To reassign the same customer, please edit the Customer field in the tank settings.</div>
+            <div>
+              {t(
+                'tank.unassignCustomer.confirmDescription.label',
+                'This action will remove the currently assigned customer.',
+                'Unassign Customer',
+              )}
+            </div>
+            <div>
+              {t(
+                'tank.unassignCustomer.reassignNote.label',
+                'To reassign the same customer, please edit the Customer field in the tank settings.',
+                'Unassign Customer',
+              )}
+            </div>
           </>
         );
       default:
-        return `This action will permanently delete the ${type}.`;
+        return t(
+          'general.deleteItem.description.label',
+          `This action will permanently delete the ${type}.`,
+          'Delete item.',
+        );
+    }
+  })();
+
+  const buttonLabel = (() => {
+    switch (type) {
+      case 'tank':
+        return t('tanks.deleteTank.label', 'Delete tank', 'Delete tank.');
+      case 'customer':
+        return t('customers.deleteCustomer.label', 'Delete customer', 'Delete customer.');
+      case 'customer-assign':
+        return t('tank.unassignCustomer.label', 'Delete Customer', 'Unassign Customer');
+      default:
+        return t('general.deleteButton.label', `Delete ${type}`, 'Delete button.');
     }
   })();
 
@@ -128,10 +180,10 @@ export default function DeleteButton({ type, name, onDelete, disabled = false, i
               onClick={() => setIsDialogOpen(false)}
               disabled={isDeleting}
             >
-              Cancel
+              {t('general.cancelButton.label', 'Cancel', 'Cancel button.')}
             </Button>
             <Button variant='delete' className='flex-1 p-4' onClick={handleDelete} loading={isDeleting}>
-              Delete {type === 'customer-assign' ? 'customer' : type}
+              {buttonLabel}
             </Button>
           </DialogFooter>
         </DialogContent>

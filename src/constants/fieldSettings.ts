@@ -1,5 +1,5 @@
 import { t } from '@core/utils/translate';
-import { ClientData, ClientTank } from '@core/api/types';
+import { ClientData, ClientTank, TankData } from '@core/api/types';
 
 // Tank
 export const getTankFields = (tank: ClientTank | null) => [
@@ -27,6 +27,29 @@ export const getTankFields = (tank: ClientTank | null) => [
     name: 'deviceFillingDate',
     label: t('tank.lastOilFillingDate.label', 'Last Oil Filling Date', 'Tank last oil filling date field.'),
     value: tank?.deviceFillingDate ? new Date(tank.deviceFillingDate).toLocaleDateString() : '-',
+  },
+];
+
+export const getTankLevelFields = (tank: TankData | null) => [
+  {
+    name: 'deviceReference',
+    label: t('tank.deviceReference.label', 'Device Reference', 'Tank device reference field.'),
+    value: tank?.deviceReference || '-',
+  },
+  {
+    name: 'deviceBattery',
+    label: t('tank.batteryLevel.label', 'Battery Level', 'Tank battery level field.'),
+    value: tank?.deviceBattery || '-',
+  },
+  {
+    name: 'gatewayVersion',
+    label: t('tank.gatewayVersion.label', 'Gateway Version', 'Tank gateway version field.'),
+    value: tank?.gatewayVersion || '-',
+  },
+  {
+    name: 'deviceConnection',
+    label: t('tank.gatewayStatus.label', 'Gateway Status', 'Tank gateway status field.'),
+    value: tank?.deviceConnection || '-',
   },
 ];
 

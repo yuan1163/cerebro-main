@@ -11,6 +11,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { getTankFields } from '@constants/fieldSettings';
+import { t } from '@core/utils/translate';
 
 // Define the form schema using zod
 const tankSchema = z.object({
@@ -61,7 +62,7 @@ export default function TankInfoDetails({ tank, editMode = false, deleteMode = f
 
   // If tank is null, return a placeholder DataBlock
   if (!tank) {
-    return <DataBlock title='Oils' minHeight={255} />;
+    return <DataBlock title={t('tank.oils.title', 'Oils', 'Title for the oils section')} minHeight={255} />;
   }
 
   const fields = getTankFields(tank);
@@ -108,7 +109,13 @@ export default function TankInfoDetails({ tank, editMode = false, deleteMode = f
 
   if (!isEdit) {
     return (
-      <DataBlock title='Oils' data={fields} columns={1} minHeight={255} labelWidth='138px'>
+      <DataBlock
+        title={t('tank.oils.title', 'Oils', 'Title for the oils section')}
+        data={fields}
+        columns={1}
+        minHeight={255}
+        labelWidth='138px'
+      >
         {(editMode || deleteMode) && (
           <div className='flex items-center justify-end gap-3 '>
             {editMode && <EditButton onEdit={handleToggleEdit} />}
@@ -146,10 +153,10 @@ export default function TankInfoDetails({ tank, editMode = false, deleteMode = f
       </div>
       <div className='flex items-center gap-3'>
         <Button type='button' variant='outlined' fullWidth onClick={handleToggleEdit}>
-          Cancel
+          {t('general.cancelButton.label', 'Cancel', 'Cancel button.')}
         </Button>
         <Button type='submit' variant='solid' fullWidth loading={updateTankMutation.isLoading}>
-          Save changes
+          {t('general.saveButton.label', 'Save changes', 'Save changes button.')}
         </Button>
       </div>
     </form>

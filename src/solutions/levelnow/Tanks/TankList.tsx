@@ -4,7 +4,7 @@ import { Card } from '@core/ui/components/Card';
 import { getDeviceLevelIcon, getBatteryLevelIcon, getDeviceConnection } from '@core/utils/levelnow/deviceStatus';
 
 import FilterButton from '@core/ui/levelnow/FilterButton';
-import AddButton from '@solutions/levelnow/Tanks/AddTankButton';
+import AddButton from '@solutions/levelnow/Tanks/AddButton';
 import NumberBadge from '@core/ui/levelnow/NumberBadge';
 import { TankListItem } from '@core/api/types';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
@@ -17,6 +17,9 @@ import Select from '@core/ui/levelnow/Select';
 import CheckSelect from '@core/ui/levelnow/CheckSelect';
 import { DeviceLevelLabel } from '@core/api/types';
 import { Link } from '@core/ui/components/Link';
+
+// utils
+import { t } from '@core/utils/translate';
 
 type TankListProps = {
   tanks: TankListItem[];
@@ -44,7 +47,7 @@ export default function TankList({ tanks, selectedTankId, searchQuery }: TankLis
     ),
   );
   const deviceOptions = [
-    { label: 'Device Reference: All', value: 'all' },
+    { label: t('filter.device.all', 'Device Reference: All', 'Filter option to show all devices'), value: 'all' },
     ...deviceReferences.map((ref) => ({ label: ref, value: ref })),
   ];
 
@@ -94,9 +97,9 @@ export default function TankList({ tanks, selectedTankId, searchQuery }: TankLis
         <div className='flex flex-col w-full'>
           <div className='flex items-center justify-between'>
             <div className='flex items-center gap-3'>
-              <span>All</span>
+              <span>{t('general.all.label', 'All', 'Entirety of something.')}</span>
               <NumberBadge variant='gray' number={tanks.length} />
-              <AddButton label='Tank' />
+              <AddButton label={t('tanks.addTank.label', 'Add Tank', 'Add Tank Title.')} />
             </div>
             <FilterButton
               onClick={() => setOpenFilter(!openFilter)}

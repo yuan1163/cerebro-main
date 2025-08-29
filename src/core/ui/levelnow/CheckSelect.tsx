@@ -9,6 +9,7 @@ import CrossIcon from '@assets/icons/LevelNOW/cross.svg?component';
 import { Button } from '@core/ui/components/Button';
 import { DeviceLevelLabel } from '@core/api/types';
 import { set } from '@nodemodules/@types/lodash';
+import { t } from '@core/utils/translate';
 
 type CheckSelectProps = {
   options: DeviceLevelLabel[];
@@ -63,7 +64,7 @@ export default function CheckSelect({ options, activedFilter, handleSelect }: Ch
               )}
             >
               <div className='flex items-center gap-2'>
-                <span>Leveling:</span>
+                <span>{t('filter.level.label', 'Leveling:', 'Label for level filter')}</span>
                 <div className='flex items-center gap-2'>
                   {activedFilter?.map((label) => (
                     <div key={label} className='flex items-center gap-2 px-2 py-0.5 rounded-sm bg-neutral-100'>

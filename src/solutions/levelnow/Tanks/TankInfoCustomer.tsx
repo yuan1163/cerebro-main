@@ -5,6 +5,7 @@ import DeleteButton from '@core/ui/levelnow/DeleteButton';
 import { ClientData, TankData } from '@core/api/types';
 import { getCustomerProfileFields } from '@constants/fieldSettings';
 import { useUpdateTankClient } from '@core/storages/controllers/levelnow/tank';
+import { t } from '@core/utils/translate';
 
 type TankInfoCustomerProps = {
   tank: TankData | null;
@@ -54,7 +55,7 @@ export default function TankInfoCustomer({
 
   return (
     <DataBlock
-      title='Customer'
+      title={t('tank.customer.label', 'Customer', 'Tank customer title.')}
       data={customer}
       columns={2}
       rows={5}

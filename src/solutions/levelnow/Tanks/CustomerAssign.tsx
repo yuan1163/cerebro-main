@@ -7,6 +7,7 @@ import { cn } from '@core/utils/classnames';
 // icon
 import CustomerIcon from '@assets/icons/LevelNOW/customer.svg?component';
 import { useUpdateTankClient } from '@core/storages/controllers/levelnow/tank';
+import { t } from '@core/utils/translate';
 
 type CustomerAssignProps = {
   tank: TankData;
@@ -34,21 +35,59 @@ export default function CustomerAssign({ tank, client, onCancelEdit }: CustomerA
       {/* description */}
       <div className='flex flex-col justify-between px-5 pb-5'>
         <header className='flex flex-col gap-1'>
-          <div className='font-medium text-md tracking-32 text-neutral-900'>Choose a Customer</div>
+          <div className='font-medium text-md tracking-32 text-neutral-900'>
+            {t('tank.chooseCustomer.label', 'Choose a Customer', 'Select and assign a customer to the tank.')}
+          </div>
           <div className='text-sm font-medium tracking-28 text-secondary-500'>
-            Assign a customer to this tank ' {tank.tankNo} '
+            {t(
+              `tank.assignCustomerDescription.label`,
+              `Assign a customer to this tank`,
+              'Select and assign a customer to the tank.',
+            ) + `' ${tank.tankNo} '`}
           </div>
         </header>
         <footer className='flex flex-col gap-5'>
-          <div className='font-medium text-md tracking-32 text-neutral-900'>Help?</div>
-          <div className='flex flex-col gap-1 text-sm font-medium tracking-28 text-secondary-500'>
-            <div className='text-neutral-900'>How to creat a " Customer " ?</div>
-            <p>{`(1) Click the button " Customers " on the left navigation bar`}</p>
-            <p>{` (2) Fill in customer information`}</p>
+          <div className='font-medium text-md tracking-32 text-neutral-900'>
+            {t('tank.help.label', 'Help?', 'Need assistance with assigning a customer to the tank?')}
           </div>
           <div className='flex flex-col gap-1 text-sm font-medium tracking-28 text-secondary-500'>
-            <div className='text-neutral-900'>Clear " Customer " for tank</div>
-            <p>{`Click " - Do not Assign " directly`}</p>
+            <div className='text-neutral-900'>
+              {t(
+                'tank.createCustomer.title.label',
+                'How to create a " Customer " ?',
+                'Instructions on creating a new customer.',
+              )}
+            </div>
+            <p>
+              {t(
+                'tank.createCustomer.steps.click.label',
+                `(1) Click the button " Customers " on the left navigation bar`,
+                'Step 1 to create a new customer.',
+              )}
+            </p>
+            <p>
+              {t(
+                'tank.createCustomer.steps.fill.label',
+                `(2) Fill in customer information`,
+                'Step 2 to create a new customer.',
+              )}
+            </p>
+          </div>
+          <div className='flex flex-col gap-1 text-sm font-medium tracking-28 text-secondary-500'>
+            <div className='text-neutral-900'>
+              {t(
+                'tank.clearCustomer.title.label',
+                'Clear " Customer " for tank',
+                'Instructions on clearing the customer assignment.',
+              )}
+            </div>
+            <p>
+              {t(
+                'tank.clearCustomer.steps.click.label',
+                `Click " - Do not Assign " directly`,
+                'Step 1 to clear the customer assignment.',
+              )}
+            </p>
           </div>
         </footer>
       </div>
@@ -62,7 +101,13 @@ export default function CustomerAssign({ tank, client, onCancelEdit }: CustomerA
               className='flex items-center gap-5 py-3 font-medium cursor-pointer px-9 text-md tracking-32 text-neutral-900 hover:bg-hover'
             >
               <span>-</span>
-              <span>{`Do not Assign ( Clear Customer of the Tank )`}</span>
+              <span>
+                {t(
+                  'tank.doNotAssign.label',
+                  'Do not Assign ( Clear Customer of the Tank )',
+                  'Option to clear the customer assignment.',
+                )}
+              </span>
             </div>
             {clients.map((item) => {
               const isActived = client?.clientId === item.clientId;
@@ -78,7 +123,7 @@ export default function CustomerAssign({ tank, client, onCancelEdit }: CustomerA
           </Scrollbar>
         </div>
         <Button variant='outlined' onClick={onCancelEdit} loading={isLoading} className='mx-5'>
-          Cancel
+          {t('general.cancelButton.label', 'Cancel', 'General action to cancel and close.')}
         </Button>
       </div>
     </div>

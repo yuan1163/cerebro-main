@@ -7,6 +7,9 @@ import { TankData } from '@core/api/types';
 import { useTanks } from '@core/storages/controllers/levelnow/tank';
 import { apiGetTank } from '@core/api/entities/levelnow/tank';
 
+// utils
+import { t } from '@core/utils/translate';
+
 export default function DownloadButton() {
   const [isDownloading, setIsDownloading] = useState(false);
 
@@ -166,13 +169,13 @@ export default function DownloadButton() {
       iconColor='white'
       fontSize='md'
       fontWeight='medium'
-      className='w-40 px-3 tracking-32 text-common-white'
+      className='px-3 tracking-32'
       align='start'
       onClick={handleDownload}
       loading={isDownloading}
     >
       <DownloadIcon className='mr-2' />
-      {isDownloading ? '' : 'Tanks Report'}
+      {t('tanks.download.label', 'Tanks Report', 'Download tanks report as an Excel file.')}
     </Button>
   );
 }
