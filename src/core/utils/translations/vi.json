@@ -192,7 +192,7 @@
     },
     "gwcustomerservicerep": {
       "label": {
-        "translation": "Đại diện dịch vụ khách hàng GW"
+        "translation": "Đại diện dịch vụ khách hàng"
       }
     },
     "tanks": {
@@ -1624,6 +1624,56 @@
     "criticalEvents": {
       "label": {
         "translation": "Sự kiện quan trọng"
+      }
+    },
+    "table": {
+      "eventDate": {
+        "label": {
+          "translation": "Ngày sự kiện"
+        }
+      },
+      "issue": {
+        "label": {
+          "translation": "Vấn đề"
+        }
+      },
+      "tankNo": {
+        "label": {
+          "translation": "Số bể"
+        }
+      },
+      "customerNo": {
+        "label": {
+          "translation": "Số khách hàng"
+        }
+      },
+      "address": {
+        "label": {
+          "translation": "Địa chỉ"
+        }
+      },
+      "contact": {
+        "label": {
+          "translation": "Liên hệ"
+        }
+      },
+      "salesRep": {
+        "label": {
+          "translation": "Đại diện kinh doanh"
+        }
+      }
+    },
+    "filter": {
+      "issueAll": {
+        "translation": "Vấn đề: Tất cả"
+      },
+      "deviceAll": {
+        "translation": "Tham chiếu thiết bị: Tất cả"
+      }
+    },
+    "history": {
+      "title": {
+        "translation": "Lịch sử sự kiện"
       }
     }
   },

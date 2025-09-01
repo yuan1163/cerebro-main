@@ -1,4 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
+import { observer } from 'mobx-react';
+
 // components
 import TankInfoDetails from '@solutions/levelnow/Tanks/TankInfoDetails';
 import TankInfoCustomer from '@solutions/levelnow/Tanks/TankInfoCustomer';
@@ -23,7 +25,7 @@ import { DataTable } from '@app/components/ui/data-table';
 
 import { columns } from './eventsHistoryColumns';
 
-export default function EventPage() {
+const EventPage = observer(() => {
   const { tankId } = useParams<{ tankId: string }>();
   if (!tankId) {
     return <div>{t('errors.tankNotFound', 'Tank not found', 'Error message when tank ID is not provided.')}</div>;
@@ -63,11 +65,14 @@ export default function EventPage() {
           </div>
           {/* Events History */}
           <div className='w-[400px] flex-shrink-0 ml-5'>
-            <h1 className='mb-5 font-medium text-md tracking-32 text-neutral-900'>Events History</h1>
+            <h1 className='mb-5 font-medium text-md tracking-32 text-neutral-900'>
+              {t('events.history.title', 'Events History', 'Events history section title')}
+            </h1>
             <DataTable columns={columns} data={eventsHistory} fixHeight={258} />
           </div>
         </CardContent>
       </Card>
     </>
   );
-}
+});
+export default EventPage;

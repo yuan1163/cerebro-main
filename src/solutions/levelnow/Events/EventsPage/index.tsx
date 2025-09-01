@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { observer } from 'mobx-react';
 import { columns } from './eventsColumns';
 import { useNavigate } from 'react-router-dom';
 
@@ -58,7 +59,7 @@ const issueOptions = [
   { label: 'Oil Filling', value: 'Oil Filling' },
 ];
 
-const EventsPage = () => {
+const EventsPage = observer(() => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedIssue, setSelectedIssue] = useState<keyof Event | null>(null);
@@ -251,7 +252,8 @@ const EventsPage = () => {
               onClick={() => setIsFilterOpen(!isFilterOpen)}
               className='gap-2'
             >
-              <span>Filters</span>
+              <span>{t('general.filters.label', 'Filters', 'Filters button')}</span>
+
               {activeFilterCount > 0 && <NumberBadge variant='actived' number={activeFilterCount} />}
             </Button>
           </div>
@@ -319,7 +321,9 @@ const EventsPage = () => {
                         )}
                       >
                         <span className='font-medium text-md tracking-32 text-neutral-900'>
-                          {selectedIssue ? selectedIssue : 'Issue: All'}
+                          {selectedIssue
+                            ? selectedIssue
+                            : t('events.filter.issueAll', 'Issue: All', 'Issue all filter')}
                         </span>
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
@@ -366,7 +370,9 @@ const EventsPage = () => {
                         )}
                       >
                         <span className='font-medium text-md tracking-32 text-neutral-900'>
-                          {selectedDevice ? selectedDevice : 'Device Reference: All'}
+                          {selectedDevice
+                            ? selectedDevice
+                            : t('events.filter.deviceAll', 'Device Reference: All', 'Device reference all filter')}
                         </span>
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
@@ -413,6 +419,6 @@ const EventsPage = () => {
       </Card>
     </>
   );
-};
+});
 
 export default EventsPage;

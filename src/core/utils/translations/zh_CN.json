@@ -1630,6 +1630,56 @@
       "label": {
         "translation": "重大事件"
       }
+    },
+    "table": {
+      "eventDate": {
+        "label": {
+          "translation": "事件日期"
+        }
+      },
+      "issue": {
+        "label": {
+          "translation": "问题"
+        }
+      },
+      "tankNo": {
+        "label": {
+          "translation": "储罐编号"
+        }
+      },
+      "customerNo": {
+        "label": {
+          "translation": "客户编号"
+        }
+      },
+      "address": {
+        "label": {
+          "translation": "地址"
+        }
+      },
+      "contact": {
+        "label": {
+          "translation": "联系人"
+        }
+      },
+      "salesRep": {
+        "label": {
+          "translation": "销售代表"
+        }
+      }
+    },
+    "filter": {
+      "issueAll": {
+        "translation": "问题：全部"
+      },
+      "deviceAll": {
+        "translation": "设备参考：全部"
+      }
+    },
+    "history": {
+      "title": {
+        "translation": "事件历史"
+      }
     }
   },
   "deviceTypes": {

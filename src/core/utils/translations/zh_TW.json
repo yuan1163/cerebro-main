@@ -1625,6 +1625,56 @@
       "label": {
         "translation": "重大事件"
       }
+    },
+    "table": {
+      "eventDate": {
+        "label": {
+          "translation": "事件日期"
+        }
+      },
+      "issue": {
+        "label": {
+          "translation": "問題"
+        }
+      },
+      "tankNo": {
+        "label": {
+          "translation": "儲罐編號"
+        }
+      },
+      "customerNo": {
+        "label": {
+          "translation": "客戶編號"
+        }
+      },
+      "address": {
+        "label": {
+          "translation": "地址"
+        }
+      },
+      "contact": {
+        "label": {
+          "translation": "聯絡人"
+        }
+      },
+      "salesRep": {
+        "label": {
+          "translation": "銷售代表"
+        }
+      }
+    },
+    "filter": {
+      "issueAll": {
+        "translation": "問題：全部"
+      },
+      "deviceAll": {
+        "translation": "設備參考：全部"
+      }
+    },
+    "history": {
+      "title": {
+        "translation": "事件歷史"
+      }
     }
   },
   "deviceTypes": {

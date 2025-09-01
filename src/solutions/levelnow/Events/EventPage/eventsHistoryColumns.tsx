@@ -9,6 +9,7 @@ import ChevronDownIcon from '@assets/icons/LevelNOW/chevrons-down.svg?component'
 // Types
 import { Event, EventsHistoryItem } from '@core/api/types';
 import { EventsIssue } from '@core/api/types';
+import { t } from '@core/utils/translate';
 
 export const columns: ColumnDef<EventsHistoryItem>[] = [
   {
@@ -20,7 +21,7 @@ export const columns: ColumnDef<EventsHistoryItem>[] = [
             column.toggleSorting(column.getIsSorted() === 'asc');
           }}
         >
-          Event Date
+          {t('events.table.eventDate.label', 'Event Date', 'Event date column header')}
           {column.getIsSorted() === 'asc' ? (
             <ChevronDownIcon className='w-5 h-5 rotate-180' />
           ) : (
@@ -39,7 +40,7 @@ export const columns: ColumnDef<EventsHistoryItem>[] = [
     header: ({ column }) => {
       return (
         <Button>
-          Issue
+          {t('events.table.issue.label', 'Issue', 'Issue column header')}
           <ChevronDownIcon className='w-5 h-5 ' />
         </Button>
       );
