@@ -71,7 +71,7 @@ export const Tanks = observer(() => {
         widgets={false}
       />
       <div className='flex items-center justify-between gap-5'>
-        <Tabs tabs={tabs} />
+        {/* <Tabs tabs={tabs} /> */}
         <TankSearch onChange={handleSearchChange} />
       </div>
       <UnitContainer className='mt-5'>

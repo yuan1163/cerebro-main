@@ -223,7 +223,7 @@ const EventsPage = () => {
         widgets={false}
       />
       <div className='flex items-center justify-between gap-5'>
-        <Tabs tabs={['Admins', 'Contacts', 'Groups']} />
+        {/* <Tabs tabs={['Admins', 'Contacts', 'Groups']} /> */}
         <SearchBar onChange={handleSearchChange} />
       </div>
       <Card className='rounded-[10px] shadow-card flex-1 flex flex-col mt-5'>
