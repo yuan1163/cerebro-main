@@ -78,17 +78,10 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
     }
   }, [customer, reset]);
 
-  if (!customer) {
-    return <DataBlock title='Customer Profile' className='h-full' />;
-  }
-
-  const basicFields = getCustomerProfileFields(customer);
-  const ownerFields = getCustomerGWFields(customer);
-
   // Map Properties - memoize to prevent unnecessary re-renders
   const points: Point[] = useMemo(
     () =>
-      customer.latitude && customer.longitude
+      customer?.latitude && customer?.longitude
         ? [
             {
               latitude: customer.latitude,
@@ -96,9 +89,16 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
             },
           ]
         : [],
-    [customer.latitude, customer.longitude],
+    [customer?.latitude, customer?.longitude],
   );
   const zoom = points.length > 0 ? 16 : 1;
+
+  if (!customer) {
+    return <DataBlock title='Customer Profile' className='h-full' />;
+  }
+
+  const basicFields = getCustomerProfileFields(customer);
+  const ownerFields = getCustomerGWFields(customer);
 
   const handleSubmitForm = async (data: FormValues) => {
     if (!customer.clientId) {

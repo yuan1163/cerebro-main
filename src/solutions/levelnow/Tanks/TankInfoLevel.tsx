@@ -16,17 +16,10 @@ type TankInfoDetailsProps = {
   tank: TankData | null;
 };
 export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
-  if (!tank) {
-    return <DataBlock title='Oils' minHeight={255} />;
-  }
-
-  const levelFields = getTankLevelFields(tank);
-  const level = [levelFields.slice(0, 2), levelFields.slice(2, 4)];
-
   // Map Properties - memoize to prevent unnecessary re-renders
   const points: Point[] = useMemo(
     () =>
-      tank.deviceLatitude && tank.deviceLongitude
+      tank?.deviceLatitude && tank?.deviceLongitude
         ? [
             {
               latitude: tank.deviceLatitude,
@@ -34,9 +27,16 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
             },
           ]
         : [],
-    [tank.deviceLatitude, tank.deviceLongitude],
+    [tank?.deviceLatitude, tank?.deviceLongitude],
   );
   const zoom = points.length > 0 ? 16 : 1;
+
+  if (!tank) {
+    return <DataBlock title='Oils' minHeight={255} />;
+  }
+
+  const levelFields = getTankLevelFields(tank);
+  const level = [levelFields.slice(0, 2), levelFields.slice(2, 4)];
 
   return (
     <section className='flex flex-col gap-5'>
