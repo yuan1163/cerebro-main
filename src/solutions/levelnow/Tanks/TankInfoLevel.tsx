@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import DataBlock from '@core/ui/levelnow/DataBlock';
 
 import TankHighIcon from '@assets/icons/levelnow/tank/tank-high.svg?component';
@@ -23,16 +23,19 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
   const levelFields = getTankLevelFields(tank);
   const level = [levelFields.slice(0, 2), levelFields.slice(2, 4)];
 
-  // Map Properties
-  const points: Point[] =
-    tank.deviceLatitude && tank.deviceLongitude
-      ? [
-          {
-            latitude: tank.deviceLatitude,
-            longitude: tank.deviceLongitude,
-          },
-        ]
-      : [];
+  // Map Properties - memoize to prevent unnecessary re-renders
+  const points: Point[] = useMemo(
+    () =>
+      tank.deviceLatitude && tank.deviceLongitude
+        ? [
+            {
+              latitude: tank.deviceLatitude,
+              longitude: tank.deviceLongitude,
+            },
+          ]
+        : [],
+    [tank.deviceLatitude, tank.deviceLongitude],
+  );
   const zoom = points.length > 0 ? 16 : 1;
 
   return (

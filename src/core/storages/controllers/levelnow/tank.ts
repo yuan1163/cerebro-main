@@ -25,6 +25,7 @@ export const useTank = (tankId: number | null) => {
     enabled: !!tankId, // Only fetch when we have a valid tank ID
     staleTime: 1000 * 60 * 5, // 5 minutes
     cacheTime: 1000 * 60 * 10, // 10 minutes
+    keepPreviousData: true, // Keep previous data while fetching new data
   });
   if (!tankId) {
     return null;

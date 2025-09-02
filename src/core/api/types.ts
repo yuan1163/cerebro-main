@@ -82,6 +82,8 @@ export type ClientData = {
   salesRepUserId: string | null;
   customerServiceRepUserId: string | null;
   clientTank: ClientTank[];
+  longitude: number;
+  latitude: number;
 };
 export type ClientTank = Pick<
   TankData,

@@ -34,7 +34,7 @@ export const Tanks = observer(() => {
     t('user.contacts.label', 'Contacts', 'User contacts.'),
     t('user.groups.label', 'Groups', 'User groups.'),
   ];
-  // Extract client ID from pathname (e.g., /levelnow/customers/customer/123 -> 123)
+  // Extract tank ID from pathname (e.g., /levelnow/tanks/tank/123 -> 123)
   const selectedTankId = (() => {
     const lastSegment = pathname.split('/').pop();
     if (!lastSegment) return null;

@@ -1,7 +1,7 @@
 import DataBlock from '@core/ui/levelnow/DataBlock';
 import EditButton from '@core/ui/levelnow/EditButton';
 import DeleteButton from '@core/ui/levelnow/DeleteButton';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 import { ClientData, TankData } from '@core/api/types';
 import { Button } from '@core/ui/components/Button';
@@ -85,6 +85,21 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
   const basicFields = getCustomerProfileFields(customer);
   const ownerFields = getCustomerGWFields(customer);
 
+  // Map Properties - memoize to prevent unnecessary re-renders
+  const points: Point[] = useMemo(
+    () =>
+      customer.latitude && customer.longitude
+        ? [
+            {
+              latitude: customer.latitude,
+              longitude: customer.longitude,
+            },
+          ]
+        : [],
+    [customer.latitude, customer.longitude],
+  );
+  const zoom = points.length > 0 ? 16 : 1;
+
   const handleSubmitForm = async (data: FormValues) => {
     if (!customer.clientId) {
       console.error('Client ID is required for update');
@@ -143,7 +158,7 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
         className='h-full'
       >
         <div className='w-full h-40'>
-          <Map points={[]} zoom={1} className='rounded-[10px]' />
+          <Map points={points} zoom={zoom} className='rounded-[10px]' />
         </div>
         <DataBlock data={ownerFields} columns={1} labelWidth='191px' noPadding />
         <div className='flex items-center justify-end gap-3 '>
