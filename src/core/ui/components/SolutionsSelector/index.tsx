@@ -118,6 +118,12 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
       subtitle: t('solutions.solutionsSelector.ai.listItem.caption', 'IvedaAI', 'Label for IvedaAI menu item.'),
       icon: <VideoRecorderLineIcon />,
     },
+    {
+      id: 5,
+      title: Solutions.levelnow,
+      subtitle: t('solutions.solutionsSelector.levelnow.listItem.caption', 'LevelNOW', 'Label for LevelNOW menu item.'),
+      icon: <VideoRecorderLineIcon />,
+    },
   ];
 
   return (
