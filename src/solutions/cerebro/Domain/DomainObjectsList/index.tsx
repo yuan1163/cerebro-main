@@ -65,9 +65,8 @@ export const DomainObjectsList: React.FC<Props> = ({ className }) => {
 
   const levelnowLocations = useLevelnowLocations();
   console.log('levelnowLocations', levelnowLocations);
-  const placesToShow = levelnowLocations?.filter((loc) => loc.bandType === 1) || [];
-  const countriesToShow =
-    levelnowLocations?.filter((loc) => placesToShow.map((p) => p.parentId).includes(loc.locationId)) || [];
+  const locationWithoutBandType = levelnowLocations?.filter((loc) => loc.bandType === null) || [];
+  const countriesToShow = locationWithoutBandType.filter((loc) => loc.type === 2) || [];
 
   const ui = useUI();
   const navigate = useNavigate();
@@ -124,7 +123,7 @@ export const DomainObjectsList: React.FC<Props> = ({ className }) => {
               variant='solid'
             >
               {/* {locations.getFormations(region).map((item) => { */}
-              {placesToShow
+              {locationWithoutBandType
                 .filter((place) => place.parentId === region.locationId)
                 .map((item) => {
                   // LOCATIONS
