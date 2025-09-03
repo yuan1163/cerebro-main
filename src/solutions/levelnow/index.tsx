@@ -28,6 +28,8 @@ import EventsLineIcon from '@assets/icons/LevelNOW/sidebar/events-line.svg?compo
 import EventsSolidIcon from '@assets/icons/LevelNOW/sidebar/events-solid.svg?component';
 import SnapshotLineIcon from '@assets/icons/LevelNOW/sidebar/snapshot-line.svg?component';
 import SnapshotSolidIcon from '@assets/icons/LevelNOW/sidebar/snapshot-solid.svg?component';
+import UsersLineIcon from '@assets/icons/LevelNOW/sidebar/users-line.svg?component';
+import UsersSolidIcon from '@assets/icons/LevelNOW/sidebar/users-solid.svg?component';
 
 // types
 import { Modules, ModuleSections } from '@core/ui/types';
@@ -92,8 +94,8 @@ export const modules: Modules = [
   {
     url: 'users',
     title: 'user.usersTitle.label',
-    icon: <Users01LineIcon />,
-    iconSolid: <Users01SolidIcon />,
+    icon: <UsersLineIcon />,
+    iconSolid: <UsersSolidIcon />,
     component: <Users />,
   },
 ];

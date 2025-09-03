@@ -38,7 +38,7 @@ export const DrawerButtonExpanded: React.FC<Props> = ({ disabled, icon, iconHove
           fullWidth
           size='lg'
           // startIcon={isActive ? iconHover : icon}
-          textColor={isActive ? '' : 'typography-secondary'}
+          textColor={isActive ? '' : 'secondary-500'}
           variant={isActive ? 'tint' : 'ghost'}
         >
           {isActive ? iconHover : icon}

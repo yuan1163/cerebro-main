@@ -726,6 +726,9 @@
   &.button-color-primary {
     @apply text-primary;
   }
+  &.button-color-secondary-500 {
+    @apply text-secondary-500;
+  }
 }
 
 // GROUP
