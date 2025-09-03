@@ -19,6 +19,7 @@ export const DomainMap: React.FC<Props> = observer(({ className, expended, expen
   const locationsWithBandType = locations.filter((location) => location.bandType === 1);
   const points = locationsWithBandType.flatMap((location) =>
     location.clients.map((client) => ({
+      clientId: client.clientId,
       latitude: client.latitude!,
       longitude: client.longitude!,
     })),
@@ -27,7 +28,7 @@ export const DomainMap: React.FC<Props> = observer(({ className, expended, expen
   return (
     <>
       <Card fullWidth elevation='xs'>
-        <Map controls={true} points={points} zoom={3} className='rounded-md' />
+        <Map controls={true} points={points} pointsNavigation zoom={3} className='rounded-md' />
       </Card>
     </>
   );

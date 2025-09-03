@@ -3,6 +3,9 @@ import mapboxgl from 'mapbox-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
 import { Feature, Geometry, GeoJsonProperties } from 'geojson';
 
+// route
+import { useNavigate } from 'react-router-dom';
+
 // context
 
 import ThemeContext from '@app/ThemeAdapter/ThemeContext';
@@ -26,7 +29,7 @@ import { createRoot } from 'react-dom/client';
 
 // types
 
-import { IssuePriority, Location, Locations } from '@core/api/types';
+import { IssuePriority, Location, LocationClient, Locations } from '@core/api/types';
 import { CurrentTheme, SeverityPalette } from '@core/api/typesDesignSystem';
 
 // components
@@ -42,6 +45,7 @@ import Map01LineIcon from '@assets/icons/solid/map-01.svg?component';
 import TrackerLineIcon from '@assets/icons/line/tracker.svg?component';
 
 export interface Point {
+  clientId?: number;
   latitude: number;
   longitude: number;
 }
@@ -50,6 +54,7 @@ type MapProps = {
   controls?: boolean;
   marker?: 'default' | 'dot' | 'needle';
   points: Point[];
+  pointsNavigation?: boolean;
   zoom: number;
   className?: string;
 };
@@ -92,7 +97,15 @@ type Marker = {
   variant?: 'default' | 'dot' | 'needle';
 };
 
-const Marker: React.FC<Marker> = ({ color, markerContent, markerIcon, markerLabel, onClick, variant = 'default' }) => {
+const Marker: React.FC<Marker> = ({
+  color,
+  markerContent,
+  markerIcon,
+  markerLabel,
+  onClick,
+  point,
+  variant = 'default',
+}) => {
   return (
     <>
       {variant === 'default' && <Pin color={color} onClick={onClick} icon={<Building01SolidIcon />} />}
@@ -109,7 +122,7 @@ const Marker: React.FC<Marker> = ({ color, markerContent, markerIcon, markerLabe
   );
 };
 
-export default function Map({ controls, marker = 'default', points, zoom, className }: MapProps) {
+export default function Map({ controls, marker = 'default', points, pointsNavigation, zoom, className }: MapProps) {
   // console.log('Map points:', points);
   // console.log('Points length:', points.length);
   // console.log(
@@ -129,6 +142,8 @@ export default function Map({ controls, marker = 'default', points, zoom, classN
   const { currentTheme } = useContext(ThemeContext);
   const ref = useRef<HTMLDivElement>(null);
   const center = useMemo(() => (points.length > 0 ? getCenter(points) : { latitude: 0, longitude: 0 }), [points]);
+
+  const navigate = useNavigate();
 
   //   if (points.length === 0) {
   //     return (
@@ -213,6 +228,7 @@ export default function Map({ controls, marker = 'default', points, zoom, classN
             markerLabel={marker === 'needle' ? (point as any)?.markerLabel : ''}
             variant={marker}
             point={point}
+            onClick={pointsNavigation ? () => navigate(`/levelnow/customers/${point?.clientId}`) : () => {}}
           />,
         );
 
