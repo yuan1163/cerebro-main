@@ -16,21 +16,18 @@ type Props = {
 
 export const DomainMap: React.FC<Props> = observer(({ className, expended, expendIconButton = false, onClick }) => {
   const locations = useLocations() || [];
-  console.log('DomainMap locations:', locations);
-
-  const points = locations
-    .filter((location) => location.latitude && location.longitude)
-    .map((location) => ({
-      latitude: location.latitude!,
-      longitude: location.longitude!,
-    }));
-
-  console.log('DomainMap points:', points);
+  const locationsWithBandType = locations.filter((location) => location.bandType === 1);
+  const points = locationsWithBandType.flatMap((location) =>
+    location.clients.map((client) => ({
+      latitude: client.latitude!,
+      longitude: client.longitude!,
+    })),
+  );
 
   return (
     <>
       <Card fullWidth elevation='xs'>
-        <Map controls={true} points={points} zoom={1} className='rounded-md' />
+        <Map controls={true} points={points} zoom={3} className='rounded-md' />
       </Card>
     </>
   );

@@ -174,6 +174,7 @@ export type ResponsibleTanksParameters = {
 
 // api/Locations
 export type Locations = {
+  clients: LocationClient[];
   locationId: number;
   bandType: 1 | null;
   creationDate: string;
@@ -199,6 +200,24 @@ export type Locations = {
   shape: number[][] | null;
   maxUsers: number | null;
 }[];
+export type LocationClient = {
+  clientId: number;
+  clientName: string;
+  clientNo: string;
+  clientContact: string;
+  clientPhone: string;
+  clientCountry: string;
+  clientState: string;
+  clientCity: string;
+  clientAddress: string;
+  clientPostCode: string;
+  brandId: number;
+  salesRepUserId: string | null;
+  customerServiceRepUserId: string | null;
+  locationId: number;
+  longitude: number;
+  latitude: number;
+};
 
 // -----
 
