@@ -23,9 +23,10 @@ type Props = {
   title: string;
   subtitle: string;
   map: React.ReactNode;
+  onArrowClick?: () => void;
 };
 
-export const AccordionItem: React.FC<Props> = ({ title, subtitle, map }) => {
+export const AccordionItem: React.FC<Props> = ({ title, subtitle, map, onArrowClick }) => {
   return (
     <Grid direction='column' className='gap-5 p-5 py-0'>
       <CardContent className='p-0'>
@@ -47,6 +48,7 @@ export const AccordionItem: React.FC<Props> = ({ title, subtitle, map }) => {
             color='icon-secondary'
             size='lg'
             variant='text'
+            onClick={onArrowClick}
           >
             <ArrowRightLineIcon />
           </IconButton>

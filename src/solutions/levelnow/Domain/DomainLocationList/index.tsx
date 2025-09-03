@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // utils
 import { t } from '@core/utils/translate';
@@ -62,6 +63,7 @@ const LazyMapComponent: React.FC<{
   subtitle: string;
 }> = ({ client, title, subtitle }) => {
   const [containerRef, isVisible] = useIntersectionObserver();
+  const navigate = useNavigate();
 
   const points = [
     {
@@ -78,6 +80,7 @@ const LazyMapComponent: React.FC<{
         map={
           <div className='w-full h-40'>{isVisible && <Map points={points} zoom={16} className='rounded-[10px]' />}</div>
         }
+        onArrowClick={() => navigate(`/levelnow/customers/customer/${client.clientId}`)}
       />
     </div>
   );
