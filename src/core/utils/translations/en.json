@@ -3560,5 +3560,17 @@
       "translation": "News and updates",
       "notes": "Label for checkbox"
     }
+  },
+  "modules": {
+    "tanks": {
+      "label": {
+        "translation": "Tanks"
+      }
+    },
+    "customers": {
+      "label": {
+        "translation": "Customers"
+      }
+    }
   }
 }
