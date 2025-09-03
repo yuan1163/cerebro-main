@@ -121,7 +121,11 @@ export const SolutionsSelector: React.FC<Props> = observer(({ children, classNam
     {
       id: 5,
       title: Solutions.levelnow,
-      subtitle: t('solutions.solutionsSelector.levelnow.listItem.caption', 'LevelNOW', 'Label for LevelNOW menu item.'),
+      subtitle: t(
+        'solutions.solutionsSelector.levelnow.listItem.caption',
+        'Motor Oil management system',
+        'Label for LevelNOW menu item.',
+      ),
       icon: <VideoRecorderLineIcon />,
     },
   ];
