@@ -69,9 +69,10 @@ export const getBatteryLevelIcon = (batteryLevel: number): React.ReactNode => {
 export const getDeviceConnection = (connection: number): React.ReactNode => {
   switch (connection) {
     case 0:
-      return <span className='font-medium text-16 tracking-32 text-error-500'>Off-line</span>;
-    case 1:
       return <span className='font-medium text-16 tracking-32 text-neutral-900'>On-line</span>;
+    case 1:
+      return <span className='font-medium text-16 tracking-32 text-error-500'>Off-line</span>;
+
     default:
       return null;
   }
