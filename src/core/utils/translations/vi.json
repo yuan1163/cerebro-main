@@ -3987,6 +3987,21 @@
       "label": {
         "translation": "Khách hàng"
       }
+    },
+    "events": {
+      "label": {
+        "translation": "Sự kiện"
+      }
+    },
+    "snapshot": {
+      "label": {
+        "translation": "Ảnh chụp nhanh"
+      }
+    },
+    "users": {
+      "label": {
+        "translation": "Người dùng"
+      }
     }
   }
 }

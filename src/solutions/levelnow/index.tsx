@@ -62,6 +62,7 @@ export const modules: Modules = [
   {
     system: 'levelnow',
     url: 'tanks',
+    // title: t('modules.tanks.label', 'Tanks', 'Tanks page title.'),
     title: 'modules.tanks.label',
     icon: <TankLineIcon />,
     iconSolid: <TankSolidIcon />,
@@ -70,6 +71,7 @@ export const modules: Modules = [
   {
     system: 'levelnow',
     url: 'customers',
+    // title: t('modules.customers.label', 'Customers', 'Customers page title.'),
     title: 'modules.customers.label',
     icon: <CustomerLineIcon />,
     iconSolid: <CustomerSolidIcon />,
@@ -78,7 +80,8 @@ export const modules: Modules = [
   {
     system: 'levelnow',
     url: 'events',
-    title: 'events.events.label',
+    // title: t('modules.events.label', 'Events', 'Events page title.'),
+    title: 'modules.events.label',
     icon: <EventsLineIcon />,
     iconSolid: <EventsSolidIcon />,
     component: <Events />,
@@ -86,14 +89,16 @@ export const modules: Modules = [
   {
     system: 'levelnow',
     url: 'snapshot',
-    title: 'snapshot.snapshot.label',
+    // title: t('modules.snapshot.label', 'Snapshot', 'Snapshot page title.'),
+    title: 'modules.snapshot.label',
     icon: <SnapshotLineIcon />,
     iconSolid: <SnapshotSolidIcon />,
     component: <Snapshot />,
   },
   {
     url: 'users',
-    title: 'user.usersTitle.label',
+    // title: t('modules.users.label', 'Users', 'Users page title.'),
+    title: 'modules.users.label',
     icon: <UsersLineIcon />,
     iconSolid: <UsersSolidIcon />,
     component: <Users />,

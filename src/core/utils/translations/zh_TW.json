@@ -3972,12 +3972,27 @@
   "modules": {
     "tanks": {
       "label": {
-        "translation": "坦克"
+        "translation": "油箱"
       }
     },
     "customers": {
       "label": {
         "translation": "客戶"
+      }
+    },
+    "events": {
+      "label": {
+        "translation": "事件"
+      }
+    },
+    "snapshot": {
+      "label": {
+        "translation": "快照"
+      }
+    },
+    "users": {
+      "label": {
+        "translation": "用戶"
       }
     }
   }
