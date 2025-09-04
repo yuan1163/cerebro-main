@@ -26,6 +26,7 @@ import ErrorIcon from '@assets/icons/LevelNOW/snapshot/error.svg?component';
 import { useTanks } from '@core/storages/controllers/levelnow/tank';
 import PieChartCard from '@core/ui/levelnow/PieChartCard';
 import { Link } from '@nodemodules/react-router-dom/dist';
+import { observer } from 'mobx-react';
 
 /* Mock network ratio data, replace this with actual data from tanks,
 and use function in @core/utils/levelnow/tankLevelCounts.ts
@@ -34,8 +35,7 @@ const MOCK_NETWORK_RATIO = [
   { range: 'Wifi', value: 0, color: '#00AAF3' },
   { range: 'Sims 4G', value: 100, color: '#FFC9C9' },
 ];
-
-export default function SnapshotPage() {
+const SnapshotPage = observer(() => {
   const tanks = useTanks();
 
   const tankLevelCounts = formatTankLevelCounts(tanks);
@@ -66,7 +66,9 @@ export default function SnapshotPage() {
             </div>
           </CardHeader>
           <CardContent className='flex flex-col flex-1 gap-8 p-5'>
-            <h3 className='font-medium text-md tracking-32 text-neutral-900'>Oil Level</h3>
+            <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+              {t('snapshot.oillevel.label', 'Oil Level', 'Oil Level title.')}
+            </h3>
             {/* Center donut chart */}
             <div className='relative flex items-center justify-center w-full'>
               <ResponsiveContainer width={240} height={240}>
@@ -89,7 +91,9 @@ export default function SnapshotPage() {
                 </PieChart>
               </ResponsiveContainer>
               <div className='absolute inset-0 flex flex-col items-center justify-center'>
-                <span className='text-base font-medium tracking-32 text-neutral-900'>Total Tanks</span>
+                <span className='text-base font-medium tracking-32 text-neutral-900'>
+                  {t('snapshot.totaltanks.label', 'Total Tanks', 'Total tanks in the system.')}
+                </span>
                 <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{tanks.length}</span>
               </div>
             </div>
@@ -97,8 +101,8 @@ export default function SnapshotPage() {
             {/* Legend */}
             <div className='flex flex-col gap-5'>
               <div className='flex items-center justify-between pb-3 font-medium border-b border-neutral-200 text-md tracking-32 text-neutral-900'>
-                <div>Status</div>
-                <div>Total</div>
+                <div>{t('general.status.label', 'Status', 'Status label in table header.')}</div>
+                <div>{t('general.total.label', 'Total', 'Total label in table header.')}</div>
               </div>
               <div className='flex flex-col gap-5'>
                 {tankLevelCounts.map((level) => (
@@ -129,7 +133,9 @@ export default function SnapshotPage() {
               <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
                 {levelLowAmounts}
               </div>
-              <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+                {t('snapshot.networkconnection.label', 'Network Connection', 'Network Connection title.')}
+              </h3>
               <PieChartCard data={MOCK_NETWORK_RATIO} status='ratio' />
             </CardContent>
           </Card>
@@ -152,7 +158,9 @@ export default function SnapshotPage() {
               <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
                 {offlineAmounts}
               </div>
-              <h3 className='font-medium text-md tracking-32 text-neutral-900'>Gateway Status</h3>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+                {t('snapshot.gatewaystatus.label', 'Gateway Status', 'Gateway Status title.')}
+              </h3>
               <PieChartCard data={tankGatewayRatio} status='ratio' />
             </CardContent>
           </Card>
@@ -175,7 +183,9 @@ export default function SnapshotPage() {
               <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
                 {batteryLowAmounts}
               </div>
-              <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+                {t('snapshot.batterylevel.label', 'Battery Level', 'Battery Level title.')}
+              </h3>
               <PieChartCard data={tankBatteryLowRatio} status='ratio' />
             </CardContent>
           </Card>
@@ -198,7 +208,9 @@ export default function SnapshotPage() {
               <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
                 {errorAmounts}
               </div>
-              <h3 className='font-medium text-md tracking-32 text-neutral-900'>Network Connection</h3>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+                {t('snapshot.sensors.label', 'Sensors', 'Sensors title.')}
+              </h3>
               <PieChartCard data={tankErrorRatio} status='ratio' />
             </CardContent>
           </Card>
@@ -206,4 +218,5 @@ export default function SnapshotPage() {
       </div>
     </>
   );
-}
+});
+export default SnapshotPage;

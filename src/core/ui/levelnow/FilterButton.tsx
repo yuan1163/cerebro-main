@@ -17,7 +17,7 @@ export default function FilterButton({ counts = 0, onClick, onClear }: FilterBut
     <div className='flex items-center gap-3'>
       {isActived && (
         <span onClick={onClear} className='font-medium cursor-pointer text-md text-primary-500'>
-          Clear
+          {t('solutions.events.clearFilters', 'Clear', 'Clear all active filters.')}
         </span>
       )}
       <Button

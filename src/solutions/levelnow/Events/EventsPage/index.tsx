@@ -372,7 +372,7 @@ const EventsPage = observer(() => {
                         <span className='font-medium text-md tracking-32 text-neutral-900'>
                           {selectedDevice
                             ? selectedDevice
-                            : t('events.filter.deviceAll', 'Device Reference: All', 'Device reference all filter')}
+                            : t('filter.deviceAll.label', 'Device Reference: All', 'Device reference all filter')}
                         </span>
                         <ChevronsUpDownIcon />
                       </Listbox.Button>

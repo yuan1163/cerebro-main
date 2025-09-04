@@ -47,7 +47,7 @@ export default function TankList({ tanks, selectedTankId, searchQuery }: TankLis
     ),
   );
   const deviceOptions = [
-    { label: t('filter.device.all', 'Device Reference: All', 'Filter option to show all devices'), value: 'all' },
+    { label: t('filter.deviceAll.label', 'Device Reference: All', 'Filter option to show all devices'), value: 'all' },
     ...deviceReferences.map((ref) => ({ label: ref, value: ref })),
   ];
 

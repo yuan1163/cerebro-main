@@ -1964,6 +1964,21 @@
         "translation": "Tìm kiếm"
       }
     },
+    "status": {
+      "label": {
+        "translation": "Trạng thái"
+      }
+    },
+    "total": {
+      "label": {
+        "translation": "Tổng cộng"
+      }
+    },
+    "ratio": {
+      "label": {
+        "translation": "Tỷ lệ %"
+      }
+    },
     "collapse": {
       "label": {
         "translation": "Thu gọn"
@@ -3847,12 +3862,12 @@
   "filter": {
     "level": {
       "label": {
-        "translation": "Mức độing:"
+        "translation": "Cân bằng:"
       }
     },
-    "device": {
-      "all": {
-        "translation": "Tham chiếu thiết bị: All"
+    "deviceAll": {
+      "label": {
+        "translation": "Tham chiếu thiết bị: Tất cả"
       }
     }
   },
@@ -3892,6 +3907,36 @@
     "overview": {
       "label": {
         "translation": "Tổng quan"
+      }
+    },
+    "oillevel": {
+      "label": {
+        "translation": "Mức dầu"
+      }
+    },
+    "totaltanks": {
+      "label": {
+        "translation": "Tổng số bồn chứa"
+      }
+    },
+    "networkconnection": {
+      "label": {
+        "translation": "Kết nối mạng"
+      }
+    },
+    "gatewaystatus": {
+      "label": {
+        "translation": "Trạng thái cổng"
+      }
+    },
+    "batterylevel": {
+      "label": {
+        "translation": "Mức pin"
+      }
+    },
+    "sensors": {
+      "label": {
+        "translation": "Cảm biến"
       }
     }
   },

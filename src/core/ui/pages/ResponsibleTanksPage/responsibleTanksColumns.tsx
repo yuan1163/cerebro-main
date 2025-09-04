@@ -2,6 +2,7 @@ import { ColumnDef } from '@tanstack/react-table';
 import IssueCell from '@core/ui/levelnow/IssueCell';
 import { Button } from '@core/ui/components/Button';
 import { formatDate } from '@core/utils/levelnow/format';
+import { t } from '@core/utils/translate';
 
 // Icon
 import ChevronUpIcon from '@assets/icons/LevelNOW/chevrons-up.svg?component';
@@ -20,7 +21,7 @@ export const columns: ColumnDef<Event>[] = [
             column.toggleSorting(column.getIsSorted() === 'asc');
           }}
         >
-          Event Date
+          {t('events.table.eventDate.label', 'Event Date', 'Event date column header')}
           {column.getIsSorted() === 'asc' ? (
             <ChevronDownIcon className='w-5 h-5 rotate-180' />
           ) : (
@@ -39,7 +40,7 @@ export const columns: ColumnDef<Event>[] = [
     header: ({ column }) => {
       return (
         <Button>
-          Issue
+          {t('events.table.issue.label', 'Issue', 'Issue column header')}
           <ChevronDownIcon className='w-5 h-5 ' />
         </Button>
       );
@@ -92,7 +93,7 @@ export const columns: ColumnDef<Event>[] = [
     header: ({ column }) => {
       return (
         <Button>
-          Tank No.
+          {t('events.table.tankNo.label', 'Tank No.', 'Tank number column header')}
           <ChevronDownIcon className='w-5 h-5 ' />
         </Button>
       );
@@ -114,7 +115,7 @@ export const columns: ColumnDef<Event>[] = [
     header: ({ column }) => {
       return (
         <Button>
-          Customer No.
+          {t('events.table.customerNo.label', 'Customer No.', 'Customer number column header')}
           <ChevronDownIcon className='w-5 h-5 ' />
         </Button>
       );
@@ -136,7 +137,7 @@ export const columns: ColumnDef<Event>[] = [
     header: ({ column }) => {
       return (
         <Button>
-          Address
+          {t('events.table.address.label', 'Address', 'Address column header')}
           <ChevronDownIcon className='w-5 h-5 ' />
         </Button>
       );
@@ -151,7 +152,7 @@ export const columns: ColumnDef<Event>[] = [
     header: ({ column }) => {
       return (
         <Button>
-          Contact
+          {t('events.table.contact.label', 'Contact', 'Contact column header')}
           <ChevronDownIcon className='w-5 h-5 ' />
         </Button>
       );
@@ -173,7 +174,7 @@ export const columns: ColumnDef<Event>[] = [
     header: ({ column }) => {
       return (
         <Button>
-          Sales Rep
+          {t('events.table.salesRep.label', 'Sales Rep', 'Sales representative column header')}
           <ChevronDownIcon className='w-5 h-5 ' />
         </Button>
       );

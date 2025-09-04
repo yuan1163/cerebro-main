@@ -1966,6 +1966,21 @@
         "translation": "搜索"
       }
     },
+    "status": {
+      "label": {
+        "translation": "状态"
+      }
+    },
+    "total": {
+      "label": {
+        "translation": "总计"
+      }
+    },
+    "ratio": {
+      "label": {
+        "translation": "比率 %"
+      }
+    },
     "collapse": {
       "label": {
         "translation": "隐藏"
@@ -3849,12 +3864,12 @@
   "filter": {
     "level": {
       "label": {
-        "translation": "Leveling:"
+        "translation": "液位："
       }
     },
-    "device": {
-      "all": {
-        "translation": "Device Reference: All"
+    "deviceAll": {
+      "label": {
+        "translation": "设备参考：全部"
       }
     }
   },
@@ -3894,6 +3909,36 @@
     "overview": {
       "label": {
         "translation": "概览"
+      }
+    },
+    "oillevel": {
+      "label": {
+        "translation": "油位"
+      }
+    },
+    "totaltanks": {
+      "label": {
+        "translation": "总油箱数"
+      }
+    },
+    "networkconnection": {
+      "label": {
+        "translation": "网络连接"
+      }
+    },
+    "gatewaystatus": {
+      "label": {
+        "translation": "网关状态"
+      }
+    },
+    "batterylevel": {
+      "label": {
+        "translation": "电池电量"
+      }
+    },
+    "sensors": {
+      "label": {
+        "translation": "传感器"
       }
     }
   },

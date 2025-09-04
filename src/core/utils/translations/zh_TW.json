@@ -1961,6 +1961,21 @@
         "translation": "搜尋"
       }
     },
+    "status": {
+      "label": {
+        "translation": "狀態"
+      }
+    },
+    "total": {
+      "label": {
+        "translation": "總計"
+      }
+    },
+    "ratio": {
+      "label": {
+        "translation": "比率 %"
+      }
+    },
     "collapse": {
       "label": {
         "translation": "隱藏"
@@ -3844,12 +3859,12 @@
   "filter": {
     "level": {
       "label": {
-        "translation": "Leveling:"
+        "translation": "液位："
       }
     },
-    "device": {
-      "all": {
-        "translation": "Device Reference: All"
+    "deviceAll": {
+      "label": {
+        "translation": "設備參考：全部"
       }
     }
   },
@@ -3889,6 +3904,36 @@
     "overview": {
       "label": {
         "translation": "概覽"
+      }
+    },
+    "oillevel": {
+      "label": {
+        "translation": "油位"
+      }
+    },
+    "totaltanks": {
+      "label": {
+        "translation": "總油箱數"
+      }
+    },
+    "networkconnection": {
+      "label": {
+        "translation": "網路連接"
+      }
+    },
+    "gatewaystatus": {
+      "label": {
+        "translation": "網關狀態"
+      }
+    },
+    "batterylevel": {
+      "label": {
+        "translation": "電池電量"
+      }
+    },
+    "sensors": {
+      "label": {
+        "translation": "感應器"
       }
     }
   },

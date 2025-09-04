@@ -206,8 +206,8 @@
   "user": {
     "firstNameInput": {
       "label": {
-        "translation": "FIRST NAME",
-        "notes": "user first name label."
+        "translation": "First Name",
+        "notes": "User first name input label."
       }
     },
     "firstNameInputPlaceholder": {
@@ -218,8 +218,8 @@
     },
     "lastNameInput": {
       "label": {
-        "translation": "LAST NAME",
-        "notes": "user last name label."
+        "translation": "Last Name",
+        "notes": "User last name input label."
       }
     },
     "lastNameInputPlaceholder": {
@@ -230,8 +230,8 @@
     },
     "emailInput": {
       "label": {
-        "translation": "EMAIL",
-        "notes": "user email label."
+        "translation": "Email",
+        "notes": "User email input Label."
       }
     },
     "emailInputPlaceholder": {
@@ -352,16 +352,22 @@
         "notes": "User contacts."
       }
     },
+    "addGroupButton": {
+      "label": {
+        "translation": "Add group",
+        "notes": "Add Group Button."
+      }
+    },
     "notifications": {
       "label": {
         "translation": "Notifications",
         "notes": "Notifications."
       }
     },
-    "addGroupButton": {
+    "admin": {
       "label": {
-        "translation": "Add group",
-        "notes": "Add Group Button."
+        "translation": "Admin",
+        "notes": "The main controller & manager."
       }
     },
     "addUser": {
@@ -380,12 +386,6 @@
       "label": {
         "translation": "Select User Groups",
         "notes": "Select User Groups."
-      }
-    },
-    "admin": {
-      "label": {
-        "translation": "Admin",
-        "notes": "The main controller & manager."
       }
     },
     "editUser": {
@@ -484,12 +484,6 @@
         "notes": "All Users."
       }
     },
-    "contact": {
-      "label": {
-        "translation": "Contact",
-        "notes": "User contact."
-      }
-    },
     "allGroups": {
       "label": {
         "translation": "All Groups",
@@ -508,6 +502,12 @@
         "notes": "Label for the plural form of user, indicating multiple individuals."
       }
     },
+    "contact": {
+      "label": {
+        "translation": "Contact",
+        "notes": "User contact."
+      }
+    },
     "memberSince": {
       "label": {
         "translation": "Member since",
@@ -524,24 +524,6 @@
       "label": {
         "translation": "User Details",
         "notes": "Information about a user."
-      }
-    },
-    "userTitle": {
-      "label": {
-        "translation": "User",
-        "notes": "User Title."
-      }
-    },
-    "usernameInput": {
-      "label": {
-        "translation": "Username",
-        "notes": "Username input label."
-      }
-    },
-    "avatar": {
-      "label": {
-        "translation": "Avatar",
-        "notes": "User avatar."
       }
     },
     "phoneInputPlaceholder": {
@@ -585,13 +567,31 @@
         "translation": "New password",
         "notes": "New password"
       }
+    },
+    "userTitle": {
+      "label": {
+        "translation": "User",
+        "notes": "User Title."
+      }
+    },
+    "usernameInput": {
+      "label": {
+        "translation": "Username",
+        "notes": "Username input label."
+      }
+    },
+    "avatar": {
+      "label": {
+        "translation": "Avatar",
+        "notes": "User avatar."
+      }
     }
   },
   "location": {
     "locations": {
       "label": {
-        "translation": "CATEGORY",
-        "notes": "user category label."
+        "translation": "Locations",
+        "notes": "Locations."
       }
     },
     "selectUserLocations": {
@@ -606,10 +606,22 @@
         "notes": "Location title."
       }
     },
+    "building": {
+      "label": {
+        "translation": "Building",
+        "notes": "Building."
+      }
+    },
     "current": {
       "label": {
         "translation": "Current",
         "notes": "Current location."
+      }
+    },
+    "designated": {
+      "label": {
+        "translation": "Designated",
+        "notes": "Designated location."
       }
     },
     "locationSchema": {
@@ -628,18 +640,6 @@
       "label": {
         "translation": "Spaces",
         "notes": "Interiors within a building."
-      }
-    },
-    "building": {
-      "label": {
-        "translation": "Building",
-        "notes": "Building."
-      }
-    },
-    "designated": {
-      "label": {
-        "translation": "Designated",
-        "notes": "Designated location."
       }
     },
     "zone": {
@@ -962,34 +962,16 @@
         "notes": "Add asset button."
       }
     },
-    "addClassButton": {
-      "label": {
-        "translation": "Add class",
-        "notes": "Add class button."
-      }
-    },
     "noDevices": {
       "label": {
         "translation": "No Devices",
         "notes": "No devices."
       }
     },
-    "cameras": {
+    "addClassButton": {
       "label": {
-        "translation": "Cameras",
-        "notes": "Cameras."
-      }
-    },
-    "unassignedDevice": {
-      "label": {
-        "translation": "Unassigned device",
-        "notes": "Unassigned device."
-      }
-    },
-    "trackerID": {
-      "label": {
-        "translation": "Tracker ID",
-        "notes": "Tracker ID."
+        "translation": "Add class",
+        "notes": "Add class button."
       }
     },
     "deviceIsOffline": {
@@ -1004,10 +986,28 @@
         "notes": "Device is online."
       }
     },
+    "unassignedDevice": {
+      "label": {
+        "translation": "Unassigned device",
+        "notes": "Unassigned device."
+      }
+    },
     "assetTitle": {
       "label": {
         "translation": "Asset",
         "notes": "Collection of hardware tools and gadgets."
+      }
+    },
+    "cameras": {
+      "label": {
+        "translation": "Cameras",
+        "notes": "Cameras."
+      }
+    },
+    "trackerID": {
+      "label": {
+        "translation": "Tracker ID",
+        "notes": "Tracker ID."
       }
     },
     "editAsset": {
@@ -1094,12 +1094,6 @@
         "notes": "Device name."
       }
     },
-    "deviceID": {
-      "label": {
-        "translation": "Device ID",
-        "notes": "Device ID."
-      }
-    },
     "handheld": {
       "label": {
         "translation": "Handheld",
@@ -1116,6 +1110,18 @@
       "label": {
         "translation": "Stationary",
         "notes": "Stationary Device."
+      }
+    },
+    "deviceID": {
+      "label": {
+        "translation": "Device ID",
+        "notes": "Device ID."
+      }
+    },
+    "editClass": {
+      "label": {
+        "translation": "Edit class",
+        "notes": "Adjusting class configuration."
       }
     },
     "groups": {
@@ -1148,10 +1154,16 @@
         "notes": "Remove Device Button."
       }
     },
-    "editClass": {
+    "viewAsset": {
       "label": {
-        "translation": "Edit class",
-        "notes": "Adjusting class configuration."
+        "translation": "View asset",
+        "notes": "Navigate to the asset."
+      }
+    },
+    "removeFromClass": {
+      "label": {
+        "translation": "Remove from class",
+        "notes": "Remove asset from class."
       }
     },
     "group": {
@@ -1166,16 +1178,10 @@
         "notes": "Group name for assets."
       }
     },
-    "viewAsset": {
+    "isOnline": {
       "label": {
-        "translation": "View asset",
-        "notes": "Navigate to the asset."
-      }
-    },
-    "removeFromClass": {
-      "label": {
-        "translation": "Remove from class",
-        "notes": "Remove asset from class."
+        "translation": "Online",
+        "notes": "Device is online."
       }
     },
     "circuit": {
@@ -1194,12 +1200,6 @@
       "label": {
         "translation": "Assignee",
         "notes": "The person responsible for a specific device."
-      }
-    },
-    "isOnline": {
-      "label": {
-        "translation": "Online",
-        "notes": "Device is online."
       }
     },
     "device": {
@@ -1420,16 +1420,10 @@
         }
       }
     },
-    "lowEvent": {
+    "criticalEvent": {
       "label": {
-        "translation": "Low",
-        "notes": "Low priority notification."
-      }
-    },
-    "mediumEvent": {
-      "label": {
-        "translation": "Medium",
-        "notes": "Medium priority notification."
+        "translation": "Critical",
+        "notes": "Critical event."
       }
     },
     "highEvent": {
@@ -1438,10 +1432,16 @@
         "notes": "High priority notification."
       }
     },
-    "criticalEvent": {
+    "mediumEvent": {
       "label": {
-        "translation": "Critical",
-        "notes": "Critical event."
+        "translation": "Medium",
+        "notes": "Medium priority notification."
+      }
+    },
+    "lowEvent": {
+      "label": {
+        "translation": "Low",
+        "notes": "Low priority notification."
       }
     },
     "warning": {
@@ -1490,10 +1490,6 @@
       "issueAll": {
         "translation": "Issue: All",
         "notes": "Issue all filter"
-      },
-      "deviceAll": {
-        "translation": "Device Reference: All",
-        "notes": "Device reference all filter"
       }
     },
     "eventsHistory": {
@@ -1672,12 +1668,6 @@
         "notes": "Overview title."
       }
     },
-    "customers": {
-      "label": {
-        "translation": "Customers",
-        "notes": "Customers page title."
-      }
-    },
     "events": {
       "label": {
         "translation": "Events",
@@ -1686,6 +1676,12 @@
       "clearFilters": {
         "translation": "Clear",
         "notes": "Clear all active filters."
+      }
+    },
+    "customers": {
+      "label": {
+        "translation": "Customers",
+        "notes": "Customers page title."
       }
     },
     "ISOReport": {
@@ -1700,6 +1696,12 @@
         "notes": "Tanks page title."
       }
     },
+    "smartPoles": {
+      "label": {
+        "translation": "Smart Poles",
+        "notes": "Smart Poles"
+      }
+    },
     "commandCenter": {
       "label": {
         "translation": "Command Center",
@@ -1712,70 +1714,10 @@
         "notes": "Back to Dashboard button or link."
       }
     },
-    "smartPoles": {
-      "label": {
-        "translation": "Smart Poles",
-        "notes": "Smart Poles"
-      }
-    },
     "system": {
       "label": {
         "translation": "System",
         "notes": "System."
-      }
-    },
-    "power": {
-      "label": {
-        "translation": "Power",
-        "notes": "Power metrics."
-      }
-    },
-    "powerCaption": {
-      "label": {
-        "translation": "Explore power metrics of selected area",
-        "notes": "Power metrics caption."
-      }
-    },
-    "lighting": {
-      "label": {
-        "translation": "Lighting",
-        "notes": "Lighting metrics."
-      }
-    },
-    "lightingCaption": {
-      "label": {
-        "translation": "Observe what happened with lights",
-        "notes": "Lighting metrics caption."
-      }
-    },
-    "environment": {
-      "label": {
-        "translation": "Environment",
-        "notes": "Environment metrics."
-      }
-    },
-    "networks": {
-      "label": {
-        "translation": "Networks",
-        "notes": "Networks metrics."
-      }
-    },
-    "networksCaption": {
-      "label": {
-        "translation": "Check connections and networks",
-        "notes": "Networks metrics caption."
-      }
-    },
-    "cameras": {
-      "label": {
-        "translation": "Cameras",
-        "notes": "Cameras metrics."
-      }
-    },
-    "camerasCaption": {
-      "label": {
-        "translation": "Observe what happened on cameras",
-        "notes": "Cameras metrics caption."
       }
     },
     "solutionsPage": {
@@ -1880,6 +1822,60 @@
           "translation": "Installed",
           "notes": "Label for installed chip."
         }
+      }
+    },
+    "power": {
+      "label": {
+        "translation": "Power",
+        "notes": "Power metrics."
+      }
+    },
+    "powerCaption": {
+      "label": {
+        "translation": "Explore power metrics of selected area",
+        "notes": "Power metrics caption."
+      }
+    },
+    "lighting": {
+      "label": {
+        "translation": "Lighting",
+        "notes": "Lighting metrics."
+      }
+    },
+    "lightingCaption": {
+      "label": {
+        "translation": "Observe what happened with lights",
+        "notes": "Lighting metrics caption."
+      }
+    },
+    "environment": {
+      "label": {
+        "translation": "Environment",
+        "notes": "Environment metrics."
+      }
+    },
+    "networks": {
+      "label": {
+        "translation": "Networks",
+        "notes": "Networks metrics."
+      }
+    },
+    "networksCaption": {
+      "label": {
+        "translation": "Check connections and networks",
+        "notes": "Networks metrics caption."
+      }
+    },
+    "cameras": {
+      "label": {
+        "translation": "Cameras",
+        "notes": "Cameras metrics."
+      }
+    },
+    "camerasCaption": {
+      "label": {
+        "translation": "Observe what happened on cameras",
+        "notes": "Cameras metrics caption."
       }
     },
     "totalSmartPoles": {
@@ -2026,28 +2022,16 @@
         "notes": "Issue description."
       }
     },
-    "priorityRequired": {
+    "allAssignee": {
       "label": {
-        "translation": "Priority is required.",
-        "notes": "Priority field is mandatory."
-      }
-    },
-    "createIssue": {
-      "label": {
-        "translation": "Create Issue",
-        "notes": "Create issue title."
+        "translation": "All assignee",
+        "notes": "All assignees for the issue."
       }
     },
     "allPriority": {
       "label": {
         "translation": "All priority",
         "notes": "Priority of issue."
-      }
-    },
-    "allAssignee": {
-      "label": {
-        "translation": "All assignee",
-        "notes": "All assignees for the issue."
       }
     },
     "allStatus": {
@@ -2066,6 +2050,18 @@
       "label": {
         "translation": "There are no issues here yet",
         "notes": "No issues caption."
+      }
+    },
+    "priorityRequired": {
+      "label": {
+        "translation": "Priority is required.",
+        "notes": "Priority field is mandatory."
+      }
+    },
+    "createIssue": {
+      "label": {
+        "translation": "Create Issue",
+        "notes": "Create issue title."
       }
     },
     "issueCreated": {
@@ -2130,6 +2126,12 @@
         "notes": "Save button."
       }
     },
+    "clearButton": {
+      "label": {
+        "translation": "Clear",
+        "notes": "Clear button."
+      }
+    },
     "phone": {
       "label": {
         "translation": "Phone",
@@ -2140,12 +2142,6 @@
       "label": {
         "translation": "Email",
         "notes": "Email."
-      }
-    },
-    "clearButton": {
-      "label": {
-        "translation": "Clear",
-        "notes": "Clear button."
       }
     },
     "all": {
@@ -2220,6 +2216,12 @@
         "notes": "Various options hat users can apply to refine the displayed content."
       }
     },
+    "view": {
+      "label": {
+        "translation": "View",
+        "notes": "Button or link that allows to access additional information."
+      }
+    },
     "updateSuccessfully": {
       "label": {
         "translation": "Updated successfully",
@@ -2262,10 +2264,28 @@
         "notes": "Confirms the selected choices."
       }
     },
-    "view": {
+    "scheme": {
       "label": {
-        "translation": "View",
-        "notes": "Button or link that allows to access additional information."
+        "translation": "Scheme",
+        "notes": "A structured representation of a particular concept."
+      }
+    },
+    "list": {
+      "label": {
+        "translation": "List",
+        "notes": "Collection of items."
+      }
+    },
+    "seeMore": {
+      "label": {
+        "translation": "See More",
+        "notes": "See more button or link."
+      }
+    },
+    "access": {
+      "label": {
+        "translation": "Access",
+        "notes": "Ability to enter."
       }
     },
     "matchPassword": {
@@ -2292,40 +2312,10 @@
         "notes": "Endpoint of something."
       }
     },
-    "access": {
-      "label": {
-        "translation": "Access",
-        "notes": "Ability to enter."
-      }
-    },
-    "scheme": {
-      "label": {
-        "translation": "Scheme",
-        "notes": "A structured representation of a particular concept."
-      }
-    },
-    "list": {
-      "label": {
-        "translation": "List",
-        "notes": "Collection of items."
-      }
-    },
-    "seeMore": {
-      "label": {
-        "translation": "See More",
-        "notes": "See more button or link."
-      }
-    },
     "details": {
       "label": {
         "translation": "More Details",
         "notes": "Button or link that allows to access additional information."
-      }
-    },
-    "removeButton": {
-      "label": {
-        "translation": "Remove",
-        "notes": "Remove button."
       }
     },
     "copyLink": {
@@ -2334,10 +2324,22 @@
         "notes": "Action that allows to duplicate a web link or URL."
       }
     },
-    "expandView": {
+    "removeButton": {
       "label": {
-        "translation": "Expand view",
-        "notes": "Expand view button."
+        "translation": "Remove",
+        "notes": "Remove button."
+      }
+    },
+    "changePassword": {
+      "label": {
+        "translation": "Change Password",
+        "notes": "Change Password button."
+      }
+    },
+    "submitButton": {
+      "label": {
+        "translation": "Submit",
+        "notes": "Submit button."
       }
     },
     "accessDeniedCaption": {
@@ -2364,16 +2366,10 @@
         "notes": "Take me home button or link."
       }
     },
-    "changePassword": {
+    "expandView": {
       "label": {
-        "translation": "Change Password",
-        "notes": "Change Password button."
-      }
-    },
-    "submitButton": {
-      "label": {
-        "translation": "Submit",
-        "notes": "Submit button."
+        "translation": "Expand view",
+        "notes": "Expand view button."
       }
     },
     "isLoading": {
@@ -2392,6 +2388,18 @@
       "label": {
         "translation": "No Data",
         "notes": "Absence of information."
+      }
+    },
+    "status": {
+      "label": {
+        "translation": "Status",
+        "notes": "Label for status column in table."
+      }
+    },
+    "total": {
+      "label": {
+        "translation": "Total",
+        "notes": "Label for total amount."
       }
     },
     "upload": {
@@ -2424,12 +2432,6 @@
         "notes": "Collapse button."
       }
     },
-    "closePopover": {
-      "label": {
-        "translation": "Close popover",
-        "notes": "Close popover."
-      }
-    },
     "summary": {
       "label": {
         "translation": "Summary",
@@ -2442,16 +2444,16 @@
         "notes": "Preposition indicating belonging."
       }
     },
+    "closePopover": {
+      "label": {
+        "translation": "Close popover",
+        "notes": "Close popover."
+      }
+    },
     "information": {
       "label": {
         "translation": "Information",
         "notes": "Data about a particular subject."
-      }
-    },
-    "selectLocationFromList": {
-      "label": {
-        "translation": "Select location",
-        "notes": "Select location from the list."
       }
     },
     "logo": {
@@ -2466,10 +2468,16 @@
         "notes": "An app."
       }
     },
-    "uploadPhoto": {
+    "selectLocationFromList": {
       "label": {
-        "translation": "Upload photo",
-        "notes": "Action to transfer an image to an application."
+        "translation": "Select location",
+        "notes": "Select location from the list."
+      }
+    },
+    "ratio": {
+      "label": {
+        "translation": "Ratio %",
+        "notes": "Label for ratio percentage."
       }
     },
     "goToButton": {
@@ -2478,10 +2486,10 @@
         "notes": "Label for Go to button."
       }
     },
-    "grid": {
+    "uploadPhoto": {
       "label": {
-        "translation": "Grid",
-        "notes": "Organizes content into columns and rows."
+        "translation": "Upload photo",
+        "notes": "Action to transfer an image to an application."
       }
     },
     "imageFileChangeButton": {
@@ -2500,6 +2508,12 @@
       "label": {
         "translation": "Change",
         "notes": "Change button."
+      }
+    },
+    "grid": {
+      "label": {
+        "translation": "Grid",
+        "notes": "Organizes content into columns and rows."
       }
     },
     "index": {
@@ -2640,16 +2654,16 @@
         "notes": "Emission of CO2 in kilogram."
       }
     },
-    "maximumPower": {
-      "label": {
-        "translation": "Maximum Power",
-        "notes": "Maximum Power title"
-      }
-    },
     "historicalTrend": {
       "label": {
         "translation": "Historical Trend",
         "notes": "Historical Trend title"
+      }
+    },
+    "maximumPower": {
+      "label": {
+        "translation": "Maximum Power",
+        "notes": "Maximum Power title"
       }
     },
     "currentKW": {
@@ -2870,6 +2884,12 @@
         "notes": "Select circuit."
       }
     },
+    "enterProcessName": {
+      "label": {
+        "translation": "Enter process name",
+        "notes": "Enter process name."
+      }
+    },
     "addProductButton": {
       "label": {
         "translation": "Add Product",
@@ -2894,28 +2914,10 @@
         "notes": "Emission/amount"
       }
     },
-    "enterProcessName": {
-      "label": {
-        "translation": "Enter process name",
-        "notes": "Enter process name."
-      }
-    },
     "contractCapacity": {
       "label": {
         "translation": "Contract capacity",
         "notes": "Contract capacity."
-      }
-    },
-    "editHistory": {
-      "label": {
-        "translation": "Edit History",
-        "notes": "Edit History."
-      }
-    },
-    "deleteHistory": {
-      "label": {
-        "translation": "Delete History",
-        "notes": "Delete History."
       }
     },
     "editProcess": {
@@ -2930,6 +2932,18 @@
         "notes": "Delete Process."
       }
     },
+    "editHistory": {
+      "label": {
+        "translation": "Edit History",
+        "notes": "Edit History."
+      }
+    },
+    "deleteHistory": {
+      "label": {
+        "translation": "Delete History",
+        "notes": "Delete History."
+      }
+    },
     "valueInput": {
       "label": {
         "translation": "Value",
@@ -2941,48 +2955,6 @@
         "translation": "Edit contract capacity",
         "notes": "Edit contract capacity."
       }
-    }
-  },
-  "label": {
-    "locations": {
-      "translation": "Locations",
-      "notes": "Text for input label"
-    },
-    "priority": {
-      "low": {
-        "translation": "Low",
-        "notes": "Text for Low priority"
-      },
-      "medium": {
-        "translation": "Medium",
-        "notes": "Text for Medium priority"
-      },
-      "high": {
-        "translation": "High",
-        "notes": "Text for High priority"
-      }
-    },
-    "allLocations": {
-      "label": {
-        "translation": "All locations",
-        "notes": "All locations."
-      }
-    },
-    "timezone": {
-      "translation": "Timezone",
-      "notes": "Text for input label"
-    },
-    "location": {
-      "translation": "Location",
-      "notes": "Text for Location input label"
-    },
-    "assetPriority": {
-      "translation": "Priority",
-      "notes": "Text for Priority input label"
-    },
-    "language": {
-      "translation": "Language",
-      "notes": "Text for input language label"
     }
   },
   "date": {
@@ -3259,6 +3231,48 @@
       }
     }
   },
+  "label": {
+    "locations": {
+      "translation": "Locations",
+      "notes": "Text for input label"
+    },
+    "priority": {
+      "low": {
+        "translation": "Low",
+        "notes": "Text for Low priority"
+      },
+      "medium": {
+        "translation": "Medium",
+        "notes": "Text for Medium priority"
+      },
+      "high": {
+        "translation": "High",
+        "notes": "Text for High priority"
+      }
+    },
+    "allLocations": {
+      "label": {
+        "translation": "All locations",
+        "notes": "All locations."
+      }
+    },
+    "timezone": {
+      "translation": "Timezone",
+      "notes": "Text for input label"
+    },
+    "location": {
+      "translation": "Location",
+      "notes": "Text for Location input label"
+    },
+    "assetPriority": {
+      "translation": "Priority",
+      "notes": "Text for Priority input label"
+    },
+    "language": {
+      "translation": "Language",
+      "notes": "Text for input language label"
+    }
+  },
   "modules": {
     "tanks": {
       "label": {
@@ -3289,6 +3303,16 @@
         "translation": "Users",
         "notes": "Users page title."
       }
+    }
+  },
+  "alerts": {
+    "raised": {
+      "translation": "Alert",
+      "notes": "Alert raised prefix text"
+    },
+    "resolved": {
+      "translation": "Resolved",
+      "notes": "Alert resolved prefix text"
     }
   },
   "login": {
@@ -3373,16 +3397,6 @@
         "translation": "Forgot password",
         "notes": "Title of Forgot password Page."
       }
-    }
-  },
-  "alerts": {
-    "raised": {
-      "translation": "Alert",
-      "notes": "Alert raised prefix text"
-    },
-    "resolved": {
-      "translation": "Resolved",
-      "notes": "Alert resolved prefix text"
     }
   },
   "company": {
@@ -3479,6 +3493,56 @@
         "translation": "Overview",
         "notes": "Snapshot overview."
       }
+    },
+    "oillevel": {
+      "label": {
+        "translation": "Oil Level",
+        "notes": "Oil Level title."
+      }
+    },
+    "totaltanks": {
+      "label": {
+        "translation": "Total Tanks",
+        "notes": "Total tanks in the system."
+      }
+    },
+    "networkconnection": {
+      "label": {
+        "translation": "Network Connection",
+        "notes": "Network Connection title."
+      }
+    },
+    "gatewaystatus": {
+      "label": {
+        "translation": "Gateway Status",
+        "notes": "Gateway Status title."
+      }
+    },
+    "batterylevel": {
+      "label": {
+        "translation": "Battery Level",
+        "notes": "Battery Level title."
+      }
+    },
+    "sensors": {
+      "label": {
+        "translation": "Sensors",
+        "notes": "Sensors title."
+      }
+    }
+  },
+  "filter": {
+    "deviceAll": {
+      "label": {
+        "translation": "Device Reference: All",
+        "notes": "Filter option to show all devices"
+      }
+    },
+    "level": {
+      "label": {
+        "translation": "Leveling:",
+        "notes": "Label for level filter"
+      }
     }
   },
   "notification": {
@@ -3486,20 +3550,6 @@
       "label": {
         "translation": "No Comments",
         "notes": "No Comments yet"
-      }
-    }
-  },
-  "filter": {
-    "level": {
-      "label": {
-        "translation": "Leveling:",
-        "notes": "Label for level filter"
-      }
-    },
-    "device": {
-      "all": {
-        "translation": "Device Reference: All",
-        "notes": "Filter option to show all devices"
       }
     }
   },

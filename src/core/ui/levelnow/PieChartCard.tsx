@@ -3,6 +3,7 @@ import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
 import { PieChartData } from '@core/api/types';
 import { Card } from '../components/Card';
 import { CardContent } from '../components/CardContent';
+import { t } from '@core/utils/translate';
 
 type PieChartCardProps = {
   data: PieChartData;
@@ -15,9 +16,9 @@ export default function PieChartCard({ data, status, total, name }: PieChartCard
   const amounts = (() => {
     switch (status) {
       case 'total':
-        return 'Total';
+        return t('general.total.label', 'Total', 'Label for total amount.');
       case 'ratio':
-        return 'Ratio %';
+        return t('general.ratio.label', 'Ratio %', 'Label for ratio percentage.');
       default:
         return 'Unknown';
     }
@@ -56,7 +57,7 @@ export default function PieChartCard({ data, status, total, name }: PieChartCard
         {/* Legend */}
         <div className='flex flex-col gap-4 p-2'>
           <div className='flex items-center justify-between pb-3 font-medium border-b border-neutral-200 text-md tracking-32 text-neutral-900'>
-            <div>Status</div>
+            <div>{t('general.status.label', 'Status', 'Label for status column in table.')}</div>
             <div>{amounts}</div>
           </div>
           <div className='flex flex-col gap-4'>

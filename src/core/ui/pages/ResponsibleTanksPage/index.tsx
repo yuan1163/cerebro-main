@@ -1,16 +1,15 @@
 import { useState, useRef } from 'react';
 import { columns } from './responsibleTanksColumns';
 import { useNavigate } from 'react-router-dom';
+import { observer } from 'mobx-react';
 
 // core ui components
 import { Card } from '@core/ui/components/Card';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { CardContent } from '@core/ui/components/CardContent';
-import { Button } from '@core/ui/components/Button';
+import FilterButton from '@core/ui/levelnow/FilterButton';
 
 import { Header } from '@core/ui/cerebro/Header';
-import Tabs from '@core/ui/levelnow/Tabs';
-import SearchBar from '@core/ui/levelnow/SearchBar';
 import NumberBadge from '@core/ui/levelnow/NumberBadge';
 
 import { Scrollbar } from '@core/ui/components/Scrollbar';
@@ -24,7 +23,6 @@ import { useEvents } from '@core/storages/controllers/levelnow/event';
 import { Event, EventsIssue } from '@core/api/types';
 
 // icons
-import FilterIcon from '@assets/icons/LevelNOW/filter.svg?component';
 import CheckIcon from '@assets/icons/LevelNOW/check.svg?component';
 import ChevronsUpDownIcon from '@assets/icons/LevelNOW/chevrons-up-down.svg?component';
 import EventsIcon from '@assets/icons/line/notification-text.svg?component';
@@ -58,7 +56,7 @@ const issueOptions = [
   { label: 'Oil Filling', value: 'Oil Filling' },
 ];
 
-const ResponsibleTanksPage = () => {
+const ResponsibleTanksPage = observer(() => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedIssue, setSelectedIssue] = useState<keyof Event | null>(null);
@@ -204,11 +202,6 @@ const ResponsibleTanksPage = () => {
     setIsFilterOpen(false);
   };
 
-  const handleRowClick = (rowData: any) => {
-    console.log(rowData);
-    navigate(`tank/${rowData.tankId}`);
-  };
-
   return (
     <>
       <Header
@@ -225,25 +218,11 @@ const ResponsibleTanksPage = () => {
             <NumberBadge variant='gray' number={events.length} />
           </div>
           <div>
-            {activeFilterCount > 0 && (
-              <Button
-                variant='text'
-                onClick={handleClearFilters}
-                className='mr-3 font-medium text-md text-primary-500 hover:text-primary-600'
-              >
-                {t('solutions.events.clearFilters', 'Clear', 'Clear all active filters.')}
-              </Button>
-            )}
-            <Button
-              variant='outlined'
-              startIcon={<FilterIcon />}
-              iconColor='neutral-900'
+            <FilterButton
               onClick={() => setIsFilterOpen(!isFilterOpen)}
-              className='gap-2'
-            >
-              <span>Filters</span>
-              {activeFilterCount > 0 && <NumberBadge variant='actived' number={activeFilterCount} />}
-            </Button>
+              counts={activeFilterCount}
+              onClear={handleClearFilters}
+            />
           </div>
         </CardHeader>
         <CardContent className='flex-1 p-0'>
@@ -309,7 +288,9 @@ const ResponsibleTanksPage = () => {
                         )}
                       >
                         <span className='font-medium text-md tracking-32 text-neutral-900'>
-                          {selectedIssue ? selectedIssue : 'Issue: All'}
+                          {selectedIssue
+                            ? selectedIssue
+                            : t('events.filter.issueAll', 'Issue: All', 'Issue all filter')}
                         </span>
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
@@ -356,7 +337,9 @@ const ResponsibleTanksPage = () => {
                         )}
                       >
                         <span className='font-medium text-md tracking-32 text-neutral-900'>
-                          {selectedDevice ? selectedDevice : 'Device Reference: All'}
+                          {selectedDevice
+                            ? selectedDevice
+                            : t('filter.deviceAll.label', 'Device Reference: All', 'Device reference all filter')}
                         </span>
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
@@ -392,17 +375,11 @@ const ResponsibleTanksPage = () => {
               </div>
             </div>
           )}
-          <DataTable
-            columns={columns}
-            data={filteredEvents}
-            fixHeight={277}
-            onRowClick={handleRowClick}
-            isFiltering={isFiltering}
-          />
+          <DataTable columns={columns} data={filteredEvents} fixHeight={277} isFiltering={isFiltering} />
         </CardContent>
       </Card>
     </>
   );
-};
+});
 
 export default ResponsibleTanksPage;
