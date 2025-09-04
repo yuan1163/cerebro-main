@@ -117,11 +117,11 @@ export default function TankList({ tanks, selectedTankId, searchQuery }: TankLis
       </CardHeader>
       <CardContent
         scrollable
-        className={cn(openFilter ? 'h-[calc(100vh-360px)]' : 'h-[calc(100vh-244px)]', 'px-5 pb-5')}
+        className={cn(openFilter ? 'h-[calc(100vh-360px)]' : 'h-[calc(100vh-244px)]', 'px-0 pb-5')}
         disablePaddingTop
       >
         <Scrollbar>
-          <div className='flex flex-col pr-2.5'>
+          <div className='flex flex-col'>
             {filteredTanks.map((tank) => (
               <TankItem key={tank.tankId} tank={tank} selectedTankId={selectedTankId} />
             ))}
@@ -140,7 +140,7 @@ function TankItem({ tank, selectedTankId }: TankItemProps) {
       to={`/levelnow/tanks/tank/${tank.tankId}`}
       className={cn(
         itemClass,
-        'grid items-center grid-cols-[2fr_auto_auto_auto] gap-5 border-b py-7 border-neutral-200',
+        'grid items-center grid-cols-[2fr_auto_auto_auto] gap-5 border-b py-7 border-neutral-200 px-5',
       )}
     >
       {/* name */}
