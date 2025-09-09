@@ -2580,24 +2580,23 @@
       },
       "pinPoint": {
         "label": {
-          "translation": "xác định"
+          "translation": "IvedaRTLS"
+        },
+        "content": {
+          "label": {
+            "translation": "Theo dõi mọi thứ thông minh hơn."
+          }
         },
         "options": {
           "01": {
-            "translation": "Tài sản"
-          },
-          "03": {
-            "translation": "Quy tắc và cảnh báo"
-          },
-          "04": {
-            "translation": "Bản đồ nhiệt"
+            "translation": "Theo dõi nhân viên, thiết bị và nhiều hơn nữa"
           },
           "02": {
-            "translation": "Theo dõi tài sản và con người"
+            "translation": "Quản lý hàng tồn kho thông minh hơn"
+          },
+          "03": {
+            "translation": "Theo dõi vị trí chính xác"
           }
-        },
-        "content": {
-          "translation": "Iveda RTLS quản lý tập trung các thiết bị theo dõi và cảm biến IoT, đồng thời hiển thị chúng trên bản đồ để biết vị trí chính xác."
         }
       },
       "learnMoreButton": {
@@ -2606,83 +2605,88 @@
         }
       },
       "ems": {
-        "options": {
-          "01": {
-            "translation": "Quản lý năng lượng"
-          },
-          "02": {
-            "translation": "Tiết kiệm điện thông minh"
-          },
-          "03": {
-            "translation": "Theo dõi nhu cầu"
-          },
-          "04": {
-            "translation": "Phân tích sử dụng năng lượng"
-          }
+        "label": {
+          "translation": "Hệ thống Quản lý Năng lượng"
         },
         "content": {
-          "translation": "Giải pháp Hệ thống quản lý năng lượng Iveda để giám sát và phân tích việc sử dụng năng lượng và theo dõi nhu cầu."
+          "label": {
+            "translation": "Đo lường dấu chân carbon của bạn."
+          }
         },
-        "label": {
-          "translation": "Hệ thống quản lý năng lượng"
+        "options": {
+          "01": {
+            "translation": "Quản lý điện năng thông minh hơn"
+          },
+          "02": {
+            "translation": "Theo dõi lượng khí thải carbon"
+          },
+          "03": {
+            "translation": "Đơn giản hóa tuân thủ năng lượng"
+          }
         }
       },
       "utilus": {
         "label": {
-          "translation": "sử dụng"
+          "translation": "Utilus"
+        },
+        "content": {
+          "label": {
+            "translation": "Tạo ra cuộc sống thông minh hơn."
+          }
         },
         "options": {
           "01": {
-            "translation": "Quản lý năng lượng"
+            "translation": "Biến đổi đèn thành phố của bạn"
           },
           "02": {
-            "translation": "Kiểm soát tia cực tím và ánh sáng"
+            "translation": "Kết nối các cảm biến môi trường"
           },
           "03": {
-            "translation": "Đo lường môi trường"
-          },
-          "04": {
-            "translation": "Cảnh báo bảo mật và tiện ích"
+            "translation": "Giám sát và bảo vệ thành phố của bạn"
           }
-        },
-        "content": {
-          "translation": "Nền tảng IoT quản lý dữ liệu năng lượng, ánh sáng, bảo mật và môi trường bằng cách sử dụng các cảm biến thông minh, điện toán nhúng và điện toán đám mây."
         }
       },
       "ivedaAI": {
         "label": {
           "translation": "IvedaAI"
         },
-        "options": {
-          "02": {
-            "translation": "Bảo vệ chu vi"
-          },
-          "04": {
-            "translation": "Lịch sử ghi âm"
-          },
-          "01": {
-            "translation": "Giám sát video thời gian thực"
-          },
-          "03": {
-            "translation": "Nhận dạng đối tượng và khuôn mặt"
+        "content": {
+          "label": {
+            "translation": "Biến tầm nhìn thành hành động."
           }
         },
-        "content": {
-          "translation": "IvedaAI™ sử dụng công nghệ deep learning để tìm kiếm video AI nâng cao, tương tự như Google để tìm kiếm văn bản."
+        "options": {
+          "01": {
+            "translation": "Phát hiện và cảnh báo thời gian thực"
+          },
+          "02": {
+            "translation": "Tìm kiếm pháp y dưới 2 giây"
+          },
+          "03": {
+            "translation": "Hơn 30 công cụ phân tích AI"
+          }
         }
       },
       "LevelNOW": {
         "label": {
-          "translation": "Mức độNOW"
+          "translation": "LevelNOW"
         }
       },
       "levelnow": {
+        "content": {
+          "label": {
+            "translation": "Cách mạng hóa quản lý chất lỏng."
+          }
+        },
         "options": {
-          "02": {
-            "translation": "Perimeter protection"
+          "01": {
+            "translation": "Giám sát mức dầu và chất lỏng đơn giản"
           },
-          "04": {
-            "translation": "History của recordings"
+          "02": {
+            "translation": "Theo dõi GPS với khả năng hiển thị tập trung"
+          },
+          "03": {
+            "translation": "Mở khóa bán hàng và vận hành nhanh hơn"
           }
         }
       },

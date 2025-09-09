@@ -1730,18 +1730,24 @@
           "translation": "IvedaRTLS",
           "notes": "IvedaRTLS solution title."
         },
+        "content": {
+          "label": {
+            "translation": "Track anything smarter.",
+            "notes": "Brief IvedaRTLS solution description label."
+          }
+        },
         "options": {
           "01": {
-            "translation": "Assets",
-            "notes": "Assets option label."
+            "translation": "Track staff, equipment, and more",
+            "notes": "Track staff, equipment, and more option label."
+          },
+          "02": {
+            "translation": "Manage inventory smarter",
+            "notes": "Manage inventory smarter option label."
           },
           "03": {
-            "translation": "Rules and alerts",
-            "notes": "Rules and alerts option label."
-          },
-          "04": {
-            "translation": "Heatmaps",
-            "notes": "Heatmaps option label."
+            "translation": "Accurate location tracking",
+            "notes": "Accurate location tracking option label."
           }
         }
       },
@@ -1752,22 +1758,28 @@
         }
       },
       "ems": {
+        "label": {
+          "translation": "IvedaEMS",
+          "notes": "Energy Management System solution Title."
+        },
+        "content": {
+          "label": {
+            "translation": "Measure your carbon footprint.",
+            "notes": "Brief EMS solution description label."
+          }
+        },
         "options": {
           "01": {
-            "translation": "Power management",
-            "notes": "Power management option label."
+            "translation": "Smarter power management",
+            "notes": "Smarter power management option label."
           },
           "02": {
-            "translation": "Smart power saving",
-            "notes": "Smart power saving option label."
+            "translation": "Track carbon output",
+            "notes": "Track carbon output option label."
           },
           "03": {
-            "translation": "Demand tracking",
-            "notes": "Demand tracking option label."
-          },
-          "04": {
-            "translation": "Energy usage analytics",
-            "notes": "Energy usage analytics option label."
+            "translation": "Simplify energy compliance",
+            "notes": "Simplify energy compliance option label."
           }
         }
       },
@@ -1776,10 +1788,24 @@
           "translation": "Utilus",
           "notes": "Utilus solution title."
         },
+        "content": {
+          "label": {
+            "translation": "Powering smarter living.",
+            "notes": "Brief Utilus solution description Label."
+          }
+        },
         "options": {
           "01": {
-            "translation": "Energy management",
-            "notes": "Energy management option label."
+            "translation": "Transform your city lights",
+            "notes": "Transform your city lights option label."
+          },
+          "02": {
+            "translation": "Connect environmental sensors",
+            "notes": "Connect environmental sensors option label."
+          },
+          "03": {
+            "translation": "Monitor and protect your city",
+            "notes": "Monitor and protect your city option label."
           }
         }
       },
@@ -1788,14 +1814,24 @@
           "translation": "IvedaAI",
           "notes": "IvedaAI solution title."
         },
+        "content": {
+          "label": {
+            "translation": "Transform vision into action.",
+            "notes": "Brief IvedaAI solution description label."
+          }
+        },
         "options": {
-          "02": {
-            "translation": "Perimeter protection",
-            "notes": "Perimeter protection option label."
+          "01": {
+            "translation": "Real-time detection & alerts",
+            "notes": "Real-time detection & alerts option label."
           },
-          "04": {
-            "translation": "History of recordings",
-            "notes": "History of recordings option label."
+          "02": {
+            "translation": "Sub-2 second forensic search",
+            "notes": "Sub-2 second forensic search option label."
+          },
+          "03": {
+            "translation": "30+ AI analytic engines",
+            "notes": "30+ AI analytic engines option label."
           }
         }
       },
@@ -1806,14 +1842,24 @@
         }
       },
       "levelnow": {
+        "content": {
+          "label": {
+            "translation": "Revolutionize liquid management.",
+            "notes": "Brief LevelNOW solution description label."
+          }
+        },
         "options": {
-          "02": {
-            "translation": "Perimeter protection",
-            "notes": "Perimeter protection option label."
+          "01": {
+            "translation": "Simple oil & fluid level monitoring",
+            "notes": "Simple oil & fluid level monitoring option label."
           },
-          "04": {
-            "translation": "History of recordings",
-            "notes": "History of recordings option label."
+          "02": {
+            "translation": "GPS tracking with centralized visibility",
+            "notes": "GPS tracking with centralized visibility option label."
+          },
+          "03": {
+            "translation": "Unlock faster sales & operations",
+            "notes": "Unlock faster sales & operations option label."
           }
         }
       },

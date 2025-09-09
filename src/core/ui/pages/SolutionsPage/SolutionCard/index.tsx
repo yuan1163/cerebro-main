@@ -77,7 +77,7 @@ export const SolutionCard: React.FC<Props> = ({ solution, installed }) => {
   return (
     <Card className={cn(styles['card'], installed && styles['card-installed'])} elevation='xs'>
       {installed && solution.solutionLink && <Link className={styles['link']} to={`${solution.solutionLink}`} />}
-      <Card square>
+      <Card square className='flex-1'>
         <CardContent
           fullHeight
           fullWidth

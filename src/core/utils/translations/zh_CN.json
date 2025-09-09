@@ -2023,7 +2023,7 @@
     },
     "goToButton": {
       "label": {
-        "translation": "Go to"
+        "translation": "前往"
       }
     },
     "uploadPhoto": {
@@ -2582,24 +2582,23 @@
       },
       "pinPoint": {
         "label": {
-          "translation": "查明"
+          "translation": "IvedaRTLS"
+        },
+        "content": {
+          "label": {
+            "translation": "更智能地跟踪一切。"
+          }
         },
         "options": {
           "01": {
-            "translation": "资产"
-          },
-          "03": {
-            "translation": "规则和警报"
-          },
-          "04": {
-            "translation": "热图"
+            "translation": "跟踪员工、设备等"
           },
           "02": {
-            "translation": "资产和人员跟踪"
+            "translation": "更智能地管理库存"
+          },
+          "03": {
+            "translation": "精确的位置跟踪"
           }
-        },
-        "content": {
-          "translation": "Iveda RTLS 集中管理物联网跟踪器和传感器，并将其显示在地图上以获取准确位置。"
         }
       },
       "learnMoreButton": {
@@ -2608,69 +2607,66 @@
         }
       },
       "ems": {
-        "options": {
-          "01": {
-            "translation": "能源管理"
-          },
-          "02": {
-            "translation": "智能省电"
-          },
-          "03": {
-            "translation": "需求追踪"
-          },
-          "04": {
-            "translation": "能源使用分析"
-          }
+        "label": {
+          "translation": "IvedaEMS"
         },
         "content": {
-          "translation": "Iveda 能源管理系统解决方案用于监控和分析能源使用情况和需求跟踪。"
+          "label": {
+            "translation": "测量您的碳足迹。"
+          }
         },
-        "label": {
-          "translation": "能源管理系统"
+        "options": {
+          "01": {
+            "translation": "更智能的电源管理"
+          },
+          "02": {
+            "translation": "跟踪碳排放"
+          },
+          "03": {
+            "translation": "简化能源合规性"
+          }
         }
       },
       "utilus": {
         "label": {
-          "translation": "IVEDA Utilus (智能电杆)"
+          "translation": "Utilus"
+        },
+        "content": {
+          "label": {
+            "translation": "驱动更智能的生活。"
+          }
         },
         "options": {
           "01": {
-            "translation": "能源管理"
+            "translation": "改变您的城市灯光"
           },
           "02": {
-            "translation": "紫外线和照明控制"
+            "translation": "连接环境传感器"
           },
           "03": {
-            "translation": "环境测量"
-          },
-          "04": {
-            "translation": "安全和实用警报"
+            "translation": "监控和保护您的城市"
           }
-        },
-        "content": {
-          "translation": "使用智能传感器、嵌入式和云计算管理能源、照明、安全和环境数据的物联网平台。"
         }
       },
       "ivedaAI": {
         "label": {
-          "translation": "Iveda人工智能"
-        },
-        "options": {
-          "02": {
-            "translation": "周界防护"
-          },
-          "04": {
-            "translation": "录音历史"
-          },
-          "01": {
-            "translation": "实时视频监控"
-          },
-          "03": {
-            "translation": "物体和人脸识别"
-          }
+          "translation": "IvedaAI"
         },
         "content": {
-          "translation": "IvedaAI™ 使用深度学习技术进行高级人工智能视频搜索，类似于 Google 的文本搜索。"
+          "label": {
+            "translation": "将愿景转化为行动。"
+          }
+        },
+        "options": {
+          "01": {
+            "translation": "实时检测和警报"
+          },
+          "02": {
+            "translation": "低於 2 秒取证搜索"
+          },
+          "03": {
+            "translation": "30+ AI 分析引擎"
+          }
         }
       },
       "LevelNOW": {
@@ -2679,12 +2675,20 @@
         }
       },
       "levelnow": {
+        "content": {
+          "label": {
+            "translation": "革命性的液体管理。"
+          }
+        },
         "options": {
-          "02": {
-            "translation": "Perimeter protection"
+          "01": {
+            "translation": "简单的油液和流体液位监控"
           },
-          "04": {
-            "translation": "History of recordings"
+          "02": {
+            "translation": "具有集中可见性的 GPS 跟踪"
+          },
+          "03": {
+            "translation": "解锁更快的销售和运营"
           }
         }
       },
