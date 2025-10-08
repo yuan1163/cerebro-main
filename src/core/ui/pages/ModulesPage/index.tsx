@@ -11,9 +11,13 @@ import { Modules, getModulesRoutes } from '@core/ui/types';
 import { useLocations } from '@core/storages/controllers/locations';
 import { useAuth } from '@core/storages/auth';
 
+// utils
+import { useRoleBasedModules } from '@core/utils/roleBasedAccess';
+
 // components
 import { ModulePageLayout } from '@core/ui/templates/ModulePageLayout';
 import { ModuleNavigator } from './ModuleNavigator';
+import { ProtectedRoute } from '@core/ui/components/ProtectedRoute';
 
 // pages
 import { WaitingPage } from '../WaitingPage';
@@ -39,8 +43,11 @@ export const ModulesPage: React.FC<Props> = observer(({ modules }) => {
   const levelnowModules = modules.filter((mod) => mod.system === 'levelnow');
   const levelnowRoutes = getModulesRoutes(levelnowModules);
 
+  // Filter modules for navigation (hide restricted modules from sidebar)
+  const filteredModulesForNavigation = useRoleBasedModules(modules);
+
   return (
-    <ModulePageLayout navigator={<ModuleNavigator modules={modules} />}>
+    <ModulePageLayout navigator={<ModuleNavigator modules={filteredModulesForNavigation} />}>
       <Routes>
         {levelnowRoutes.map((mod) => {
           let path: string;
@@ -49,7 +56,16 @@ export const ModulesPage: React.FC<Props> = observer(({ modules }) => {
           } else {
             path = `/*`;
           }
-          return <Route key={mod.url} path={path} element={mod.component} />;
+
+          // Add protection for snapshot module
+          const element =
+            mod.url === 'snapshot' ? (
+              <ProtectedRoute moduleUrl='snapshot'>{mod.component}</ProtectedRoute>
+            ) : (
+              mod.component
+            );
+
+          return <Route key={mod.url} path={path} element={element} />;
         })}
         {routes.map((mod) => {
           let path: string;

@@ -547,7 +547,7 @@ export type User = {
   lastLoginDate: Date;
   lastLoginDateMs: number;
   permissions: UserPermissions[];
-  role: UserRole | undefined;
+  role?: UserRole | undefined;
   phone?: string;
   language: string;
   locationIds: number[];
