@@ -170,7 +170,7 @@ export const columns: ColumnDef<Event>[] = [
     },
   },
   {
-    accessorKey: 'salesRep',
+    accessorKey: 'salesRepUserName',
     header: ({ column }) => {
       return (
         <Button>
@@ -180,7 +180,7 @@ export const columns: ColumnDef<Event>[] = [
       );
     },
     cell: ({ row }) => {
-      const salesRep = row.getValue('salesRep') as string;
+      const salesRep = row.getValue('salesRepUserName') as string;
       return <div className='text-16 font-medium text-[#000]'>{salesRep || '-'}</div>;
     },
   },

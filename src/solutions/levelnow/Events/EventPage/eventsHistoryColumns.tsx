@@ -4,10 +4,9 @@ import { Button } from '@core/ui/components/Button';
 import { formatDate } from '@core/utils/levelnow/format';
 
 // Icon
-import ChevronUpIcon from '@assets/icons/LevelNOW/chevrons-up.svg?component';
 import ChevronDownIcon from '@assets/icons/LevelNOW/chevrons-down.svg?component';
 // Types
-import { Event, EventsHistoryItem } from '@core/api/types';
+import { EventsHistoryItem } from '@core/api/types';
 import { EventsIssue } from '@core/api/types';
 import { t } from '@core/utils/translate';
 

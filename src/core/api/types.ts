@@ -45,7 +45,8 @@ export type Event = {
   address: string;
   contact: string;
   phone: string;
-  salesRep: string;
+  salesRepUserId: string;
+  salesRepUserName: string;
   eventLevelLow: 1 | null;
   eventFault: 1 | null;
   eventBatteryLow: 1 | null;
