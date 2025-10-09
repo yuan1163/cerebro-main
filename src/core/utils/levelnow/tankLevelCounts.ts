@@ -1,4 +1,4 @@
-import { PieChartData, TankLevelCounts, TankListItem } from '@core/api/types';
+import { TankLevelCounts, TankListItem } from '@core/api/types';
 
 // Type guard to check if data is TankLevelCounts
 const isTankLevelCounts = (data: TankLevelCounts | TankListItem[]): data is TankLevelCounts => {
@@ -35,47 +35,5 @@ export const formatTankLevelCounts = (tankData: TankLevelCounts | TankListItem[]
     { range: '<100L', value: levelLowCounts, color: '#FF4545' },
   ];
 
-  return data;
-};
-
-export const getTankGatewayRatio = (tankListItem: TankListItem[]): PieChartData => {
-  const total = tankListItem.length;
-  const onlineAmounts = tankListItem.filter((item) => item.deviceConnection === 1).length;
-  const offlineAmounts = total - onlineAmounts;
-  const onlineRatio = parseFloat(((onlineAmounts / total) * 100).toFixed(1));
-  const offlineRatio = parseFloat(((offlineAmounts / total) * 100).toFixed(1));
-
-  const data: PieChartData = [
-    { range: 'On-line', value: onlineRatio, color: '#00AAF3' },
-    { range: 'Off-line', value: offlineRatio, color: '#FFC9C9' },
-  ];
-  return data;
-};
-
-export const getTankBatteryRatio = (tankListItem: TankListItem[]): PieChartData => {
-  const total = tankListItem.length;
-  const lowAmounts = tankListItem.filter((item) => item.deviceBattery === 1).length;
-  const highAmounts = total - lowAmounts;
-  const lowRatio = parseFloat(((lowAmounts / total) * 100).toFixed(1));
-  const highRatio = parseFloat(((highAmounts / total) * 100).toFixed(1));
-
-  const data: PieChartData = [
-    { range: 'High', value: highRatio, color: '#00AAF3' },
-    { range: 'Low', value: lowRatio, color: '#FFC9C9' },
-  ];
-  return data;
-};
-
-export const getTankErorRatio = (tankListItem: TankListItem[]): PieChartData => {
-  const total = tankListItem.length;
-  const errorAmounts = tankListItem.filter((item) => item.deviceFault === 1).length;
-  const noErrorAmounts = total - errorAmounts;
-  const errorRatio = parseFloat(((errorAmounts / total) * 100).toFixed(1));
-  const noErrorRatio = parseFloat(((noErrorAmounts / total) * 100).toFixed(1));
-
-  const data: PieChartData = [
-    { range: 'OK', value: noErrorRatio, color: '#00AAF3' },
-    { range: 'Sensor Error', value: errorRatio, color: '#FFC9C9' },
-  ];
   return data;
 };

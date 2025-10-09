@@ -8,12 +8,7 @@ import { Header } from '@core/ui/cerebro/Header';
 
 // utils
 import { t } from '@core/utils/translate';
-import {
-  formatTankLevelCounts,
-  getTankBatteryRatio,
-  getTankErorRatio,
-  getTankGatewayRatio,
-} from '@core/utils/levelnow/tankLevelCounts';
+import { formatTankLevelCounts } from '@core/utils/levelnow/tankLevelCounts';
 
 // icons
 import SnapshotLineIcon from '@assets/icons/LevelNOW/sidebar/snapshot-line.svg?component';
@@ -27,6 +22,10 @@ import { useTanks } from '@core/storages/controllers/levelnow/tank';
 import PieChartCard from '@core/ui/levelnow/PieChartCard';
 import { Link } from '@nodemodules/react-router-dom/dist';
 import { observer } from 'mobx-react';
+import { useEvents } from '@core/storages/controllers/levelnow/event';
+
+// types
+import { EventType, PieChartData } from '@core/api/types';
 
 /* Mock network ratio data, replace this with actual data from tanks,
 and use function in @core/utils/levelnow/tankLevelCounts.ts
@@ -37,16 +36,40 @@ const MOCK_NETWORK_RATIO = [
 ];
 const SnapshotPage = observer(() => {
   const tanks = useTanks();
-
   const tankLevelCounts = formatTankLevelCounts(tanks);
-  const tankGatewayRatio = getTankGatewayRatio(tanks);
-  const tankBatteryLowRatio = getTankBatteryRatio(tanks);
-  const tankErrorRatio = getTankErorRatio(tanks);
 
-  const levelLowAmounts = tankLevelCounts.find((item) => item.range === '<100L')?.value || 0;
-  const offlineAmounts = tanks.filter((tank) => tank.deviceConnection === 1).length || 0;
-  const batteryLowAmounts = tanks.filter((tank) => tank.deviceBattery === 1).length || 0;
-  const errorAmounts = tanks.filter((tank) => tank.deviceFault === 1).length || 0;
+  const events = useEvents();
+  const levelLowEvents = useEvents({ eventType: EventType.LowLevel });
+  const offlineEvents = useEvents({ eventType: EventType.Offline });
+  const batteryLowEvents = useEvents({ eventType: EventType.BatteryLow });
+  const sensorErrorEvents = useEvents({ eventType: EventType.SensorError });
+
+  const totalEvents = events.length || 0;
+  const levelLowAmounts = levelLowEvents.length || 0;
+  const offlineAmounts = offlineEvents.length || 0;
+  const batteryLowAmounts = batteryLowEvents.length || 0;
+  const errorAmounts = sensorErrorEvents.length || 0;
+
+  const getRatio = (labels: string[], amounts: number, total: number): PieChartData => {
+    const restAmounts = total - amounts;
+    const data: PieChartData = [
+      {
+        range: labels[0],
+        value: total === 0 ? 0 : parseFloat(((restAmounts / total) * 100).toFixed(1)),
+        color: '#00AAF3',
+      },
+      {
+        range: labels[1],
+        value: total === 0 ? 0 : parseFloat(((amounts / total) * 100).toFixed(1)),
+        color: '#FFC9C9',
+      },
+    ];
+    return data;
+  };
+
+  const gatewayRatio = getRatio(['On-line', 'Off-line'], offlineAmounts, totalEvents);
+  const batteryRatio = getRatio(['High', 'Low'], batteryLowAmounts, totalEvents);
+  const sensorRatio = getRatio(['OK', 'Sensor Error'], errorAmounts, totalEvents);
 
   return (
     <>
@@ -117,8 +140,8 @@ const SnapshotPage = observer(() => {
           </CardContent>
         </Card>
         {/* Level Low */}
-        <Link to='levellow'>
-          <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+        <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+          <Link to='levellow'>
             <CardHeader justifyContent='between' borderBottom>
               <div className='flex items-center gap-3'>
                 <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
@@ -138,12 +161,12 @@ const SnapshotPage = observer(() => {
               </h3>
               <PieChartCard data={MOCK_NETWORK_RATIO} status='ratio' />
             </CardContent>
-          </Card>
-        </Link>
+          </Link>
+        </Card>
 
         {/* Offline */}
-        <Link to='offline'>
-          <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+        <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+          <Link to='offline'>
             <CardHeader justifyContent='between' borderBottom>
               <div className='flex items-center gap-3'>
                 <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
@@ -161,14 +184,14 @@ const SnapshotPage = observer(() => {
               <h3 className='font-medium text-md tracking-32 text-neutral-900'>
                 {t('snapshot.gatewaystatus.label', 'Gateway Status', 'Gateway Status title.')}
               </h3>
-              <PieChartCard data={tankGatewayRatio} status='ratio' />
+              <PieChartCard data={gatewayRatio} status='ratio' />
             </CardContent>
-          </Card>
-        </Link>
+          </Link>
+        </Card>
 
         {/* Battery Low */}
-        <Link to='batterylow'>
-          <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+        <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+          <Link to='batterylow'>
             <CardHeader justifyContent='between' borderBottom>
               <div className='flex items-center gap-3'>
                 <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
@@ -186,14 +209,14 @@ const SnapshotPage = observer(() => {
               <h3 className='font-medium text-md tracking-32 text-neutral-900'>
                 {t('snapshot.batterylevel.label', 'Battery Level', 'Battery Level title.')}
               </h3>
-              <PieChartCard data={tankBatteryLowRatio} status='ratio' />
+              <PieChartCard data={batteryRatio} status='ratio' />
             </CardContent>
-          </Card>
-        </Link>
+          </Link>
+        </Card>
 
         {/* Sensor Error */}
-        <Link to='sensorerror'>
-          <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+        <Card className='rounded-[10px] shadow-card flex flex-col cursor-pointer relative overflow-hidden hover:outline outline-1 hover:outline-primary-500'>
+          <Link to='sensorerror'>
             <CardHeader justifyContent='between' borderBottom>
               <div className='flex items-center gap-3'>
                 <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
@@ -211,10 +234,10 @@ const SnapshotPage = observer(() => {
               <h3 className='font-medium text-md tracking-32 text-neutral-900'>
                 {t('snapshot.sensors.label', 'Sensors', 'Sensors title.')}
               </h3>
-              <PieChartCard data={tankErrorRatio} status='ratio' />
+              <PieChartCard data={sensorRatio} status='ratio' />
             </CardContent>
-          </Card>
-        </Link>
+          </Link>
+        </Card>
       </div>
     </>
   );
