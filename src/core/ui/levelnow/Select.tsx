@@ -3,10 +3,7 @@ import { Listbox } from '@headlessui/react';
 import { cn } from '@core/utils/classnames';
 // icon
 import ChevronUpDownIcon from '@assets/icons/LevelNOW/chevrons-up-down.svg?component';
-import { Scrollbar } from '../components/Scrollbar';
 import CheckIcon from '@assets/icons/LevelNOW/check.svg?component';
-import { log } from 'console';
-import { set } from '@nodemodules/@types/lodash';
 
 type Option = {
   label: string;
@@ -15,10 +12,12 @@ type Option = {
 
 type SelectProps = {
   options: Option[];
-  activedFilter: string | null;
-  handleSelect: (device: string) => void;
+  value: string | null;
+  hasEmpty?: boolean;
+  handleSelect: (optionValue: string) => void;
+  className?: string;
 };
-export default function Select({ options, activedFilter, handleSelect }: SelectProps) {
+export default function Select({ options, value, hasEmpty, handleSelect, className }: SelectProps) {
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const handleChange = (option: Option) => {
@@ -28,15 +27,19 @@ export default function Select({ options, activedFilter, handleSelect }: SelectP
   };
 
   useEffect(() => {
-    if (activedFilter) {
-      const matchedOption = options.find((option) => option.value === activedFilter);
+    if (value) {
+      const matchedOption = options.find((option) => option.value === value);
       if (matchedOption) {
         setSelectedOption(matchedOption);
+      } else {
+        setSelectedOption({ label: '', value });
       }
+    } else if (hasEmpty) {
+      setSelectedOption({ label: '', value: '' });
     } else {
       setSelectedOption(options[0]);
     }
-  }, [activedFilter, options]);
+  }, [value, options]);
 
   return (
     <Listbox value={selectedOption} onChange={handleChange}>
@@ -44,8 +47,9 @@ export default function Select({ options, activedFilter, handleSelect }: SelectP
         <div className='relative'>
           <Listbox.Button
             className={cn(
-              open ? 'border-primary-500' : 'hover:border-neutral-300',
               'w-full px-3 py-2 font-medium text-black border rounded-md text-md tracking-32 border-neutral-200 bg-white flex items-center justify-between',
+              open ? 'border-primary-500' : 'hover:border-neutral-300',
+              className,
             )}
           >
             <span>{selectedOption.label}</span>

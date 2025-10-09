@@ -123,6 +123,20 @@ export const getCustomerGWFields = (customer: ClientData | null) => [
     placeholder: 'Enter customer service rep',
   },
 ];
+export const getCustomerGWNameFields = (customer: ClientData | null) => [
+  {
+    label: t('customer.gwsalesrep.name.label', 'GW Sales Rep Name', 'Sales representative field.'),
+    value: customer?.salesRepUserName || '-',
+  },
+  {
+    label: t(
+      'customer.gwcustomerservicerep.name.label',
+      'GW Customer Service Rep Name',
+      'Customer service representative field.',
+    ),
+    value: customer?.customerServiceRepUserName || '-',
+  },
+];
 
 export const getCustomerTankFields = (clientTank: ClientTank | null) => [
   {

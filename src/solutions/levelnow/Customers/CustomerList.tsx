@@ -170,9 +170,9 @@ export default function CustomerList({
           </div>
           {openFilter && (
             <div className='flex flex-col gap-3 mt-5'>
-              <Select options={countryOptions} activedFilter={countryFilter} handleSelect={handleCountrySelect} />
-              <Select options={stateOptions} activedFilter={stateFilter} handleSelect={handleStateSelect} />
-              <Select options={cityOptions} activedFilter={cityFilter} handleSelect={handleCitySelect} />
+              <Select options={countryOptions} value={countryFilter} handleSelect={handleCountrySelect} />
+              <Select options={stateOptions} value={stateFilter} handleSelect={handleStateSelect} />
+              <Select options={cityOptions} value={cityFilter} handleSelect={handleCitySelect} />
             </div>
           )}
         </div>

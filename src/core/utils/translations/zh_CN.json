@@ -168,6 +168,11 @@
     "gwsalesrep": {
       "label": {
         "translation": "销售代表"
+      },
+      "name": {
+        "label": {
+          "translation": "销售代表姓名"
+        }
       }
     },
     "basicInfo": {
@@ -193,6 +198,11 @@
     "gwcustomerservicerep": {
       "label": {
         "translation": "客户服务代表"
+      },
+      "name": {
+        "label": {
+          "translation": "客户服务代表姓名"
+        }
       }
     },
     "tanks": {

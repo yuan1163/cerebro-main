@@ -150,6 +150,24 @@
       "label": {
         "translation": "GW Sales Rep",
         "notes": "Sales representative field."
+      },
+      "name": {
+        "label": {
+          "translation": "GW Sales Rep Name",
+          "notes": "Sales representative name field."
+        }
+      }
+    },
+    "gwcustomerservicerep": {
+      "label": {
+        "translation": "GW Customer Service Rep",
+        "notes": "Customer service representative field."
+      },
+      "name": {
+        "label": {
+          "translation": "GW Customer Service Rep Name",
+          "notes": "Customer service representative name field."
+        }
       }
     },
     "addCustomer": {

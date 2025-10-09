@@ -18,6 +18,13 @@ export type PieChartData = {
   color: string;
 }[];
 
+// api/Users/RepUser
+export type RepUser = {
+  id: number;
+  name: string;
+};
+export type RepUserTitle = 'SalesRep' | 'Service';
+
 // api/Events
 export enum EventType {
   LowLevel = 'lowLevel',
@@ -80,7 +87,9 @@ export type ClientData = {
   clientPostCode: string;
   brandId: number;
   salesRepUserId: string | null;
+  salesRepUserName: string | null;
   customerServiceRepUserId: string | null;
+  customerServiceRepUserName: string | null;
   clientTank: ClientTank[];
   longitude: number;
   latitude: number;

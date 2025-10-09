@@ -109,7 +109,7 @@ export default function TankList({ tanks, selectedTankId, searchQuery }: TankLis
           </div>
           {openFilter && (
             <div className='flex flex-col gap-3 mt-5'>
-              <Select options={deviceOptions} activedFilter={deviceFilter} handleSelect={handleDeviceSelect} />
+              <Select options={deviceOptions} value={deviceFilter} handleSelect={handleDeviceSelect} />
               <CheckSelect options={levelOptions} activedFilter={levelFilter} handleSelect={handleLevelSelect} />
             </div>
           )}

@@ -168,6 +168,11 @@
     "gwsalesrep": {
       "label": {
         "translation": "Đại diện bán hàng toàn cầu"
+      },
+      "name": {
+        "label": {
+          "translation": "Tên đại diện bán hàng toàn cầu"
+        }
       }
     },
     "basicInfo": {
@@ -193,6 +198,11 @@
     "gwcustomerservicerep": {
       "label": {
         "translation": "Đại diện dịch vụ khách hàng"
+      },
+      "name": {
+        "label": {
+          "translation": "Tên đại diện dịch vụ khách hàng"
+        }
       }
     },
     "tanks": {
