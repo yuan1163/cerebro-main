@@ -15,7 +15,7 @@ import Map, { Point } from '@core/ui/levelnow/Map';
 import { getCustomerGWNameFields, getCustomerProfileFields } from '@constants/fieldSettings';
 import { t } from '@core/utils/translate';
 import Select from '@core/ui/levelnow/Select';
-import { useRepUser } from '@core/storages/controllers/levelnow/user';
+import { useUsers } from '@core/storages/controllers/levelnow/user';
 
 // Define the form schema using zod
 const customerSchema = z.object({
@@ -44,15 +44,10 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
   const updateClientMutation = useUpdateClient();
   const deleteClientMutation = useDeleteClient();
 
-  const salesRepList = useRepUser('SalesRep');
-  const salesRepOptions = salesRepList.map((rep) => ({
-    label: String(rep.id),
-    value: rep.name,
-  }));
-  const serviceRepList = useRepUser('Service');
-  const serviceRepOptions = serviceRepList.map((rep) => ({
-    label: String(rep.id),
-    value: rep.name,
+  const users = useUsers();
+  const userOptions = users.map((user) => ({
+    label: String(user.id),
+    value: user.name,
   }));
 
   const {
@@ -175,14 +170,14 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
   const handleSalesRepSelect = (optionValue: string) => {
     setSalesRep(optionValue);
     // Find the corresponding rep ID from the name
-    const selectedRep = salesRepList.find((rep) => rep.name === optionValue);
+    const selectedRep = users.find((user) => user.name === optionValue);
     setValue('gwSalesRep', selectedRep ? String(selectedRep.id) : '');
   };
 
   const handleServiceRepSelect = (optionValue: string) => {
     setServiceRep(optionValue);
     // Find the corresponding rep ID from the name
-    const selectedRep = serviceRepList.find((rep) => rep.name === optionValue);
+    const selectedRep = users.find((user) => user.name === optionValue);
     setValue('gwCustomerServiceRep', selectedRep ? String(selectedRep.id) : '');
   };
 
@@ -244,11 +239,12 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
             </label>
             <Select
               {...register('gwSalesRep')}
-              options={salesRepOptions}
+              options={userOptions}
               value={salesRep}
               hasEmpty
               handleSelect={handleSalesRepSelect}
               className='p-2 text-sm font-medium border rounded h-9 border-neutral-200 text-neutral-900 focus:outline-none'
+              optionsMaxHeight='max-h-[180px]'
             />
           </div>
           <div className='flex flex-col gap-1'>
@@ -261,11 +257,12 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
             </label>
             <Select
               {...register('gwCustomerServiceRep')}
-              options={serviceRepOptions}
+              options={userOptions}
               value={serviceRep}
               hasEmpty
               handleSelect={handleServiceRepSelect}
               className='p-2 text-sm font-medium border rounded h-9 border-neutral-200 text-neutral-900 focus:outline-none'
+              optionsMaxHeight='max-h-[180px]'
             />
           </div>
           <div className='flex flex-col gap-1'>

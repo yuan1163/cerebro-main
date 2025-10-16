@@ -16,8 +16,16 @@ type SelectProps = {
   hasEmpty?: boolean;
   handleSelect: (optionValue: string) => void;
   className?: string;
+  optionsMaxHeight?: string;
 };
-export default function Select({ options, value, hasEmpty, handleSelect, className }: SelectProps) {
+export default function Select({
+  options,
+  value,
+  hasEmpty,
+  handleSelect,
+  className,
+  optionsMaxHeight = 'max-h-64',
+}: SelectProps) {
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const handleChange = (option: Option) => {
@@ -55,7 +63,12 @@ export default function Select({ options, value, hasEmpty, handleSelect, classNa
             <span>{selectedOption.label}</span>
             <ChevronUpDownIcon className='text-neutral-900' />
           </Listbox.Button>
-          <Listbox.Options className='absolute z-10 w-full p-3 overflow-auto bg-white border rounded-lg max-h-64 shadow-select top-12 scrollbar-hide'>
+          <Listbox.Options
+            className={cn(
+              'absolute z-10 w-full p-3 overflow-auto bg-white border rounded-lg shadow-select top-12 scrollbar-hide',
+              optionsMaxHeight,
+            )}
+          >
             <div className='flex flex-col gap-3'>
               {options.map((option) => (
                 <Listbox.Option key={option.value} value={option}>

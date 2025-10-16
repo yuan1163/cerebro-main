@@ -18,6 +18,11 @@ export type PieChartData = {
   color: string;
 }[];
 
+// api/Users
+export type LevelNOWUser = {
+  id: number;
+  name: string;
+};
 // api/Users/RepUser
 export type RepUser = {
   id: number;
