@@ -10,6 +10,14 @@ export async function apiGetEvents(eventType?: EventType): Promise<Events> {
     return api.get<void, Events>(url, undefined, 'levelnow').then((response) => response);
   }
 }
+export async function apiGetEventsSnapshot(eventType?: EventType): Promise<Events> {
+  const url = 'Events/Snapshot';
+  if (eventType) {
+    return api.get<void, Events>(`${url}?eventType=${eventType}`, undefined, 'levelnow').then((response) => response);
+  } else {
+    return api.get<void, Events>(url, undefined, 'levelnow').then((response) => response);
+  }
+}
 
 export async function apiGetEventsHistory(deviceRef: string | null): Promise<EventsHistory> {
   const url = `Events/history/${deviceRef}`;

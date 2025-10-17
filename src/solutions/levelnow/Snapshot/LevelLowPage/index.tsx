@@ -13,7 +13,7 @@ import ChevronLeftIcon from '@assets/icons/LevelNOW/chevrons-left.svg?component'
 import { t } from '@core/utils/translate';
 import { Button } from '@core/ui/components/Button';
 // hooks
-import { useEvents } from '@core/storages/controllers/levelnow/event';
+import { useEventsSnapshot } from '@core/storages/controllers/levelnow/event';
 // types
 import { EventType } from '@core/api/types';
 // definitions
@@ -23,7 +23,7 @@ export default function LevelLowPage() {
   const params = {
     eventType: EventType.LowLevel,
   };
-  const events = useEvents(params);
+  const events = useEventsSnapshot(params);
 
   return (
     <>

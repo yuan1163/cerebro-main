@@ -52,11 +52,13 @@ export type Event = {
   phone: string;
   salesRepUserId: string;
   salesRepUserName: string;
-  eventLevelLow: 1 | null;
-  eventFault: 1 | null;
-  eventBatteryLow: 1 | null;
-  eventOffline: 1 | null;
-  eventOilFilling: 1 | null;
+  customerServiceRepUserId: string | null;
+  customerServiceRepUserName: string | null;
+  eventLevelLow: 1 | 0;
+  eventFault: 1 | 0;
+  eventBatteryLow: 1 | 0;
+  eventOffline: 1 | 0;
+  eventOilFilling: 1 | 0;
 };
 
 // api/Events/history/{deviceRef}

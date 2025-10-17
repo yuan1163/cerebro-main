@@ -22,7 +22,7 @@ import { useTanks } from '@core/storages/controllers/levelnow/tank';
 import PieChartCard from '@core/ui/levelnow/PieChartCard';
 import { Link } from '@nodemodules/react-router-dom/dist';
 import { observer } from 'mobx-react';
-import { useEvents } from '@core/storages/controllers/levelnow/event';
+import { useEvents, useEventsSnapshot } from '@core/storages/controllers/levelnow/event';
 
 // types
 import { EventType, PieChartData } from '@core/api/types';
@@ -38,11 +38,11 @@ const SnapshotPage = observer(() => {
   const tanks = useTanks();
   const tankLevelCounts = formatTankLevelCounts(tanks);
 
-  const events = useEvents();
-  const levelLowEvents = useEvents({ eventType: EventType.LowLevel });
-  const offlineEvents = useEvents({ eventType: EventType.Offline });
-  const batteryLowEvents = useEvents({ eventType: EventType.BatteryLow });
-  const sensorErrorEvents = useEvents({ eventType: EventType.SensorError });
+  const events = useEventsSnapshot();
+  const levelLowEvents = useEventsSnapshot({ eventType: EventType.LowLevel });
+  const offlineEvents = useEventsSnapshot({ eventType: EventType.Offline });
+  const batteryLowEvents = useEventsSnapshot({ eventType: EventType.BatteryLow });
+  const sensorErrorEvents = useEventsSnapshot({ eventType: EventType.SensorError });
 
   const totalEvents = events.length || 0;
   const levelLowAmounts = levelLowEvents.length || 0;
