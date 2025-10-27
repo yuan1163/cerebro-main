@@ -284,14 +284,14 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             {/* COMMON */}
 
             <ul className={styles['list']}>
-              <CollapsedButton
+              {/* <CollapsedButton
                 item={{
                   icon: <DomainLineIcon />,
                   iconSolid: <DomainSolidIcon />,
                   title: 'solutions.domain.label',
                 }}
                 type='home'
-              />
+              /> */}
               {common.map((item) => {
                 const title = item.title;
 
@@ -407,14 +407,14 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
             {/* COMMON EXPANDED */}
             <ul className={styles['list']}>
-              <li className={styles['list-item']}>
+              {/* <li className={styles['list-item']}>
                 <DrawerButtonExpanded
                   icon={<DomainLineIcon />}
                   iconHover={<DomainSolidIcon />}
                   url={`domain`}
                   title={t('solutions.domain.label', 'Domain', 'Domain page title.')}
                 />
-              </li>
+              </li> */}
 
               {/* 左側選單列表 */}
               {common.map((item) => {

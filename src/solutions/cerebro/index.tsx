@@ -44,6 +44,13 @@ export const modules: Modules = [
     component: <Domain />,
   },
   {
+    url: 'domain',
+    title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
+    icon: <Home02LineIcon />,
+    iconSolid: <Home02SolidIcon />,
+    component: <Domain />,
+  },
+  {
     url: 'dashboard',
     // title: t('solutions.dashboard.label', 'Dashboard', 'Dashboard page title.'),
     title: 'solutions.dashboard.label',
