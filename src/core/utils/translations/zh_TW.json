@@ -4053,6 +4053,16 @@
       "label": {
         "translation": "用戶"
       }
+    },
+    "alerts": {
+      "label": {
+        "translation": "警報"
+      }
+    },
+    "config": {
+      "label": {
+        "translation": "配置"
+      }
     }
   }
 }

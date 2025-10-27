@@ -53,6 +53,14 @@ export const AppRoutes = observer(() => {
       {solutions.map((solution) => (
         <Route key='route:solution' path={`/${solution.url}/*`} element={<ModulesPage modules={solution.modules} />} />
       ))}
+      {solutions.map((solution) => {
+        switch (solution.url) {
+          case 'ai':
+            return <Route path='/ai' element={<Navigate replace to='/ai/dashboard1' />} />;
+          default:
+            return <Route path={`/${solution.url}`} element={<Navigate replace to={`/${solution.url}/domain`} />} />;
+        }
+      })}
 
       {solutions.map((solution) =>
         solution.commands?.map((command) => (
