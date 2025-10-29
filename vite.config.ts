@@ -72,13 +72,13 @@ export default defineConfig({
   server: {
     proxy: {
       '/api/rsapi': {
-        target: 'https://cerebro.sce.pccu.edu.tw/rsapi/cloud',
+        target: 'https://cerebro.iveda.ai/rsapi/cloud',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/rsapi/, ''),
         secure: true,
       },
       '/api/lvapi': {
-        target: 'https://cerebro.sce.pccu.edu.tw/lvapi/api',
+        target: 'https://cerebro.iveda.ai/lvapi/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/lvapi/, ''),
         secure: true,

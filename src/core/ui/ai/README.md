@@ -1,0 +1,1 @@
+IvedaAI solution specified compoments

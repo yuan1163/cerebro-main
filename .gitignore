@@ -28,3 +28,24 @@ dist-ssr
 #.env.*
 #!.env.example
 .qodo
+.env.example
+.env.production
+vite.config.ts
+.env.production
+
+# Snyk Security Extension - AI Rules (auto-generated)
+.github\instructions\snyk_rules.instructions.md
+
+# Markdown files (但保留重要文件)
+*.md
+
+# 保留以下重要的 .md 檔案
+!README.md
+!SPEC.md
+!.github/copilot-instructions.md
+!docs/DEPLOYMENT.md
+!docs/DESIGN_SYSTEM_GUIDE.md
+!docs/DESIGN_TOKENS_GUIDE.md
+!docs/MAPBOX_GUIDE.md
+!docs/TAIWAN_CONFIG.md
+
