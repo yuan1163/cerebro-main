@@ -113,3 +113,11 @@
   line-height: 0.5 !important;
   letter-spacing: 2px !important;
 }
+
+// 自定義標題圖標大小：容器44px，圖標28px
+.title-icon {
+  & svg {
+    height: 1.75rem !important; // 28px
+    width: 1.75rem !important;  // 28px
+  }
+}

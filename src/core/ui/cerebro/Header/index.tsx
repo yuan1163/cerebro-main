@@ -496,7 +496,7 @@ export const Header: React.FC<Props> = ({
         <div className={styles['title-content-container']}>
           <div className={styles['title-content']}>
             {!backLink && !solutionsDomainLink && (
-              <Icon color='secondary' size='xl' variant='tint'>
+              <Icon color='secondary' size='xl' variant='tint' className={styles['title-icon']}>
                 {icon}
               </Icon>
             )}
