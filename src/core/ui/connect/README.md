@@ -1,1 +1,0 @@
-SmartConnect solution specified compoments

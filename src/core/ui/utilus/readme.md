@@ -1,1 +1,0 @@
-IvedaUtilus solution specified compoments

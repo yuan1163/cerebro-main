@@ -1,1 +1,0 @@
-IvedaPinPoint solution specified compoments
