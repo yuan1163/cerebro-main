@@ -51,8 +51,8 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
       'tailwind.config.js': path.resolve(__dirname, './tailwind.config.js'),
       '@config': path.resolve(__dirname, './src/config'),
-  // Map CKEditor meta package deep imports to actual source directory.
-  'ckeditor5/src': path.resolve(__dirname, './node_modules/ckeditor5/src'),
+      // Map CKEditor meta package deep imports to actual source directory.
+      'ckeditor5/src': path.resolve(__dirname, './node_modules/ckeditor5/src'),
     },
   },
   optimizeDeps: {
@@ -62,25 +62,35 @@ export default defineConfig({
     commonjsOptions: {
       include: ['tailwind.config.js', 'node_modules/**'],
     },
-  // Let @ckeditor/vite-plugin-ckeditor5 handle bundling CKEditor modules.
-  // Do not mark ckeditor5 modules as external, otherwise the browser will try
-  // to load bare imports like "ckeditor5/src/ui.js" at runtime and fail.
+    // Increase chunk size warning limit
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Explicitly define chunks with proper dependencies
+          'vendor-react': ['react', 'react-dom', 'react-router', 'react-router-dom'],
+          'vendor-state': ['mobx', 'mobx-react', '@tanstack/react-query'],
+        },
+      },
+    },
+    // Let @ckeditor/vite-plugin-ckeditor5 handle bundling CKEditor modules.
+    // Do not mark ckeditor5 modules as external, otherwise the browser will try
+    // to load bare imports like "ckeditor5/src/ui.js" at runtime and fail.
   },
   define: {
     'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageJson.version),
   },
-  server: {
+  preview: {
     proxy: {
-      '/api/rsapi': {
-        target: 'https://cerebro.iveda.ai/rsapi/cloud',
+      // Production build uses relative paths, so proxy them
+      '/rsapi': {
+        target: 'https://cerebro.iveda.ai',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/rsapi/, ''),
         secure: true,
       },
-      '/api/lvapi': {
-        target: 'https://cerebro.iveda.ai/lvapi/api',
+      '/lvapi': {
+        target: 'https://cerebro.sce.pccu.edu.tw',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/lvapi/, ''),
         secure: true,
       },
     },
