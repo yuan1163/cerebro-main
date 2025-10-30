@@ -4061,6 +4061,16 @@
       "label": {
         "translation": "Người dùng"
       }
+    },
+    "alerts": {
+      "label": {
+        "translation": "Cảnh báo"
+      }
+    },
+    "config": {
+      "label": {
+        "translation": "Cấu hình"
+      }
     }
   }
 }

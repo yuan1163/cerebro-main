@@ -1,66 +1,69 @@
 // utils
-
 import { t } from '@core/utils/translate';
 
 // types
-
 import { Modules } from '@core/ui/types';
 
 // components
-
 import { Dashboard } from './Dashboard';
-import { Domain } from './Domain'; // TODO const Domain = React.lazy(() => import('./Domain'));
-import { Issues } from '@solutions/cerebro/Issues';
-import { Notifications } from './Notifications';
 import { Users } from '@solutions/cerebro/Users';
 
 // icons
-
-import CheckDone01LineIcon from '@assets/icons/line/check-done-01.svg?component';
-import CheckDone01SolidIcon from '@assets/icons/solid/check-done-01.svg?component';
-import DashboardLineIcon from '@assets/icons/line/dashboard.svg?component';
-import DashboardSolidIcon from '@assets/icons/solid/dashboard.svg?component';
-import Home02LineIcon from '@assets/icons/line/home-02.svg?component';
-import Home02SolidIcon from '@assets/icons/solid/home-02.svg?component';
-import NotificationTextLineIcon from '@assets/icons/line/notification-text.svg?component';
-import NotificationTextSolidIcon from '@assets/icons/solid/notification-text.svg?component';
-import Users01LineIcon from '@assets/icons/line/users-01.svg?component';
-import Users01SolidIcon from '@assets/icons/solid/users-01.svg?component';
+import DashboardLineIcon from '@assets/icons/IvedaAI/sidebar/dashboard-line.svg?component';
+import DashboardSolidIcon from '@assets/icons/IvedaAI/sidebar/dashboard-solid.svg?component';
+import AlertsLineIcon from '@assets/icons/IvedaAI/sidebar/alerts-line.svg?component';
+import AlertsSolidIcon from '@assets/icons/IvedaAI/sidebar/alerts-solid.svg?component';
+import UsersLineIcon from '@assets/icons/LevelNOW/sidebar/users-line.svg?component';
+import UsersSolidIcon from '@assets/icons/LevelNOW/sidebar/users-solid.svg?component';
+import ConfigLineIcon from '@assets/icons/IvedaAI/sidebar/config-line.svg?component';
+import ConfigSolidIcon from '@assets/icons/IvedaAI/sidebar/config-solid.svg?component';
 
 export const modules: Modules = [
   {
+    system: 'levelnow',
     url: '',
-    title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
-    icon: <Home02LineIcon />,
-    iconSolid: <Home02SolidIcon />,
-    component: <Domain />,
-  },
-  {
-    url: 'dashboard',
-    title: t('solutions.dashboard.label', 'Dashboard', 'Dashboard page title.'),
+    title: 'solutions.dashboard.label',
+    // title: t('solutions.dashboard.label', 'Dashboard', 'Dashboard page title.'),
     icon: <DashboardLineIcon />,
     iconSolid: <DashboardSolidIcon />,
     component: <Dashboard />,
   },
   {
-    url: 'events',
-    title: 'Events',
-    icon: <NotificationTextLineIcon />,
-    iconSolid: <NotificationTextSolidIcon />,
-    component: <Notifications />,
+    system: 'levelnow',
+    url: 'dashboard1',
+    title: 'solutions.dashboard.label',
+    // title: t('solutions.dashboard.label', 'Dashboard', 'Dashboard page title.'),
+    icon: <DashboardLineIcon />,
+    iconSolid: <DashboardSolidIcon />,
+    component: <Dashboard />,
   },
   {
-    url: 'issues',
-    title: t('issue.issuesTitle.label', 'Issues', 'Issues title.'),
-    icon: <CheckDone01LineIcon />,
-    iconSolid: <CheckDone01SolidIcon />,
-    component: <Issues />,
+    system: 'levelnow',
+    url: 'alerts',
+    title: 'modules.alerts.label',
+    // title: t('modules.alerts.label', 'Alerts', 'Alerts page title.'),
+    icon: <AlertsLineIcon />,
+    iconSolid: <AlertsSolidIcon />,
+    component: <Dashboard />,
   },
   {
+    system: 'levelnow',
+
     url: 'users',
-    title: t('user.usersTitle.label', 'Users', 'Users Title.'),
-    icon: <Users01LineIcon />,
-    iconSolid: <Users01SolidIcon />,
+    title: 'modules.users.label',
+    // title: t('modules.users.label', 'Users', 'Users page title.'),
+    icon: <UsersLineIcon />,
+    iconSolid: <UsersSolidIcon />,
     component: <Users />,
+  },
+  {
+    system: 'levelnow',
+
+    url: 'config',
+    title: 'modules.config.label',
+    // title: t('modules.config.label', 'Domain', 'Domain page title.'),
+    icon: <ConfigLineIcon />,
+    iconSolid: <ConfigSolidIcon />,
+    component: <Dashboard />,
   },
 ];

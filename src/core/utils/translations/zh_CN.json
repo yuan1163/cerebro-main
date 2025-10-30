@@ -4063,6 +4063,16 @@
       "label": {
         "translation": "用户"
       }
+    },
+    "alerts": {
+      "label": {
+        "translation": "警报"
+      }
+    },
+    "config": {
+      "label": {
+        "translation": "配置"
+      }
     }
   }
 }
