@@ -46,7 +46,7 @@ export class AuthStorage extends AsyncStorage {
       const response: LoginOutput = yield api.checkToken(token, 'levelnowLogin');
       if (response.resultCode === 0) {
         this.accessToken = token;
-        
+
         // 儲存 token 過期時間
         if (response.tokenExpireMs) {
           this.tokenExpireMs = response.tokenExpireMs;
@@ -56,7 +56,7 @@ export class AuthStorage extends AsyncStorage {
           // 啟動閒置逾時監控
           this.startIdleTimeout();
         }
-        
+
         this.loading = false;
         const my: UserProfileOutput = yield api.me();
         this.profile = my.user;
@@ -85,7 +85,7 @@ export class AuthStorage extends AsyncStorage {
     const now = Date.now();
     // 提前 5 分鐘判定為過期，給使用者緩衝時間
     const bufferTime = 5 * 60 * 1000;
-    return now >= (this.tokenExpireMs - bufferTime);
+    return now >= this.tokenExpireMs - bufferTime;
   }
 
   /**
@@ -168,7 +168,7 @@ export class AuthStorage extends AsyncStorage {
     if (response.resultCode === 0) {
       this.accessToken = response.token;
       this.hasNavigatedPostLogin = true;
-      
+
       // 儲存 token 過期時間
       if (response.tokenExpireMs) {
         this.tokenExpireMs = response.tokenExpireMs;
@@ -178,7 +178,7 @@ export class AuthStorage extends AsyncStorage {
         // 啟動閒置逾時監控
         this.startIdleTimeout();
       }
-      
+
       if (data.remember) {
         localStorage.setItem('accessToken', this.accessToken);
       }
