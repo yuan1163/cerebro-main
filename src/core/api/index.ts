@@ -58,7 +58,26 @@ export class ApiLayer {
       body: data ? JSON.stringify(data) : undefined,
     };
 
-    return fetch(url, init).then((response) => response.json());
+    return fetch(url, init).then(async (response) => {
+      // Handle authentication errors
+      if (response.status === 401 || response.status === 403) {
+        // Token expired or unauthorized - logout user
+        auth.clear();
+        if (window.location.pathname !== '/login') {
+          window.location.href = '/login';
+        }
+        throw new Error('Authentication failed');
+      }
+
+      // Check if response is ok (status 200-299)
+      if (!response.ok) {
+        // Try to parse error message
+        const errorText = await response.text();
+        throw new Error(`HTTP ${response.status}: ${errorText || response.statusText}`);
+      }
+
+      return response.json();
+    });
   }
   /** 檔案下載 api 請求 excel 檔案資源 */
   async requestBinary(
@@ -80,7 +99,22 @@ export class ApiLayer {
       headers,
       body: data ? JSON.stringify(data) : undefined,
     };
-    return fetch(url, init).then(async (response) => await response.blob());
+    return fetch(url, init).then(async (response) => {
+      // Handle authentication errors
+      if (response.status === 401 || response.status === 403) {
+        auth.clear();
+        if (window.location.pathname !== '/login') {
+          window.location.href = '/login';
+        }
+        throw new Error('Authentication failed');
+      }
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      return await response.blob();
+    });
   }
 
   async upload(endpoint: string, contentType: string, data: BodyInit, source?: ApiSource): Promise<unknown> {
@@ -96,7 +130,22 @@ export class ApiLayer {
       headers,
       body: data,
     };
-    return fetch(url, init).then((response) => response.json());
+    return fetch(url, init).then(async (response) => {
+      if (response.status === 401 || response.status === 403) {
+        auth.clear();
+        if (window.location.pathname !== '/login') {
+          window.location.href = '/login';
+        }
+        throw new Error('Authentication failed');
+      }
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`HTTP ${response.status}: ${errorText || response.statusText}`);
+      }
+
+      return response.json();
+    });
   }
 
   async uploadMCFile<Input, Output>(
@@ -117,7 +166,22 @@ export class ApiLayer {
       headers,
       body: data,
     };
-    return fetch(url, init).then((response) => response.json());
+    return fetch(url, init).then(async (response) => {
+      if (response.status === 401 || response.status === 403) {
+        auth.clear();
+        if (window.location.pathname !== '/login') {
+          window.location.href = '/login';
+        }
+        throw new Error('Authentication failed');
+      }
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`HTTP ${response.status}: ${errorText || response.statusText}`);
+      }
+
+      return response.json();
+    });
   }
 
   async get<Input, Output>(endpoint: string, data?: Input, source?: ApiSource): Promise<Output> {

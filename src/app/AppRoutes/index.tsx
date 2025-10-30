@@ -27,6 +27,17 @@ import { SmartPolesPage } from '@core/ui/pages/SmartPolesPage';
 import { Solutions } from '@core/ui/types';
 import { SolutionsPage } from '@core/ui/pages/SolutionsPage';
 
+// Protected Route Component
+const ProtectedRoute = observer(({ children }: { children: React.ReactNode }) => {
+  const auth = useAuth();
+
+  if (!auth.isAuthenticated()) {
+    return <Navigate to='/login' replace />;
+  }
+
+  return <>{children}</>;
+});
+
 const solutions = [
   { url: Solutions.pinpoint, modules: cerebro },
   { url: Solutions.utilus, modules: utilus, commands: utilusCommands },
@@ -48,26 +59,68 @@ export const AppRoutes = observer(() => {
       <Route path='/login' element={<AuthLoginPage />} />
       <Route path='/reset' element={<AuthResetPage />} />
       <Route path='/error' element={<ErrorPage />} />
-      <Route path='/cerebro' element={<Navigate replace to='/solutions' />} />
-      <Route path='/solutions' element={<SolutionsPage />} />
+      <Route
+        path='/cerebro'
+        element={
+          <ProtectedRoute>
+            <Navigate replace to='/solutions' />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path='/solutions'
+        element={
+          <ProtectedRoute>
+            <SolutionsPage />
+          </ProtectedRoute>
+        }
+      />
       {solutions.map((solution) => (
-        <Route key='route:solution' path={`/${solution.url}/*`} element={<ModulesPage modules={solution.modules} />} />
+        <Route
+          key={`route:solution:${solution.url}`}
+          path={`/${solution.url}/*`}
+          element={
+            <ProtectedRoute>
+              <ModulesPage modules={solution.modules} />
+            </ProtectedRoute>
+          }
+        />
       ))}
       {solutions.map((solution) => {
         switch (solution.url) {
           case 'ai':
-            return <Route path='/ai' element={<Navigate replace to='/ai/dashboard1' />} />;
+            return (
+              <Route
+                key={`route:redirect:${solution.url}`}
+                path='/ai'
+                element={
+                  <ProtectedRoute>
+                    <Navigate replace to='/ai/dashboard1' />
+                  </ProtectedRoute>
+                }
+              />
+            );
           default:
-            return <Route path={`/${solution.url}`} element={<Navigate replace to={`/${solution.url}/domain`} />} />;
+            return (
+              <Route
+                key={`route:redirect:${solution.url}`}
+                path={`/${solution.url}`}
+                element={
+                  <ProtectedRoute>
+                    <Navigate replace to={`/${solution.url}/domain`} />
+                  </ProtectedRoute>
+                }
+              />
+            );
         }
       })}
 
       {solutions.map((solution) =>
         solution.commands?.map((command) => (
           <Route
-            key={`route:command:${command.id}`}
+            key={`route:command:${solution.url}:${command.id}`}
             path={`/${solution.url}/${command.url}`}
-            element={command.element}
+            element={<ProtectedRoute>{command.element}</ProtectedRoute>}
           />
         )),
       )}

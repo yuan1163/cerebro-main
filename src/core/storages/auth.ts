@@ -35,17 +35,33 @@ export class AuthStorage extends AsyncStorage {
     this.loading = true;
     const token = localStorage.getItem('accessToken');
     if (token) {
-      const response: LoginOutput = yield api.checkToken(token, 'levelnowLogin');
-      if (response.resultCode === 0) {
-        this.accessToken = token;
-        this.loading = false;
-        const my: UserProfileOutput = yield api.me();
-        this.profile = my.user;
-        //locations.initialize();
-        yield this.detectSolutions();
-      } else {
-        // invalid saved token
+      try {
+        // Add timeout to prevent hanging
+        const timeoutPromise = new Promise((_, reject) => {
+          setTimeout(() => reject(new Error('Token validation timeout')), 5000);
+        });
+
+        const checkTokenPromise = api.checkToken(token, 'levelnowLogin');
+        const response: LoginOutput = yield Promise.race([checkTokenPromise, timeoutPromise]);
+
+        if (response.resultCode === 0) {
+          this.accessToken = token;
+          this.loading = false;
+          const my: UserProfileOutput = yield api.me();
+          this.profile = my.user;
+          //locations.initialize();
+          yield this.detectSolutions();
+        } else {
+          // invalid saved token
+          localStorage.removeItem('accessToken');
+          this.loading = false;
+        }
+      } catch (error) {
+        // Token validation failed (expired, network error, timeout, etc.)
+        console.error('Token validation failed:', error);
         localStorage.removeItem('accessToken');
+        this.accessToken = undefined;
+        this.profile = undefined;
         this.loading = false;
       }
     } else {
