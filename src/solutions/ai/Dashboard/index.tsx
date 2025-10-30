@@ -10,7 +10,6 @@ import { useUI } from '@core/storages/ui';
 
 // styles
 import { cn } from '@core/utils/classnames';
-import styles from './styles.module.scss';
 
 // data
 import { useLocations } from '@core/storages/controllers/locations';
@@ -53,13 +52,13 @@ export const Dashboard = () => {
       <UnitContainer>
         <Unit variant='sidebar'></Unit>
         <Unit>
-          <Card className={styles['unit-card']}>
+          <Card>
             <Grid direction='column' grow>
               <CardHeader
                 disablePaddingBottom
                 title={t('location.locationSchema.label', 'Location Schema', 'Location schema title.')}
               />
-              <CardContent className={cn(styles['location-container'])}></CardContent>
+              <CardContent></CardContent>
             </Grid>
             {/* <Grid display='grid' direction='column'>
               <CardHeader
