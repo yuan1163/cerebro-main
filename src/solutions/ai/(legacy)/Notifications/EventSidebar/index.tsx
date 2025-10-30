@@ -32,7 +32,7 @@ import { Box } from '@core/ui/components/Box';
 import { CameraPreview } from '@core/ui/components/CameraPreview';
 import { CardContent } from '@core/ui/components/CardContent';
 import { CardHeader } from '@core/ui/components/CardHeader';
-import { FormationMapMini } from '@solutions/ai/Dashboard/FormationMapMini';
+import { FormationMapMini } from '@solutions/ai/Dashboard/(legacy)/FormationMapMini';
 import { Grid } from '@core/ui/components/Grid';
 import { Headline } from '@core/ui/components/Headline';
 import { Icon } from '@core/ui/components/Icon';
