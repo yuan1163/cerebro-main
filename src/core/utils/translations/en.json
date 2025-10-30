@@ -3367,6 +3367,18 @@
         "translation": "Users",
         "notes": "Users page title."
       }
+    },
+    "alerts": {
+      "label": {
+        "translation": "Alerts",
+        "notes": "Alerts page title."
+      }
+    },
+    "config": {
+      "label": {
+        "translation": "Config",
+        "notes": "Config page title."
+      }
     }
   },
   "alerts": {

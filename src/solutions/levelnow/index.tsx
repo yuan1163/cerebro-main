@@ -1,23 +1,6 @@
 // utils
 
 // icons
-import BarChartSquare01LineIcon from '@assets/icons/line/bar-chart-square-01.svg?component';
-import CheckDone01LineIcon from '@assets/icons/line/check-done-01.svg?component';
-import DashboardLineIcon from '@assets/icons/line/dashboard.svg?component';
-import Home02LineIcon from '@assets/icons/line/home-02.svg?component';
-import LineChartUp04LineIcon from '@assets/icons/line/line-chart-up-04.svg?component';
-import Map02LineIcon from '@assets/icons/line/map-02.svg?component';
-import NotificationTextLineIcon from '@assets/icons/line/notification-text.svg?component';
-import Users01LineIcon from '@assets/icons/line/users-01.svg?component';
-import BarChartSquare01SolidIcon from '@assets/icons/solid/bar-chart-square-01.svg?component';
-import CheckDone01SolidIcon from '@assets/icons/solid/check-done-01.svg?component';
-import DashboardSolidIcon from '@assets/icons/solid/dashboard.svg?component';
-import Home02SolidIcon from '@assets/icons/solid/home-02.svg?component';
-import LineChartUp04SolidIcon from '@assets/icons/solid/line-chart-up-04.svg?component';
-import Map02SolidIcon from '@assets/icons/solid/map-02.svg?component';
-import NotificationTextSolidIcon from '@assets/icons/solid/notification-text.svg?component';
-import Users01SolidIcon from '@assets/icons/solid/users-01.svg?component';
-
 import DomainLineIcon from '@assets/icons/LevelNOW/sidebar/domain-line.svg?component';
 import DomainSolidIcon from '@assets/icons/LevelNOW/sidebar/domain-solid.svg?component';
 import TankLineIcon from '@assets/icons/LevelNOW/sidebar/tank-line.svg?component';
@@ -48,7 +31,23 @@ export const modules: Modules = [
   {
     system: 'levelnow',
     url: '',
-    title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
+    title: 'solutions.domain.label',
+    // title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
+    icon: <DomainLineIcon />,
+    iconSolid: <DomainSolidIcon />,
+    component: <Domain />,
+    children: [
+      {
+        url: 'domain/responsibletanks',
+        component: <ResponsibleTanksPage />,
+      },
+    ],
+  },
+  {
+    system: 'levelnow',
+    url: 'domain',
+    title: 'solutions.domain.label',
+    // title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
     icon: <DomainLineIcon />,
     iconSolid: <DomainSolidIcon />,
     component: <Domain />,

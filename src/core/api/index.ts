@@ -51,7 +51,7 @@ export class ApiLayer {
 
     // 清除認證資訊
     auth.clear();
-    
+
     // 導向登入頁
     window.location.href = '/login';
   }
@@ -100,7 +100,7 @@ export class ApiLayer {
     return fetch(url, init)
       .then(async (response) => {
         const jsonData = await response.json();
-        
+
         // 檢查是否為未授權回應
         if (this.isUnauthorizedResponse(response, jsonData)) {
           this.handleUnauthorized();
@@ -109,7 +109,7 @@ export class ApiLayer {
             resultMessage: 'Unauthorized. Please login again.',
           });
         }
-        
+
         return jsonData;
       })
       .catch((error) => {
@@ -168,7 +168,7 @@ export class ApiLayer {
     };
     return fetch(url, init).then(async (response) => {
       const jsonData = await response.json();
-      
+
       // 檢查是否為未授權回應
       if (this.isUnauthorizedResponse(response, jsonData)) {
         this.handleUnauthorized();
@@ -177,7 +177,7 @@ export class ApiLayer {
           resultMessage: 'Unauthorized. Please login again.',
         });
       }
-      
+
       return jsonData;
     });
   }
@@ -202,7 +202,7 @@ export class ApiLayer {
     };
     return fetch(url, init).then(async (response) => {
       const jsonData = await response.json();
-      
+
       // 檢查是否為未授權回應
       if (this.isUnauthorizedResponse(response, jsonData)) {
         this.handleUnauthorized();
@@ -211,7 +211,7 @@ export class ApiLayer {
           resultMessage: 'Unauthorized. Please login again.',
         });
       }
-      
+
       return jsonData;
     });
   }
