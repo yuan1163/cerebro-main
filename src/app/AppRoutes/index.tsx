@@ -88,17 +88,6 @@ const LazyModulesPage = observer(({ solutionUrl }: { solutionUrl: Solutions }) =
   return <Component modules={modules} />;
 });
 
-// Protected Route Component
-const ProtectedRoute = observer(({ children }: { children: React.ReactNode }) => {
-  const auth = useAuth();
-
-  if (!auth.isAuthenticated()) {
-    return <Navigate to='/login' replace />;
-  }
-
-  return <>{children}</>;
-});
-
 const solutions = [
   { url: Solutions.pinpoint },
   { url: Solutions.utilus },
