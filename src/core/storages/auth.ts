@@ -41,35 +41,43 @@ export class AuthStorage extends AsyncStorage {
       return; // throttle
     }
     this.loading = true;
-    const token = localStorage.getItem('accessToken');
-    if (token) {
-      const response: LoginOutput = yield api.checkToken(token, 'levelnowLogin');
-      if (response.resultCode === 0) {
-        this.accessToken = token;
+    try {
+      const token = localStorage.getItem('accessToken');
+      if (token) {
+        const response: LoginOutput = yield api.checkToken(token, 'levelnowLogin');
+        if (response.resultCode === 0) {
+          this.accessToken = token;
 
-        // 儲存 token 過期時間
-        if (response.tokenExpireMs) {
-          this.tokenExpireMs = response.tokenExpireMs;
-          localStorage.setItem('tokenExpireMs', response.tokenExpireMs.toString());
-          // 啟動定期檢查
-          this.startTokenExpirationCheck();
-          // 啟動閒置逾時監控
-          this.startIdleTimeout();
+          // 儲存 token 過期時間
+          if (response.tokenExpireMs) {
+            this.tokenExpireMs = response.tokenExpireMs;
+            localStorage.setItem('tokenExpireMs', response.tokenExpireMs.toString());
+            // 啟動定期檢查
+            this.startTokenExpirationCheck();
+            // 啟動閒置逾時監控
+            this.startIdleTimeout();
+          }
+
+          this.loading = false;
+          const my: UserProfileOutput = yield api.me();
+          this.profile = my.user;
+          //locations.initialize();
+          yield this.detectSolutions();
+        } else {
+          // invalid saved token
+          localStorage.removeItem('accessToken');
+          localStorage.removeItem('tokenExpireMs');
+          this.loading = false;
         }
-
-        this.loading = false;
-        const my: UserProfileOutput = yield api.me();
-        this.profile = my.user;
-        //locations.initialize();
-        yield this.detectSolutions();
       } else {
-        // invalid saved token
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('tokenExpireMs');
+        // no saved token
         this.loading = false;
       }
-    } else {
-      // no saved token
+    } catch (error) {
+      // Handle any errors during initialization
+      console.error('Auth initialization error:', error);
+      localStorage.removeItem('accessToken');
+      localStorage.removeItem('tokenExpireMs');
       this.loading = false;
     }
   }
