@@ -80,17 +80,18 @@ export default defineConfig({
   define: {
     'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageJson.version),
   },
-  preview: {
+  server: {
     proxy: {
-      // Production build uses relative paths, so proxy them
-      '/rsapi': {
-        target: 'https://cerebro.iveda.ai',
+      '/api/rsapi': {
+        target: 'https://cerebro.iveda.ai/rsapi/cloud',
         changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/rsapi/, ''),
         secure: true,
       },
-      '/lvapi': {
-        target: 'https://cerebro.sce.pccu.edu.tw',
+      '/api/lvapi': {
+        target: 'https://cerebro.iveda.ai/lvapi/api',
         changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/lvapi/, ''),
         secure: true,
       },
     },
