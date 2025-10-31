@@ -55,7 +55,7 @@ export class AuthStorage extends AsyncStorage {
             // 啟動定期檢查
             this.startTokenExpirationCheck();
             // 啟動閒置逾時監控
-            this.startIdleTimeout();
+            // this.startIdleTimeout();
           }
 
           this.loading = false;
