@@ -7,10 +7,6 @@ import { observer } from 'mobx-react';
 import { useAuth } from '@core/storages/auth';
 import { errors } from '@core/storages/errors';
 
-// components
-
-import { WaitingPage } from '@core/ui/pages/WaitingPage';
-
 const DEFAULT_STALE_TIME = 5000;
 
 export const queryClient = new QueryClient({
@@ -34,6 +30,6 @@ type Props = {
 
 export const DataAccessAdapter: React.FC<Props> = observer(({ children }) => {
   const auth = useAuth();
-  if (auth.loading) return <WaitingPage />;
+  // Don't block - let AuthGuard handle loading state
   return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
 });
