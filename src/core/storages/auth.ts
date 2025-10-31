@@ -54,7 +54,7 @@ export class AuthStorage extends AsyncStorage {
           // 啟動定期檢查
           this.startTokenExpirationCheck();
           // 啟動閒置逾時監控
-          this.startIdleTimeout();
+          // this.startIdleTimeout(); // 暫時停用 30 分鐘閒置登出功能
         }
 
         this.loading = false;
@@ -176,7 +176,7 @@ export class AuthStorage extends AsyncStorage {
         // 啟動定期檢查
         this.startTokenExpirationCheck();
         // 啟動閒置逾時監控
-        this.startIdleTimeout();
+        // this.startIdleTimeout(); // 暫時停用 30 分鐘閒置登出功能
       }
 
       if (data.remember) {
@@ -196,7 +196,11 @@ export class AuthStorage extends AsyncStorage {
 
   @flow
   *logout() {
-    yield api.logout();
+    // 不等待後端回應，直接執行清理（避免後端延遲導致使用者等待過久）
+    api.logout().catch((error) => {
+      console.warn('Logout API call failed, but proceeding with logout:', error);
+    });
+    
     this.clear();
     LocationsController.invalidate();
     ui.gotoLogin();
