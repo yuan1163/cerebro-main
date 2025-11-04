@@ -1,10 +1,11 @@
-@font-face {
-  font-family: 'Inter var';
-  src: url('@assets/fonts/Inter.var.woff2') format('woff2');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 100 900;
-}
+// Font is loaded via Google Fonts in index.html
+// @font-face {
+//   font-family: 'Inter var';
+//   src: url('@assets/fonts/Inter.var.woff2') format('woff2');
+//   font-display: swap;
+//   font-style: normal;
+//   font-weight: 100 900;
+// }
 
 // palette
 
@@ -144,4 +145,8 @@ $unitWidgetScrollable: calc(100vh - theme('spacing.container-x') - theme('height
   &:hover {
     @apply text-typography-link-hover;
   }
+}
+
+.text-medium {
+  font-size: 14px;
 }

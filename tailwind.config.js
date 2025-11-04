@@ -8,6 +8,21 @@ module.exports = {
     preflight: false,
   },
   theme: {
+    fontFamily: {
+      sans: [
+        'Poppins',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'Noto Sans',
+        'sans-serif',
+      ],
+    },
     colors: {
       white: '#FFFFFF',
       black: '#000000',

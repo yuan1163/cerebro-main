@@ -29,7 +29,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
   tab-size: 4; /* 3 */
-  font-family: theme('fontFamily.sans'); /* 4 */
+  font-family: var(--typography-font-family-sans-serif); /* 4 */
 }
 
 /*
@@ -103,7 +103,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: theme('fontFamily.mono'); /* 1 */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
