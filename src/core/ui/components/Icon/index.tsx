@@ -39,7 +39,7 @@ type IconProps<T extends React.ElementType> = PolymorphicComponentPropWithRef<
   }
 >;
 
-type IconComponent = <T extends React.ElementType = 'span'>(props: IconProps<T>) => React.ReactElement | null;
+type IconComponent = <T extends React.ElementType = 'span'>(props: IconProps<T>) => React.ReactNode;
 
 export const Icon: IconComponent = React.forwardRef(
   <T extends React.ElementType = 'span'>(

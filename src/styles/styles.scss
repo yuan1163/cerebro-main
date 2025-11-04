@@ -98,6 +98,13 @@ $unitWidgetScrollable: calc(100vh - theme('spacing.container-x') - theme('height
 
 // SCROLLBAR
 
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+}
 @mixin scrollbar {
   &::-webkit-scrollbar {
     @apply h-1.5;
