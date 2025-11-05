@@ -40,7 +40,8 @@ export const CameraLocations: React.FC = () => {
       rounded
       variant='solid'
       summaryClass='p-5'
-      detailsClass='pb-5 px-5 flex flex-col gap-10 flex-1 h-[calc(100%-70px)]'
+      detailsClass='pb-4 px-5 flex flex-col gap-10 flex-1 h-[calc(100%-70px)]'
+      className='min-h-[360px]'
     >
       <div className='w-full h-full flex-1 rounded-[10px] overflow-hidden relative'>
         <Map points={fakeLocations} marker='camera' zoom={16} />

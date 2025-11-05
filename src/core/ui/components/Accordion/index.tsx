@@ -59,7 +59,7 @@ export const Accordion: React.FC<Props> = ({
       {({ open }) => {
         return (
           <AccordionContainer
-            className={cn(className, open ? 'flex-1' : '')}
+            className={cn(className, open ? 'flex-auto' : 'min-h-0')}
             color={color}
             rounded={rounded}
             shadow={shadow}

@@ -68,13 +68,13 @@ export const Dashboard = ({ groupId, index }: DashboardProps) => {
       />
       <UnitContainer className='mt-[84px]'>
         <Unit variant='sidebar' height='full'>
-          <div className='flex flex-col h-full gap-4'>
+          <div className='flex flex-col min-h-full gap-4'>
             <CameraLocations />
             <Alerts />
           </div>
         </Unit>
-        <Unit>
-          <div className='flex flex-col h-full gap-4'>
+        <Unit height='full'>
+          <div className='flex flex-col gap-4'>
             <LiveView />
             <CameraHealth />
           </div>
