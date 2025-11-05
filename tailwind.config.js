@@ -114,9 +114,11 @@ module.exports = {
       },
       neutral: {
         DEFAULT: 'var(--color-neutral-500)',
-        50: 'var(--color-neutral-50)',
+        50: '#F9FAFB',
+        // 50: 'var(--color-neutral-50)',
         100: 'var(--color-neutral-100)',
-        200: 'var(--color-neutral-200)',
+        200: '#DCDCDC',
+        // 200: 'var(--color-neutral-200)',
         300: 'var(--color-neutral-300)',
         400: 'var(--color-neutral-400)',
         500: '#8F8F8F',

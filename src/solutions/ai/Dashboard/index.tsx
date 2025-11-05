@@ -45,6 +45,8 @@ import { log } from 'console';
 import { CameraLocations } from './CameraLocations';
 import { Alerts } from './Alerts';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
+import { LiveView } from './Live View';
+import { CameraHealth } from './Camera Health';
 
 type DashboardProps = {
   groupId: number;
@@ -71,8 +73,14 @@ export const Dashboard = ({ groupId, index }: DashboardProps) => {
             <Alerts />
           </div>
         </Unit>
-        <div className='h-[1000px] bg-main w-12'></div>
+        <Unit>
+          <div className='flex flex-col h-full gap-4'>
+            <LiveView />
+            <CameraHealth />
+          </div>
+        </Unit>
         <Unit height='full'>
+          {/* <LiveView /> */}
           {/* <Grid className={styles['container']} display='grid' fullHeight>
             <DomainMap expended={expendMap} onClick={handleExpand} />
             <Grid className={cn(expendMap ? 'hidden' : '')} fullWidth fullHeight gap={5}>
