@@ -3642,6 +3642,11 @@
         "translation": "重设密码"
       }
     },
+    "resetPasswordEmailSent": {
+      "label": {
+        "translation": "密码重设邮件已发送"
+      }
+    },
     "resetEmailPage": {
       "label": {
         "translation": "查看您的电子邮件"

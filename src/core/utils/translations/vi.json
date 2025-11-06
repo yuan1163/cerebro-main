@@ -3640,6 +3640,11 @@
         "translation": "Đặt lại mật khẩu"
       }
     },
+    "resetPasswordEmailSent": {
+      "label": {
+        "translation": "Email đặt lại mật khẩu đã được gửi"
+      }
+    },
     "resetEmailPage": {
       "label": {
         "translation": "Kiểm tra hộp thư điện tử của bạn"

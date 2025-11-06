@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router';
 import { observer } from 'mobx-react';
 
@@ -46,6 +47,7 @@ import { Scrollbar } from '@core/ui/components/Scrollbar';
 import { SelectUserGroups } from '../SelectUserGroups';
 import { SelectUserLocations } from '../SelectUserLocations';
 import { Text } from '@core/ui/components/Text';
+import { Toast } from '@core/ui/components/Toast';
 import { UserCategorySelect } from '@core/ui/cerebro/UserCategorySelect';
 import { UserRoleSelect } from '@core/ui/cerebro/UserRoleSelect';
 
@@ -374,15 +376,40 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
     onClose?.();
   };
 
-  const [newPassword, setNewPassword] = useState('');
   const [passwordInvalidMsg, setPasswordInvalidMsg] = useState<string[]>([]);
 
+  // Toast for reset password email sent
+  const [snackOpen, setSnackOpen] = React.useState<boolean>(false);
+  const handleShowSnackbar = () => {
+    setSnackOpen(true);
+    setTimeout(() => {
+      setSnackOpen(false);
+    }, 3000);
+  };
+
   async function getNewPassword() {
-    const newPwd = await controller.requestNewPassword(user.email);
-    setNewPassword(newPwd);
+    try {
+      await auth.restorePassword({
+        email: user.email || '',
+      });
+      handleShowSnackbar();
+    } catch (error) {
+      // Error handling is done in auth.restorePassword
+    }
   }
   return (
     <>
+      {createPortal(
+        <Toast
+          isShowing={snackOpen}
+          message={t(
+            'login.resetPasswordEmailSent.label',
+            'Reset password email sent',
+            'Confirmation message that password reset email has been sent to the user.',
+          )}
+        />,
+        document.body,
+      )}
       <CardHeader
         action={
           <IconButton
@@ -809,12 +836,6 @@ export const ProfileEdit: React.FC<Props> = observer(({ className, onClose, user
                         )}
                       </Button>
                     )}
-
-                    {newPassword &&
-                      `
-                          ${t('user.newPasswordInputPlaceholder.label', 'New password', 'New password')}：
-                          ${newPassword}
-                        `}
                   </Grid>
                 </Accordion>
               )}

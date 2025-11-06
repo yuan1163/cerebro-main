@@ -3404,6 +3404,12 @@
         "notes": "Label for Reset password button."
       }
     },
+    "resetPasswordEmailSent": {
+      "label": {
+        "translation": "Reset password email sent",
+        "notes": "Confirmation message that password reset email has been sent to the user."
+      }
+    },
     "resetEmailPage": {
       "label": {
         "translation": "Check your email",

@@ -3637,6 +3637,11 @@
         "translation": "重新設定密碼"
       }
     },
+    "resetPasswordEmailSent": {
+      "label": {
+        "translation": "密碼重設郵件已發送"
+      }
+    },
     "resetEmailPage": {
       "label": {
         "translation": "查看您的電子郵件"
