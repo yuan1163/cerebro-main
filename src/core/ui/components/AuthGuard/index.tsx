@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@core/storages/auth';
+import { WaitingPage } from '@core/ui/pages/WaitingPage';
 
 type AuthGuardProps = {
   children: React.ReactNode;
@@ -30,6 +31,11 @@ export const AuthGuard: React.FC<AuthGuardProps> = observer(({ children }) => {
   // 如果是公開路由，直接顯示內容
   if (isPublicRoute) {
     return <>{children}</>;
+  }
+
+  // 如果正在檢查認證狀態，顯示載入中
+  if (auth.loading) {
+    return <WaitingPage />;
   }
 
   // 如果使用者未登入，導向登入頁
