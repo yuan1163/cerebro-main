@@ -41,18 +41,19 @@ export const AppRoutes = observer(() => {
   const navigate = useNavigate();
   const auth = useAuth();
 
-  React.useEffect(() => {
-    ui.process(navigate);
-  }, [ui, navigate]);
+  React.useEffect(() => ui.process(navigate), [ui.redirect]);
+  // React.useEffect(() => {
+  //   ui.process(navigate);
+  // }, [ui, navigate]);
 
   return (
     <AuthGuard>
       <Routes>
-        <Route path="/login" element={<AuthLoginPage />} />
-        <Route path="/reset" element={<AuthResetPage />} />
-        <Route path="/error" element={<ErrorPage />} />
-        <Route path="/cerebro" element={<Navigate replace to="/solutions" />} />
-        <Route path="/solutions" element={<SolutionsPage />} />
+        <Route path='/login' element={<AuthLoginPage />} />
+        <Route path='/reset' element={<AuthResetPage />} />
+        <Route path='/error' element={<ErrorPage />} />
+        <Route path='/cerebro' element={<Navigate replace to='/solutions' />} />
+        <Route path='/solutions' element={<SolutionsPage />} />
 
         {/* 各 solution 對應的模組頁 */}
         {solutions.map((solution) => (
@@ -70,8 +71,8 @@ export const AppRoutes = observer(() => {
               return (
                 <Route
                   key={`route:redirect:${solution.url}`}
-                  path="/ai"
-                  element={<Navigate replace to="/ai/dashboard1" />}
+                  path='/ai'
+                  element={<Navigate replace to='/ai/dashboard1' />}
                 />
               );
             default:
@@ -86,10 +87,7 @@ export const AppRoutes = observer(() => {
         })}
 
         {/* 根目錄依登入狀態導向 */}
-        <Route
-          path="/"
-          element={<Navigate replace to={auth.isAuthenticated() ? '/solutions' : '/login'} />}
-        />
+        <Route path='/' element={<Navigate replace to={auth.isAuthenticated() ? '/solutions' : '/login'} />} />
       </Routes>
     </AuthGuard>
   );
