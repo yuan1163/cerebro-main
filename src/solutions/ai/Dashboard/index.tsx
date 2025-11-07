@@ -10,6 +10,7 @@ import { useUI } from '@core/storages/ui';
 
 // styles
 import { cn } from '@core/utils/classnames';
+// import styles from './styles.module.scss';
 
 // data
 import { useLocations } from '@core/storages/controllers/locations';
@@ -21,6 +22,8 @@ import { Card } from '@core/ui/components/Card';
 import { CardContent } from '@core/ui/components/CardContent';
 import { CardHeader } from '@core/ui/components/CardHeader';
 import { DataSelect } from '@core/ui/components/DataSelect';
+// import { EventsList } from './EventsList';
+// import { FormationMap } from './FormationMap';
 import { Grid } from '@core/ui/components/Grid';
 import { Header } from '@core/ui/cerebro/Header';
 import { Search } from '@core/ui/components/Search';
@@ -30,57 +33,61 @@ import { Unit } from '@core/ui/components/Unit';
 import { UnitContainer } from '@core/ui/components/UnitContainer';
 import { Slider } from '@core/ui/components/Slider';
 import { SwiperSlide } from 'swiper/react';
+// import { AlertCard } from './AlertCard';
 
 // icons
+import DashboardLineIcon from '@assets/icons/IvedaAI/sidebar/dashboard-line.svg?component';
 
 import ModuleIcon from '@assets/icons/line/dashboard.svg?component';
+import { useAuth } from '@core/storages/auth';
+import { useParams } from '@nodemodules/react-router/dist';
+import { log } from 'console';
+import { CameraLocations } from './CameraLocations';
+import { Alerts } from './Alerts';
+import { Scrollbar } from '@core/ui/components/Scrollbar';
+import { LiveView } from './Live View';
+import { CameraHealth } from './Camera Health';
 
-export const Dashboard = () => {
-  const ui = useUI();
+type DashboardProps = {
+  groupId: number;
+  index: number;
+};
 
-  const alerts = useAlerts({ locationId: ui.currentFormation });
-
-  const locations = useLocations();
-  const formation = locations.getElementById(ui.currentFormation);
-
+export const Dashboard = ({ groupId, index }: DashboardProps) => {
   return (
     <>
       <Header
-        icon={<ModuleIcon />}
-        title={(formation && formation.name) || t('general.notAvailable.label', 'n/a', 'Not Available.')}
+        icon={<DashboardLineIcon />}
+        title={t(
+          'solutions.dashboard.label',
+          'Dashboard',
+          "An overview of the solution's core purpose and components.",
+        )}
+        widgets={false}
+        className='fixed z-10 bg-[#f9fafb]'
       />
-      <UnitContainer>
-        <Unit variant='sidebar'></Unit>
-        <Unit>
-          <Card>
-            <Grid direction='column' grow>
-              <CardHeader
-                disablePaddingBottom
-                title={t('location.locationSchema.label', 'Location Schema', 'Location schema title.')}
-              />
-              <CardContent></CardContent>
+      <UnitContainer className='mt-[84px]'>
+        <Unit variant='sidebar' height='full'>
+          <div className='flex flex-col min-h-full gap-4'>
+            <CameraLocations />
+            <Alerts />
+          </div>
+        </Unit>
+        <Unit height='full'>
+          <div className='flex flex-col gap-4'>
+            <LiveView />
+            <CameraHealth />
+          </div>
+        </Unit>
+        <Unit height='full'>
+          {/* <LiveView /> */}
+          {/* <Grid className={styles['container']} display='grid' fullHeight>
+            <DomainMap expended={expendMap} onClick={handleExpand} />
+            <Grid className={cn(expendMap ? 'hidden' : '')} fullWidth fullHeight gap={5}>
+              <Overview />
+              <ResponsibleTanks />
             </Grid>
-            {/* <Grid display='grid' direction='column'>
-              <CardHeader
-                title={t(
-                  'issue.attentionRequired.label',
-                  'Attention Required',
-                  'A title indicating that there are unresolved problems.',
-                )}
-              />
-              <CardContent className={styles['card-container']}>
-                {alerts.hasData() && (
-                  <Slider scrollbar>
-                    {alerts.getCamerasAlerts().map((alert, i) => (
-                      <SwiperSlide className={styles['swiper-slide']} key={i}>
-                        <AlertCard alert={alert} />
-                      </SwiperSlide>
-                    ))}
-                  </Slider>
-                )}
-              </CardContent>
-            </Grid> */}
-          </Card>
+          </Grid> */}
         </Unit>
       </UnitContainer>
     </>

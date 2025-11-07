@@ -33,6 +33,7 @@ export const AccordionContainer: React.FC<Props> = ({
         styles['accordion'],
         styles[`accordion-color-${color}`],
         styles[`accordion-variant-${variant}`],
+        className,
       )}
     >
       {children}

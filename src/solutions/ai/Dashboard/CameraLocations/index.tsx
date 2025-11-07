@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // utils
@@ -15,73 +15,37 @@ import { AccordionItem } from '@core/ui/levelnow/AccordionItem';
 // hooks
 import { useIntersectionObserver } from '@core/hooks/useIntersectionObserver';
 import { LocationClient } from '@core/api/types';
+import { on } from 'events';
+
+const fakeLocations = [
+  {
+    locationId: 1,
+    status: 1,
+    latitude: 37.7749,
+    longitude: -122.4194,
+  },
+];
 
 export const CameraLocations: React.FC = () => {
-  const locations = useLocations() || [];
-  const locationsWithBandType = locations.filter((location) => location.bandType === 1);
-
   return (
-    <>
-      <Scrollbar>
-        <AccordionGroup gap>
-          {locationsWithBandType.map((location) => (
-            <Accordion
-              key={location.locationId}
-              customTitle={
-                <Text component='h2' variant='lg' weight='semibold'>
-                  {location.name || t('general.notAvailable.label', 'n/a', 'Not Available.')}
-                </Text>
-              }
-              disableGutters
-              defaultOpen
-              shadow
-              rounded
-              variant='solid'
-              summaryClass='p-5'
-              detailsClass='pb-5 px-5 flex flex-col gap-10'
-            >
-              {/* {location.clients.map((client) => (
-                <LazyMapComponent
-                  key={client.clientId}
-                  client={client}
-                  title={client.clientName || t('general.notAvailable.label', 'n/a', 'Not Available.')}
-                  subtitle={client.clientAddress || ''}
-                />
-              ))} */}
-            </Accordion>
-          ))}
-        </AccordionGroup>
-      </Scrollbar>
-    </>
+    <Accordion
+      customTitle={
+        <Text component='h2' variant='lg' weight='semibold'>
+          {t('general.cameraLocations.label', 'Camera Locations', 'camera locations')}
+        </Text>
+      }
+      divider
+      defaultOpen
+      shadow
+      rounded
+      variant='solid'
+      summaryClass='p-5'
+      detailsClass='pb-4 px-5 flex flex-col gap-10 flex-1 h-[calc(100%-70px)]'
+      className='min-h-[360px]'
+    >
+      <div className='w-full h-full flex-1 rounded-[10px] overflow-hidden relative'>
+        <Map points={fakeLocations} marker='camera' zoom={16} />
+      </div>
+    </Accordion>
   );
 };
-
-// Lazy Map Component
-// const LazyMapComponent: React.FC<{
-//   client: LocationClient;
-//   title: string;
-//   subtitle: string;
-// }> = ({ client, title, subtitle }) => {
-//   const [containerRef, isVisible] = useIntersectionObserver();
-//   const navigate = useNavigate();
-
-//   const points = [
-//     {
-//       latitude: client.latitude!,
-//       longitude: client.longitude!,
-//     },
-//   ];
-
-//   return (
-//     <div ref={containerRef}>
-//       <AccordionItem
-//         title={title}
-//         subtitle={subtitle}
-//         map={
-//           <div className='w-full h-40'>{isVisible && <Map points={points} zoom={16} className='rounded-[10px]' />}</div>
-//         }
-//         onArrowClick={() => navigate(`/levelnow/customers/customer/${client.clientId}`)}
-//       />
-//     </div>
-//   );
-// };

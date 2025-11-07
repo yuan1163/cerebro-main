@@ -1,0 +1,21 @@
+/* 
+ * Poppins Font Line-Height Normalization
+ * 
+ * Poppins has larger internal vertical metrics compared to Inter,
+ * causing line-height: normal to compute to ~1.71 instead of 1.5
+ * This override ensures consistent line-height matching Figma designs
+ * 
+ * The key issue: When line-height is 'normal', browsers use font metrics.
+ * Solution: Make ALL elements use explicit line-height value instead of 'normal'
+ */
+
+/* Set explicit line-height on all elements to override 'normal' */
+*:not(svg):not(svg *) {
+  line-height: 1.5;
+}
+
+/* Allow Tailwind classes to override */
+[class*='leading-'],
+[class*='line-height-'] {
+  /* Tailwind line-height classes will override this */
+}

@@ -55,10 +55,16 @@ export const Accordion: React.FC<Props> = ({
   rounded,
 }) => {
   return (
-    <AccordionContainer className={className} color={color} rounded={rounded} shadow={shadow} variant={variant}>
-      <Disclosure defaultOpen={defaultOpen}>
-        {({ open }) => (
-          <>
+    <Disclosure defaultOpen={defaultOpen}>
+      {({ open }) => {
+        return (
+          <AccordionContainer
+            className={cn(className, open ? 'flex-auto' : 'min-h-0')}
+            color={color}
+            rounded={rounded}
+            shadow={shadow}
+            variant={variant}
+          >
             <AccordionSummary
               className={summaryClass}
               color={color}
@@ -73,7 +79,7 @@ export const Accordion: React.FC<Props> = ({
               {customTitle}
             </AccordionSummary>
             <AccordionDetails
-              className={detailsClass}
+              className={cn(detailsClass, open ? 'flex-1' : 'none')}
               color={color}
               component={Disclosure.Panel}
               disableGutters={disableGutters}
@@ -82,9 +88,9 @@ export const Accordion: React.FC<Props> = ({
             >
               {children}
             </AccordionDetails>
-          </>
-        )}
-      </Disclosure>
-    </AccordionContainer>
+          </AccordionContainer>
+        );
+      }}
+    </Disclosure>
   );
 };
