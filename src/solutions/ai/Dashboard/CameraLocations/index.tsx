@@ -30,7 +30,7 @@ export const CameraLocations: React.FC = () => {
   return (
     <Accordion
       customTitle={
-        <Text component='h2' variant='lg' weight='semibold'>
+        <Text variant='lg' weight='medium' lineHeight='normal'>
           {t('general.cameraLocations.label', 'Camera Locations', 'camera locations')}
         </Text>
       }

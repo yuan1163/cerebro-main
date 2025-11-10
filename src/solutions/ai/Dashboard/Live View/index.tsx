@@ -22,7 +22,7 @@ export const LiveView: React.FC = () => {
   return (
     <Accordion
       customTitle={
-        <Text component='h2' variant='lg' weight='semibold'>
+        <Text variant='lg' weight='medium' lineHeight='normal'>
           {t('dashboard.liveView.label', 'Live View', 'Label for live view section')}
         </Text>
       }

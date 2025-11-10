@@ -60,7 +60,7 @@ export const CameraHealth: React.FC = () => {
   return (
     <Accordion
       customTitle={
-        <Text component='h2' variant='lg' weight='semibold'>
+        <Text variant='lg' weight='medium' lineHeight='normal'>
           {t('dashboard.cameraHealth.label', 'Camera Health', 'Label for camera health section')}
         </Text>
       }

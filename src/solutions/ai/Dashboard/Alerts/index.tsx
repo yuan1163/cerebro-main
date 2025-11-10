@@ -91,7 +91,7 @@ export const Alerts: React.FC = () => {
   return (
     <Accordion
       customTitle={
-        <Text component='h2' variant='lg' weight='semibold'>
+        <Text variant='lg' weight='medium' lineHeight='normal'>
           {t('general.alerts.label', 'Alerts', 'Label for alerts section')}
         </Text>
       }
