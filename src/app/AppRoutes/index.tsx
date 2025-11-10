@@ -27,10 +27,12 @@ import { modules as connectModules } from '@solutions/connect';
 import { modules as emsModules } from '@solutions/ems';
 import { modules as levelnowModules } from '@solutions/levelnow';
 
+// AI specific component
+import { AIModulesPage } from '@solutions/ai/AIModulesPage';
+
 const solutions = [
   { url: Solutions.pinpoint, modules: cerebroModules },
   { url: Solutions.utilus, modules: utilusModules },
-  { url: Solutions.ai, modules: aiModules },
   { url: Solutions.connect, modules: connectModules },
   { url: Solutions.ems, modules: emsModules },
   { url: Solutions.levelnow, modules: levelnowModules },
@@ -61,27 +63,20 @@ export const AppRoutes = observer(() => {
           />
         ))}
 
+        {/* AI solution with dynamic modules */}
+        <Route key='route:solution:ai' path='/ai/*' element={<AIModulesPage />} />
+
         {/* Default redirects for each solution */}
-        {solutions.map((solution) => {
-          switch (solution.url) {
-            case 'ai':
-              return (
-                <Route
-                  key={`route:redirect:${solution.url}`}
-                  path='/ai'
-                  element={<Navigate replace to='/ai/dashboard1' />}
-                />
-              );
-            default:
-              return (
-                <Route
-                  key={`route:redirect:${solution.url}`}
-                  path={`/${solution.url}`}
-                  element={<Navigate replace to={`/${solution.url}/domain`} />}
-                />
-              );
-          }
-        })}
+        {solutions.map((solution) => (
+          <Route
+            key={`route:redirect:${solution.url}`}
+            path={`/${solution.url}`}
+            element={<Navigate replace to={`/${solution.url}/domain`} />}
+          />
+        ))}
+
+        {/* AI solution redirect */}
+        <Route key='route:redirect:ai' path='/ai' element={<Navigate replace to='/ai/dashboard1' />} />
 
         <Route path='/' element={<Navigate replace to={auth.isAuthenticated() ? '/solutions' : '/login'} />} />
       </Routes>

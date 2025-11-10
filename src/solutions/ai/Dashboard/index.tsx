@@ -47,13 +47,27 @@ import { Alerts } from './Alerts';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
 import { LiveView } from './Live View';
 import { CameraHealth } from './Camera Health';
+import { CameraData } from './Camera Data';
 
 type DashboardProps = {
-  groupId: number;
-  index: number;
+  group: {
+    id: number;
+    counting: boolean;
+    faceRecognition: boolean;
+    intrusion: boolean;
+    abnormal: boolean;
+    lpr: boolean;
+  };
 };
 
-export const Dashboard = ({ groupId, index }: DashboardProps) => {
+export const Dashboard = ({ group }: DashboardProps) => {
+  // const dataTabs = [
+  //   { label: t('cameraData.counting.label', 'Counting', 'Label for counting tab'), enabled: group.counting },
+  //   { label: t('cameraData.face.label', 'Face', 'Label for face tab'), enabled: group.faceRecognition },
+  //   { label: t('cameraData.intrusion.label', 'Intrusion', 'Label for intrusion tab'), enabled: group.intrusion },
+  //   { label: t('cameraData.abnormal.label', 'Abnormal', 'Label for abnormal tab'), enabled: group.abnormal },
+  //   { label: t('cameraData.lpr.label', 'LPR', 'Label for LPR tab'), enabled: group.lpr },
+  // ];
   return (
     <>
       <Header
@@ -80,6 +94,8 @@ export const Dashboard = ({ groupId, index }: DashboardProps) => {
           </div>
         </Unit>
         <Unit height='full'>
+          <CameraData />
+          {/* <CameraData tabs={dataTabs} /> */}
           {/* <LiveView /> */}
           {/* <Grid className={styles['container']} display='grid' fullHeight>
             <DomainMap expended={expendMap} onClick={handleExpand} />
