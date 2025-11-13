@@ -38,6 +38,18 @@ const mockCameraHealthData: Camera[] = [
     abnormalTime: '2025-06-18 08:45',
     abnormalType: 1,
   },
+  {
+    id: '4',
+    cameraName: 'CCTV-19',
+    abnormalTime: '2025-06-19 16:20',
+    abnormalType: 0,
+  },
+  {
+    id: '5',
+    cameraName: 'CCTV-03',
+    abnormalTime: '',
+    abnormalType: 1,
+  },
 ];
 
 const formatAbnormalType = (type: 0 | 1) => {

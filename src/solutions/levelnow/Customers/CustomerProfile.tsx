@@ -190,7 +190,7 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
         labelWidth='240px'
         className='h-full'
       >
-        <div className='w-full h-40'>
+        <div className='relative w-full h-40'>
           <Map points={points} zoom={zoom} className='rounded-[10px]' />
         </div>
         <DataBlock data={ownerFields} columns={1} labelWidth='240px' noPadding />

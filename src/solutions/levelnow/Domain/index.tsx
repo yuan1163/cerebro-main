@@ -32,7 +32,7 @@ export const Domain = observer(() => {
   };
 
   return (
-    <>
+    <div className='flex flex-col h-[calc(100vh-20px)]'>
       <Header
         icon={<DomainLineIcon />}
         title={t(
@@ -42,7 +42,7 @@ export const Domain = observer(() => {
         )}
         widgets={false}
       />
-      <UnitContainer>
+      <UnitContainer className='flex-1'>
         <Unit variant='sidebar'>
           <DomainLocationList />
         </Unit>
@@ -56,6 +56,6 @@ export const Domain = observer(() => {
           </Grid>
         </Unit>
       </UnitContainer>
-    </>
+    </div>
   );
 });

@@ -85,6 +85,38 @@ const mockAlerts: Alert[] = [
     description: 'Times Square Centre has reported some alerts fro...',
     thumbnailUrl: '',
   },
+  {
+    id: '5',
+    date: '2025-06-20T14:30:00Z',
+    location: 'NYC - Bus a...',
+    cameraId: 'CCTV-14',
+    description: 'Times Square Centre has reported some alerts fro...',
+    thumbnailUrl: '',
+  },
+  {
+    id: '6',
+    date: '2025-06-20T14:30:00Z',
+    location: 'NYC - Bus a...',
+    cameraId: 'CCTV-14',
+    description: 'Times Square Centre has reported some alerts fro...',
+    thumbnailUrl: '',
+  },
+  {
+    id: '7',
+    date: '2025-06-20T14:30:00Z',
+    location: 'NYC - Bus a...',
+    cameraId: 'CCTV-14',
+    description: 'Times Square Centre has reported some alerts fro...',
+    thumbnailUrl: '',
+  },
+  {
+    id: '8',
+    date: '2025-06-20T14:30:00Z',
+    location: 'NYC - Bus a...',
+    cameraId: 'CCTV-14',
+    description: 'Times Square Centre has reported some alerts fro...',
+    thumbnailUrl: '',
+  },
 ];
 
 export const Alerts: React.FC = () => {
@@ -101,8 +133,9 @@ export const Alerts: React.FC = () => {
       rounded
       variant='solid'
       summaryClass='p-5'
-      detailsClass='py-4 px-5 flex flex-col gap-10'
-      // className='max-h-[calc(50vh-84px)]'
+      detailsClass='flex-1 overflow-hidden h-[calc(100%-70px) p-5'
+      className='min-h-0'
+      // className='flex flex-col flex-1 '
     >
       <Scrollbar>
         <div className='flex flex-col gap-4'>
