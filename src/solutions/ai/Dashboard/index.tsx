@@ -92,7 +92,7 @@ export const Dashboard = ({ group }: DashboardProps) => {
           <LiveView />
           <CameraHealth />
         </div>
-        <div className='flex flex-col flex-1 gap-4'>
+        <div className='flex flex-col flex-1 min-h-0'>
           <CameraData tabs={dataTabs} />
         </div>
         {/* </div> */}

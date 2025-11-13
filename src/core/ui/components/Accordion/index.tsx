@@ -39,6 +39,7 @@ type Props = {
   title?: string;
   variant?: 'solid';
   rounded?: boolean;
+  constrainHeight?: boolean; // New prop to control if accordion should constrain its height
 } & React.HTMLAttributes<HTMLElement>;
 
 export const Accordion: React.FC<Props> = ({
@@ -62,6 +63,7 @@ export const Accordion: React.FC<Props> = ({
   title,
   variant,
   rounded,
+  constrainHeight = false,
 }) => {
   console.log('active tab', activedTab);
   return (
@@ -69,7 +71,7 @@ export const Accordion: React.FC<Props> = ({
       {({ open }) => {
         return (
           <AccordionContainer
-            className={cn(open ? `flex-1 ${className}` : 'min-h-0')}
+            className={cn(open && 'flex-1', constrainHeight && 'min-h-0', className)}
             color={color}
             rounded={rounded}
             shadow={shadow}
@@ -112,7 +114,7 @@ export const Accordion: React.FC<Props> = ({
               )}
             </AccordionSummary>
             <AccordionDetails
-              className={cn(detailsClass, open ? 'flex-1' : 'none')}
+              className={cn(open && 'flex-1', constrainHeight && 'min-h-0', !open && 'none', detailsClass)}
               color={color}
               component={Disclosure.Panel}
               disableGutters={disableGutters}

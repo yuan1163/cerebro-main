@@ -32,7 +32,7 @@ export const LiveView: React.FC = () => {
       rounded
       variant='solid'
       summaryClass='p-5'
-      detailsClass='py-4 px-5 flex flex-col gap-10'
+      detailsClass='py-4 px-5 flex flex-col'
     >
       <div className='grid grid-cols-3 gap-4'>
         <div id='main-stream' className='col-span-3 h-[300px] bg-neutral-200 rounded-[10px]'>

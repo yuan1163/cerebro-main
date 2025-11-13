@@ -50,6 +50,18 @@ const mockCameraHealthData: Camera[] = [
     abnormalTime: '',
     abnormalType: 1,
   },
+  {
+    id: '5',
+    cameraName: 'CCTV-03',
+    abnormalTime: '',
+    abnormalType: 1,
+  },
+  {
+    id: '5',
+    cameraName: 'CCTV-03',
+    abnormalTime: '',
+    abnormalType: 1,
+  },
 ];
 
 const formatAbnormalType = (type: 0 | 1) => {
@@ -81,10 +93,11 @@ export const CameraHealth: React.FC = () => {
       shadow
       rounded
       variant='solid'
+      constrainHeight
       summaryClass='p-5'
       detailsClass='py-4 px-5 flex flex-col gap-10'
     >
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center h-full'>
         <div className='grid w-full grid-cols-3 px-4 py-2 font-medium text-center text-medium text-neutral-900 bg-neutral-50'>
           <div className='pr-4'>{t('cameraHealth.cameraName.label', 'Camera Name', 'Label for camera name')}</div>
           <div className='px-4 border-x border-neutral-200'>
@@ -92,7 +105,7 @@ export const CameraHealth: React.FC = () => {
           </div>
           <div className='pl-4'>{t('cameraHealth.abnormalType.label', 'Abnormal Type', 'Label for abnormal type')}</div>
         </div>
-        <div className='h-[148px] w-full'>
+        <div className='w-full h-[calc(100%-37px)]'>
           <Scrollbar>
             {mockCameraHealthData.map((camera: Camera) => (
               <CameraItem key={camera.id} camera={camera} />
