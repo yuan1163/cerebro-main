@@ -1692,6 +1692,28 @@
       }
     }
   },
+  "overview": {
+    "customers": {
+      "label": {
+        "translation": "Khách hàng"
+      }
+    },
+    "locations": {
+      "label": {
+        "translation": "Vị trí"
+      }
+    },
+    "offline": {
+      "label": {
+        "translation": "Ngoại tuyến"
+      }
+    },
+    "batteryLow": {
+      "label": {
+        "translation": "Pin yếu"
+      }
+    }
+  },
   "deviceTypes": {
     "Cameras": {
       "translation": "Máy ảnh"
@@ -2132,6 +2154,11 @@
     "goToNextPageButton": {
       "label": {
         "translation": "Chuyển đến trang tiếp theo"
+      }
+    },
+    "tanks": {
+      "label": {
+        "translation": "Bể chứa"
       }
     },
     "noComment": {
