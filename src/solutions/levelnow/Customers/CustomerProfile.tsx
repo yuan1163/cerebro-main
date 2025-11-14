@@ -12,7 +12,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import Map, { Point } from '@core/ui/levelnow/Map';
-import { getCustomerGWNameFields, getCustomerProfileFields } from '@constants/fieldSettings';
+import { getCustomerGWNameFields, getCustomerProfileFields, getCustomerPositionFields } from '@constants/fieldSettings';
 import { t } from '@core/utils/translate';
 import Select from '@core/ui/levelnow/Select';
 import { useUsers } from '@core/storages/controllers/levelnow/user';
@@ -30,6 +30,8 @@ const customerSchema = z.object({
   city: z.string().optional(),
   gwSalesRep: z.string().optional(),
   gwCustomerServiceRep: z.string().optional(),
+  latitude: z.string().optional(),
+  longitude: z.string().optional(),
 });
 type FormValues = z.infer<typeof customerSchema>;
 
@@ -71,6 +73,8 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
       city: '',
       gwSalesRep: '',
       gwCustomerServiceRep: '',
+      latitude: '',
+      longitude: '',
     },
   });
 
@@ -89,6 +93,8 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
         city: customer.clientCity || '',
         gwSalesRep: customer.salesRepUserId || '',
         gwCustomerServiceRep: customer.customerServiceRepUserId || '',
+        latitude: customer.latitude.toString() || '',
+        longitude: customer.longitude.toString() || '',
       });
     }
   }, [customer, reset]);
@@ -119,6 +125,7 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
 
   const basicFields = getCustomerProfileFields(customer);
   const ownerFields = getCustomerGWNameFields(customer);
+  const positionFields = getCustomerPositionFields(customer);
 
   const handleSubmitForm = async (data: FormValues) => {
     if (!customer.clientId) {
@@ -141,6 +148,8 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
           clientCity: data.city,
           salesRepUserId: data.gwSalesRep,
           customerServiceRepUserId: data.gwCustomerServiceRep,
+          latitude: data.latitude ? parseFloat(data.latitude) : 0,
+          longitude: data.longitude ? parseFloat(data.longitude) : 0,
         },
       });
       console.log('Client updated successfully');
@@ -297,6 +306,21 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
             </label>
             <p className='p-2 text-sm font-medium rounded h-9 text-neutral-900'>{serviceRep ?? '-'}</p>
           </div>
+          {positionFields.map((field) => (
+            <div key={field.name} className='flex flex-col gap-1'>
+              <label htmlFor={field.name} className='text-xs font-medium tracking-wide text-secondary-500'>
+                {field.label}
+              </label>
+              <input
+                id={field.name}
+                {...register(field.name as keyof FormValues)}
+                type='text'
+                inputMode='numeric'
+                placeholder={field.placeholder}
+                className='p-2 text-sm font-medium border rounded h-9 border-neutral-200 text-neutral-900 focus:outline-none'
+              />
+            </div>
+          ))}
         </div>
       </div>
       <div className='flex items-center gap-3 mt-auto'>

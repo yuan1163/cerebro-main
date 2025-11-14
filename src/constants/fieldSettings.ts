@@ -111,6 +111,21 @@ export const getCustomerProfileFields = (customer: ClientData | null) => [
   },
 ];
 
+export const getCustomerPositionFields = (customer: ClientData | null) => [
+  {
+    name: 'latitude',
+    label: t('customer.latitude.label', 'Latitude', 'Latitude field.'),
+    value: customer?.latitude || '-',
+    placeholder: 'Enter latitude',
+  },
+  {
+    name: 'longitude',
+    label: t('customer.longitude.label', 'Longitude', 'Longitude field.'),
+    value: customer?.longitude || '-',
+    placeholder: 'Enter longitude',
+  },
+];
+
 export const getCustomerGWFields = (customer: ClientData | null) => [
   {
     name: 'gwsalesrep',
