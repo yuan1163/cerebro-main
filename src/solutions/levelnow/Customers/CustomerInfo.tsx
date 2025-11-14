@@ -139,7 +139,7 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
                   <h1 className='font-medium text-md text-secondary-900'>
                     {t('customer.basicInfo.label', 'Basic information', 'Customer Basic information')}
                   </h1>
-                  <div className='grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-5 gap-y-3'>
+                  <div className='grid grid-flow-col grid-cols-2 grid-rows-5 gap-x-5 gap-y-3'>
                     {/* Left Side */}
                     {basicFieldsLeftSide.map((field) => (
                       <div key={field.name} className='flex flex-col gap-1'>

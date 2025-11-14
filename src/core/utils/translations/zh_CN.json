@@ -145,6 +145,11 @@
         "translation": "手机号码"
       }
     },
+    "address": {
+      "label": {
+        "translation": "地址"
+      }
+    },
     "postcode": {
       "label": {
         "translation": "邮政编码"

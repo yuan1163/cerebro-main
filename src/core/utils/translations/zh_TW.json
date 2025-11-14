@@ -145,6 +145,11 @@
         "translation": "手機號碼"
       }
     },
+    "address": {
+      "label": {
+        "translation": "地址"
+      }
+    },
     "postcode": {
       "label": {
         "translation": "郵遞區號"

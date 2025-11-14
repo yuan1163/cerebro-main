@@ -80,6 +80,12 @@ export const getCustomerProfileFields = (customer: ClientData | null) => [
     placeholder: 'Enter mobile number',
   },
   {
+    name: 'address',
+    label: t('customer.address.label', 'Address', 'Address field.'),
+    value: customer?.clientAddress || '-',
+    placeholder: 'Enter address',
+  },
+  {
     name: 'postcode',
     label: t('customer.postcode.label', 'Post code', 'Post code field.'),
     value: customer?.clientPostCode || '-',

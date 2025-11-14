@@ -122,6 +122,12 @@
         "notes": "Customer Mobile No."
       }
     },
+    "address": {
+      "label": {
+        "translation": "Address",
+        "notes": "Address field."
+      }
+    },
     "postcode": {
       "label": {
         "translation": "Post code",

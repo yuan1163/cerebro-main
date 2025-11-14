@@ -23,6 +23,7 @@ const customerSchema = z.object({
   customerNo: z.string().optional(),
   primaryContact: z.string().optional(),
   mobileNo: z.string().optional(),
+  address: z.string().optional(),
   postcode: z.string().optional(),
   country: z.string().optional(),
   state: z.string().optional(),
@@ -63,6 +64,7 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
       customerNo: '',
       primaryContact: '',
       mobileNo: '',
+      address: '',
       postcode: '',
       country: '',
       state: '',
@@ -80,6 +82,7 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
         customerNo: customer.clientNo || '',
         primaryContact: customer.clientContact || '',
         mobileNo: customer.clientPhone || '',
+        address: customer.clientAddress || '',
         postcode: customer.clientPostCode || '',
         country: customer.clientCountry || '',
         state: customer.clientState || '',
@@ -131,6 +134,7 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
           clientNo: data.customerNo,
           clientContact: data.primaryContact,
           clientPhone: data.mobileNo,
+          clientAddress: data.address,
           clientPostCode: data.postcode,
           clientCountry: data.country,
           clientState: data.state,
@@ -209,10 +213,13 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
   return (
     <form onSubmit={handleSubmit(handleSubmitForm)} className='flex flex-col gap-8'>
       <div className='flex flex-col gap-5'>
+        <h1 className='font-medium text-md tracking-32 text-secondary-900'>
+          {t('customer.profile.label', 'Customer Profile', 'Customer Profile')}
+        </h1>
         <h1 className='font-medium text-md text-secondary-900'>
           {t('customer.basicInfo.label', 'Basic information', 'Basic information')}
         </h1>
-        <div className='grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-5 gap-y-3'>
+        <div className='grid grid-flow-col grid-cols-2 grid-rows-5 gap-x-5 gap-y-3'>
           {basicFields.map((field) => (
             <div key={field.name} className='flex flex-col gap-1'>
               <label htmlFor={field.name} className='text-xs font-medium tracking-wide text-secondary-500'>

@@ -145,6 +145,11 @@
         "translation": "Số điện thoại di động"
       }
     },
+    "address": {
+      "label": {
+        "translation": "Địa chỉ"
+      }
+    },
     "postcode": {
       "label": {
         "translation": "Mã bưu điện"
