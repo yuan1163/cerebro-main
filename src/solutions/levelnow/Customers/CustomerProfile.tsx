@@ -222,6 +222,15 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
                 id={field.name}
                 {...register(field.name as keyof FormValues)}
                 type='text'
+                inputMode={field.name === 'mobileNo' ? 'numeric' : 'text'}
+                onInput={
+                  field.name === 'mobileNo'
+                    ? (e) => {
+                        const target = e.target as HTMLInputElement;
+                        target.value = target.value.replace(/[^0-9]/g, '');
+                      }
+                    : undefined
+                }
                 className='p-2 text-sm font-medium border rounded h-9 border-neutral-200 text-neutral-900 focus:outline-none'
               />
             </div>
