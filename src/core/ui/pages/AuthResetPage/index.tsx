@@ -44,7 +44,7 @@ export const AuthResetPage = () => {
   // yup
 
   const oneNumberCharacter = /\d/;
-  const oneUpperCase = /^(?=.*?[A-Z])/;
+  const oneUpperCase = /[A-Z]/;
   const oneSpecialCharacter = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
   const validationSchema = yup.object().shape({
@@ -61,7 +61,7 @@ export const AuthResetPage = () => {
       .max(60)
       .required('')
       .matches(
-        RegExp(`${oneUpperCase}`),
+        oneUpperCase,
         t(
           'general.oneUppercase.label',
           'one uppercase',
@@ -69,7 +69,7 @@ export const AuthResetPage = () => {
         ),
       )
       .matches(
-        RegExp(`${oneNumberCharacter}`),
+        oneNumberCharacter,
         t(
           'general.oneNumberCharacter.label',
           'one number character',
@@ -77,7 +77,7 @@ export const AuthResetPage = () => {
         ),
       )
       .matches(
-        RegExp(`${oneSpecialCharacter}`),
+        oneSpecialCharacter,
         t(
           'general.oneSpecialCharacter.label',
           'one special character',
