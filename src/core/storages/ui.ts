@@ -90,7 +90,7 @@ export class UIStateStorage {
   @action
   gotoWorkspace() {
     // this.to = `/${this.activeSolution}/`;
-    this.to = `/ems/`;
+    this.to = `/solutions`;
     this.redirect = true;
   }
 
