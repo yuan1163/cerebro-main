@@ -155,10 +155,17 @@ export const AuthResetPage = () => {
 
   // submit
 
-  const send = (data: Form) => {
-    //console.log('send', data);
-    const token = searchParams.get('token');
-    auth.resetPassword({ newPassword: data.password, brand: import.meta.env.VITE_BRAND }, token);
+  const send = async (data: Form) => {
+    try {
+      const token = searchParams.get('token');
+      if (!token) {
+        console.error('Reset token is missing from URL');
+        return;
+      }
+      await auth.resetPassword({ newPassword: data.password, brand: import.meta.env.VITE_BRAND }, token);
+    } catch (error) {
+      console.error('Reset password error:', error);
+    }
   };
 
   return (
@@ -266,7 +273,7 @@ export const AuthResetPage = () => {
                     />
                   </Grid>
                   <Grid item className='mt-5'>
-                    <Button fullWidth type='submit' size='lg' onClick={() => send(getValues())}>
+                    <Button fullWidth type='submit' size='lg'>
                       {t('login.resetPasswordButton.label', 'Reset password', 'Label for Reset password button.')}
                     </Button>
                   </Grid>
