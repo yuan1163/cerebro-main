@@ -29,7 +29,6 @@ export type Module = Routable & {
   icon: React.ReactNode;
   iconSolid: React.ReactNode;
   section?: ModuleSections; // default: ModuleSections.Common
-  children?: ModuleChildren[];
 };
 
 type ModuleItem = Routable & {
@@ -62,23 +61,6 @@ export const getModulesRoutes = (modules: Modules) => {
       });
     } else {
       if (mod.component) routes.push(mod);
-      if ('children' in mod && mod.children) {
-        if (mod.url) {
-          mod.children.forEach((child) => {
-            routes.push({
-              url: `${mod.url}/${child.url}`,
-              component: child.component,
-            });
-          });
-        } else {
-          mod.children.forEach((child) => {
-            routes.push({
-              url: child.url,
-              component: child.component,
-            });
-          });
-        }
-      }
     }
   });
   return routes;

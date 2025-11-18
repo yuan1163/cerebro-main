@@ -2,21 +2,40 @@ import { api } from '@core/api/index';
 
 import { Events, EventsHistory, EventType } from '@core/api/types';
 
-export async function apiGetEvents(eventType?: EventType): Promise<Events> {
+type EventsParams = {
+  eventType?: EventType;
+  salesRepUserId?: string;
+};
+
+export async function apiGetEvents(params?: EventsParams): Promise<Events> {
   const url = 'Events';
-  if (eventType) {
-    return api.get<void, Events>(`${url}?eventType=${eventType}`, undefined, 'levelnow').then((response) => response);
-  } else {
-    return api.get<void, Events>(url, undefined, 'levelnow').then((response) => response);
+  const queryParams = new URLSearchParams();
+
+  if (params?.eventType) {
+    queryParams.append('eventType', params.eventType);
   }
+  if (params?.salesRepUserId) {
+    queryParams.append('salesRepUserId', params.salesRepUserId);
+  }
+
+  const queryString = queryParams.toString();
+  const finalUrl = queryString ? `${url}?${queryString}` : url;
+
+  return api.get<void, Events>(finalUrl, undefined, 'levelnow').then((response) => response);
 }
-export async function apiGetEventsSnapshot(eventType?: EventType): Promise<Events> {
+
+export async function apiGetEventsSnapshot(params?: EventsParams): Promise<Events> {
   const url = 'Events/Snapshot';
-  if (eventType) {
-    return api.get<void, Events>(`${url}?eventType=${eventType}`, undefined, 'levelnow').then((response) => response);
-  } else {
-    return api.get<void, Events>(url, undefined, 'levelnow').then((response) => response);
+  const queryParams = new URLSearchParams();
+
+  if (params?.eventType) {
+    queryParams.append('eventType', params.eventType);
   }
+
+  const queryString = queryParams.toString();
+  const finalUrl = queryString ? `${url}?${queryString}` : url;
+
+  return api.get<void, Events>(finalUrl, undefined, 'levelnow').then((response) => response);
 }
 
 export async function apiGetEventsHistory(deviceRef: string | null): Promise<EventsHistory> {
