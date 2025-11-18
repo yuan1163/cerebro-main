@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { columns } from './responsibleTanksColumns';
-import { useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+
 import { observer } from 'mobx-react';
 
 // core ui components
@@ -62,10 +63,10 @@ const ResponsibleTanksPage = observer(() => {
   const [selectedIssue, setSelectedIssue] = useState<keyof Event | null>(null);
   const [selectedDevice, setSelectedDevice] = useState<string | null>(null);
 
-  const navigate = useNavigate();
-
   // initial events data
-  const events = useEvents();
+  const [searchParams] = useSearchParams();
+  const salesRep = searchParams.get('salesRep') ?? undefined;
+  const events = useEvents({ salesRepUserId: salesRep });
 
   // Transform issue value to match event properties
   const transformIssueValue = (issue: EventsIssue | null) => {

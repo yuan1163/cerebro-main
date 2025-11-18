@@ -187,6 +187,7 @@ export type SummaryParameters = {
 
 // api/Overview/responsibleTanks
 export type ResponsibleTanks = {
+  userId: string;
   userName: string;
   tankLevelCounts: TankLevelCounts;
 }[];

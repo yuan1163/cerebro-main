@@ -21,8 +21,13 @@ import CheckIcon from '@assets/icons/LevelNOW/check.svg?component';
 import { cn } from '@core/utils/classnames';
 import { formatTankLevelCounts } from '@core/utils/levelnow/tankLevelCounts';
 
+type Person = {
+  id: string;
+  name: string;
+};
+
 export default observer(function ResponsibleTanks() {
-  const [selectedPerson, setSelectedPerson] = useState<string | undefined>(undefined);
+  const [selectedPerson, setSelectedPerson] = useState<Person | undefined>(undefined);
 
   const navigate = useNavigate();
   const { profile } = useAuth();
@@ -34,7 +39,9 @@ export default observer(function ResponsibleTanks() {
   const responsibleTanks = useResponsibleTanks({ userId: profile.userId });
 
   const users =
-    responsibleTanks && Array.isArray(responsibleTanks) ? responsibleTanks.map((item) => item.userName) : [];
+    responsibleTanks && Array.isArray(responsibleTanks)
+      ? responsibleTanks.map((item) => ({ id: item.userId, name: item.userName }))
+      : [];
 
   useEffect(() => {
     if (!selectedPerson) {
@@ -46,7 +53,7 @@ export default observer(function ResponsibleTanks() {
 
   const tankLevelCounts =
     responsibleTanks && Array.isArray(responsibleTanks)
-      ? responsibleTanks.find((item) => item.userName === selectedPerson)?.tankLevelCounts || []
+      ? responsibleTanks.find((item) => item.userId === selectedPerson?.id)?.tankLevelCounts || []
       : [];
 
   const data = formatTankLevelCounts(tankLevelCounts);
@@ -65,7 +72,7 @@ export default observer(function ResponsibleTanks() {
 
         {/* Select */}
         <div className='relative flex items-center ml-auto'>
-          <Listbox value={selectedPerson} onChange={setSelectedPerson}>
+          <Listbox value={selectedPerson} onChange={setSelectedPerson} by='id'>
             {({ open }) => (
               <>
                 <Listbox.Button
@@ -74,7 +81,7 @@ export default observer(function ResponsibleTanks() {
                     'flex bg-[#FFF] hover:bg-hover items-center gap-2 px-3 py-1 border rounded-md',
                   )}
                 >
-                  {selectedPerson?.split('@')[0]}
+                  {selectedPerson?.name}
                 </Listbox.Button>
                 <Listbox.Options
                   className={cn(
@@ -87,12 +94,12 @@ export default observer(function ResponsibleTanks() {
                         {({ active, selected }) => (
                           <li
                             className={cn(
-                              'flex items-center justify-between p-3 rounded',
+                              'flex items-center justify-between p-3 rounded cursor-pointer',
                               active && 'bg-hover',
                               selected && 'bg-primary-50 text-primary-500',
                             )}
                           >
-                            <span>{user.split('@')[0]}</span>
+                            <span>{user.name}</span>
                             {selected && <CheckIcon className='text-primary-500' />}
                           </li>
                         )}
@@ -134,7 +141,7 @@ export default observer(function ResponsibleTanks() {
           <Button
             component={Link}
             fullWidth
-            to='/levelnow/domain/responsibletanks'
+            to={`/levelnow/domain/responsibletanks?salesRep=${selectedPerson?.id}`}
             variant='outlined'
             className='text-[18px] font-medium tracking-32 text-neutral-900 rounded-md border-[#0000001F]'
           >
