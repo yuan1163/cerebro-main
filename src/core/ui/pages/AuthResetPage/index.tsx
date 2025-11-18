@@ -39,6 +39,7 @@ type Form = {
 
 export const AuthResetPage = () => {
   const [searchParams] = useSearchParams();
+  const [isLoading, setIsLoading] = useState(false);
 
   // yup
 
@@ -156,15 +157,19 @@ export const AuthResetPage = () => {
   // submit
 
   const send = async (data: Form) => {
+    const token = searchParams.get('token');
+    if (!token) {
+      console.error('Reset token is missing from URL');
+      return;
+    }
+
+    setIsLoading(true);
     try {
-      const token = searchParams.get('token');
-      if (!token) {
-        console.error('Reset token is missing from URL');
-        return;
-      }
-      await auth.resetPassword({ newPassword: data.password, brand: import.meta.env.VITE_BRAND }, token);
+      auth.resetPassword({ newPassword: data.password, brand: import.meta.env.VITE_BRAND }, token);
     } catch (error) {
       console.error('Reset password error:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -273,7 +278,7 @@ export const AuthResetPage = () => {
                     />
                   </Grid>
                   <Grid item className='mt-5'>
-                    <Button fullWidth type='submit' size='lg'>
+                    <Button fullWidth type='submit' size='lg' disabled={isLoading}>
                       {t('login.resetPasswordButton.label', 'Reset password', 'Label for Reset password button.')}
                     </Button>
                   </Grid>
