@@ -110,7 +110,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
   // COLLAPSED BUTTON
 
   interface ItemProps {
-    system?: 'levelnow' | 'cerebro';
+    system?: 'iveda' | 'levelnow' | 'cerebro';
     component?: React.ReactNode;
     icon?: React.ReactNode;
     iconSolid?: React.ReactNode;
@@ -129,8 +129,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
     let url;
     let disabled;
 
-    // levelnow dont need to add formation to the url
-    if (item.system === 'levelnow') {
+    // levelnow and iveda dont need to add formation to the url
+    if (item.system === 'levelnow' || item.system === 'iveda') {
       url = item.url || '';
       disabled = !item.component;
     } else {
@@ -177,7 +177,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             isVisible={tooltipVisible}
             placement='right'
             targetRef={divRef}
-            title={t(title || '', title || '', '')}
+            title={title}
+            // title={t(title || '', title || '', '')}
           />,
           document.body,
         )}
@@ -297,11 +298,17 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
                 return 'isGroup' in item ? (
                   <DrawerButtonCollapsedAccordion
-                    key={t(title, '', '')}
-                    categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))}
+                    key={title}
+                    categories={item.items.map((subItem) => ({
+                      ...subItem,
+                      url:
+                        item.system === 'levelnow' || item.system === 'iveda'
+                          ? subItem.url || ''
+                          : `${subItem.url}/${ui.currentFormation}`,
+                    }))}
                     icon={item.icon}
                     iconSolid={item.iconSolid}
-                    title={t(title, '', '')}
+                    title={title}
                   />
                 ) : (
                   <CollapsedButton key={item.title} item={item} type='common' />
@@ -318,14 +325,20 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
                   return 'isGroup' in item ? (
                     <DrawerButtonCollapsedAccordion
-                      key={t(title, '', '')}
-                      categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))}
+                      key={title}
+                      categories={item.items.map((subItem) => ({
+                        ...subItem,
+                        url:
+                          item.system === 'levelnow' || item.system === 'iveda'
+                            ? subItem.url || ''
+                            : `${subItem.url}/${ui.currentFormation}`,
+                      }))}
                       icon={item.icon}
                       iconSolid={item.iconSolid}
-                      title={t(title, '', '')}
+                      title={title}
                     />
                   ) : (
-                    <CollapsedButton key={t(title, '', '')} item={item} type='uniques' />
+                    <CollapsedButton key={title} item={item} type='uniques' />
                   );
                 })}
               </ul>
@@ -419,16 +432,21 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
               {/* 左側選單列表 */}
               {common.map((item) => {
                 const title = item.title;
-                console.log('title', title);
 
                 if ('isGroup' in item) {
                   return (
                     <li key={item.title} className={styles['list-item']}>
                       <DrawerButtonExpandedAccordion
-                        categories={item.items.map((item) => ({ ...item, url: `${item.url}/${ui.currentFormation}` }))}
+                        categories={item.items.map((subItem) => ({
+                          ...subItem,
+                          url:
+                            item.system === 'levelnow' || item.system === 'iveda'
+                              ? subItem.url || ''
+                              : `${subItem.url}/${ui.currentFormation}`,
+                        }))}
                         icon={item.icon}
                         iconSolid={item.iconSolid}
-                        title={t(title, '', '')}
+                        title={title}
                       />
                     </li>
                     // title={item.title}
@@ -436,14 +454,17 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                 } else {
                   console.log('item.url', item.url);
 
-                  const url = item.system === 'levelnow' ? item.url || '' : `${item.url}/${ui.currentFormation}`;
+                  const url =
+                    item.system === 'levelnow' || item.system === 'iveda'
+                      ? item.url || ''
+                      : `${item.url}/${ui.currentFormation}`;
                   return (
                     <li key={item.url} className={styles['list-item']}>
                       <DrawerButtonExpanded
                         disabled={!item.component}
                         icon={item.icon}
                         iconHover={item.iconSolid}
-                        title={t(title, '', '')}
+                        title={title}
                         url={url}
                       />
                     </li>
@@ -463,25 +484,31 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                     return (
                       <li key={item.title} className={styles['list-item']}>
                         <DrawerButtonExpandedAccordion
-                          categories={item.items.map((item) => ({
-                            ...item,
-                            url: `${item.url}/${ui.currentFormation}`,
+                          categories={item.items.map((subItem) => ({
+                            ...subItem,
+                            url:
+                              item.system === 'levelnow' || item.system === 'iveda'
+                                ? subItem.url || ''
+                                : `${subItem.url}/${ui.currentFormation}`,
                           }))}
                           icon={item.icon}
                           iconSolid={item.iconSolid}
-                          title={t(title, '', '')}
+                          title={title}
                         />
                       </li>
                     );
                   } else {
-                    const url = `${item.url}/${ui.currentFormation}`;
+                    const url =
+                      item.system === 'levelnow' || item.system === 'iveda'
+                        ? item.url || ''
+                        : `${item.url}/${ui.currentFormation}`;
                     return (
                       <li key={item.title} className={styles['list-item']}>
                         <DrawerButtonExpanded
                           disabled={!item.component}
                           icon={item.icon}
                           iconHover={item.iconSolid}
-                          title={t(title, '', '')}
+                          title={title}
                           url={url}
                         />
                       </li>

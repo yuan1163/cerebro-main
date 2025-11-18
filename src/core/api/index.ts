@@ -4,8 +4,9 @@ import { LoginInput, LoginOutput, ResetPasswordInput, RestorePasswordInput, Resu
 export const SERVER = import.meta.env.VITE_API_HOST;
 export const LEVELNOW_SERVER = import.meta.env.VITE_LEVELNOW_API_HOST || SERVER;
 export const LEVELNOW_LOGIN_SERVER = import.meta.env.VITE_LEVELNOW_API_LOGIN_HOST || SERVER;
+export const IVEDA_SERVER = import.meta.env.VITE_IVEDA_API_HOST || SERVER;
 
-export type ApiSource = 'levelnow' | 'levelnowLogin' | 'cerebro';
+export type ApiSource = 'ivedaAI' | 'levelnow' | 'levelnowLogin' | 'cerebro';
 
 export enum METHOD {
   Get = 'GET',
@@ -33,6 +34,8 @@ export class ApiLayer {
         return LEVELNOW_LOGIN_SERVER;
       case 'cerebro':
         return SERVER;
+      case 'ivedaAI':
+        return IVEDA_SERVER;
       default:
         return SERVER;
     }

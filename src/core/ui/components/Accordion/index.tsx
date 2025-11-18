@@ -17,6 +17,12 @@ import { AccordionSummary } from '@core/ui/components/AccordionSummary';
 import { Disclosure } from '@headlessui/react';
 
 type Props = {
+  activedTab?: string | null;
+  tabs?: {
+    label: string;
+    enabled: boolean;
+  }[];
+  onTabChange?: (label: string) => void;
   className?: string;
   summaryClass?: string;
   detailsClass?: string;
@@ -33,9 +39,13 @@ type Props = {
   title?: string;
   variant?: 'solid';
   rounded?: boolean;
+  constrainHeight?: boolean; // New prop to control if accordion should constrain its height
 } & React.HTMLAttributes<HTMLElement>;
 
 export const Accordion: React.FC<Props> = ({
+  activedTab,
+  tabs,
+  onTabChange,
   children,
   className,
   summaryClass,
@@ -53,13 +63,15 @@ export const Accordion: React.FC<Props> = ({
   title,
   variant,
   rounded,
+  constrainHeight = false,
 }) => {
+  console.log('active tab', activedTab);
   return (
     <Disclosure defaultOpen={defaultOpen}>
       {({ open }) => {
         return (
           <AccordionContainer
-            className={cn(className, open ? 'flex-auto' : 'min-h-0')}
+            className={cn(open && 'flex-1', constrainHeight && 'min-h-0', className)}
             color={color}
             rounded={rounded}
             shadow={shadow}
@@ -77,9 +89,32 @@ export const Accordion: React.FC<Props> = ({
             >
               {title}
               {customTitle}
+              {tabs && onTabChange && (
+                <div className='flex items-center h-[68px] rounded-[4px] overflow-hidden'>
+                  {tabs
+                    // .filter((tab) => tab.enabled)
+                    .map((tab) => (
+                      <div
+                        key={tab.label}
+                        className={cn(
+                          tab.label === activedTab
+                            ? 'bg-primary-50 text-primary-500 shadow-accordion-tab'
+                            : 'hover:bg-hover',
+                          'h-full flex items-center justify-center px-5 text-[18px] font-medium',
+                        )}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onTabChange(tab.label);
+                        }}
+                      >
+                        {tab.label}
+                      </div>
+                    ))}
+                </div>
+              )}
             </AccordionSummary>
             <AccordionDetails
-              className={cn(detailsClass, open ? 'flex-1' : 'none')}
+              className={cn(open && 'flex-1', constrainHeight && 'min-h-0', !open && 'none', detailsClass)}
               color={color}
               component={Disclosure.Panel}
               disableGutters={disableGutters}

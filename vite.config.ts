@@ -84,7 +84,6 @@ export default defineConfig({
     proxy: {
       '/api/rsapi': {
         target: 'https://cerebro.sce.pccu.edu.tw/rsapi/cloud',
-        // target: 'https://cerebro.iveda.ai/rsapi/cloud',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/rsapi/, ''),
         secure: true,
@@ -93,6 +92,12 @@ export default defineConfig({
         target: 'https://cerebro.sce.pccu.edu.tw/lvapi/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/lvapi/, ''),
+        secure: true,
+      },
+      '/api/ivedaapi': {
+        target: 'https://cerebro.sce.pccu.edu.tw/ivedaAI/api/v1/iveda',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/ivedaapi/, ''),
         secure: true,
       },
     },

@@ -32,10 +32,12 @@ export const ModulePageLayout: React.FC<Props> = ({ navigator, children }) => {
         className={cn(
           styles['container'],
           isDrawerExpanded ? styles['container-drawer-expanded'] : styles['container-drawer-collapsed'],
+          'scrollbar-none',
         )}
       >
         {navigator}
-        <Grid id='content' component='main' className={styles['main']} style={{ height: '100vh' }}>
+        <Grid id='content' component='main' className={cn(styles['main'], 'scrollbar-none')}>
+          {/* <Grid id='content' component='main' className={styles['main']} style={{ height: '100vh' }}> */}
           <Container maxWidth={false} fixed>
             <Grid direction='column' className={cn(styles['wrapper'], 'scrollbar-none overflow-auto')}>
               {children}

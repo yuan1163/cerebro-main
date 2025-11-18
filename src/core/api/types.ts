@@ -1,5 +1,17 @@
 import { t } from '@core/utils/translate';
 
+// ----- ivedaAI -----
+export type IvedaAIGroup = {
+  id: number;
+  name: string;
+  counting: boolean;
+  faceRecognition: boolean;
+  intrusion: boolean;
+  abnormal: boolean;
+  lpr: boolean;
+  updatedAtUtc: string;
+};
+
 // levelnow -----
 export type EventsIssue = 'Level Low' | 'Oil Filling' | 'Battery Low' | 'Offline' | 'Fault';
 

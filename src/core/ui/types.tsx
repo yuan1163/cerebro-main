@@ -24,7 +24,7 @@ interface Routable {
 }
 
 export type Module = Routable & {
-  system?: 'levelnow' | 'cerebro';
+  system?: 'iveda' | 'levelnow' | 'cerebro';
   title: string;
   icon: React.ReactNode;
   iconSolid: React.ReactNode;
@@ -37,7 +37,7 @@ type ModuleItem = Routable & {
 };
 
 type ModuleGroup = {
-  system?: 'levelnow' | 'cerebro';
+  system?: 'iveda' | 'levelnow' | 'cerebro';
   isGroup: true;
   title: string;
   icon: React.ReactNode;

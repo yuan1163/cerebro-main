@@ -80,6 +80,12 @@ export const getCustomerProfileFields = (customer: ClientData | null) => [
     placeholder: 'Enter mobile number',
   },
   {
+    name: 'address',
+    label: t('customer.address.label', 'Address', 'Address field.'),
+    value: customer?.clientAddress || '-',
+    placeholder: 'Enter address',
+  },
+  {
     name: 'postcode',
     label: t('customer.postcode.label', 'Post code', 'Post code field.'),
     value: customer?.clientPostCode || '-',
@@ -102,6 +108,21 @@ export const getCustomerProfileFields = (customer: ClientData | null) => [
     label: t('customer.city.label', 'City', 'City field.'),
     value: customer?.clientCity || '-',
     placeholder: 'Enter city',
+  },
+];
+
+export const getCustomerPositionFields = (customer: ClientData | null) => [
+  {
+    name: 'latitude',
+    label: t('customer.latitude.label', 'Latitude', 'Latitude field.'),
+    value: customer?.latitude || '-',
+    placeholder: 'Enter latitude',
+  },
+  {
+    name: 'longitude',
+    label: t('customer.longitude.label', 'Longitude', 'Longitude field.'),
+    value: customer?.longitude || '-',
+    placeholder: 'Enter longitude',
   },
 ];
 

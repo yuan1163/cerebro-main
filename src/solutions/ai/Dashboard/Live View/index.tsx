@@ -22,7 +22,7 @@ export const LiveView: React.FC = () => {
   return (
     <Accordion
       customTitle={
-        <Text component='h2' variant='lg' weight='semibold'>
+        <Text variant='lg' weight='medium' lineHeight='normal'>
           {t('dashboard.liveView.label', 'Live View', 'Label for live view section')}
         </Text>
       }
@@ -32,10 +32,10 @@ export const LiveView: React.FC = () => {
       rounded
       variant='solid'
       summaryClass='p-5'
-      detailsClass='py-4 px-5 flex flex-col gap-10'
+      detailsClass='py-4 px-5 flex flex-col'
     >
       <div className='grid grid-cols-3 gap-4'>
-        <div id='main-stream' className='col-span-3 h-[360px] bg-neutral-200 rounded-[10px]'>
+        <div id='main-stream' className='col-span-3 h-[300px] bg-neutral-200 rounded-[10px]'>
           <video src=''></video>
         </div>
         {Array.from({ length: 9 }).map((_, index) => {
@@ -52,8 +52,8 @@ const StreamItem: React.FC<{ stream?: Stream }> = ({ stream }) => {
 
   return (
     <>
-      <div className='w-full h-[120px] flex items-center justify-center rounded-[10px] bg-neutral-200'>
-        {!noStream ? <video src={stream.url} className=' h-[120px] object-cover rounded-[10px]' /> : <CameraIcon />}
+      <div className='w-full h-[100px] flex items-center justify-center rounded-[10px] bg-neutral-200'>
+        {!noStream ? <video src={stream.url} className=' h-[100px] object-cover rounded-[10px]' /> : <CameraIcon />}
       </div>
     </>
   );

@@ -35,13 +35,15 @@ export const ModulesPage: React.FC<Props> = observer(({ modules }) => {
 
   if (!locations.hasData()) return <WaitingPage />;
 
-  // routes for non-levelnow solutions (these expect an extra ":current" segment)
-  const nonLevelnowModules = modules.filter((mod) => !('system' in mod) || mod.system !== 'levelnow');
-  const routes = getModulesRoutes(nonLevelnowModules);
+  // routes for modules that don't need :current segment (levelnow and iveda)
+  const modulesWithoutCurrent = modules.filter((mod) => mod.system === 'levelnow' || mod.system === 'iveda');
+  const routesWithoutCurrent = getModulesRoutes(modulesWithoutCurrent);
 
-  // levelnow routes
-  const levelnowModules = modules.filter((mod) => mod.system === 'levelnow');
-  const levelnowRoutes = getModulesRoutes(levelnowModules);
+  // routes for other solutions (these expect an extra ":current" segment)
+  const modulesWithCurrent = modules.filter(
+    (mod) => !('system' in mod) || (mod.system !== 'levelnow' && mod.system !== 'iveda'),
+  );
+  const routes = getModulesRoutes(modulesWithCurrent);
 
   // Filter modules for navigation (hide restricted modules from sidebar)
   const filteredModulesForNavigation = useRoleBasedModules(modules);
@@ -49,7 +51,7 @@ export const ModulesPage: React.FC<Props> = observer(({ modules }) => {
   return (
     <ModulePageLayout navigator={<ModuleNavigator modules={filteredModulesForNavigation} />}>
       <Routes>
-        {levelnowRoutes.map((mod) => {
+        {routesWithoutCurrent.map((mod) => {
           let path: string;
           if (mod.url) {
             path = `${mod.url}/*`;

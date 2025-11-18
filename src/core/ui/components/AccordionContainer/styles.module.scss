@@ -3,6 +3,8 @@
 .accordion {
   @apply relative;
   @apply w-full;
+  @apply flex;
+  @apply flex-col;
 }
 
 // VARIANT
@@ -20,7 +22,7 @@
 // ROUNDED
 
 .accordion-rounded {
-  @apply rounded-lg;
+  @apply rounded-[4px];
 }
 
 // SHADOW

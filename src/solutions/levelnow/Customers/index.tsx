@@ -68,7 +68,7 @@ export const Customers = observer(() => {
   }, [selectedClientId, clients, navigate]);
 
   return (
-    <>
+    <div className='flex flex-col h-[calc(100vh-20px)]'>
       <Header
         icon={<CustomerLineIcon />}
         title={t('solutions.customers.label', 'Customers', 'Customers page title.')}
@@ -78,7 +78,7 @@ export const Customers = observer(() => {
         {/* <Tabs tabs={tabs} /> */}
         <SearchBar onChange={handleSearchChange} />
       </div>
-      <UnitContainer className='mt-5'>
+      <UnitContainer className='flex-1 mt-5'>
         <Unit variant='list'>
           <CustomerList
             customers={clients}
@@ -92,6 +92,6 @@ export const Customers = observer(() => {
           <CustomerInfo customer={selectedClient} isAdd={isAddCustomer} onToggleAdd={handleToggleAdd} />
         </Unit>
       </UnitContainer>
-    </>
+    </div>
   );
 });

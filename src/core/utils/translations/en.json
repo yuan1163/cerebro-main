@@ -122,6 +122,12 @@
         "notes": "Customer Mobile No."
       }
     },
+    "address": {
+      "label": {
+        "translation": "Address",
+        "notes": "Address field."
+      }
+    },
     "postcode": {
       "label": {
         "translation": "Post code",
@@ -1571,6 +1577,32 @@
       }
     }
   },
+  "overview": {
+    "customers": {
+      "label": {
+        "translation": "Customers",
+        "notes": "Customers"
+      }
+    },
+    "locations": {
+      "label": {
+        "translation": "Locations",
+        "notes": "Locations"
+      }
+    },
+    "offline": {
+      "label": {
+        "translation": "Off-line",
+        "notes": "Off-line"
+      }
+    },
+    "batteryLow": {
+      "label": {
+        "translation": "Battery Low",
+        "notes": "Battery Low"
+      }
+    }
+  },
   "deviceTypes": {
     "Cameras": {
       "translation": "Cameras",
@@ -2668,6 +2700,12 @@
       "label": {
         "translation": "Go to next page",
         "notes": "Go to next page button."
+      }
+    },
+    "tanks": {
+      "label": {
+        "translation": "Tanks",
+        "notes": "Tanks"
       }
     }
   },
