@@ -165,7 +165,7 @@ export const AuthResetPage = () => {
 
     setIsLoading(true);
     try {
-      auth.resetPassword({ newPassword: data.password, brand: import.meta.env.VITE_BRAND }, token);
+      await auth.resetPassword({ newPassword: data.password, brand: import.meta.env.VITE_BRAND }, token);
     } catch (error) {
       console.error('Reset password error:', error);
     } finally {
@@ -260,7 +260,7 @@ export const AuthResetPage = () => {
                       render={({ field: { onChange, value } }) => (
                         <PasswordInput
                           id='cpassword'
-                          helperText={errors.password?.message}
+                          helperText={errors.cpassword?.message}
                           label={t('user.confirmPasswordInput.label', 'Confirm password', 'Confirm password field.')}
                           onChange={onChange}
                           value={value}
