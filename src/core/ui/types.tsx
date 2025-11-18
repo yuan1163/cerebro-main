@@ -23,8 +23,8 @@ interface Routable {
   component: React.ReactNode;
 }
 
-type Module = Routable & {
-  system?: 'levelnow' | 'cerebro';
+export type Module = Routable & {
+  system?: 'iveda' | 'levelnow' | 'cerebro';
   title: string;
   icon: React.ReactNode;
   iconSolid: React.ReactNode;
@@ -37,7 +37,7 @@ type ModuleItem = Routable & {
 };
 
 type ModuleGroup = {
-  system?: 'levelnow' | 'cerebro';
+  system?: 'iveda' | 'levelnow' | 'cerebro';
   isGroup: true;
   title: string;
   icon: React.ReactNode;
@@ -149,6 +149,16 @@ export const getAllSolutions = () => [
 ];
 
 export const getAvailbableSolutions = (company: Location) => {
+  console.log('location', company);
+
+  // Debug: Log the current branchSolutions value
+  console.log('company.branchSolutions:', company.branchSolutions);
+  console.log('Binary:', company.branchSolutions.toString(2).padStart(8, '0'));
+  console.log('AI mask (0b00000100 = 4):', SolutionsMasks.ai);
+  console.log('Has AI?', (company.branchSolutions & SolutionsMasks.ai) !== 0);
+
+  // Temporarily add AI solution mask for testing
+  // const solutions = company.branchSolutions | SolutionsMasks.ai;
   const result: Solutions[] = [];
   if (company.branchSolutions & SolutionsMasks.pinpoint) result.push(Solutions.pinpoint);
   if (company.branchSolutions & SolutionsMasks.utilus) result.push(Solutions.utilus);
@@ -156,6 +166,14 @@ export const getAvailbableSolutions = (company: Location) => {
   if (company.branchSolutions & SolutionsMasks.connect) result.push(Solutions.connect);
   if (company.branchSolutions & SolutionsMasks.ems) result.push(Solutions.ems);
   if (company.branchSolutions & SolutionsMasks.levelnow) result.push(Solutions.levelnow);
+
+  // if (solutions & SolutionsMasks.pinpoint) result.push(Solutions.pinpoint);
+  // if (solutions & SolutionsMasks.utilus) result.push(Solutions.utilus);
+  // if (solutions & SolutionsMasks.ai) result.push(Solutions.ai);
+  // if (solutions & SolutionsMasks.connect) result.push(Solutions.connect);
+  // if (solutions & SolutionsMasks.ems) result.push(Solutions.ems);
+  // if (solutions & SolutionsMasks.levelnow) result.push(Solutions.levelnow);
+
   return result;
 };
 /*

@@ -141,7 +141,7 @@ export const SolutionsPage = observer(() => {
     },
     {
       icon: <VideoRecorderLineIcon />,
-      installed: false,
+      installed: true,
       title: t('solutions.solutionsPage.ivedaAI.label', 'IvedaAI', 'IvedaAI solution title.'),
       abbr: 'AI',
       solutionTitle: 'ai',

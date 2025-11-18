@@ -1,4 +1,4 @@
-import { useRef, useContext, useMemo, useEffect, createRef } from 'react';
+import { useRef, useContext, useMemo, useEffect, createRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
 import { Feature, Geometry, GeoJsonProperties } from 'geojson';
@@ -43,6 +43,16 @@ import { PinNeedle } from '@core/ui/components/PinNeedle';
 import Building01SolidIcon from '@assets/icons/solid/building-01.svg?component';
 import Map01LineIcon from '@assets/icons/solid/map-01.svg?component';
 import TrackerLineIcon from '@assets/icons/line/tracker.svg?component';
+import CameraNormal from '@assets/icons/IvedaAI/map/camera-normal.svg?component';
+import CameraAlert from '@assets/icons/IvedaAI/map/camera-alert.svg?component';
+import CameraOffline from '@assets/icons/IvedaAI/map/camera-offline.svg?component';
+import { cn } from '@core/utils/classnames';
+
+enum CameraStatus {
+  Normal = 'normal',
+  Alert = 'alert',
+  Offline = 'offline',
+}
 
 export interface Point {
   clientId?: number;
@@ -52,7 +62,7 @@ export interface Point {
 
 type MapProps = {
   controls?: boolean;
-  marker?: 'default' | 'dot' | 'needle';
+  marker?: 'default' | 'dot' | 'needle' | 'camera';
   points: Point[];
   pointsNavigation?: boolean;
   zoom: number;
@@ -94,7 +104,7 @@ type Marker = {
   markerLabel?: string;
   onClick?: () => void;
   point?: Point;
-  variant?: 'default' | 'dot' | 'needle';
+  variant?: 'default' | 'dot' | 'needle' | 'camera';
 };
 
 const Marker: React.FC<Marker> = ({
@@ -108,6 +118,7 @@ const Marker: React.FC<Marker> = ({
 }) => {
   return (
     <>
+      {variant === 'camera' && <CameraMarker status={CameraStatus.Normal} />}
       {variant === 'default' && <Pin color={color} onClick={onClick} icon={<Building01SolidIcon />} />}
       {variant === 'needle' && (
         <PinNeedle
@@ -122,8 +133,21 @@ const Marker: React.FC<Marker> = ({
   );
 };
 
+const CameraMarker = ({ status }: { status: CameraStatus }) => {
+  switch (status) {
+    case CameraStatus.Normal:
+      return <CameraNormal />;
+    case CameraStatus.Alert:
+      return <CameraAlert />;
+    case CameraStatus.Offline:
+      return <CameraOffline />;
+    default:
+      return <CameraNormal />;
+  }
+};
+
 export default function Map({ controls, marker = 'default', points, pointsNavigation, zoom, className }: MapProps) {
-  // console.log('Map points:', points);
+  console.log('Map points:', points);
   // console.log('Points length:', points.length);
   // console.log(
   //   'Sample points:',
@@ -141,6 +165,8 @@ export default function Map({ controls, marker = 'default', points, pointsNaviga
   // const { isDrawerExpanded } = useContext(DrawerContext);
   const { currentTheme } = useContext(ThemeContext);
   const ref = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<mapboxgl.Map | null>(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
   const center = useMemo(() => (points.length > 0 ? getCenter(points) : { latitude: 0, longitude: 0 }), [points]);
 
   const navigate = useNavigate();
@@ -163,7 +189,11 @@ export default function Map({ controls, marker = 'default', points, pointsNaviga
         center: [center.longitude, center.latitude],
         projection: 'mercator' as any,
         zoom,
+        collectResourceTiming: false, // Disable telemetry to prevent ERR_BLOCKED_BY_CLIENT
       });
+
+      // Store map instance in ref
+      mapRef.current = map;
 
       // translations draft
 
@@ -181,11 +211,18 @@ export default function Map({ controls, marker = 'default', points, pointsNaviga
           : null;
       }
 
-      const draw = new MapboxDraw({
-        displayControlsDefault: false,
-      });
-      map.addControl(draw);
+      // Don't add MapboxDraw if not needed - it causes errors with line-dasharray
+      // const draw = new MapboxDraw({
+      //   displayControlsDefault: false,
+      // });
+      // map.addControl(draw);
+
       map.addControl(language);
+
+      // Enable transitions after map loads
+      map.on('load', () => {
+        setMapLoaded(true);
+      });
 
       // geoJson.features > points
       // feature.geometry.coordinates > [point.longitude, point.latitude]
@@ -275,13 +312,36 @@ export default function Map({ controls, marker = 'default', points, pointsNaviga
       //   });
       // });
 
-      return () => map.remove();
+      return () => {
+        mapRef.current = null;
+        map.remove();
+      };
     }
   }, [ref, center, points, zoom, currentTheme]);
 
+  // Add resize observer to detect container size changes
+  useEffect(() => {
+    if (!ref.current || !mapRef.current) return;
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (mapRef.current) {
+        // Call resize after a small delay to ensure the container has finished resizing
+        setTimeout(() => {
+          mapRef.current?.resize();
+        }, 100);
+      }
+    });
+
+    resizeObserver.observe(ref.current);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
   return (
     <div
-      className={className}
+      className={cn('bg-neutral-100', mapLoaded && 'transition-colors duration-300', className)}
       ref={ref}
       style={{
         width: '100%',

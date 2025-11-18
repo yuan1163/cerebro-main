@@ -20,8 +20,8 @@ import { Text } from '@core/ui/components/Text';
 import ArrowRightLineIcon from '@assets/icons/line/arrow-right.svg?component';
 
 type Props = {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   map: React.ReactNode;
   onArrowClick?: () => void;
 };

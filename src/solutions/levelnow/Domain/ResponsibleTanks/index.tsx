@@ -106,25 +106,29 @@ export default observer(function ResponsibleTanks() {
         </div>
       </CardHeader>
       <CardContent disablePaddingTop className='flex-1'>
-        <div className='px-5 py-10 bg-neutral-50 rounded-[10px] flex flex-col justify-between h-full'>
-          <div className='flex items-center justify-evenly'>
+        <div className='px-5 pb-5 bg-neutral-50 rounded-[10px] flex flex-col justify-between h-full'>
+          <div className='flex-1 flex items-center justify-center gap-[60px]'>
             {/* Total Counts */}
-            <div className='flex flex-col items-center'>
-              <span className='text-base font-medium tracking-32 text-neutral-900'>Tanks</span>
+            <div className='flex flex-col items-center flex-1'>
+              <span className='text-base font-medium tracking-32 text-neutral-900'>
+                {t('general.tanks.label', 'Tanks', 'Tanks')}
+              </span>
               <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{total}</span>
             </div>
 
             {/* Each Counts */}
-            <div className='flex flex-col gap-5'>
-              {data.map((item) => (
-                <div key={item.range} className='flex items-center justify-between gap-2'>
-                  <div className='w-2.5 aspect-square rounded-full' style={{ backgroundColor: item.color }} />
-                  <span className='text-sm font-medium text-secondary-500 min-w-[85px]'>{item.range}</span>
-                  <div className='flex items-center justify-center min-w-3'>
-                    <span className='text-sm font-medium text-neutral-900'>{item.value}</span>
+            <div className='flex flex-1'>
+              <div className='flex flex-col gap-5'>
+                {data.map((item) => (
+                  <div key={item.range} className='flex items-center justify-between gap-2'>
+                    <div className='w-2.5 aspect-square rounded-full' style={{ backgroundColor: item.color }} />
+                    <span className='text-sm font-medium text-secondary-500 min-w-[85px]'>{item.range}</span>
+                    <div className='flex items-center justify-center min-w-3'>
+                      <span className='text-sm font-medium text-neutral-900'>{item.value}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
           <Button

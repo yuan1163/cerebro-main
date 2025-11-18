@@ -23,10 +23,10 @@ export default observer(function Overview() {
   const summary: Summary | undefined = useSummary({ userId: profile.userId });
 
   const stats = [
-    { label: 'Customers', value: summary?.customerCount || 0 },
-    { label: 'Locations', value: summary?.locationsCount || 0 },
-    { label: 'Off-line', value: summary?.offlineDeviceCount || 0 },
-    { label: 'Battery Low', value: summary?.batteryLowCount || 0 },
+    { label: t('overview.customers.label', 'Customers', 'Customers'), value: summary?.customerCount || 0 },
+    { label: t('overview.locations.label', 'Locations', 'Locations'), value: summary?.locationsCount || 0 },
+    { label: t('overview.offline.label', 'Off-line', 'Off-line'), value: summary?.offlineDeviceCount || 0 },
+    { label: t('overview.batteryLow.label', 'Battery Low', 'Battery Low'), value: summary?.batteryLowCount || 0 },
   ];
 
   const tankLevelCounts = summary?.tankLevelCounts || [];
@@ -80,7 +80,9 @@ export default observer(function Overview() {
                 </PieChart>
               </ResponsiveContainer>
               <div className='absolute inset-0 flex flex-col items-center justify-center'>
-                <span className='text-base font-medium tracking-32 text-neutral-900'>Tanks</span>
+                <span className='text-base font-medium tracking-32 text-neutral-900'>
+                  {t('general.tanks.label', 'Tanks', 'Tanks')}
+                </span>
                 <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{total}</span>
               </div>
             </div>

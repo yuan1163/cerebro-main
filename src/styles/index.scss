@@ -1,4 +1,5 @@
 @import './preflight.css';
+@import './poppins-fix.css';
 
 @import '@core/ui/components/AccordionSummary/styles.module.scss';
 
@@ -34,6 +35,12 @@ body {
   @apply antialiased;
   @apply bg-background;
   font-feature-settings: 'cv11' on;
+  
+  // Normalize Poppins line-height to match Figma's rendering
+  // Poppins has larger vertical metrics, so we need to adjust
+  * {
+    line-height: inherit;
+  }
 }
 
 *:focus {

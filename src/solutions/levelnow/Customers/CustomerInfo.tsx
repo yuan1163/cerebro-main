@@ -12,7 +12,7 @@ import CustomerTanks from './CustomerTanks';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { getCustomerGWFields, getCustomerProfileFields } from '@constants/fieldSettings';
+import { getCustomerGWFields, getCustomerProfileFields, getCustomerPositionFields } from '@constants/fieldSettings';
 import { useAddClient } from '@core/storages/controllers/levelnow/client';
 // flags
 import { countryFlagIcons } from '@core/utils/levelnow/countryFlagIcons';
@@ -73,6 +73,7 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
   const basicFieldsLeftSide = basicFields.slice(0, 3);
   const basicFieldsRightSide = basicFields.slice(4);
   const ownerFields = getCustomerGWFields(customer);
+  const positionFields = getCustomerPositionFields(customer);
 
   const onAddClient = async (data: FormValues) => {
     console.log('Add client:', data);
@@ -139,7 +140,7 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
                   <h1 className='font-medium text-md text-secondary-900'>
                     {t('customer.basicInfo.label', 'Basic information', 'Customer Basic information')}
                   </h1>
-                  <div className='grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-5 gap-y-3'>
+                  <div className='grid grid-flow-col grid-cols-2 grid-rows-5 gap-x-5 gap-y-3'>
                     {/* Left Side */}
                     {basicFieldsLeftSide.map((field) => (
                       <div key={field.name} className='flex flex-col gap-1'>
@@ -183,8 +184,22 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
                   <h1 className='font-medium text-md text-secondary-900'>
                     {t('customer.owner.label', 'Customer Owner', 'Customer Owner')}
                   </h1>
-                  <div className='grid grid-cols-2 gap-x-5'>
+                  <div className='grid grid-cols-2 gap-x-5 gap-y-3'>
                     {ownerFields.map((field) => (
+                      <div key={field.name} className='flex flex-col gap-1'>
+                        <label htmlFor={field.name} className='text-xs font-medium tracking-wide text-secondary-500'>
+                          {field.label}
+                        </label>
+                        <input
+                          id={field.name}
+                          {...register(field.name as keyof FormValues)}
+                          type='text'
+                          placeholder={field.placeholder}
+                          className='p-2 text-sm font-medium border rounded h-9 border-neutral-200 text-neutral-900 focus:outline-none'
+                        />
+                      </div>
+                    ))}
+                    {positionFields.map((field) => (
                       <div key={field.name} className='flex flex-col gap-1'>
                         <label htmlFor={field.name} className='text-xs font-medium tracking-wide text-secondary-500'>
                           {field.label}

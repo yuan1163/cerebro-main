@@ -145,6 +145,11 @@
         "translation": "手機號碼"
       }
     },
+    "address": {
+      "label": {
+        "translation": "地址"
+      }
+    },
     "postcode": {
       "label": {
         "translation": "郵遞區號"
@@ -1687,6 +1692,28 @@
       }
     }
   },
+  "overview": {
+    "customers": {
+      "label": {
+        "translation": "客戶"
+      }
+    },
+    "locations": {
+      "label": {
+        "translation": "位置"
+      }
+    },
+    "offline": {
+      "label": {
+        "translation": "離線"
+      }
+    },
+    "batteryLow": {
+      "label": {
+        "translation": "電池電量低"
+      }
+    }
+  },
   "deviceTypes": {
     "Cameras": {
       "translation": "相機"
@@ -2124,6 +2151,11 @@
     "goToNextPageButton": {
       "label": {
         "translation": "轉到下一頁"
+      }
+    },
+    "tanks": {
+      "label": {
+        "translation": "油桶"
       }
     },
     "noComment": {
