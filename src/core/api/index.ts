@@ -271,9 +271,14 @@ export class ApiLayer {
     return this.get<void, void>(ENDPOINT.RestorePassword + `?username=${input.username}&brand=${input.brand}`);
   }
 
-  async resetPassword(input: ResetPasswordInput, token?: string | null): Promise<void> {
+  async resetPassword(input: ResetPasswordInput, token?: string | null): Promise<ResultOutput> {
     const payload = { ...input, brand: undefined };
-    return this.request(METHOD.Put, ENDPOINT.ResetPassword + `?brand=${input.brand}`, payload, token) as Promise<void>;
+    return this.request(
+      METHOD.Put,
+      ENDPOINT.ResetPassword + `?brand=${input.brand}`,
+      payload,
+      token,
+    ) as Promise<ResultOutput>;
   }
 }
 

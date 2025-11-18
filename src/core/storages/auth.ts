@@ -250,13 +250,27 @@ export class AuthStorage extends AsyncStorage {
 
   @flow
   *resetPassword(input: ResetPasswordInput, token?: string | null) {
-    const response: ResultOutput = yield api.resetPassword(input, token);
-    if (response.resultCode === 0) {
-      ui.gotoLogin();
-    } else {
-      errors.showError(response);
+    ui.setActing(true);
+    try {
+      const response: ResultOutput = yield api.resetPassword(input, token);
+
+      if (response.resultCode === 0) {
+        ui.gotoLogin();
+      } else {
+        console.log(errors);
+        errors.showError(response);
+      }
+      ui.setActing(false);
+      return response;
+    } catch (error) {
+      console.error('Reset password failed:', error);
+      ui.setActing(false);
+      errors.showError({
+        resultCode: -1,
+        resultMessage: 'Reset password failed. Please try again.',
+      });
+      throw error;
     }
-    return response;
   }
 }
 
