@@ -4,7 +4,6 @@ import { Button } from '@core/ui/components/Button';
 import { formatDate } from '@core/utils/levelnow/format';
 
 // Icon
-import ChevronUpIcon from '@assets/icons/LevelNOW/chevrons-up.svg?component';
 import ChevronDownIcon from '@assets/icons/LevelNOW/chevrons-down.svg?component';
 // Types
 import { Event } from '@core/api/types';
@@ -39,12 +38,38 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'issue',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+          className='pl-8'
+        >
           {t('events.table.issue.label', 'Issue', 'Issue column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}
         </Button>
       );
     },
+    sortingFn: (rowA, rowB) => {
+      const getIssues = (row: any) => {
+        const issues: string[] = [];
+        if (row.original.eventBatteryLow === 1) issues.push('Battery Low');
+        if (row.original.eventFault === 1) issues.push('Fault');
+        if (row.original.eventLevelLow === 1) issues.push('Level Low');
+        if (row.original.eventOffline === 1) issues.push('Offline');
+        if (row.original.eventOilFilling === 1) issues.push('Oil Filling');
+        return issues.sort().join(', ');
+      };
+
+      const issuesA = getIssues(rowA);
+      const issuesB = getIssues(rowB);
+
+      return issuesA.localeCompare(issuesB);
+    },
+
     cell: ({ row }) => {
       let issues: { issue: EventsIssue; issueType: 'warning' | 'info' }[] = [];
 
@@ -85,6 +110,8 @@ export const columns: ColumnDef<Event>[] = [
         });
       }
 
+      issues.sort((a, b) => a.issue.localeCompare(b.issue));
+
       return <IssueCell issues={issues} />;
     },
   },
@@ -92,9 +119,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'tankNo',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.tankNo.label', 'Tank No.', 'Tank number column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
@@ -114,9 +149,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'customerNo',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.customerNo.label', 'Customer No.', 'Customer number column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
@@ -136,9 +179,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'address',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.address.label', 'Address', 'Address column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
@@ -151,9 +202,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'contact',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.contact.label', 'Contact', 'Contact column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
@@ -173,9 +232,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'salesRepUserName',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.salesRep.label', 'Sales Rep', 'Sales representative column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
