@@ -39,12 +39,38 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'issue',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+          className='pl-8'
+        >
           {t('events.table.issue.label', 'Issue', 'Issue column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}
         </Button>
       );
     },
+    sortingFn: (rowA, rowB) => {
+      const getIssues = (row: any) => {
+        const issues: string[] = [];
+        if (row.original.eventBatteryLow === 1) issues.push('Battery Low');
+        if (row.original.eventFault === 1) issues.push('Fault');
+        if (row.original.eventLevelLow === 1) issues.push('Level Low');
+        if (row.original.eventOffline === 1) issues.push('Offline');
+        if (row.original.eventOilFilling === 1) issues.push('Oil Filling');
+        return issues.sort().join(', ');
+      };
+
+      const issuesA = getIssues(rowA);
+      const issuesB = getIssues(rowB);
+
+      return issuesA.localeCompare(issuesB);
+    },
+
     cell: ({ row }) => {
       let issues: { issue: EventsIssue; issueType: 'warning' | 'info' }[] = [];
 
@@ -84,6 +110,8 @@ export const columns: ColumnDef<Event>[] = [
           issueType: 'info',
         });
       }
+
+      issues.sort((a, b) => a.issue.localeCompare(b.issue));
 
       return <IssueCell issues={issues} />;
     },

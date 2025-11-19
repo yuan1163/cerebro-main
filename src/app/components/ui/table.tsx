@@ -1,19 +1,9 @@
 import * as React from 'react';
-import { Scrollbar } from '@core/ui/components/Scrollbar';
-// import { cn } from "@app/lib/utils"
 import { cn } from '@core/utils/classnames';
 
 const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement> & { fullHeight?: boolean }>(
   ({ className, fullHeight, ...props }, ref) => (
-    <div className={cn('relative w-full', fullHeight && 'h-full flex flex-col')}>
-      <Scrollbar className={fullHeight ? 'flex-1 flex flex-col' : ''}>
-        <table
-          ref={ref}
-          className={cn('w-full caption-bottom text-sm', fullHeight && 'h-full', className)}
-          {...props}
-        />
-      </Scrollbar>
-    </div>
+    <table ref={ref} className={cn('w-full caption-bottom text-sm', fullHeight && 'h-full', className)} {...props} />
   ),
 );
 Table.displayName = 'Table';
