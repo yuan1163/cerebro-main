@@ -27,6 +27,9 @@
   &:active {
     // @apply bg-action-active;
     @apply bg-primary-50;
+      :global(.dark) & {
+    @apply bg-surface-03;
+  }
   }
   &:hover .menu-item-icon {
     @apply bg-surface-01;
@@ -101,6 +104,9 @@
 // .menu-item-button-active:hover {
 .menu-item-button-active {
   @apply bg-primary-50;
+  :global(.dark) & {
+    @apply bg-surface-02;
+  }
   // @apply bg-primary-tint-alpha;
   // @apply text-primary;
   // @apply cursor-default;
@@ -121,6 +127,9 @@
 .menu-item-button-selected,
 .menu-item-button-selected:hover {
   @apply bg-primary-50;
+    :global(.dark) & {
+    @apply bg-surface-02;
+  }
   // @apply bg-primary-tint-alpha;
   // @apply text-primary;
   // @apply cursor-default;
