@@ -28,7 +28,16 @@ export const useEventsSnapshot = (params?: EventsParameters) => {
     staleTime: 1000 * 60 * 5, // 5 minutes
     cacheTime: 1000 * 60 * 10, // 10 minutes
   });
-  return data ?? [];
+  const dataWithIssues = data?.filter((event) => {
+    return !(
+      event.eventBatteryLow === 0 &&
+      event.eventFault === 0 &&
+      event.eventLevelLow === 0 &&
+      event.eventOffline === 0 &&
+      event.eventOilFilling === 0
+    );
+  });
+  return dataWithIssues ?? [];
 };
 
 export const useEventsHistory = (deviceRef: string | null) => {
@@ -36,5 +45,14 @@ export const useEventsHistory = (deviceRef: string | null) => {
     staleTime: 1000 * 60 * 5, // 5 minutes
     cacheTime: 1000 * 60 * 10, // 10 minutes
   });
-  return data ?? [];
+  const dataWithIssues = data?.filter((event) => {
+    return !(
+      event.eventBatteryLow === 0 &&
+      event.eventFault === 0 &&
+      event.eventLevelLow === 0 &&
+      event.eventOffline === 0 &&
+      event.eventOilFilling === 0
+    );
+  });
+  return dataWithIssues ?? [];
 };

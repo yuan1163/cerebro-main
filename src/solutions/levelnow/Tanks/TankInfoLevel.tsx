@@ -52,7 +52,7 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
         {/* image & map */}
         <div className='flex items-center gap-5'>
           <div className='w-36'>{getDeviceLevelIcon(tank.deviceLevel, 'lg')}</div>
-          <div className='w-full h-40'>
+          <div className='relative w-full h-40'>
             <Map points={points} zoom={zoom} className='rounded-[10px]' />
           </div>
         </div>

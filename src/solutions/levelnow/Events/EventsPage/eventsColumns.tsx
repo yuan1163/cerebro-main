@@ -4,7 +4,6 @@ import { Button } from '@core/ui/components/Button';
 import { formatDate } from '@core/utils/levelnow/format';
 
 // Icon
-import ChevronUpIcon from '@assets/icons/LevelNOW/chevrons-up.svg?component';
 import ChevronDownIcon from '@assets/icons/LevelNOW/chevrons-down.svg?component';
 // Types
 import { Event } from '@core/api/types';
@@ -120,9 +119,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'tankNo',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.tankNo.label', 'Tank No.', 'Tank number column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
@@ -142,9 +149,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'customerNo',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.customerNo.label', 'Customer No.', 'Customer number column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
@@ -164,9 +179,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'address',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.address.label', 'Address', 'Address column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
@@ -179,9 +202,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'contact',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.contact.label', 'Contact', 'Contact column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
@@ -201,9 +232,17 @@ export const columns: ColumnDef<Event>[] = [
     accessorKey: 'salesRepUserName',
     header: ({ column }) => {
       return (
-        <Button>
+        <Button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+          }}
+        >
           {t('events.table.salesRep.label', 'Sales Rep', 'Sales representative column header')}
-          <ChevronDownIcon className='w-5 h-5 ' />
+          {column.getIsSorted() === 'asc' ? (
+            <ChevronDownIcon className='w-5 h-5 rotate-180' />
+          ) : (
+            <ChevronDownIcon className='w-5 h-5' />
+          )}{' '}
         </Button>
       );
     },
