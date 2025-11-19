@@ -170,6 +170,16 @@
         "translation": "Thành phố"
       }
     },
+    "latitude": {
+      "label": {
+        "translation": "Vĩ độ"
+      }
+    },
+    "longitude": {
+      "label": {
+        "translation": "Kinh độ"
+      }
+    },
     "gwsalesrep": {
       "label": {
         "translation": "Đại diện bán hàng toàn cầu"

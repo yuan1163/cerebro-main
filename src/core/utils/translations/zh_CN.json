@@ -170,6 +170,16 @@
         "translation": "城市"
       }
     },
+    "latitude": {
+      "label": {
+        "translation": "纬度"
+      }
+    },
+    "longitude": {
+      "label": {
+        "translation": "经度"
+      }
+    },
     "gwsalesrep": {
       "label": {
         "translation": "销售代表"

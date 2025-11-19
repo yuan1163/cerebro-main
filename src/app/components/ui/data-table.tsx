@@ -137,13 +137,13 @@ export function DataTable<TData, TValue>({
     <>
       <div style={heightStyle}>
         <Scrollbar>
-          <Table>
-            <TableHeader>
+          <Table className='border-separate border-spacing-0'>
+            <TableHeader className='sticky top-0 z-10 bg-white before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-border after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-border'>
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>
                   {headerGroup.headers.map((header) => {
                     return (
-                      <TableHead key={header.id} className='px-0 py-3'>
+                      <TableHead key={header.id} className='px-0 py-3 bg-white'>
                         {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                       </TableHead>
                     );
@@ -165,7 +165,7 @@ export function DataTable<TData, TValue>({
                     className={cn(onRowClick && 'cursor-pointer hover:bg-primary-50')}
                   >
                     {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id} className='py-2 px-[18px]'>
+                      <TableCell key={cell.id} className='px-4 py-2'>
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </TableCell>
                     ))}

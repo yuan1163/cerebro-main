@@ -152,6 +152,18 @@
         "notes": "City field."
       }
     },
+    "latitude": {
+      "label": {
+        "translation": "Latitude",
+        "notes": "Latitude field."
+      }
+    },
+    "longitude": {
+      "label": {
+        "translation": "Longitude",
+        "notes": "Longitude field."
+      }
+    },
     "gwsalesrep": {
       "label": {
         "translation": "GW Sales Rep",
