@@ -28,7 +28,7 @@ export const DrawerButtonExpanded: React.FC<Props> = ({ disabled, icon, iconHove
           component='div'
           className={cn(
             styles['drawer-button-expanded'],
-            isActive ? 'border-primary-tint-active rounded-[10px]' : 'border-white',
+            isActive ? 'border-primary-tint-active rounded-[10px]' : 'border-white dark:border-surface-01',
             'tracking-l font-medium',
             'border-3 gap-2.5',
           )}
