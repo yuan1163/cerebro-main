@@ -176,7 +176,7 @@ export default function DeleteButton({ type, name, onDelete, disabled = false, i
           <DialogFooter className='flex items-center gap-3'>
             <Button
               variant='outlined'
-              className='flex-1 p-4'
+              className='flex-1 p-4 dark:bg-surface-03'
               onClick={() => setIsDialogOpen(false)}
               disabled={isDeleting}
             >

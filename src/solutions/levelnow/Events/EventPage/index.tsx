@@ -41,12 +41,12 @@ const EventPage = observer(() => {
       <Card className='flex flex-col rounded-[10px] shadow-card' fullHeight>
         <CardHeader justifyContent='between' borderBottom>
           <div className='flex items-center gap-3'>
-            <Button variant='outlined' className='p-1.5'>
+            <Button variant='outlined' className='p-1.5 text-typography-primary'>
               <Link to={'/levelnow/events'}>
                 <ChevronLeftIcon />
               </Link>
             </Button>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
               {t('solutions.events.label', 'Events', 'A list of events related to the solution.')}
             </h1>
           </div>

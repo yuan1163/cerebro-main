@@ -35,10 +35,10 @@ export default function CustomerAssign({ tank, client, onCancelEdit }: CustomerA
       {/* description */}
       <div className='flex flex-col justify-between px-5 pb-5'>
         <header className='flex flex-col gap-1'>
-          <div className='font-medium text-md tracking-32 text-neutral-900'>
+          <div className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
             {t('tank.chooseCustomer.label', 'Choose a Customer', 'Select and assign a customer to the tank.')}
           </div>
-          <div className='text-sm font-medium tracking-28 text-secondary-500'>
+          <div className='text-sm font-medium tracking-28 text-secondary-500 dark:text-typography-secondary'>
             {t(
               `tank.assignCustomerDescription.label`,
               `Assign a customer to this tank`,
@@ -47,10 +47,10 @@ export default function CustomerAssign({ tank, client, onCancelEdit }: CustomerA
           </div>
         </header>
         <footer className='flex flex-col gap-5'>
-          <div className='font-medium text-md tracking-32 text-neutral-900'>
+          <div className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
             {t('tank.help.label', 'Help?', 'Need assistance with assigning a customer to the tank?')}
           </div>
-          <div className='flex flex-col gap-1 text-sm font-medium tracking-28 text-secondary-500'>
+          <div className='flex flex-col gap-1 text-sm font-medium tracking-28 text-secondary-500 dark:text-typography-secondary'>
             <div className='text-neutral-900'>
               {t(
                 'tank.createCustomer.title.label',
@@ -73,8 +73,8 @@ export default function CustomerAssign({ tank, client, onCancelEdit }: CustomerA
               )}
             </p>
           </div>
-          <div className='flex flex-col gap-1 text-sm font-medium tracking-28 text-secondary-500'>
-            <div className='text-neutral-900'>
+          <div className='flex flex-col gap-1 text-sm font-medium tracking-28 text-secondary-500 dark:text-typography-secondary'>
+            <div className='text-neutral-900 dark:text-typography-primary'>
               {t(
                 'tank.clearCustomer.title.label',
                 'Clear " Customer " for tank',
@@ -92,13 +92,13 @@ export default function CustomerAssign({ tank, client, onCancelEdit }: CustomerA
         </footer>
       </div>
       {/* Customer list to assign  */}
-      <div className='flex flex-col justify-between pb-5 rounded-lg bg-neutral-50'>
+      <div className='flex flex-col justify-between pb-5 rounded-lg bg-neutral-50 dark:bg-surface-02'>
         <div className='h-[calc(100vh-360px)] overflow-auto grow pb-5'>
           <Scrollbar>
             {/* Remove Assign */}
             <div
               onClick={() => onAssignCustomer(0)}
-              className='flex items-center gap-5 py-3 font-medium cursor-pointer px-9 text-md tracking-32 text-neutral-900 hover:bg-hover'
+              className='flex items-center gap-5 py-3 font-medium cursor-pointer px-9 text-md tracking-32 text-neutral-900 hover:bg-hover dark:text-typography-primary dark:hover:bg-surface-03'
             >
               <span>-</span>
               <span>
@@ -141,7 +141,7 @@ function CustomerItem({ client, isActived, onAssignCustomer }: CustomerItemProps
     <div
       onClick={() => onAssignCustomer(client.clientId)}
       className={cn(
-        isActived ? 'bg-primary-50' : 'hover:bg-hover',
+        isActived ? 'bg-primary-50 dark:bg-surface-03' : 'hover:bg-hover dark:hover:bg-surface-03',
         'flex items-center gap-3 px-5 py-3 border-b-2 border-white cursor-pointer',
       )}
     >
@@ -149,7 +149,9 @@ function CustomerItem({ client, isActived, onAssignCustomer }: CustomerItemProps
         <CustomerIcon className='w-5 h-5' />
       </div>
       <div className='flex items-center justify-start flex-1'>
-        <p className='text-sm font-medium tracking-28 text-neutral-900'>{client.clientName}</p>
+        <p className='text-sm font-medium tracking-28 text-neutral-900 dark:text-typography-primary'>
+          {client.clientName}
+        </p>
       </div>
     </div>
   );

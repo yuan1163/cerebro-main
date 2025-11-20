@@ -134,19 +134,23 @@ export default function TankList({ tanks, selectedTankId, searchQuery }: TankLis
 
 function TankItem({ tank, selectedTankId }: TankItemProps) {
   const isSelected = selectedTankId === tank.tankId;
-  const itemClass = isSelected ? 'bg-primary-50' : 'hover:bg-hover';
+  const itemClass = isSelected ? 'bg-primary-50 dark:bg-surface-03' : 'hover:bg-hover dark:hover:bg-surface-02';
   return (
     <Link
       to={`/levelnow/tanks/tank/${tank.tankId}`}
       className={cn(
         itemClass,
-        'grid items-center grid-cols-[2fr_auto_auto_auto] gap-5 border-b py-7 border-neutral-200 px-5',
+        'grid items-center grid-cols-[2fr_auto_1fr_1fr] gap-5 border-b py-7 border-neutral-200 px-5',
       )}
     >
       {/* name */}
       <div className='flex flex-col gap-1'>
-        <div className='font-medium text-16 tracking-32 text-neutral-900'>{tank.tankNo}</div>
-        <div className='font-medium text-16 tracking-32 text-secondary-500'>{tank.deviceReference}</div>
+        <div className='font-medium text-16 tracking-32 text-neutral-900 dark:text-typography-primary'>
+          {tank.tankNo}
+        </div>
+        <div className='font-medium text-16 tracking-32 text-secondary-500 dark:text-typography-secondary'>
+          {tank.deviceReference}
+        </div>
       </div>
       {/* device level */}
       <div>{getDeviceLevelIcon(tank.deviceLevel, 'sm')}</div>

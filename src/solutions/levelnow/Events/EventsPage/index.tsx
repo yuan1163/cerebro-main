@@ -229,7 +229,7 @@ const EventsPage = observer(() => {
       <Card className='rounded-[10px] shadow-card flex-1 flex flex-col mt-5'>
         <CardHeader justifyContent='between'>
           <div className='flex items-center gap-3'>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
               {t('solutions.events.label', 'Events', 'A list of events related to the solution.')}
             </h1>
             <NumberBadge variant='gray' number={events.length} />
@@ -247,9 +247,8 @@ const EventsPage = observer(() => {
             <Button
               variant='outlined'
               startIcon={<FilterIcon />}
-              iconColor='neutral-900'
               onClick={() => setIsFilterOpen(!isFilterOpen)}
-              className='gap-2'
+              className='gap-2 text-neutral-900 dark:text-typography-primary'
             >
               <span>{t('general.filters.label', 'Filters', 'Filters button')}</span>
 

@@ -31,7 +31,7 @@ export const columns: ColumnDef<EventsHistoryItem>[] = [
     },
     cell: ({ row }) => {
       const eventDate = row.getValue('eventDate') as string;
-      return <div className='text-16 font-medium text-[#000] tracking-32'>{formatDate(eventDate)}</div>;
+      return <div className='font-medium text-16 text-typography-primary tracking-32'>{formatDate(eventDate)}</div>;
     },
   },
   {

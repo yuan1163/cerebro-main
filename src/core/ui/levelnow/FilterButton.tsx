@@ -26,7 +26,7 @@ export default function FilterButton({ counts = 0, onClick, onClear }: FilterBut
         iconColor='neutral-900'
         fontSize='md'
         fontWeight='medium'
-        className='px-3 tracking-32 text-neutral-900'
+        className='px-3 tracking-32 text-neutral-900 dark:text-typography-primary'
       >
         <FilterIcon className='mr-2' />
         {t('general.filters.label', 'Filters', 'Various options hat users can apply to refine the displayed content.')}

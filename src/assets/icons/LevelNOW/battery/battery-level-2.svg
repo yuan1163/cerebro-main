@@ -2,11 +2,11 @@
 <mask id="path-1-inside-1_4023_8564" fill="white">
 <rect x="3" y="2" width="29" height="16" rx="1.16667"/>
 </mask>
-<rect x="3" y="2" width="29" height="16" rx="1.16667" stroke="#1A1A1A" stroke-width="3.5" mask="url(#path-1-inside-1_4023_8564)"/>
+<rect x="3" y="2" width="29" height="16" rx="1.16667" stroke="currentColor" stroke-width="3.5" mask="url(#path-1-inside-1_4023_8564)"/>
 <mask id="path-2-inside-2_4023_8564" fill="white">
 <path d="M0.583333 14.668C0.261167 14.668 3.42479e-08 14.4068 7.64949e-08 14.0846L1.14742e-06 5.91797C1.18967e-06 5.5958 0.261168 5.33464 0.583335 5.33464L2.33333 5.33464L2.33333 14.668L0.583333 14.668Z"/>
 </mask>
-<path d="M0.583333 14.668C0.261167 14.668 3.42479e-08 14.4068 7.64949e-08 14.0846L1.14742e-06 5.91797C1.18967e-06 5.5958 0.261168 5.33464 0.583335 5.33464L2.33333 5.33464L2.33333 14.668L0.583333 14.668Z" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="2.33333" mask="url(#path-2-inside-2_4023_8564)"/>
-<rect x="18.5996" y="14.668" width="9.33333" height="3.5" rx="0.583333" transform="rotate(-90 18.5996 14.668)" fill="#15171A"/>
-<rect x="24.3994" y="14.668" width="9.33333" height="3.5" rx="0.583333" transform="rotate(-90 24.3994 14.668)" fill="#15171A"/>
+<path d="M0.583333 14.668C0.261167 14.668 3.42479e-08 14.4068 7.64949e-08 14.0846L1.14742e-06 5.91797C1.18967e-06 5.5958 0.261168 5.33464 0.583335 5.33464L2.33333 5.33464L2.33333 14.668L0.583333 14.668Z" fill="currentColor" stroke="currentColor" stroke-width="2.33333" mask="url(#path-2-inside-2_4023_8564)"/>
+<rect x="18.5996" y="14.668" width="9.33333" height="3.5" rx="0.583333" transform="rotate(-90 18.5996 14.668)" fill="currentColor"/>
+<rect x="24.3994" y="14.668" width="9.33333" height="3.5" rx="0.583333" transform="rotate(-90 24.3994 14.668)" fill="currentColor"/>
 </svg>
