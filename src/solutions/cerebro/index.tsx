@@ -38,14 +38,14 @@ import Users01SolidIcon from '@assets/icons/solid/users-01.svg?component';
 export const modules: Modules = [
   {
     url: '',
-    title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
+    title: 'modules.domain.label',
     icon: <Home02LineIcon />,
     iconSolid: <Home02SolidIcon />,
     component: <Domain />,
   },
   {
     url: 'domain',
-    title: t('solutions.domain.label', 'Domain', 'Domain page title.'),
+    title: 'modules.domain.label',
     icon: <Home02LineIcon />,
     iconSolid: <Home02SolidIcon />,
     component: <Domain />,

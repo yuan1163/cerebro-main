@@ -4081,6 +4081,11 @@
     }
   },
   "modules": {
+    "domain": {
+      "label": {
+        "translation": "域"
+      }
+    },
     "tanks": {
       "label": {
         "translation": "油箱"

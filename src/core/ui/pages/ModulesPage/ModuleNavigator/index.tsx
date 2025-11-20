@@ -158,7 +158,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
       }
     }
 
-    const title = item.title;
+    // Translate title reactively (will re-run when translation.language changes)
+    const title = t(item.title || '', item.title || '', '');
 
     return (
       <li className={styles['list-item']}>
@@ -173,13 +174,7 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
           url={url}
         />
         {createPortal(
-          <Tooltip
-            isVisible={tooltipVisible}
-            placement='right'
-            targetRef={divRef}
-            title={title}
-            // title={t(title || '', title || '', '')}
-          />,
+          <Tooltip isVisible={tooltipVisible} placement='right' targetRef={divRef} title={title} />,
           document.body,
         )}
       </li>
@@ -294,7 +289,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
                 type='home'
               /> */}
               {common.map((item) => {
-                const title = item.title;
+                // Translate title reactively
+                const title = t(item.title, item.title, '');
 
                 return 'isGroup' in item ? (
                   <DrawerButtonCollapsedAccordion
@@ -321,7 +317,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             {uniques.length > 0 ? (
               <ul className={styles['list']}>
                 {uniques.map((item) => {
-                  const title = item.title;
+                  // Translate title reactively
+                  const title = t(item.title, item.title, '');
 
                   return 'isGroup' in item ? (
                     <DrawerButtonCollapsedAccordion
@@ -431,7 +428,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
 
               {/* 左側選單列表 */}
               {common.map((item) => {
-                const title = item.title;
+                // Translate title reactively
+                const title = t(item.title, item.title, '');
 
                 if ('isGroup' in item) {
                   return (
@@ -478,7 +476,8 @@ export const ModuleNavigator: React.FC<Props> = observer(({ modules }) => {
             {uniques.length > 0 ? (
               <ul className={styles['list']}>
                 {uniques.map((item) => {
-                  const title = item.title;
+                  // Translate title reactively
+                  const title = t(item.title, item.title, '');
 
                   if ('isGroup' in item) {
                     return (

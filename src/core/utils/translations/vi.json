@@ -4079,6 +4079,11 @@
     }
   },
   "modules": {
+    "domain": {
+      "label": {
+        "translation": "Miền"
+      }
+    },
     "tanks": {
       "label": {
         "translation": "Bể chứa"
