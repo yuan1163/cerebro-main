@@ -31,7 +31,7 @@ export const columns: ColumnDef<Event>[] = [
     },
     cell: ({ row }) => {
       const eventDate = row.getValue('eventDate') as string;
-      return <div className='text-16 font-medium text-[#000] tracking-32   '>{formatDate(eventDate)}</div>;
+      return <div className='font-medium text-16 text-typography-primary tracking-32'>{formatDate(eventDate)}</div>;
     },
   },
   {
@@ -139,7 +139,7 @@ export const columns: ColumnDef<Event>[] = [
 
       return (
         <div className='flex flex-col gap-1'>
-          <div className='text-16 font-medium text-[#000]'>{tankNo || '-'}</div>
+          <div className='font-medium text-16 text-typography-primary'>{tankNo || '-'}</div>
           <div className='font-medium text-16 text-secondary-500'>{tankId || '-'}</div>
         </div>
       );
@@ -169,7 +169,7 @@ export const columns: ColumnDef<Event>[] = [
 
       return (
         <div className='flex flex-col gap-1'>
-          <div className='text-16 font-medium text-[#000]'>{customerNo || '-'}</div>
+          <div className='font-medium text-16 text-typography-primary'>{customerNo || '-'}</div>
           <div className='font-medium text-16 text-secondary-500'>{customerName || '-'}</div>
         </div>
       );
@@ -195,7 +195,7 @@ export const columns: ColumnDef<Event>[] = [
     },
     cell: ({ row }) => {
       const address = row.getValue('address') as string;
-      return <div className='text-16 font-medium text-[#000]'>{address || '-'}</div>;
+      return <div className='font-medium text-16 text-typography-primary'>{address || '-'}</div>;
     },
   },
   {
@@ -222,7 +222,7 @@ export const columns: ColumnDef<Event>[] = [
 
       return (
         <div className='flex flex-col gap-1'>
-          <div className='text-16 font-medium text-[#000]'>{contact || '-'}</div>
+          <div className='font-medium text-16 text-typography-primary'>{contact || '-'}</div>
           <div className='font-medium text-16 text-secondary-500'>{phone || '-'}</div>
         </div>
       );
@@ -248,7 +248,7 @@ export const columns: ColumnDef<Event>[] = [
     },
     cell: ({ row }) => {
       const salesRep = row.getValue('salesRepUserName') as string;
-      return <div className='text-16 font-medium text-[#000]'>{salesRep || '-'}</div>;
+      return <div className='font-medium text-16 text-typography-primary'>{salesRep || '-'}</div>;
     },
   },
 ];

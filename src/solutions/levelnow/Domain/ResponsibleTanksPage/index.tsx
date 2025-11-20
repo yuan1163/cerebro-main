@@ -213,7 +213,7 @@ const ResponsibleTanksPage = observer(() => {
       <Card className='rounded-[10px] shadow-card flex-1 flex flex-col mt-5'>
         <CardHeader justifyContent='between'>
           <div className='flex items-center gap-3'>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
               {t('solutions.events.label', 'Events', 'A list of events related to the solution.')}
             </h1>
             <NumberBadge variant='gray' number={events.length} />
@@ -237,17 +237,21 @@ const ResponsibleTanksPage = observer(() => {
                       <Listbox.Button
                         ref={dateRef}
                         className={cn(
-                          open ? 'border-primary-500' : 'border-neutral-200 hover:border-neutral-300',
-                          'flex w-full bg-[#FFF] items-center justify-between px-3 py-2 border rounded-md hover:bg-hover',
+                          open
+                            ? 'border-primary-500'
+                            : 'border-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-200',
+                          'flex w-full bg-surface-01 items-center justify-between px-3 py-2 border rounded-md hover:bg-hover dark:hover:bg-surface-02',
                         )}
                       >
-                        <span className='font-medium text-md tracking-32 text-neutral-900'>
+                        <span className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
                           {selectedDate ? formatDate(selectedDate) : dateRange}
                         </span>
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
                       <Listbox.Options
-                        className={cn('absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select')}
+                        className={cn(
+                          'absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-surface-03 rounded-lg shadow-select',
+                        )}
                         style={{ width: dateRef.current?.offsetWidth }}
                       >
                         <Scrollbar>
@@ -257,9 +261,9 @@ const ResponsibleTanksPage = observer(() => {
                                 {({ active, selected }) => (
                                   <li
                                     className={cn(
-                                      'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
-                                      active && 'bg-hover',
-                                      selected && 'bg-primary-50 text-primary-500',
+                                      'flex items-center justify-between p-3 rounded text-neutral-900 dark:text-typography-primary bg-surface-03',
+                                      active && 'bg-hover dark:bg-surface-02',
+                                      selected && 'bg-primary-50 dark:bg-surface-01 text-primary-500',
                                     )}
                                   >
                                     <span className='font-medium text-md tracking-32'>{formatDate(date)}</span>
@@ -284,11 +288,13 @@ const ResponsibleTanksPage = observer(() => {
                       <Listbox.Button
                         ref={issueRef}
                         className={cn(
-                          open ? 'border-primary-500' : 'border-neutral-200 hover:border-neutral-300',
-                          'flex w-full bg-[#FFF] items-center justify-between px-3 py-2 border rounded-md hover:bg-hover',
+                          open
+                            ? 'border-primary-500'
+                            : 'border-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-200',
+                          'flex w-full bg-surface-01 items-center justify-between px-3 py-2 border rounded-md hover:bg-hover dark:hover:bg-surface-02',
                         )}
                       >
-                        <span className='font-medium text-md tracking-32 text-neutral-900'>
+                        <span className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
                           {selectedIssue
                             ? selectedIssue
                             : t('events.filter.issueAll', 'Issue: All', 'Issue all filter')}
@@ -296,7 +302,9 @@ const ResponsibleTanksPage = observer(() => {
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
                       <Listbox.Options
-                        className={cn('absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select')}
+                        className={cn(
+                          'absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-surface-03 rounded-lg shadow-select',
+                        )}
                         style={{ width: dateRef.current?.offsetWidth }}
                       >
                         <Scrollbar>
@@ -307,9 +315,9 @@ const ResponsibleTanksPage = observer(() => {
                                 {({ active, selected }) => (
                                   <li
                                     className={cn(
-                                      'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
-                                      active && 'bg-hover',
-                                      selected && 'bg-primary-50 text-primary-500',
+                                      'flex items-center justify-between p-3 rounded text-neutral-900 dark:text-typography-primary bg-surface-03',
+                                      active && 'bg-hover dark:bg-surface-02',
+                                      selected && 'bg-primary-50 dark:bg-surface-01 text-primary-500',
                                     )}
                                   >
                                     <span className='font-medium text-md tracking-32'>{label}</span>
@@ -333,11 +341,13 @@ const ResponsibleTanksPage = observer(() => {
                       <Listbox.Button
                         ref={deviceRef}
                         className={cn(
-                          open ? 'border-primary-500' : 'border-neutral-200 hover:border-neutral-300',
-                          'flex w-full bg-[#FFF] items-center justify-between px-3 py-2 border rounded-md hover:bg-hover',
+                          open
+                            ? 'border-primary-500'
+                            : 'border-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-200',
+                          'flex w-full bg-surface-01 items-center justify-between px-3 py-2 border rounded-md hover:bg-hover dark:hover:bg-surface-02',
                         )}
                       >
-                        <span className='font-medium text-md tracking-32 text-neutral-900'>
+                        <span className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
                           {selectedDevice
                             ? selectedDevice
                             : t('filter.deviceAll.label', 'Device Reference: All', 'Device reference all filter')}
@@ -345,7 +355,9 @@ const ResponsibleTanksPage = observer(() => {
                         <ChevronsUpDownIcon />
                       </Listbox.Button>
                       <Listbox.Options
-                        className={cn('absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-[#FFF] rounded-lg shadow-select')}
+                        className={cn(
+                          'absolute h-56 left-0 top-14 z-10 gap-3 p-3 bg-surface-03 rounded-lg shadow-select',
+                        )}
                         style={{ width: dateRef.current?.offsetWidth }}
                       >
                         <Scrollbar>
@@ -356,9 +368,9 @@ const ResponsibleTanksPage = observer(() => {
                                 {({ active, selected }) => (
                                   <li
                                     className={cn(
-                                      'flex items-center justify-between p-3 rounded text-neutral-900 bg-[#FFF]',
-                                      active && 'bg-hover',
-                                      selected && 'bg-primary-50 text-primary-500',
+                                      'flex items-center justify-between p-3 rounded text-neutral-900 dark:text-typography-primary bg-surface-03',
+                                      active && 'bg-hover dark:bg-surface-02',
+                                      selected && 'bg-primary-50 dark:bg-surface-01 text-primary-500',
                                     )}
                                   >
                                     <span className='font-medium text-md tracking-32'>{label}</span>

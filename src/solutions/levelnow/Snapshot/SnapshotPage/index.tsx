@@ -83,13 +83,13 @@ const SnapshotPage = observer(() => {
         <Card className='rounded-[10px] shadow-card flex flex-col min-w-[400px]'>
           <CardHeader justifyContent='between'>
             <div className='flex items-center gap-3'>
-              <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+              <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
                 {t('snapshot.overview.label', 'Overview', 'Snapshot overview.')}
               </h1>
             </div>
           </CardHeader>
           <CardContent className='flex flex-col flex-1 gap-8 p-5'>
-            <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+            <h3 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
               {t('snapshot.oillevel.label', 'Oil Level', 'Oil Level title.')}
             </h3>
             {/* Center donut chart */}
@@ -106,6 +106,7 @@ const SnapshotPage = observer(() => {
                     dataKey='value'
                     startAngle={0}
                     endAngle={-360}
+                    stroke='none'
                   >
                     {tankLevelCounts.map((entry) => (
                       <Cell key={entry.range} fill={entry.color} />
@@ -114,16 +115,18 @@ const SnapshotPage = observer(() => {
                 </PieChart>
               </ResponsiveContainer>
               <div className='absolute inset-0 flex flex-col items-center justify-center'>
-                <span className='text-base font-medium tracking-32 text-neutral-900'>
+                <span className='text-base font-medium tracking-32 text-neutral-900 dark:text-typography-primary'>
                   {t('snapshot.totaltanks.label', 'Total Tanks', 'Total tanks in the system.')}
                 </span>
-                <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{tanks.length}</span>
+                <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900 dark:text-typography-primary'>
+                  {tanks.length}
+                </span>
               </div>
             </div>
 
             {/* Legend */}
             <div className='flex flex-col gap-5'>
-              <div className='flex items-center justify-between pb-3 font-medium border-b border-neutral-200 text-md tracking-32 text-neutral-900'>
+              <div className='flex items-center justify-between pb-3 font-medium border-b border-neutral-200 text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
                 <div>{t('general.status.label', 'Status', 'Status label in table header.')}</div>
                 <div>{t('general.total.label', 'Total', 'Total label in table header.')}</div>
               </div>
@@ -131,8 +134,12 @@ const SnapshotPage = observer(() => {
                 {tankLevelCounts.map((level) => (
                   <div key={level.range} className='flex items-center justify-between gap-2'>
                     <div className='w-2.5 aspect-square rounded-full' style={{ backgroundColor: level.color }} />
-                    <span className='grow text-sm font-medium text-secondary-500 min-w-[85px]'>{level.range}</span>
-                    <span className='text-sm font-medium text-neutral-900'>{level.value}</span>
+                    <span className='grow text-sm font-medium text-secondary-500 dark:text-typography-secondary min-w-[85px]'>
+                      {level.range}
+                    </span>
+                    <span className='text-sm font-medium text-neutral-900 dark:text-typography-primary'>
+                      {level.value}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -144,7 +151,7 @@ const SnapshotPage = observer(() => {
           <Link to='levellow'>
             <CardHeader justifyContent='between' borderBottom>
               <div className='flex items-center gap-3'>
-                <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+                <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
                   {t('snapshot.levellow.label', 'Level Low', 'Level Low title.')}
                 </h1>
               </div>
@@ -153,10 +160,10 @@ const SnapshotPage = observer(() => {
               </div>
             </CardHeader>
             <CardContent className='flex flex-col flex-1 gap-5 p-5'>
-              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
+              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500 dark:text-typography-secondary'>
                 {levelLowAmounts}
               </div>
-              <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
                 {t('snapshot.networkconnection.label', 'Network Connection', 'Network Connection title.')}
               </h3>
               <PieChartCard data={MOCK_NETWORK_RATIO} status='ratio' />
@@ -169,7 +176,7 @@ const SnapshotPage = observer(() => {
           <Link to='offline'>
             <CardHeader justifyContent='between' borderBottom>
               <div className='flex items-center gap-3'>
-                <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+                <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
                   {t('snapshot.offline.label', 'Off-line', 'Offline title.')}
                 </h1>
               </div>
@@ -178,10 +185,10 @@ const SnapshotPage = observer(() => {
               </div>
             </CardHeader>
             <CardContent className='flex flex-col flex-1 gap-5 p-5'>
-              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
+              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500 dark:text-typography-secondary'>
                 {offlineAmounts}
               </div>
-              <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
                 {t('snapshot.gatewaystatus.label', 'Gateway Status', 'Gateway Status title.')}
               </h3>
               <PieChartCard data={gatewayRatio} status='ratio' />
@@ -194,7 +201,7 @@ const SnapshotPage = observer(() => {
           <Link to='batterylow'>
             <CardHeader justifyContent='between' borderBottom>
               <div className='flex items-center gap-3'>
-                <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+                <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
                   {t('snapshot.batterylow.label', 'Battery Low', 'Battery Low title.')}
                 </h1>
               </div>
@@ -203,10 +210,10 @@ const SnapshotPage = observer(() => {
               </div>
             </CardHeader>
             <CardContent className='flex flex-col flex-1 gap-5 p-5'>
-              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
+              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500 dark:text-typography-secondary'>
                 {batteryLowAmounts}
               </div>
-              <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
                 {t('snapshot.batterylevel.label', 'Battery Level', 'Battery Level title.')}
               </h3>
               <PieChartCard data={batteryRatio} status='ratio' />
@@ -219,7 +226,7 @@ const SnapshotPage = observer(() => {
           <Link to='sensorerror'>
             <CardHeader justifyContent='between' borderBottom>
               <div className='flex items-center gap-3'>
-                <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+                <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
                   {t('snapshot.sensorerror.label', 'Sensor Error', 'Sensor Error title.')}
                 </h1>
               </div>
@@ -228,10 +235,10 @@ const SnapshotPage = observer(() => {
               </div>
             </CardHeader>
             <CardContent className='flex flex-col flex-1 gap-5 p-5'>
-              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500'>
+              <div className='flex items-center justify-center h-[200px] text-[52px] font-medium text-secondary-500 dark:text-typography-secondary'>
                 {errorAmounts}
               </div>
-              <h3 className='font-medium text-md tracking-32 text-neutral-900'>
+              <h3 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
                 {t('snapshot.sensors.label', 'Sensors', 'Sensors title.')}
               </h3>
               <PieChartCard data={sensorRatio} status='ratio' />

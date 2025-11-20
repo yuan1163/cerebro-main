@@ -36,7 +36,9 @@ export default function TankInfo({ tank, client }: TankInfoProps) {
       <Card className='flex flex-col flex-1'>
         <CardHeader borderBottom>
           <div className='flex items-center justify-between w-full'>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>{tank?.tankNo || '-'}</h1>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
+              {tank?.tankNo || '-'}
+            </h1>
             <DownloadButton />
           </div>
         </CardHeader>

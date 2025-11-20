@@ -201,7 +201,7 @@ export default function CustomerList({
 
 const CustomerItem = forwardRef<HTMLDivElement, CustomerItemProps>(({ customer, selectedClientId }, ref) => {
   const isSelected = selectedClientId === customer.clientId;
-  const itemClass = isSelected ? 'bg-primary-50' : 'hover:bg-hover';
+  const itemClass = isSelected ? 'bg-primary-50 dark:bg-surface-02' : 'hover:bg-hover dark:hover:bg-surface-03';
 
   const customerAddress = `${customer.clientAddress}, ${customer.clientCity}, ${customer.clientState}, ${customer.clientCountry}`;
   return (
@@ -210,9 +210,15 @@ const CustomerItem = forwardRef<HTMLDivElement, CustomerItemProps>(({ customer, 
         to={`/levelnow/customers/customer/${customer.clientId}`}
         className={cn(itemClass, 'flex flex-col gap-1 border-b px-10 py-7 border-neutral-200 cursor-pointer')}
       >
-        <div className='text-sm font-medium tracking-28 text-neutral-900'>{customer.clientNo}</div>
-        <div className='font-medium text-md tracking-32 text-neutral-900'>{customer.clientName}</div>
-        <div className='font-medium text-md tracking-32 text-secondary-500'>{customerAddress}</div>
+        <div className='text-sm font-medium tracking-28 text-neutral-900 dark:text-typography-primary'>
+          {customer.clientNo}
+        </div>
+        <div className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
+          {customer.clientName}
+        </div>
+        <div className='font-medium text-md tracking-32 text-secondary-500 dark:text-typography-secondary'>
+          {customerAddress}
+        </div>
       </Link>
     </div>
   );

@@ -3388,6 +3388,12 @@
     }
   },
   "modules": {
+    "domain": {
+      "label": {
+        "translation": "Domain",
+        "notes": "Domain page title."
+      }
+    },
     "tanks": {
       "label": {
         "translation": "Tanks",

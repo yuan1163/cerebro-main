@@ -41,14 +41,17 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
   return (
     <section className='flex flex-col gap-5'>
       <div className='flex items-center gap-5 px-5'>
-        <h2 className='font-medium text-md tracking-32 text-neutral-900 w-[145px]'>
+        <h2 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary w-[145px]'>
           {t('tank.level.label', 'Leveling', 'Tank level title.')}
         </h2>
-        <h2 className='font-medium text-md tracking-32 text-neutral-900'>
+        <h2 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
           {t('tank.location.label', 'Location', 'Tank location title.')}
         </h2>
       </div>
-      <div className='flex flex-col gap-6 p-5 rounded-lg grow bg-neutral-50' style={{ minHeight: '255px' }}>
+      <div
+        className='flex flex-col gap-6 p-5 rounded-lg grow bg-neutral-50 dark:bg-surface-02'
+        style={{ minHeight: '255px' }}
+      >
         {/* image & map */}
         <div className='flex items-center gap-5'>
           <div className='w-36'>{getDeviceLevelIcon(tank.deviceLevel, 'lg')}</div>
@@ -70,8 +73,10 @@ export default function TankInfoLevel({ tank }: TankInfoDetailsProps) {
                 {column.map((item, rowIndex) => (
                   <React.Fragment key={`${colIndex}-${rowIndex}`}>
                     <>
-                      <dt className='text-sm font-medium tracking-wide text-secondary-500'>{item.label}</dt>
-                      <dd className='text-sm font-medium tracking-wide truncate text-neutral-900'>
+                      <dt className='text-sm font-medium tracking-wide text-secondary-500 dark:text-typography-secondary'>
+                        {item.label}
+                      </dt>
+                      <dd className='text-sm font-medium tracking-wide truncate text-neutral-900 dark:text-typography-primary'>
                         {item.value || '-'}
                       </dd>
                     </>

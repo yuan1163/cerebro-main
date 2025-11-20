@@ -40,7 +40,7 @@ export default function SensorErrorPage() {
                 <ChevronLeftIcon />
               </Link>
             </Button>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
               {t('snapshot.sensorerror.label', 'Sensor Error', 'Sensor Error card title.')}
             </h1>
             <NumberBadge variant='gray' number={events.length} />

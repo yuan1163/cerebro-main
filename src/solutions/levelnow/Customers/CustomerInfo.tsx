@@ -126,7 +126,7 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
       <div className='flex grow'>
         <Card className='flex flex-col flex-1'>
           <CardHeader borderBottom className=' min-h-[69px]'>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
               {t('customer.addCustomer.label', 'Add Customer', 'Add Customer')}
             </h1>
           </CardHeader>
@@ -242,7 +242,9 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
     <div className='flex grow'>
       <Card className='flex flex-col flex-1'>
         <CardHeader borderBottom className=' min-h-[69px]'>
-          <h1 className='text-lg font-medium tracking-36 text-neutral-900'>{customer?.clientName || '-'}</h1>
+          <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
+            {customer?.clientName || '-'}
+          </h1>
         </CardHeader>
         <CardContent className='p-5 grow'>
           <div className='grid h-full grid-cols-2 gap-5'>

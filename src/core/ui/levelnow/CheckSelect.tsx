@@ -101,7 +101,7 @@ export default function CheckSelect({ options, activedFilter, handleSelect }: Ch
                 ))}
               </div>
               <div className='flex items-center w-full gap-3 mt-3'>
-                <Button variant='outlined' fullWidth onClick={handleCancel}>
+                <Button variant='outlined' fullWidth onClick={handleCancel} className='dark:bg-surface-03'>
                   Cancel
                 </Button>
                 <Button variant='solid' fullWidth onClick={handleConfirm}>

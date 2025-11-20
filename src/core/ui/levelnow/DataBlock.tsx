@@ -59,9 +59,11 @@ export default function DataBlock({
   const padding = noPadding ? '' : 'p-5';
   return (
     <section className={cn('flex flex-col gap-5', className)}>
-      {title && <h2 className='font-medium text-md tracking-32 text-neutral-900'>{title}</h2>}
+      {title && (
+        <h2 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>{title}</h2>
+      )}
       <div
-        className={cn('flex flex-col justify-between grow rounded-lg bg-neutral-50', padding)}
+        className={cn('flex flex-col justify-between grow rounded-lg bg-neutral-50 dark:bg-surface-02', padding)}
         style={minHeight ? { minHeight } : undefined}
       >
         <div className='grid gap-x-20 gap-y-3' style={{ gridTemplateColumns: gridTemplateColumns }}>
@@ -80,15 +82,21 @@ export default function DataBlock({
                   <React.Fragment key={`${colIndex}-${rowIndex}`}>
                     {item ? (
                       <>
-                        <dt className='text-sm font-medium tracking-wide text-secondary-500'>{item.label}</dt>
-                        <dd className='text-sm font-medium tracking-wide truncate text-neutral-900'>
+                        <dt className='text-sm font-medium tracking-wide text-secondary-500 dark:text-typography-secondary'>
+                          {item.label}
+                        </dt>
+                        <dd className='text-sm font-medium tracking-wide truncate text-neutral-900 dark:text-typography-primary'>
                           {item.value || '-'}
                         </dd>
                       </>
                     ) : (
                       <>
-                        <dt className='text-sm font-medium tracking-wide text-secondary-500'>{'\u00A0'}</dt>
-                        <dd className='text-sm font-medium tracking-wide text-neutral-900'>{'\u00A0'}</dd>
+                        <dt className='text-sm font-medium tracking-wide text-secondary-500 dark:text-typography-secondary'>
+                          {'\u00A0'}
+                        </dt>
+                        <dd className='text-sm font-medium tracking-wide text-neutral-900 dark:text-typography-primary'>
+                          {'\u00A0'}
+                        </dd>
                       </>
                     )}
                   </React.Fragment>

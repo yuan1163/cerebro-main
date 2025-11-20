@@ -141,7 +141,7 @@ export default function AddButton({ label }: { label: string }) {
                 variant='outlined'
                 disabled={isSubmitting}
                 onClick={onClose}
-                className='flex-1 px-3 py-2'
+                className='flex-1 px-3 py-2 dark:bg-surface-03'
               >
                 Cancel
               </Button>

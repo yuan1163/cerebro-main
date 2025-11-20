@@ -25,7 +25,7 @@ export default function PieChartCard({ data, status, total, name }: PieChartCard
   })();
 
   return (
-    <Card className='bg-neutral-50'>
+    <Card className='bg-neutral-50 dark:bg-surface-02'>
       <CardContent className='flex flex-col gap-10 px-5 py-12'>
         <div className='relative flex items-center justify-center w-full'>
           <ResponsiveContainer height={144}>
@@ -40,6 +40,7 @@ export default function PieChartCard({ data, status, total, name }: PieChartCard
                 dataKey='value'
                 startAngle={0}
                 endAngle={-360}
+                stroke='none'
               >
                 {data.map((entry) => (
                   <Cell key={entry.range} fill={entry.color} />
@@ -49,14 +50,18 @@ export default function PieChartCard({ data, status, total, name }: PieChartCard
           </ResponsiveContainer>
           {total && (
             <div className='absolute inset-0 flex flex-col items-center justify-center'>
-              <span className='text-base font-medium tracking-32 text-neutral-900'>Total {name}</span>
-              <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900'>{0}</span>
+              <span className='text-base font-medium tracking-32 text-neutral-900 dark:text-typography-primary'>
+                Total {name}
+              </span>
+              <span className='text-[40px] font-medium tracking-[0.8px] text-neutral-900 dark:text-typography-primary'>
+                {0}
+              </span>
             </div>
           )}
         </div>
         {/* Legend */}
         <div className='flex flex-col gap-4 p-2'>
-          <div className='flex items-center justify-between pb-3 font-medium border-b border-neutral-200 text-md tracking-32 text-neutral-900'>
+          <div className='flex items-center justify-between pb-3 font-medium border-b border-neutral-200 text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
             <div>{t('general.status.label', 'Status', 'Label for status column in table.')}</div>
             <div>{amounts}</div>
           </div>
@@ -64,8 +69,10 @@ export default function PieChartCard({ data, status, total, name }: PieChartCard
             {data.map((item) => (
               <div key={item.range} className='flex items-center justify-between gap-2'>
                 <div className='w-2.5 aspect-square rounded-full' style={{ backgroundColor: item.color }} />
-                <span className='grow text-sm font-medium text-secondary-500 min-w-[85px]'>{item.range}</span>
-                <span className='text-sm font-medium text-neutral-900'>{item.value}</span>
+                <span className='grow text-sm font-medium text-secondary-500 dark:text-typography-secondary min-w-[85px]'>
+                  {item.range}
+                </span>
+                <span className='text-sm font-medium text-neutral-900 dark:text-typography-primary'>{item.value}</span>
               </div>
             ))}
           </div>

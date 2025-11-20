@@ -40,7 +40,7 @@ export default function OfflinePage() {
                 <ChevronLeftIcon />
               </Link>
             </Button>
-            <h1 className='text-lg font-medium tracking-36 text-neutral-900'>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
               {t('snapshot.offline.label', 'Off-line', 'Offline card title.')}
             </h1>
             <NumberBadge variant='gray' number={events.length} />

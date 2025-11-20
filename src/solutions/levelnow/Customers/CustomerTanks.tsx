@@ -90,12 +90,12 @@ export default function CustomerTanks({ clientTank }: CustomerTanks) {
   return (
     <section className='flex flex-col gap-5'>
       <div className='flex items-center gap-2'>
-        <h2 className='font-medium text-md tracking-32 text-neutral-900'>
+        <h2 className='font-medium text-md tracking-32 text-neutral-900 dark:text-typography-primary'>
           {t('customer.tanks.label', 'Tanks', 'Tanks')}
         </h2>
         <NumberBadge number={clientTank.length} variant='gray' />
       </div>
-      <div className='h-4 pt-2 pb-5 rounded-lg bg-neutral-50 grow'>
+      <div className='h-4 pt-2 pb-5 rounded-lg bg-neutral-50 dark:bg-surface-02 grow'>
         <Scrollbar>
           <div className='flex flex-col gap-3'>
             {clientTank.map((tank) => (
@@ -113,13 +113,17 @@ function CustomerTankItem({ clientTank }: { clientTank: ClientTank }) {
   return (
     <Link
       to={`/levelnow/tanks/tank/${clientTank.tankId}`}
-      className='flex items-center justify-between px-5 py-3 cursor-pointer hover:bg-primary-50'
+      className='flex items-center justify-between px-5 py-3 cursor-pointer hover:bg-primary-50 dark:hover:bg-surface-03'
     >
       <dl className='grid gap-x-10 gap-y-3' style={{ gridTemplateColumns: 'auto minmax(0, 1fr)' }}>
         {tankFields.map((field) => (
           <React.Fragment key={field.name}>
-            <dt className='text-sm font-medium tracking-wide text-secondary-500'>{field.label}</dt>
-            <dd className='text-sm font-medium tracking-wide truncate text-neutral-900'>{field.value || '-'}</dd>
+            <dt className='text-sm font-medium tracking-wide text-secondary-500 dark:text-typography-secondary'>
+              {field.label}
+            </dt>
+            <dd className='text-sm font-medium tracking-wide truncate text-neutral-900 dark:text-typography-primary'>
+              {field.value || '-'}
+            </dd>
           </React.Fragment>
         ))}
       </dl>
