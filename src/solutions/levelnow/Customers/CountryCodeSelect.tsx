@@ -42,7 +42,8 @@ export default function CountryCodeSelect({ options, setValue, watch }: SelectPr
   };
 
   const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue('mobileNo', e.target.value);
+    const numericValue = e.target.value.replace(/[^0-9]/g, '');
+    setValue('mobileNo', numericValue);
   };
 
   useEffect(() => {
@@ -66,6 +67,7 @@ export default function CountryCodeSelect({ options, setValue, watch }: SelectPr
 
             <input
               type='text'
+              inputMode='numeric'
               value={mobileNo}
               onChange={handlePhoneNumberChange}
               onClick={(e) => e.stopPropagation()}
