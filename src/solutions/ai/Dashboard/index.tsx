@@ -48,6 +48,7 @@ import { Scrollbar } from '@core/ui/components/Scrollbar';
 import { LiveView } from './Live View';
 import { CameraHealth } from './Camera Health';
 import { CameraData } from './Camera Data';
+import { DrawerContext } from '@core/context/DrawerContext';
 
 type DashboardProps = {
   group: {
@@ -61,6 +62,7 @@ type DashboardProps = {
 };
 
 export const Dashboard = ({ group }: DashboardProps) => {
+  const { isDrawerExpanded } = React.useContext(DrawerContext);
   const dataTabs = [
     { label: t('cameraData.counting.label', 'Counting', 'Label for counting tab'), enabled: group.counting },
     { label: t('cameraData.face.label', 'Face', 'Label for face tab'), enabled: group.faceRecognition },
@@ -78,9 +80,12 @@ export const Dashboard = ({ group }: DashboardProps) => {
           "An overview of the solution's core purpose and components.",
         )}
         widgets={false}
-        className='fixed z-10 bg-[#f9fafb]'
+        className={cn(
+          'fixed top-0 right-0 px-6 z-10 bg-[#f9fafb] transition-[left,width] duration-[250ms]',
+          isDrawerExpanded ? 'left-[15rem] w-[calc(100vw-15rem)]' : 'left-[3.75rem] w-[calc(100vw-3.75rem)]',
+        )}
       />
-      <UnitContainer className='mt-[84px] min-h-full max-h-[1070px] flex flex-1'>
+      <UnitContainer className='mt-[84px] min-h-full max-h-[1070px] flex flex-1 scrollbar-none'>
         {/* <div className='mt-[84px] min-h-[calc(100vh-104px)]'> */}
         {/* <Unit variant='sidebar'> */}
         <div className='flex flex-col gap-4 w-[360px]'>

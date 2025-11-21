@@ -2,7 +2,7 @@
 import { useIvedaAIGroups } from '@core/storages/controllers/ivedaAI/groups';
 
 // types
-import { Modules } from '@core/ui/types';
+import { Module, Modules } from '@core/ui/types';
 
 // components
 import { Dashboard } from './Dashboard';

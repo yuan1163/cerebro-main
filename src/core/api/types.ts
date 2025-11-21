@@ -586,7 +586,7 @@ export type User = {
   files?: {
     url: string;
   }[];
-  groups: UserGroup[];
+  groups?: UserGroup[];
   category: UserCategory;
 };
 
