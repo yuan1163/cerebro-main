@@ -238,18 +238,35 @@ export default function CustomerInfo({ customer, isAdd, onToggleAdd }: CustomerI
     );
   }
 
+  if (!customer) {
+    return (
+      <div className='flex grow'>
+        <Card className='flex flex-col flex-1'>
+          <CardHeader borderBottom className=' min-h-[69px]'>
+            <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>-</h1>
+          </CardHeader>
+          <CardContent className='p-5 grow'>
+            <div className='flex items-center justify-center h-full text-secondary-500'>
+              {t('customer.noData.label', 'No customer data available', 'No customer data')}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
   return (
     <div className='flex grow'>
       <Card className='flex flex-col flex-1'>
         <CardHeader borderBottom className=' min-h-[69px]'>
           <h1 className='text-lg font-medium tracking-36 text-neutral-900 dark:text-typography-primary'>
-            {customer?.clientName || '-'}
+            {customer.clientName || '-'}
           </h1>
         </CardHeader>
         <CardContent className='p-5 grow'>
           <div className='grid h-full grid-cols-2 gap-5'>
             <CustomerProfile customer={customer} />
-            <CustomerTanks clientTank={customer?.clientTank ?? []} />
+            <CustomerTanks clientTank={Array.isArray(customer.clientTank) ? customer.clientTank : []} />
           </div>
         </CardContent>
       </Card>

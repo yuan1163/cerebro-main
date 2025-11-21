@@ -81,6 +81,8 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
   // Reset form when customer data changes
   useEffect(() => {
     if (customer) {
+      const lat = customer.latitude;
+      const lng = customer.longitude;
       reset({
         customerName: customer.clientName || '',
         customerNo: customer.clientNo || '',
@@ -93,8 +95,8 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
         city: customer.clientCity || '',
         gwSalesRep: customer.salesRepUserId || '',
         gwCustomerServiceRep: customer.customerServiceRepUserId || '',
-        latitude: customer.latitude.toString() || '',
-        longitude: customer.longitude.toString() || '',
+        latitude: lat !== null && lat !== undefined && !isNaN(lat) ? lat.toString() : '',
+        longitude: lng !== null && lng !== undefined && !isNaN(lng) ? lng.toString() : '',
       });
     }
   }, [customer, reset]);
@@ -106,15 +108,29 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
 
   // Map Properties - memoize to prevent unnecessary re-renders
   const points: Point[] = useMemo(
-    () =>
-      customer?.latitude && customer?.longitude
-        ? [
-            {
-              latitude: customer.latitude,
-              longitude: customer.longitude,
-            },
-          ]
-        : [],
+    () => {
+      const lat = customer?.latitude;
+      const lng = customer?.longitude;
+      // Check if latitude and longitude are valid numbers
+      if (
+        lat !== null &&
+        lat !== undefined &&
+        lng !== null &&
+        lng !== undefined &&
+        !isNaN(lat) &&
+        !isNaN(lng) &&
+        isFinite(lat) &&
+        isFinite(lng)
+      ) {
+        return [
+          {
+            latitude: lat,
+            longitude: lng,
+          },
+        ];
+      }
+      return [];
+    },
     [customer?.latitude, customer?.longitude],
   );
   const zoom = points.length > 0 ? 16 : 1;
@@ -134,6 +150,9 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
     }
 
     try {
+      const parsedLatitude = data.latitude ? parseFloat(data.latitude) : 0;
+      const parsedLongitude = data.longitude ? parseFloat(data.longitude) : 0;
+
       await updateClientMutation.mutateAsync({
         clientId: customer.clientId,
         data: {
@@ -148,8 +167,8 @@ export default function CustomerProfile({ customer }: CustomerProfileProps) {
           clientCity: data.city,
           salesRepUserId: data.gwSalesRep,
           customerServiceRepUserId: data.gwCustomerServiceRep,
-          latitude: data.latitude ? parseFloat(data.latitude) : 0,
-          longitude: data.longitude ? parseFloat(data.longitude) : 0,
+          latitude: isNaN(parsedLatitude) ? 0 : parsedLatitude,
+          longitude: isNaN(parsedLongitude) ? 0 : parsedLongitude,
         },
       });
       console.log('Client updated successfully');

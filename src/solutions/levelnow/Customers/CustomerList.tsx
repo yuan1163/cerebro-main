@@ -203,7 +203,13 @@ const CustomerItem = forwardRef<HTMLDivElement, CustomerItemProps>(({ customer, 
   const isSelected = selectedClientId === customer.clientId;
   const itemClass = isSelected ? 'bg-primary-50 dark:bg-surface-02' : 'hover:bg-hover dark:hover:bg-surface-03';
 
-  const customerAddress = `${customer.clientAddress}, ${customer.clientCity}, ${customer.clientState}, ${customer.clientCountry}`;
+  const addressParts = [
+    customer.clientAddress || '-',
+    customer.clientCity || '-',
+    customer.clientState || '-',
+    customer.clientCountry || '-',
+  ];
+  const customerAddress = addressParts.join(', ');
   return (
     <div ref={ref}>
       <Link
