@@ -8,12 +8,14 @@ import { Accordion } from '@core/ui/components/Accordion';
 import { Text } from '@core/ui/components/Text';
 import Counting from './Counting';
 import Face from './Face';
+import Intrusion from './Intrusion';
+import Abnormal from './Abnormal';
+import LPR from './LPR';
 
 // icons
 import CameraIcon from '@assets/icons/IvedaAI/camera.svg?component';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
 import CameraOffline from '@assets/icons/IvedaAI/map/camera-offline.svg?component';
-import LPR from './LPR';
 
 // type Camera = {
 //   id: string;
@@ -86,9 +88,9 @@ export const CameraData: React.FC<CameraDataProps> = ({ tabs }) => {
       case 'Face':
         return <Face />;
       case 'Intrusion':
-        return <div>Intrusion content coming soon</div>;
+        return <Intrusion />;
       case 'Abnormal':
-        return <div>Abnormal content coming soon</div>;
+        return <Abnormal />;
       case 'LPR':
         return <LPR />;
       default:
