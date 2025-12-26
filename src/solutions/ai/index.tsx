@@ -6,6 +6,7 @@ import { Module, Modules } from '@core/ui/types';
 
 // components
 import { Dashboard } from './Dashboard';
+import { Alerts } from './Alerts';
 import { Users } from '@solutions/cerebro/Users';
 
 // icons
@@ -41,7 +42,7 @@ export const useAIModules = (): Modules => {
       title: t('modules.alerts.label', 'Alerts', 'Module label for alerts'),
       icon: <AlertsLineIcon />,
       iconSolid: <AlertsSolidIcon />,
-      component: null,
+      component: <Alerts />,
     },
     {
       system: 'iveda' as const,

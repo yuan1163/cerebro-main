@@ -149,6 +149,9 @@ export const getAvailbableSolutions = (company: Location) => {
   if (company.branchSolutions & SolutionsMasks.ems) result.push(Solutions.ems);
   if (company.branchSolutions & SolutionsMasks.levelnow) result.push(Solutions.levelnow);
 
+  // Temporarily add AI solution mask for testing
+  result.push(Solutions.ai);
+
   // if (solutions & SolutionsMasks.pinpoint) result.push(Solutions.pinpoint);
   // if (solutions & SolutionsMasks.utilus) result.push(Solutions.utilus);
   // if (solutions & SolutionsMasks.ai) result.push(Solutions.ai);

@@ -38,6 +38,14 @@ export type IvedaAIAlertItem = {
   serverDomain: string;
 };
 
+export type IvedaAILevelAlerts = IvedaAILevelAlert[];
+export type IvedaAILevelAlert = {
+  id: number;
+  name: string;
+  severity: 0 | 1 | 2; // 0:critical, 1:warning, 2:info;
+  updatedAtUtc: string;
+};
+
 // levelnow -----
 export type EventsIssue = 'Level Low' | 'Oil Filling' | 'Battery Low' | 'Offline' | 'Fault';
 
