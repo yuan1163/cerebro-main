@@ -11,6 +11,40 @@ export type IvedaAIGroup = {
   lpr: boolean;
   updatedAtUtc: string;
 };
+export type IvedaAIAlert = {
+  recordsTotal: number;
+  recordsFiltered: number;
+  alerts: IvedaAIAlertItem[];
+};
+export type IvedaAIAlertItem = {
+  alertId: number;
+  date: string;
+  fullTime: string;
+  alertName: string;
+  alertType: string;
+  type: string;
+  cameraId: string;
+  cameraName: string;
+  latLng: string;
+  sceneImage: string;
+  alertImage: string;
+  dataKey: string;
+  imagePath: string;
+  abnormalType: string;
+  floorPlanId: string;
+  floorPlanX: string;
+  floorPlanY: string;
+  floorPlanAngle: string;
+  serverDomain: string;
+};
+
+export type IvedaAILevelAlerts = IvedaAILevelAlert[];
+export type IvedaAILevelAlert = {
+  id: number;
+  name: string;
+  severity: 0 | 1 | 2; // 0:critical, 1:warning, 2:info;
+  updatedAtUtc: string;
+};
 
 // levelnow -----
 export type EventsIssue = 'Level Low' | 'Oil Filling' | 'Battery Low' | 'Offline' | 'Fault';
@@ -586,7 +620,7 @@ export type User = {
   files?: {
     url: string;
   }[];
-  groups: UserGroup[];
+  groups?: UserGroup[];
   category: UserCategory;
 };
 

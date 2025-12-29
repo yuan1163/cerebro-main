@@ -2425,6 +2425,7 @@ module.exports = {
       },
     },
     boxShadow: {
+      'dropdown-options': '0px 4px 24px 2px rgba(0,0,0,0.08)',
       'accordion-tab': '0 0 5px 0 rgba(0, 0, 0, 0.08)',
       checkbox: '0 1px 2px 0 rgba(0, 0, 0, 0.08)',
       dialogContent: '0 4px 38px 0 rgba(0, 0, 0, 0.12)',

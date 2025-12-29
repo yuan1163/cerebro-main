@@ -1,31 +1,18 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 // utils
 import { t } from '@core/utils/translate';
-import { useLocations } from '@core/storages/controllers/levelnow/locations';
 
 // components
 import { Accordion } from '@core/ui/components/Accordion';
-import { AccordionGroup } from '@core/ui/components/AccordionGroup';
 import { Scrollbar } from '@core/ui/components/Scrollbar';
 import { Text } from '@core/ui/components/Text';
-import Map from '@core/ui/levelnow/Map';
-import { AccordionItem } from '@core/ui/levelnow/AccordionItem';
 // hooks
-import { useIntersectionObserver } from '@core/hooks/useIntersectionObserver';
-import { LocationClient } from '@core/api/types';
-import { get } from '@nodemodules/@types/lodash';
+import { useIvedaAIAlert } from '@core/storages/controllers/ivedaAI/alert';
+import { useNavigate } from 'react-router-dom';
 
-// Alert types
-type Alert = {
-  id: string;
-  date: string;
-  location: string;
-  cameraId: string;
-  description: string;
-  thumbnailUrl: string;
-};
+// type
+import { IvedaAIAlertItem } from '@core/api/types';
 
 // Helper function to calculate relative time
 const getRelativeTime = (date: string): string => {
@@ -51,75 +38,13 @@ const getLocalDateString = (date: string): string => {
   return alertDate.toLocaleDateString().replace(/\//g, '-');
 };
 
-// Mock alerts data
-const mockAlerts: Alert[] = [
-  {
-    id: '1',
-    date: '2025-06-20T14:30:00Z',
-    location: 'NYC - Bus a...',
-    cameraId: 'CCTV-14',
-    description: 'Times Square Centre has reported some alerts fro...',
-    thumbnailUrl: '',
-  },
-  {
-    id: '2',
-    date: '2025-06-20T14:30:00Z',
-    location: 'NYC - Bus a...',
-    cameraId: 'CCTV-14',
-    description: 'Times Square Centre has reported some alerts fro...',
-    thumbnailUrl: '',
-  },
-  {
-    id: '3',
-    date: '2025-06-20T14:30:00Z',
-    location: 'NYC - Bus a...',
-    cameraId: 'CCTV-14',
-    description: 'Times Square Centre has reported some alerts fro...',
-    thumbnailUrl: '',
-  },
-  {
-    id: '4',
-    date: '2025-06-20T14:30:00Z',
-    location: 'NYC - Bus a...',
-    cameraId: 'CCTV-14',
-    description: 'Times Square Centre has reported some alerts fro...',
-    thumbnailUrl: '',
-  },
-  {
-    id: '5',
-    date: '2025-06-20T14:30:00Z',
-    location: 'NYC - Bus a...',
-    cameraId: 'CCTV-14',
-    description: 'Times Square Centre has reported some alerts fro...',
-    thumbnailUrl: '',
-  },
-  {
-    id: '6',
-    date: '2025-06-20T14:30:00Z',
-    location: 'NYC - Bus a...',
-    cameraId: 'CCTV-14',
-    description: 'Times Square Centre has reported some alerts fro...',
-    thumbnailUrl: '',
-  },
-  {
-    id: '7',
-    date: '2025-06-20T14:30:00Z',
-    location: 'NYC - Bus a...',
-    cameraId: 'CCTV-14',
-    description: 'Times Square Centre has reported some alerts fro...',
-    thumbnailUrl: '',
-  },
-  {
-    id: '8',
-    date: '2025-06-20T14:30:00Z',
-    location: 'NYC - Bus a...',
-    cameraId: 'CCTV-14',
-    description: 'Times Square Centre has reported some alerts fro...',
-    thumbnailUrl: '',
-  },
-];
-
 export const Alerts: React.FC = () => {
+  const navigate = useNavigate();
+  const handleNavigate = (alertId: number) => {
+    navigate(`/ai/alerts/${alertId}`);
+  };
+  const alerts = useIvedaAIAlert();
+
   return (
     <Accordion
       customTitle={
@@ -135,12 +60,11 @@ export const Alerts: React.FC = () => {
       summaryClass='p-5'
       detailsClass='flex-1 overflow-hidden h-[calc(100%-70px) p-5'
       className='min-h-0'
-      // className='flex flex-col flex-1 '
     >
       <Scrollbar>
         <div className='flex flex-col gap-4'>
-          {mockAlerts.map((alert) => (
-            <ALertItem key={alert.id} alert={alert} />
+          {alerts.map((alert) => (
+            <ALertItem key={alert.alertId} alert={alert} onNavigate={handleNavigate} />
           ))}
         </div>
       </Scrollbar>
@@ -148,32 +72,60 @@ export const Alerts: React.FC = () => {
   );
 };
 
-const ALertItem: React.FC<{ alert: Alert }> = ({ alert }) => {
+const ALertItem: React.FC<{ alert: IvedaAIAlertItem; onNavigate: (alertId: number) => void }> = ({
+  alert,
+  onNavigate,
+}) => {
   const [imageError, setImageError] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleImageError = () => {
     if (!imageError) {
       setImageError(true);
     }
   };
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
-    <div className='flex gap-3'>
+    <div
+      className='flex gap-3 cursor-pointer bg-neutral-50 hover:bg-neutral-100 rounded-[10px]'
+      onClick={() => onNavigate(alert.alertId)}
+    >
       {imageError ? (
         <div className='w-[120px] h-[120px] rounded-[10px] bg-neutral-100'></div>
       ) : (
-        <img
-          src={alert.thumbnailUrl}
-          alt={alert.description}
-          onError={handleImageError}
-          className='w-[120px] h-[120px] object-cover rounded-[10px]'
-        />
+        <div className='relative w-[120px] h-[120px] rounded-[10px] overflow-hidden bg-neutral-100'>
+          {/* Blurred placeholder image */}
+          <img
+            src={alert.serverDomain + alert.alertImage}
+            alt=''
+            className={`absolute inset-0 w-full h-full object-cover blur-md scale-110 transition-opacity duration-300 ${
+              imageLoaded ? 'opacity-0' : 'opacity-100'
+            }`}
+            aria-hidden='true'
+          />
+          {/* Sharp actual image */}
+          <img
+            src={alert.serverDomain + alert.alertImage}
+            alt={alert.alertName}
+            onLoad={handleImageLoad}
+            onError={handleImageError}
+            loading='lazy'
+            className={`relative w-full h-full object-cover transition-opacity duration-300 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        </div>
       )}
       <div className='h-[120px] grid flex-1 grid-cols-2 gap-1 px-4 py-3 font-medium text-medium'>
-        <div className=' text-neutral-900'>{getLocalDateString(alert.date)}</div>
-        <div className='text-neutral-500'>{getRelativeTime(alert.date)}</div>
-        <div className='truncate text-neutral-900'>{alert.location}</div>
-        <div className='text-secondary-500'>{alert.cameraId}</div>
-        <div className='col-span-2 pt-1 line-clamp-2 text-secondary-500'>{alert.description}</div>
+        <div className=' text-neutral-900'>{getLocalDateString(alert.fullTime)}</div>
+        <div className='text-right text-neutral-500'>{getRelativeTime(alert.fullTime)}</div>
+        <div className='truncate text-neutral-900'></div>
+        <div className='text-right truncate text-secondary-500'>{alert.cameraName}</div>
+        <div className='col-span-2 pt-1 line-clamp-2 text-secondary-500'>{alert.alertName}</div>
       </div>
     </div>
   );

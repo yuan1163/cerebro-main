@@ -2,8 +2,8 @@
   @apply relative;
   @apply grid;
   grid-template-areas: 'nav body';
-  // @apply overflow-hidden;
-  @apply min-h-screen;
+  @apply overflow-hidden;
+  @apply h-screen;
   @apply w-full;
   @apply bg-background;
   &-drawer-expanded {
@@ -19,11 +19,11 @@
 .main {
   @apply relative;
   grid-area: body;
-  // @apply overflow-y-auto;
+  @apply overflow-y-auto;
+  @apply h-screen;
 }
 
 .wrapper {
   @apply pb-5;
-  // @apply h-full;
-  @apply min-h-screen;
+  @apply min-h-full;
 }

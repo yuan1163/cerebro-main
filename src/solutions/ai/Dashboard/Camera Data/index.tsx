@@ -7,6 +7,10 @@ import { t } from '@core/utils/translate';
 import { Accordion } from '@core/ui/components/Accordion';
 import { Text } from '@core/ui/components/Text';
 import Counting from './Counting';
+import Face from './Face';
+import Intrusion from './Intrusion';
+import Abnormal from './Abnormal';
+import LPR from './LPR';
 
 // icons
 import CameraIcon from '@assets/icons/IvedaAI/camera.svg?component';
@@ -82,13 +86,13 @@ export const CameraData: React.FC<CameraDataProps> = ({ tabs }) => {
       case 'Counting':
         return <Counting />;
       case 'Face':
-        return <div>Face content coming soon</div>;
+        return <Face />;
       case 'Intrusion':
-        return <div>Intrusion content coming soon</div>;
+        return <Intrusion />;
       case 'Abnormal':
-        return <div>Abnormal content coming soon</div>;
+        return <Abnormal />;
       case 'LPR':
-        return <div>LPR content coming soon</div>;
+        return <LPR />;
       default:
         return null;
     }
@@ -104,8 +108,9 @@ export const CameraData: React.FC<CameraDataProps> = ({ tabs }) => {
       shadow
       rounded
       variant='solid'
+      constrainHeight
       summaryClass='p-0 pr-5'
-      detailsClass='py-4 px-5 flex flex-col gap-10'
+      detailsClass='py-4 px-5 flex flex-col gap-10 overflow-hidden'
     >
       {renderTabContent()}
     </Accordion>

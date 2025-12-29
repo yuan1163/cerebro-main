@@ -29,7 +29,7 @@ import { createRoot } from 'react-dom/client';
 
 // types
 
-import { IssuePriority, Location, LocationClient, Locations } from '@core/api/types';
+import { IssuePriority, Location, LocationClient, Locations, AlertPriority } from '@core/api/types';
 import { CurrentTheme, SeverityPalette } from '@core/api/typesDesignSystem';
 
 // components
@@ -37,6 +37,7 @@ import { CurrentTheme, SeverityPalette } from '@core/api/typesDesignSystem';
 import { Icon } from '@core/ui/components/Icon';
 import { Pin } from '@core/ui/components/Pin';
 import { PinNeedle } from '@core/ui/components/PinNeedle';
+import { MapPointsCount, PointsCountData } from '@core/ui/levelnow/MapPointsCount';
 
 // icons
 
@@ -47,6 +48,10 @@ import CameraNormal from '@assets/icons/IvedaAI/map/camera-normal.svg?component'
 import CameraAlert from '@assets/icons/IvedaAI/map/camera-alert.svg?component';
 import CameraOffline from '@assets/icons/IvedaAI/map/camera-offline.svg?component';
 import { cn } from '@core/utils/classnames';
+import { Alert } from '../components/Alert';
+import AlertCriticalIcon from '@assets/icons/IvedaAI/alert/alert_with_count_red.png';
+import AlertWarningIcon from '@assets/icons/IvedaAI/alert/alert_with_count_yellow.svg?component';
+import AlertInfoIcon from '@assets/icons/IvedaAI/alert/alert_with_count_Blue.svg?component';
 
 enum CameraStatus {
   Normal = 'normal',
@@ -58,11 +63,13 @@ export interface Point {
   clientId?: number;
   latitude: number;
   longitude: number;
+  alertPriority?: AlertPriority;
+  riskLevel?: number;
 }
 
 type MapProps = {
   controls?: boolean;
-  marker?: 'default' | 'dot' | 'needle' | 'camera';
+  marker?: 'default' | 'dot' | 'needle' | 'camera' | 'alert';
   points: Point[];
   pointsNavigation?: boolean;
   zoom: number;
@@ -94,6 +101,37 @@ const getCenter = (points: Point[]): Point => {
   return center;
 };
 
+// Calculate points counts by priority
+const calculatePointsCounts = (points: Point[]): PointsCountData => {
+  let critical = 0;
+  let warning = 0;
+  let info = 0;
+
+  points.forEach((point) => {
+    if (point.alertPriority !== undefined) {
+      switch (point.alertPriority) {
+        case AlertPriority.Critical:
+          critical++;
+          break;
+        case AlertPriority.Warning:
+          warning++;
+          break;
+        case AlertPriority.Normal:
+        case AlertPriority.Trivial:
+          info++;
+          break;
+      }
+    }
+  });
+
+  return {
+    critical,
+    warning,
+    info,
+    total: points.length,
+  };
+};
+
 // Custom marker
 
 type Marker = {
@@ -103,8 +141,8 @@ type Marker = {
   markerIcon?: React.ReactNode;
   markerLabel?: string;
   onClick?: () => void;
-  point?: Point;
-  variant?: 'default' | 'dot' | 'needle' | 'camera';
+  point: Point;
+  variant?: 'default' | 'dot' | 'needle' | 'camera' | 'alert';
 };
 
 const Marker: React.FC<Marker> = ({
@@ -118,6 +156,7 @@ const Marker: React.FC<Marker> = ({
 }) => {
   return (
     <>
+      {variant === 'alert' && <AlertMarker status={point.alertPriority} />}
       {variant === 'camera' && <CameraMarker status={CameraStatus.Normal} />}
       {variant === 'default' && <Pin color={color} onClick={onClick} icon={<Building01SolidIcon />} />}
       {variant === 'needle' && (
@@ -131,6 +170,23 @@ const Marker: React.FC<Marker> = ({
       )}
     </>
   );
+};
+
+const AlertMarker = ({ status }: { status: AlertPriority | undefined }) => {
+  if (status === undefined) {
+    return null;
+  }
+  switch (status) {
+    case AlertPriority.Critical:
+      return <img src={AlertCriticalIcon} alt='Critical Alert' />;
+    // return <AlertCriticalIcon />;
+    case AlertPriority.Warning:
+      return <AlertWarningIcon />;
+    case AlertPriority.Normal:
+      return <AlertInfoIcon />;
+    default:
+      return <Alert />;
+  }
 };
 
 const CameraMarker = ({ status }: { status: CameraStatus }) => {
@@ -147,18 +203,6 @@ const CameraMarker = ({ status }: { status: CameraStatus }) => {
 };
 
 export default function Map({ controls, marker = 'default', points, pointsNavigation, zoom, className }: MapProps) {
-  console.log('Map points:', points);
-  // console.log('Points length:', points.length);
-  // console.log(
-  //   'Sample points:',
-  //   points.slice(0, 5).map((p, i) => ({
-  //     index: i,
-  //     lat: p.latitude,
-  //     lng: p.longitude,
-  //     riskLevel: (p as any)?.riskLevel,
-  //   })),
-  // );
-
   // Set Mapbox access token
   mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_API_TOKEN;
 
@@ -171,15 +215,15 @@ export default function Map({ controls, marker = 'default', points, pointsNaviga
 
   const navigate = useNavigate();
 
-  //   if (points.length === 0) {
-  //     return (
-  //       <div>
-  //         <Icon disabled size='lg' variant='plain'>
-  //           <Map01LineIcon />
-  //         </Icon>
-  //       </div>
-  //     );
-  //   }
+  if (points.length === 0) {
+    return (
+      <div>
+        <Icon disabled size='lg' variant='plain'>
+          <Map01LineIcon />
+        </Icon>
+      </div>
+    );
+  }
 
   useEffect(() => {
     if (ref.current) {
@@ -196,7 +240,6 @@ export default function Map({ controls, marker = 'default', points, pointsNaviga
       mapRef.current = map;
 
       // translations draft
-
       const translation = useTranslation();
       const currentLanguageName = transformLanguageCode(translation.language);
 
@@ -339,14 +382,29 @@ export default function Map({ controls, marker = 'default', points, pointsNaviga
     };
   }, []);
 
+  const pointsCounts = useMemo(() => calculatePointsCounts(points), [points]);
+
   return (
-    <div
-      className={cn('bg-neutral-100', mapLoaded && 'transition-colors duration-300', className)}
-      ref={ref}
-      style={{
-        width: '100%',
-        height: '100%',
-      }}
-    />
+    <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+      <div
+        className={cn('bg-neutral-100', mapLoaded && 'transition-colors duration-300', className)}
+        ref={ref}
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 1,
+        }}
+      >
+        <MapPointsCount data={pointsCounts} />
+      </div>
+    </div>
   );
 }
